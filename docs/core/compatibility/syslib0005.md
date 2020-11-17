@@ -3,12 +3,12 @@ title: SYSLIB0005 警告
 description: 了解有关生成编译时警告 SYSLIB0005 的过时信息。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 8a9893d81c781335014c8b970c460b5a4241ed18
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 8e5420b5cfaa9515ed7a3ac4472dc5d4e49f5bcb
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333053"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439997"
 ---
 # <a name="syslib0005-the-global-assembly-cache-gac-is-not-supported"></a>SYSLIB0005：不支持全局程序集缓存 (GAC)
 
@@ -20,9 +20,11 @@ ms.locfileid: "92333053"
 
   库和应用不应使用 <xref:System.Reflection.Assembly.GlobalAssemblyCache> API 来确定运行时行为，因为它在 .NET Core 和 .NET 5+ 中始终返回 `false`。
 
-## <a name="workaround"></a>解决方法
+## <a name="workarounds"></a>工作区
 
 如果你的应用程序查询 <xref:System.Reflection.Assembly.GlobalAssemblyCache> 属性，请考虑删除该调用。 如果在运行时使用 <xref:System.Reflection.Assembly.GlobalAssemblyCache> 值在“GAC 中的程序集”流与“不在 GAC 中的程序集”流之间进行选择，请重新考虑流对于 .NET 5+ 应用程序是否仍然有意义。
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>请参阅
 

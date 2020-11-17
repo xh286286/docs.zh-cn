@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 33d0ca2918e4e3b00e2b09f7a47c538bbe903dba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e8d3a95b58cd2cabc41be31b7a4b66b1a79317d6
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547904"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439425"
 ---
 # <a name="develop-client-applications-with-net-framework"></a>使用 .NET Framework 开发客户端应用程序
 
@@ -39,7 +39,7 @@ ms.locfileid: "90547904"
 [适用于 UWP 应用的 .NET API](../../api/index.md?view=dotnet-uwp-10.0)\
 支持 UWP 应用的 .NET 类型参考。
   
-[多平台开发](../standard/cross-platform/index.md)\
+[多平台开发](./cross-platform/index.md)\
 介绍可以针对多个客户端应用类型使用 .NET Framework 的不同方法。
 
 [ASP.NET 网站入门](https://dotnet.microsoft.com/apps/aspnet/web-apps)\

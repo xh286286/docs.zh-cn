@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3fe36ce0c53821fb79fd7689ec6f7176af3e2f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547879"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440850"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 
@@ -52,7 +52,7 @@ ms.locfileid: "90547879"
  [调试、跟踪和分析](./debug-trace-profile/index.md)  
  介绍如何测试、优化和分析 .NET Framework 应用和应用环境。 本节包括供管理员和开发人员使用的信息。  
   
- [开发多平台应用程序](../standard/cross-platform/index.md)  
+ [开发多平台应用程序](./cross-platform/index.md)  
  介绍有关如何使用 .NET Framework 生成可在手机、桌面和 Web 等多种平台和多种设备之间共享的程序集的信息。  
   
  [部署](./deployment/index.md)  
@@ -62,10 +62,12 @@ ms.locfileid: "90547879"
  提供有关缓存、延迟初始化、可靠性和 ETW 事件的信息。  
 
 ## <a name="reference"></a>参考  
+
  [.NET Framework 类库](../../api/index.md?view=netframework-4.7)  
  提供 .NET Framework 命名空间中包含的每一个类的语法、代码示例和使用信息。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [入门](./get-started/index.md)  
  提供对 .NET Framework 的全面概述和指向其他资源的链接。  
   

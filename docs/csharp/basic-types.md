@@ -4,12 +4,12 @@ description: 了解所有 C# 程序中的核心类型（数字、字符串和对
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 18a73e62bf45cdc4a4eaa0985c3fe036ac3b55a8
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465255"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439711"
 ---
 # <a name="types-variables-and-values"></a>类型、变量和值
 
@@ -23,13 +23,15 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
   
 - 包含的成员（方法、字段、事件等）。  
   
-- 继承自的基类型。  
-  
+- 继承自的基类型。
+
+- 它实现的接口。
+
 - 在运行时分配变量内存的位置。  
   
 - 允许执行的运算种类。  
   
-编译器使用类型信息来确保在代码中执行的所有操作都是*类型安全*。 例如，如果声明 [int](language-reference/builtin-types/integral-numeric-types.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](language-reference/builtin-types/bool.md) 类型的变量执行这些相同操作，则编译器将生成错误，如以下示例所示：  
+编译器使用类型信息来确保在代码中执行的所有操作都是 *类型安全*。 例如，如果声明 [int](language-reference/builtin-types/integral-numeric-types.md) 类型的变量，那么编译器允许在加法和减法运算中使用此变量。 如果尝试对 [bool](language-reference/builtin-types/bool.md) 类型的变量执行这些相同操作，则编译器将生成错误，如以下示例所示：  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
@@ -48,13 +50,13 @@ C# 是一种强类型语言。 每个变量和常量都有一个类型，每个�
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能声明 [int](language-reference/builtin-types/integral-numeric-types.md)再向它分配 `true` 的布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的*类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。
+在声明变量后，不能使用新类型重新声明该变量，并且不能为其分配与其声明的类型不兼容的值。 例如，不能声明 [int](language-reference/builtin-types/integral-numeric-types.md)再向它分配 `true` 的布尔值。 不过，可以将值转换成其他类型。例如，在将值赋给新变量或作为方法自变量传递时。 编译器会自动执行不会导致数据丢失的 *类型转换*。 可能导致数据丢失的转换需要在源代码进行强制转换。
 
 有关详细信息，请参阅[强制转换和类型转换](programming-guide/types/casting-and-type-conversions.md)。
 
 ## <a name="built-in-types"></a>内置类型
 
-C# 提供了一组标准的内置数值类型来表示整数、浮点值、布尔表达式、文本字符、十进制值和其他数据类型。 另外，还有内置**字符串**和**对象**类型。 这些类型可供在任何 C# 程序中使用。 有关内置类型的完整列表，请参阅[内置类型](language-reference/builtin-types/built-in-types.md)。
+C# 提供了一组标准的内置数值类型来表示整数、浮点值、布尔表达式、文本字符、十进制值和其他数据类型。 另外，还有内置 **字符串** 和 **对象** 类型。 这些类型可供在任何 C# 程序中使用。 有关内置类型的完整列表，请参阅[内置类型](language-reference/builtin-types/built-in-types.md)。
   
 ## <a name="custom-types"></a>自定义类型
 
@@ -80,7 +82,7 @@ C# 提供了一组标准的内置数值类型来表示整数、浮点值、布�
 
 对于 .NET 中的类型系统，请务必了解以下两个基本要点：  
   
-- 它支持继承原则。 类型可以派生自其他类型（称为*基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 <xref:System.Int32> (C# keyword: `int`) 等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object> (C# keyword: `object`)。 此统一类型层次结构称为[通用类型系统](../standard/common-type-system.md) (CTS)。 有关 C# 中的继承的详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。  
+- 它支持继承原则。 类型可以派生自其他类型（称为 *基类型*）。 派生类型继承（有一些限制）基类型的方法、属性和其他成员。 基类型可以继而从某种其他类型派生，在这种情况下，派生类型继承其继承层次结构中的两种基类型的成员。 所有类型（包括 <xref:System.Int32> (C# keyword: `int`) 等内置数值类型）最终都派生自单个基类型，即 <xref:System.Object> (C# keyword: `object`)。 此统一类型层次结构称为[通用类型系统](../standard/common-type-system.md) (CTS)。 有关 C# 中的继承的详细信息，请参阅[继承](programming-guide/classes-and-structs/inheritance.md)。  
   
 - CTS 中的每种类型被定义为值类型或引用类型。  这包括 .NET 类库中的所有自定义类型以及你自己的用户定义类型。 使用 `struct` 或 `enum` 关键字定义的类型是值类型。 有关值类型的详细信息，请参阅[值类型](language-reference/builtin-types/value-types.md)。 使用 [class](language-reference/keywords/class.md) 关键字定义的类型是引用类型。 有关引用类型的详细信息，请参阅[类](programming-guide/classes-and-structs/classes.md)。 引用类型和值类型具有不同的编译时规则和不同的运行时行为。
 

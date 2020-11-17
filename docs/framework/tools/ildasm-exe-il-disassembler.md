@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e94e80d0342f68098a08e184b6bf3f48c14e817b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166830"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440876"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe（IL 反汇编程序）
 
@@ -52,7 +52,7 @@ ildasm [options] [PEfilename] [options]
 |/linenum|包含对原始源行的引用。|
 |/nobar|禁止显示反汇编进度指示器弹出窗口。|
 |/noca|禁止显示自定义特性的输出。|
-|/project|以托管代码的方式显示元数据，而不是以本机 Windows 运行时的方式显示。 如果 `PEfilename` 不是 Windows 元数据 (.winmd) 文件，此选项将不起任何作用。 请参阅 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
+|/project|以托管代码的方式显示元数据，而不是以本机 Windows 运行时的方式显示。 如果 `PEfilename` 不是 Windows 元数据 (.winmd) 文件，此选项将不起任何作用。 请参阅 [Windows 应用商店应用和 Windows 运行时的 .NET Framework 支持](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)。|
 |/pubonly|仅反汇编公共类型和公共成员。 等效于 /visibility:PUB。|
 |/quoteallnames|在单引号中包含所有名称。|
 |/raweh|以原始格式显示异常处理子句。|

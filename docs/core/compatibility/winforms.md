@@ -2,12 +2,12 @@
 title: Windows 窗体重大更改
 description: 列出适用于 .NET Core 和 .NET 5 的 Windows 窗体中的中断性变更。
 ms.date: 09/08/2020
-ms.openlocfilehash: 01810a690227bbcab2103f00767315dbc5d5fae3
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: c79fd28b5c3b81ae7ddf1ef3f470601108b87705
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400627"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440785"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows 窗体中的中断性变更
 
@@ -136,4 +136,4 @@ _**
 
 ## <a name="see-also"></a>请参阅
 
-- [将 Windows 窗体应用移植到 .NET Core](../porting/winforms.md)
+- [将 Windows 窗体应用移植到 .NET Core](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)

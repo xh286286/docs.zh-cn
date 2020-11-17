@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224131"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441071"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>在 .NET for Apache Spark 交互环境中编写和调用 UDF
 
@@ -49,7 +49,7 @@ ms.locfileid: "92224131"
 
 出现上面那种突出显示的错误，是因为 UDF 程序集需要先进行编译并发送到工作器，然后才能在 DataFrame 上调用它。
 
-这些是在 .NET for Apache Spark 交互式体验（如 [Azure Synapse Notebook](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)）中实现 UDF 时需要记住的几个要点。
+这些是在 .NET for Apache Spark 交互式体验（如 [Azure Synapse Notebook](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)）中实现 UDF 时需要记住的几个要点。
 
 ## <a name="faqs"></a>常见问题解答
 

@@ -4,12 +4,12 @@ description: 了解用于构建多种应用的免费开源开发平台 .NET。
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329789"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506735"
 ---
 # <a name="introduction-to-net"></a>.NET 简介
 
@@ -24,7 +24,7 @@ ms.locfileid: "94329789"
   * [Windows 窗体](/dotnet/desktop/winforms/)
   * [通用 Windows 平台 (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [游戏](https://dotnet.microsoft.com/apps/games)
-* [物联网 (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [物联网 (IoT)](/dotnet/iot)
 * [机器学习](../machine-learning/index.yml)
 * [控制台应用](tutorials/with-visual-studio-code.md)
 * [Windows 服务](/aspnet/core/host-and-deploy/windows-service)
@@ -132,7 +132,7 @@ Microsoft 的 .NET 二进制发行版在 Azure 中的 Microsoft 维护服务器�
 
 [.NET SDK](sdk.md) 是一组用于开发和运行 .NET 应用程序的库和工具。
 
-[下载 .NET](https://dotnet.microsoft.com/download/dotnet-core/) 时，可以选择 SDK 或 *运行时* ，例如 .NET 运行时或 ASP.NET Core 运行时。 在要准备运行 .NET 应用的计算机上安装运行时。 在要用于开发的计算机上安装 SDK。 下载 SDK 时，将自动获取运行时。
+[下载 .NET](https://dotnet.microsoft.com/download/dotnet-core/) 时，可以选择 SDK 或 *运行时*，例如 .NET 运行时或 ASP.NET Core 运行时。 在要准备运行 .NET 应用的计算机上安装运行时。 在要用于开发的计算机上安装 SDK。 下载 SDK 时，将自动获取运行时。
 
 SDK 下载包括以下组件：
 
@@ -242,7 +242,7 @@ GC 是一种有助于确保内存安全的 CLR 服务。 如果某个程序仅�
 
 ### <a name="working-with-unmanaged-resources"></a>处理未托管的资源
 
-有时，代码需要引用 *非托管资源* 。 未托管的资源是指不由 .NET 运行时自动维护的资源。 例如，文件句柄就是未托管的资源。 <xref:System.IO.FileStream> 对象是一个托管对象，但它引用未托管的文件句柄。 用完 <xref:System.IO.FileStream> 之后，需要显式释放文件句柄。
+有时，代码需要引用 *非托管资源*。 未托管的资源是指不由 .NET 运行时自动维护的资源。 例如，文件句柄就是未托管的资源。 <xref:System.IO.FileStream> 对象是一个托管对象，但它引用未托管的文件句柄。 用完 <xref:System.IO.FileStream> 之后，需要显式释放文件句柄。
 
 在 .NET 中，引用未托管资源的对象会实现 <xref:System.IDisposable> 接口。 用完对象后，需调用此对象的 <xref:System.IDisposable.Dispose> 方法，该方法会释放所有托管资源。 .NET 语言提供一种方便的 `using` 语句（[C#](../csharp/language-reference/keywords/using.md)、[F#](../fsharp/language-reference/resource-management-the-use-keyword.md)、[VB](../visual-basic/language-reference/statements/using-statement.md)），确保调用 `Dispose` 方法。
 

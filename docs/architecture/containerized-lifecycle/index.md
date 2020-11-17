@@ -1,19 +1,21 @@
 ---
 title: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
 description: 在基本层面概要了解使用 Docker 和 Microsoft 平台及工具开发和部署容器化应用程序的过程。
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160692"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506657"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
 
 ![封面](./media/devops-book-cover-large-we.png)
 
 **版本 v3.1** - 已更新到 ASP.NET Core v3.1
+
+请参阅[更改记录](https://aka.ms/DockerLifecycleEbookChangelog)了解书籍更新和社区贡献。
 
 本指南在整体上概述了使用 Microsoft 平台和工具通过 Docker 开发和部署容器化的 ASP.NET Core 应用程序。 本指南大致介绍了 Azure DevOps（用于实现 CI/CD 管道）以及 Azure 容器注册表 (ACR) 和 Azure Kubernetes 服务 AKS（用于部署）。
 

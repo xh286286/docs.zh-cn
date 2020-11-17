@@ -24,7 +24,7 @@
           href: logic-apps.md
         - name: Azure 事件网格
           href: event-grid.md
-    - name: 持久 Azure 函数
+    - name: 持久 Azure Functions
       href: durable-azure-functions.md
       items:
         - name: 业务流程模式

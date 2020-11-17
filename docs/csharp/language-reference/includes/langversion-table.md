@@ -1,17 +1,18 @@
 ---
 ms.custom: updateeachrelease
-ms.openlocfilehash: d30d6ee2dae332895697b2fd1b931b7ec47d14bc
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 20d4434bc25fbd55cf2bbb309558395dd980d398
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656198"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634490"
 ---
 | “值”                     | 含义                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------|
 | `preview`                 | 编译器接受最新预览版中的所有有效语言语法。                         |
 | `latest`                  | 编译器接受最新发布的编译器版本（包括次要版本）中的语法。 |
 | `latestMajor` (`default`) | 编译器接受最新发布的编译器主要版本中的语法。                     |
+| `9.0`                     | 编译器只接受 C# 9.0 或更低版本中所含的语法。                                   |
 | `8.0`                     | 编译器只接受 C# 8.0 或更低版本中所含的语法。                                   |
 | `7.3`                     | 编译器只接受 C# 7.3 或更低版本中所含的语法。                                   |
 | `7.2`                     | 编译器只接受 C# 7.2 或更低版本中所含的语法。                                   |

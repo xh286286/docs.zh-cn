@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495731"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557098"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -23,6 +23,8 @@ ms.locfileid: "89495731"
 
 Visual Basic 16.0/Visual Studio 2019 版本 16.0\
 有关新功能，请参阅 [Visual Basic 16.0](#visual-basic-160)。
+
+可以从 [.NET 下载页](https://dotnet.microsoft.com/download)下载最新 .NET SDK。
 
 ## <a name="previous-versions"></a>早期版本
 

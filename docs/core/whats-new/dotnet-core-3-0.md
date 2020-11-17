@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 2488499c1b0e8d12eb3be04b9bb885649b4da974
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050275"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439724"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新增功能
 
@@ -288,7 +288,7 @@ global.json 文件包含新选项，当你尝试定义所使用的 .NET Core SDK
 
 ### <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的*补丁*部分中的*百数*组中定义。 例如，**3.0.101** 和 **3.0.201** 是两个不同功能区段中的版本，而 **3.0.101** 和 **3.0.199** 则属于同一个功能区段。    并且，当安装 .NET Core SDK **3.0.101** 时，将从计算机中删除 .NET Core SDK **3.0.100** （如果存在）。  当 .NET Core SDK **3.0.200** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0.101** 。 
+用于 Windows 的 MSI 安装程序已从 .NET Core 3.0 开始更改。 SDK 安装程序现在将对 SDK 功能区段版本进行就地升级。 功能区段在版本号的 *补丁* 部分中的 *百数* 组中定义。 例如，**3.0.101** 和 **3.0.201** 是两个不同功能区段中的版本，而 **3.0.101** 和 **3.0.199** 则属于同一个功能区段。    并且，当安装 .NET Core SDK **3.0.101** 时，将从计算机中删除 .NET Core SDK **3.0.100** （如果存在）。  当 .NET Core SDK **3.0.200** 安装在同一台计算机上时，不会删除 .NET Core SDK **3.0.101** 。 
 
 有关版本控制的详细信息，请参阅 [.NET Core 的版本控制方式概述](../versions/index.md)。
 
@@ -307,7 +307,7 @@ dotnet new winforms
 
 Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”模板。
 
-有关如何移植现有 .NET Framework 应用程序的详细信息，请参阅[移植 WPF 项目](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)和[移植 Windows 窗体项目](../porting/winforms.md)。
+有关如何移植现有 .NET Framework 应用程序的详细信息，请参阅[移植 WPF 项目](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)和[移植 Windows 窗体项目](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)。
 
 #### <a name="winforms-high-dpi"></a>WinForms 高 DPI
 
@@ -479,7 +479,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="ieee-floating-point"></a>IEEE 浮点
 
-正在更新浮点 API，以符合 [IEEE 754-2008 修订](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 这些更改旨在公开所有**必需**操作并确保这些操作在行为上符合 IEEE 规范。有关浮点改进的详细信息，请参阅 [.NET Core 3.0 中的浮点分析和格式化改进](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)博客文章。
+正在更新浮点 API，以符合 [IEEE 754-2008 修订](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 这些更改旨在公开所有 **必需** 操作并确保这些操作在行为上符合 IEEE 规范。有关浮点改进的详细信息，请参阅 [.NET Core 3.0 中的浮点分析和格式化改进](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)博客文章。
 
 分析和格式化修复包括：
 

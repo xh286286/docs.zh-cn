@@ -2,12 +2,12 @@
 title: 类型封送 - .NET
 description: 了解 .NET 如何将类型封送到本机表示形式。
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188388"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440993"
 ---
 # <a name="type-marshaling"></a>类型封送
 
@@ -65,7 +65,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.ArgIterator` | `va_list` | 不允许 |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | 不允许 |
 | `System.Collections.IEnumerable` | `IDispatch*` | 不允许 |
-| `System.DateTimeOffset` | `int64_t` 表示自 1601 年 1 月 1 日午夜以来的时钟周期数 || `int64_t` 表示自 1601 年 1 月 1 日午夜以来的时钟周期数 |
+| `System.DateTimeOffset` | `int64_t` 表示自 1601 年 1 月 1 日午夜以来的时钟周期数 | `int64_t` 表示自 1601 年 1 月 1 日午夜以来的时钟周期数 |
 
 某些类型只能作为参数封送，而不能作为字段封送。 下表列出了这些类型：
 

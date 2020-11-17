@@ -1,17 +1,17 @@
 ### YamlMime:Landing
-title: 在 Windows、Linux 和 macOS 上安装 .NET Core
-summary: 了解如何在 Windows、Linux 和 macOS 版本上安装 .NET。 发现开发、部署和运行 .NET Core 应用所需的依赖项。
+title: 在 Windows、Linux 和 macOS 上安装 .NET
+summary: 了解如何在 Windows、Linux 和 macOS 版本上安装 .NET。 发现开发、部署和运行 .NET 应用所需的依赖项。
 metadata:
-  title: 在 Windows、Linux 和 macOS 上安装 .NET Core
-  description: 了解如何在 Windows、Linux 和 macOS 版本上下载并安装 .NET Core。 发现开发、部署和运行 .NET Core 应用所需的依赖项。
+  title: 在 Windows、Linux 和 macOS 上安装 .NET
+  description: 了解如何在 Windows、Linux 和 macOS 版本上下载并安装 .NET。 发现开发、部署和运行 .NET 应用所需的依赖项。
   ms.topic: landing-page
   ms.date: 06/29/2020
-  ms.openlocfilehash: dbc159bc4ff2d10bf55bd0c0b4d4e07a8fc04a4a
-  ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+  ms.openlocfilehash: 53c4485b986abf58bdff45d78342c110b15d7824
+  ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85804437"
+  ms.lasthandoff: 11/11/2020
+  ms.locfileid: "94507197"
 landingContent:
 - title: Windows
   linkLists:

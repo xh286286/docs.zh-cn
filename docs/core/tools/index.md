@@ -1,23 +1,23 @@
 ---
-title: .NET Core CLI
+title: .NET CLI
 titleSuffix: ''
-description: .NET Core CLI 及其功能概述。
+description: .NET CLI 及其功能概述。
 ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 6a12e2d16afe36092c10e14a7465fa3bdbb23f32
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062686"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633851"
 ---
-# <a name="net-core-cli-overview"></a>.NET Core CLI 概述
+# <a name="net-cli-overview"></a>.NET CLI 概述
 
 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
-.NET Core 命令行接口 (CLI) 工具是用于开发、生成、运行和发布 .NET Core 应用程序的跨平台工具链。
+.NET 命令行接口 (CLI) 工具是用于开发、生成、运行和发布 .NET 应用程序的跨平台工具链。
 
-.NET Core CLI 包含在 [.NET Core SDK](../sdk.md) 中。 若要了解如何安装 .NET Core SDK，请参阅[安装 .NET Core](../install/windows.md)。
+.NET CLI 附带了 [.NET SDK](../sdk.md)。 若要了解如何安装 .NET SDK，请参阅[安装 .NET Core](../install/windows.md)。
 
 ## <a name="cli-commands"></a>CLI 命令
 
@@ -64,7 +64,7 @@ ms.locfileid: "88062686"
 - [`tool run`](global-tools.md#invoke-a-local-tool) 自 .NET Core SDK 3.0 起可用。
 - [`tool uninstall`](dotnet-tool-uninstall.md)
 
-工具是控制台应用程序，它们从 NuGet 包中安装并从命令提示符处进行调用。 你可自行编写工具，也可安装由第三方编写的工具。 工具也称为全局工具、工具路径工具和本地工具。 有关详细信息，请参阅 [.NET Core 工具概述](global-tools.md)。
+工具是控制台应用程序，它们从 NuGet 包中安装并从命令提示符处进行调用。 你可自行编写工具，也可安装由第三方编写的工具。 工具也称为全局工具、工具路径工具和本地工具。 有关详细信息，请参阅 [.NET 工具概述](global-tools.md)。
 
 ## <a name="command-structure"></a>命令结构
 
@@ -80,7 +80,7 @@ dotnet /build_output/my_app.dll
 
 驱动程序名为 [dotnet](dotnet.md)，并具有两项职责，即运行[依赖于框架的应用](../deploying/index.md)或执行命令。
 
-若要运行依赖于框架的应用，请在驱动程序后指定应用，例如，`dotnet /path/to/my_app.dll`。 从应用的 DLL 驻留的文件夹执行命令时，只需执行 `dotnet my_app.dll` 即可。 如果要使用特定版本的 .NET Core 运行时，请使用 `--fx-version <VERSION>` 选项（请参阅 [dotnet 命令](dotnet.md)参考）。
+若要运行依赖于框架的应用，请在驱动程序后指定应用，例如，`dotnet /path/to/my_app.dll`。 从应用的 DLL 驻留的文件夹执行命令时，只需执行 `dotnet my_app.dll` 即可。 如果要使用特定版本的 .NET 运行时，请使用 `--fx-version <VERSION>` 选项（请参阅 [dotnet 命令](dotnet.md)参考）。
 
 为驱动程序提供命令时，`dotnet.exe` 启动 CLI 命令执行过程。 例如：
 
@@ -105,4 +105,4 @@ dotnet build
 ## <a name="see-also"></a>请参阅
 
 - [dotnet/sdk GitHub 存储库](https://github.com/dotnet/sdk/)
-- [.NET Core 安装指南](../install/windows.md)
+- [.NET 安装指南](../install/windows.md)
