@@ -2,7 +2,6 @@
 title: 生成加密和解密的密钥
 description: 了解如何创建和管理用于 .NET 中的加密和解密的对称和非对称密钥。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET]
 - cryptography [.NET], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 7ce19dc465fb1fac22545398e0724e6b76dd7098
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: aa95204a90f2aee684cdd20095d1816e890a0306
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556938"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831073"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>生成加密和解密的密钥
 创建和管理密钥是加密过程的一个重要部分。 对称算法要求创建密钥和初始化向量 (IV)。 密钥必须对不应解密数据的任何人保密。 IV 并不是一定要保密，但应定期更改。 非对称算法要求创建公钥和私钥。 公钥可以公开给任何人，而私钥必须只有将解密用公钥加密的数据的参与方知道。 本节介绍如何生成和管理对称和非对称算法的密钥。  
@@ -56,7 +55,7 @@ aes.GenerateIV();
 aes.GenerateKey();  
 ```  
   
- 执行前面的代码时，在新的**Aes**实例发出时，将生成一个密钥和 IV。 调用 **GenerateKey** 和 **GenerateIV** 方法时会创建另一个密钥和 IV。
+ 执行前面的代码时，在新的 **Aes** 实例发出时，将生成一个密钥和 IV。 调用 **GenerateKey** 和 **GenerateIV** 方法时会创建另一个密钥和 IV。
   
 ## <a name="asymmetric-keys"></a>非对称密钥
 
@@ -72,11 +71,11 @@ aes.GenerateKey();
 * <xref:System.Security.Cryptography.AsymmetricAlgorithm.ExportPkcs8PrivateKey%2A?displayProperty=nameWithType>
 * <xref:System.Security.Cryptography.AsymmetricAlgorithm.ExportEncryptedPkcs8PrivateKey%2A?displayProperty=nameWithType>
 
-可以通过使用方法，将**RSA**实例初始化为**RSAParameters**结构的值 <xref:System.Security.Cryptography.RSA.ImportParameters%2A> 。 或使用方法创建一个新的实例 <xref:System.Security.Cryptography.RSA.Create(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType> 。  
+可以通过使用方法，将 **RSA** 实例初始化为 **RSAParameters** 结构的值 <xref:System.Security.Cryptography.RSA.ImportParameters%2A> 。 或使用方法创建一个新的实例 <xref:System.Security.Cryptography.RSA.Create(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType> 。  
   
- 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关如何在密钥容器中存储私钥的详细信息，请参阅[如何：将非对称密钥存储在密钥容器中](how-to-store-asymmetric-keys-in-a-key-container.md)。  
+ 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关如何在密钥容器中存储私钥的详细信息，请参阅 [如何：将非对称密钥存储在密钥容器中](how-to-store-asymmetric-keys-in-a-key-container.md)。  
   
- 下面的代码示例创建**RSA**类的新实例，创建公钥/私钥对，并将公钥信息保存到**RSAParameters**结构。  
+ 下面的代码示例创建 **RSA** 类的新实例，创建公钥/私钥对，并将公钥信息保存到 **RSAParameters** 结构。  
   
 ```vb  
 'Generate a public/private key pair.  
@@ -92,7 +91,7 @@ RSA rsa = RSA.Create();
 RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加密数据](encrypting-data.md)
 - [解密数据](decrypting-data.md)

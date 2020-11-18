@@ -1,38 +1,37 @@
 ---
 title: 运算符重载
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - operators [.NET Framework], overloads
 - names [.NET Framework], overloaded operators
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 893b7d1f76dfb059a0ddca77dfd8654812e9ae12
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289728"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830033"
 ---
 # <a name="operator-overloads"></a>运算符重载
 运算符重载允许框架类型看起来像是内置语言基元。
 
  尽管在某些情况下允许和有用，但应慎重使用运算符重载。 在许多情况下，运算符重载已经被滥用，例如，当框架设计器开始对应该为简单方法的操作使用运算符时。 以下准则可帮助您决定何时以及如何使用运算符重载。
 
- ❌避免定义运算符重载，但在应像基元（内置）类型的类型中除外。
+ ❌ 避免定义运算符重载，但在应像基元 (内置) 类型的类型中除外。
 
  ✔️考虑在应感觉为基元类型的类型中定义运算符重载。
 
  例如， <xref:System.String?displayProperty=nameWithType> 具有 `operator==` 并定义了 `operator!=` 。
 
- ✔️在表示数字的结构中定义运算符重载（如 <xref:System.Decimal?displayProperty=nameWithType> ）。
+ ✔️在表示数字 (例如) 的结构中定义运算符重载 <xref:System.Decimal?displayProperty=nameWithType> 。
 
- ❌在定义运算符重载时不太刻意。
+ ❌ 在定义运算符重载时不太刻意。
 
  运算符重载非常有用，在这种情况下，操作的结果将是什么。 例如，可以 <xref:System.DateTime> 从一个中减去另一个 `DateTime` 并获取 <xref:System.TimeSpan> 。 但是，不适合使用逻辑联合运算符来联合两个数据库查询，或使用 shift 运算符将写入到流中。
 
- ❌除非至少有一个操作数为定义重载的类型，否则不要提供运算符重载。
+ ❌ 除非至少有一个操作数为定义重载的类型，否则不要提供运算符重载。
 
  ✔️以对称方式重载运算符。
 
@@ -91,17 +90,17 @@ ms.locfileid: "84289728"
 ### <a name="conversion-operators"></a>转换运算符
  转换运算符是允许从一种类型转换为另一种类型的一元运算符。 运算符必须在操作数或返回类型上定义为静态成员。 有两种类型的转换运算符：隐式和显式。
 
- ❌如果最终用户不需要此类转换，请不要提供转换运算符。
+ ❌ 如果最终用户不需要此类转换，请不要提供转换运算符。
 
- ❌不要定义类型的域之外的转换运算符。
+ ❌ 不要定义类型的域之外的转换运算符。
 
  例如，、 <xref:System.Int32> <xref:System.Double> 和 <xref:System.Decimal> 都是数值类型，而 <xref:System.DateTime> 不是。 因此，不应将转换运算符转换为 `Double(long)` `DateTime` 。 在这种情况下，构造函数是首选的。
 
- ❌如果转换可能有损，请不要提供隐式转换运算符。
+ ❌ 如果转换可能有损，请不要提供隐式转换运算符。
 
  例如，不应从到的隐式转换， `Double` `Int32` 因为的 `Double` 范围超出了 `Int32` 。 即使转换可能会有损，也可以提供显式转换运算符。
 
- ❌不从隐式强制转换引发异常。
+ ❌ 不从隐式强制转换引发异常。
 
  最终用户很难了解发生的情况，因为他们可能不知道转换正在进行。
 
@@ -109,7 +108,7 @@ ms.locfileid: "84289728"
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,7 +1,6 @@
 ---
 title: 加密签名
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -20,12 +19,12 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-ms.openlocfilehash: ce2be1d509da4e399bf87e1c8df7ba061fc2707c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 453e9d887012826da3f64d199e15a05fd0661191
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557003"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831125"
 ---
 # <a name="cryptographic-signatures"></a>加密签名
 
@@ -161,7 +160,7 @@ else
 
 如果签名有效，则此代码段将显示“`The signature is valid`”，如果无效，则显示“`The signature is not valid`”。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加密服务](cryptographic-services.md)
 - [加密模型](cryptography-model.md)

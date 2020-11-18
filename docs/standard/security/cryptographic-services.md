@@ -2,7 +2,6 @@
 title: 加密服务
 description: .NET 支持的加密方法和实践的概述。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET]
 - pattern of derived class inheritance
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5558c60768b992984c3800b482961128d3bf5d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281731"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829903"
 ---
 # <a name="cryptographic-services"></a>加密服务
 
@@ -71,7 +70,7 @@ ms.locfileid: "93281731"
 
 一种名为分组加密的密钥算法用于一次加密一个数据块。 分组加密（例如数据加密标准 (DES)、TripleDES 和高级加密标准 (AES)）可将 *n* 字节的输入块通过加密转换为由加密字节构成的输出块。 如果想要加密或解密字节序列，则必须逐块执行。 由于 *n* 很小（DES 和 TripleDES 为 8 字节；AES 为 16 字节 [默认值]、24 字节或 32 字节），所以对于大于 *n* 的数据值，必须一次加密一个数据块。 小于 *n* 的数据值则必须扩展为 *n* 才能进行处理。
 
-分组加密的一种简单形式被称为电子密码本 (ECB) 模式。 ECB 模式被视为不安全，因为它不使用初始化向量来初始化第一个纯文本块。 对于给定的密钥 *k* ，不使用初始化向量的简单分组加密会将相同的纯文本输入块加密为相同的已加密文本的输出块。 因此，如果输入的纯文本流中存在重复的块，则输出密码文本流中也会有重复的块。 这些重复的输出块会警告未经授权的用户使用了可能被采用的算法访问不可靠的加密以及可能的攻击模式。 因此，ECB 密码模式非常易于分析，最终导致密钥易于被发现。
+分组加密的一种简单形式被称为电子密码本 (ECB) 模式。 ECB 模式被视为不安全，因为它不使用初始化向量来初始化第一个纯文本块。 对于给定的密钥 *k*，不使用初始化向量的简单分组加密会将相同的纯文本输入块加密为相同的已加密文本的输出块。 因此，如果输入的纯文本流中存在重复的块，则输出密码文本流中也会有重复的块。 这些重复的输出块会警告未经授权的用户使用了可能被采用的算法访问不可靠的加密以及可能的攻击模式。 因此，ECB 密码模式非常易于分析，最终导致密钥易于被发现。
 
 基类库中提供的分组加密类使用称为加密块链接 (CBC) 的默认链接模式，但可随意更改此默认设置。
 

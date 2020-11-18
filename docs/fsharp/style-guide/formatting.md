@@ -2,12 +2,12 @@
 title: F# 代码格式设置准则
 description: '了解设置 F # 代码格式的准则。'
 ms.date: 08/31/2020
-ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8f5e333c015f30ae8449c76a3075763370a98e4d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688249"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830514"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 代码格式设置准则
 
@@ -102,7 +102,7 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>为长定义将参数放在新行上
 
-如果函数定义非常长，请将参数放在新行上，并缩进这些参数以匹配后续参数的缩进级别。
+如果使用的是长函数定义，请将参数放在新行上，并缩进它们以匹配后续参数的缩进级别。
 
 ```fsharp
 module M =
@@ -308,7 +308,7 @@ type SchoolPerson =
 
 ### <a name="avoid-underscores-in-names"></a>避免名称中有下划线
 
-从历史上看，某些 F # 库在名称中使用了下划线。 但是，这并不能再被广泛接受，因为它与 .NET 命名约定冲突。 也就是说，某些 F # 程序员在很大程度上使用下划线，其中部分原因是出于历史原因，而容差和尊重非常重要。 但是，请注意，样式通常不喜欢有权选择是否使用的其他人。
+从历史上看，某些 F # 库在名称中使用了下划线。 但是，这并不能再被广泛接受，因为它与 .NET 命名约定冲突。 也就是说，某些 F # 程序员在很大程度上使用下划线，其中部分原因是出于历史原因，而容差和尊重非常重要。 但是，这种样式通常不喜欢于对是否使用该样式有选择的其他人。
 
 一个例外包括与本机组件互操作，其中有下划线。
 
@@ -643,7 +643,7 @@ let daysOfWeek' includeWeekend =
 ## <a name="formatting-if-expressions"></a>设置表达式的格式
 
 条件的缩进取决于使其变得的表达式的大小和复杂程度。
-仅在以下情况时将它们写入一行：
+在以下情况时，请将它们写入一行：
 
 - `cond`、 `e1` 和 `e2` 为 short
 - `e1` 和 `e2` 不是 `if/then/else` 表达式本身。
@@ -992,7 +992,7 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 
 ## <a name="formatting-computation-expression-operations"></a>格式化计算表达式操作
 
-为 [计算表达式](../language-reference/computation-expressions.md) 创建自定义操作时，建议使用 camelCase 命名：
+为 [计算表达式](../language-reference/computation-expressions.md)创建自定义操作时，建议使用 camelCase 命名：
 
 ```fsharp
 type MathBuilder () =
@@ -1031,5 +1031,5 @@ let myNumber =
     }
 ```
 
-所使用的命名约定最终应由要建模的域驱动。
+正在建模的域应最终驱动命名约定。
 如果惯用使用不同的约定，应改为使用该约定。

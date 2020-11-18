@@ -1,20 +1,19 @@
 ---
 title: 程序集和 DLL 的名称
-description: 了解如何命名程序集和动态链接库（Dll）。 程序集可跨一个或多个文件，但它通常与 DLL 相互映射。
+description: 了解 (Dll) 命名程序集和动态链接库的准则。 程序集可跨一个或多个文件，但它通常与 DLL 相互映射。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], DLLs
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d1484889eb7db537de970c31109f26a6d61ad8d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594473"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830046"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
 程序集是托管代码程序的部署和标识单元。 尽管程序集可跨一个或多个文件，但通常程序集与 DLL 相互映射。 因此，本节仅介绍 DLL 命名约定，然后可以将其映射到程序集命名约定。
@@ -33,7 +32,7 @@ ms.locfileid: "84594473"
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

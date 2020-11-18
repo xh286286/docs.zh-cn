@@ -2,7 +2,6 @@
 title: .NET 加密模型
 description: 查看 .NET 中的常用加密算法实现。 了解对象继承、流设计、& 配置的可扩展加密模型。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: a157a9a76f87a2a56c616b76c933e6d8d6415b03
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: f9ec08992cb8db8f81f11de661612e1b7d15131c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281579"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831112"
 ---
 # <a name="net-cryptography-model"></a>.NET 加密模型
 

@@ -2,7 +2,6 @@
 title: 演练：创建加密应用程序
 description: 演练如何创建加密应用程序。 了解如何对 Windows 窗体应用程序中的内容进行加密和解密。
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,19 +10,19 @@ helpviewer_keywords:
 - cryptography [NET], cryptographic application example
 - cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557185"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830553"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 
 > [!NOTE]
 > 本文适用于 Windows。
 >
-> 有关 ASP.NET Core 的信息，请参阅[ASP.NET Core 数据保护](/aspnet/core/security/data-protection/introduction)。
+> 有关 ASP.NET Core 的信息，请参阅 [ASP.NET Core 数据保护](/aspnet/core/security/data-protection/introduction)。
 
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "87557185"
 
 本演练中的大多数代码示例均设计为按钮控件的事件处理程序。 下表列出了示例应用程序所需的控件及其匹配代码示例所需的名称。  
   
-|控件|“属性”|文本属性（根据需要）|  
+|控件|名称|文本属性（根据需要）|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密文件|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密文件|  
@@ -225,9 +224,9 @@ ms.locfileid: "87557185"
   
 2. 单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。 这将会成功，因为你具有用于解密的完整密钥对。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [加密模型](cryptography-model.md)-介绍如何在基类库中实现加密。
+- [加密模型](cryptography-model.md) -介绍如何在基类库中实现加密。
 - [加密服务](cryptographic-services.md)
 - [跨平台加密](cross-platform-cryptography.md)
 - [ASP.NET Core 数据保护](/aspnet/core/security/data-protection/introduction)
