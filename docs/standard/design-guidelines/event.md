@@ -1,7 +1,6 @@
 ---
 title: 事件设计
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: 852c99b1a41691911f7ae82d3b8104526811757d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289819"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821328"
 ---
 # <a name="event-design"></a>事件设计
-事件是最常用的回调形式（构造，允许框架调入用户代码）。 其他回调机制包括采用委托、虚拟成员和基于接口的插件的成员。可用性研究的数据表明，大多数开发人员比使用其他回调机制更喜欢使用事件。 事件与 Visual Studio 和多种语言完美集成。
+事件是最常用的回调形式 (构造，使框架可以调入用户代码) 。 其他回调机制包括采用委托、虚拟成员和基于接口的插件的成员。可用性研究中的数据表明，大多数开发人员比使用其他回调机制更喜欢使用事件。 事件与 Visual Studio 和多种语言完美集成。
 
  需要注意的是，有两组事件：在系统状态发生更改之前引发的事件（称为前期事件）和状态更改后引发的事件（称为后期事件）。 预事件的一个示例是 `Form.Closing` ，在关闭窗体前引发。 后事件的一个示例是 `Form.Closed` ，它在窗体关闭后引发。
 
@@ -40,11 +39,11 @@ ms.locfileid: "84289819"
 
  应将参数命名为 `e` ，并将其类型化为事件参数类。
 
- ❌引发非静态事件时，不要将 null 作为发件人传递。
+ ❌ 引发非静态事件时，不要将 null 作为发件人传递。
 
  ✔️在引发静态事件时将 null 作为发件人传递。
 
- ❌引发事件时，请勿传递 null 作为事件数据参数。
+ ❌ 引发事件时，请勿传递 null 作为事件数据参数。
 
  `EventArgs.Empty`如果不想将任何数据传递到事件处理方法，则应传递。 开发人员希望此参数不为 null。
 
@@ -63,11 +62,11 @@ ms.locfileid: "84289819"
 
  ✔️使用 <xref:System.EventArgs?displayProperty=nameWithType> 或其子类作为事件处理程序的第二个参数的类型，并调用它 `e` 。
 
- ❌在事件处理程序中，不能有两个以上的参数。
+ ❌ 在事件处理程序中，不能有两个以上的参数。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,7 +1,6 @@
 ---
 title: 如何：使用 X.509 证书解密 XML 元素
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-ms.openlocfilehash: f60947a3b722f33c88b696d47c6a4000a1cb076b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 02a4a4ada6dcc242a96d630699797f2ea76987e3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555729"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820275"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 证书解密 XML 元素
 
@@ -72,7 +71,7 @@ ms.locfileid: "87555729"
   
 - 在面向 .NET Framework 的项目中，包含对的引用 `System.Security.dll` 。
 
-- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
 
 - 包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "87555729"
 
 此示例中使用的 X.509 证书仅用于测试目的。  应用程序应使用由受信任的证书颁发机构生成的 x.509 证书。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加密模型](cryptography-model.md)
 - [加密服务](cryptographic-services.md)

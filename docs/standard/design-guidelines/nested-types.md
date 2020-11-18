@@ -1,7 +1,6 @@
 ---
 title: 嵌套类型
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - types, nested
 - public nested types
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: a3b090b39e1e907826551ed152d4eece4885ce41
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1ac2f9f5e10149027b79cd67e5077ec6bc17f9c9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290131"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820808"
 ---
 # <a name="nested-types"></a>嵌套类型
 嵌套类型是在另一种类型的作用域内定义的类型，称为封闭类型。 嵌套类型可以访问其封闭类型的所有成员。 例如，它可以访问在封闭类型中定义的私有字段，还可以访问在封闭类型的所有祖先中定义的受保护字段。
@@ -26,23 +25,23 @@ ms.locfileid: "84290131"
 
  如果嵌套类型与其外部类型之间的关系是需要成员可访问性语义，✔️确实使用嵌套类型。
 
- ❌不要使用公共嵌套类型作为逻辑分组构造;为此使用命名空间。
+ ❌ 不要使用公共嵌套类型作为逻辑分组构造;为此使用命名空间。
 
- ❌避免公开公开的嵌套类型。 唯一的例外是，只需在很少的情况下（如子类化或其他高级自定义方案）声明嵌套类型的变量。
+ ❌ 避免公开公开的嵌套类型。 唯一的例外是，只需在很少的情况下（如子类化或其他高级自定义方案）声明嵌套类型的变量。
 
- ❌如果类型可能在包含类型的外部引用，请不要使用嵌套类型。
+ ❌ 如果类型可能在包含类型的外部引用，请不要使用嵌套类型。
 
  例如，传递给在类上定义的方法的枚举不应定义为类中的嵌套类型。
 
- ❌如果嵌套类型需要通过客户端代码进行实例化，请不要使用嵌套类型。  如果某个类型具有公共构造函数，则它可能不会嵌套。
+ ❌ 如果嵌套类型需要通过客户端代码进行实例化，请不要使用嵌套类型。  如果某个类型具有公共构造函数，则它可能不会嵌套。
 
- 如果可实例化类型，则似乎指示类型在框架中具有一个位置（你可以创建它、使用它，并在不使用外部类型的情况下销毁它），因此不应进行嵌套。 不应将内部类型广泛地在外部类型的外部重用，无需任何与外部类型的关系。
+ 如果可实例化类型，则似乎指示该类型在框架中具有一个位置，你可以创建该类型，使用该类型，并在不使用外部类型的情况下销毁该类型 () ，因此不应进行嵌套。 不应将内部类型广泛地在外部类型的外部重用，无需任何与外部类型的关系。
 
- ❌不要将嵌套类型定义为接口的成员。 许多语言不支持这种构造。
+ ❌ 不要将嵌套类型定义为接口的成员。 许多语言不支持这种构造。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

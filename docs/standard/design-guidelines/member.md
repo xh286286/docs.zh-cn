@@ -2,19 +2,18 @@
 title: 成员设计准则
 description: 了解 .NET 中的成员设计准则。 成员包含方法、属性、事件、构造函数和字段。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
 - members [.NET Framework], design guidelines
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: a1f0c1d74e8bffa7cfef975c7dafb9fd01479470
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 512fc3b7fde93279995a67be2fc0b285ba235f16
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594486"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820938"
 ---
 # <a name="member-design-guidelines"></a>成员设计准则
 方法、属性、事件、构造函数和字段统称为成员。 成员最终是指向框架的最终用户公开框架功能的方式。  
@@ -34,7 +33,7 @@ ms.locfileid: "84594486"
  [参数设计](parameter-design.md)  
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*  
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*  
   
 ## <a name="see-also"></a>另请参阅
 

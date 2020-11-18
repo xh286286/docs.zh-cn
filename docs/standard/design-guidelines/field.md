@@ -1,27 +1,26 @@
 ---
 title: 字段设计
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - fields, design guidelines
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 3a5ae985ab161899fbb5e96f9b0ef0cfa90b957c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289741"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821107"
 ---
 # <a name="field-design"></a>字段设计
 封装原则是面向对象的设计中最重要的概念之一。 此原则表明，存储在对象中的数据应只能访问该对象。
 
- 解释此原则的一种有用方法是说，应设计一个类型，以便在不中断类型成员的代码的情况下，对该类型的字段进行更改（名称或类型更改）。 此解释会立即表示所有字段都必须是私有的。
+ 解释此原则的一种有用方法是说，一种类型应设计为，以便对该类型的字段进行更改 (名称或类型) 更改，而不会中断类型成员的代码。 此解释会立即表示所有字段都必须是私有的。
 
  我们从此严格限制中排除了常量和静态只读字段，因为此类字段（几乎按定义）从不需要更改。
 
- ❌不要提供公共或受保护的实例字段。
+ ❌ 不要提供公共或受保护的实例字段。
 
  应提供用于访问字段的属性，而不是将其设为公共或受保护。
 
@@ -33,13 +32,13 @@ ms.locfileid: "84289741"
 
  如果有类型的预定义实例，请将它们声明为类型本身的公共只读静态字段。
 
- ❌不要将可变类型的实例分配给 `readonly` 字段。
+ ❌ 不要将可变类型的实例分配给 `readonly` 字段。
 
  可变类型是具有实例的类型，这些实例可在实例化后进行修改。 例如，数组、大多数集合和流都是可变类型，但 <xref:System.Int32?displayProperty=nameWithType> 、 <xref:System.Uri?displayProperty=nameWithType> 和 <xref:System.String?displayProperty=nameWithType> 都是不可变的。 引用类型字段上的只读修饰符可防止替换存储在字段中的实例，但它不会通过调用更改实例的成员来防止修改字段的实例数据。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

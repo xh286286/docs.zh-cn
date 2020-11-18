@@ -1,7 +1,6 @@
 ---
 title: 抽象类设计
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, abstract classes
 - abstract classes, design guidelines
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-ms.openlocfilehash: e6a5923f293ed536fb272f6fe6c805067aede0ab
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6903e10c8695376d8ac5961461796c5413307f90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280772"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821640"
 ---
 # <a name="abstract-class-design"></a>抽象类设计
 
-❌不要在抽象类型中定义公共或受保护的内部构造函数。
+❌ 不要在抽象类型中定义公共或受保护的内部构造函数。
 
  仅当用户需要创建类型的实例时，构造函数才应该是公共的。 由于不能创建抽象类型的实例，因此具有公共构造函数的抽象类型会错误地设计并且误导用户。
 
@@ -31,11 +30,11 @@ ms.locfileid: "84280772"
 
  ✔️提供至少一种从你发运的每个抽象类继承的具体类型。
 
- 这样做有助于验证抽象类的设计。 例如， <xref:System.IO.FileStream?displayProperty=nameWithType> 是 <xref:System.IO.Stream?displayProperty=nameWithType> 抽象类的实现。
+ 这样做有助于验证抽象类的设计。 例如，  <xref:System.IO.FileStream?displayProperty=nameWithType> 是 <xref:System.IO.Stream?displayProperty=nameWithType> 抽象类的实现。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

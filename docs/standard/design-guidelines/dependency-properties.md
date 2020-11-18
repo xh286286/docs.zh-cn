@@ -1,19 +1,18 @@
 ---
 title: 依赖项属性
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-ms.openlocfilehash: 476ef1bb1ac5ec1f551979c64a41cbae55c554bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c6cebd7c6c630af6a1a439b48faccad2aea74a91
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280252"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821367"
 ---
 # <a name="dependency-properties"></a>依赖项属性
-依赖属性（DP）是常规属性，它将其值存储在属性存储中，而不是将其存储在类型变量（字段）中。
+ (DP) 的依赖属性是一个常规属性，它将其值存储在属性存储中，而不是将其存储在类型变量中，而不是将其存储在类型变量 (字段) 中。
 
- 附加的依赖属性是作为静态 Get 和 Set 方法建模的一种依赖属性，它们表示 "属性"，描述对象及其容器之间的关系（例如， `Button` 对象在容器上的位置 `Panel` ）。
+ 附加的依赖属性是作为静态 Get 和 Set 方法建模的一种依赖属性，用于描述对象及其容器之间的关系 (例如， `Button` 对象在容器) 上的位置。 `Panel`
 
  如果需要属性来支持 WPF 功能，如样式、触发器、数据绑定、动画、动态资源和继承，✔️提供依赖属性。
 
@@ -26,20 +25,20 @@ ms.locfileid: "84280252"
 
  ✔️通过将属性的名称 suffixing 为 "属性"，来命名依赖属性静态字段。
 
- ❌不要在代码中显式设置依赖项属性的默认值;请改为在元数据中设置它们。
+ ❌ 不要在代码中显式设置依赖项属性的默认值;请改为在元数据中设置它们。
 
  如果显式设置了属性默认值，则可能会阻止某些隐式方式（如样式）设置该属性。
 
- ❌不要将代码放在属性访问器中，而不是标准代码访问静态字段。
+ ❌ 不要将代码放在属性访问器中，而不是标准代码访问静态字段。
 
  如果通过隐式方式（如样式）设置属性，则不会执行该代码，因为样式设置直接使用静态字段。
 
- ❌不要使用依赖项属性来存储安全数据。 甚至可以公开访问专用依赖属性。
+ ❌ 不要使用依赖项属性来存储安全数据。 甚至可以公开访问专用依赖属性。
 
 ## <a name="attached-dependency-property-design"></a>附加的依赖属性设计
  上一部分中所述的依赖项属性表示声明类型的内部属性;例如， `Text` 属性是声明它的的属性 `TextButton` 。 特殊类型的依赖项属性是附加的依赖属性。
 
- 附加属性的典型示例是 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 属性。 属性表示按钮的（而不是网格的）列位置，但它仅在按钮包含在网格中时才相关，因此它通过网格 "附加" 到按钮。
+ 附加属性的典型示例是 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 属性。 属性表示按钮 (不是网格的) 列位置，但它仅在按钮包含在网格中时才相关，因此它通过网格 "附加" 到按钮。
 
 ```xaml
 <Grid>
@@ -80,21 +79,21 @@ public class Grid {
 
  可惜依赖属性访问器不能包含任意验证代码。 相反，需要在属性注册期间指定依赖属性验证逻辑。
 
- ❌不要在属性的访问器中放置依赖属性验证逻辑。 而是将验证回调传递给 `DependencyProperty.Register` 方法。
+ ❌ 不要在属性的访问器中放置依赖属性验证逻辑。 而是将验证回调传递给 `DependencyProperty.Register` 方法。
 
 ## <a name="dependency-property-change-notifications"></a>依赖属性更改通知
- ❌不要在依赖属性访问器中实现更改通知逻辑。 依赖属性具有内置的更改通知功能，该功能必须通过向提供更改通知回调来使用 <xref:System.Windows.PropertyMetadata> 。
+ ❌ 不要在依赖属性访问器中实现更改通知逻辑。 依赖属性具有内置的更改通知功能，该功能必须通过向提供更改通知回调来使用 <xref:System.Windows.PropertyMetadata> 。
 
 ## <a name="dependency-property-value-coercion"></a>依赖项属性值强制
  在实际修改属性存储区之前，由 setter 修改了向属性 setter 提供的值时，会发生属性强制。
 
- ❌不要在依赖属性访问器中实现强制逻辑。
+ ❌ 不要在依赖属性访问器中实现强制逻辑。
 
  依赖属性具有内置强制功能，可通过向提供强制回调来使用 `PropertyMetadata` 。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

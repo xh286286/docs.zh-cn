@@ -2,7 +2,6 @@
 title: 类型成员的名称
 description: 了解在 .NET 中命名类型成员的准则，如方法、属性、事件和字段。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662493"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820908"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
 类型由以下成员构成：方法、属性、事件、构造函数和字段。 以下各节介绍命名类型成员的准则。
@@ -41,7 +40,7 @@ public class String {
 
  ✔️使用名词、名词短语或形容词名称属性。
 
- ❌没有与 "Get" 方法的名称相匹配的属性，如以下示例中所示：
+ ❌ 没有与 "Get" 方法的名称相匹配的属性，如以下示例中所示：
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -49,7 +48,7 @@ public class String {
 
  ✔️使用一个复数短语来描述集合中的项，而不是使用后跟 "List" 或 "Collection" 的短语来命名集合属性。
 
- ✔️使用赞成短语（ `CanSeek` 而不是）命名布尔属性 `CantSeek` 。 或者，还可以在布尔属性前面添加 "Is"、"Can" 或 "has" 前缀，但前提是在它添加值的位置。
+ ✔️使用赞成短语 (， `CanSeek` 而不是) 来命名布尔属性 `CantSeek` 。 或者，还可以在布尔属性前面添加 "Is"、"Can" 或 "has" 前缀，但前提是在它添加值的位置。
 
  ✔️考虑为属性提供与其类型相同的名称。
 
@@ -73,9 +72,9 @@ public class Control {
 
  例如，在窗口关闭前引发的关闭事件可命名为 `Closing`，而在窗口关闭后后引发的关闭事件可命名为 `Closed`。
 
- ❌不要使用 "Before" 或 "After" 前缀或 postfixes 来指示前和后事件。 请如上所示使用现在时和过去时。
+ ❌ 不要使用 "Before" 或 "After" 前缀或 postfixes 来指示前和后事件。 请如上所示使用现在时和过去时。
 
- ✔️使用 "EventHandler" 后缀来命名事件处理程序（用作事件类型的委托），如以下示例中所示：
+ ✔️命名事件处理程序 (使用 "EventHandler" 后缀的事件类型) 委托，如下面的示例中所示：
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
@@ -92,13 +91,13 @@ public class Control {
 
  ✔️使用名词、名词短语或形容词来命名字段。
 
- ❌不要对字段名称使用前缀。
+ ❌ 不要对字段名称使用前缀。
 
  例如，请勿使用“g_”或“s_”来指示静态字段。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

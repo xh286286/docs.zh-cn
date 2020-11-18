@@ -2,17 +2,16 @@
 title: 命名参数
 description: 了解参数命名准则。 例如，使用 & camel 大小写格式的描述性参数名称，& 考虑基于含义而不是类型进行命名。
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: 54f37c4d6a0f9a6931fa69d612bf0e45bf1f2ce7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583513"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820834"
 ---
 # <a name="naming-parameters"></a>命名参数
 除了可读性的明显原因外，请务必遵循有关参数名称的准则，因为当可视化设计工具提供 Intellisense 和类浏览功能时，参数将显示在文档和设计器中。
@@ -30,11 +29,11 @@ ms.locfileid: "84583513"
 
  ✔️考虑运算符重载参数有意义的名称，如果这样做会增加重要值。
 
- ❌不要对运算符重载参数名称使用缩写或数值索引。
+ ❌ 不要对运算符重载参数名称使用缩写或数值索引。
 
  *部分©2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
 ## <a name="see-also"></a>另请参阅
 

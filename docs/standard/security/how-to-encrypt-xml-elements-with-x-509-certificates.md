@@ -1,7 +1,6 @@
 ---
 title: 如何：使用 X.509 证书加密 XML 元素
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: c978bea7336e64d6622aca4d21c7ef3317d73957
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555716"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820184"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 证书加密 XML 元素
 
@@ -35,9 +34,9 @@ ms.locfileid: "87555716"
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>使用 X.509 证书对 XML 元素进行加密  
 
-若要运行此示例，需要创建测试证书，并将其保存到证书存储中。 仅为 Windows 证书创建工具提供该任务的说明[ ( # A0) ](/windows/desktop/SecCrypto/makecert)。
+若要运行此示例，需要创建测试证书，并将其保存到证书存储中。 仅为 Windows 证书创建工具提供该任务的说明 [ ( # A0) ](/windows/desktop/SecCrypto/makecert)。
 
-1. 使用[Makecert.exe](/windows/desktop/SecCrypto/makecert)生成 x.509 证书，并将其置于本地用户存储中。 必须生成一个交换密钥，且该密钥必须可导出。 运行以下命令：  
+1. 使用 [Makecert.exe](/windows/desktop/SecCrypto/makecert) 生成 x.509 证书，并将其置于本地用户存储中。 必须生成一个交换密钥，且该密钥必须可导出。 运行以下命令：  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
@@ -112,7 +111,7 @@ ms.locfileid: "87555716"
   
 - 在面向 .NET Framework 的项目中，包含对的引用 `System.Security.dll` 。
 
-- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
   
 - 包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "87555716"
   
 此示例中使用的 X.509 证书仅用于测试目的。  应用程序应使用由受信任的证书颁发机构生成的 x.509 证书。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加密模型](cryptography-model.md)
 - [加密服务](cryptographic-services.md)

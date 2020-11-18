@@ -1,7 +1,6 @@
 ---
 title: 如何：用对称密钥对 XML 元素进行加密
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,18 +14,18 @@ helpviewer_keywords:
 - XML encryption
 - Advanced Encryption Standard algorithm
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: dd69ec6a5317f7f6f800cd225d920a1934c77a0c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda1835a1390b025f2ee0509a91c59104a77ae9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555808"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820223"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行加密
 
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密可用于存储或传输敏感 XML，而无需担心数据被轻易读取。  此过程使用高级加密标准 (AES) 算法对 XML 元素进行加密。  
   
- 有关如何解密使用此过程加密的 XML 元素的信息，请参阅[如何：使用对称密钥对 Xml 元素进行解密](how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
+ 有关如何解密使用此过程加密的 XML 元素的信息，请参阅 [如何：使用对称密钥对 Xml 元素进行解密](how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
   
  当使用对称算法（如 AES）来加密 XML 数据时，必须使用相同的密钥来加密和解密 XML 数据。  此过程中的示例假定加密的 XML 将使用相同的密钥进行解密，且加密方和解密方就要使用的算法和密钥达成了一致。  此示例不对加密的 XML 内的 AES 密钥进行存储或加密。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "87555808"
   
 - 在面向 .NET Framework 的项目中，包含对的引用 `System.Security.dll` 。
 
-- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
   
 - 包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
@@ -102,9 +101,9 @@ ms.locfileid: "87555808"
   
 当你使用加密密钥执行操作后，通过将每个字节设置为零或通过调用托管加密类的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法来将它从内存中清除。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [加密模型](cryptography-model.md)-介绍如何在基类库中实现加密。
+- [加密模型](cryptography-model.md) -介绍如何在基类库中实现加密。
 - [加密服务](cryptographic-services.md)
 - [跨平台加密](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
