@@ -1,7 +1,6 @@
 ---
 title: 基于角色的安全性
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - role-based security, about role-based security
 - user authentication, principals
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - authentication [.NET], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-ms.openlocfilehash: ed6c33be5a5da066e238c160da8bff8d25cb68fc
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: a03cda3aac06cc247818ccea5c61c673225d7929
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555665"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824130"
 ---
 # <a name="role-based-security"></a>基于角色的安全性
 
@@ -28,9 +27,9 @@ ms.locfileid: "87555665"
   
  .NET 提供了基于角色的安全性支持，它具有足够的灵活性和可扩展性，足以满足各种应用程序的需求。 你可以选择与现有身份验证基础结构进行交互操作（如 COM+ 1.0 服务）或创建自定义身份验证系统。 基于角色的安全性非常适合在主要在服务器上进行处理 ASP.NET Web 应用程序中使用。 但是，可以在客户端或服务器上使用基于 .NET 角色的安全性。  
   
- 阅读本部分之前，请确保了解[关键安全概念](key-security-concepts.md)中介绍的内容。  
+ 阅读本部分之前，请确保了解 [关键安全概念](key-security-concepts.md)中介绍的内容。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
   
 - [主体和标识对象](principal-and-identity-objects.md)
 - [安全性的基础概念](key-security-concepts.md)

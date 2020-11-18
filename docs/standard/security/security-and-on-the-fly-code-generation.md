@@ -2,19 +2,18 @@
 title: 安全性和进行中的代码生成
 description: 对于以较高信任级别运行的代码，以较高信任级别运行代码，这是一个安全问题，尤其是当调用方可以影响代码生成时。
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - code security, on-the-fly code generation
 - on-the-fly code generation
 - security [.NET], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: a3fc51c346feffa85537d95ccdbd23d943827edf
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: c94da31f464a5272dd3f3c9f767a40ba7ad88a47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555690"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824143"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和进行中的代码生成
 
@@ -26,7 +25,7 @@ ms.locfileid: "87555690"
   
 编译代码时，请注意恶意程序是否可以某种方式修改它。 在编译器读取磁盘上的源代码或代码加载 .dll 文件之前，是否存在一小段时间窗口使恶意代码可在此期间修改此源代码？ 若如此，必须适当使用文件系统中的访问控制列表保护包含这些文件的目录。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [代码安全维护指南](secure-coding-guidelines.md)
+- [安全编码准则](secure-coding-guidelines.md)
 - [ASP.NET Core 安全性](/aspnet/core/security/)
