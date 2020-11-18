@@ -2,25 +2,24 @@
 title: .NET 中的安全性
 description: 了解 .NET 中的安全性。 请访问描述主要安全概念、基于角色的安全性、加密模型和安全编码准则的链接。
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, security
 - security [.NET], about security
 - application development [.NET], security
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-ms.openlocfilehash: 783cb8274d1fafe85d58758a36fae5d671f656f8
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: aee3fc66916a4bb6e7a4e3c496eb9b38356ad6e7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557107"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819976"
 ---
 # <a name="security-in-net"></a>.NET 中的安全性
 
 公共语言运行时和 .NET 提供了许多有用的类和服务，使开发人员能够编写安全代码、使用加密和实施基于角色的安全性。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在此部分中
 
 - [安全性的基础概念](key-security-concepts.md)  
 概述公共语言运行时的安全功能。
@@ -31,7 +30,7 @@ ms.locfileid: "87557107"
 - [加密模型](cryptography-model.md)  
 概述 .NET 提供的加密服务。
 
-- [代码安全维护指南](secure-coding-guidelines.md)  
+- [安全编码准则](secure-coding-guidelines.md)  
 描述创建可靠的 .NET 应用程序的一些最佳实践。
 
 ## <a name="related-sections"></a>相关章节

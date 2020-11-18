@@ -1,7 +1,6 @@
 ---
 title: 如何：创建 WindowsPrincipal 对象
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 6cf7153250d2574783515ea53cf99709499d36f9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d4140470308a09774e5e4eee429c1e91b559d063
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556201"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819027"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>如何：创建 WindowsPrincipal 对象
 
@@ -81,7 +80,7 @@ ms.locfileid: "90556201"
   
 3. 创建主体对象后，你可以使用若干方法中的一种对其进行验证。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [主体和标识对象](principal-and-identity-objects.md)
 - [ASP.NET Core 安全性](/aspnet/core/security/)

@@ -1,7 +1,6 @@
 ---
 title: 如何：验证 XML 文档的数字签名
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-ms.openlocfilehash: b9b2dc6a558d1fd6acd2922a7c8ad82ce8776c26
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9cbebd34866b66c00bf4aca708d75e315b067b0d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557042"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820067"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>如何：验证 XML 文档的数字签名
 
@@ -30,7 +29,7 @@ ms.locfileid: "87557042"
 
 此过程中的代码示例演示如何验证包含在 <> 元素中的 XML 数字签名 `Signature` 。  该示例检索密钥容器中 RSA 公钥，然后使用该密钥来验证签名。  
   
-有关如何使用此方法创建可以验证的数字签名的信息，请参阅[如何：使用数字签名为 XML 文档签名](how-to-sign-xml-documents-with-digital-signatures.md)。  
+有关如何使用此方法创建可以验证的数字签名的信息，请参阅 [如何：使用数字签名为 XML 文档签名](how-to-sign-xml-documents-with-digital-signatures.md)。  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>验证 XML 文档的数字签名  
   
@@ -80,17 +79,17 @@ ms.locfileid: "87557042"
   
 - 在面向 .NET Framework 的项目中，包含对的引用 `System.Security.dll` 。
 
-- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
+- 在面向 .NET Core 或 .NET 5 的项目中，安装 NuGet 包 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
   
 - 包括以下命名空间：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
 ## <a name="net-security"></a>.NET 安全性
 
-切勿用纯文本存储或传输非对称密钥对的私钥。  有关对称和非对称加密密钥的详细信息，请参阅[生成加密和解密密钥](generating-keys-for-encryption-and-decryption.md)。  
+切勿用纯文本存储或传输非对称密钥对的私钥。  有关对称和非对称加密密钥的详细信息，请参阅 [生成加密和解密密钥](generating-keys-for-encryption-and-decryption.md)。  
   
 切勿将私钥直接嵌入到源代码中。  [Ildasm.exe 使用 (IL 拆装器) ](../../framework/tools/ildasm-exe-il-disassembler.md)或通过在文本编辑器（例如记事本）中打开程序集，可以轻松地从程序集中读取嵌入的密钥。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加密模型](cryptography-model.md)
 - [加密服务](cryptographic-services.md)

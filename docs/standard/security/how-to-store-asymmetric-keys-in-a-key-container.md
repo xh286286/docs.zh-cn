@@ -2,7 +2,6 @@
 title: 如何：在密钥容器中存储非对称密钥
 description: 了解如何在 .NET 中的密钥容器中存储非对称密钥。 请参阅如何创建非对称密钥，将其保存在密钥容器中，然后检索和删除密钥。
 ms.date: 05/26/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: c0e0904089c4b7054aa3ef7510c20e40c57dc733
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 946657f0c96aa80705575d8203ff158c63a72780
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554405"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820145"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>将非对称密钥存储在密钥容器中
 
@@ -245,7 +244,7 @@ Key added to container:
 Key deleted.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [加密模型](cryptography-model.md)
 - [加密服务](cryptographic-services.md)

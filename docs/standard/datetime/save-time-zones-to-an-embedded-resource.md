@@ -1,7 +1,6 @@
 ---
 title: 如何：将时区保存到嵌入的资源中
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063399"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817596"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>如何：将时区保存到嵌入的资源中
 
@@ -55,7 +54,7 @@ ms.locfileid: "93063399"
 
 9. 将生成的 .resx 文件添加到应用程序的 Visual Studio 项目中。
 
-10. 使用 Visual Studio 中的 " **属性** " 窗口，确保将 .resx 文件的 " **生成操作** " 属性设置为 " **嵌入的资源** "。
+10. 使用 Visual Studio 中的 " **属性** " 窗口，确保将 .resx 文件的 " **生成操作** " 属性设置为 " **嵌入的资源**"。
 
 ## <a name="example"></a>示例
 
@@ -68,7 +67,7 @@ ms.locfileid: "93063399"
 
 由于 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> 方法会将完整的标头信息添加到 .NET XML 资源文件中，因此不能将其用于将资源添加到现有文件中。 该示例通过检查 SerializedTimeZones 文件来处理这种情况，如果该文件存在，则将其除两个序列化时区之外的所有资源存储到一个泛型 <xref:System.Collections.Generic.Dictionary%602> 对象。 然后删除现有的文件，并将现有资源添加到新的 SerializedTimeZones 文件。 序列化的时区数据也将添加到此文件中。
 
-资源的键 (或 **名称** ) 字段不应包含嵌入的空格。 <xref:System.String.Replace%28System.String%2CSystem.String%29>调用方法以删除时区标识符中的所有嵌入空格，然后将其分配给资源文件。
+资源的键 (或 **名称**) 字段不应包含嵌入的空格。 <xref:System.String.Replace%28System.String%2CSystem.String%29>调用方法以删除时区标识符中的所有嵌入空格，然后将其分配给资源文件。
 
 ## <a name="compiling-the-code"></a>编译代码
 

@@ -2,7 +2,6 @@
 title: 在各时区之间转换时间
 description: 了解如何在 .NET 中将从一个时区转换到另一个时区之间的时间。 还了解如何转换具有有限时区感知功能的 DateTimeOffset 值。
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 3539b3c2b71be331bdea3161b7e8ba6da407cbab
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b42b4c07b9b5f376c34a70d7400218c50296f324
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063828"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818025"
 ---
 # <a name="converting-times-between-time-zones"></a>在各时区之间转换时间
 

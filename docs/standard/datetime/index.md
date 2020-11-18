@@ -1,7 +1,6 @@
 ---
 title: 日期、时间和时区
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zone objects [.NET]
 - date and time data [.NET]
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - times [.NET], time zones
 - time [.NET], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-ms.openlocfilehash: 1200f7edc3ac40a67ecfa2f554c5c721877e755a
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b9dbbfa30c3398a984432fb0ecb8d0052c425f51
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063672"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817895"
 ---
 # <a name="dates-times-and-time-zones"></a>日期、时间和时区
 
@@ -34,7 +33,7 @@ ms.locfileid: "93063672"
 
 文档的此部分提供处理时区和创建时区识别应用程序所需的信息，时区识别程序可将日期和时间从一个时区转换到另一时区。
 
-## <a name="in-this-section"></a>在本节中
+## <a name="in-this-section"></a>在此部分中
 
 [时区概述](time-zone-overview.md)讨论了创建时区识别应用程序时涉及的术语、概念以及问题。
 
