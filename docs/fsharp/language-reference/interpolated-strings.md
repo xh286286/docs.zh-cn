@@ -2,12 +2,12 @@
 title: 内插字符串
 description: '了解内插字符串，它是一种特殊形式的字符串，可用于在其中直接嵌入 F # 表达式。'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688622"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829682"
 ---
 # <a name="interpolated-strings"></a>内插字符串
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>类型化内插字符串
 
-内插字符串还可以具有 F # 格式说明符来强制类型 safey。
+内插字符串还可以具有 F # 格式说明符来强制类型安全。
 
 ```fsharp
 let name = "Phillip"
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-此外，还可以通过类型注释将内插字符串 typechecked 为 <xref:System.FormattableString> ：
+此外，还可以通过类型注释将内插字符串作为类型检查 <xref:System.FormattableString> ：
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString

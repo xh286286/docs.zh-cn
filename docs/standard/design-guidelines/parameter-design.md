@@ -1,7 +1,6 @@
 ---
 title: 参数设计
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
 - members [.NET Framework], parameters
@@ -9,30 +8,30 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621582"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828798"
 ---
 # <a name="parameter-design"></a>参数设计
 
-本部分提供有关参数设计的广泛准则，包括包含检查参数准则的部分。 此外，还应参阅[命名参数](naming-parameters.md)中所述的准则。
+本部分提供有关参数设计的广泛准则，包括包含检查参数准则的部分。 此外，还应参阅 [命名参数](naming-parameters.md)中所述的准则。
 
  ✔️使用最不提供成员所需功能的派生参数类型。
 
  例如，假设要设计一个方法，该方法可枚举集合并将每个项输出到控制台。 此类方法应采用 <xref:System.Collections.IEnumerable> 参数，而不是 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.IList> ，例如。
 
- ❌不要使用保留的参数。
+ ❌ 不要使用保留的参数。
 
  如果在将来的某个版本中需要对成员进行更多输入，则可以添加新的重载。
 
- ❌不具有公开的方法，这些方法采用指针、指针数组或多维数组作为参数。
+ ❌ 不具有公开的方法，这些方法采用指针、指针数组或多维数组作为参数。
 
  指针和多维数组相对较难正确使用。 几乎在所有情况下，都可以重新设计 Api，以避免将这些类型作为参数。
 
- ✔️将所有的 `out` 参数置于所有按值和 `ref` 参数（不包括参数数组）之后，即使它导致在重载之间参数排序不一致（请参阅[成员重载](member-overloading.md)）。
+ ✔️将所有 `out` 参数都置于除参数数组) 之外的所有按值和 `ref` 参数 (，即使它导致重载之间参数排序不一致 (参阅 [成员重载](member-overloading.md)) 。
 
  `out`参数可以视为额外的返回值，并将它们组合在一起，使方法签名更易于理解。
 
@@ -43,9 +42,9 @@ ms.locfileid: "85621582"
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>选择枚举参数和布尔参数  
  如果成员将使用两个或多个布尔参数，✔️确实使用枚举。
 
- ❌不要使用布尔值，除非你完全确定不需要两个以上的值。
+ ❌ 不要使用布尔值，除非你完全确定不需要两个以上的值。
 
- 枚举为您提供了一些空间供将来添加值，但您应了解将值添加到枚举的所有含义，如[枚举设计](enum.md)中所述。
+ 枚举为您提供了一些空间供将来添加值，但您应了解将值添加到枚举的所有含义，如 [枚举设计](enum.md)中所述。
 
  ✔️考虑为构造函数参数使用布尔值，这些参数是真正的双状态值，只用于初始化布尔属性。
 
@@ -60,7 +59,7 @@ ms.locfileid: "85621582"
 
  不要假设枚举参数将在由枚举定义的范围内。 CLR 允许将任何整数值强制转换为枚举值，即使枚举中未定义该值。
 
- ❌不要用于 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 枚举范围检查。
+ ❌ 不要用于 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 枚举范围检查。
 
  ✔️请注意，可变参数在验证后可能已更改。
 
@@ -71,15 +70,15 @@ ms.locfileid: "85621582"
 
  当通过值参数传递参数时，该成员将接收传入的实参的副本。 如果参数是值类型，则将参数的副本放在堆栈上。 如果参数是引用类型，则将引用的副本放在堆栈上。 最常用的 CLR 语言（例如 c #、VB.NET 和 c + +）默认为通过值传递参数。
 
- 当通过参数传递参数时 `ref` ，该成员将接收对传入的实际参数的引用。 如果参数是值类型，则将对该参数的引用置于堆栈上。 如果参数是引用类型，则对该引用的引用将放在堆栈上。 `Ref`参数可用于允许成员修改调用方传递的参数。
+ 当通过参数传递参数时 `ref` ，该成员将接收对传入的实际参数的引用。 如果参数是值类型，则将对该参数的引用置于堆栈上。 如果参数是引用类型，则对该引用的引用将放在堆栈上。 `Ref` 参数可用于允许成员修改调用方传递的参数。
 
- `Out`参数类似于 `ref` 参数，但有一些细微的差异。 参数最初被视为未分配，在为其赋值之前，无法在成员正文中读取。 此外，在成员返回之前，必须为参数赋值。
+ `Out` 参数类似于 `ref` 参数，但有一些细微的差异。 参数最初被视为未分配，在为其赋值之前，无法在成员正文中读取。 此外，在成员返回之前，必须为参数赋值。
 
- ❌避免使用 `out` 或 `ref` 参数。
+ ❌ 避免使用 `out` 或 `ref` 参数。
 
  使用 `out` 或 `ref` 参数需要使用指针的经验，了解值类型和引用类型的不同之处，以及处理具有多个返回值的方法。 此外，和参数之间的差异 `out` 并 `ref` 不被广泛理解。 一般受众设计框架架构师不应指望用户使用 `out` 或 `ref` 参数。
 
- ❌不要通过引用传递引用类型。
+ ❌ 不要通过引用传递引用类型。
 
  规则有一些例外情况，例如可用于交换引用的方法。
 
@@ -112,11 +111,11 @@ public class String {
 
  如果预计最终用户要传递具有少量元素的数组，✔️考虑将 params 关键字添加到数组参数。 如果预计会在常见方案中传递多个元素，则用户可能无法以内联方式传递这些元素，因此不需要 params 关键字。
 
- ❌如果调用方几乎始终具有数组中的输入，请避免使用 params 数组。
+ ❌ 如果调用方几乎始终具有数组中的输入，请避免使用 params 数组。
 
  例如，具有字节数组参数的成员几乎不会通过传递单个字节来调用。 出于此原因，.NET Framework 中的字节数组参数不使用 params 关键字。
 
- ❌如果使用 params 数组参数的成员修改了数组，则不要使用 params 数组。
+ ❌ 如果使用 params 数组参数的成员修改了数组，则不要使用 params 数组。
 
  由于很多编译器会将成员的参数转换为调用站点的临时数组，因此数组可能是临时对象，因此对数组进行的任何修改都将丢失。
 
@@ -136,7 +135,7 @@ public class String {
 
  在处理之前，应该验证数组是否为 null。
 
- ❌不要使用 `varargs` 方法，也称为省略号。
+ ❌ 不要使用 `varargs` 方法，也称为省略号。
 
  某些 CLR 语言（如 c + +）支持用于传递变量参数列表（称为方法）的替代约定 `varargs` 。 不应在框架中使用约定，因为它不符合 CLS。
 
@@ -145,7 +144,7 @@ public class String {
 
  ✔️确实为采用指针参数的任何成员提供了一种替代方法，因为指针不符合 CLS。
 
- ❌避免对指针参数执行昂贵的参数检查。
+ ❌ 避免对指针参数执行昂贵的参数检查。
 
  ✔️在用指针设计成员时遵循常见的指针相关约定。
 
@@ -153,9 +152,9 @@ public class String {
 
  *部分 &copy; 2005，2009 Microsoft Corporation。保留所有权利。*
 
- *皮尔逊教育，Inc. 的经许可重印权限[：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式、第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)By Krzysztof Cwalina 和 Brad Abrams，发布十月22，2008，作为 Microsoft Windows 开发系列的一部分。*
+ *经许可重印皮尔逊教育，Inc. 的作者 [：从框架设计指导原则：用于可重复使用的 .Net 库的约定、惯例和模式; 第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) By Krzysztof Cwalina，Brad Abrams，通过 Addison-Wesley Professional 作为 Microsoft Windows 开发系列的一部分2008发布。*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [成员设计准则](member.md)
 - [框架设计准则](index.md)
