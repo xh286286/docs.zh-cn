@@ -3,12 +3,12 @@ title: 从 .NET Framework 移植到 .NET Core
 description: 了解移植过程以及发现在将 .NET Framework 项目移植到 .NET Core 时可能有用的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439737"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687407"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>从 .NET Framework 移植到 .NET Core 的概述
 
