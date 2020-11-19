@@ -2,7 +2,6 @@
 title: .NET 中的泛型
 description: 了解 .NET 中的泛型。 定义和使用泛型，了解它们的优点和缺点，了解类库和语言支持等。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063151"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827251"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
@@ -56,15 +55,15 @@ ms.locfileid: "93063151"
   
 - *泛型类型定义* 是用作模板的类、结构或接口声明，带有可包含或使用的类型的占位符。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类可以包含两种类型：密钥和值。 由于泛型类型定义只是一个模板，所以你无法创建作为泛型类型定义的类、结构或接口的实例。  
   
-- *泛型类型参数* （或 *类型参数* ）是泛型类型或方法定义中的占位符。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型类型具有两个类型形参 `TKey` 和 `TValue`，它们分别代表密钥和值的类型。  
+- *泛型类型参数*（或 *类型参数*）是泛型类型或方法定义中的占位符。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型类型具有两个类型形参 `TKey` 和 `TValue`，它们分别代表密钥和值的类型。  
   
-- *构造泛型类型* （或 *构造类型* ）是为泛型类型定义的泛型类型形参指定类型的结果。  
+- *构造泛型类型*（或 *构造类型*）是为泛型类型定义的泛型类型形参指定类型的结果。  
   
 - *泛型类型实参* 是被泛型类型形参所替代的任何类型。  
   
 - 常见术语 *泛型类型* 包括构造类型和泛型类型定义。  
   
-- 借助泛型类型参数的 *协变* 和 *逆变* ，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体” 。 有关详细信息，请参阅[协变和逆变](covariance-and-contravariance.md)。  
+- 借助泛型类型参数的 *协变* 和 *逆变*，可以使用类型自变量的派生程度比目标构造类型更高（协变）或更低（逆变）的构造泛型类型。 协变和逆变统称为“变体” 。 有关详细信息，请参阅[协变和逆变](covariance-and-contravariance.md)。  
   
 - *约束* 是对泛型类型参数的限制。 例如，你可能会将一个类型形参限制为实现 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型接口的类型，以确保可对该类型的实例进行排序。 此外，你还可以将类型形参限制为具有特定基类、具有无参数构造函数或作为引用类型或值类型的类型。 泛型类型的用户不能替换不满足约束条件的类型实参。  
   

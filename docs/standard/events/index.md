@@ -2,7 +2,6 @@
 title: 处理和引发事件
 description: 了解如何处理并引发基于委托模型的 .NET 事件。 此模型允许订阅者向提供商注册或接收通知。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064088"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828265"
 ---
 # <a name="handle-and-raising-events"></a>处理和引发事件
 
@@ -32,7 +31,7 @@ ms.locfileid: "93064088"
   
 若要定义一个事件，可以在事件类签名中使用 [`event`](../../csharp/language-reference/keywords/event.md)（在 C# 中）或 [`Event`](../../visual-basic/language-reference/statements/event-statement.md)（在 Visual Basic 中）关键字，并指定事件的委托类型。 委托在下一节中介绍。  
   
-通常，为了引发事件，您可以在 C# 中添加一个标记为 `protected` 和 `virtual` 或在 Visual Basic 中标记为 `Protected` 和 `Overridable` 的方法。 将此方法命名为 `On`*EventName* ；例如，`OnDataReceived`。 此方法应接受一个指定事件数据对象（<xref:System.EventArgs> 类型或派生类型）的参数。 您提供此方法以允许派生类重写引发事件的逻辑。 派生类应始终调用基类的 `On`*EventName* 方法，以确保注册的委托接收事件。  
+通常，为了引发事件，您可以在 C# 中添加一个标记为 `protected` 和 `virtual` 或在 Visual Basic 中标记为 `Protected` 和 `Overridable` 的方法。 将此方法命名为 `On`*EventName*；例如，`OnDataReceived`。 此方法应接受一个指定事件数据对象（<xref:System.EventArgs> 类型或派生类型）的参数。 您提供此方法以允许派生类重写引发事件的逻辑。 派生类应始终调用基类的 `On`*EventName* 方法，以确保注册的委托接收事件。  
 
 下面的示例显示如何声明名为 `ThresholdReached` 事件。 该事件与 <xref:System.EventHandler> 委托相关联并且由 `OnThresholdReached` 方法引发。  
   

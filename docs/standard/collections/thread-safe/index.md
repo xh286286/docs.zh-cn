@@ -2,16 +2,15 @@
 title: 线程安全集合
 description: 通过 .NET 中的 System.Collections.Concurrent 命名空间（其中包含线程安全且可缩放的集合类）开始使用线程安全集合。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 27b0e887d7dcff6a6c792cf2dfab6a449f59646f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f64d7b6a9b3564248a2b6113724e948066bf45c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547683"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827745"
 ---
 # <a name="thread-safe-collections"></a>线程安全集合
 .NET Framework 4 引入了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间，其中包含多个线程安全且可缩放的集合类。 多个线程可以安全高效地从这些集合添加或删除项，而无需在用户代码中进行其他同步。 编写新代码时，只要将多个线程同时写入到集合时，就使用并发集合类。 如果仅从共享集合进行读取，则可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的类。 建议不要使用 1.0 集合类，除非需要定位 .NET Framework 1.1 或更低版本运行时。  
@@ -24,7 +23,7 @@ ms.locfileid: "90547683"
  建议使用 .NET Framework 4 中的并发集合类，因为它们不仅能够提供 .NET Framework 2.0 集合类的类型安全性，而且能够比 .NET Framework 1.0 集合更高效完整地提供线程安全性。  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>细粒度锁定和无锁机制  
- 某些并发集合类型使用轻量同步机制，如 <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim> 和 <xref:System.Threading.CountdownEvent>，这些机制是 .NET Framework 4 中的新增功能。 这些同步类型通常在将线程真正置于等待状态之前，会在短时间内使用*忙旋转*。 预计等待时间非常短时，旋转比等待所消耗的计算资源少得多，因为后者涉及资源消耗量大的内核转换。 对于使用旋转的集合类，这种效率意味着多个线程能够以非常快的速率添加和删除项。 有关旋转与锁定的详细信息，请参阅 [SpinLock](../../threading/spinlock.md) 和 [SpinWait](../../threading/spinwait.md)。  
+ 某些并发集合类型使用轻量同步机制，如 <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim> 和 <xref:System.Threading.CountdownEvent>，这些机制是 .NET Framework 4 中的新增功能。 这些同步类型通常在将线程真正置于等待状态之前，会在短时间内使用 *忙旋转*。 预计等待时间非常短时，旋转比等待所消耗的计算资源少得多，因为后者涉及资源消耗量大的内核转换。 对于使用旋转的集合类，这种效率意味着多个线程能够以非常快的速率添加和删除项。 有关旋转与锁定的详细信息，请参阅 [SpinLock](../../threading/spinlock.md) 和 [SpinWait](../../threading/spinwait.md)。  
   
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601> 类完全不使用锁定。 相反，它们依赖于 <xref:System.Threading.Interlocked> 操作来实现线程安全性。  
   

@@ -4,16 +4,15 @@ description: 语言集成查询 (LINQ) 为 C# 和 Visual Basic 提供语言级�
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554991"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825827"
 ---
 # <a name="linq-overview"></a>LINQ 概述
 
@@ -141,7 +140,7 @@ Dim filteredItems = From item In myItems
 
 难道 API 语法不比查询语法更简洁吗？
 
-不是。 查询语法允许使用 let 子句，这样，便可以在表达式的作用域内引入和绑定变量，然后在表达式的后续片段中使用该变量****。 只使用 API 语法重现相同的代码也是可行的，不过，这很可能会导致代码难以阅读。
+不是。 查询语法允许使用 let 子句，这样，便可以在表达式的作用域内引入和绑定变量，然后在表达式的后续片段中使用该变量。 只使用 API 语法重现相同的代码也是可行的，不过，这很可能会导致代码难以阅读。
 
 那么，问题来了，**只使用查询语法可以吗？**
 
@@ -151,7 +150,7 @@ Dim filteredItems = From item In myItems
 - 由于复杂性的问题，需要在查询中限定变量的作用域。
 - 你偏好使用查询语法，并且它不会使基本代码变得混乱。
 
-在以下情况下，此问题的答案是**不可以**...
+在以下情况下，此问题的答案是 **不可以**...
 
 - 现有的基本代码已使用 API 语法
 - 不需要在查询中限定变量的作用域
@@ -390,7 +389,7 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 
 ![PLINQ 图示](media/index/plinq-diagram.png)
 
-可通过 LINQ 能够轻松表达的可并行化 CPU 密集型作业（即，没有副作用的纯函数）非常适合使用 PLINQ 来处理。 对于_确实_有副作用的作业，请考虑使用[任务并行库](../parallel-programming/task-parallel-library-tpl.md)。
+可通过 LINQ 能够轻松表达的可并行化 CPU 密集型作业（即，没有副作用的纯函数）非常适合使用 PLINQ 来处理。 对于 _确实_ 有副作用的作业，请考虑使用 [任务并行库](../parallel-programming/task-parallel-library-tpl.md)。
 
 ## <a name="more-resources"></a>更多资源
 

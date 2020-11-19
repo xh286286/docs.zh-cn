@@ -2,17 +2,16 @@
 title: 托管线程处理
 description: 查看关于 .NET 中的托管线程的文章链接，这些文章涵盖基本知识、最佳做法、线程对象和特征、参考页面等。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 15af6268c8e5de853ead0817c85f4261c7fc9692
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189168"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826334"
 ---
 # <a name="managed-threading"></a>托管线程
 

@@ -4,12 +4,12 @@ description: 本文简要概述了在 .NET 中测试的测试概念、术语和�
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/19/2020
-ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 137a8f4e3bc9e3be529d5034c233d283cf158b31
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223481"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824852"
 ---
 # <a name="testing-in-net"></a>在 .NET 中测试
 
@@ -27,7 +27,7 @@ ms.locfileid: "92223481"
 
 ### <a name="integration-tests"></a>集成测试
 
-*集成测试*与单元测试的不同之处在于，它试验两个或更多软件组件一同工作（也称为其“集成”）的能力。 这些测试在更广泛范围的受测系统上运行，而单元测试则侧重于单个组件。 通常，集成测试会包括对基础结构问题的测试。
+*集成测试* 与单元测试的不同之处在于，它试验两个或更多软件组件一同工作（也称为其“集成”）的能力。 这些测试在更广泛范围的受测系统上运行，而单元测试则侧重于单个组件。 通常，集成测试会包括对基础结构问题的测试。
 
 ### <a name="load-tests"></a>负载测试
 
@@ -43,7 +43,7 @@ ms.locfileid: "92223481"
 
 ### <a name="xunit"></a>xUnit
 
-[xUnit](https://xunit.net) 是一个适用于 .NET 的免费、开源、面向社区的单元测试工具。 xUnit.net 由 NUnit v2 的原发明者编写，是针对单元测试 .NET 应用的最新技术。 xUnit.net 适用于 ReSharper、CodeRush、TestDriven.NET 和 [Xamarin](/apps/xamarin)。 它是 [.NET Foundation](https://dotnetfoundation.org) 的项目，并在其行为准则下运行。
+[xUnit](https://xunit.net) 是一个适用于 .NET 的免费、开源、面向社区的单元测试工具。 xUnit.net 由 NUnit v2 的原发明者编写，是针对单元测试 .NET 应用的最新技术。 xUnit.net 适用于 ReSharper、CodeRush、TestDriven.NET 和 [Xamarin](https://dotnet.microsoft.com/apps/xamarin)。 它是 [.NET Foundation](https://dotnetfoundation.org) 的项目，并在其行为准则下运行。
 
 有关更多信息，请参见以下资源：
 

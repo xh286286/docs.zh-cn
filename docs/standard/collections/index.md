@@ -2,7 +2,6 @@
 title: 集合和数据结构
 description: 了解如何在 .NET 中使用集合和数据结构。 在线程安全操作中使用泛型和非泛型集合。
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
 - objects [.NET], grouping in collections
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 4ed4197ecdffad9579424957bf3f1f7ac6a782d7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889343"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823844"
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 
@@ -53,7 +52,7 @@ ms.locfileid: "92889343"
 
     集合的下限是其第一个元素的索引。 <xref:System.Collections> 命名空间中的所有索引集合的下限均为零，这表示它们从 0 开始建立索引。 <xref:System.Array> 默认下限为零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 创建 Array 类的实例时可定义其他下限。
 
-- **同步以从多个线程进行访问** （仅 <xref:System.Collections> 类）。
+- **同步以从多个线程进行访问**（仅 <xref:System.Collections> 类）。
 
     <xref:System.Collections> 命名空间中的非泛型集合类型通过同步提供一些线程安全性；通常通过 <xref:System.Collections.ICollection.SyncRoot%2A> 和 <xref:System.Collections.ICollection.IsSynchronized%2A> 成员公开。 这些集合不是默认为线程安全的。 如需对集合进行可扩展、高效的多线程访问，请使用 <xref:System.Collections.Concurrent> 命名空间中的一个类或考虑使用不可变集合。 有关详细信息，请参阅[线程安全集合](thread-safe/index.md)。
 

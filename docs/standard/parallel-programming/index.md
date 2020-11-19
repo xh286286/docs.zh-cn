@@ -2,16 +2,15 @@
 title: .NET 中的并行编程
 description: 了解 .NET 中的并行编程。 使用 .NET 运行时、类库类型和诊断工具来简化 .NET 开发。
 ms.date: 09/12/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: edb3d38b0815c6703720292a45e302c62c81650b
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 4d141a6a8fd7b7bf1aad943f8b911c8b39267223
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925332"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820353"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 中的并行编程
 

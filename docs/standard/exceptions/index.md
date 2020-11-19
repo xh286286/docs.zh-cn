@@ -2,7 +2,6 @@
 title: 在 .NET 中处理和引发异常
 description: 了解如何在 .NET 中处理和抛出异常。 异常是 .NET 操作向应用程序指示失败的方式。
 ms.date: 06/19/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET], handling
 - runtime, exceptions
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: 89d88e3128917125d1a09466ed4e230604d6978c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: c18482335947c8d24ba7ed6552bb78c70a0a054f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662766"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827992"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
