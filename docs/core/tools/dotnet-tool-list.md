@@ -1,13 +1,13 @@
 ---
 title: dotnet tool list 命令
-description: dotnet 工具列表命令列出计算机上安装的 .NET Core 工具。
+description: dotnet tool list 命令列出计算机上安装的 .NET 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: d884f2c41834dd9704de3a8ca15417ba368fde4b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925457"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634280"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -15,7 +15,7 @@ ms.locfileid: "86925457"
 
 ## <a name="name"></a>“属性”
 
-`dotnet tool list` - 列出计算机上当前安装的所有指定类型的 [.NET Core 工具](global-tools.md)。
+`dotnet tool list` - 列出计算机上当前安装的所有指定类型的 [.NET 工具](global-tools.md)。
 
 ## <a name="synopsis"></a>摘要
 
@@ -33,7 +33,7 @@ dotnet tool list -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet tool list` 命令为用户提供一种在计算机上安装所有 .NET Core 全局、工具路径或本地工具的方法。 此命令列出包名称、安装的版本以及工具命令。  若要使用命令，请指定以下项之一：
+`dotnet tool list` 命令提供一种方法，用于在计算机上安装所有 .NET 全局、工具路径或本地工具。 此命令列出包名称、安装的版本以及工具命令。  若要使用命令，请指定以下项之一：
 
 * 若要列出在默认位置安装的全局工具，请使用 `--global` 选项
 * 若要列出在自定义位置安装的全局工具，请使用 `--tool-path` 选项。
@@ -79,6 +79,6 @@ dotnet tool list -h|--help
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 工具](global-tools.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 全局工具](global-tools-how-to-use.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)
+- [.NET 工具](global-tools.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 全局工具](global-tools-how-to-use.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 本地工具](local-tools-how-to-use.md)

@@ -1,18 +1,18 @@
 ---
-title: .NET Core SDK 遥测
-description: 了解可收集使用情况信息以供分析的 .NET Core SDK 遥测功能、收集的数据，以及如何禁用遥测。
+title: .NET SDK 遥测
+description: 了解可收集使用情况信息以供分析的 .NET SDK 遥测功能、收集的数据，以及如何禁用遥测。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
-ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
+ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91206349"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633864"
 ---
-# <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遥测
+# <a name="net-sdk-telemetry"></a>.NET SDK 遥测
 
-[.NET Core SDK](index.md) 包含遥测功能，可在 .NET Core CLI 故障时收集使用情况数据和异常信息。 .NET Core CLI 附带 .NET Core SDK，是一组用于生成、测试和发布 .NET Core 应用的谓词。 请务必让 .NET 团队了解到工具使用情况，以便我们对其做出改进。 有关故障的信息可帮助团队解决问题并修复 bug。
+[.NET SDK](index.md) 包含遥测功能，可在 .NET CLI 崩溃时收集使用情况数据和异常信息。 .NET CLI 附带 .NET SDK，是一组用于生成、测试和发布 .NET 应用的谓词。 请务必让 .NET 团队了解到工具使用情况，以便我们对其做出改进。 有关故障的信息可帮助团队解决问题并修复 bug。
 
 收集的数据根据 [Creative Commons Attribution 许可证](https://creativecommons.org/licenses/by/4.0/)以汇总形式发布。
 
@@ -22,7 +22,7 @@ ms.locfileid: "91206349"
 
 - `dotnet [path-to-app].dll`
 
-使用任何 [.NET Core CLI 命令](index.md)时，都会收集遥测数据，如：
+使用任何 [.NET CLI 命令](index.md)时，都会收集遥测数据，如：
 
 - `dotnet build`
 - `dotnet pack`
@@ -30,23 +30,23 @@ ms.locfileid: "91206349"
 
 ## <a name="how-to-opt-out"></a>如何选择退出
 
-.NET Core SDK 遥测功能默认处于启用状态。 要选择退出遥测功能，请将 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`。
+.NET SDK 遥测功能默认处于启用状态。 要选择退出遥测功能，请将 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量设置为 `1` 或 `true`。
 
-如果安装成功，.NET Core SDK 安装程序也会发送一个遥测条目。 要选择退出，请在安装 .NET Core SDK 之前设置 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量。
+如果安装成功，.NET SDK 安装程序也会发送一个遥测条目。 若要选择退出，请在安装 .NET SDK 之前设置 `DOTNET_CLI_TELEMETRY_OPTOUT` 环境变量。
 
 ## <a name="disclosure"></a>公开
 
-首次运行其中一个 [.NET Core CLI 命令](index.md)（例如，`dotnet build`）时，.NET Core SDK 显示以下类似文本。 文本可能会因运行的 SDK 版本而略有不同。 此“首次运行”体验是 Microsoft 通知用户有关数据收集信息的方式。
+首次运行其中一个 [.NET CLI 命令](index.md)（如 `dotnet build`）时，.NET SDK 显示以下类似文本。 文本可能会因运行的 SDK 版本而略有不同。 此“首次运行”体验是 Microsoft 通知用户有关数据收集信息的方式。
 
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
-Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-若要禁用此消息和 .NET Core 欢迎消息，请将 `DOTNET_NOLOGO` 环境变量设置为 `true`。 请注意，此变量在遥测选择退出时不起作用。
+若要禁用此消息和 .NET 欢迎消息，请将 `DOTNET_NOLOGO` 环境变量设置为 `true`。 请注意，此变量在遥测选择退出时不起作用。
 
 ## <a name="data-points"></a>数据点
 
@@ -63,7 +63,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | 全部          | 用于确定地理位置的三个八进制数 IP 地址。 |
 | 全部          | 操作系统和版本。 |
 | 全部          | 运行 SDK 的运行时 ID (RID)。 |
-| 全部          | .NET Core SDK 版本。 |
+| 全部          | .NET SDK 版本。 |
 | 全部          | 遥测配置文件：一个可选值，仅在用户显式选择加入时可用，并在 Microsoft 内部使用。 |
 | >=2.0        | 命令参数和选项：收集若干参数和选项（非任意字符串）。 请参阅[收集的选项](#collected-options)。 从 2.1.300 后进行哈希处理。 |
 | >=2.0         | SDK 是否在容器中运行。 |
@@ -74,7 +74,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | >=2.1.300     | 内核版本。 |
 | >=2.1.300     | Libc 发行/版本。 |
 | >=3.0.100     | 是否已重定向输出（true 或 false）。 |
-| >=3.0.100     | CLI/SDK 故障时的异常类型及其堆栈跟踪（发送的堆栈跟踪中仅包含 CLI/SDK 代码）。 有关详细信息，请参阅[收集的 .NET Core CLI/SDK 故障异常遥测](#net-core-clisdk-crash-exception-telemetry-collected)。 |
+| >=3.0.100     | CLI/SDK 故障时的异常类型及其堆栈跟踪（发送的堆栈跟踪中仅包含 CLI/SDK 代码）。 有关详细信息，请参阅[收集的 .NET CLI/SDK 故障异常遥测](#net-clisdk-crash-exception-telemetry-collected)。 |
 
 ### <a name="collected-options"></a>收集的选项
 
@@ -105,13 +105,13 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 除 `--verbosity` 和 `--sdk-package-version` 外，从 .NET Core 2.1.100 SDK 开始，所有其他值都会进行哈希处理。
 
-## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>收集的 .NET Core CLI/SDK 故障异常遥测
+## <a name="net-clisdk-crash-exception-telemetry-collected"></a>收集的 .NET CLI/SDK 故障异常遥测
 
-如果 .NET Core CLI/SDK 故障，则会收集 CLI/SDK 代码的异常和跟踪堆栈名称。 收集此信息是为了评估问题并改善 .NET Core SDK 和 CLI 的质量。 本文提供了所收集数据的信息。 本文还提供了有关生成自己的 .NET Core SDK 版本的用户如何避免无意泄露个人或敏感信息的提示。
+如果 .NET CLI/SDK 崩溃，则会收集 CLI/SDK 代码的异常和堆栈跟踪名称。 收集此信息是为了评估问题并改善 .NET SDK 和 CLI 的质量。 本文提供了所收集数据的信息。 本文还提供了有关生成自己的 .NET SDK 版本的用户如何避免无意泄露个人或敏感信息的提示。
 
 ### <a name="types-of-collected-data"></a>收集的数据类型
 
-.NET Core CLI 只收集有关 CLI/SDK 异常的信息，不收集应用程序中的异常信息。 收集的数据包含异常和堆栈跟踪的名称。 此堆栈跟踪为 CLI/SDK 代码。
+.NET CLI 只收集有关 CLI/SDK 异常的信息，不收集应用程序中的异常信息。 收集的数据包含异常和堆栈跟踪的名称。 此堆栈跟踪为 CLI/SDK 代码。
 
 下面的示例显示所收集的数据类型：
 
@@ -132,11 +132,11 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 ### <a name="avoid-inadvertent-disclosure-of-information"></a>避免意外泄露信息
 
-.NET Core 参与者以及运行自己生成的 .NET Core SDK 版本的任何其他人都应考虑其 SDK 源代码的路径。 如果在使用属于自定义调试生成或者使用自定义生成符号文件配置的 .NET Core SDK 时出现故障，则生成计算机的 SDK 源文件路径将作为堆栈跟踪的一部分收集，并且不会进行哈希处理。
+.NET 参与者以及运行自己生成的 .NET SDK 版本的任何其他人都应考虑其 SDK 源代码的路径。 如果在使用属于自定义调试生成或者使用自定义生成符号文件配置的 .NET SDK 时出现故障，则生成计算机的 SDK 源文件路径将作为堆栈跟踪的一部分收集，并且不会进行哈希处理。
 
-因此，.NET Core SDK 的自定义生成不应位于路径名公开个人或敏感信息的目录中。
+因此，.NET SDK 的自定义生成不应位于路径名公开个人或敏感信息的目录中。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core CLI 遥测数据](https://dotnet.microsoft.com/platform/telemetry)
+- [.NET CLI 遥测数据](https://dotnet.microsoft.com/platform/telemetry)
 - [遥测参考源（dotnet/sdk 存储库）](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

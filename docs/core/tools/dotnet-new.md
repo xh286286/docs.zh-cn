@@ -1,16 +1,16 @@
 ---
 title: dotnet new 命令
-description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
+description: dotnet new 命令可根据指定模板新建 .NET 项目。
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400586"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634450"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,7 +35,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet new` 命令基于模板创建 .NET Core 项目或其他项目。
+`dotnet new` 命令基于模板创建 .NET 项目或其他项目。
 
 命令调用[模板引擎](https://github.com/dotnet/templating)，以根据指定的模板和选项在磁盘上创建项目。
 
@@ -56,7 +56,7 @@ dotnet new -h|--help
   - 如果在调用 `dotnet new` 时 CLI 找不到模板匹配项，即使是部分匹配也不行。
   - 如果有较新版本的模板可用。 在这种情况下，将创建项目或工件，但 CLI 会就模板的更新版本发出警告。
 
-  下表显示了随 .NET Core SDK 一起预安装的模板。 模板的默认语言显示在括号内。 单击短名称链接可查看特定的模板选项。
+  下表显示随 .NET SDK 一起预安装的模板。 模板的默认语言显示在括号内。 单击短名称链接可查看特定的模板选项。
 
 | 模板                                    | 短名称                      | 语言     | Tags                                  | 已引入 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -135,7 +135,7 @@ dotnet new -h|--help
 
 - **`--nuget-source <SOURCE>`**
 
-  指定在安装期间要使用的 NuGet 源。 自 .NET Core 2.1 SDK 起可用。
+  指定在安装期间要使用的 NuGet 源。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -177,6 +177,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  指定目标[框架](../../standard/frameworks.md)。 值：`netcoreapp<version>`（要创建 .NET Core 类库的话）或 `netstandard<version>`（要创建 .NET Standard 类库的话）。 默认值为 `netstandard2.0`。
+  指定目标[框架](../../standard/frameworks.md)。 值：`net5.0` 或 `netcoreapp<version>`（若要创建 .NET 类库），或`netstandard<version>`（若要创建 .NET Standard 类库）。 .NET 5.0 SDK 的默认值是 `net5.0`。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  指定目标[框架](../../standard/frameworks.md)。 默认值为 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起可用。
+  指定目标[框架](../../standard/frameworks.md)。 默认值为 `net5.0`。 自 .NET Core 3.1 SDK 起可用。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -515,6 +518,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ dotnet new -h|--help
 
   | SDK 版本 | 默认值   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ dotnet new -h|--help
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  指定要在 global.json 文件中使用的 .NET Core SDK 版本。
+  指定要在 global.json 文件中使用的 .NET SDK 版本。
 
 ***
 

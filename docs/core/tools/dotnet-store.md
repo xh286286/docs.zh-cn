@@ -2,12 +2,12 @@
 title: dotnet store 命令
 description: “dotnet store”命令可将指定的程序集存储到运行时包存储区。
 ms.date: 02/14/2020
-ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8efb11c6bf648bc7787d5627e02b180abb8a0afd
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463385"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634332"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -51,7 +51,7 @@ dotnet store -h|--help
 
 - **`--framework-version <FRAMEWORK_VERSION>`**
 
-  指定 .NET Core SDK 版本。 使用此选项，可以选择特定的框架版本，不再局限于 `-f|--framework` 选项指定的框架。
+  指定 .NET SDK 版本。 使用此选项，可以选择特定的框架版本，不再局限于 `-f|--framework` 选项指定的框架。
 
 - **`-h|--help`**
 
@@ -59,7 +59,7 @@ dotnet store -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  指定运行时包存储区的路径。 如果未指定，默认路径为用户配置文件 .NET Core 安装目录的 store  子目录。
+  指定运行时包存储区的路径。 如果未指定，默认路径为用户配置文件 .NET 安装目录的 store 子目录。
 
 - **`--skip-optimization`**
 

@@ -1,21 +1,21 @@
 ---
-title: 检查 Windows、Linux 和 macOS 上安装的 .NET Core 版本 - .NET Core
-description: 了解如何列出计算机上安装的 .NET Core 版本。 这包括 .NET Core 运行时和 SDK。
+title: 检查 Windows、Linux 和 macOS 上安装的 .NET 版本 - .NET
+description: 了解如何列出计算机上安装的 .NET 版本。 这包括 .NET 运行时和 SDK。
 author: adegeo
 ms.author: adegeo
-ms.date: 12/04/2019
+ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: b8825dee595c601e8adef0a52e651ac4a4f04831
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: d924e5bc58052cd760f367e906666d68ab79b764
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416047"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507210"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>如何检查是否已安装 .NET Core
+# <a name="how-to-check-that-net-is-already-installed"></a>如何检查是否已安装 .NET
 
-本文介绍如何检查计算机上安装的 .NET Core 运行时和 SDK 的版本。 如果你拥有一个集成开发环境（如 Visual Studio 或 Visual Studio for Mac），则可能已安装 .NET core。
+本文介绍如何检查计算机上安装的 .NET 运行时和 SDK 的版本。 如果你拥有一个集成开发环境（如 Visual Studio 或 Visual Studio for Mac），则可能已安装 .NET。
 
 安装 SDK 便会安装相应的运行时。
 
@@ -23,7 +23,7 @@ ms.locfileid: "86416047"
 
 ## <a name="check-sdk-versions"></a>检查 SDK 版本
 
-可使用终端查看当前安装的 .NET Core SDK 版本。 打开终端并运行以下命令。
+可使用终端查看当前安装的 .NET SDK 版本。 打开终端并运行以下命令。
 
 ```dotnetcli
 dotnet --list-sdks
@@ -39,9 +39,8 @@ dotnet --list-sdks
 2.1.504 [C:\program files\dotnet\sdk]
 2.1.600 [C:\program files\dotnet\sdk]
 2.1.602 [C:\program files\dotnet\sdk]
-2.2.101 [C:\program files\dotnet\sdk]
-3.0.100 [C:\program files\dotnet\sdk]
 3.1.100 [C:\program files\dotnet\sdk]
+5.0.100 [C:\program files\dotnet\sdk]
 ```
 
 ::: zone-end
@@ -54,9 +53,8 @@ dotnet --list-sdks
 2.1.504 [/home/user/dotnet/sdk]
 2.1.600 [/home/user/dotnet/sdk]
 2.1.602 [/home/user/dotnet/sdk]
-2.2.101 [/home/user/dotnet/sdk]
-3.0.100 [/home/user/dotnet/sdk]
 3.1.100 [/home/user/dotnet/sdk]
+5.0.100 [/home/user/dotnet/sdk]
 ```
 
 ::: zone-end
@@ -69,16 +67,15 @@ dotnet --list-sdks
 2.1.504 [/usr/local/share/dotnet/sdk]
 2.1.600 [/usr/local/share/dotnet/sdk]
 2.1.602 [/usr/local/share/dotnet/sdk]
-2.2.101 [/usr/local/share/dotnet/sdk]
-3.0.100 [/usr/local/share/dotnet/sdk]
 3.1.100 [/usr/local/share/dotnet/sdk]
+5.0.100 [/usr/local/share/dotnet/sdk]
 ```
 
 ::: zone-end
 
 ## <a name="check-runtime-versions"></a>检查运行时版本
 
-可使用以下命令查看当前安装的 .NET Core 运行时版本。
+可使用以下命令查看当前安装的 .NET 运行时版本。
 
 ```dotnetcli
 dotnet --list-runtimes
@@ -91,25 +88,17 @@ dotnet --list-runtimes
 ```console
 Microsoft.AspNetCore.All 2.1.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.3 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.App 2.1.6 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.13 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 3.0.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 5.0.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.NETCore.App 2.1.7 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.13 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.3 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.7 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 3.0.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
+Microsoft.NETCore.App 5.0.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
 Microsoft.WindowsDesktop.App 3.0.0 [c:\program files\dotnet\shared\Microsoft.WindowsDesktop.App]
 Microsoft.WindowsDesktop.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.WindowsDesktop.App]
+Microsoft.WindowsDesktop.App 5.0.0 [c:\program files\dotnet\shared\Microsoft.WindowsDesktop.App]
 ```
 
 ::: zone-end
@@ -119,23 +108,14 @@ Microsoft.WindowsDesktop.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.Win
 ```bash
 Microsoft.AspNetCore.All 2.1.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.3 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.App 2.1.6 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.13 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 3.0.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 5.0.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.NETCore.App 2.1.7 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.13 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.3 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.7 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 3.0.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
+Microsoft.NETCore.App 5.0.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 ```
 
 ::: zone-end
@@ -145,32 +125,23 @@ Microsoft.NETCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 ```bash
 Microsoft.AspNetCore.All 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.3 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.App 2.1.6 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.NETCore.App 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.3 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
 ::: zone-end
 
 ## <a name="check-for-install-folders"></a>检查安装文件夹
 
-可以安装 .NET Core，但不能将其添加到操作系统或用户配置文件的 `PATH` 变量。 运行前面几节中的命令可能不起作用。 作为替代方法，可以检查 .NET Core 安装文件夹是否存在。
+可以安装 .NET，但不能将其添加到操作系统或用户配置文件的 `PATH` 变量。 运行前面几节中的命令可能不起作用。 作为替代方法，可以检查 .NET 安装文件夹是否存在。
 
-从安装程序或脚本安装 .NET Core 时，会将其安装到标准文件夹中。 大多数时候，安装 .NET Core 时使用的安装程序或脚本会让你选择安装到另一个文件夹。 如果选择安装到其他文件夹，请调整文件夹路径的开头。
+从安装程序或脚本安装 .NET 时，会将其安装到标准文件夹中。 大多数时候，安装 .NET 时使用的安装程序或脚本会让你选择安装到另一个文件夹。 如果选择安装到其他文件夹，请调整文件夹路径的开头。
 
 ::: zone pivot="os-windows"
 
@@ -217,4 +188,6 @@ C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\
 
 ## <a name="next-steps"></a>后续步骤
 
-- [安装 .NET Core 运行时和 SDK](windows.md)。
+- [安装 .NET 运行时和适用于 Windows 的 SDK](windows.md)。
+- [安装 .NET 运行时和适用于 MacOS 的 SDK](linux.md)。
+- [安装 .NET 运行时和适用于 Linux 的 SDK](macos.md)。

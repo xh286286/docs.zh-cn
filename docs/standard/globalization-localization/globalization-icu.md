@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: ca579e837b801de237859963ede0e5a9a4bfbcbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400874"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439464"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 全球化和 ICU
 
@@ -37,6 +37,29 @@ Windows 2019 年 5 月 10 日更新及更高版本将 [icu.dll](/windows/win32/i
 
 > [!NOTE]
 > 即使使用 ICU，`CurrentCulture`、`CurrentUICulture` 和 `CurrentRegion` 成员仍使用 Windows 操作系统 API 来遵从用户设置。
+
+### <a name="behavioral-differences"></a>行为差异
+
+如果你将应用升级到目标 .NET 5，即使你不知道正在使用全球化设施，你也可能会在应用中看到更改。 本部分列出了你可能会看到的行为更改之一，但还有其他一些行为更改。
+
+##### <a name="stringindexof"></a>String.IndexOf
+
+请考虑使用以下代码，它调用 <xref:System.String.IndexOf(System.String)?displayProperty=nameWithType> 来查找字符串中的换行符索引。
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- 在 Windows 上的早期版本的 .NET 中，代码片段打印 `6`。
+- 在 Windows 10 2019 年 5 月更新和更高版本上的 .NET 5.0 及更高版本中，代码片段打印 `-1`。
+
+若要通过执行序号搜索而不是区分区域性的搜索来修复此代码，请调用 <xref:System.String.IndexOf(System.String,System.StringComparison)> 重载，并传入 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 作为参数。
+
+可以运行代码分析规则 [CA1307：为了清晰起见，请指定 StringComparison](../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md) 和 [CA1309：使用序号 StringComparison](../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md) 在代码中查找这些调用站点。
+
+有关详细信息，请参阅[在 .NET 5 及更高版本中比较字符串时的行为更改](../base-types/string-comparison-net-5-plus.md)。
 
 ### <a name="use-nls-instead-of-icu"></a>使用 NLS 而不是 ICU
 

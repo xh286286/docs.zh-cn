@@ -1,21 +1,21 @@
 ---
-title: .NET Core 工具
-description: 如何安装、使用、更新和删除 .NET Core 工具。 包括全局工具、工具路径工具和本地工具。
+title: .NET 工具
+description: 如何安装、使用、更新和删除 .NET 工具。 包括全局工具、工具路径工具和本地工具。
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598126"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556896"
 ---
-# <a name="how-to-manage-net-core-tools"></a>如何管理 .NET Core 工具
+# <a name="how-to-manage-net-tools"></a>如何管理 .NET 工具
 
 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
-.NET Core 工具是一种特殊的 NuGet 包，其中包含控制台应用程序。 可以通过以下方式在计算机上安装该工具：
+.NET 工具是一种特殊的 NuGet 包，其中包含控制台应用程序。 可以通过以下方式在计算机上安装该工具：
 
 * 作为全局工具。
 
@@ -29,24 +29,25 @@ ms.locfileid: "89598126"
 
   工具二进制文件安装在默认目录中。 可以从安装目录或其任何子目录调用该工具。 不同目录可以使用同一工具的不同版本。
   
-  .NET CLI 使用清单文件跟踪哪些工具作为本地工具安装到目录。 将清单文件保存到源代码存储库的根目录中后，参与者可以克隆存储库并调用用于安装清单文件中列出的所有工具的单个 .NET Core CLI 命令。
+  .NET CLI 使用清单文件跟踪哪些工具作为本地工具安装到目录。 将清单文件保存到源代码存储库的根目录中后，参与者可以克隆存储库并调用用于安装清单文件中列出的所有工具的单个 .NET CLI 命令。
 
 > [!IMPORTANT]
-> .NET Core 工具在完全信任环境中运行。 除非你信任工具作者，否则请勿安装 .NET Core 工具。
+> .NET 工具在完全信任环境中运行。 除非你信任工具作者，否则请勿安装 .NET 工具。
 
 ## <a name="find-a-tool"></a>查找工具
 
-目前，.NET Core 没有工具搜索功能。 以下是查找工具的一些方法：
+以下是查找工具的一些方法：
 
+* 使用 [dotnet tool search](dotnet-tool-search.md) 命令查找发布到 NuGet.org 的工具。
 * 使用“.NET 工具”包类型筛选器搜索 [NuGet](https://www.nuget.org) 网站。 有关详细信息，请参阅[查找和选择包](/nuget/consume-packages/finding-and-choosing-packages)。
 * 请参阅 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 存储库中的工具列表。
 * 使用 [ToolGet](https://www.toolget.net/) 搜索 .NET 工具。
 * 在 [dotnet/aspnetcore GitHub 存储库的工具目录](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)中查看 ASP.NET Core 团队创建的工具的源代码。
-* 在 [.NET Core dotnet 诊断工具](../diagnostics/index.md#net-core-diagnostic-global-tools)中了解诊断工具。
+* 在 [.NET 诊断工具](../diagnostics/index.md#net-core-diagnostic-global-tools)中了解诊断工具。
 
 ## <a name="check-the-author-and-statistics"></a>查看作者和统计信息
 
-由于 .NET Core 工具在完全信任环境中运行，并且全局工具已添加到 PATH 环境变量，因此它们的功能非常强大。 请勿下载不信任的人提供的工具。
+由于 .NET 工具在完全信任环境中运行，并且全局工具已添加到 PATH 环境变量，因此它们的功能非常强大。 请勿下载不信任的人提供的工具。
 
 如果该工具在 NuGet 中托管，可以通过搜索该工具来查看作者和统计信息。
 
@@ -92,7 +93,7 @@ dotnet tool install dotnetsay --tool-path c:\dotnet-tools
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-.NET Core SDK 不将此位置自动添加至 PATH 环境变量。 若要[调用工具路径工具](#invoke-a-tool-path-tool)，必须确保可使用以下方法之一来调用命令：
+.NET SDK 不将此位置自动添加至 PATH 环境变量。 若要[调用工具路径工具](#invoke-a-tool-path-tool)，必须确保可使用以下方法之一来调用命令：
 
 * 将安装目录添加到 PATH 环境变量。
 * 调用该工具时，指定该工具的完整路径。
@@ -273,10 +274,10 @@ dotnet tool --help
 dotnet <command> --help
 ```
 
-如果工具无法安装或运行，请参阅[排查 .NET Core 工具使用问题](troubleshoot-usage-issues.md)。
+如果工具无法安装或运行，请参阅[排查 .NET 工具使用问题](troubleshoot-usage-issues.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [教程：使用 .NET Core CLI 创建 .NET Core 工具](global-tools-how-to-create.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 全局工具](global-tools-how-to-use.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)
+- [教程：使用 .NET CLI 创建 .NET 工具](global-tools-how-to-create.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 全局工具](global-tools-how-to-use.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 本地工具](local-tools-how-to-use.md)

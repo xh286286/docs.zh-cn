@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247704"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556837"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda 表达式（C# 引用）
 
@@ -56,7 +56,7 @@ ms.locfileid: "91247704"
 (input-parameters) => expression
 ```
 
-表达式 lambda 的主体可以包含方法调用。 不过，若要创建在 .NET 公共语言运行时的上下文之外（如在 SQL Server 中）计算的[表达式树](../../programming-guide/concepts/expression-trees/index.md)，则不得在 lambda 表达式中使用方法调用。 在 .NET 公共语言运行时上下文之外，方法将没有任何意义。
+表达式 lambda 的主体可以包含方法调用。 不过，若要创建在 .NET 公共语言运行时 (CLR) 的上下文之外（如在 SQL Server 中）计算的[表达式树](../../programming-guide/concepts/expression-trees/index.md)，则不得在 lambda 表达式中使用方法调用。 在 .NET 公共语言运行时 (CLR) 上下文之外，方法将没有任何意义。
 
 ## <a name="statement-lambdas"></a>语句 lambda
 

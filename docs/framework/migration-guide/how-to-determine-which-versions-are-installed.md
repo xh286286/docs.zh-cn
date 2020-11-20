@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: faeb2c14b9c1d93b558c67a42c223702178407c0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955585"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440140"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
@@ -64,9 +64,7 @@ ms.locfileid: "91955585"
 
 ### <a name="minimum-version"></a>最低版本
 
-若要确定是否安装了最低版本的 .NET Framework，请使用上表中最小的 Release REG_DWORD 值来指示该版本。
-
-例如，如果应用程序在 .NET Framework 4.8 或更高版本下运行，请测试 Release REG_DWORD 值是否大于或等于 528040。
+若要确定是否存在 .NET Framework 的最低版本，请查看大于或等于下列表中列出的相应值的“Release”REG_DWORD 值。 例如，如果应用程序在 .NET Framework 4.8 或更高版本下运行，请测试 Release REG_DWORD 值是否大于或等于 528040。
 
 | .NET Framework 版本 | 最小值 |
 | ---------------------- | ------------- |

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 3fb19c2b36d97710685cac4ecd10f47a119814ce
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 8f81df527f83183804132ce09ae713fbbcf6f3ce
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189181"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634241"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>如何：使用 SpinLock 进行低级别同步
 
@@ -26,7 +26,7 @@ ms.locfileid: "93189181"
   
  此示例使用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 类，要求必须有用户同步，才能执行多线程访问。 另一种方法是使用 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>，这不需要任何用户锁定。  
   
- 请注意，在对 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 的调用中使用 `false`。 这可提供最佳性能。 在 IA64 架构上指定 `true` 可使用内存界定，这会刷新写入缓冲区以确保锁现在可用于其他线程退出。  
+ 请注意，在对 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 的调用中使用 `false`。 这可提供最佳性能。 在 IA64 架构上指定 `true` 可使用内存界定，这会刷新写入缓冲区以确保锁现在可用于其他线程进入。
   
 ## <a name="see-also"></a>另请参阅
 

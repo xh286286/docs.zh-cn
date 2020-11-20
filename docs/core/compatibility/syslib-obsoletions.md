@@ -2,12 +2,12 @@
 title: .NET 5+ 中已过时的功能
 description: 了解在 .NET 5.0 和更高版本中标记为已过时并生成 SYSLIB 编译器警告的 API。
 ms.date: 10/20/2020
-ms.openlocfilehash: 13f5fb10cfe693ed621b3f45fc22e024875890c8
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333061"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440759"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 中已过时的功能
 
@@ -61,9 +61,14 @@ ms.locfileid: "92333061"
    <TargetFramework>net5.0</TargetFramework>
    <!-- NoWarn below suppresses SYSLIB0001 project-wide -->
    <NoWarn>$(NoWarn);SYSLIB0001</NoWarn>
+   <!-- To suppress multiple warnings, you can use multiple NoWarn elements -->
+   <NoWarn>$(NoWarn);SYSLIB0002</NoWarn>
+   <NoWarn>$(NoWarn);SYSLIB0003</NoWarn>
+   <!-- Alternatively, you can suppress multiple warnings by using a semicolon-delimited list -->
+   <NoWarn>$(NoWarn);SYSLIB0001;SYSLIB0002;SYSLIB0003</NoWarn>
   </PropertyGroup>
 </Project>
 ```
 
 > [!NOTE]
-> 以这种方式取消警告只会禁用特定的过时警告。 它不会禁用任何其他警告，包括其他过时警告。
+> 以这种方式取消警告只会禁用指定的过时警告。 它不会禁用任何其他警告，包括具有不同诊断 ID 的其他过时警告。

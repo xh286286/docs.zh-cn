@@ -3,16 +3,16 @@ title: dotnet new 自定义模板
 description: 了解任意类型 .NET 项目或文件的自定义模板。
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 62d98adab0122936957301ee737c366541b0cfe6
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 3995fad864b80d024209c723a0197281e1b0f523
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471545"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634176"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) 随附了许多已安装并可供你使用的模板。 [`dotnet new` 命令](dotnet-new.md)不仅用于使用模板，还用于说明如何安装和卸载模板。 自.NET Core 2.0 起，可以为任何类型的项目（如应用程序、服务、工具或类库）创建自己的自定义模板。 甚至可以创建输出一个或多个独立文件（如配置文件）的模板。
+[.NET SDK](https://dotnet.microsoft.com/download) 随附了许多已安装且可供使用的模板。 [`dotnet new` 命令](dotnet-new.md)不仅用于使用模板，还用于说明如何安装和卸载模板。 可以为任何类型的项目（如应用、服务、工具或类库）创建自己的自定义模板。 甚至可以创建输出一个或多个独立文件（如配置文件）的模板。
 
 可以从任何 NuGet 源上的 NuGet 包安装自定义模板，具体方法是直接引用 NuGet .nupkg 文件，或指定包含模板的文件系统目录。 借助模板引擎提供的功能，可以替换值、包括和排除文件，并在使用模板时执行自定义处理操作。
 
@@ -25,7 +25,7 @@ ms.locfileid: "92471545"
 
 ### <a name="net-default-templates"></a>.NET 默认模板
 
-安装 [.NET Core SDK](https://dotnet.microsoft.com/download) 时，将获取十多个用于创建项目和文件的内置模板，包括控制台应用程序、类库、单元测试项目、ASP.NET Core 应用程序（包括 [Angular](https://angular.io/) 和 [React](https://reactjs.org/) 项目）和配置文件。 若要列出内置模板，请运行带有 `-l|--list` 选项的 `dotnet new` 命令：
+安装 [.NET SDK](https://dotnet.microsoft.com/download) 时，将收到十多个用于创建项目和文件的内置模板，包括控制台应用、类库、单元测试项目、ASP.NET Core 应用（包括 [Angular](https://angular.io/) 和 [React](https://reactjs.org/) 项目）和配置文件。 若要列出内置模板，请运行带有 `-l|--list` 选项的 `dotnet new` 命令：
 
 ```dotnetcli
 dotnet new --list
@@ -206,7 +206,7 @@ dotnet new -u
 该命令返回如下所示的输出：
 
 ```console
-Template Instantiation Commands for .NET Core CLI
+Template Instantiation Commands for .NET CLI
 
 Currently installed items:
   Microsoft.DotNet.Common.ItemTemplates

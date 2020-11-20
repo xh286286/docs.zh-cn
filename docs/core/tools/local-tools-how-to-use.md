@@ -1,16 +1,16 @@
 ---
-title: 教程：安装和使用 .NET Core 本地工具
+title: 教程：安装和使用 .NET 本地工具
 description: 了解如何安装和使用 .NET 工具作为本地工具。
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062668"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633876"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具
+# <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>教程：使用 .NET CLI 安装和使用 .NET 本地工具
 
  本文适用于： ✔️ .NET Core 3.0 SDK 及更高版本
 
@@ -201,7 +201,7 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>疑难解答
 
-如果在学习本教程时收到错误消息，请参阅[排查 .NET Core 工具使用问题](troubleshoot-usage-issues.md)。
+如果在学习本教程时收到错误消息，请参阅[排查 .NET 工具使用问题](troubleshoot-usage-issues.md)。
 
 ## <a name="see-also"></a>请参阅
 

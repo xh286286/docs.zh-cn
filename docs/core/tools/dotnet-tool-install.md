@@ -1,13 +1,13 @@
 ---
 title: dotnet tool install 命令
-description: dotnet tool install 命令在计算机上安装指定的 .NET Core 工具。
+description: Dotnet tool install 命令在计算机上安装指定的 .NET 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702812"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634319"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -15,7 +15,7 @@ ms.locfileid: "83702812"
 
 ## <a name="name"></a>“属性”
 
-`dotnet tool install` - 在计算机上安装指定的 [.NET Core 工具](global-tools.md)。
+`dotnet tool install` - 在计算机上安装指定的 [.NET 工具](global-tools.md)。
 
 ## <a name="synopsis"></a>摘要
 
@@ -40,7 +40,7 @@ dotnet tool install -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet tool install` 命令为用户提供一种在计算机上安装 .NET Core 工具的方法。 若要使用命令，请指定以下安装选项之一：
+`dotnet tool install` 命令提供一种在计算机上安装 .NET 工具的方法。 若要使用命令，请指定以下安装选项之一：
 
 * 若要在默认位置中安装全局工具，请使用 `--global` 选项。
 * 若要在自定义位置中安装全局工具，请使用 `--tool-path` 选项。
@@ -67,7 +67,7 @@ dotnet new tool-manifest
 
 - **`PACKAGE_NAME`**
 
-  包含要安装的 .NET Core 工具的 NuGet 包的名称/ID。
+  包含要安装的 .NET 工具的 NuGet 包的名称/ID。
 
 ## <a name="options"></a>选项
 
@@ -81,7 +81,7 @@ dotnet new tool-manifest
 
 - **`framework <FRAMEWORK>`**
 
-  指定要安装工具的[目标框架](../../standard/frameworks.md)。 默认情况下，.NET Core SDK 尝试选择最合适的目标框架。
+  指定要安装工具的[目标框架](../../standard/frameworks.md)。 默认情况下，.NET SDK 尝试选择最合适的目标框架。
 
 - **`-g|--global`**
 
@@ -127,6 +127,6 @@ dotnet new tool-manifest
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 工具](global-tools.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 全局工具](global-tools-how-to-use.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)
+- [.NET 工具](global-tools.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 全局工具](global-tools-how-to-use.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 本地工具](local-tools-how-to-use.md)

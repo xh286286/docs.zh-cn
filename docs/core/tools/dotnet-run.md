@@ -2,12 +2,12 @@
 title: dotnet run 命令
 description: dotnet run 命令可便于使用源代码运行应用程序。
 ms.date: 02/19/2020
-ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c80f290c75e3bac65ae73fe8edada53db4ce86f8
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102758"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634411"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -43,7 +43,7 @@ dotnet run -h|--help
 dotnet myapp.dll
 ```
 
-有关 `dotnet` 驱动程序的详细信息，请参阅 [.NET Core 命令行工具 (CLI)](index.md) 主题。
+有关 `dotnet` 驱动程序的详细信息，请参阅 [.NET 命令行工具 (CLI)](index.md) 主题。
 
 若要运行应用程序，`dotnet run` 命令需从 NuGet 缓存解析共享运行时之外的应用程序依赖项。 因为它使用缓存的依赖项，因此，不推荐在生产中使用 `dotnet run` 来运行应用程序。 相反，使用 [`dotnet publish`](dotnet-publish.md)[ 命令创建部署](../deploying/index.md)，并部署已发布的输出。
 
@@ -129,7 +129,7 @@ dotnet myapp.dll
   dotnet run --configuration Release -- --help
   ```
 
-- 在当前仅显示最小输出的目录中还原项目的依赖项和工具，然后运行项目（.NET Core SDK 2.0 及更高版本）：
+- 在仅显示最小输出的当前目录中还原项目的依赖项和工具，然后运行项目：
 
   ```dotnetcli
   dotnet run --verbosity m

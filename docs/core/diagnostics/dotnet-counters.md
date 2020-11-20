@@ -2,12 +2,12 @@
 title: dotnet-counters - .NET Core
 description: 了解如何安装和使用 dotnet-counter 命令行工具。
 ms.date: 02/26/2020
-ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062894"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507249"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -57,7 +57,7 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>摘要
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>选项
@@ -70,9 +70,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   更新显示的计数器之间延迟的秒数
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  计数器的空格分隔列表。 计数器可以指定为 `provider_name[:counter_name]`。 如果在没有符合条件的 `counter_name` 的情况下使用 `provider_name`，则会显示所有计数器。 若要发现提供程序和计数器名称，请使用 [dotnet-counters list](#dotnet-counters-list) 命令。
+  计数器的逗号分隔列表。 计数器可以指定为 `provider_name[:counter_name]`。 如果使用 `provider_name` 时没有限定的计数器列表，则显示来自提供程序的所有计数器。 若要发现提供程序和计数器名称，请使用 [dotnet-counters list](#dotnet-counters-list) 命令。
 
 - **`--format <csv|json>`**
 
@@ -81,6 +81,13 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - **`-o|--output <output>`**
 
   输出文件的名称。
+
+- `-- <command>`（仅适用于运行 .NET 5.0 或更高版本的目标应用程序）
+
+  在集合配置参数之后，用户可以追加 `--`，后跟一个命令，以启动至少具有 5.0 运行时的 .NET 应用程序。 `dotnet-counters` 将启动一个进程，并收集请求的指标。 这通常用于收集应用程序的启动路径的指标，并可用于诊断或监视在主入口点前后发生的问题。
+
+> [!NOTE]
+> 使用此选项监视第一个 .NET 5.0 进程，该进程与该工具通信，这意味着如果命令启动多个 .NET 应用程序，它将仅收集第一个应用。 因此，建议在自包含应用程序上使用此选项，或使用 `dotnet exec <app.dll>` 选项。
 
 ### <a name="examples"></a>示例
 
@@ -91,6 +98,14 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   counter_list is unspecified. Monitoring all counters by default.
   Starting a counter session. Press Q to quit.
+  ```
+
+- 将 `dotnet mvc.dll` 作为子进程启动，开始从启动中收集运行时计算器和 ASP.NET Core Hosting 计算器，并将其另存为 JSON 输出：
+
+  ```console
+  > dotnet-counters collect --format json --counters System.Runtime,Microsoft.AspNetCore.Hosting -- dotnet mvc.dll
+  Starting a counter session. Press Q to quit.
+  File saved to counter.json
   ```
 
 ## <a name="dotnet-counters-list"></a>dotnet-counters list
@@ -147,7 +162,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>摘要
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>选项
@@ -160,35 +175,61 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   更新显示的计数器之间延迟的秒数
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  计数器的空格分隔列表。 计数器可以指定为 `provider_name[:counter_name]`。 如果在没有符合条件的 `counter_name` 的情况下使用 `provider_name`，则会显示所有计数器。 若要发现提供程序和计数器名称，请使用 [dotnet-counters list](#dotnet-counters-list) 命令。
+  计数器的逗号分隔列表。 计数器可以指定为 `provider_name[:counter_name]`。 如果使用 `provider_name` 时没有限定的计数器列表，则显示来自提供程序的所有计数器。 若要发现提供程序和计数器名称，请使用 [dotnet-counters list](#dotnet-counters-list) 命令。
+
+ `-- <command>`（仅适用于运行 .NET 5.0 或更高版本的目标应用程序）
+
+  在集合配置参数之后，用户可以追加 `--`，后跟一个命令，以启动至少具有 5.0 运行时的 .NET 应用程序。 `dotnet-counters` 将启动一个进程，并监视请求的指标。 这通常用于收集应用程序的启动路径的指标，并可用于诊断或监视在主入口点前后发生的问题。
+
+  > [!NOTE]
+  > 使用此选项监视第一个 .NET 5.0 进程，该进程与该工具通信，这意味着如果命令启动多个 .NET 应用程序，它将仅收集第一个应用。 因此，建议在自包含应用程序上使用此选项，或使用 `dotnet exec <app.dll>` 选项。
 
 ### <a name="examples"></a>示例
 
 - 以 3 秒的刷新间隔监视 `System.Runtime` 中的所有计数器：
 
   ```console
-  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
-
+  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 --counters System.Runtime
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
-      CPU Usage (%)                                 24
-      Working Set (MB)                            1982
-      GC Heap Size (MB)                            811
-      Gen 0 GC / second                             20
-      Gen 1 GC / second                              4
-      Gen 2 GC / second                              1
-      Number of Exceptions / sec                     4
+      Status: Running
+
+  [System.Runtime]
+      % Time in GC since last GC (%)                                 0
+      Allocation Rate (B / 1 sec)                                5,376
+      CPU Usage (%)                                                  0
+      Exception Count (Count / 1 sec)                                0
+      GC Fragmentation (%)                                          48.467
+      GC Heap Size (MB)                                              0
+      Gen 0 GC Count (Count / 1 sec)                                 1
+      Gen 0 Size (B)                                                24
+      Gen 1 GC Count (Count / 1 sec)                                 1
+      Gen 1 Size (B)                                                24
+      Gen 2 GC Count (Count / 1 sec)                                 1
+      Gen 2 Size (B)                                           272,000
+      IL Bytes Jitted (B)                                       19,449
+      LOH Size (B)                                              19,640
+      Monitor Lock Contention Count (Count / 1 sec)                  0
+      Number of Active Timers                                        0
+      Number of Assemblies Loaded                                    7
+      Number of Methods Jitted                                     166
+      POH (Pinned Object Heap) Size (B)                             24
+      ThreadPool Completed Work Item Count (Count / 1 sec)           0
+      ThreadPool Queue Length                                        0
+      ThreadPool Thread Count                                        2
+      Working Set (MB)                                              19
   ```
 
 - 仅监视 `System.Runtime` 中的 CPU 使用情况和 GC 堆大小：
 
   ```console
-  > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
+  > dotnet-counters monitor --process-id 1902 --counters System.Runtime[cpu-usage,gc-heap-size]
 
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
+    Status: Running
+
+  [System.Runtime]
       CPU Usage (%)                                 24
       GC Heap Size (MB)                            811
   ```
@@ -196,12 +237,43 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - 监视用户定义的 `EventSource` 中的 `EventCounter` 值。 有关详细信息，请参阅[教程：使用 .NET Core 中的 EventCounters 衡量性能](event-counter-perf.md)。
 
   ```console
-  > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
+  > dotnet-counters monitor --process-id 1902 --counters Samples-EventCounterDemos-Minimal
 
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+
+- 启动 `my-aspnet-server.exe` 并从其启动监视加载的程序集的数量（仅限 .NET 5.0 或更高版本）：
+
+  注意：这仅适用于运行 .NET 5.0 或更高版本的应用。
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
+
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      Number of Assemblies Loaded                   24
+  ```
   
+- 启动 `my-aspnet-server.exe`，以 `arg1` 及 `arg2` 作为命令行参数，并从其启动监视其工作集和 GC 堆大小（仅限 .NET 5.0 或更高版本）：
+
+  注意：这仅适用于运行 .NET 5.0 或更高版本的应用。
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2
+  ```
+
+  ```console
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      GC Heap Size (MB)                                 39
+      Working Set (MB)                                  59
+  ```
+
 ## <a name="dotnet-counters-ps"></a>dotnet-counters ps
 
 显示可监视的 dotnet 进程的列表。

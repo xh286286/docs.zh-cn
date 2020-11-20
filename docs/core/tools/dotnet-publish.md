@@ -1,13 +1,13 @@
 ---
 title: dotnet publish 命令
-description: dotnet publish 命令可将 .NET Core 项目或解决方案发布到目录。
-ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+description: dotnet publish 命令可将 .NET 项目或解决方案发布到目录。
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654889"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634424"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -41,11 +41,11 @@ dotnet publish -h|--help
 - .runtimeconfig.json 文件，其中指定了应用程序所需的共享运行时，以及运行时的其他配置选项（例如垃圾回收类型）。
 - 应用程序的依赖项，将这些依赖项从 NuGet 缓存复制到输出文件夹。
 
-`dotnet publish` 命令的输出可供部署至托管系统（例如服务器、电脑、Mac、笔记本电脑）以便执行。 若要准备用于部署的应用程序，这是唯一正式受支持的方法。 根据项目指定的部署的类型，托管系统不一定已在其上安装 .NET Core 共享运行时。 有关详细信息，请参阅[使用 .NET Core CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)。
+`dotnet publish` 命令的输出可供部署至托管系统（例如服务器、电脑、Mac、笔记本电脑）以便执行。 若要准备用于部署的应用程序，这是唯一正式受支持的方法。 根据项目指定的部署类型，托管系统不一定已在其上安装 .NET 共享运行时。 有关详细信息，请参阅[使用 .NET CLI 发布 .NET 应用](../deploying/deploy-with-cli.md)。
 
 ### <a name="implicit-restore"></a>隐式还原
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -165,7 +165,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`--self-contained [true|false]`**
 
-  与应用程序一同发布 .NET Core 运行时，因此无需在目标计算机上安装运行时。 如果指定了运行时标识符，并且项目是可执行项目（而不是库项目），则默认值为 `true`。 有关详细信息，请参阅 [.NET Core 应用程序发布](../deploying/index.md)和[使用 .NET Core CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)。
+  .NET 运行时随应用程序一同发布，因此无需在目标计算机上安装运行时。 如果指定了运行时标识符，并且项目是可执行项目（而不是库项目），则默认值为 `true`。 有关详细信息，请参阅 [.NET 应用程序发布](../deploying/index.md)和[使用 .NET CLI 发布 .NET 应用](../deploying/deploy-with-cli.md)。
 
   如果在未指定 `true` 或 `false` 的情况下使用此选项，则默认值为 `true`。 在这种情况下，请不要紧接在 `--self-contained` 后放置解决方案或项目参数，因为该位置需要 `true` 或 `false`。
 
@@ -175,7 +175,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  发布针对给定运行时的应用程序。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 有关详细信息，请参阅 [.NET Core 应用程序发布](../deploying/index.md)和[使用 .NET Core CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)。
+  发布针对给定运行时的应用程序。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。 有关详细信息，请参阅 [.NET 应用程序发布](../deploying/index.md)和[使用 .NET CLI 发布 .NET 应用](../deploying/deploy-with-cli.md)。
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -231,8 +231,8 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 应用程序发布概述](../deploying/index.md)
-- [使用 .NET Core CLI 发布 .NET Core 应用](../deploying/deploy-with-cli.md)
+- [.NET 应用程序发布概述](../deploying/index.md)
+- [使用 .NET CLI 发布 .NET 应用](../deploying/deploy-with-cli.md)
 - [目标框架](../../standard/frameworks.md)
 - [运行时标识符 (RID) 目录](../rid-catalog.md)
 - [处理 macOS Catalina 公证](../install/macos-notarization-issues.md)

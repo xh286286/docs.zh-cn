@@ -1,17 +1,17 @@
 ---
-title: 持久 Azure 函数 - 无服务器应用
-description: 持久 Azure 函数将扩展 Azure Functions 运行时，以便在代码中启用有状态的工作流。
+title: 持久 Azure Functions - 无服务器应用
+description: 持久 Azure Functions 将扩展 Azure Functions 运行时，以便在代码中启用有状态的工作流。
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3ee628b5c2239cd13395fda7714b38b06efa058
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171788"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557150"
 ---
-# <a name="durable-azure-functions"></a>持久 Azure 函数
+# <a name="durable-azure-functions"></a>持久 Azure Functions
 
 使用 Azure Functions 创建无服务器应用程序时，操作通常会设计为以无状态方式运行。 选择此设计是因为，随着平台规模的不断增加，很难知道代码运行在哪些服务器上。 也很难知道任意给定点上有多少实例处于活动状态。 但是，有些应用程序类需要知道进程的当前状态。 考虑向在线商店提交订单的过程。 签出操作可能是由多个需要知道进程状态的操作组成的工作流。 如果客户在其帐户上有任何信用额度，以及处理信用卡的结果，则此类信息可能包括产品清单。 这些操作可以很容易地成为它们自己的内部工作流，甚至是来自第三方系统的服务。
 

@@ -1,13 +1,13 @@
 ---
 title: dotnet tool update 命令
-description: dotnet tool update 命令更新计算机上指定的 .NET Core 工具。
+description: dotnet tool update 命令更新计算机上指定的 .NET 工具。
 ms.date: 07/08/2020
-ms.openlocfilehash: a212fbb40af68019c1bc9a63963d960292be6b08
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 18b153e53a6dbcb32e50ae4a7d06a1c2f53d1eb5
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308866"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634072"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -15,7 +15,7 @@ ms.locfileid: "86308866"
 
 ## <a name="name"></a>“属性”
 
-`dotnet tool update` - 更新计算机上指定的 [.NET Core 工具](global-tools.md)。
+`dotnet tool update` - 在计算机上更新指定的 [.NET 工具](global-tools.md)。
 
 ## <a name="synopsis"></a>摘要
 
@@ -56,7 +56,7 @@ dotnet tool update -h|--help
 
 - **`PACKAGE_ID`**
 
-  包含要更新的 .NET Core 全局工具的 NuGet 包的名称/ID。 你可以使用 [dotnet tool list](dotnet-tool-list.md) 命令查找包名称。
+  包含要更新的 .NET 全局工具的 NuGet 包的名称/ID。 你可以使用 [dotnet tool list](dotnet-tool-list.md) 命令查找包名称。
 
 ## <a name="options"></a>选项
 
@@ -144,7 +144,7 @@ dotnet tool update -h|--help
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 工具](global-tools.md)
+- [.NET 工具](global-tools.md)
 - [语义化版本控制](https://semver.org)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 全局工具](global-tools-how-to-use.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 全局工具](global-tools-how-to-use.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 本地工具](local-tools-how-to-use.md)

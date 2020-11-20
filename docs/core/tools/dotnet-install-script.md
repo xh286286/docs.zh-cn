@@ -1,19 +1,19 @@
 ---
 title: dotnet-install 脚本
-description: 了解用于安装 .NET Core SDK 和共享运行时的 dotnet-install 脚本。
+description: 了解用于安装 .NET SDK 和共享运行时的 dotnet-install 脚本。
 ms.date: 09/22/2020
-ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078198"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634437"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
 ## <a name="name"></a>“属性”
 
-`dotnet-install.ps1` | `dotnet-install.sh` - 用于安装 .NET Core SDK 和共享运行时的脚本。
+`dotnet-install.ps1` | `dotnet-install.sh` - 用于安装 .NET SDK 和共享运行时的脚本。
 
 ## <a name="synopsis"></a>摘要
 
@@ -48,7 +48,7 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
 
 ## <a name="description"></a>描述
 
-`dotnet-install` 脚本执行 .NET Core SDK 的非管理员安装，其中包含 .NET Core CLI 和共享运行时。 有两个脚本：
+`dotnet-install` 脚本执行 .NET SDK 的非管理员安装，其中包含 .NET CLI 和共享运行时。 有两个脚本：
 
 * 在 Windows 上运行的 PowerShell 脚本。
 * 在 Linux/macOS 上运行的 bash 脚本。
@@ -86,13 +86,13 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
 
 可以使用 `-Version|--version` 参数安装特定版本。 必须将版本指定为由 3 部分构成的版本号，例如 `2.1.0`。 如果未指定版本，则脚本将安装 `latest` 版本。
 
-安装脚本不会更新 Windows 上的注册表。 它们只是下载压缩的二进制文件并将其复制到文件夹。 如果要更新注册表项值，请使用 .NET Core 安装程序。
+安装脚本不会更新 Windows 上的注册表。 它们只是下载压缩的二进制文件并将其复制到文件夹。 如果要更新注册表项值，请使用 .NET 安装程序。
 
 ## <a name="options"></a>选项
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  要安装的 .NET Core 二进制文件的体系结构。 可能值为 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 以及 `arm`。 默认值为 `<auto>`，它表示当前正在运行的操作系统体系结构。
+  要安装的 .NET 二进制文件的体系结构。 可能值为 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 以及 `arm`。 默认值为 `<auto>`，它表示当前正在运行的操作系统体系结构。
 
 - **`-AzureFeed|--azure-feed`**
 
@@ -111,7 +111,7 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
 
 - **`-DryRun|--dry-run`**
 
-  如果设置，脚本将不会执行安装。 而会显示要使用哪个命令行来持续安装当前请求的 .NET Core CLI 版本。 例如，如果指定版本 `latest`，它将显示特定版本的链接，以便可在生成脚本中明确地使用此命令。 如果想要自行安装或下载，它还会显示二进制文件位置。
+  如果设置，脚本将不会执行安装。 而会显示要使用哪个命令行来持续安装当前请求的 .NET CLI 版本。 例如，如果指定版本 `latest`，它将显示特定版本的链接，以便可在生成脚本中明确地使用此命令。 如果想要自行安装或下载，它还会显示二进制文件位置。
 
 - **`-FeedCredential|--feed-credential`**
 
@@ -135,7 +135,7 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
 
 - **`-NoPath|--no-path`**
 
-  如果设定，不会将安装文件夹导出到当前会话的路径。 默认情况下，该脚本会修改 PATH，这会使 .NET Core CLI 在安装后立即可用。
+  如果设定，不会将安装文件夹导出到当前会话的路径。 默认情况下，该脚本会修改 PATH，这会使 .NET CLI 在安装后立即可用。
 
 - **`-ProxyAddress`**
 
@@ -240,7 +240,7 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- 获取脚本并安装 .NET Core CLI 单行式命令示例：
+- 获取脚本并安装 .NET CLI 单行式命令示例：
 
   Windows：
 
@@ -257,5 +257,5 @@ bash 脚本也读取 PowerShell 开关。因此，可以在 Linux/macOS 系统�
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 版本](https://github.com/dotnet/core/releases)
-- [.NET Core 运行时和 SDK 下载存档](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET 版本](https://github.com/dotnet/core/releases)
+- [.NET 运行时和 SDK 下载存档](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

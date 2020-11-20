@@ -4,12 +4,12 @@ description: 了解如何析构元组和其他类型。
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 8defd75a7cdff3490d2b0a6097ec2a898576e113
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174161"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439698"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>析构元组和其他类型
 
@@ -76,7 +76,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 以下示例重载 `Deconstruct` 方法以返回 `Person` 对象的各种属性组合。 单个重载返回：
 
 - 名字和姓氏。
-- 名字、姓氏和中间名。
+- 名字、中间名和姓氏。
 - 名字、姓氏、城市名和省/市/自治区名。
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]

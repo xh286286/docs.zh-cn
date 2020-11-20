@@ -1,13 +1,13 @@
 ---
 title: dotnet pack 命令
-description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
+description: dotnet pack 命令可为 .NET 项目创建 NuGet 包。
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537819"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634228"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -188,4 +188,4 @@ dotnet pack -h|--help
   
   - [使用 .nuspec 打包](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [用于创建自定义包的高级扩展点](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [全局属性](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [全局属性](/visualstudio/msbuild/msbuild-properties#global-properties)

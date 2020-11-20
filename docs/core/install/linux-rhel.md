@@ -1,40 +1,40 @@
 ---
-title: 在 RHEL 上安装 .NET Core - .NET Core
-description: 演示在 RHEL 上安装 .NET Core SDK 和 .NET Core 运行时的各种方法。
+title: 在 RHEL 上安装 .NET - .NET
+description: 演示在 RHEL 上安装 .NET SDK 和 .NET 运行时的各种方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 11/10/2020
+ms.openlocfilehash: cb03f84cf84557d467f0a067b8d5629a843ec7e3
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619438"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594564"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>在 RHEL 上安装 .NET Core SDK 或 .NET Core 运行时
+# <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>在 RHEL 上安装 .NET SDK 或 .NET 运行时
 
-.NET Core 在 RHEL 上受支持。 本文介绍如何在 RHEL 上安装 .NET Core。
+RHEL 支持 .NET。 本文介绍如何在 RHEL 上安装 .NET。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>注册 Red Hat 订阅
 
-若要在 RHEL 上从 Red Hat 安装 .NET Core，首先需要使用 Red Hat 订阅管理器进行注册。 如果未在系统上完成此操作，或者不确定是否完成了此操作，请参阅[适用于 .NET Core 的 Red Hat 产品文档](https://access.redhat.com/documentation/net_core/)。
+若要在 RHEL 上从 Red Hat 安装 .NET，首先需要使用 Red Hat 订阅管理器进行注册。 如果未在系统上完成此操作，或者不确定是否完成了此操作，请参阅[适用于 .NET 的 Red Hat 产品文档](https://access.redhat.com/documentation/net/5.0/)。
 
 ## <a name="supported-distributions"></a>支持的发行版
 
-下表列出了 RHEL 7 和 RHEL 8 上当前受支持的 .NET Core 版本。 这些版本在 [.NET Core 达到支持终止日期](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或 RHEL 版本不再受到支持之前仍受支持。
+下表列出了 RHEL 7 和 RHEL 8 上当前受支持的 .NET 版本。 这些版本在 [.NET 达到支持终止日期](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或 RHEL 版本不再受到支持之前仍受支持。
 
-- ✔️ 指示 RHEL 或 .NET Core 版本仍受支持。
-- ❌ 指示 RHEL 或 .NET Core 版本在该 RHEL 版本上不受支持。
-- 当 RHEL 版本和 .NET Core 版本都有 ✔️ 时，将支持该 OS 和 .NET 组合。
+- ✔️ 指示 RHEL 或 .NET 版本仍受支持。
+- ❌ 指示 RHEL 或 .NET 版本在该 RHEL 版本上不受支持。
+- 当 RHEL 版本和 .NET 版本都有 ✔️ 时，将支持该 OS 和 .NET 组合。
 
-| RHEL                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 预览版（仅限手动安装） |
+| RHEL                     | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#rhel-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
-| ✔️ [7](#rhel-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
+| ✔️ [8](#rhel-8-)        | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [7](#rhel-7--net-50) | ✔️ 2.1        | ✔️ [3.1](#rhel-7--net-core-31)        | ✔️ [5.0](#rhel-7--net-50) |
 
-以下版本的 .NET Core 不再受到支持。 这些版本的下载仍保持发布状态：
+以下 .NET 版本不再受到支持。 这些版本的下载仍保持发布状态：
 
 - 3.0
 - 2.2
@@ -42,15 +42,34 @@ ms.locfileid: "85619438"
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
-有关安装其他版本的 .NET Core 所需的步骤，请参阅 [.NET Core 的 Red Hat 文档](https://access.redhat.com/documentation/net_core/)。
+有关安装其他版本的 .NET 所需的步骤，请参阅[适用于 .NET 的 Red Hat 文档](https://access.redhat.com/documentation/net/5.0/)。
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-.NET Core 包含在 RHEL 8 的应用流存储库中。
+> [!TIP]
+> .NET 5.0 在 AppStream 存储库中尚不可用，但 .NET Core 3.1 可用。 若要安装 .NET Core 3.1，请对相应的包（如 `aspnetcore-runtime-3.1` 或 `dotnet-sdk-3.1`）使用 `dnf install` 命令。 下列说明适用于 .NET 5.0。
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
-## <a name="rhel-7-"></a>RHEL 7 ✔️
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
+
+## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5.0
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+
+## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3.1
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -112,4 +131,4 @@ source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
 
 ## <a name="next-steps"></a>后续步骤
 
-- [教程：使用 Visual Studio Code 通过 .NET Core SDK 创建控制台应用程序](../tutorials/with-visual-studio-code.md)
+- [教程：使用 Visual Studio Code 通过 .NET SDK 创建控制台应用程序](../tutorials/with-visual-studio-code.md)

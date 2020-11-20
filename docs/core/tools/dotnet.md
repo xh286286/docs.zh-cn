@@ -1,13 +1,13 @@
 ---
 title: dotnet 命令
-description: 了解 dotnet 命令（.NET Core CLI 的通用驱动程序）及其用法。
-ms.date: 02/13/2020
-ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+description: 了解 dotnet 命令（.NET CLI 的通用驱动程序）及其用法。
+ms.date: 11/11/2020
+ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281618"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634020"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -15,7 +15,7 @@ ms.locfileid: "93281618"
 
 ## <a name="name"></a>“属性”
 
-`dotnet` - .NET Core CLI 的通用驱动程序。
+`dotnet` - .NET CLI 的通用驱动程序。
 
 ## <a name="synopsis"></a>摘要
 
@@ -52,13 +52,13 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 `dotnet` 命令有两个函数：
 
-- 它提供了用于处理 .NET Core 项目的命令。
+- 它提供了用于处理 .NET 项目的命令。
 
   例如，[`dotnet build`](dotnet-build.md) 生成项目。 每个命令定义自己的选项和参数。 所有命令都支持 `--help` 选项，用于打印有关如何使用命令的简短文档。
 
-- 它运行 .NET Core 应用程序。
+- 它运行 .NET 应用程序。
 
-  指定应用程序 `.dll` 文件的路径以运行应用程序。  运行应用程序即意味着找到并执行入口点，对于控制台应用，入口点是 `Main` 方法。 例如，`dotnet myapp.dll` 运行 `myapp` 应用程序。 要了解部署选项，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+  指定应用程序 `.dll` 文件的路径以运行应用程序。  运行应用程序即意味着找到并执行入口点，对于控制台应用，入口点是 `Main` 方法。 例如，`dotnet myapp.dll` 运行 `myapp` 应用程序。 若要了解部署选项，请参阅 [.NET 应用程序部署](../deploying/index.md)。
 
 ## <a name="options"></a>选项
 
@@ -70,19 +70,19 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--info`**
 
-  打印出有关 .NET Core 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET Core 版本的 SHA。
+  打印出有关 .NET 安装和计算机环境（如当前操作系统）的详细信息，并提交 .NET 版本的 SHA。
 
 - **`--version`**
 
-  打印使用中的 .NET Core SDK 版本。
+  打印出使用中的 .NET SDK 版本。
 
 - **`--list-runtimes`**
 
-  打印已安装的 .NET Core 运行时的列表。 x86 版本的 SDK 只列出 x86 运行时，而 x64 版本的 SDK 只列出 x64 运行时。
+  打印出已安装的 .NET 运行时的列表。 x86 版本的 SDK 只列出 x86 运行时，而 x64 版本的 SDK 只列出 x64 运行时。
 
 - **`--list-sdks`**
 
-  打印已安装的 .NET Core SDK 的列表。
+  打印出已安装的 .NET SDK 的列表。
 
 - **`-h|--help`**
 
@@ -122,11 +122,11 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  deps.json 文件的路径。 .deps.json 文件是一个配置文件，其中包含有关运行应用程序所需的依赖项的信息。 此文件由 .NET Core SDK 生成。
+  deps.json 文件的路径。 .deps.json 文件是一个配置文件，其中包含有关运行应用程序所需的依赖项的信息。 此文件由 .NET SDK 生成。
 
 - **`--runtimeconfig`**
 
-  runtimeconfig.template.json 文件的路径。 runtimeconfig.template.json 文件是包含运行时设置的配置文件。 有关详细信息，请参阅 [.NET Core 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
+  runtimeconfig.template.json 文件的路径。 runtimeconfig.template.json 文件是包含运行时设置的配置文件。 有关详细信息，请参阅 [.NET 运行时配置设置](../run-time-config/index.md#runtimeconfigjson)。
 
 - `--roll-forward <SETTING>` 自 .NET Core SDK 3.0 起可用 。
 
@@ -157,7 +157,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--fx-version <VERSION>`**
 
-  用于运行应用程序的 .NET Core 运行时版本。
+  用于运行应用程序的 .NET 运行时版本。
 
   此选项将重写应用程序 `.runtimeconfig.json` 文件中第一个框架引用的版本。 这意味着，仅当只有一个框架引用时，它才会按预期方式工作。 如果应用程序具有多个框架引用，则使用此选项可能会导致错误。
 
@@ -167,7 +167,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 | 命令                                       | 函数                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | 生成 .NET Core 应用程序。                                     |
+| [dotnet build](dotnet-build.md)               | 生成 .NET 应用程序。                                     |
 | [dotnet build-server](dotnet-build-server.md) | 与通过生成启动的服务器进行交互。                          |
 | [dotnet clean](dotnet-clean.md)               | 清除生成输出。                                                |
 | [dotnet help](dotnet-help.md)                 | 显示命令更详细的在线文档。           |
@@ -213,18 +213,19 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>全局、工具路径和本地工具命令
 
-工具是控制台应用程序，它们从 NuGet 包中安装并从命令提示符处进行调用。 你可自行编写工具，也可安装由第三方编写的工具。 工具也称为全局工具、工具路径工具和本地工具。 有关详细信息，请参阅 [.NET Core 工具概述](global-tools.md)。 全局和工具路径工具从 .NET Core SDK 2.1 开始可用。 本地工具从 .NET Core SDK 3.0 开始可用。
+工具是控制台应用程序，它们从 NuGet 包中安装并从命令提示符处进行调用。 你可自行编写工具，也可安装由第三方编写的工具。 工具也称为全局工具、工具路径工具和本地工具。 有关详细信息，请参阅 [.NET 工具概述](global-tools.md)。 全局和工具路径工具从 .NET Core SDK 2.1 开始可用。 本地工具从 .NET Core SDK 3.0 开始可用。
 
 命令 | 函数
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 在计算机上安装工具。
 [dotnet tool list](dotnet-tool-list.md) | 列出计算机上当前安装的所有全局、工具路径或本地工具。
+[dotnet tool search](dotnet-tool-list.md) | 在 NuGet.org 中搜索其名称或元数据中具有指定搜索词的工具。
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | 从计算机中卸载工具。
 [dotnet tool update](dotnet-tool-update.md) | 更新计算机上安装的工具。
 
 ### <a name="additional-tools"></a>其他工具
 
-自 .NET Core SDK 2.1.300 开始，许多使用 `DotnetCliToolReference` 的仅在每个项目的基础上可用的工具现作为 .NET Core SDK 的一部分提供。 下表中列出了这些工具：
+自 .NET Core SDK 2.1.300 开始，许多使用 `DotnetCliToolReference` 且仅在每个项目的基础上可用的工具现作为 .NET SDK 的一部分提供。 下表中列出了这些工具：
 
 | 工具                                              | 函数                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -238,7 +239,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ## <a name="examples"></a>示例
 
-创建新的 .NET Core 控制台应用程序：
+创建新的 .NET 控制台应用程序：
 
 ```dotnetcli
 dotnet new console
@@ -260,7 +261,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  指定 .NET Core 运行时的位置（如果运行时未安装在默认位置）。 Windows 上的默认位置为 `C:\Program Files\dotnet`。 Linux 和 macOS 上的默认位置为 `/usr/share/dotnet`。 此环境变量仅在通过生成的可执行文件 (apphosts) 运行应用时使用。 在 64 位 OS 上运行 32 位可执行文件时，改用 `DOTNET_ROOT(x86)`。
+  指定 .NET 运行时的位置（如果运行时未安装在默认位置）。 Windows 上的默认位置为 `C:\Program Files\dotnet`。 Linux 和 macOS 上的默认位置为 `/usr/share/dotnet`。 此环境变量仅在通过生成的可执行文件 (apphosts) 运行应用时使用。 在 64 位 OS 上运行 32 位可执行文件时，改用 `DOTNET_ROOT(x86)`。
 
 - `NUGET_PACKAGES`
 
@@ -272,15 +273,15 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  指定是否在首次运行时显示 .NET Core 欢迎消息和遥测消息。 设置为 `true` 可将这些消息静音（接受 `true`、`1` 或 `yes` 值），或者，设置为 `false` 可允许显示消息（接受 `false`、`0` 或 `no` 值）。 如果未设置，则默认值为 `false`，表示在首次运行时将显示消息。 此标志对遥测不起作用（请参阅 `DOTNET_CLI_TELEMETRY_OPTOUT` 中关于如何选择不发送遥测数据的信息）。
+  指定是否在首次运行时显示 .NET 欢迎消息和遥测消息。 设置为 `true` 可将这些消息静音（接受 `true`、`1` 或 `yes` 值），或者，设置为 `false` 可允许显示消息（接受 `false`、`0` 或 `no` 值）。 如果未设置，则默认值为 `false`，表示在首次运行时将显示消息。 此标志对遥测不起作用（请参阅 `DOTNET_CLI_TELEMETRY_OPTOUT` 中关于如何选择不发送遥测数据的信息）。
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-  指定是否收集并向 Microsoft 发送 .NET Core 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受的值为 `true`、`1` 或 `yes`）。 否则，设置为 `false` 以选择加入遥测功能（接受的值为 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
+  指定是否收集并向 Microsoft 发送 .NET 工具使用情况的相关数据。 设置为 `true` 以选择退出遥测功能（接受的值为 `true`、`1` 或 `yes`）。 否则，设置为 `false` 以选择加入遥测功能（接受的值为 `false`、`0` 或 `no`）。 如果未设置，则默认为 `false` 且遥测功能为活动状态。
 
 - `DOTNET_MULTILEVEL_LOOKUP`
 
-  指定是否从全局位置解析 .NET Core 运行时、共享框架或 SDK。 如果未设置，则默认为 1（逻辑 `true`）。 设置为 0（逻辑 `false`），不从全局位置解析，并且具有独立的 .NET Core 安装。 有关多级别查找的详细信息，请参阅 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)（多级别 SharedFX 查找）。
+  指定是否从全局位置解析 .NET 运行时、共享框架或 SDK。 如果未设置，则默认为 1（逻辑 `true`）。 设置为 0（逻辑 `false`），不从全局位置解析，并且具有独立的 .NET 安装。 有关多级别查找的详细信息，请参阅 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)（多级别 SharedFX 查找）。
 
 - `DOTNET_ROLL_FORWARD` 自 .NET Core 3.x 起可用。
 
@@ -288,7 +289,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROLL_FORWARD_TO_PRERELEASE` 自 .NET Core 3.x 起可用。
 
-  如果设置为 `1`（已启用），则允许从发布版本前滚到预发行版本。 默认情况下（`0` - 禁用），请求 .NET Core 运行时的发行版时，前滚仅考虑已安装的发行版本。
+  如果设置为 `1`（已启用），则允许从发布版本前滚到预发行版本。 默认情况下（`0` - 禁用），请求 .NET 运行时的发行版本时，前滚将仅考虑已安装的发行版本。
 
   有关详细信息，请参阅[前滚](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)。
 
@@ -300,7 +301,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  使用区域设置值（如 `en-us`）设置 CLI UI 的语言。 支持的值与 Visual Studio 中的值相同。 有关详细信息，请参阅 [Visual Studio 安装文档](/visualstudio/install/install-visual-studio?view=vs-2019)中有关更改安装程序语言一节。 .NET 资源管理器规则适用，因此你无需选取精确匹配项 &mdash; 你还可以在 `CultureInfo` 树中选取后代。 例如，如果将其设置为 `fr-CA`，CLI 将查找并使用 `fr` 翻译。 如果你将其设置为不受支持的语言，CLI 会退回到英语。
+  使用区域设置值（如 `en-us`）设置 CLI UI 的语言。 支持的值与 Visual Studio 中的值相同。 有关详细信息，请参阅 [Visual Studio 安装文档](/visualstudio/install/install-visual-studio)中有关更改安装程序语言一节。 .NET 资源管理器规则适用，因此你无需选取精确匹配项 &mdash; 你还可以在 `CultureInfo` 树中选取后代。 例如，如果将其设置为 `fr-CA`，CLI 将查找并使用 `fr` 翻译。 如果你将其设置为不受支持的语言，CLI 会退回到英语。
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
@@ -345,4 +346,4 @@ dotnet myapp.dll
 ## <a name="see-also"></a>请参阅
 
 - [运行时配置文件](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
-- [.NET Core 运行时配置设置](../run-time-config/index.md)
+- [.NET 运行时配置设置](../run-time-config/index.md)

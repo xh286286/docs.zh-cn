@@ -3,12 +3,12 @@ title: 提升的 Dotnet 命令访问权限
 description: 了解需要提升访问权限的 dotnet 命令的最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: b34a4d631ec0e5ef641e1ffbc91e081d25645157
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805787"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634046"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>提升的 Dotnet 命令访问权限
 
@@ -22,11 +22,11 @@ ms.locfileid: "80805787"
 
 不建议运行其他提升的命令。 具体而言，不建议为使用 MSBuild（例如，[dotnet restore](dotnet-restore.md)、[dotnet build](dotnet-build.md) 和 [dotnet run](dotnet-run.md)）的命令提升访问权限。 主要问题是用户在发出 dotnet 命令后在根帐户和受限帐户之间来回切换时存在权限管理问题。 受限用户可能会发现自己无法访问根用户构建的文件。 有办法可以解决这种情况，但不一定要使用这些方法。
 
-只要不在根帐户和受限帐户之间来回切换，就可以根帐户的身份运行命令。 例如，Docker 容器默认以根帐户身份运行，因此它们具有此特性。
+只要不在根帐户和受限帐户之间来回切换，就能够以根帐户的身份运行命令。 例如，Docker 容器默认以根帐户身份运行，因此它们具有此特性。
 
 ## <a name="global-tool-installation"></a>全局工具安装
 
-以下说明展示了执行下述操作的推荐方法：安装、运行和卸载需要提升权限才能执行的 .NET Core 工具。
+以下说明展示了执行下述操作的推荐方法：安装、运行和卸载需要提升权限才能执行的 .NET 工具。
 
 <!-- markdownlint-disable MD025 -->
 
@@ -37,7 +37,7 @@ ms.locfileid: "80805787"
 如果文件夹 `%ProgramFiles%\dotnet-tools` 已存在，请执行以下操作以检查“用户”组是否有写入或修改该目录的权限：
 
 - 右键单击 `%ProgramFiles%\dotnet-tools` 文件夹并选择“属性”  。 随即打开“常用属性”对话框  。
-- 选择“安全性”选项卡  。在“组或用户名”下，检查“用户”组是否具有写入或修改目录的权限  。
+- 选择“安全性”选项卡。在“组或用户名”下，检查“用户”组是否具有写入或修改目录的权限。
 - 如果“用户”组可以写入或修改目录，则在安装工具时使用其他目录名，而不使用 dotnet-tools  。
 
 要安装工具，请在提升的提示符下运行以下命令。 此操作将在安装期间创建 dotnet-tools 文件夹  。
@@ -108,4 +108,4 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 全局工具概述](global-tools.md)
+- [.NET 工具概述](global-tools.md)

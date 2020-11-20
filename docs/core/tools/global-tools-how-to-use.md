@@ -1,16 +1,16 @@
 ---
-title: 教程：安装和使用 .NET Core 全局工具
+title: 教程：安装和使用 .NET 全局工具
 description: 了解如何安装和使用 .NET 工具作为全局工具。
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 28e34a4e5a0344e314c5d23228c1af5839db991c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 01b773516da92fb16fb0f67fc6617e0c70d17c9d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062764"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633889"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>教程：使用 .NET Core CLI 安装和使用 .NET Core 全局工具
+# <a name="tutorial-install-and-use-a-net-global-tool-using-the-net-cli"></a>教程：使用 .NET CLI 安装和使用 .NET 全局工具
 
  本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
@@ -28,9 +28,9 @@ ms.locfileid: "88062764"
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   `--global` 参数指示 .NET Core CLI 将工具二进制文件安装在自动添加到 PATH 环境变量的默认位置中。
+   `--global` 参数指示 .NET CLI 将工具二进制文件安装在自动添加到 PATH 环境变量的默认位置中。
 
-   `--add-source` 参数指示 .NET Core CLI 临时使用 ./nupkg 目录作为 NuGet 包的附加源数据源  。 为包提供了唯一名称，以确保它仅位于 ./nupkg  目录中，而不是在 Nuget.org 站点上。
+   `--add-source` 参数指示 .NET CLI 临时使用 ./nupkg 目录作为 NuGet 包的附加源数据源。 为包提供了唯一名称，以确保它仅位于 ./nupkg  目录中，而不是在 Nuget.org 站点上。
 
    输出显示用于调用该工具和已安装的版本的命令：
 
@@ -70,7 +70,7 @@ ms.locfileid: "88062764"
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   `--tool-path` 参数指示 .NET Core CLI 将工具二进制文件安装在指定位置中。 如果目录不存在，则会创建该目录。 此目录不会自动添加到 PATH 环境变量中。
+   `--tool-path` 参数指示 .NET CLI 将工具二进制文件安装在指定位置中。 如果目录不存在，则会创建该目录。 此目录不会自动添加到 PATH 环境变量中。
 
    输出显示用于调用该工具和已安装的版本的命令：
 
@@ -109,7 +109,7 @@ ms.locfileid: "88062764"
 
 ## <a name="troubleshoot"></a>疑难解答
 
-如果在学习本教程时收到错误消息，请参阅[排查 .NET Core 工具使用问题](troubleshoot-usage-issues.md)。
+如果在学习本教程时收到错误消息，请参阅[排查 .NET 工具使用问题](troubleshoot-usage-issues.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

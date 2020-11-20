@@ -3,12 +3,12 @@ title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及背后的原因。 了解如何手动重写默认值。
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495455"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634491"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -80,7 +80,7 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 
 ## <a name="c-language-version-reference"></a>C# 语言版本引用
 
-下表显示当前所有 C# 语言版本。 如果编译器较旧，它可能不一定能识别每个值。 如果安装的是 .NET Core 3.0 或更高版本，则可以访问列出的所有内容。
+下表显示当前所有 C# 语言版本。 如果编译器较旧，它可能不一定能识别每个值。 如果安装的是最新的 .NET SDK，则可以访问列出的所有内容。
 
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
@@ -106,7 +106,8 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 > 7.1
 > 7.2
 > 7.3
-> 8.0 (default)
+> 8.0
+> 9.0 (default)
 > latestmajor
 > preview
 > latest

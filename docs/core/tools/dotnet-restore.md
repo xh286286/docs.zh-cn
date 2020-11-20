@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet-restore 命令还原依赖项和特定于项目的工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925471"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634398"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -46,7 +46,7 @@ dotnet restore -h|--help
 
 ### <a name="specify-feeds"></a>指定源
 
-为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源。 安装 .NET Core SDK 时提供一个默认的配置文件。 若要指定其他源，请执行以下任一项操作：
+为了还原依赖项，NuGet 需要包所在的源。 通常通过“nuGet.config”配置文件提供源。 安装 .NET SDK 时提供一个默认的配置文件。 若要指定其他源，请执行以下任一项操作：
 
 - 在项目目录中创建自己的 nuget.config 文件。 有关详细信息，请参阅本文后面介绍的[常见 NuGet 配置](/nuget/consume-packages/configuring-nuget-behavior)和 [nuget.config 差异](#nugetconfig-differences)。
 - 使用诸如 [`dotnet nuget add source`](dotnet-nuget-add-source.md) 等 `dotnet nuget` 命令。
@@ -71,11 +71,11 @@ dotnet restore -h|--help
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  绑定重定向不适用于 `<PackageReference>` 元素，并且 .NET Core 仅支持 NuGet 包的 `<PackageReference>` 元素。
+  绑定重定向不适用于 `<PackageReference>` 元素，并且 .NET 仅支持 NuGet 包的 `<PackageReference>` 元素。
 
 - [解决方案](/nuget/schema/nuget-config-file#solution-section)
 
-  此设置特定于 Visual Studio，不适用于 .NET Core。 .Net Core 不使用 `packages.config` 文件，而是使用 NuGet 包的 `<PackageReference>` 元素。
+  此设置特定于 Visual Studio，不适用于 .NET。 .NET 不使用 `packages.config` 文件，而是使用 NuGet 包的 `<PackageReference>` 元素。
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 

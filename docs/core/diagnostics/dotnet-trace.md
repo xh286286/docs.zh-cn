@@ -2,12 +2,12 @@
 title: dotnet-trace 工具 - .NET Core
 description: 安装和使用 dotnet-trace 命令行工具。
 ms.date: 11/21/2019
-ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517303"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507221"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 性能分析实用工具
 
@@ -66,6 +66,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
     [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
+    [-- <command>] (for target applications running .NET 5.0 or later)
 ```
 
 ### <a name="options"></a>选项
@@ -111,6 +112,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   - `Provider[,Provider]`
   - `Provider` 的格式为：`KnownProviderName[:Flags[:Level][:KeyValueArgs]]`。
   - `KeyValueArgs` 的格式为：`[key1=value1][;key2=value2]`。
+
+- `-- <command>`（仅适用于运行 .NET 5.0 的目标应用程序）
+
+  在集合配置参数之后，用户可以追加 `--`，后跟一个命令，以启动至少具有 5.0 运行时的 .NET 应用程序。 这在过程早期发生诊断问题（如启动性能问题或程序集加载程序和绑定器错误）时可能会有所帮助。
+
+  > [!NOTE]
+  > 使用此选项监视第一个 .NET 5.0 进程，该进程与该工具通信，这意味着如果命令启动多个 .NET 应用程序，它将仅收集第一个应用。 因此，建议在自包含应用程序上使用此选项，或使用 `dotnet exec <app.dll>` 选项。
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
@@ -185,6 +193,42 @@ dotnet-trace list-profiles [-h|--help]
   ```
 
 - 按 `<Enter>` 键停止收集。 `dotnet-trace` 会将完成将事件记录到 trace.nettrace 文件中  。
+
+## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>启动子应用程序，并使用 dotnet-trace 从启动中收集跟踪
+
+注意：这仅适用于运行 .NET 5.0 或更高版本的应用。
+
+有时，从进程启动中收集进程的跟踪可能很有用。 对于运行 .NET 5.0 或更高版本的应用，可以使用 dotnet-trace 来做到这一点。
+
+这将启动 `hello.exe`并以 `arg1` 及 `arg2` 作为其命令行参数，从其运行时启动中收集跟踪：
+
+```console
+dotnet-trace collect -- hello.exe arg1 arg2
+```
+
+前面的命令生成类似于以下内容的输出：
+
+```console
+No profile or providers specified, defaulting to trace profile 'cpu-sampling'
+
+Provider Name                           Keywords            Level               Enabled By
+Microsoft-DotNETCore-SampleProfiler     0x0000F00000000000  Informational(4)    --profile
+Microsoft-Windows-DotNETRuntime         0x00000014C14FCCBD  Informational(4)    --profile
+
+Process        : E:\temp\gcperfsim\bin\Debug\net5.0\gcperfsim.exe
+Output File    : E:\temp\gcperfsim\trace.nettrace
+
+
+[00:00:00:05]   Recording trace 122.244  (KB)
+Press <Enter> or <Ctrl+C> to exit...
+```
+
+可以通过按 `<Enter>` 或 `<Ctrl + C>` 键来停止收集跟踪。 此操作还将退出 `hello.exe`。
+
+> [!NOTE]
+> 通过 dotnet-trace 启动 `hello.exe` 将重定向其输入/输出，你将无法与其 stdin/stdout 进行交互。
+> 通过 CTRL+C 或 SIGTERM 退出工具将安全地结束该工具和子进程。
+> 如果子进程在工具之前退出，工具也将退出，应可安全查看跟踪。
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>查看由 dotnet-trace 捕获的跟踪
 

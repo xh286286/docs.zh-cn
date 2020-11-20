@@ -2,12 +2,12 @@
 title: C# 9.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 9.0 中提供的新功能。
 ms.date: 09/04/2020
-ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282335"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557215"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -31,6 +31,8 @@ C# 9.0 向 C# 语言添加了以下功能和增强功能：
 - 分部方法的新功能
 
 .NET 5 支持 C# 9.0。 有关详细信息，请参阅 [C# 语言版本控制](../language-reference/configure-language-version.md)。
+
+可以从 [.NET 下载页](https://dotnet.microsoft.com/download)下载最新 .NET SDK。
 
 ## <a name="record-types"></a>记录类型
 
@@ -66,7 +68,7 @@ C# 9.0 引入了记录类型，这是一种引用类型，它提供合成方法�
 
 除了熟悉的 `Equals` 重载、`operator ==` 和 `operator !=` 外，编译器还会合成新的 `EqualityContract` 属性。 该属性返回与记录类型匹配的 `Type` 对象。 如果基类型为 `object`，则属性为 `virtual`。 如果基类型是其他记录类型，则属性为 `override`。 如果记录类型为 `sealed`，则属性为 `sealed`。 合成的 `GetHashCode` 使用基类型和记录类型中声明的所有属性和字段中的 `GetHashCode`。 这些合成方法在整个继承层次结构中强制执行基于值的相等性。 这意味着，绝不会将 `Student` 视为与同名的 `Person` 相等。 两条记录的类型必须匹配，而且记录类型之间共享的所有属性也必须相等。
 
-记录还具有合成的构造函数和用于创建副本的“克隆”方法。 合成的构造函数具有记录类型的一个参数。 该函数会为记录的所有属性生成具有相同值的新记录。 如果记录是密封的，则此构造函数是专用函数；否则它将受到保护。 合成的“克隆”方法支持用于记录层次结构的副本构造。 “克隆”一词用引号引起来，因为实际名称是编译器生成的。 无法在记录类型中创建名为 `Clone` 的方法。 合成的“克隆”方法返回使用虚拟调度复制的记录类型。 编译器根据 `record` 上的访问修饰符为“克隆”方法添加不同的修饰符：
+记录还具有合成的构造函数和用于创建副本的“克隆”方法。 合成的构造函数有一个记录类型的参数。 该函数会为记录的所有属性生成具有相同值的新记录。 如果记录是密封的，则此构造函数是专用函数；否则它将受到保护。 合成的“克隆”方法支持用于记录层次结构的副本构造。 “克隆”一词用引号引起来，因为实际名称是编译器生成的。 无法在记录类型中创建名为 `Clone` 的方法。 合成的“克隆”方法返回使用虚拟调度复制的记录类型。 编译器根据 `record` 上的访问修饰符为“克隆”方法添加不同的修饰符：
 
 - 如果记录类型为 `abstract`，则“克隆”方法也为 `abstract`。 如果基类型不是 `object`，则方法也是 `override`。
 - 当基类型为 `object` 时，对于不是 `abstract` 的记录类型：
@@ -98,11 +100,13 @@ C# 9.0 引入了记录类型，这是一种引用类型，它提供合成方法�
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-最后，记录支持 with 表达式。 with 表达式指示编译器创建记录的副本，但修改了指定的属性：
+最后，记录支持 [`with` 表达式](../language-reference/operators/with-expression.md)。 `with` 表达式指示编译器创建记录的副本，但修改指定的属性 _*_ ：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-上述行创建新的 `Person` 记录，其中 `LastName`属性是 `person` 的副本，`FirstName` 为“Paul”。 可在 with 表达式中设置任意数量的属性。  你可编写除“克隆”方法以外的任何合成成员。 如果记录类型的方法与任何合成方法的签名匹配，则编译器不会合成该方法。 较早的 `Dog` 记录示例包含手动编码的 <xref:System.String.ToString> 方法作为示例。
+上述行创建新的 `Person` 记录，其中 `LastName` 属性是 `person` 的副本，`FirstName` 为 `"Paul"`。 可在 `with` 表达式中设置任意数量的属性。
+
+你可编写除“克隆”方法以外的任何合成成员。 如果记录类型的方法与任何合成方法的签名匹配，则编译器不会合成该方法。 较早的 `Dog` 记录示例包含手动编码的 <xref:System.String.ToString> 方法作为示例。
 
 ## <a name="init-only-setters"></a>仅限 Init 的资源库
 
@@ -156,7 +160,7 @@ System.Console.WriteLine("Hello World!");
 
 应用程序中只有一个文件可使用顶级语句。 如果编译器在多个源文件中找到顶级语句，则是错误的。 如果将顶级语句与声明的程序入口点方法（通常为 `Main` 方法）结合使用，也会出现错误。 从某种意义上讲，可认为一个文件包含通常位于 `Program` 类的 `Main` 方法中的语句。  
 
-此功能最常见的用途之一是创建材料。 C# 初级开发人员可以用一两行代码 编写规范的“Hello World!”。 不需要额外的工作。 不过，经验丰富的开发人员还会发现此功能的许多用途。 顶级语句可提供类似脚本的试验体验，这与 Jupyter 笔记本提供的很类似。 顶级语句非常适合小型控制台程序和实用程序。 Azure 函数是顶级语句的理想用例。
+此功能最常见的用途之一是创建材料。 C# 初级开发人员可以用一两行代码 编写规范的“Hello World!”。 不需要额外的工作。 不过，经验丰富的开发人员还会发现此功能的许多用途。 顶级语句可提供类似脚本的试验体验，这与 Jupyter 笔记本提供的很类似。 顶级语句非常适合小型控制台程序和实用程序。 Azure Functions 是顶级语句的理想用例。
 
 最重要的是，顶层语句不会限制应用程序的范围或复杂程度。 这些语句可访问或使用任何 .NET 类。 它们也不会限制你对命令行参数或返回值的使用。 顶级语句可访问名为 args 的字符串数组。 如果顶级语句返回整数值，则该值将成为来自合成 `Main` 方法的整数返回代码。 顶级语句可能包含异步表达式。 在这种情况下，合成入口点将返回 `Task` 或 `Task<int>`。
 
@@ -242,7 +246,7 @@ if (e is not null)
 
 为代码生成器添加的两项功能是分部方法语法和模块初始化表达式的扩展。 首先是对分部方法的更改。 在 C# 9.0 之前，分部方法为 `private`，但不能指定访问修饰符、不能返回 `void`，也不能具有 `out` 参数。 这些限制意味着，如果未提供任何方法实现，编译器会删除对分部方法的所有调用。 C# 9.0 消除了这些限制，但要求分部方法声明必须具有实现。 代码生成器可提供这种实现。 为了避免引入中断性变更，编译器会考虑没有访问修饰符的任何分部方法，以遵循旧规则。 如果分部方法包括 `private` 访问修饰符，则由新规则控制该分部方法。
 
-代码生成器的第二项新功能是模块初始化表达式。 模块初始化表达式是附加了 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 属性的方法。 程序集加载时，运行时将调用这些方法。 模块初始化表达式方法：
+代码生成器的第二项新功能是模块初始化表达式。 模块初始化表达式是附加了 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 属性的方法。 在整个模块中进行任何其他字段访问或方法调用之前，运行时将调用这些方法。 模块初始化表达式方法：
 
 - 必须是静态的
 - 必须没有参数

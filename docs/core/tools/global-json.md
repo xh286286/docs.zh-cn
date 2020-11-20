@@ -1,27 +1,27 @@
 ---
 title: global.json 概述
-description: 了解如何在运行 .NET Core CLI 命令时使用 global.json 文件设置 .NET Core SDK 版本。
+description: 了解如何在运行 .NET CLI 命令时使用 global.json 文件设置 .NET SDK 版本。
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281540"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633994"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
 本文适用于： ✔️ .NET Core 2.0 SDK 及更高版本
 
-通过 global.json 文件，可定义在运行 .NET Core CLI 命令时使用的 .NET Core SDK 版本。 选择 .NET Core SDK 与指定项目所面向的运行时无关。 .NET Core SDK 版本指示使用哪个版本的 .NET Core CLI。
+通过 global.json 文件，可定义在运行 .NET CLI 命令时使用的 .NET SDK 版本。 选择 .NET SDK 与指定项目所面向的运行时无关。 .NET SDK 版本指示使用哪个版本的 .NET CLI。
 
 通常会使用最新版 SDK 工具，因此不需要 global.json 文件。 在某些高级方案中，你可能需要控制 SDK 工具的版本，本文对如何完成此操作进行了介绍。
 
 有关指定运行时的详细信息，请参阅[目标框架](../../standard/frameworks.md)。
 
-.NET Core SDK 在当前工作目录（不必与项目目录相同）或其某个父目录中查找 global.json 文件。
+.NET SDK 在当前工作目录（不必与项目目录相同）或其某个父目录中查找 global.json 文件。
 
 ## <a name="globaljson-schema"></a>global.json 架构
 
@@ -29,7 +29,7 @@ ms.locfileid: "93281540"
 
 类型：`object`
 
-指定要选择的 .NET Core SDK 的相关信息。
+指定要选择的 .NET SDK 的相关信息。
 
 #### <a name="version"></a>version
 
@@ -37,7 +37,7 @@ ms.locfileid: "93281540"
 
 - 自 .NET Core 1.0 SDK 起可用。
 
-要使用的 .NET Core SDK 版本。
+要使用的 .NET SDK 版本。
 
 此字段：
 
@@ -84,7 +84,7 @@ ms.locfileid: "93281540"
 | `latestPatch` | 使用安装的最新修补程序级别，以与请求的主版本、次版本和功能区段匹配，并且该修补程序级别大于或等于指定的值。 <br> 如果找不到，则失败。 |
 | `latestFeature` | 使用安装的最高功能区段和修补程序级别，以与请求的主版本和次版本匹配，并且该功能区段和修补级别大于或等于指定的值。 <br> 如果找不到，则失败。 |
 | `latestMinor` | 使用安装的最高次版本、功能区段和修补程序级别，以与请求的主版本匹配，并且该次版本、功能区段和修补级别大于或等于指定的值。 <br> 如果找不到，则失败。 |
-| `latestMajor` | 使用安装的最高 .NET Core SDK，并且该版本大于或等于指定的值。 <br> 如果找不到，则失败。 |
+| `latestMajor` | 使用安装的最高版本的 .NET SDK，并且该版本大于或等于指定的值。 <br> 如果找不到，则失败。 |
 | `disable`     | 不前滚。 需要完全匹配。 |
 
 ### <a name="msbuild-sdks"></a>msbuild-sdks
@@ -149,11 +149,11 @@ ms.locfileid: "93281540"
 }
 ```
 
-## <a name="globaljson-and-the-net-core-cli"></a>global.json 和 .NET Core CLI
+## <a name="globaljson-and-the-net-cli"></a>global.json 和 .NET CLI
 
-最好能知道计算机上安装了哪些 SDK 版本，以便在 global.json 文件中设置相应版本。 有关如何执行此操作的详细信息，请参阅[如何检查是否已安装 .NET Core](../install/how-to-detect-installed-versions.md#check-sdk-versions)。
+最好能知道计算机上安装了哪些 SDK 版本，以便在 global.json 文件中设置相应版本。 有关如何执行此操作的详细信息，请参阅[如何检查是否已安装 .NET](../install/how-to-detect-installed-versions.md#check-sdk-versions)。
 
-若要在计算机上安装其他 .NET Core SDK 版本，请访问 [.NET Core 下载](https://dotnet.microsoft.com/download/dotnet-core)页面。
+若要在计算机上安装其他 .NET SDK 版本，请访问[下载 .NET Core](https://dotnet.microsoft.com/download/dotnet-core) 页面。
 
 可执行 [dotnet new](dotnet-new.md) 命令在当前目录中创建一个新的 global.json 文件，类似于以下示例：
 
@@ -164,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>匹配规则
 
 > [!NOTE]
-> 匹配规则由 `dotnet.exe` 入口点控制，该入口点在所有已安装的 .NET Core 运行时中很常见。 如果并行安装了多个运行时，或者正在使用 global.json 文件，则使用已安装的最新版 .NET Core 运行时的匹配规则。
+> 匹配规则由 `dotnet.exe` 入口点控制，该入口点在所有已安装的 .NET 运行时中很常见。 如果并行安装了多个运行时，或者正在使用 global.json 文件，则使用已安装的最新版 .NET 运行时的匹配规则。
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 

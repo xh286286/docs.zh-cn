@@ -2,12 +2,12 @@
 title: dotnet help 命令
 description: dotnet help 命令可显示指定命令更详细的在线文档。
 ms.date: 02/14/2020
-ms.openlocfilehash: a59e74a318118b6fd39d1895df02d76daa6fc9e1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: d583142edabb24df972bdf9a06dbfe04688f9d97
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463694"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634463"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help 参考
 
@@ -31,7 +31,7 @@ dotnet help <COMMAND_NAME> [-h|--help]
 
 - **`COMMAND_NAME`**
 
-  .NET Core CLI 命令名称。 有关有效 CLI 命令的列表，请参阅 [CLI 命令](index.md#cli-commands)。
+  .NET CLI 命令名称。 有关有效 CLI 命令的列表，请参阅 [CLI 命令](index.md#cli-commands)。
 
 ## <a name="options"></a>选项
 

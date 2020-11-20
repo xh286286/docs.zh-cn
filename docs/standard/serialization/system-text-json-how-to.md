@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2c1358b2b63a92cb50b853043adbfaae23ccd897
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329867"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440811"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化（封送和拆收）
 
@@ -990,9 +990,11 @@ System.Text.Json 可以使用参数化构造函数，这可以反序列化不可
 
 ### <a name="filter-data-using-utf8jsonreader"></a>使用 Utf8JsonReader 筛选数据
 
-下面的示例演示如何同步读取文件并搜索值：
+下面的示例演示如何同步读取文件并搜索值。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderFromFile.cs)]
+
+（[此示例的异步版本](https://github.com/dotnet/samples/blob/18e31a5f1abd4f347bf96bfdc3e40e2cfb36e319/core/json/Program.cs)可用。）
 
 前面的代码：
 

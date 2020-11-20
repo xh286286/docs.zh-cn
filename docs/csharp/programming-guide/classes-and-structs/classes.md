@@ -6,18 +6,18 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 68b41eef0b604b80a9659eddf45d6512eac44fd6
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 8fa8d33ce9ece20a18c5c1542bc44cf569e9fa2e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607728"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440401"
 ---
 # <a name="classes-c-programming-guide"></a>类（C# 编程指南）
 
 ## <a name="reference-types"></a>引用类型  
 
-定义为[类](../../language-reference/keywords/class.md)的一个类型是*引用类型*。 在运行时，如果声明引用类型的变量，此变量就会一直包含值 [null](../../language-reference/keywords/null.md)，直到使用 [new](../../language-reference/operators/new-operator.md) 运算符显式创建类实例，或直到为此变量分配可能已在其他位置创建的兼容类型的对象，如下面的示例所示：
+定义为 [类](../../language-reference/keywords/class.md)的一个类型是 *引用类型*。 在运行时，如果声明引用类型的变量，此变量就会一直包含值 [null](../../language-reference/keywords/null.md)，直到使用 [new](../../language-reference/operators/new-operator.md) 运算符显式创建类实例，或直到为此变量分配可能已在其他位置创建的兼容类型的对象，如下面的示例所示：
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -27,7 +27,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-创建对象时，在该托管堆上为该特定对象分足够的内存，并且该变量仅保存对所述对象位置的引用。 当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为*垃圾回收*）时，需要开销。 但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。 有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../../../standard/garbage-collection/fundamentals.md)。  
+创建对象时，在该托管堆上为该特定对象分足够的内存，并且该变量仅保存对所述对象位置的引用。 当分配托管堆上的类型和由 CLR 的自动内存管理功能对其进行回收（称为 *垃圾回收*）时，需要开销。 但是，垃圾回收已是高度优化，并且在大多数情况下，不会产生性能问题。 有关垃圾回收的详细信息，请参阅[自动内存管理和垃圾回收](../../../standard/garbage-collection/fundamentals.md)。  
   
 ## <a name="declaring-classes"></a>声明类
 
@@ -41,7 +41,7 @@ MyClass mc2 = mc;
  }
 ```
 
- `class` 关键字前面是访问级别。 因为此例中使用的是 [public](../../language-reference/keywords/public.md)，所以任何人都可以创建此类的实例。 类的名称遵循 `class` 关键字。 类名称必须是有效的 C# [标识符名称](../inside-a-program/identifier-names.md)。 定义的其余部分是类的主体，其中定义了行为和数据。 类上的字段、属性、方法和事件统称为*类成员*。  
+ `class` 关键字前面是访问级别。 因为此例中使用的是 [public](../../language-reference/keywords/public.md)，所以任何人都可以创建此类的实例。 类的名称遵循 `class` 关键字。 类名称必须是有效的 C# [标识符名称](../inside-a-program/identifier-names.md)。 定义的其余部分是类的主体，其中定义了行为和数据。 类上的字段、属性、方法和事件统称为 *类成员*。  
   
 ## <a name="creating-objects"></a>创建对象
 
@@ -70,9 +70,9 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>类继承  
 
-类完全支持继承，这是面向对象的编程的基本特点。 创建类时，可以继承自其他任何未定义为 [sealed](../../language-reference/keywords/sealed.md) 的接口或类，而且其他类也可以继承自你的类并重写类虚方法。
+类完全支持继承，这是面向对象的编程的基本特点。 创建类时，可以继承自其他任何未定义为 [sealed](../../language-reference/keywords/sealed.md) 的类，而且其他类也可以继承自你的类并重写类虚方法。 此外，你可以实现一个或多个接口。
 
-继承是通过使用*派生*来完成的，这意味着类是通过使用其数据和行为所派生自的*基类*来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
+继承是通过使用 *派生* 来完成的，这意味着类是通过使用其数据和行为所派生自的 *基类* 来声明的。 基类通过在派生的类名称后面追加冒号和基类名称来指定，如：  
 
  ```csharp
  public class Manager : Employee
@@ -84,7 +84,7 @@ MyClass mc2 = mc;
 
 类声明基类时，会继承基类除构造函数外的所有成员。 有关详细信息，请参阅[继承](inheritance.md)。
   
-与 C++ 不同，C# 中的类只能直接从基类继承。 但是，因为基类本身可能继承自其他类，因此类可能间接继承多个基类。 此外，类还可以直接实现多个接口。 有关详细信息，请参阅[接口](../interfaces/index.md)。  
+与 C++ 不同，C# 中的类只能直接从基类继承。 但是，因为基类本身可能继承自其他类，因此类可能间接继承多个基类。 此外，类可以支持实现一个或多个接口。 有关详细信息，请参阅[接口](../interfaces/index.md)。  
   
 类可以声明为 [abstract](../../language-reference/keywords/abstract.md)（抽象）。 抽象类包含抽象方法，抽象方法包含签名定义但不包含实现。 抽象类不能实例化。 只能通过可实现抽象方法的派生类来使用该类。 与此相反，[sealed](../../language-reference/keywords/sealed.md)（密封）类不允许其他类继承。 有关详细信息，请参阅[抽象类、密封类和类成员](abstract-and-sealed-classes-and-class-members.md)。  
   

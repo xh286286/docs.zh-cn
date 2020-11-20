@@ -3,12 +3,12 @@ title: 可为空引用类型
 description: 本文概述了在 C# 8.0 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: cb9438db6364b6dc5d34f3a776d3ed7ec2e9978b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160875"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440388"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -23,14 +23,14 @@ C#8.0 引入了“可为空引用类型”和“不可为空引用类型”，�
 
 在 C# 的早期版本中，无法从变量声明中确定设计意图，与处理引用变量相比，这个新功能提供了显著的好处。 编译器不提供针对引用类型的空引用异常的安全性：
 
-- 引用可为 null。 将引用类型初始化为 null 或稍后将其指定为 null 时，编译器不会发出警告。 在没有进行 null 检查的情况下取消引用这些变量，编译器会发出警告。
+- 引用可为 null。 将引用类型变量初始化为 `null` 或稍后将其指定为 `null` 时，编译器不会发出警告。 在没有进行 null 检查的情况下取消引用这些变量，编译器会发出警告。
 - 假定引用不为 null。 当引用类型被取消引用时，编译器不会发出任何警告。 如果将变量设置为可以为 null 的表达式，则编译器会发出警告。
 
 将在编译时发出这些警告。 编译器不会在可为 null 的上下文中添加任何 null 检查或其他运行时构造。 在运行时，可为 null 的引用和不可为 null 的引用是等效的。
 
 通过添加可为空引用类型，你可以更清楚地声明你的意图。 `null` 值是表示变量不引用值的正确方法。 请勿使用此功能从代码中删除所有 `null` 值。 相反，应该向编译器和其他读取代码的开发人员声明你的意图。 通过声明意图，编译器会在你编写与该意图不一致的代码时通知你。
 
-使用与[可为空值类型](language-reference/builtin-types/nullable-value-types.md)相同的语法记录**可为空引用类型**：将 `?` 附加到变量的类型。 例如，以下变量声明表示可为空的字符串变量 `name`：
+使用与 [可为空值类型](language-reference/builtin-types/nullable-value-types.md)相同的语法记录 **可为空引用类型**：将 `?` 附加到变量的类型。 例如，以下变量声明表示可为空的字符串变量 `name`：
 
 ```csharp
 string? name;
@@ -119,7 +119,7 @@ name!.Length;
 1. 该变量已明确分配给非 null 值。
 1. 在取消引用之前，已检查变量或表达式是否为 null。
 
-在可为 null 警告上下文中取消引用“可能为 null”的变量或表达式时，编译器会生成警告。 此外，在将不可为 null 引用类型分配给已启用的可为空注释上下文中的可能为 null 变量或表达式时，编译器会生成警告。
+在可为 null 警告上下文中取消引用“可能为 null”的变量或表达式时，编译器会生成警告。 此外，在将不可为 null 引用类型变量分配给已启用的可为空注释上下文中的可能为 null 变量或表达式时，编译器会生成警告。
 
 ## <a name="attributes-describe-apis"></a>属性描述 API
 

@@ -1,19 +1,19 @@
 ---
-title: 在 Ubuntu 上安装 .NET Core - .NET Core
-description: 演示在 Ubuntu 上安装 .NET Core SDK 和 .NET Core 运行时的各种方式。
+title: 在 Ubuntu 上安装 .NET - .NET
+description: 演示在 Ubuntu 上安装 .NET SDK 和 .NET 运行时的各种方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 5c07de20110a1aecf2ec5cb9de88f204625e548d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538444"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507010"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>在 Ubuntu 上安装 .NET Core SDK 或 .NET Core 运行时
+# <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>在 Ubuntu 上安装 .NET SDK 或 .NET 运行时
 
-Ubuntu 支持 .NET Core。 本文介绍如何在 Ubuntu 上安装 .NET Core。 如果 Ubuntu 版本不受支持，则该版本不再支持 .NET Core。 不过，这些说明可能会帮助你让 .NET Core 在这些版本上运行，即使它不受支持。
+Ubuntu 支持 .NET。 本文介绍如何在 Ubuntu 上安装 .NET。 如果 Ubuntu 版本不受支持，则该版本不再支持 .NET。 不过，可以按照这些说明在这些版本上运行 .NET，即使它不受支持。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,25 +21,26 @@ Ubuntu 支持 .NET Core。 本文介绍如何在 Ubuntu 上安装 .NET Core。 �
 
 ## <a name="supported-distributions"></a>支持的分发
 
-下表列出了当前支持的 .NET Core 版本以及支持它们的 Ubuntu 版本。 这些版本在 [.NET Core 版本达到支持终止日期](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或 [Ubuntu 的版本达到生命周期](https://wiki.ubuntu.com/Releases)之前仍受支持。
+下表列出了当前支持的 .NET 版本以及支持它们的 Ubuntu 版本。 这些版本在 [.NET 版本达到支持终止日期](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或 [Ubuntu 的版本达到生命周期](https://wiki.ubuntu.com/Releases)之前仍受支持。
 
-- ✔️ 指示 Ubuntu 或 .NET Core 版本仍受支持。
-- ❌ 指示 Ubuntu 或 .NET Core 版本在该 Ubuntu 版本上不受支持。
-- 当 Ubuntu 版本和 .NET Core 版本都有 ✔️ 时，将支持该 OS 和 .NET 组合。
+- ✔️ 指示 Ubuntu 或 .NET 版本仍受支持。
+- ❌ 指示 Ubuntu 或 .NET 版本在该 Ubuntu 版本上不受支持。
+- 当 Ubuntu 版本和 .NET 版本都有 ✔️ 时，将支持该 OS 和 .NET 组合。
 
-| Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 预览版（仅限手动安装） |
+| Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [20.04 (LTS)](#2004-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
-| ❌ [19.10](#1910-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
-| ❌ [19.04](#1904-)       | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 预览版 |
-| ❌ [18.10](#1810-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 预览版 |
-| ✔️ [18.04 (LTS)](#1804-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
-| ❌ [17.10](#1710-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 预览版 |
-| ❌ [17.04](#1704-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 预览版 |
-| ❌ [16.10](#1610-)       | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 预览版 |
-| ✔️ [16.04 (LTS)](#1604-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
+| ✔️ [20.10](#2010-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [20.04 (LTS)](#2004-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [19.10](#1910-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [19.04](#1904-)       | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
+| ❌ [18.10](#1810-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ✔️ [18.04 (LTS)](#1804-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [17.10](#1710-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ [17.04](#1704-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ [16.10](#1610-)       | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ✔️ [16.04 (LTS)](#1604-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 
-以下 .NET Core 版本不再受支持。 这些版本的下载仍保持发布状态：
+以下 .NET 版本不再受到支持。 这些版本的下载仍保持发布状态：
 
 - 3.0
 - 2.2
@@ -48,6 +49,12 @@ Ubuntu 支持 .NET Core。 本文介绍如何在 Ubuntu 上安装 .NET Core。 �
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="2010-"></a>20.10 ✔️
+
+适用于 Ubuntu 20.10 的 .NET 5 和 .NET Core 3.1 包源目前有问题。 有关该问题的详细信息，请参阅 [GitHub issue dotnet/core#5549](https://github.com/dotnet/core/issues/5549)。 问题解决后将更新本文。
+
+若要在 Ubuntu 20.10 上安装 .NET 5 或 .NET Core 3.1，请按照 [20.04](#2004-) 的说明进行操作。
 
 ## <a name="2004-"></a>20.04 ✔️
 
@@ -58,7 +65,7 @@ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="1910-"></a>19.10 ❌
 
@@ -108,7 +115,7 @@ wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="1710-"></a>17.10 ❌
 
@@ -158,11 +165,11 @@ wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="apt-update-sdk-or-runtime"></a>APT 更新 SDK 或运行时
 
-当新的修补程序版本适用于 .NET Core 时，只需使用以下命令通过 APT 进行升级：
+当新的修补程序版本适用于 .NET 时，只需使用以下命令通过 APT 进行升级：
 
 ```bash
 sudo apt-get update
@@ -171,7 +178,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>APT 疑难解答
 
-本部分提供有关使用 APT 安装 .NET Core 时可能会遇到的常见错误的信息。
+本部分提供有关使用 APT 安装 .NET 时可能会遇到的常见错误的信息。
 
 ### <a name="unable-to-find-package"></a>找不到包
 
@@ -205,7 +212,7 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>依赖项
 
-使用包管理器进行安装时，将为你安装这些库。 但是，如果手动安装 .NET Core 或发布自包含的应用，则需要确保已安装以下库：
+使用包管理器进行安装时，将为你安装这些库。 但是，如果手动安装 .NET 或发布自包含的应用，则需要确保已安装以下库：
 
 - libc6
 - libgcc1
@@ -219,7 +226,7 @@ sudo apt-get update; \
 - libstdc++6
 - zlib1g
 
-对于使用 System.Drawing.Common 程序集的 .NET Core 应用，还需要以下依赖项：
+对于使用 System.Drawing.Common 程序集的 .NET 应用，还需要以下依赖项：
 
 - libgdiplus（版本 6.0.1 或更高版本）
 
@@ -236,4 +243,4 @@ sudo apt-get update; \
 
 ## <a name="next-steps"></a>后续步骤
 
-- [教程：使用 Visual Studio Code 通过 .NET Core SDK 创建控制台应用程序](../tutorials/with-visual-studio-code.md)
+- [教程：使用 Visual Studio Code 通过 .NET SDK 创建控制台应用程序](../tutorials/with-visual-studio-code.md)

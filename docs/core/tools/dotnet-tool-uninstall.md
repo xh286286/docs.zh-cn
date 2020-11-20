@@ -1,13 +1,13 @@
 ---
 title: dotnet tool uninstall 命令
-description: dotnet tool uninstall 命令从计算机上卸载指定的 .NET Core 工具。
+description: dotnet tool uninstall 命令从计算机上卸载指定的 .NET 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 0416f91019a49e17f1be14a1d928ad1fafaa736c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 34dffde8f9c930327c6b42d1d89bb4f511959fb2
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463314"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634085"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -15,7 +15,7 @@ ms.locfileid: "81463314"
 
 ## <a name="name"></a>“属性”
 
-`dotnet tool uninstall` - 从计算机上卸载指定的 [.NET Core 工具](global-tools.md)。
+`dotnet tool uninstall` - 从计算机上卸载指定的 [.NET 工具](global-tools.md)。
 
 ## <a name="synopsis"></a>摘要
 
@@ -31,7 +31,7 @@ dotnet tool uninstall -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet tool uninstall` 提供一种从计算机上卸载 .NET Core 工具的方法。 若要使用命令，请指定以下选项之一：
+`dotnet tool uninstall` 提供一种从计算机上卸载 .NET 工具的方法。 若要使用命令，请指定以下选项之一：
 
 * 若要卸载安装在默认位置的全局工具，请使用 `--global` 选项。
 * 若要卸载安装在自定义位置的全局工具，请使用 `--tool-path` 选项。
@@ -43,7 +43,7 @@ dotnet tool uninstall -h|--help
 
 - **`PACKAGE_NAME`**
 
-  包含要卸载的 .NET Core 工具的 NuGet 包的名称/ID。 你可以使用 [dotnet tool list](dotnet-tool-list.md) 命令查找包名称。
+  包含要卸载的 .NET 工具的 NuGet 包的名称/ID。 你可以使用 [dotnet tool list](dotnet-tool-list.md) 命令查找包名称。
 
 ## <a name="options"></a>选项
 
@@ -79,6 +79,6 @@ dotnet tool uninstall -h|--help
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 工具](global-tools.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 全局工具](global-tools-how-to-use.md)
-- [教程：使用 .NET Core CLI 安装和使用 .NET Core 本地工具](local-tools-how-to-use.md)
+- [.NET 工具](global-tools.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 全局工具](global-tools-how-to-use.md)
+- [教程：使用 .NET CLI 安装和使用 .NET 本地工具](local-tools-how-to-use.md)

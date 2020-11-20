@@ -1,20 +1,20 @@
 ---
-title: 教程：创建 .NET Core 工具
-description: 了解如何创建 .NET Core 工具。 工具是一个通过使用 .NET Core CLI 安装的控制台应用程序。
+title: 教程：创建 .NET 工具
+description: 了解如何创建 .NET 工具。 工具是一个通过使用 .NET CLI 安装的控制台应用程序。
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062777"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633773"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>教程：使用 .NET Core CLI 创建 .NET Core 工具
+# <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>教程：使用 .NET CLI 创建 .NET 工具
 
  本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
-本教程介绍如何创建和打包 .NET Core 工具。 使用 .NET Core CLI，可以创建一个控制台应用程序作为工具，便于其他人安装并运行。 .NET Core 工具是从 .NET Core CLI 安装的 NuGet 包。 有关工具的详细信息，请参阅 [.NET Core 工具概述](global-tools.md)。
+本教程介绍如何创建和打包 .NET 工具。 使用 .NET CLI，你可以创建一个控制台应用程序作为工具，便于其他人安装并运行。 .NET 工具是从 .NET CLI 安装的 NuGet 包。 有关工具的详细信息，请参阅 [.NET 工具概述](global-tools.md)。
 
 将创建的工具是一个控制台应用程序，它将消息作为输入，并显示消息以及用于创建机器人图像的文本行。
 
@@ -191,7 +191,7 @@ dotnet run -- Hello from the bot
 
 ## <a name="troubleshoot"></a>疑难解答
 
-如果在学习本教程时收到错误消息，请参阅[排查 .NET Core 工具使用问题](troubleshoot-usage-issues.md)。
+如果在学习本教程时收到错误消息，请参阅[排查 .NET 工具使用问题](troubleshoot-usage-issues.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

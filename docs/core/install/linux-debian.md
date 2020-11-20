@@ -1,19 +1,19 @@
 ---
-title: 在 Debian 上安装 .NET Core - .NET Core
-description: 演示在 Debian 上安装 .NET Core SDK 和 .NET Core 运行时的各种方式。
+title: 在 Debian 上安装 .NET - .NET
+description: 演示在 Debian 上安装 .NET SDK 和 .NET 运行时的各种方式。
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538535"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506950"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>在 Debian 上安装 .NET Core SDK 或 .NET Core 运行时
+# <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>在 Debian 上安装 .NET SDK 或 .NET 运行时
 
-本文介绍如何在 Debian 上安装 .NET Core。 如果 Debian 版本不受支持，则该版本不再支持 .NET Core。 不过，这些说明可能会帮助你让 .NET Core 在这些版本上运行，即使它不受支持。
+本文介绍如何在 Debian 上安装 .NET。 如果 Debian 版本不受支持，则该版本不再支持 .NET。 不过，可以按照这些说明在这些版本上运行 .NET，即使它不受支持。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,19 +21,19 @@ ms.locfileid: "90538535"
 
 ## <a name="supported-distributions"></a>支持的分发
 
-下表列出了当前支持的 .NET Core 版本以及支持它们的 Debian 版本。 这些版本在 [.NET Core 版本达到支持终止日期](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或 [Debian 的版本达到生命周期](https://wiki.debian.org/DebianReleases)之前仍受支持。
+下表列出了当前支持的 .NET 版本以及支持它们的 Debian 版本。 这些版本在 [.NET 版本达到支持终止日期](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或 [Debian 的版本达到生命周期](https://wiki.debian.org/DebianReleases)之前仍受支持。
 
-- ✔️ 指示 Debian 或 .NET Core 版本仍受支持。
-- ❌ 指示 Debian 或 .NET Core 版本在该 Debian 版本上不受支持。
-- 当 Debian 版本和 .NET Core 版本都有 ✔️ 时，将支持该 OS 和 .NET 组合。
+- ✔️ 指示 Debian 或 .NET 版本仍受支持。
+- ❌ 指示 Debian 或 .NET 版本在该 Debian 版本上不受支持。
+- 当 Debian 版本和 .NET 版本都有 ✔️ 时，将支持该 OS 和 .NET 组合。
 
-| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 预览版（仅限手动安装） |
+| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [10](#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
-| ✔️ [9](#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 预览版 |
-| ❌ [8](#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 预览版 |
+| ✔️ [10](#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [9](#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [8](#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
 
-以下版本的 .NET Core 不再受到支持。 这些版本的下载仍保持发布状态：
+以下 .NET 版本不再受到支持。 这些版本的下载仍保持发布状态：
 
 - 3.0
 - 2.2
@@ -52,7 +52,7 @@ wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-9-"></a>Debian 9 ✔️
 
@@ -67,7 +67,7 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-8-"></a>Debian 8 ❌
 
@@ -88,7 +88,7 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 ## <a name="apt-update-sdk-or-runtime"></a>APT 更新 SDK 或运行时
 
-当新的修补程序版本适用于 .NET Core 时，只需使用以下命令通过 APT 进行升级：
+当新的修补程序版本适用于 .NET 时，只需使用以下命令通过 APT 进行升级：
 
 ```bash
 sudo apt-get update
@@ -97,7 +97,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>APT 疑难解答
 
-本部分提供有关使用 APT 安装 .NET Core 时可能会遇到的常见错误的信息。
+本部分提供有关使用 APT 安装 .NET 时可能会遇到的常见错误的信息。
 
 ### <a name="unable-to-find-package"></a>找不到包
 
@@ -162,4 +162,4 @@ sudo apt-get update; \
 
 ## <a name="next-steps"></a>后续步骤
 
-- [教程：使用 Visual Studio Code 通过 .NET Core SDK 创建控制台应用程序](../tutorials/with-visual-studio-code.md)
+- [教程：使用 Visual Studio Code 通过 .NET SDK 创建控制台应用程序](../tutorials/with-visual-studio-code.md)

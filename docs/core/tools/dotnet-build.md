@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
 ms.date: 02/14/2020
-ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251161"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634476"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -39,7 +39,7 @@ dotnet build -h|--help
 - 用于指定应用程序的共享运行时及其版本的 .runtimeconfig.json 文件。
 - 项目通过项目引用或 NuGet 包引用所依赖的其他库。
 
-对于目标版本低于 .NET Core 3.0 的可执行项目，通常不会将 NuGet 中的库依赖项复制到输出文件夹。  而是在运行时从 NuGet 全局包文件夹中对其进行解析。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 要创建可部署的应用程序版本，需要发布该应用程序（例如，使用 [dotnet publish](dotnet-publish.md) 命令）。 有关详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
+对于目标版本低于 .NET Core 3.0 的可执行项目，通常不会将 NuGet 中的库依赖项复制到输出文件夹。  而是在运行时从 NuGet 全局包文件夹中对其进行解析。 考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。 要创建可部署的应用程序版本，需要发布该应用程序（例如，使用 [dotnet publish](dotnet-publish.md) 命令）。 有关详细信息，请参阅 [.NET 应用程序部署](../deploying/index.md)。
 
 对于面向 .NET Core 3.0 及更高版本的可执行项目，库依赖项会被复制到输出文件夹。 这意味着如果没有其他任何特定于发布的逻辑（例如，Web 项目具有的逻辑），则应可部署生成输出。
 
@@ -153,7 +153,7 @@ dotnet build -h|--help
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-- 生成项目，并在还原操作过程中使用指定的 NuGet 包源（.NET Core 2.0 SDK 及更高版本）：
+- 生成项目，并在还原操作过程中使用指定的 NuGet 包源：
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
