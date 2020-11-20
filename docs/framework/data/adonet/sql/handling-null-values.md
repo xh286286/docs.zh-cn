@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 2ed2a88b91f06bb02c72d3e310ae09d58637205f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2dda65f605ea9de616f01d6e52eb4e0e5def4db7
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197464"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982513"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 
@@ -94,7 +94,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此外，以下规则适用于 `DataRow.["columnName"]` null 赋值的实例：  
   
-1. 对于所有列，默认值为 *，但强类型 NULL 列除外，强类型 NULL 列的默认值是相应的强类型 NULL 值*`DbNull.Value`。  
+1. *默认* 值为 `DbNull.Value` 除强类型 null 列之外的所有列，其中它是适当的强类型 null 值。  
   
 2. 在序列化为 XML 文件时，不会写出 null 值（如在“xsi:nil”中）。  
   
@@ -151,7 +151,7 @@ String.Equals instance method:
   Two empty strings=True
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [SQL Server 数据类型和 ADO.NET](sql-server-data-types.md)
 - [ADO.NET 概述](../ado-net-overview.md)

@@ -2,18 +2,18 @@
 title: 'F # 5.0 中的新增功能-F # 指南'
 description: '获取 F # 5.0 中提供的新功能的概述。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557137"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982461"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 中的新增功能
 
 F # 5.0 向 F # 语言和 F# 交互窗口增加了几项改进。 它随 **.net 5** 一起发布。
 
-可以从 [.net 下载页](https://dotnet.microsoft.com/download)下载最新的 .net SDK。
+可以从 [.NET 下载页](https://dotnet.microsoft.com/download)下载最新 .NET SDK。
 
 ## <a name="get-started"></a>入门
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-有关包引用的详细信息，请参阅 [F# 交互窗口](../tutorials/fsharp-interactive/index.md) 教程。
+此功能实现 [F # 工具 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)。 有关包引用的详细信息，请参阅 [F# 交互窗口](../tutorials/fsharp-interactive/index.md) 教程。
 
 ## <a name="string-interpolation"></a>字符串内插
 
@@ -102,6 +102,8 @@ let str =
 ```
 
 尽管我们不建议在实践中执行此操作。
+
+此功能实现 [F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)。
 
 ## <a name="support-for-nameof"></a>对 nameof 的支持
 
@@ -176,6 +178,8 @@ let deserialize (e: RecordedEvent) : MyEvent =
 
 前面的代码使用 "nameof" 而不是 match 表达式中的字符串文字。
 
+此功能实现 [F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)。
+
 ## <a name="open-type-declarations"></a>开放式类型声明
 
 F # 5 还添加了对开放类型声明的支持。 开放式类型声明类似于打开 c # 中的静态类，但有一些不同的语法和一些略有不同的行为，以适合 F # 语义。
@@ -200,6 +204,8 @@ printfn "%A" A
 
 与 c # 不同，当你 `open type` 在两个公开同名成员的类型上时，最后一个类型中的成员将 `open` 隐藏另一个名称。 这与围绕已存在的隐藏的 F # 语义一致。
 
+此功能实现 [F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)。
+
 ## <a name="consistent-slicing-behavior-for-built-in-data-types"></a>内置数据类型的一致切片行为
 
 用于切分内置数据类型的行为， `FSharp.Core` (数组、列表、string、二维数组、三维数组、4d 数组) 在 F # 5 之前用于不一致。 有些边缘情况行为引发了异常，有些则是。 在 F # 5 中，所有内置类型现在为无法生成的切片返回空切片：
@@ -221,6 +227,8 @@ let emptyArray = a.[-2..(-1)]
 // F# 5: returns empty string
 let emptyString = s.[-2..(-1)]
 ```
+
+此功能实现 [F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)。
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a>为 Fsharp.core 中的3D 和4D 阵列固定索引切片
 
@@ -260,9 +268,11 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
+此功能实现 [F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)。
+
 ## <a name="f-quotations-improvements"></a>F # 报价改进
 
-F # [代码引用](../language-reference/code-quotations.md) 现在能够保留类型约束信息。 请看下面的示例：
+F # [代码引用](../language-reference/code-quotations.md) 现在能够保留类型约束信息。 请考虑以下示例：
 
 ```fsharp
 open FSharp.Linq.RuntimeHelpers
@@ -276,6 +286,8 @@ let inline negate x = -x
 ```
 
 函数生成的约束 `inline` 保留在代码 qutoation 中。 `negate`现在可以计算该函数的 quotated 窗体。
+
+此功能实现 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)。
 
 ## <a name="applicative-computation-expressions"></a>Applicative 计算表达式
 
@@ -326,6 +338,8 @@ let printApplicatives () =
 
 如果你是目前在其库中公开 CEs 的库作者，需要注意一些其他注意事项。
 
+此功能实现 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)。
+
 ## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>接口可以在不同的泛型实例化 implemeneted
 
 你现在可以在不同的泛型实例化上实现相同的接口：
@@ -347,6 +361,8 @@ let iaString = mc :> IA<string>
 iaInt.Get() // 1
 iaString.Get() // "hello"
 ```
+
+此功能实现 [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)。
 
 ## <a name="default-interface-member-consumption"></a>默认接口成员消耗
 
@@ -387,6 +403,8 @@ printfn "DIM from C# but via Object Expression: %d" md'.Z
 
 这使你能够在预期用户能够使用默认实现时，安全地利用在现代 c # 中编写的 c # 代码和 .NET 组件。
 
+此功能实现 [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)。
+
 ## <a name="simplified-interop-with-nullable-value-types"></a>具有可以为 null 的值类型的简化互操作
 
 [可以为 null 的 (值) 类型](https://docs.microsoft.com/dotnet/api/system.nullable-1) (早于 F # 支持的名称) 可以为 null 的类型，但与它们进行交互几乎有点困难，因为 `Nullable` `Nullable<SomeType>` 每次要传递值时都必须构造或包装。 现在， `Nullable<ThatValueType>` 如果目标类型匹配，则编译器会将值类型隐式转换为。 现在可以执行以下代码：
@@ -404,6 +422,8 @@ dateTimes.Append(DateTime.Parse("2019/01/01"))
 // The previous line is now equivalent to this line
 dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 ```
+
+此功能实现 [F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)。
 
 ## <a name="preview-reverse-indexes"></a>预览：反向索引
 
@@ -463,6 +483,8 @@ let run () =
 
 run() // Prints the same thing twice
 ```
+
+此功能实现 [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)。
 
 ## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a>预览：计算表达式中的自定义关键字的重载
 
@@ -535,3 +557,5 @@ let password =
 ```
 
 在进行此更改之前，可以编写 `InputBuilder` 类型，但无法像在示例中使用它那样使用它。 由于允许使用重载、可选参数和 now `System.ParamArray` 类型，因此一切都按您预期的方式工作。
+
+此功能实现 [F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)。

@@ -2,12 +2,12 @@
 title: XML 文档
 description: '了解有关 F # 的支持，以便从注释生成文档。'
 ms.date: 09/15/2020
-ms.openlocfilehash: a5bec20f27c23caee951cda2dc5d17808f69d384
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679398"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982474"
 ---
 # <a name="document-your-code-with-xml-comments"></a>使用 XML 注释记录代码
 
@@ -61,7 +61,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 | `<typeparam name="`**_名称_** `">`**_描述_**`</typeparam>` | 指定类型参数的名称和说明。|
 | `<returns>`**_全文_**`</returns>`           | 指定 *文本* 描述函数或方法的返回值。|
 | `<exception cref="`**_类型_** `">`**_描述_**`</exception>` |指定可以生成的异常的类型以及引发此异常的情况。|
-| `<seealso cref="`**_对_**`"/>`      | 指定另一种类型的文档的链接。 *引用*是显示在 XML 文档文件中的名称。 另请参阅链接通常显示在文档页的底部。|
+| `<seealso cref="`**_对_**`"/>`      | 指定另一种类型的文档的链接。 *引用* 是显示在 XML 文档文件中的名称。 另请参阅链接通常显示在文档页的底部。|
 
 下表描述了 "说明" 部分中使用的标记：
 
@@ -72,7 +72,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 | `<paramref name="`**_路径名_**`"/>`         | 指定对同一文档注释中的参数的引用。|
 | `<typeparamref name="`**_路径名_**`"/>`     | 指定对同一文档注释中类型参数的引用。|
 | `<c>`**_全文_**`</c>`                     | 指定 *文本* 为内联代码。 文档生成器可以使用此标记以适用于代码的字体显示文本。|
-| `<see cref="`**_参考_** `">`**_文本_**`</see>` | 指定指向其他程序元素的内联链接。 *引用*是显示在 XML 文档文件中的名称。 *文本*是链接中显示的文本。|
+| `<see cref="`**_参考_** `">`**_文本_**`</see>` | 指定指向其他程序元素的内联链接。 *引用* 是显示在 XML 文档文件中的名称。 *文本* 是链接中显示的文本。|
 
 ### <a name="user-defined-tags"></a>用户定义的标记
 
@@ -128,7 +128,7 @@ C # 中不支持 c # 和其他 .NET 语言的 XML 文档的某些功能。
 
 - 应使用句号结尾的完整句子编写文档文本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - C [# XML 文档注释 &#40;c&#35; 编程指南&#41;](../../csharp/programming-guide/xmldoc/index.md)。
 - [F# 语言参考](index.md)

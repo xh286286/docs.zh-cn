@@ -2,12 +2,12 @@
 title: 应用程序性能管理-适用于 WCF 开发人员的 gRPC
 description: ASP.NET Core gRPC 应用程序的日志记录、指标和跟踪。
 ms.date: 09/02/2019
-ms.openlocfilehash: bccb5ba92e2dc8fa2def4dc192b0ca58b332861a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165905"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982337"
 ---
 # <a name="application-performance-management"></a>应用程序性能管理
 
@@ -59,7 +59,7 @@ public class StockData : Stocks.StocksBase
 
 大多数度量值平台支持以下类型：
 
-| 度量值类型 | 描述 |
+| 度量值类型 | 说明 |
 | ----------- | ----------- |
 | 计数器     | 跟踪发生某些情况的频率，如请求和错误。 |
 | 仪表       | 记录随时间变化的单个值，如活动连接。 |
@@ -98,7 +98,7 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="store-and-visualize-metrics-data"></a>存储和可视化指标数据
 
-存储度量值数据的最佳方式是在时序 *数据库*中，这是一个专用的数据存储，用于记录用时间戳标记的数值数据系列。 这些数据库最常见的是 [Prometheus](https://prometheus.io/) 和 [InfluxDB](https://www.influxdata.com/products/influxdb-overview/)。 Microsoft Azure 还通过 [Azure Monitor](/azure/azure-monitor/overview) 服务提供专用的度量值存储。
+存储度量值数据的最佳方式是在时序 *数据库* 中，这是一个专用的数据存储，用于记录用时间戳标记的数值数据系列。 这些数据库最常见的是 [Prometheus](https://prometheus.io/) 和 [InfluxDB](https://www.influxdata.com/products/influxdb-overview/)。 Microsoft Azure 还通过 [Azure Monitor](/azure/azure-monitor/overview) 服务提供专用的度量值存储。
 
 用于可视化度量值数据的当前走向解决方案是 [Grafana](https://grafana.com)，可用于各种存储提供程序。 下图显示了一个示例 Grafana 仪表板，该仪表板显示运行 StockData 示例的 Linkerd service 网格中的指标：
 
@@ -116,11 +116,11 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="how-distributed-tracing-works"></a>分布式跟踪的工作原理
 
-分布式跟踪基于 *跨越*的概念：已命名的计时操作，这些操作是单个 *跟踪*的一部分，它可能涉及在系统的多个节点上进行处理。 当启动新操作时，将使用唯一标识符创建跟踪。 对于每个子操作，会使用其自己的标识符和跟踪标识符来创建一个跨度。 当请求在系统中传递时，各组件可以创建包括其*父*范围的标识符的*子*范围。 一个范围包含一个 *上下文*，其中包含跟踪和范围标识符，以及 (称为 *行李*) 的键和值对形式的有用数据。
+分布式跟踪基于 *跨越* 的概念：已命名的计时操作，这些操作是单个 *跟踪* 的一部分，它可能涉及在系统的多个节点上进行处理。 当启动新操作时，将使用唯一标识符创建跟踪。 对于每个子操作，会使用其自己的标识符和跟踪标识符来创建一个跨度。 当请求在系统中传递时，各组件可以创建包括其 *父* 范围的标识符的 *子* 范围。 一个范围包含一个 *上下文*，其中包含跟踪和范围标识符，以及 (称为 *行李*) 的键和值对形式的有用数据。
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>分布式跟踪与 `DiagnosticSource`
 
-.NET Core 有一个内部模块，该模块适用于分布式跟踪和跨越： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 该 `DiagnosticSource` 模块具有 *活动*的概念，并提供一种简单的方法来在进程内生成和使用诊断。 活动实际上是分布式跟踪的实现或跟踪内的跨度。 模块的内部机制负责父子活动（包括分配标识符）。 有关使用类型的详细信息 `Activity` ，请参阅 [GitHub 上的活动用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
+.NET Core 有一个内部模块，该模块适用于分布式跟踪和跨越： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 该 `DiagnosticSource` 模块具有 *活动* 的概念，并提供一种简单的方法来在进程内生成和使用诊断。 活动实际上是分布式跟踪的实现或跟踪内的跨度。 模块的内部机制负责父子活动（包括分配标识符）。 有关使用类型的详细信息 `Activity` ，请参阅 [GitHub 上的活动用户指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
 
 由于 `DiagnosticSource` 是核心框架的一部分，因此支持多个核心组件。 其中包括 <xref:System.Net.Http.HttpClient> 、Entity Framework Core 和 ASP.NET Core，包括 gRPC 框架中的显式支持。 当 ASP.NET Core 收到请求时，它将检查与 [W3C 跟踪上下文](https://www.w3.org/TR/trace-context) 标准匹配的一对 HTTP 标头。 如果找到了标头，则将使用标头中的标识值和上下文启动活动。 如果未找到任何标头，则会启动一个活动，其中生成的标识值与标准格式匹配。 在此活动的生存期内，由框架或应用程序代码生成的任何诊断，都可以用 trace 和 span 标识符进行标记。 此 `HttpClient` 支持通过检查每个请求的当前活动，并自动将跟踪标头添加到传出请求，进一步扩展了此功能。
 
