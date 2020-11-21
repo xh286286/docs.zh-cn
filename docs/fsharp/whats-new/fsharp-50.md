@@ -2,12 +2,12 @@
 title: 'F # 5.0 中的新增功能-F # 指南'
 description: '获取 F # 5.0 中提供的新功能的概述。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982461"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098692"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 中的新增功能
 
@@ -285,15 +285,15 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-函数生成的约束 `inline` 保留在代码 qutoation 中。 `negate`现在可以计算该函数的 quotated 窗体。
+函数生成的约束 `inline` 保留在代码引用中。 `negate`现在可以计算函数的带引号形式。
 
 此功能实现 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)。
 
 ## <a name="applicative-computation-expressions"></a>Applicative 计算表达式
 
-当今使用[CEs)  (CEs 的计算表达式](../language-reference/computation-expressions.md)，用于对 "上下文计算" 进行建模，或以更功能编程友好术语一元计算。
+目前使用[CEs)  (CEs 的计算表达式](../language-reference/computation-expressions.md)，用于对 "上下文计算" 进行建模，或使用更多功能编程友好术语一元计算。
 
-F # 5 引入了 applicative CEs，后者提供不同的计算模型。 Applicative CEs 允许进行更高效的计算，前提是每个计算都是独立的，并且其结果在结束时累计。 当计算彼此独立时，它们也是完全可并行化，允许 CE 作者编写更高效的库。 不过，这种优势是一项限制：不允许使用依赖于先前计算的值的计算。
+F # 5 引入了 applicative CEs，后者提供不同的计算模型。 Applicative CEs 允许进行更高效的计算，前提是每个计算都是独立的，并且其结果在结束时累计。 当计算彼此独立时，它们也是完全可并行化，允许 CE 作者编写更高效的库。 不过，这种优势是一项限制：不允许使用依赖于以前计算的值的计算。
 
 下面的示例显示了类型的基本 applicative CE `Result` 。
 
@@ -340,7 +340,7 @@ let printApplicatives () =
 
 此功能实现 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)。
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>接口可以在不同的泛型实例化 implemeneted
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>可在不同的泛型实例化实现接口
 
 你现在可以在不同的泛型实例化上实现相同的接口：
 
@@ -490,7 +490,7 @@ run() // Prints the same thing twice
 
 计算表达式是库和框架作者的强大功能。 它们允许您定义已知成员并为正在处理的域构建 DSL，从而极大地提高组件的表现力。
 
-F # 5 为计算表达式中的重载自定义操作添加了预览支持。 它允许写入和使用以下代码：
+F # 5 为计算表达式中的重载自定义操作添加了预览支持。 它允许编写和使用以下代码：
 
 ```fsharp
 open System
