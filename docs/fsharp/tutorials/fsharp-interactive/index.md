@@ -4,12 +4,12 @@ description: 了解如何使用 F# 交互窗口 (dotnet fsi) 在控制台以交�
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 6f865483762e92964c8baa51498f07974c109691
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400861"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982500"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F\# 进行交互式编程
 
@@ -76,7 +76,7 @@ let getOddSquares xs =
     |> List.filter (fun x -> x % 2 <> 0)
     |> List.map (fun x -> x * x)
 
-getOddSquares [1..10]
+printfn "%A" (getOddSquares [1..10])
 ```
 
 在计算机中创建此文件后，可以使用 `dotnet fsi` 运行它，然后直接在终端窗口中查看输出：
@@ -235,9 +235,9 @@ fsi
 
 ## <a name="using-f-interactive-in-visual-studio"></a>在 Visual Studio 中使用 F# 交互窗口
 
-若要通过 Visual Studio 运行 F# Interactive，可以单击标记为“F# Interactive”的相应工具栏按钮，或使用组合键 **Ctrl+Alt+F** 。 执行此操作将打开交互式窗口，该窗口是运行 F# Interactive 会话的工具窗口。 还可以选择一些你希望在交互式窗口中运行的代码，然后点击组合键 Alt+Enter。 F# Interactive 在标记为“F# Interactive”的工具窗口中启动。 当您使用此组合键时，请确保焦点位于编辑器窗口内。
+若要通过 Visual Studio 运行 F# Interactive，可以单击标记为“F# Interactive”的相应工具栏按钮，或使用组合键 **Ctrl+Alt+F**。 执行此操作将打开交互式窗口，该窗口是运行 F# Interactive 会话的工具窗口。 还可以选择一些你希望在交互式窗口中运行的代码，然后点击组合键 Alt+Enter。 F# Interactive 在标记为“F# Interactive”的工具窗口中启动。 当您使用此组合键时，请确保焦点位于编辑器窗口内。
 
-无论您使用的是控制台还是 Visual Studio，都会出现命令提示符，并且解释器会等待您输入代码。 你可以像在代码文件中一样输入代码。 若要编译和执行代码，请输入两个分号 ( **;;** ) 以终止一行或几行输入。
+无论您使用的是控制台还是 Visual Studio，都会出现命令提示符，并且解释器会等待您输入代码。 你可以像在代码文件中一样输入代码。 若要编译和执行代码，请输入两个分号 (**;;**) 以终止一行或几行输入。
 
 F# Interactive 试图编译代码，如果成功，它将执行代码并打印其所编译类型和值的签名。 如果发生错误，解释器将打印错误消息。
 
