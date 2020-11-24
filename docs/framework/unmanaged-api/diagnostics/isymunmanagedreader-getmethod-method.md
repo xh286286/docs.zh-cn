@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-ms.openlocfilehash: 864acb07797676c825afe62321b0d65e37938fa6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3f0d0e060bba832080dd8fbfab62f3115fec0aab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615002"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689636"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod 方法
+
 在给定方法标记的情况下，获取符号读取器方法。  
   
 ## <a name="syntax"></a>语法  
@@ -34,6 +35,7 @@ HRESULT GetMethod (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `token`  
  中方法标记。  
   
@@ -41,9 +43,11 @@ HRESULT GetMethod (
  弄指向返回的接口的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

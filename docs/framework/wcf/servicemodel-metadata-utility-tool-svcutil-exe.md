@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9f8e8e0239f8f8cd149bc6e8b1d7921124731087
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 65013f43aa0075b6de6999741afb448c2a35afb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245942"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689922"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 
@@ -21,7 +21,7 @@ ms.locfileid: "85245942"
 
 ## <a name="svcutilexe"></a>SvcUtil.exe
 
-可在 Windows SDK 安装位置找到 "%ProgramFiles%\Microsoft" 元数据实用工具，具体来说就是*SDKs\Windows\v6.0\Bin*。
+可在 Windows SDK 安装位置找到 "%ProgramFiles%\Microsoft" 元数据实用工具，具体来说就是 *SDKs\Windows\v6.0\Bin*。
 
 ### <a name="functionalities"></a>功能
 
@@ -46,11 +46,11 @@ ms.locfileid: "85245942"
 
 ### <a name="multi-targeting"></a>多目标
 
-该工具不支持多目标。 如果要从*svcutil.exe*生成 .net 4 项目，请使用 .NET 4 SDK 中的*svcutil.exe* 。 若要生成 .NET 3.5 项目，请使用 .NET 3.5 SDK 中的可执行文件。
+该工具不支持多目标。 如果要从 *svcutil.exe* 生成 .NET Framework 4 项目，请使用 .NET FRAMEWORK 4 SDK 中的 *svcutil.exe* 。 若要生成 .NET Framework 3.5 项目，请使用 .NET Framework 3.5 SDK 中的可执行文件。
 
 ### <a name="accessing-wsdl-documents"></a>访问 WSDL 文档
 
-使用 Svcutil 来访问具有对安全令牌服务 (STS) 的引用的 WSDL 文档时，Svcutil 将对 STS 执行 WS-MetadataExchange 调用。 但是，服务可以使用 WS-MetadataExchange 或 HTTP GET 来公开其 WSDL 文档。 因此，如果 STS 只使用 HTTP GET 公开了 WSDL 文档，则使用 WinFX 编写的客户端将失败。 对于以 .NET Framework 3.5 编写的客户端，Svcutil.exe 尝试同时使用 Ws-metadataexchange 和 HTTP GET 来获取 STS WSDL。
+使用 Svcutil 来访问具有对安全令牌服务 (STS) 的引用的 WSDL 文档时，Svcutil 将对 STS 执行 WS-MetadataExchange 调用。 但是，服务可以使用 WS-MetadataExchange 或 HTTP GET 来公开其 WSDL 文档。 因此，如果 STS 只使用 HTTP GET 公开了 WSDL 文档，则使用 WinFX 编写的客户端将失败。 对于以 .NET Framework 3.5 编写的客户端，Svcutil.exe 尝试同时使用 WS-MetadataExchange 和 HTTP GET 来获取 STS WSDL。
 
 ## <a name="using-svcutilexe"></a>使用 SvcUtil.exe
 
@@ -70,19 +70,19 @@ ms.locfileid: "85245942"
 
 Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类型生成代码。 这些元数据文档可以位于持久存储区上，也可以联机检索。 联机检索采用 WS-Metadata Exchange 协议或 DISCO 协议（有关详细信息，请参见“元数据下载”一节）。
 
-您可以使用*SvcUtil.exe*工具基于预定义的 WSDL 文档生成服务和数据协定。 使用 /serviceContract 开关并指定可以从中下载或找到 WSDL 文档的 URL 或文件位置。 这会生成在 WSDL 文档中定义的服务和数据协定，然后可以使用该协定来实现投诉服务。 有关详细信息，请参阅[如何：检索元数据并实现兼容服务](./feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。
+您可以使用 *SvcUtil.exe* 工具基于预定义的 WSDL 文档生成服务和数据协定。 使用 /serviceContract 开关并指定可以从中下载或找到 WSDL 文档的 URL 或文件位置。 这会生成在 WSDL 文档中定义的服务和数据协定，然后可以使用该协定来实现投诉服务。 有关详细信息，请参阅 [如何：检索元数据并实现兼容服务](./feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。
 
-对于具有 BasicHttpContextBinding 终结点的服务， *Svcutil.exe*会生成 BasicHttpBinding，并将其 `allowCookies` 属性设置为 `true` 。 Cookie 用于服务器上的上下文。 如果在服务使用 Cookie 时，你要管理客户端上的上下文，则可以手动修改配置以使用上下文绑定。
+对于具有 BasicHttpContextBinding 终结点的服务， *Svcutil.exe* 会生成 BasicHttpBinding，并将其 `allowCookies` 属性设置为 `true` 。 Cookie 用于服务器上的上下文。 如果在服务使用 Cookie 时，你要管理客户端上的上下文，则可以手动修改配置以使用上下文绑定。
 
 > [!CAUTION]
-> Svcutil.exe 基于 WSDL 或从服务收到的策略文件生成客户端。 用户主体名称（UPN）通过连接用户名 " \@ " 和完全限定的域名（FQDN）来生成。 但是，对于在 Active Directory 上注册的用户，此格式无效，并且工具生成的 UPN 将导致 Kerberos 身份验证失败，错误消息为“登录没有成功”。 若要解决此问题，您应手动修复此工具生成的客户端文件。
+> Svcutil.exe 基于 WSDL 或从服务收到的策略文件生成客户端。  (UPN) 的用户主体名称是通过将用户名、" \@ " 和完全限定域名 (FQDN) 来生成的。 但是，对于在 Active Directory 上注册的用户，此格式无效，并且工具生成的 UPN 将导致 Kerberos 身份验证失败，错误消息为“登录没有成功”。 若要解决此问题，您应手动修复此工具生成的客户端文件。
 
 `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`
 
 |参数|说明|
 |--------------|-----------------|
 |`epr`|XML 文件的路径，该文件包含支持 WS-Metadata Exchange 的服务终结点的 WS-Addressing EndpointReference。 有关更多信息，请参见“元数据下载”一节。|
-|`metadataDocumentPath`|包含要导入到代码中的协定的元数据文档（*wsdl*或*xsd*）的路径（.wsdl、.xsd、. wspolicy 或 wsmex）。<br /><br /> 当您为元数据指定远程 URL 时，Svcutil 采用导入和包含的内容。 但是，如果要在本地文件系统上处理元数据文件，则必须在此自变量中指定所有文件。 这样，您可以在不能有网络依赖项的生成环境中使用 Svcutil。 对于此参数，可以使用通配符（* .xsd， \* .wsdl）。|
+|`metadataDocumentPath`| (*wsdl* 或 *xsd*) 的元数据文档的路径，该文件包含要导入到代码中的协定 ( wsdl、wspolicy 或. wsmex) 。<br /><br /> 当您为元数据指定远程 URL 时，Svcutil 采用导入和包含的内容。 但是，如果要在本地文件系统上处理元数据文件，则必须在此自变量中指定所有文件。 这样，您可以在不能有网络依赖项的生成环境中使用 Svcutil。 可以为此参数 ( * .xsd、 \* .wsdl) 使用通配符。|
 |`url`|可提供元数据的服务终结点的 URL，或是联机承载的元数据文档的 URL。 有关如何检索这些文档的更多信息，请参见“元数据下载”一节。|
 
 |选项|说明|
@@ -98,7 +98,7 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 |/language\<language>|指定要用于代码生成的编程语言。 应提供在 Machine.config 文件中注册的语言名称，或从继承的类的完全限定名称 <xref:System.CodeDom.Compiler.CodeDomProvider> 。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式：`/l`|
 |/mergeConfig|将生成的配置合并到现有文件中，而不是覆盖现有文件。|
 |/messageContract|生成消息协定类型。<br /><br /> 缩写形式：`/mc`|
-|/namespace\<string,string>|指定从 WSDL 或 XML 架构 targetNamespace 到 CLR 命名空间的映射。 对于 targetNamespace，使用 " \* " 可映射所有 targetnamespace，而无需显式映射到该 CLR 命名空间。<br /><br /> 为了确保消息协定名称与操作名称不冲突，您应使用 `::` 限定类型引用，或确保名称是唯一的。<br /><br /> 默认设置：派生自数据协定架构文档的目标命名空间。 默认命名空间用于所有其他生成的类型。<br /><br /> 短格式： `/n` **注意：** 生成要与 XmlSerializer 一起使用的类型时，仅支持单个命名空间映射。 所有生成的类型都将位于默认命名空间或由 "*" 指定的命名空间中。|
+|/namespace\<string,string>|指定从 WSDL 或 XML 架构 targetNamespace 到 CLR 命名空间的映射。 对于 targetNamespace，使用 " \* " 可映射所有 targetnamespace，而无需显式映射到该 CLR 命名空间。<br /><br /> 为了确保消息协定名称与操作名称不冲突，您应使用 `::` 限定类型引用，或确保名称是唯一的。<br /><br /> 默认设置：派生自数据协定架构文档的目标命名空间。 默认命名空间用于所有其他生成的类型。<br /><br /> 短格式： `/n` **注意：**  生成要与 XmlSerializer 一起使用的类型时，仅支持单个命名空间映射。 所有生成的类型都将位于默认命名空间或由 "*" 指定的命名空间中。|
 |/noConfig|不生成配置文件。|
 |/noStdLib|不引用标准库。<br /><br /> 默认设置：引用 Mscorlib.dll 和 System.servicemodel.dll。|
 |/out\<file>|为生成的代码指定文件名。<br /><br /> 默认设置：派生自某个架构的 WSDL 定义名称、WSDL 服务名称或目标命名空间。<br /><br /> 缩写形式：`/o`|
@@ -108,11 +108,11 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 |/serializer:Auto|自动选择序列化程序。 这会尝试使用数据协定序列化程序，如果失败，则使用 XmlSerializer。<br /><br /> 缩写形式：`/ser`|
 |/serializer:DataContractSerializer|生成使用数据协定序列化程序进行序列化和反序列化的数据类型。<br /><br /> 缩写形式：`/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|生成使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化和反序列化的数据类型。<br /><br /> 缩写形式：`/ser:XmlSerializer`|
-|/targetClientVersion|指定应用程序面向 .NET Framework 的版本。 有效值为 `Version30` 和 `Version35`。 默认值为 `Version30`。<br /><br /> 缩写形式：`/tcv`<br /><br /> `Version30`： `/tcv:Version30` 如果要为使用 WinFX 的客户端生成代码，请使用。<br /><br /> `Version35`： `/tcv:Version35` 如果要为使用 .NET Framework 3.5 的客户端生成代码，请使用。 如果将 `/tcv:Version35` 与 `/async` 开关一起使用，则会同时生成基于事件的异步方法和基于回调/委托的异步方法。 此外，还能够支持启用 LINQ 的数据集和 <xref:System.DateTimeOffset>。|
-|/wrapped|控制是否对具有包装参数的 document-literal 样式的文档使用特殊大小写。 结合使用 **/wrapped**开关和[服务模型元数据实用工具（Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)工具来指定正常大小写。|
+|/targetClientVersion|指定应用程序面向 .NET Framework 的版本。 有效值为 `Version30` 和 `Version35`。 默认值是 `Version30`。<br /><br /> 缩写形式：`/tcv`<br /><br /> `Version30`： `/tcv:Version30` 如果要为使用 WinFX 的客户端生成代码，请使用。<br /><br /> `Version35`： `/tcv:Version35` 如果要为使用 .NET Framework 3.5 的客户端生成代码，请使用。 如果将 `/tcv:Version35` 与 `/async` 开关一起使用，则会同时生成基于事件的异步方法和基于回调/委托的异步方法。 此外，还能够支持启用 LINQ 的数据集和 <xref:System.DateTimeOffset>。|
+|/wrapped|控制是否对具有包装参数的 document-literal 样式的文档使用特殊大小写。 将 **/wrapped** 开关与 [服务模型元数据实用工具一起使用 ( # A0)](servicemodel-metadata-utility-tool-svcutil-exe.md) 工具来指定正常大小写。|
 
 > [!NOTE]
-> 如果服务绑定是系统提供的绑定（请参阅[系统提供的绑定](system-provided-bindings.md)）之一，并且 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 属性设置为 `None` 或，则 svcutil.exe 将 `Sign` 使用 [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) 元素（而不是预期的系统提供的元素）生成配置文件。 例如，如果服务使用 `<wsHttpBinding>` 设置为 `ProtectionLevel` 的 `Sign` 元素，则生成的配置在绑定部分中将有 `<customBinding>`，而不是 `<wsHttpBinding>`。 有关保护级别的详细信息，请参阅[了解保护级别](understanding-protection-level.md)。
+> 如果服务绑定是系统提供的绑定之一 (请参阅 [系统提供的绑定](system-provided-bindings.md)) ，并且 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 属性设置为 `None` 或 `Sign` ，svcutil.exe 将使用 [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) 元素（而不是预期的系统提供的元素）生成配置文件。 例如，如果服务使用 `<wsHttpBinding>` 设置为 `ProtectionLevel` 的 `Sign` 元素，则生成的配置在绑定部分中将有 `<customBinding>`，而不是 `<wsHttpBinding>`。 有关保护级别的详细信息，请参阅 [了解保护级别](understanding-protection-level.md)。
 
 ### <a name="metadata-export"></a>元数据导出
 
@@ -177,7 +177,7 @@ Svcutil 会同时发出以下元数据请求以检索元数据。
 > [!NOTE]
 > 预生成的序列化代码只能在客户端应用程序中使用，不能在服务中使用。
 
-Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列化代码，因而可提高这些应用程序的启动性能。 有关详细信息，请参阅[如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
+Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列化代码，因而可提高这些应用程序的启动性能。 有关详细信息，请参阅 [如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
 
 > [!NOTE]
 > Svcutil.exe 只会为输入程序集中的服务协定使用的类型生成代码。
@@ -237,7 +237,7 @@ Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列�
 
 使用 svcutil 生成服务的元数据时，您会收到以下消息：
 
-错误： `http://localhost:8000/somesservice/mex` 读取 XML 数据时，无法从最大的字符计数配额（16384）中获取元数据。 名称表是用于存储在处理 XML 时所遇到的字符串的数据结构 - 具有非重复元素名称、特性名称和特性值的长 XML 文档可能会触发此配额。 通过更改在创建 XML 读取器时所使用的 XmlDictionaryReaderQuotas 对象的 MaxNameTableCharCount 属性，可增加此配额。
+错误： `http://localhost:8000/somesservice/mex` 读取 XML 数据时，无法从最大的字母都字符计数配额 (16384) 中获取元数据。 名称表是用于存储在处理 XML 时所遇到的字符串的数据结构 - 具有非重复元素名称、特性名称和特性值的长 XML 文档可能会触发此配额。 通过更改在创建 XML 读取器时所使用的 XmlDictionaryReaderQuotas 对象的 MaxNameTableCharCount 属性，可增加此配额。
 
 如果您请求某个服务的元数据时返回大 WSDL 文件，则该服务会导致此错误。 问题在于超过了 svcutil.exe 工具的字符配额。 设置此值是为了帮助防止遭受拒绝服务 (dos) 攻击。 您可以通过为 svcutil 指定下面的配置文件来增加此配额。
 
@@ -277,7 +277,7 @@ Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列�
 
 最后，您不应在应用程序的中间层中使用该工具，因为它可能会导致当前进程拒绝服务。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

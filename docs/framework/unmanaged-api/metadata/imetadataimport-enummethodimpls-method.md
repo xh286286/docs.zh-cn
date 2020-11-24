@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40ab610110e96018b1c598d04b24a762ecb50717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492000"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690481"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 方法
+
 枚举表示指定类型的方法的 MethodBody 和 MethodDeclaration 标记。  
   
 ## <a name="syntax"></a>语法  
@@ -39,6 +40,7 @@ HRESULT EnumMethodImpls (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `phEnum`  
  [in，out]指向枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
@@ -61,15 +63,16 @@ HRESULT EnumMethodImpls (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`已成功返回。|  
+|`S_OK`|`EnumMethodImpls` 已成功返回。|  
 |`S_FALSE`|没有要枚举的方法标记。 在这种情况下， `pcTokens` 为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
