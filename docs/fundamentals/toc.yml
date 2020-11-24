@@ -414,6 +414,8 @@ items:
                 href: ../core/diagnostics/dotnet-sos.md
           - name: .NET Core 诊断教程
             items:
+              - name: 在 Linux 中通过 PerfCollect 收集性能跟踪
+                href: ../core/diagnostics/trace-perfcollect-lttng.md
               - name: 通过 EventCounters 获取 perf 指标
                 href: ../core/diagnostics/event-counter-perf.md
               - name: 调试内存泄露

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827251"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098809"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
-借助泛型，你可以根据要处理的精确数据类型定制方法、类、结构或接口。 例如，不使用允许键和值为任意类型的 <xref:System.Collections.Hashtable> 类，而使用 <xref:System.Collections.Generic.Dictionary%602> 泛型类并指定允许的密钥类型和允许的值的类型。 泛型的优点包括：代码的可重用性增加，类型安全性提高。  
+借助泛型，你可以根据要处理的精确数据类型定制方法、类、结构或接口。 例如，不使用允许键和值为任意类型的 <xref:System.Collections.Hashtable> 类，而使用 <xref:System.Collections.Generic.Dictionary%602> 泛型类并指定允许的密钥和值类型。 泛型的优点包括：代码的可重用性增加，类型安全性提高。  
 
 ## <a name="defining-and-using-generics"></a>定义和使用泛型
  泛型是为所存储或使用的一个或多个类型具有占位符（类型形参）的类、结构、接口和方法。 泛型集合类可以将类型形参用作其存储的对象类型的占位符；类型形参呈现为其字段的类型和其方法的参数类型。 泛型方法可将其类型形参用作其返回值的类型或用作其形参之一的类型。 以下代码举例说明了一个简单的泛型类定义。  

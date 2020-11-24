@@ -3,12 +3,12 @@ title: 诊断工具概述 - .NET Core
 description: 概述用于 .NET Core 应用程序的工具和技术。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437999"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982304"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中提供哪些诊断工具？
 
@@ -62,6 +62,10 @@ ms.locfileid: "91437999"
 
 [dotnet-sos](dotnet-sos.md) 用于在 Linux 或 MacOS 上安装 [SOS 调试扩展](../../framework/tools/sos-dll-sos-debugging-extension.md)（如果使用较旧的调试工具，则在 Windows 上进行安装）。
 
+### <a name="perfcollect"></a>PerfCollect
+
+[PerfCollect](trace-perfcollect-lttng.md) 是一个 bash 脚本，可用于收集包含 `perf` 和 `LTTng` 的跟踪，以便更深入地分析在 Linux 分发版上运行的 .NET 应用的性能。
+
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core 诊断教程
 
 ### <a name="debug-a-memory-leak"></a>调试内存泄露
@@ -75,3 +79,7 @@ ms.locfileid: "91437999"
 ### <a name="debug-deadlock"></a>调试死锁
 
 [教程：调试死锁](debug-deadlock.md)介绍了如何使用 [dotnet-dump](dotnet-dump.md) 工具来调查线程和锁。
+
+### <a name="measure-performance-using-eventcounters"></a>使用 EventCounters 衡量性能
+
+[教程：使用 .NET 中的 EventCounters 度量性能](event-counter-perf.md)演示了如何使用 <xref:System.Diagnostics.Tracing.EventCounter> API 来衡量 .NET 应用的性能。
