@@ -2,17 +2,18 @@
 title: 常见数据类型（非托管 API 参考）
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c00ff6d0947b5d847a9622dce02bd310491818c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132441"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673977"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常见数据类型（非托管 API 参考）
+
 本主题列出了由 C/C++ `typedef` 语句定义的 .NET Framework 的非托管 API 所使用的简单数据类型。 这些数据类型通常是 C/C++ 基元数据类型的别名。 通常，这些数据类型的值是不透明的；即它们由特定的函数或方法返回，以便可以将它们传递给其他函数或方法，而无需修改。  
   
-|数据类型|定义|定义位置|描述|  
+|数据类型|定义|定义位置|说明|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|应用程序域的标识符。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|程序集的标识符。|  
@@ -29,7 +30,7 @@ ms.locfileid: "73132441"
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|函数或方法的标识符。|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|垃圾回收句柄。|  
 |mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|方法定义标记。|
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|元数据标记（元数据表中的行）。|  
+|mdToken|`typedef UINT32 mdToken;`|corprof.h|元数据标记 (元数据表) 中的行。|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|程序集模块的标识符。|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|对象的标识符。|  
 |PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|cordebug.h|指向成员或元数据签名的指针。|
@@ -39,6 +40,6 @@ ms.locfileid: "73132441"
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|[ICLRTask](./hosting/iclrtask-interface.md)实例的标识符。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|托管线程的标识符。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [非托管 API 参考](index.md)

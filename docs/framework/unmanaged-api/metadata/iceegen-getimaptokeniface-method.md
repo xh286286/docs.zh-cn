@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 847a5531-c37d-49cd-8844-9e54b5d86cf7
 topic_type:
 - apiref
-ms.openlocfilehash: 074279a0f5757b0d8ee96aa7075f9422be8da0c1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 079a599ff87146c4eed4b15d57696338fb25f530
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674302"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface 方法
+
 获取指定的标记所引用的接口。  
   
  此方法已过时，不应使用。  
@@ -36,15 +37,17 @@ HRESULT GetIMapTokenIface (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pIMapToken`  
  [in，out]要返回的接口的元数据标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

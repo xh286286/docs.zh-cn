@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: d821413e67b36392d936499cd22f2e065f1556ec
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cef817b52718acfbc4360e9d3742a5a78abd3afe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503843"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675043"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent 方法
-确定由之前调用[IMetaDataEmit：:D efinememberref](imetadataemit-definememberref-method.md)定义的指定成员是否为指定类型的成员，该成员由先前调用[IMetaDataEmit：:D efinetypedef](imetadataemit-definetypedef-method.md)定义。  
+
+确定由之前调用 [IMetaDataEmit：:D efinememberref](imetadataemit-definememberref-method.md)定义的指定成员是否为指定类型的成员，该成员由先前调用 [IMetaDataEmit：:D efinetypedef](imetadataemit-definetypedef-method.md)定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +36,20 @@ HRESULT SetParent (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mr`  
- 中`mdMemberRef`用于接收新父级的标记。  
+ 中 `mdMemberRef` 用于接收新父级的标记。  
   
  `tk`  
- 中`mdToken`新父级的。  
+ 中 `mdToken` 新父级的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 20eac75a1f1d13b6a30267d56ff66024725e6f33
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893652"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674770"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
-获取用于反汇编的指定函数的所有代码。 此方法在 .NET Framework 版本2.0 中已弃用。 改[为使用 ICorDebugCode2：： GetCodeChunks](icordebugcode2-getcodechunks-method.md) 。  
+
+获取用于反汇编的指定函数的所有代码。 此方法在 .NET Framework 版本2.0 中已弃用。 改 [为使用 ICorDebugCode2：： GetCodeChunks](icordebugcode2-getcodechunks-method.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,6 +40,7 @@ HRESULT GetCode (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `startOffset`  
  中函数开头的偏移量。  
   
@@ -46,7 +48,7 @@ HRESULT GetCode (
  中函数末尾的偏移量。  
   
  `cBufferAlloc`  
- 中将返回代码的`buffer`数组的大小。  
+ 中 `buffer` 将返回代码的数组的大小。  
   
  `buffer`  
  弄将向其中返回代码的数组。  
@@ -54,11 +56,13 @@ HRESULT GetCode (
  `pcBufferSize`  
  弄返回的字节数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  如果函数的代码已划分为多个块，则它们将按照增加的本机偏移量的顺序进行连接。 不检查指令边界。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

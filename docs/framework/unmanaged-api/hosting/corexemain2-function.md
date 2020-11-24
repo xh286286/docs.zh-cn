@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-ms.openlocfilehash: 8202fe4ec3ae6ef96440f203c5aea6db84744a72
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a3fb9d87b6433d46dad081619e0692a42219408d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673613"
 ---
 # <a name="_corexemain2-function"></a>_CorExeMain2 函数
+
 执行指定的内存映射代码中的入口点。 此函数由操作系统加载程序调用。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pUnmappedPE`  
  中指向内存映射代码的指针。  
   
@@ -53,11 +55,12 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  中命令行参数（如果有）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

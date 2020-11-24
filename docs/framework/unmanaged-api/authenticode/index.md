@@ -2,17 +2,19 @@
 title: Authenticode（非托管 API 参考）
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b3e1585278bda82dedf7542e866a551867b9c9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132456"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674042"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode（非托管 API 参考）
+
 支持验证码 XrML 许可证创建和验证模块。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [_AxlGetIssuerPublicKeyHash 函数](axlgetissuerpublickeyhash-function.md)  
  检索与用于对指定证书进行签名的私钥关联的公钥的 SHA-1 哈希。  
   

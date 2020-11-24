@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: a24218f8-7196-44be-b7a2-ee9cdd7a85c4
 topic_type:
 - apiref
-ms.openlocfilehash: f93d3f0322de89b2e9ce596329c06b58db9fdcdc
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 824dcf89bacec27ced7cc431a9646d00fb879430
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674666"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob 方法
+
 使用指定地址处可执行文件的二进制表示形式填充指定的缓冲区。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT StrongNameGetBlob (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `wszFilePath`  
  中要加载的可执行文件的有效路径。  
   
@@ -47,14 +49,16 @@ HRESULT StrongNameGetBlob (
  [in，out]请求的最大大小（以字节为单位） `pbBlob` 。 返回时，的实际大小（以字节为单位） `pbBlob` 。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK`如果该方法已成功完成，则为;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+
+ `S_OK` 如果该方法已成功完成，则为;否则，表示失败的 HRESULT 值 (参阅) 列表的 [常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values) 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

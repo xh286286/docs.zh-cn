@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-ms.openlocfilehash: 3b2322f708afed08172f87e843c225aa9c60d9d3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 1b3ebcabc66ee7ca29245bb02d958be311bc65fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616601"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673691"
 ---
 # <a name="_cordllmain-function"></a>\_CorDllMain 函数
 
-初始化公共语言运行时（CLR），定位 DLL 程序集的 CLR 头中的托管入口点，然后开始执行。  
+ (CLR) 初始化公共语言运行时，查找 DLL 程序集的 CLR 头中的托管入口点，然后开始执行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,6 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `hInst`  
  中加载的模块的实例句柄。  
   
@@ -46,9 +47,11 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  中用.  
   
 ## <a name="return-value"></a>返回值  
+
  `true`如果发生错误，则此方法将返回成功 `false` 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  此函数由 DLL 程序集的操作系统加载程序调用。 对于可执行程序集，加载程序将调用[ \_ CorExeMain](corexemain-function.md)函数。  
   
  操作系统加载程序将调用此方法，而不考虑 DLL 文件中指定的入口点。  
@@ -59,11 +62,11 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="requirements"></a>要求  
 
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

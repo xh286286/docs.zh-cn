@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 72b371d72b2f055f2840da5595d9022ffd7e2507
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504340"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674724"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 枚举
-描述主机可为[EClrOperation](eclroperation-enumeration.md)描述的操作设置的策略操作以及[EClrFailure](eclrfailure-enumeration.md)描述的故障。  
+
+描述主机可为 [EClrOperation](eclroperation-enumeration.md) 描述的操作设置的策略操作以及 [EClrFailure](eclrfailure-enumeration.md)描述的故障。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,9 +44,9 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`eAbortThread`|指定公共语言运行时（CLR）应正常中止线程。 正常中止包括尝试运行所有 `finally` 块、 `catch` 与线程中止相关的任何块和终结器。|  
+|`eAbortThread`|指定公共语言运行时 (CLR) 应正常中止线程。 正常中止包括尝试运行所有 `finally` 块、 `catch` 与线程中止相关的任何块和终结器。|  
 |`eDisableRuntime`|指定 CLR 应进入禁用状态。 在受影响的进程中，不能再执行其他托管代码，并且阻止线程进入 CLR。|  
 |`eExitProcess`|指定 CLR 应尝试正常退出进程，包括运行终结器并执行清理和日志记录操作。|  
 |`eFastExitProcess`|指定 CLR 应立即退出进程，而无需运行终结器或执行清理和日志记录操作。 但是，通知将发送到调试器。|  
@@ -57,14 +58,16 @@ typedef enum {
 |`eUnloadAppDomain`|指定 <xref:System.AppDomain> 应卸载。 CLR 尝试运行终结器。|  
   
 ## <a name="remarks"></a>注解  
- 宿主通过调用[ICLRPolicyManager](iclrpolicymanager-interface.md)接口的方法来设置策略操作。 有关 "强制" 和 "正常中止" 的信息，请参阅[EClrOperation](eclroperation-enumeration.md)枚举。  
+
+ 宿主通过调用 [ICLRPolicyManager](iclrpolicymanager-interface.md) 接口的方法来设置策略操作。 有关 "强制" 和 "正常中止" 的信息，请参阅 [EClrOperation](eclroperation-enumeration.md) 枚举。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** Mscoree.dll  
+ **库：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

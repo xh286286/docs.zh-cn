@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5683c10938873821cbe998dbf13937a6a7d24d7c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614833"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675082"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
+
 定义不在方法中的单个变量。 此方法用于类中的某些字段、位域等。  
   
 ## <a name="syntax"></a>语法  
@@ -41,6 +42,7 @@ HRESULT DefineField(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `parent`  
  中元数据类型或方法标记。  
   
@@ -69,9 +71,11 @@ HRESULT DefineField(
  中字段规格的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

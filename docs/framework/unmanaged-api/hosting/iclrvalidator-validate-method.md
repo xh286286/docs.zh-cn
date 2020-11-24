@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 18492f3e95947a3a11da9d5d303651c04d764a8f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 4ce50f7706583f291d2e6a141d40ab6dd3e4b3e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762625"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674380"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate 方法
-验证指定文件中的可移植可执行（PE）或 Microsoft 中间语言（MSIL）。  
+
+验证指定文件中 (PE) 或 Microsoft 中间语言 (MSIL) 的可移植可执行文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,6 +42,7 @@ HRESULT Validate (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `veh`  
  中指向 `IVEHandler` 处理验证错误的实例的指针。  
   
@@ -48,7 +50,7 @@ HRESULT Validate (
  中当前的标识符 <xref:System.AppDomain> 。  
   
  `ulFlags`  
- 中[ValidatorFlags](validatorflags-enumeration.md)值的组合，用于指示应执行的验证类型。  
+ 中 [ValidatorFlags](validatorflags-enumeration.md) 值的组合，用于指示应执行的验证类型。  
   
  `ulMaxError`  
  中在退出验证之前允许的最大错误数。  
@@ -69,19 +71,20 @@ HRESULT Validate (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`Validate`已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|S_OK|`Validate` 已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE| (CLR) 的公共语言运行时未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** IValidator，IValidator  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

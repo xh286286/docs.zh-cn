@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-ms.openlocfilehash: e0c60d6e74c48531a223f6dbb35125b5a2017cbb
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 7e0c689dad0c288e3af3a3d64ee1bba1c44053c1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763031"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674523"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall 方法
+
 将公钥/私钥对导入容器。  
   
 ## <a name="syntax"></a>语法  
@@ -36,8 +37,9 @@ HRESULT StrongNameKeyInstall (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `wszKeyContainer`  
- 中密钥容器的名称。 `wszKeyContainer`必须为非空字符串。  
+ 中密钥容器的名称。 `wszKeyContainer` 必须为非空字符串。  
   
  `pbKeyBlob`  
  中二进制密钥对。  
@@ -46,17 +48,20 @@ HRESULT StrongNameKeyInstall (
  中的大小（以字节为单位） `pbKeyBlob` 。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK`如果该方法已成功完成，则为;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+
+ `S_OK` 如果该方法已成功完成，则为;否则，表示失败的 HRESULT 值 (参阅) 列表的 [常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values) 。  
   
 ## <a name="remarks"></a>注解  
- 使用[ICLRStrongName：： StrongNameKeyDelete](iclrstrongname-strongnamekeydelete-method.md)方法删除密钥容器。  
+
+ 使用 [ICLRStrongName：： StrongNameKeyDelete](iclrstrongname-strongnamekeydelete-method.md) 方法删除密钥容器。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
