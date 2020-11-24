@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc725afb-b66b-4015-aa44-1c0d1304197f
 topic_type:
 - apiref
-ms.openlocfilehash: e71fcf80b51edc318bbc7d81bb277c614184ee55
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 90a7e60e35e1fc555681102ffa62967eb5ac01fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762508"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671533"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>ICLRStrongName::StrongNameTokenFromAssembly 方法
+
 从指定的程序集文件创建强名称令牌。  
   
 ## <a name="syntax"></a>语法  
@@ -36,8 +37,9 @@ HRESULT StrongNameTokenFromAssembly (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `wszFilePath`  
- 中程序集的可移植可执行（PE）文件的路径。  
+ 中适用于程序集的可移植可执行文件 (PE) 文件的路径。  
   
  `ppbStrongNameToken`  
  弄返回的强名称标记。  
@@ -46,19 +48,22 @@ HRESULT StrongNameTokenFromAssembly (
  弄强名称令牌的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- `S_OK`如果该方法已成功完成，则为;否则，表示失败的 HRESULT 值（请参阅列表的[常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+
+ `S_OK` 如果该方法已成功完成，则为;否则，表示失败的 HRESULT 值 (参阅) 列表的 [常见 HRESULT 值](/windows/win32/seccrypto/common-hresult-values) 。  
   
 ## <a name="remarks"></a>注解  
+
  强名称标记是公钥的缩写形式。 标记是从用于对程序集进行签名的公钥创建的64位哈希。 该令牌是程序集的强名称的一部分，并且可以从程序集元数据中读取。  
   
- 创建令牌后，应调用[ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)方法来释放已分配的内存。  
+ 创建令牌后，应调用 [ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) 方法来释放已分配的内存。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

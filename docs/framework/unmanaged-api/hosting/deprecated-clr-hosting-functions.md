@@ -7,30 +7,32 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9e19502672973f292991b72c7ea9b4fdc17f5707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673119"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>弃用的 CLR 承载函数
+
 本部分介绍了早期版本的托管 API 使用的非托管全局静态函数。  
   
- 除了仅由 .NET Framework 使用的基础结构函数（ `_Cor*` 函数）之外，这些函数在 .NET Framework 4 中已弃用。  
+ 除了基础结构函数 (`_Cor*` 函数) （仅由 .NET Framework 使用），这些函数在 .NET Framework 4 中已弃用。  
   
 ## <a name="activation-functions"></a>激活函数  
+
  [ClrCreateManagedInstance 函数](clrcreatemanagedinstance-function.md)  
  已弃用。 创建指定托管类型的实例。  
   
  [CoInitializeCor 函数](coinitializecor-function.md)  
- 已过时。 若要初始化公共语言运行时（CLR），请使用[CorBindToRuntimeEx](corbindtoruntimeex-function.md)或[CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)。  
+ 已过时。 若要 (CLR) 初始化公共语言运行时，请使用 [CorBindToRuntimeEx](corbindtoruntimeex-function.md) 或 [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)。  
   
  [CoInitializeEE 函数](coinitializeee-function.md)  
- 已弃用。 确保 CLR 执行引擎已加载到进程中。 改为使用[ICLRRuntimeHost：： Start](iclrruntimehost-start-method.md)方法。  
+ 已弃用。 确保 CLR 执行引擎已加载到进程中。 改为使用 [ICLRRuntimeHost：： Start](iclrruntimehost-start-method.md) 方法。  
   
  [CorBindToCurrentRuntime 函数](corbindtocurrentruntime-function.md)  
- 已弃用。 使用存储在 XML 文件中的版本信息将公共语言运行时（CLR）加载到进程中。  
+ 已弃用。 通过使用存储在 XML 文件中的版本信息，将 (CLR) 中的公共语言运行时加载到进程中。  
   
  [CorBindToRuntime 函数](corbindtoruntime-function.md)  
  已弃用。 使非托管宿主能够将 CLR 加载到进程中。  
@@ -57,6 +59,7 @@ ms.locfileid: "84504363"
  已弃用。 获取有关应用程序请求的 CLR 的版本和目录信息。  
   
 ## <a name="clr-version-functions"></a>CLR 版本函数  
+
  本节中的函数返回 CLR 版本;它们不激活 CLR。  
   
  [GetCORVersion 函数](getcorversion-function.md)  
@@ -78,6 +81,7 @@ ms.locfileid: "84504363"
  已弃用。 允许主机在显式初始化 CLR 之前确定将在进程内使用的 CLR 版本。  
   
 ## <a name="hosting-functions"></a>承载函数  
+
  [CallFunctionShim 函数](callfunctionshim-function.md)  
  已弃用。 对指定库中具有指定名称和参数的函数进行调用。  
   
@@ -100,13 +104,13 @@ ms.locfileid: "84504363"
  已过时。  
   
  [CreateDebuggingInterfaceFromVersion 函数](createdebugginginterfacefromversion-function.md)  
- 已弃用。 基于指定的版本信息创建[ICorDebug](../debugging/icordebug-interface.md)对象。  
+ 已弃用。 基于指定的版本信息创建 [ICorDebug](../debugging/icordebug-interface.md) 对象。  
   
  [CreateICeeFileGen 函数](createiceefilegen-function.md)  
- 已弃用。 创建[ICeeFileGen](iceefilegen-class.md)对象。  
+ 已弃用。 创建 [ICeeFileGen](iceefilegen-class.md) 对象。  
   
  [DestroyICeeFileGen 函数](destroyiceefilegen-function.md)  
- 已弃用。 销毁[ICeeFileGen](iceefilegen-class.md)对象。  
+ 已弃用。 销毁 [ICeeFileGen](iceefilegen-class.md) 对象。  
   
  [FExecuteInAppDomainCallback 函数指针](fexecuteinappdomaincallback-function-pointer.md)  
  已弃用。 指向 CLR 调用以执行托管代码的函数。  
@@ -127,7 +131,7 @@ ms.locfileid: "84504363"
  已弃用。 将 HRESULT 值转换为指定区域性的适当错误消息。  
   
  [LPOVERLAPPED_COMPLETION_ROUTINE 函数指针](lpoverlapped-completion-routine-function-pointer.md)  
- 已弃用。 指向一个函数，该函数在设备的重叠（即异步） i/o 完成时通知宿主。  
+ 已弃用。 指向一个函数，该函数在重叠 (即设备的异步) i/o 完成时通知宿主。  
   
  [LPTHREAD_START_ROUTINE 函数指针](lpthread-start-routine-function-pointer.md)  
  已弃用。 指向一个函数，该函数通知宿主线程已开始执行。  
@@ -139,6 +143,7 @@ ms.locfileid: "84504363"
  已弃用。 指向一个函数，该函数通知宿主等待句柄已终止或超时。  
   
 ## <a name="infrastructure-functions"></a>基础结构函数  
+
  本节中的函数仅供 .NET Framework 使用。  
   
  [_CorDllMain 函数](cordllmain-function.md)  

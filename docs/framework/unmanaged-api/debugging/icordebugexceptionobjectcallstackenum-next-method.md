@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3328a2c0-1e48-4a54-802a-9b474cf82c21
 topic_type:
 - apiref
-ms.openlocfilehash: 6fce9f61e222d0fc1763495de162a94a7fc22689
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 17d5367564ec1ec98efc264ad9a5794c0d04a947
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975974"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672131"
 ---
 # <a name="icordebugexceptionobjectcallstackenumnext-method"></a>ICorDebugExceptionObjectCallStackEnum::Next 方法
-获取指定数量的[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)实例，其中包含异常对象的调用堆栈中的信息。  
+
+获取指定数量的 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 实例，其中包含异常对象的调用堆栈中的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,19 +37,21 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `celt`  
- 中要检索的[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)实例的数目。  
+ 中要检索的 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 实例的数目。  
   
  `values`  
- 弄指针的数组，其中每个指针指向一个[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)对象。  
+ 弄指针的数组，其中每个指针指向一个 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 对象。  
   
  `pceltFetched`  
- 弄一个指针，指向实际返回的[CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md)实例的数目。  
+ 弄一个指针，指向实际返回的 [CorDebugExceptionObjectStackFrame](cordebugexceptionobjectstackframe-structure.md) 实例的数目。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -5,22 +5,24 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-ms.openlocfilehash: 91f311818b615ea8f166bb3362ec52d39fcd0297
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 49f026b8e1a3dd78a62091e77a5aba0c9a2e09d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671832"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 调试
+
 本部分中的主题描述了公共语言运行时 (CLR) 提供用于支持调试在 Windows 操作系统或在 Macintosh 平台上运行的基于 Silverlight 的应用程序的环境和接口。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [EnumerateCLRs 函数](enumerateclrs-function.md)  
  提供枚举进程中 CLR 的机制。  
   
  [CloseCLREnumeration 函数](closeclrenumeration-function.md)  
- 关闭位于[EnumerateCLRs 函数](enumerateclrs-function.md)所返回的句柄数组中的所有有效 CLR 继续启动事件，并释放该句柄和字符串路径数组的内存。  
+ 关闭位于 [EnumerateCLRs 函数](enumerateclrs-function.md)所返回的句柄数组中的所有有效 CLR 继续启动事件，并释放该句柄和字符串路径数组的内存。  
   
  [CreateCoreClrDebugTarget 函数](createcoreclrdebugtarget-function.md)  
  创建进程和运行时枚举的远程目标连接。  
@@ -32,7 +34,7 @@ ms.locfileid: "76790316"
  从目标进程中的 CLR 路径创建版本字符串。  
   
  [CreateDebuggingInterfaceFromVersion 函数](createdebugginginterfacefromversion-function-for-silverlight.md)  
- 接受从[CreateVersionStringFromModule 函数](createversionstringfrommodule-function.md)函数返回的 CLR 版本字符串，并返回相应的调试器接口。  
+ 接受从 [CreateVersionStringFromModule 函数](createversionstringfrommodule-function.md)函数返回的 CLR 版本字符串，并返回相应的调试器接口。  
   
  [CoreClrDebugProcInfo 结构](coreclrdebugprocinfo-structure.md)  
  表示在远程计算机上运行的进程。  
@@ -54,7 +56,7 @@ ms.locfileid: "76790316"
   
 ## <a name="see-also"></a>另请参阅
 
-- [调试组件类](debugging-coclasses.md)
+- [调试 Coclass](debugging-coclasses.md)
 - [调试接口](debugging-interfaces.md)
 - [调试全局静态函数](debugging-global-static-functions.md)
 - [调试枚举](debugging-enumerations.md)

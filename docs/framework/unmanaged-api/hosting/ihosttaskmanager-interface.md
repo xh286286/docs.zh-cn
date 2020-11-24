@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: deb14d291bfd511e8f3534f3c5e32787c259c5e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501390"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673106"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager 接口
-提供允许公共语言运行时（CLR）通过主机而不是使用标准操作系统线程或纤程函数来处理任务的方法。  
+
+提供一些方法，使公共语言运行时 (CLR) 可以通过主机使用任务，而不是使用标准操作系统线程处理或纤程函数。  
   
 ## <a name="methods"></a>方法  
   
@@ -38,9 +39,9 @@ ms.locfileid: "84501390"
 |[GetCurrentTask 方法](ihosttaskmanager-getcurrenttask-method.md)|获取一个接口指针，该指针指向正在进行此调用的操作系统线程上当前正在执行的任务。|  
 |[GetStackGuarantee 方法](ihosttaskmanager-getstackguarantee-method.md)|获取在堆栈操作完成之后但在关闭进程之前保证可用的堆栈空间量。|  
 |[LeaveRuntime 方法](ihosttaskmanager-leaveruntime-method.md)|通知宿主托管代码将要对非托管函数进行调用。|  
-|[ReverseEnterRuntime 方法](ihosttaskmanager-reverseenterruntime-method.md)|通知宿主从非托管代码向公共语言运行时（CLR）发出调用。|  
+|[ReverseEnterRuntime 方法](ihosttaskmanager-reverseenterruntime-method.md)|通知宿主从非托管代码向公共语言运行时 (CLR) 发出调用。|  
 |[ReverseLeaveRuntime 方法](ihosttaskmanager-reverseleaveruntime-method.md)|通知宿主控件离开 CLR，并进入从托管代码调用的非托管函数。|  
-|[SetCLRTaskManager 方法](ihosttaskmanager-setclrtaskmanager-method.md)|向宿主提供一个接口指针，该指针指向 CLR 实现的[ICLRTaskManager](iclrtaskmanager-interface.md)实例。|  
+|[SetCLRTaskManager 方法](ihosttaskmanager-setclrtaskmanager-method.md)|向宿主提供一个接口指针，该指针指向 CLR 实现的 [ICLRTaskManager](iclrtaskmanager-interface.md) 实例。|  
 |[SetLocale 方法](ihosttaskmanager-setlocale-method.md)|通知宿主 CLR 已更改当前任务的区域设置。|  
 |[SetStackGuarantee 方法](ihosttaskmanager-setstackguarantee-method.md)|保留以仅供内部使用。|  
 |[SetUILocale 方法](ihosttaskmanager-setuilocale-method.md)|通知宿主用户界面区域设置在当前任务上已更改。|  
@@ -48,14 +49,16 @@ ms.locfileid: "84501390"
 |[SwitchToTask 方法](ihosttaskmanager-switchtotask-method.md)|通知宿主应切换到当前任务。|  
   
 ## <a name="remarks"></a>注解  
- `IHostTaskManager`允许 CLR 创建和管理任务，以便在控制从托管到非托管代码的传输时，为宿主提供挂钩，并指定在代码执行期间宿主可以和不能执行的某些操作。  
+
+ `IHostTaskManager` 允许 CLR 创建和管理任务，以便在控制从托管到非托管代码的传输时，为宿主提供挂钩，并指定在代码执行期间宿主可以和不能执行的某些操作。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

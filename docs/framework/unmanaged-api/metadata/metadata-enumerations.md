@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-ms.openlocfilehash: 2409998c53aee8cb76e66cbc9a6cd92ad9fb6cd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d0a146ff5b6887e6678ee69d7e39731bd109c6d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489616"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672898"
 ---
 # <a name="metadata-enumerations"></a>元数据枚举
+
 本节描述元数据 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [AssemblyFlags 枚举](assemblyflags-enumeration.md)  
  包含一些值，用于描述程序集的运行时函数。  
   
@@ -24,16 +26,16 @@ ms.locfileid: "84489616"
  包含一些值，用于描述程序集引用的函数。  
   
  [CeeSectionAttr 枚举](ceesectionattr-enumeration.md)  
- 提供指定节的属性的值，供[ICeeGen](iceegen-interface.md)接口使用。  
+ 提供指定节的属性的值，供 [ICeeGen](iceegen-interface.md) 接口使用。  
   
  [CeeSectionRelocType 枚举](ceesectionreloctype-enumeration.md)  
- 提供一些值，以影响对 `reloc` [ICeeGen：： AddSectionReloc](iceegen-addsectionreloc-method.md)方法的调用中发出的指令的类型。  
+ 提供一些值，以影响对 `reloc` [ICeeGen：： AddSectionReloc](iceegen-addsectionreloc-method.md) 方法的调用中发出的指令的类型。  
   
  [COINITICOR 枚举](coiniticor-enumeration.md)  
- 指定初始化公共语言运行时[CoInitializeCor](../hosting/coinitializecor-function.md)使用的常量。  
+ 指定初始化公共语言运行时 [CoInitializeCor](../hosting/coinitializecor-function.md) 使用的常量。  
   
  [COINITIEE 枚举](coinitiee-enumeration.md)  
- 指定初始化公共语言运行时[CoInitializeEE](../hosting/coinitializeee-function.md)使用的常量。  
+ 指定初始化公共语言运行时 [CoInitializeEE](../hosting/coinitializeee-function.md) 使用的常量。  
   
  [CorArgType 枚举](corargtype-enumeration.md)  
  包含一些值，用于描述运行时句柄的本机类型。  
@@ -66,13 +68,13 @@ ms.locfileid: "84489616"
  包含一些值，用于描述字段的相应元数据。  
   
  [CorFileFlags 枚举](corfileflags-enumeration.md)  
- 包含一些值，这些值描述在对[IMetaDataAssemblyEmit：:D efinefile](imetadataassemblyemit-definefile-method.md)方法的调用中定义的文件的类型。  
+ 包含一些值，这些值描述在对 [IMetaDataAssemblyEmit：:D efinefile](imetadataassemblyemit-definefile-method.md) 方法的调用中定义的文件的类型。  
   
  [CorFileMapping 枚举](corfilemapping-enumeration.md)  
- 包含一些值，这些值描述从对[IMetaDataInfo：： GetFileMapping](imetadatainfo-getfilemapping-method.md)方法的调用返回的文件映射的类型。  
+ 包含一些值，这些值描述从对 [IMetaDataInfo：： GetFileMapping](imetadatainfo-getfilemapping-method.md) 方法的调用返回的文件映射的类型。  
   
  [CorGenericParamAttr 枚举](corgenericparamattr-enumeration.md)  
- 包含一些值，这些值描述 <xref:System.Type> 泛型类型的参数， [IMetaDataEmit2：:D efinegenericparam](imetadataemit2-definegenericparam-method.md)方法的调用中使用。  
+ 包含一些值，这些值描述 <xref:System.Type> 泛型类型的参数， [IMetaDataEmit2：:D efinegenericparam](imetadataemit2-definegenericparam-method.md) 方法的调用中使用。  
   
  [CorImportOptions 枚举](corimportoptions-enumeration.md)  
  包含一些标志值，用于在导入当前作用域范围外的程序集的过程中控制行为。  
@@ -114,7 +116,7 @@ ms.locfileid: "84489616"
  包含一些值，用于描述方法参数的元数据。  
   
  [CorPEKind 枚举](corpekind-enumeration.md)  
- 包含一些值，这些值描述可移植的可执行文件，该文件是从对[IMetaDataImport2：： GetPEKind](imetadataimport2-getpekind-method.md)方法的调用返回的。  
+ 包含一些值，这些值描述可移植的可执行文件，该文件是从对 [IMetaDataImport2：： GetPEKind](imetadataimport2-getpekind-method.md) 方法的调用返回的。  
   
  [CorPinvokeMap 枚举](corpinvokemap-enumeration.md)  
  包含一些值，用于描述 PInvoke 调用的功能。  
@@ -150,12 +152,13 @@ ms.locfileid: "84489616"
  包含一些值，用于描述非托管的调用约定。  
   
  [CorValidatorModuleType 枚举](corvalidatormoduletype-enumeration.md)  
- 提供[IMetaDataValidate](imetadatavalidate-interface.md)接口用于指定模块类型的值（PE 文件与 .obj 文件）。  
+ 提供 [IMetaDataValidate](imetadatavalidate-interface.md) 接口用于指定 (PE 文件与 .obj 文件) 模块的类型的值。  
   
  [COUNINITIEE 枚举](couninitiee-enumeration.md)  
- 指定初始化公共语言运行时[CoUninitializeEE](../hosting/couninitializeee-function.md)使用的常量。  
+ 指定初始化公共语言运行时 [CoUninitializeEE](../hosting/couninitializeee-function.md) 使用的常量。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [元数据接口](metadata-interfaces.md)  
   
  [元数据全局静态函数](metadata-global-static-functions.md)  

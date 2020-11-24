@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 29f2401e2e3faccae05ca5249fcd7d9e89aacb46
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c155373f7da47e904c94a44efa2fba42309d4218
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007606"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671351"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 枚举
+
 提供一些值，用于指示本机代码中链接的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -40,7 +41,7 @@ typedef enum
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`nltNone`|指示未指定任何关键字。|  
 |`nltAnsi`|指示指定了 ANSI 关键字。|  
@@ -50,11 +51,12 @@ typedef enum
 |`nltMaxValue`|未使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

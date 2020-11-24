@@ -2,12 +2,12 @@
 title: 利用容器和协调器
 description: 利用 Azure 中的 Docker 容器和 Kubernetes 协调器
 ms.date: 05/31/2020
-ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877569"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672508"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和协调器
 
@@ -78,7 +78,7 @@ AKS 是一种基于群集的技术。 联合虚拟机或节点的池部署到 Az
 
 ## <a name="what-are-the-scaling-benefits"></a>缩放的优点是什么？
 
-基于容器构建的服务可以利用 Kubernetes 等业务流程工具提供的缩放权益。 设计容器仅知道自己的情况。 如果有多个需要协同工作的容器，则应将其组织在更高的级别。 组织大量的容器及其共享依赖项（如网络配置）是业务流程工具在其中节省时间的地方！ Kubernetes 在一组容器上创建一个抽象层，然后将它们 *组织到 pod*。 Pod 在称为 *节点*的辅助角色计算机上运行。 此组织结构称为 *群集*。 图3-3 显示了 Kubernetes 群集的不同组件。
+基于容器构建的服务可以利用 Kubernetes 等业务流程工具提供的缩放权益。 设计容器仅知道自己的情况。 如果有多个需要协同工作的容器，则应将其组织在更高的级别。 组织大量的容器及其共享依赖项（如网络配置）是业务流程工具在其中节省时间的地方！ Kubernetes 在一组容器上创建一个抽象层，然后将它们 *组织到 pod*。 Pod 在称为 *节点* 的辅助角色计算机上运行。 此组织结构称为 *群集*。 图3-3 显示了 Kubernetes 群集的不同组件。
 
 ![Kubernetes 群集组件。 ](./media/kubernetes-cluster-components.png)
 **图 3-3**。 Kubernetes 群集组件。
@@ -184,12 +184,12 @@ Visual Studio 支持基于 web 的应用程序的 Docker 开发。 创建新的 
 如果选择此选项，则会 `Dockerfile` 在其根中创建项目，该项目可用于在 Docker 容器中生成和托管应用。 图 3-6 中显示了一个示例 Dockerfile
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"

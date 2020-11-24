@@ -14,14 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7f3e4eef4a7e378529c2097a8fe1a753a98c961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e678aca5baf82c07ec9fc5c85cef22630af5ab0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553709"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672326"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函数
+
 如果格式转换是基于时间的，则将一个或两个原始性能数据值转换为指定格式。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +48,7 @@ int FormatFromRawValue (
 `dwFormat`\
 中原始性能数据的转换格式。 可以为下列值之一：
 
-|常数  |Value  |说明 |
+|返回的常量  |Value  |说明 |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 将计算的值作为双精度浮点值返回。 |
 | `PDH_FMT_LARGE` | 0x00000400 | 将计算的值作为64位整数返回。 |
@@ -55,7 +56,7 @@ int FormatFromRawValue (
 
 先前的值之一可以运算以下缩放标志之一：
 
-|常数  |Value  |说明 |
+|返回的常量  |Value  |说明 |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | 不要应用计数器的缩放系数。 |
 | `PDH_FMT_1000` | 0x00002000 | 将最终值乘以1000。 |
@@ -76,24 +77,24 @@ int FormatFromRawValue (
 
 此函数返回以下值：
 
-|常数  |Value  |说明  |
+|返回的常量  |Value  |说明  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | 函数调用成功。 |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 必需的参数缺失或不正确。 |
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | 句柄不是有效的 PDH 对象。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 此函数包装对 [FormatFromRawValue](/previous-versions/ms231047(v=vs.85)) 函数的调用。
 
 ## <a name="requirements"></a>要求
 
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。
 
  **库：** PerfCounter.dll
 
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WMI 和性能计数器（非托管 API 参考）](index.md)

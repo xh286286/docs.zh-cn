@@ -15,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-ms.openlocfilehash: deaebbce3b9b8a26bf9668b826a6818dba94dcc3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 855f8a5d3582bbad59301a344d8a51198c40a051
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673041"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 方法
-通知宿主当前正在执行的任务即将离开公共语言运行时（CLR）并输入非托管代码。  
+
+通知宿主当前正在执行的任务即将使公共语言运行时 (CLR) 并输入非托管代码。  
   
 > [!IMPORTANT]
-> 对应的对[IHostTaskManager：： EnterRuntime](ihosttaskmanager-enterruntime-method.md)的调用会通知宿主当前正在执行的任务是重新进入托管代码。  
+> 对应的对 [IHostTaskManager：： EnterRuntime](ihosttaskmanager-enterruntime-method.md) 的调用会通知宿主当前正在执行的任务是重新进入托管代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,6 +38,7 @@ HRESULT LeaveRuntime (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `target`  
  中要调用的非托管函数的映射可移植可执行文件中的地址。  
   
@@ -44,7 +46,7 @@ HRESULT LeaveRuntime (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`已成功返回。|  
+|S_OK|`LeaveRuntime` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -53,6 +55,7 @@ HRESULT LeaveRuntime (
 |E_OUTOFMEMORY|没有足够的内存可用来完成请求的分配。|  
   
 ## <a name="remarks"></a>注解  
+
  与非托管代码之间的调用序列可以嵌套。 例如，下面的列表描述了一种假设的情况，在这种情况下 `LeaveRuntime` ，对、 [IHostTaskManager：： ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)、 [IHostTaskManager：： ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)的调用序列，并 `IHostTaskManager::EnterRuntime` 允许主机标识嵌套层。  
   
 |操作|对应的方法调用|  
@@ -65,11 +68,12 @@ HRESULT LeaveRuntime (
 |第一个非托管函数会将执行返回到 Visual Basic 程序。|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
