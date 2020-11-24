@@ -2,7 +2,6 @@
 title: 销毁线程
 description: 了解需销毁 .NET 中的线程时的可选方法，例如协作取消或 Thread.Abort 方法。 了解如何处理 ThreadAbortException。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: caf7e29742bd7c0481badeeace91b7851520ad12
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: be31b0232889227fa5d4990c9481305eea343f11
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188362"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826477"
 ---
 # <a name="destroying-threads"></a>销毁线程
 

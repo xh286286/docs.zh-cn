@@ -2,19 +2,18 @@
 title: 如何：处理并行循环中的异常
 description: 了解如何在 .NET 中处理并行循环中的异常。 查看有关如何将循环中的所有异常包装在 System.AggregateException 中的示例。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: e8478f27b21b9b9dbf85d68f766c24aa5b9cf600
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768971"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825749"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>如何：处理并行循环中的异常
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 重载没有任何用于处理可能引发的异常的特殊机制。 在这一方面，它们类似于常规 `for` 和 `foreach` 循环（在 Visual Basic 中为 `For` 和 `For Each`）；未处理的异常会导致循环在当前运行的迭代完成后立即终止。

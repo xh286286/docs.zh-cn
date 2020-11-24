@@ -2,7 +2,6 @@
 title: 如何：实现监视程序
 description: 在 .NET 中实现监视程序。 观察程序设计模式要求区分观察程序（注册获取通知）和提供程序。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 71df673b580f711ad692454d12beea991810f508
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064205"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828330"
 ---
 # <a name="how-to-implement-an-observer"></a>如何：实现监视程序
 观察程序设计模式要求区分观察程序（注册获取通知）和提供程序（监视数据并将通知发送到一个或多个观察程序）。 本主题介绍了如何创建观察程序。 相关主题[如何：实现提供程序](how-to-implement-a-provider.md)介绍了如何创建提供程序。  

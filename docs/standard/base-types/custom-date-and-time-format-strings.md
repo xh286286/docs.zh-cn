@@ -2,7 +2,6 @@
 title: 自定义日期和时间格式字符串
 description: 了解如何使用自定义日期和时间格式字符串将 DateTime 或 DateTimeOffset 值转换为文本表示形式，或分析日期和时间字符串。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.topic: reference
 dev_langs:
 - csharp
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: d58bcc4008c706395aaeee3b5dc9ea3fa96cce9b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888706"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824449"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 

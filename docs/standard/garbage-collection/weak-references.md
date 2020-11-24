@@ -2,19 +2,18 @@
 title: 弱引用
 description: 了解弱引用，它可以允许应用程序访问对象，同时也允许 .NET 垃圾回收器收集相应的对象。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - weak references, short
 - weak references, using
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1c18b4fa979058893e0683620ec6cff8e7b15b9b
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768178"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827355"
 ---
 # <a name="weak-references"></a>弱引用
 如果应用程序的代码可以访问一个正由该程序使用的对象，垃圾回收器就不能回收该对象， 那么，就认为应用程序对该对象具有强引用。  

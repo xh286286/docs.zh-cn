@@ -2,7 +2,6 @@
 title: .NET 正则表达式中的反向引用构造
 description: 了解如何通过在正则表达式中使用向后引用构造来识别重复的文本元素。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 79702f266e7233c96fef6b6aa32a7e756589f49c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889148"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825255"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正则表达式中的反向引用构造
 
@@ -68,7 +67,7 @@ ms.locfileid: "92889148"
 
 `\k'` *name* `'`
 
-其中， *name* 是正则表达式模式中定义的捕获组的名称。 如果正则表达式模式中未定义 name  ，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。
+其中，*name* 是正则表达式模式中定义的捕获组的名称。 如果正则表达式模式中未定义 name  ，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。
 
 下面的示例查找字符串中双写的单词字符。 它定义一个由下列元素组成的正则表达式 `(?<char>\w)\k<char>`。
 

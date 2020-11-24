@@ -1,17 +1,16 @@
 ---
 title: 在 XSLT 处理期间解析外部资源
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-ms.openlocfilehash: d38aea1a54c93b00ec14c6aac7ed11ceba288f7b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 67c25015f1127a62c480a8fc09c5945682097124
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291495"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823675"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>在 XSLT 处理期间解析外部资源
 XSLT 转换过程中会有几个场合需要解析外部资源。  

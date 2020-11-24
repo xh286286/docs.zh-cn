@@ -2,7 +2,6 @@
 title: 暂停和中断线程
 description: 了解如何在 .NET 中暂停和中断线程。 了解如何使用方法（如 Thread.Sleep 和 Thread.Interrupt）和异常（如 ThreadInterruptedException）。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 07fe374acb3d2a3de3a1b51861feb5f8551ecc2e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 157109ad9e9009516b107b271a59267f982c784d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188960"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826217"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暂停和中断线程
 

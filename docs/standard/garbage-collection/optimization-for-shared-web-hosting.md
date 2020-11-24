@@ -1,18 +1,17 @@
 ---
 title: 针对共享 Web 承载优化
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, Web hosting
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-ms.openlocfilehash: ccaacd44f8aaed9c3178cb94f98b0f58d4d3c7d4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6398c6749028827e5e3ee79a5511ac0879facbef
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285984"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824462"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>针对共享 Web 承载优化
 如果是通过托管多个小型网站进行共享的服务器的管理员，可以将下列 `gcTrimCommitOnLowMemory` 设置添加到 .NET 目录中 Aspnet.config 文件内的 `runtime` 节点，从而优化性能和增加网站容量：  

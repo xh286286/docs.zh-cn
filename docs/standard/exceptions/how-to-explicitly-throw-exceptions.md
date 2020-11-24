@@ -2,7 +2,6 @@
 title: 如何：显式引发异常
 description: 了解如何使用 C# throw 语句或 Visual Basic Throw 语句在 .NET 中显式引发异常。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-ms.openlocfilehash: 2dd939f9edd58ba91ea74df5d6930087849f0560
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 37ba5f952d621ff2e209a3bac375b62894c944a7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662779"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828044"
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a>如何显式引发异常
 

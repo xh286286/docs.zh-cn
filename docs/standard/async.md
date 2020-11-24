@@ -4,14 +4,13 @@ description: 了解异步编程为何是一项能够简单处理多个核心上�
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 495f225a3732812666dfa2f5c8c07f6f5b849c95
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159723"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824800"
 ---
 # <a name="async-overview"></a>异步概述
 
@@ -33,7 +32,7 @@ ms.locfileid: "78159723"
 - 许多较新的 .NET APIs 都是异步的。
 - 在 .NET 中编写异步代码很简单！
 
-## <a name="whats-next"></a>后续步骤
+## <a name="whats-next"></a>下一步操作
 
 有关详细信息，请参阅[异步深度剖析](async-in-depth.md)主题。
 

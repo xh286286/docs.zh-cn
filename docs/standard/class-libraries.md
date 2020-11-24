@@ -3,14 +3,13 @@ title: .NET 类库
 description: 了解如何通过 .NET 类库，将实用功能组合为可供多个应用程序使用的模块。
 author: richlander
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: bbf8d5fa44af931e39f2bf1344c13f9d9d9bfe05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224260"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823948"
 ---
 # <a name="net-class-libraries"></a>.NET 类库
 

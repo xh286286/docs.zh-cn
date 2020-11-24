@@ -1,19 +1,18 @@
 ---
 title: 如何：在 PLINQ 中指定合并选项
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-ms.openlocfilehash: 84667fa1fbe2966c580d9c6d32e52ed686af7bb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91c5ac91538942368b66399bf0bc0132a15bf667
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288116"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825593"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>如何：在 PLINQ 中指定合并选项
 此示例展示了如何指定应用于 PLINQ 查询中所有后续运算符的合并选项。 虽然无需显式设置合并选项，但这样做可以提升性能。 若要详细了解合并选项，请参阅 [PLINQ 中的合并选项](merge-options-in-plinq.md)。  

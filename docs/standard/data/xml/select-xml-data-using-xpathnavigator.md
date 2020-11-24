@@ -1,17 +1,16 @@
 ---
 title: 使用 XPathNavigator 选择 XML 数据
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: d5e7074fc8c68a0a0243ea4ad237e713e0a729b3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 791c1d16db6a2079ccccebf4dc33d5a0eb12d3c5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289052"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824969"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 选择 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法，用于使用 XPath 表达式在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中选择节点集。 选择后，可以循环访问所选的节点集。  

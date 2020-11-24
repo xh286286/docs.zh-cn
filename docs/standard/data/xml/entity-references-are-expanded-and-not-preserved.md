@@ -1,14 +1,13 @@
 ---
 title: 扩展但不保留实体引用
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-ms.openlocfilehash: 1d26e9a35497bb0d5293e8a5b630bf4356325401
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a446ef35cc9e22660e66d71a9c9332f80117d1ae
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292041"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827667"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>扩展但不保留实体引用
 如果实体引用进行扩展且替换为它表示的文本，将不创建 XmlEntityReference  节点。 相反，将分析实体声明，并复制通过声明内容创建的节点以取代 XmlEntityReference  。 因此，`&publisher;` 示例不保存 `&publisher;`，而是创建 XmlText  节点。  

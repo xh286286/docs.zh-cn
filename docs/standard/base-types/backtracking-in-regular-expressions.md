@@ -2,7 +2,6 @@
 title: .NET 正则表达式中的回溯
 description: 了解如何在正则表达式模式匹配中控制回溯的使用。
 ms.date: 11/12/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - strings [.NET], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: b8bd8308b91c2c358f4a462967424f55fa316504
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a15ef27f71eac9ed12889054283f8ac41d85922f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889135"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825242"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 当正则表达式模式包含可选[限定符](quantifiers-in-regular-expressions.md)或[备用构造](alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  

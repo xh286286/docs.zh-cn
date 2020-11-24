@@ -1,7 +1,6 @@
 ---
 title: 如何：取消数据流块
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285542"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825853"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>如何：取消数据流块
 本文档介绍如何在应用程序中启用取消。 此示例使用 Windows 窗体显示数据流管道中工作项的活动位置以及取消的效果。  
@@ -24,7 +23,7 @@ ms.locfileid: "84285542"
   
 ## <a name="to-create-the-windows-forms-application"></a>创建 Windows 窗体应用程序  
   
-1. 创建一个 C# 或 Visual Basic **Windows 窗体应用程序**项目。 在以下步骤中，该项目命名为 `CancellationWinForms`。  
+1. 创建一个 C# 或 Visual Basic **Windows 窗体应用程序** 项目。 在以下步骤中，该项目命名为 `CancellationWinForms`。  
   
 2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic，则为 Form1.vb）添加了 <xref:System.Windows.Forms.ToolStrip> 控件。  
   

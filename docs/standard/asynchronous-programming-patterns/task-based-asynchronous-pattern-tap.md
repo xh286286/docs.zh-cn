@@ -2,7 +2,6 @@
 title: 基于任务的异步模式 (TAP)
 description: 了解基于任务的异步模式 (TAP)。 建议将 TAP 异步设计模式用于 .NET 中的开发。
 ms.date: 02/26/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889239"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824013"
 ---
 # <a name="task-based-asynchronous-pattern"></a>基于任务的异步模式
 

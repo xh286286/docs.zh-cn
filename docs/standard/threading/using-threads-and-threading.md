@@ -2,17 +2,16 @@
 title: 使用线程和线程处理
 description: 了解如何在 .NET 中使用线程和线程处理，以便编写应用程序来同时执行多种操作（多线程处理）。
 ms.date: 08/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 127ea9e28d9ce303270512bf86bf4eecf2f86437
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 85968cfb1a228826429876e525f0c8452f97cfc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188700"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826087"
 ---
 # <a name="using-threads-and-threading"></a>使用线程和线程处理
 

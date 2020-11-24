@@ -2,19 +2,18 @@
 title: 如何：使用分区本地变量编写 Parallel.ForEach 循环
 description: 请参阅如何在 .NET 中编写使用分区局部变量的 Parallel.ForEach 循环的示例。
 ms.date: 06/26/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: f598955fb2d6800f81bce050bdf474fc63bfb554
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f8cb7f465d4594c5b9405e8152c6c4a3f3e1ff7b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599771"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825424"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>如何：使用分区本地变量编写 Parallel.ForEach 循环
 

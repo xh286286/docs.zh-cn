@@ -2,19 +2,18 @@
 title: 如何：从任务中返回值
 description: 了解如何使用 System.Threading.Tasks.Task<TResult> 类型从 .NET 中的 Result 属性返回值。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
-ms.openlocfilehash: 051cef7cac654e4369ec1486884876004370ba0b
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: c7a4a683545c9ef0448d9cdce769aae79215aecf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767970"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825606"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>如何：从任务中返回值
 此示例演示如何使用 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 类型，以返回 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性的值。 它要求 C:\Users\Public\Pictures\Sample Pictures\ 目录存在，并且该目录包含文件。  

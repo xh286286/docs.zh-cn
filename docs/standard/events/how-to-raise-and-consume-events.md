@@ -2,7 +2,6 @@
 title: 如何：引发事件和使用事件
 description: 在 .NET 中引发和使用事件。 请参阅使用 EventHandler 委托、EventHandler<TEventArgs> 委托以及自定义委托的示例。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - raising events
 - events [.NET], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: c9121c6b2635788ad8ad7abc6d2b5a58448049a6
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 9d068981694c212c5cb29a67ccd2fcb19dcc907b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064192"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828291"
 ---
 # <a name="how-to-raise-and-consume-events"></a>如何：引发事件和使用事件
 本主题中的示例演示如何处理事件。 它们包含 <xref:System.EventHandler>、<xref:System.EventHandler%601> 委托和自定义委托的示例，用于说明包含数据和不包含数据的事件。  

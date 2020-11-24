@@ -2,7 +2,6 @@
 title: 如何：使用 Parallel.Invoke 执行并行操作
 description: 请参阅如何在任务并行库 (TPL) 中使用对 .NET 中共享数据源执行并行操作的 Parallel.Invoke 方法。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: 084ade48b1406d23a11eb311739525f35ac973df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6ec8f03216cc6225e909f5dc3128469047826166
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596340"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825476"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 Parallel.Invoke 执行并行操作
 

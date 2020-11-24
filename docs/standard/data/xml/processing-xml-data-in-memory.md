@@ -1,14 +1,13 @@
 ---
 title: 内存中 XML 数据处理
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 0f64b53588e08520d38c05ec6060f9aef58bd7d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b74e029bcda4476d166b83ddecb06e5d607fc3d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556481"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824684"
 ---
 # <a name="processing-xml-data-in-memory"></a>内存中 XML 数据处理
 Microsoft .NET Framework 包括三种用于处理 XML 数据的模型：<xref:System.Xml.XmlDocument> 类、<xref:System.Xml.XPath.XPathDocument> 类，以及 [LINQ to XML (C#)](../../linq/linq-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md)。  
