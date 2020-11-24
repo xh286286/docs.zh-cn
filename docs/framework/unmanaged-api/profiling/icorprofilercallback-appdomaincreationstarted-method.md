@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: fcebe65b7f39dd2849946e445a694ad5e9b1a65d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 901546c80c3bee32afddfa8e8cffbd2b679bc43b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500476"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685378"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted 方法
+
 通知探查器正在创建应用程序域。  
   
 ## <a name="syntax"></a>语法  
@@ -39,10 +40,12 @@ HRESULT AppDomainCreationStarted(
   \[in] 标识正在创建的域。
   
 ## <a name="remarks"></a>注解  
- 在调用[ICorProfilerCallback：： AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md)方法之前，ID 对任何信息请求都无效。  
+
+ 在调用 [ICorProfilerCallback：： AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md) 方法之前，ID 对任何信息请求都无效。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f74d9c5-1377-4958-b842-6306d611cbd5
 topic_type:
 - apiref
-ms.openlocfilehash: 7a4ffc0c417ae839e5c97ffe6884bc3230a603b7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 13a433157e0c92653edf234f1f1f885270196ffd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610101"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686405"
 ---
 # <a name="isymunmanagedwriterclosenamespace-method"></a>ISymUnmanagedWriter::CloseNamespace 方法
+
 关闭最近打开的命名空间。  
   
 ## <a name="syntax"></a>语法  
@@ -32,9 +33,11 @@ HRESULT CloseNamespace();
 ```  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

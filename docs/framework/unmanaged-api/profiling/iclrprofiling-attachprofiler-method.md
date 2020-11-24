@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500554"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685417"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
+
 将指定的探查器附加到指定的进程中。  
   
 ## <a name="syntax"></a>语法  
@@ -57,13 +58,14 @@ HRESULT AttachProfiler(
 
 - `pvClientData`
 
-  \[in] 一个指针，指向由[ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)方法传递到探查器的数据。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。
+  \[in] 一个指针，指向由 [ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 方法传递到探查器的数据。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。
 
 - `cbClientData`
 
   \[in] 指向的数据的大小（以字节为单位） `pvClientData` 。
 
 ## <a name="return-value"></a>返回值  
+
  此方法将返回以下 HRESULT。  
   
 |HRESULT|说明|  
@@ -79,15 +81,17 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|尚未开始加载探查器，超时就已过期。 可重试附加操作。 当目标进程中的终结器运行时间长于超时值时，就会出现超时。|  
 |E_INVALIDARG|一个或多个参数具有无效值。|  
 |E_FAIL|出现其他未指定错误。|  
-|其他错误代码|如果探查器的[ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)方法返回一个指示失败的 hresult，则 `AttachProfiler` 返回相同的 hresult。 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
+|其他错误代码|如果探查器的 [ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 方法返回一个指示失败的 hresult，则 `AttachProfiler` 返回相同的 hresult。 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
   
 ## <a name="remarks"></a>注解  
   
 ## <a name="memory-management"></a>内存管理  
+
  与 COM 约定一致，`AttachProfiler` 的调用方（例如，由探查器开发人员创作的触发器代码）将负责分配和释放 `pvClientData` 参数指向的数据的内存。 当 CLR 执行 `AttachProfiler` 调用时，会创建 `pvClientData` 指向的内存的副本，并将其传输到目标进程中。 当目标进程内部的 CLR 接收到自己的 `pvClientData` 块副本时，会通过 `InitializeForAttach` 方法将块传递给探查器，然后从目标进程释放其 `pvClientData` 块的副本。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

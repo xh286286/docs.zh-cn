@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-ms.openlocfilehash: 12a1142759532890f541a7c81006f8b3aed4d299
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6520815106ae1084d4281d5ebeb0680bb9bb91c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686301"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 枚举
-保留以供将来扩展[CustomDumpItem](customdumpitem-structure.md)结构。  
+
+保留以供将来扩展 [CustomDumpItem](customdumpitem-structure.md) 结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,16 +35,17 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|保留供将来使用。|  
+|`DUMP_ITEM_None`|留待将来使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** Mscoree.dll  
+ **库：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
