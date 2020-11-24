@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: e494bbb24e8f2245593e7945625e72e70ae1dde5
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1ca9e55a2183ca4293d30607496b588cbf21d6dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892774"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679941"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController 接口
 
@@ -31,7 +31,7 @@ ms.locfileid: "82892774"
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|此方法已过时。|  
 |`ICorDebugController::CommitChanges`|此方法已过时。|  
-|[Continue 方法](icordebugcontroller-continue-method.md)|调用[ICorDebugController：： Stop](icordebugcontroller-stop-method.md)后，继续执行托管线程。|  
+|[Continue 方法](icordebugcontroller-continue-method.md)|调用 [ICorDebugController：： Stop](icordebugcontroller-stop-method.md)后，继续执行托管线程。|  
 |[Detach 方法](icordebugcontroller-detach-method.md)|将调试器与进程或应用程序域分离。|  
 |[EnumerateThreads 方法](icordebugcontroller-enumeratethreads-method.md)|获取进程中活动托管线程的枚举器。|  
 |[HasQueuedCallbacks 方法](icordebugcontroller-hasqueuedcallbacks-method.md)|获取一个值，该值指示当前是否为指定线程排队任何托管回调。|  
@@ -40,14 +40,16 @@ ms.locfileid: "82892774"
 |[Stop 方法](icordebugcontroller-stop-method.md)|在进程中运行托管代码的所有线程上执行协作停止。|  
 |[Terminate 方法](icordebugcontroller-terminate-method.md)|用指定的退出代码终止进程。|  
   
-## <a name="remarks"></a>备注  
- 如果`ICorDebugController`正在控制某个进程，则该范围将包括该进程的所有线程。 如果`ICorDebugController`正在控制某个应用程序域，则该作用域只包含该特定应用程序域的线程。  
+## <a name="remarks"></a>注解  
+
+ 如果 `ICorDebugController` 正在控制某个进程，则该范围将包括该进程的所有线程。 如果 `ICorDebugController` 正在控制某个应用程序域，则该作用域只包含该特定应用程序域的线程。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -3,12 +3,12 @@ title: 异步编程
 description: 了解适用于 SQL Server 的 .NET Framework 数据提供程序中的异步编程，包括 .NET Framework 4.5 中引入的增强功能。
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9065aea02dc3f021ed485a4eb6e56cfcece44fac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558467"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677942"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -39,9 +39,9 @@ ms.locfileid: "90558467"
 
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [在 .NET 4.5 (第1部分中使用 SqlDataReader 的新异步方法) ](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [在 .NET Framework 4.5 (第1部分中使用 SqlDataReader 的新异步方法) ](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [在 .NET 4.5 (第2部分中使用 SqlDataReader 的新异步方法) ](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [在 .NET Framework 4.5 (第2部分中使用 SqlDataReader 的新异步方法) ](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 当用户接口无响应或服务器无法扩展时，很可能需要使代码异步程度更高。 以前，编写异步代码涉及安装回调（也称为延续）来表示异步操作完成后发生的逻辑。 这将增加异步代码结构的复杂性（与同步代码相比）。
 
@@ -451,7 +451,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          AsyncSqlBulkCopyMARS().Wait();
       }
 
-      // 3.1.1 Synchronous bulk copy in .NET 4.5
+      // 3.1.1 Synchronous bulk copy in .NET Framework 4.5
       private static void SynchronousSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             conn.Open();
@@ -473,7 +473,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 
       }
 
-      // 3.1.2 Asynchronous bulk copy in .NET 4.5
+      // 3.1.2 Asynchronous bulk copy in .NET Framework 4.5
       private static async Task AsyncSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -564,7 +564,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          }
       }
 
-      // 3.5 Copying data from SQL Server to SQL Azure in .NET 4.5
+      // 3.5 Copying data from SQL Server to SQL Azure in .NET Framework 4.5
       //private static async Task AsyncSqlBulkCopySqlServerToSqlAzure() {
       //   using (SqlConnection srcConn = new SqlConnection(connectionString))
       //   using (SqlConnection destConn = new SqlConnection(azureConnectionString)) {
@@ -641,10 +641,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>异步使用多个命令与 MARS
 
-该示例将打开与 AdventureWorks**** 数据库的单个连接。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象时，将创建一个 <xref:System.Data.SqlClient.SqlDataReader>。 使用阅读器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个阅读器的 WHERE 子句的输入。
+该示例将打开与 AdventureWorks 数据库的单个连接。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象时，将创建一个 <xref:System.Data.SqlClient.SqlDataReader>。 使用阅读器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个阅读器的 WHERE 子句的输入。
 
 > [!NOTE]
-> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库****。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。
+> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。
 
 ```csharp
 using System;
@@ -712,12 +712,12 @@ class Class1 {
 
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>使用 MARS 异步读取和更新数据
 
-MARS 允许将连接用于读取操作和数据操作语言 (DML) 操作，其中有多个待处理操作。 此功能使应用程序无需处理连接繁忙错误。 此外，MARS 可以替换服务器端游标的用户，这通常会消耗更多资源。 最后，因为可以在单个连接上执行多个操作，所以，这些操作可以共享相同的事务上下文，不需要使用 sp_getbindtoken 和 sp_bindsession 系统存储过程********。
+MARS 允许将连接用于读取操作和数据操作语言 (DML) 操作，其中有多个待处理操作。 此功能使应用程序无需处理连接繁忙错误。 此外，MARS 可以替换服务器端游标的用户，这通常会消耗更多资源。 最后，因为可以在单个连接上执行多个操作，所以，这些操作可以共享相同的事务上下文，不需要使用 sp_getbindtoken 和 sp_bindsession 系统存储过程。
 
-下面的控制台应用程序演示如何使用两个包含三个 <xref:System.Data.SqlClient.SqlCommand> 对象的 <xref:System.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录由第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 通过执行计算来确定新的 OnOrderQty****。 然后，通过第三个命令对象来使用新值更新 ProductVendor 表****。 整个过程发生在单个事务中，该事务在结束时回滚。
+下面的控制台应用程序演示如何使用两个包含三个 <xref:System.Data.SqlClient.SqlCommand> 对象的 <xref:System.Data.SqlClient.SqlDataReader> 对象和一个启用了 MARS 的 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录由第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 通过执行计算来确定新的 OnOrderQty。 然后，通过第三个命令对象来使用新值更新 ProductVendor 表。 整个过程发生在单个事务中，该事务在结束时回滚。
 
 > [!NOTE]
-> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库****。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。
+> 下面的示例使用随 SQL Server 提供的 AdventureWorks 示例数据库。 示例代码中提供的连接字符串假定数据库已安装并且在本地计算机上可用。 根据环境需要修改连接字符串。
 
 ```csharp
 using System;
@@ -827,6 +827,6 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 ADO.NET 中检索和修改数据](retrieving-and-modifying-data.md)

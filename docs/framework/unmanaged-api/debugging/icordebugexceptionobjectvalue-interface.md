@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43416dd5-8892-4106-9f59-f9143b19ddb4
 topic_type:
 - apiref
-ms.openlocfilehash: 8e4f745440936a39e22faf60d10a05a0bb110606
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 6a0c33799b2b2aaa48e3b18b7b4bb37643508bd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678878"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a>ICorDebugExceptionObjectValue 接口
+
 扩展 "ICorDebugObjectValue" 接口，以提供来自托管异常对象的堆栈跟踪信息。  
   
 ## <a name="methods"></a>方法  
@@ -30,11 +31,13 @@ ms.locfileid: "82975948"
 |------------|-----------------|  
 |[EnumerateExceptionCallStack 方法](icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|获取一个枚举器，该枚举器指向嵌入到异常对象中的调用堆栈。|  
   
-## <a name="remarks"></a>备注  
- 对于派生自`QueryInterface` <xref:System.Exception?displayProperty=nameWithType>的托管对象，对的调用将成功。  
+## <a name="remarks"></a>注解  
+
+ `QueryInterface`对于派生自的托管对象，对的调用将成功 <xref:System.Exception?displayProperty=nameWithType> 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

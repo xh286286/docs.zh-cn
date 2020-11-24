@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 093f49508e8e96a4003f1aab8eed59e2fd196ba9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397177"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679268"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 方法
+
 枚举在远程计算机上运行的指定进程中的公共语言运行时 (CLR)。  
   
 ## <a name="syntax"></a>语法  
@@ -38,16 +39,18 @@ HRESULT EnumRuntimes (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `dwInternalProcessID`  
- [in] 要枚举运行时的进程的内部进程 ID。 这将 `m_dwInternalID` 来自相应的[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)。  
+ [in] 要枚举运行时的进程的内部进程 ID。 这将 `m_dwInternalID` 来自相应的 [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)。  
   
  `pcRuntimes`  
  [out] `ppRuntimes` 中返回的运行时的数量。 此值可为 0（零）。  
   
  `ppRuntimes`  
- 弄[CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md)结构的数组，这些结构表示远程目标进程中加载的运行时。  
+ 弄 [CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md) 结构的数组，这些结构表示远程目标进程中加载的运行时。  
   
 ## <a name="return-value"></a>返回值  
+
  S_OK  
  成功。  
   
@@ -60,18 +63,20 @@ HRESULT EnumRuntimes (
  E_FAIL（或其他 E_ 返回代码）  
  其他故障。  
   
-## <a name="remarks"></a>备注  
- 若要释放此方法分配的内存，请调用[ICoreClrDebugTarget：： FreeMemory](icoreclrdebugtarget-freememory-method.md)方法。  
+## <a name="remarks"></a>注解  
+
+ 若要释放此方法分配的内存，请调用 [ICoreClrDebugTarget：： FreeMemory](icoreclrdebugtarget-freememory-method.md) 方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces  
   
- **库：** mscordbi_macx86  
+ **库：** mscordbi_macx86.dll  
   
  **.NET Framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICoreClrDebugTarget 接口](icoreclrdebugtarget-interface.md)

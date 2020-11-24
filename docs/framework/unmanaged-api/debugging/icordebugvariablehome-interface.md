@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396541"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679541"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome 接口
+
 表示函数的局部变量或自变量。  
   
 ## <a name="methods"></a>方法  
@@ -39,7 +40,8 @@ ms.locfileid: "83396541"
 |[GetSlotIndex 方法](icordebugvariablehome-getslotindex-method.md)|获取本地变量的托管槽索引。|  
   
 ## <a name="example"></a>示例  
- 下面的代码片段使用名为的[ICorDebugCode4](icordebugcode4-interface.md)对象 `pCode4` 。  
+
+ 下面的代码片段使用名为的 [ICorDebugCode4](icordebugcode4-interface.md) 对象 `pCode4` 。  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -81,7 +83,8 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -89,7 +92,7 @@ for (int i = 0; i < celtFetched; i++)
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试接口](debugging-interfaces.md)
 - [ICorDebugVariableHomeEnum 接口](icordebugvariablehomeenum-interface.md)

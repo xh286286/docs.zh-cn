@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: 8889c412f414f38d1d18d33ec297e82fd052280d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: af8beb1ec627b93faeb7329a03579319ca3880ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614794"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678319"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
+
 在当前方法内定义一组序列点。 每个起始行和起始列定义方法中语句的开头。 每个结束行和结束列定义方法中语句的末尾。 应按偏移量的递增顺序对数组进行排序。 始终从方法的开头开始度量偏移量（以字节为单位）。  
   
 ## <a name="syntax"></a>语法  
@@ -39,6 +40,7 @@ HRESULT DefineSequencePoints(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `document`  
  中正在为其定义序列点的文档对象。  
   
@@ -55,15 +57,17 @@ HRESULT DefineSequencePoints(
  中序列点的起始列号。  
   
  `endLines`  
- 中序列点的结束行号。 该参数为可选参数。  
+ 中序列点的结束行号。 此参数是可选的。  
   
  `endColumns`  
- 中序列点的结束列号。 该参数为可选参数。  
+ 中序列点的结束列号。 此参数是可选的。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

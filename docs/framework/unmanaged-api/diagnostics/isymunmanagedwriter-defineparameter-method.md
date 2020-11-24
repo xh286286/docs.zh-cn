@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-ms.openlocfilehash: c695aa80ea3bf90a29ce7c5d11eda7fae5fe7b2d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c5e36443295395997303cb94202f534a83d086f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614807"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677864"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 方法
-在当前方法中定义单个参数。 参数类型从参数在方法签名中的位置（序列）中获取。  
+
+在当前方法中定义单个参数。 参数类型从参数的位置获取， (序列) 在方法的签名中。  
   
  如果在给定方法的元数据中定义了参数，则无需使用此方法再次定义这些参数。 符号读取器必须在检查符号存储区之前检查参数的正常元数据。  
   
@@ -41,6 +42,7 @@ HRESULT DefineParameter(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `name`  
  中参数名称。  
   
@@ -63,9 +65,11 @@ HRESULT DefineParameter(
  中参数规范的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 02d1ea1ef12fa158ce7ec94aeca4356ac54d4e5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503479"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679086"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 接口
+
 提供从可迁移可执行 (PE) 文件或其他源（如类型库或独立的运行时元数据二进制文件）导入和操作现有元数据的方法。  
   
 ## <a name="methods"></a>方法  
@@ -92,6 +93,7 @@ ms.locfileid: "84503479"
 |[ResolveTypeRef 方法](imetadataimport-resolvetyperef-method.md)|获取指定的 TypeRef 标记所引用的类型的类型信息。|  
   
 ## <a name="remarks"></a>注解  
+
  `IMetaDataImport` 接口的设计主要供将要导入类型信息（例如，开发工具）或管理已部署组件（例如，解析/激活服务）的工具和服务使用。 `IMetaDataImport` 中的方法属于下列任务类别：  
   
 - 枚举元数据范围内的项集合。  
@@ -103,11 +105,12 @@ ms.locfileid: "84503479"
 - Get 方法专门用来返回元数据项的单值属性。 当该属性是对另一个项的引用时，将返回该项的标记。 任何指针输入类型都可为 NULL，以指示未请求特定值。 若要获取基本上由集合对象（例如，某个类实现的接口集合）构成的属性，请使用枚举方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
