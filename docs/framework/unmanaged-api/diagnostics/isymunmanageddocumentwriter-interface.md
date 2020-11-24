@@ -14,26 +14,28 @@ helpviewer_keywords:
 ms.assetid: edc8a02b-a0ac-46e3-80c1-fb8b5cef6341
 topic_type:
 - apiref
-ms.openlocfilehash: ba5c8cffcaff38b60be7031a98d4588ec6071d76
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d56ce4d508d9e3c55b70a3a599e98ce5b254352f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687985"
 ---
-# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="61d3a-102">ISymUnmanagedDocumentWriter 接口</span><span class="sxs-lookup"><span data-stu-id="61d3a-102">ISymUnmanagedDocumentWriter Interface</span></span>
-<span data-ttu-id="61d3a-103">提供用于写入到符号存储区引用的文档的方法。</span><span class="sxs-lookup"><span data-stu-id="61d3a-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
-  
-## <a name="methods"></a><span data-ttu-id="61d3a-104">方法</span><span class="sxs-lookup"><span data-stu-id="61d3a-104">Methods</span></span>  
-  
-|<span data-ttu-id="61d3a-105">方法</span><span class="sxs-lookup"><span data-stu-id="61d3a-105">Method</span></span>|<span data-ttu-id="61d3a-106">说明</span><span class="sxs-lookup"><span data-stu-id="61d3a-106">Description</span></span>|  
-|------------|-----------------|  
-|[<span data-ttu-id="61d3a-107">SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="61d3a-107">SetCheckSum Method</span></span>](isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="61d3a-108">设置校验和信息。</span><span class="sxs-lookup"><span data-stu-id="61d3a-108">Sets checksum information.</span></span>|  
-|[<span data-ttu-id="61d3a-109">SetSource 方法</span><span class="sxs-lookup"><span data-stu-id="61d3a-109">SetSource Method</span></span>](isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="61d3a-110">为正在编写的文档设置嵌入源。</span><span class="sxs-lookup"><span data-stu-id="61d3a-110">Sets embedded source for a document that is being written.</span></span>|  
-  
-## <a name="requirements"></a><span data-ttu-id="61d3a-111">要求</span><span class="sxs-lookup"><span data-stu-id="61d3a-111">Requirements</span></span>  
- <span data-ttu-id="61d3a-112">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="61d3a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="61d3a-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="61d3a-113">See also</span></span>
+# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="826b2-102">ISymUnmanagedDocumentWriter 接口</span><span class="sxs-lookup"><span data-stu-id="826b2-102">ISymUnmanagedDocumentWriter Interface</span></span>
 
-- [<span data-ttu-id="61d3a-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="61d3a-114">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
+<span data-ttu-id="826b2-103">提供用于写入到符号存储区引用的文档的方法。</span><span class="sxs-lookup"><span data-stu-id="826b2-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
+  
+## <a name="methods"></a><span data-ttu-id="826b2-104">方法</span><span class="sxs-lookup"><span data-stu-id="826b2-104">Methods</span></span>  
+  
+|<span data-ttu-id="826b2-105">方法</span><span class="sxs-lookup"><span data-stu-id="826b2-105">Method</span></span>|<span data-ttu-id="826b2-106">说明</span><span class="sxs-lookup"><span data-stu-id="826b2-106">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="826b2-107">SetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="826b2-107">SetCheckSum Method</span></span>](isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="826b2-108">设置校验和信息。</span><span class="sxs-lookup"><span data-stu-id="826b2-108">Sets checksum information.</span></span>|  
+|[<span data-ttu-id="826b2-109">SetSource 方法</span><span class="sxs-lookup"><span data-stu-id="826b2-109">SetSource Method</span></span>](isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="826b2-110">为正在编写的文档设置嵌入源。</span><span class="sxs-lookup"><span data-stu-id="826b2-110">Sets embedded source for a document that is being written.</span></span>|  
+  
+## <a name="requirements"></a><span data-ttu-id="826b2-111">要求</span><span class="sxs-lookup"><span data-stu-id="826b2-111">Requirements</span></span>  
+
+ <span data-ttu-id="826b2-112">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="826b2-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="826b2-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="826b2-113">See also</span></span>
+
+- [<span data-ttu-id="826b2-114">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="826b2-114">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
