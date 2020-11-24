@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: ebdff88e9fdf499b809d56c4c29a906dbef9ec40
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f8334cb44042e21c086bc05c723e99b0c079fa2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008971"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677058"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 枚举
+
 指示程序集清单中编码的资源的可见性。  
   
 ## <a name="syntax"></a>语法  
@@ -38,14 +39,15 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`mrVisibilityMask`|保留。|  
 |`mrPublic`|资源是公共的。|  
 |`mrPrivate`|资源是专用的。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6193d91c8cbe0efa7cd68b97b9262acf72c9ea0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675875"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
+
 用此读取器将与之关联的元数据导入程序接口以及模块的文件名初始化符号读取器。  
   
 > [!NOTE]
@@ -39,6 +40,7 @@ HRESULT Initialize (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `importer`  
  中此读取器将与之关联的元数据导入程序接口。  
   
@@ -46,18 +48,21 @@ HRESULT Initialize (
  中模块的文件名。 可以改为使用 `pIStream` 参数。  
   
  `searchPath`  
- 中要搜索的路径。 该参数为可选参数。  
+ 中要搜索的路径。 此参数是可选的。  
   
  `pIStream`  
  中文件流，用作 filename 参数的替代项。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  只需指定 `filename` 或 `pIStream` 参数之一，而不能同时指定两者。 `searchPath` 参数是可选的。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

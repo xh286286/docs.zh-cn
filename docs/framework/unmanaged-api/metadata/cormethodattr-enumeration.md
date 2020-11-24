@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007671"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677006"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 枚举
+
 包含描述方法功能的值。  
   
 ## <a name="syntax"></a>语法  
@@ -64,7 +65,7 @@ typedef enum CorMethodAttr {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|指定成员访问。|  
 |`mdPrivateScope`|指定不能引用成员。|  
@@ -92,7 +93,8 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|指定该方法调用另一个包含安全代码的方法。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

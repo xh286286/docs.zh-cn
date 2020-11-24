@@ -6,144 +6,146 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
-ms.openlocfilehash: c4b9cdc2bc90096ab7c3b041bd8aa2742b48c35c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3dd81ceaab2ba467d4c8ca091c1c2219040a273
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179169"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676291"
 ---
 # <a name="debugging-interfaces"></a>调试接口
+
 本节描述进行程序调试处理的非托管接口，所调试的程序在公共语言运行时 (CLR) 中执行。  
   
 ## <a name="in-this-section"></a>本节内容  
- [ICLR 数据记忆区接口](iclrdataenummemoryregions-interface.md)\
+
+ [ICLRDataEnumMemoryRegions 接口](iclrdataenummemoryregions-interface.md)\
  提供对由调用方指定的内存区域进行枚举的方法。  
   
- [ICLRDataEnum内存区域回调接口](iclrdataenummemoryregionscallback-interface.md)\
+ [ICLRDataEnumMemoryRegionsCallback 接口](iclrdataenummemoryregionscallback-interface.md)\
  为 `EnumMemoryRegions` 提供一种回调方法，用于向调试器报告尝试枚举指定内存区域的结果。  
   
- [ICLR数据目标接口](iclrdatatarget-interface.md)\
+ [ICLRDataTarget 接口](iclrdatatarget-interface.md)\
  提供与目标 CLR 进程进行交互的方法。  
   
  [ICLRDataTarget2 接口](iclrdatatarget2-interface.md)\
  数据访问服务层在目标进程中操作虚拟内存区域时所用的 `ICLRDataTarget` 的子类。  
   
  [ICLRDataTarget3 接口](iclrdatatarget3-interface.md)\
- [ICLRDataTarget2](iclrdatatarget2-interface.md)的子类，提供对异常信息的访问。  
+ 提供对异常信息的访问的 [ICLRDataTarget2](iclrdatatarget2-interface.md) 的子类。  
   
- [ICLR调试接口](iclrdebugging-interface.md)\
+ [ICLRDebugging 接口](iclrdebugging-interface.md)\
  提供一些方法，用于处理模块的加载和卸载以进行调试。  
   
- [ICLR调试库提供程序接口](iclrdebugginglibraryprovider-interface.md)\
- 包括[ProvideLibrary 方法](iclrdebugginglibraryprovider-providelibrary-method.md)，该方法获取库提供程序回调接口，允许按需定位和加载通用语言运行时特定调试库。  
+ [ICLRDebuggingLibraryProvider 接口](iclrdebugginglibraryprovider-interface.md)\
+ 包括 [ProvideLibrary 方法](iclrdebugginglibraryprovider-providelibrary-method.md) 方法，该方法可获取一个库提供程序回调接口，该接口允许根据需要定位和加载特定于公共语言运行时版本的调试库。  
   
- [ICLR元形定位器接口](iclrmetadatalocator-interface.md)\
+ [ICLRMetadataLocator 接口](iclrmetadatalocator-interface.md)\
  数据访问服务层用于在目标进程中定位程序集的元数据的接口。  
   
  [ICorDebug 接口](icordebug-interface.md)\
  提供允许开发人员在 CLR 环境中调试应用程序的方法。  
   
- [ICorDebugApp域接口](icordebugappdomain-interface.md)\
+ [ICorDebugAppDomain 接口](icordebugappdomain-interface.md)\
  提供用于调试应用程序域的方法。  
   
  [ICorDebugAppDomain2 接口](icordebugappdomain2-interface.md)\
  提供处理数组、指针、函数指针和 ByRef 类型的方法。 此接口是 `ICorDebugAppDomain` 接口的扩展。  
   
  [ICorDebugAppDomain3 接口](icordebugappdomain3-interface.md)\
- 提供了用于在应用程序域中处理 Windows 运行时类型的方法。 此接口是 `ICorDebugAppDomain` 和 `ICorDebugAppDomain2` 接口的扩展。  
+ 提供用于在应用程序域中使用 Windows 运行时类型的方法。 此接口是 `ICorDebugAppDomain` 和 `ICorDebugAppDomain2` 接口的扩展。  
   
  [ICorDebugAppDomain4 接口](icordebugappdomain4-interface.md)\
- 从逻辑上扩展[ICorDebugAppDomain](icordebugappdomain-interface.md)接口，以便从 COM 可调用包装器获取托管对象。  
+ 对 [ICorDebugAppDomain](icordebugappdomain-interface.md) 接口进行逻辑扩展，以从 COM 可调用包装器获取托管对象。  
   
  [ICorDebugAppDomainEnum 接口](icordebugappdomainenum-interface.md)\
  提供一种方法，此方法从枚举中的下一个位置开始，返回指定数目的 `ICorDebugAppDomain` 值。  
   
- [ICorDebugarray值界面](icordebugarrayvalue-interface.md)\
+ [ICorDebugArrayValue 接口](icordebugarrayvalue-interface.md)\
  表示一维或多维数组的 `ICorDebugHeapValue` 的子类。  
   
- [ICorDebug组装接口](icordebugassembly-interface.md)\
+ [ICorDebugAssembly 接口](icordebugassembly-interface.md)\
  表示一个程序集。  
   
  [ICorDebugAssembly2 接口](icordebugassembly2-interface.md)\
  表示一个程序集。 此接口是 `ICorDebugAssembly` 接口的扩展。  
   
  [ICorDebugAssembly3 接口](icordebugassembly3-interface.md)\
- 从逻辑上讲，扩展[ICorDebugAssembly](icordebugassembly-interface.md)接口，以支持容器程序集及其包含的程序集。 **仅在 .NET Native 上可用。**  
+ 对 [ICorDebugAssembly](icordebugassembly-interface.md) 接口进行逻辑扩展，以便为容器程序集及其包含的程序集提供支持。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug组装Enum接口](icordebugassemblyenum-interface.md)\
+ [ICorDebugAssemblyEnum 接口](icordebugassemblyenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugAssembly` 数组。  
   
- [ICorDebugBlockingobjectenum 接口](icordebugblockingobjectenum-interface.md)\
- 为[CorDebugBlockingObject 结构](cordebugblockingobject-structure.md)列表提供枚举器。  
+ [ICorDebugBlockingObjectEnum 接口](icordebugblockingobjectenum-interface.md)\
+ 为 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 结构的列表提供枚举器。  
   
- [ICorDebugBox值界面](icordebugboxvalue-interface.md)\
+ [ICorDebugBoxValue 接口](icordebugboxvalue-interface.md)\
  表示装箱的值类对象的 `ICorDebugHeapValue` 的子类。  
   
- [ICorDebug断点接口](icordebugbreakpoint-interface.md)\
+ [ICorDebugBreakpoint 接口](icordebugbreakpoint-interface.md)\
  表示函数中的断点，或值的观察点。  
   
- [ICorDebug突破点Enum接口](icordebugbreakpointenum-interface.md)\
+ [ICorDebugBreakpointEnum 接口](icordebugbreakpointenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugBreakpoint` 数组。  
   
- [ICorDebug链界面](icordebugchain-interface.md)\
+ [ICorDebugChain 接口](icordebugchain-interface.md)\
  表示一个物理或逻辑调用堆栈段。  
   
  [ICorDebugChainEnum 接口](icordebugchainenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugChain` 数组。  
   
- [ICorDebug 类接口](icordebugclass-interface.md)\
+ [ICorDebugClass 接口](icordebugclass-interface.md)\
  表示基类型或复杂类型（即用户定义的类型）。 如果该类型为泛型类型，则 `ICorDebugClass` 表示实例化的泛型类型。  
   
  [ICorDebugClass2 接口](icordebugclass2-interface.md)\
  表示泛型类或具有 <xref:System.Type> 类型的方法参数的类。 此接口扩展了 `ICorDebugClass`。  
   
- [ICorDebugCode接口](icordebugcode-interface1.md)\
+ [ICorDebugCode 接口](icordebugcode-interface1.md)\
  表示 Microsoft 中间语言 (MSIL) 代码段或本机代码段。  
   
  [ICorDebugCode2 接口](icordebugcode2-interface.md)\
  提供扩展 `ICorDebugCode` 的功能的方法。  
   
  [ICorDebugCode3 接口](icordebugcode3-interface.md)\
- 提供扩展[ICorDebugCode 和](icordebugcode-interface1.md) [ICorDebugCode2](icordebugcode2-interface.md)的方法，以提供有关托管返回值的信息。  
+ 提供扩展 [ICorDebugCode](icordebugcode-interface1.md) 和 [ICorDebugCode2](icordebugcode2-interface.md) 的方法，以提供有关托管返回值的信息。  
   
  [ICorDebugCode4 接口](icordebugcode4-interface.md)\
- 提供一种方法，使调试器能够枚举函数中的局部变量和参数。  
+ 提供一个方法，该方法使调试器可以枚举函数中的局部变量和参数。  
   
  [ICorDebugCodeEnum 接口](icordebugcodeenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugCode` 数组。  
   
- [ICorDebugcom对象值接口](icordebugcomobjectvalue-interface.md)\
+ [ICorDebugComObjectValue 接口](icordebugcomobjectvalue-interface.md)\
  提供用来检索缓存的接口对象的方法。  
   
- [ICorDebug上下文接口](icordebugcontext-interface.md)\
+ [ICorDebugContext 接口](icordebugcontext-interface.md)\
  表示一个上下文对象。 此接口尚未实现。  
   
- [ICorDebug控制器接口](icordebugcontroller-interface.md)\
+ [ICorDebugController 接口](icordebugcontroller-interface.md)\
  表示可以控制代码执行上下文的 <xref:System.Diagnostics.Process> 或 <xref:System.AppDomain> 范围。  
   
- [ICorDebug数据目标接口](icordebugdatatarget-interface.md)\
+ [ICorDebugDataTarget 接口](icordebugdatatarget-interface.md)\
  提供一个回调接口，该接口可提供对特定目标进程的访问。  
   
  [ICorDebugDataTarget2 接口](icordebugdatatarget2-interface.md)\
- 从逻辑上讲扩展[ICorDebugDataTarget](icordebugdatatarget-interface.md)接口。 **仅在 .NET Native 上可用。**  
+ 对 [ICorDebugDataTarget](icordebugdatatarget-interface.md) 接口进行逻辑扩展。 **仅在 .NET Native 上可用。**  
   
  [ICorDebugDataTarget3 接口](icordebugdatatarget3-interface.md)\
- 从逻辑上讲[，ICorDebugDataTarget](icordebugdatatarget-interface.md)接口可以提供有关已加载模块的信息。 **仅在 .NET Native 上可用。**  
+ 对 [ICorDebugDataTarget](icordebugdatatarget-interface.md) 接口进行逻辑扩展，以提供有关已加载模块的信息。 **仅在 .NET Native 上可用。**  
   
- [ICorDebugevent 接口](icordebugdebugevent-interface.md)\
+ [ICorDebugDebugEvent 接口](icordebugdebugevent-interface.md)\
  定义所有 `ICorDebug` 调试事件派生的基接口。 **仅在 .NET Native 上可用。**  
   
- [ICordebugedit 和继续错误信息界面](icordebugeditandcontinueerrorinfo-interface.md)\
+ [ICorDebugEditAndContinueErrorInfo 接口](icordebugeditandcontinueerrorinfo-interface.md)\
  已过时。 不要使用此接口。  
   
- [ICordebugedit 并继续快照接口](icordebugeditandcontinuesnapshot-interface.md)\
+ [ICorDebugEditAndContinueSnapshot 接口](icordebugeditandcontinuesnapshot-interface.md)\
  已过时。 不要使用此接口。  
   
  [ICorDebugEnum 接口](icordebugenum-interface1.md)\
  作为调试枚举器的抽象基接口。  
   
- [ICorDebug错误信息信息接口](icordebugerrorinfoenum-interface.md)\
+ [ICorDebugErrorInfoEnum 接口](icordebugerrorinfoenum-interface.md)\
  已过时。 不要使用此接口。  
   
  [ICorDebugEval 接口](icordebugeval-interface.md)\
@@ -152,52 +154,52 @@ ms.locfileid: "79179169"
  [ICorDebugEval2 接口](icordebugeval2-interface.md)\
  扩展 `ICorDebugEval` 以对泛型类型提供支持。  
   
- [ICorDebugException调试事件接口](icordebugexceptiondebugevent-interface.md)\
- 扩展[ICorDebugDebugEvent 接口](icordebugdebugevent-interface.md)以支持异常事件。 **仅在 .NET Native 上可用。**  
+ [ICorDebugExceptionDebugEvent 接口](icordebugexceptiondebugevent-interface.md)\
+ 扩展 [ICorDebugDebugEvent](icordebugdebugevent-interface.md) 接口以支持异常事件。 **仅在 .NET Native 上可用。**  
   
- [ICorDebugException 对象调用StackEnum接口](icordebugexceptionobjectcallstackenum-interface.md)\
+ [ICorDebugExceptionObjectCallStackEnum 接口](icordebugexceptionobjectcallstackenum-interface.md)\
  为嵌入在异常对象中的调用堆栈信息提供枚举器。  
   
- [ICorDebugException 对象值接口](icordebugexceptionobjectvalue-interface.md)\
- 扩展[ICorDebugObjectValue](icordebugobjectvalue-interface.md)接口，从托管异常对象提供堆栈跟踪信息。  
+ [ICorDebugExceptionObjectValue 接口](icordebugexceptionobjectvalue-interface.md)\
+ 扩展 [ICorDebugObjectValue](icordebugobjectvalue-interface.md) 接口以提供来自托管异常对象的堆栈跟踪信息。  
   
  [ICorDebugFrame 接口](icordebugframe-interface.md)\
  表示当前堆栈上的帧。  
   
- [ICorDebugFrameenum 接口](icordebugframeenum-interface.md)\
+ [ICorDebugFrameEnum 接口](icordebugframeenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugFrame` 数组。  
   
- [ICorDebug功能接口](icordebugfunction-interface1.md)\
+ [ICorDebugFunction 接口](icordebugfunction-interface1.md)\
  表示一个托管函数或方法。  
   
- [ICorDebug功能2接口](icordebugfunction2-interface.md)\
+ [ICorDebugFunction2 接口](icordebugfunction2-interface.md)\
  对 `ICorDebugFunction` 进行逻辑扩展，以支持“仅我的代码”的单步执行调试。  
   
- [ICorDebug功能3接口](icordebugfunction3-interface.md)\
- 从逻辑上讲[，ICorDebug函数](icordebugfunction-interface1.md)接口提供从 ReJIT 请求对代码的访问。  
+ [ICorDebugFunction3 接口](icordebugfunction3-interface.md)\
+ 对 [ICorDebugFunction](icordebugfunction-interface1.md) 接口进行逻辑扩展，以提供对 ReJIT 请求中的代码的访问。  
   
- [ICorDebug功能断点接口](icordebugfunctionbreakpoint-interface.md)\
+ [ICorDebugFunctionBreakpoint 接口](icordebugfunctionbreakpoint-interface.md)\
  扩展 `ICorDebugBreakpoint` 以支持函数中的断点。  
   
- [ICorDebugGC参考接口](icordebuggcreferenceenum-interface.md)\
+ [ICorDebugGCReferenceEnum 接口](icordebuggcreferenceenum-interface.md)\
  提供针对将进行垃圾回收的对象的枚举器。  
   
- [ICorDebug 通用值接口](icordebuggenericvalue-interface.md)\
+ [ICorDebugGenericValue 接口](icordebuggenericvalue-interface.md)\
  应用于所有值的 `ICorDebugValue` 的子类。 此接口可为值提供 Get 和 Set 方法。  
   
- [ICordebugguidtotypeenum 接口](icordebugguidtotypeenum-interface.md)\
+ [ICorDebugGuidToTypeEnum 接口](icordebugguidtotypeenum-interface.md)\
  提供针对映射 GUID 的对象及其相应的 `ICorDebugType` 对象的枚举器。  
   
- [ICorDebugHandle值界面](icordebughandlevalue-interface.md)\
+ [ICorDebugHandleValue 接口](icordebughandlevalue-interface.md)\
  `ICorDebugReferenceValue` 的一个子类，前者表示调试器已为其创建了垃圾回收句柄的引用值。  
   
  [ICorDebugHeapEnum 接口](icordebugheapenum-interface.md)\
  提供针对托管堆上的对象的枚举器。  
   
- [ICorDebugHeap分段接口](icordebugheapsegmentenum-interface.md)\
+ [ICorDebugHeapSegmentEnum 接口](icordebugheapsegmentenum-interface.md)\
  提供针对托管堆的内存区域的枚举器。  
   
- [ICorDebugHeap值接口](icordebugheapvalue-interface.md)\
+ [ICorDebugHeapValue 接口](icordebugheapvalue-interface.md)\
  表示 CLR 垃圾回收器已收集的对象的 `ICorDebugValue` 的子类。  
   
  [ICorDebugHeapValue2 接口](icordebugheapvalue2-interface1.md)\
@@ -206,13 +208,13 @@ ms.locfileid: "79179169"
  [ICorDebugHeapValue3 接口](icordebugheapvalue3-interface.md)\
  公开对象的监视器锁属性。  
   
- [ICorDebugIL代码接口](icordebugilcode-interface.md)\
+ [ICorDebugILCode 接口](icordebugilcode-interface.md)\
  表示中间语言 (IL) 代码段。  
   
  [ICorDebugILCode2 接口](icordebugilcode2-interface.md)\
- 从逻辑上讲[，ICorDebugILCode](icordebugilcode-interface.md)接口提供返回函数的本地变量签名的令牌的方法，并将探查器的检测中间语言 （IL） 偏移映射到原始方法 IL 偏移量。  
+ 对 [ICorDebugILCode](icordebugilcode-interface.md) 接口进行逻辑扩展，以提供返回函数的局部变量签名的标记的方法，并将探查器检测到的中间语言 (il) 偏移量映射到原始方法的 il 偏移量。  
   
- [ICorDebugIL框架接口](icordebugilframe-interface.md)\
+ [ICorDebugILFrame 接口](icordebugilframe-interface.md)\
  表示 MSIL 代码的堆栈帧。  
   
  [ICorDebugILFrame2 接口](icordebugilframe2-interface.md)\
@@ -224,76 +226,76 @@ ms.locfileid: "79179169"
  [ICorDebugILFrame4 接口](icordebugilframe4-interface.md)\
  提供使你能够访问中间语言 (IL) 代码的堆栈帧中的局部变量和代码的方法。 一个用于指定调试器是否可以访问在探查器 ReJIT 检测中添加的变量和代码的参数。  
   
- [ICorDebug实例字段符号接口](icordebuginstancefieldsymbol-interface.md)\
+ [ICorDebugInstanceFieldSymbol 接口](icordebuginstancefieldsymbol-interface.md)\
  表示某一实例字段的调试符号信息。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug 内部框架接口](icordebuginternalframe-interface.md)\
+ [ICorDebugInternalFrame 接口](icordebuginternalframe-interface.md)\
  标识调试器的帧类型。  
   
- [ICorDebug 内部框架2接口](icordebuginternalframe2-interface.md)\
- 提供有关内部帧的信息，包括堆栈地址和相对于[ICorDebugFrame](icordebugframe-interface.md)对象的位置。  
+ [ICorDebugInternalFrame2 接口](icordebuginternalframe2-interface.md)\
+ 提供有关内部帧的信息，包括堆栈地址和相对于 [ICorDebugFrame](icordebugframe-interface.md) 对象的位置。  
   
- [ICorDebugLoaded模块接口](icordebugloadedmodule-interface.md)\
+ [ICorDebugLoadedModule 接口](icordebugloadedmodule-interface.md)\
  提供有关已加载模块的信息。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug 托管回调接口](icordebugmanagedcallback-interface.md)\
+ [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)\
  提供用于处理调试器回调的方法。  
   
- [ICorDebug 托管回调2接口](icordebugmanagedcallback2-interface.md)\
+ [ICorDebugManagedCallback2 接口](icordebugmanagedcallback2-interface.md)\
  提供支持调试器异常处理和托管调试助手 (MDA) 的方法。 `ICorDebugManagedCallback2` 是 `ICorDebugManagedCallback` 的逻辑扩展。  
   
- [ICorDebug 托管回调3接口](icordebugmanagedcallback3-interface.md)\
+ [ICorDebugManagedCallback3 接口](icordebugmanagedcallback3-interface.md)\
  提供一个回调方法，该方法指示已发出启用的自定义调试器通知。  
   
- [ICordebugMDA 接口](icordebugmda-interface.md)\
+ [ICorDebugMDA 接口](icordebugmda-interface.md)\
  表示托管调试助手 (MDA) 消息。  
   
- [ICorDebug内存缓冲器接口](icordebugmemorybuffer-interface.md)\
+ [ICorDebugMemoryBuffer 接口](icordebugmemorybuffer-interface.md)\
  表示内存中缓冲区。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug 合并装配记录接口](icordebugmergedassemblyrecord-interface.md)\
+ [ICorDebugMergedAssemblyRecord 接口](icordebugmergedassemblyrecord-interface.md)\
  提供有关合并的程序集的信息。 **仅在 .NET Native 上可用。**  
   
- [ICorDebugMetaDataLocator接口](icordebugmetadatalocator-interface.md)\
+ [ICorDebugMetaDataLocator 接口](icordebugmetadatalocator-interface.md)\
  向调试器提供元数据信息。  
   
- [ICorDebug模块接口](icordebugmodule-interface.md)\
+ [ICorDebugModule 接口](icordebugmodule-interface.md)\
  表示 CLR 模块，它是可执行文件或动态链接库 (DLL)。  
   
  [ICorDebugModule2 接口](icordebugmodule2-interface.md)\
  用作 `ICorDebugModule` 的逻辑扩展。  
   
- [ICorDebug模块3接口](icordebugmodule3-interface.md)\
+ [ICorDebugModule3 接口](icordebugmodule3-interface.md)\
  为动态模块创建符号读取器。  
   
- [ICorDebug模块断点接口](icordebugmodulebreakpoint-interface.md)\
+ [ICorDebugModuleBreakpoint 接口](icordebugmodulebreakpoint-interface.md)\
  扩展 `ICorDebugBreakpoint` 以提供对特定模块的访问。  
   
- [ICorDebugModule调试事件接口](icordebugmoduledebugevent-interface.md)\
- 扩展[ICorDebugDebugEvent 接口](icordebugdebugevent-interface.md)以支持模块级事件。 **仅在 .NET Native 上可用。**  
+ [ICorDebugModuleDebugEvent 接口](icordebugmoduledebugevent-interface.md)\
+ 扩展 [ICorDebugDebugEvent](icordebugdebugevent-interface.md) 接口以支持模块级事件。 **仅在 .NET Native 上可用。**  
   
  [ICorDebugModuleEnum 接口](icordebugmoduleenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugModule` 数组。  
   
- [ICorDebugMutable数据目标接口](icordebugmutabledatatarget-interface.md)\
- 扩展[ICorDebugDataTarget](icordebugdatatarget-interface.md)接口以支持可变数据目标。  
+ [ICorDebugMutableDataTarget 接口](icordebugmutabledatatarget-interface.md)\
+ 扩展 [ICorDebugDataTarget](icordebugdatatarget-interface.md) 接口以支持可变数据目标。  
   
- [ICorDebug本机框架接口](icordebugnativeframe-interface.md)\
+ [ICorDebugNativeFrame 接口](icordebugnativeframe-interface.md)\
  用于本机帧的 `ICorDebugFrame` 的专用实现。  
   
- [ICorDebug本机框架2接口](icordebugnativeframe2-interface.md)\
+ [ICorDebugNativeFrame2 接口](icordebugnativeframe2-interface.md)\
  提供用于测试子帧与父帧关系的方法。  
   
  [ICorDebugObjectEnum 接口](icordebugobjectenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并通过对象数组的相对虚拟地址 (RVA) 对其进行枚举。  
   
- [ICorDebug对象值接口](icordebugobjectvalue-interface.md)\
+ [ICorDebugObjectValue 接口](icordebugobjectvalue-interface.md)\
  表示包含对象的值的 `ICorDebugValue` 的子类。  
   
- [ICorDebug对象值2接口](icordebugobjectvalue2-interface.md)\
+ [ICorDebugObjectValue2 接口](icordebugobjectvalue2-interface.md)\
  扩展 `ICorDebugObjectValue` 以支持继承和重写。  
   
- [ICorDebug进程接口](icordebugprocess-interface.md)\
+ [ICorDebugProcess 接口](icordebugprocess-interface.md)\
  表示正在执行托管代码的进程。  
   
  [ICorDebugProcess2 接口](icordebugprocess2-interface1.md)\
@@ -303,123 +305,123 @@ ms.locfileid: "79179169"
  控制自定义调试器通知。
 
  [ICorDebugProcess4 接口](icordebugprocess4-interface.md)\
- 支持进程执行失控。
+ 为进程外执行控制提供支持。
   
  [ICorDebugProcess5 接口](icordebugprocess5-interface.md)\
- 扩展[ICorDebugProcess](icordebugprocess-interface.md)接口以支持对托管堆的访问，提供有关托管对象的垃圾回收的信息，并确定调试器是否从应用程序的本地本机映像缓存加载图像。  
+ 扩展 [ICorDebugProcess](icordebugprocess-interface.md) 接口以支持对托管堆的访问，以提供有关托管对象的垃圾回收的信息，以及确定调试器是否从应用程序的本地本机映像缓存中加载图像。  
   
  [ICorDebugProcess6 接口](icordebugprocess6-interface.md)\
- 从逻辑上讲扩展[ICorDebugProcess](icordebugprocess-interface.md)接口，以启用在本机异常调试事件中编码的托管调试事件解码和虚拟模块拆分等功能。 **仅在 .NET Native 上可用。**  
+ 对 [ICorDebugProcess](icordebugprocess-interface.md) 接口进行逻辑扩展，以启用一些功能，如对以本机异常调试事件和虚拟模块拆分方式编码的托管调试事件进行解码。 **仅在 .NET Native 上可用。**  
   
  [ICorDebugProcess7 接口](icordebugprocess7-interface.md)\
  提供了一种方法，用于配置调试器以处理目标进程中的内存中元数据更新。  
   
  [ICorDebugProcess8 接口](icordebugprocess8-interface.md)\
- 从逻辑上讲扩展[ICorDebugProcess](icordebugprocess-interface.md)接口，以启用或禁用某些类型的[ICorDebug 托管回调2](icordebugmanagedcallback2-interface.md)异常回调。  
+ 对 [ICorDebugProcess](icordebugprocess-interface.md) 接口进行逻辑扩展，以启用或禁用某些类型的 [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) 异常回调。  
   
  [ICorDebugProcessEnum 接口](icordebugprocessenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugProcess` 数组。  
   
- [ICorDebug参考值界面](icordebugreferencevalue-interface.md)\
+ [ICorDebugReferenceValue 接口](icordebugreferencevalue-interface.md)\
  `ICorDebugValue` 的子类，它支持引用类型。  
   
- [ICorDebug注册集接口](icordebugregisterset-interface.md)\
+ [ICorDebugRegisterSet 接口](icordebugregisterset-interface.md)\
  表示在当前正在执行代码的计算机上可用的寄存器组。  
   
- [ICorDebug注册集2接口](icordebugregisterset2-interface.md)\
+ [ICorDebugRegisterSet2 接口](icordebugregisterset2-interface.md)\
  为具有 64 个以上寄存器的硬件平台扩展 `ICorDebugRegisterSet` 的功能。  
   
- [ICorDebug远程接口](icordebugremote-interface.md)\
+ [ICorDebugRemote 接口](icordebugremote-interface.md)\
  提供启动托管调试器或将其附加到远程目标进程的能力。  
   
- [ICorDebug远程目标接口](icordebugremotetarget-interface.md)\
+ [ICorDebugRemoteTarget 接口](icordebugremotetarget-interface.md)\
  提供使你能够在 CLR 环境中调试基于 Silverlight 的应用程序的方法。  
   
- [ICorDebug运行时可展开帧界面](icordebugruntimeunwindableframe-interface.md)\
+ [ICorDebugRuntimeUnwindableFrame 接口](icordebugruntimeunwindableframe-interface.md)\
  提供对非托管方法的支持，这些方法需要公共语言运行时 (CLR) 来展开帧。  
   
- [ICorDebugStackWalk界面](icordebugstackwalk-interface.md)\
+ [ICorDebugStackWalk 接口](icordebugstackwalk-interface.md)\
  提供用于获取线程堆栈上的托管方法或帧的方法。  
   
- [ICorDebug静态字段符号接口](icordebugstaticfieldsymbol-interface.md)\
+ [ICorDebugStaticFieldSymbol 接口](icordebugstaticfieldsymbol-interface.md)\
  表示某个静态字段的调试符号信息。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug步进器界面](icordebugstepper-interface.md)\
+ [ICorDebugStepper 接口](icordebugstepper-interface.md)\
  表示在代码执行过程中由调试器执行的一个步骤。此步骤作为命令颁发和完成之间的标识符使用，可以实现取消对某个步骤的执行。  
   
- [ICorDebug步进2接口](icordebugstepper2-interface1.md)\
+ [ICorDebugStepper2 接口](icordebugstepper2-interface1.md)\
  提供对“仅我的代码”(JMC) 调试的支持。  
   
- [ICorDebug步进接口](icordebugstepperenum-interface.md)\
+ [ICorDebugStepperEnum 接口](icordebugstepperenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugStepper` 数组。  
   
- [ICorDebugString值界面](icordebugstringvalue-interface.md)\
+ [ICorDebugStringValue 接口](icordebugstringvalue-interface.md)\
  应用于字符串值的 `ICorDebugHeapValue` 的子类。  
   
- [ICorDebug符号提供程序接口](icordebugsymbolprovider-interface.md)\
+ [ICorDebugSymbolProvider 接口](icordebugsymbolprovider-interface.md)\
  提供可用于检索调试符号信息的方法。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug符号提供程序2接口](icordebugsymbolprovider2-interface.md)\
- 从逻辑上讲，扩展[ICorDebugSymbolProvider 接口](icordebugsymbolprovider-interface.md)以检索其他调试符号信息。 **仅在 .NET Native 上可用。**  
+ [ICorDebugSymbolProvider2 接口](icordebugsymbolprovider2-interface.md)\
+ 以逻辑方式扩展 [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md) 接口以检索其他调试符号信息。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug线程接口](icordebugthread-interface.md)\
+ [ICorDebugThread 接口](icordebugthread-interface.md)\
  表示进程中的线程。 `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
   
  [ICorDebugThread2 接口](icordebugthread2-interface.md)\
  用作 `ICorDebugThread` 的逻辑扩展。  
   
  [ICorDebugThread3 接口](icordebugthread3-interface.md)\
- 提供[ICorDebugStackWalk](icordebugstackwalk-interface.md)的入口点和相应的接口。  
+ 提供 [ICorDebugStackWalk](icordebugstackwalk-interface.md) 和相应接口的入口点。  
   
  [ICorDebugThread4 接口](icordebugthread4-interface.md)\
  提供线程阻塞信息。  
   
- [ICorDebugThreadenum 接口](icordebugthreadenum-interface1.md)\
+ [ICorDebugThreadEnum 接口](icordebugthreadenum-interface1.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugThread` 数组。  
   
- [ICorDebug 类型接口](icordebugtype-interface.md)\
+ [ICorDebugType 接口](icordebugtype-interface.md)\
  表示基类型或复杂类型（即用户定义的类型）。 如果该类型是泛型类型，则 `ICorDebugType` 表示未实例化的泛型类型。  
   
  [ICorDebugType2 接口](icordebugtype2-interface.md)\
- 扩展[ICorDebugType](icordebugtype-interface.md)接口以检索基本类型或复杂（用户定义）类型的类型标识符。  
+ 扩展 [ICorDebugType](icordebugtype-interface.md) 接口以检索基类型或复杂 (用户定义的) 类型的类型标识符。  
   
  [ICorDebugTypeEnum 接口](icordebugtypeenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugType` 数组。  
   
- [ICorDebugUn托管回调接口](icordebugunmanagedcallback-interface.md)\
+ [ICorDebugUnmanagedCallback 接口](icordebugunmanagedcallback-interface.md)\
  提供与 CLR 没有直接关系的本机事件的通知。  
   
- [ICorDebug值](icordebugvalue-interface.md)\
+ [ICorDebugValue](icordebugvalue-interface.md)\
  表示正在调试的进程中的读取或写入值。  
   
  [ICorDebugValue2](icordebugvalue2-interface.md)\
  扩展 `ICorDebugValue` 以提供对 `ICorDebugType` 的支持。  
   
  [ICorDebugValue3 接口](icordebugvalue3-interface.md)\
- 扩展"ICorDebugValue"和"ICorDebugValue2"接口，为大于 2 GB 的阵列提供支持。  
+ 扩展了 "ICorDebugValue" 和 "ICorDebugValue2" 接口，为大于 2 GB 的数组提供支持。  
   
- [ICorDebugValue突破点](icordebugvaluebreakpoint-interface.md)\
+ [ICorDebugValueBreakpoint](icordebugvaluebreakpoint-interface.md)\
  扩展 `ICorDebugBreakpoint` 以提供对特定值的访问。  
   
- [ICorDebugValueenum](icordebugvalueenum-interface.md)\
+ [ICorDebugValueEnum](icordebugvalueenum-interface.md)\
  实现 `ICorDebugEnum` 方法，并枚举 `ICorDebugValue` 数组。  
   
- [ICorDebug可变家庭界面](icordebugvariablehome-interface.md)\
- 表示函数的局部变量或参数。  
+ [ICorDebugVariableHome 接口](icordebugvariablehome-interface.md)\
+ 表示函数的局部变量或自变量。  
   
- [ICorDebug可变家庭接口](icordebugvariablehomeenum-interface.md)\
- 向函数中的局部变量和参数提供枚举器。  
+ [ICorDebugVariableHomeEnum 接口](icordebugvariablehomeenum-interface.md)\
+ 提供对函数中的局部变量和参数的枚举器。  
   
- [ICorDebug可变符号接口](icordebugvariablesymbol-interface.md)\
+ [ICorDebugVariableSymbol 接口](icordebugvariablesymbol-interface.md)\
  检索变量的调试符号信息。 **仅在 .NET Native 上可用。**  
   
- [ICorDebug虚拟释放器接口](icordebugvirtualunwinder-interface.md)\
+ [ICorDebugVirtualUnwinder 接口](icordebugvirtualunwinder-interface.md)\
  提供帮助堆栈展开的方法。 **仅在 .NET Native 上可用。**  
   
  [ICorPublish 接口](icorpublish-interface.md)\
  用作发布进程的常规接口。  
   
- [ICor发布应用域界面](icorpublishappdomain-interface.md)\
+ [ICorPublishAppDomain 接口](icorpublishappdomain-interface.md)\
  表示并提供关于应用程序域的信息。  
   
  [ICorPublishAppDomainEnum 接口](icorpublishappdomainenum-interface.md)\
@@ -428,29 +430,30 @@ ms.locfileid: "79179169"
  [ICorPublishEnum 接口](icorpublishenum-interface.md)\
  用作发布枚举器的抽象基。  
   
- [ICor发布过程界面](icorpublishprocess-interface.md)\
+ [ICorPublishProcess 接口](icorpublishprocess-interface.md)\
  提供用于访问有关进程的信息的方法。  
   
  [ICorPublishProcessEnum 接口](icorpublishprocessenum-interface.md)\
  提供遍历 `ICorPublishProcess` 对象的集合的方法。  
 
- [ISOSDac接口接口](isosdacinterface-interface.md)\
- 提供从 访问数据的帮助程序方法`SOS`。
+ [ISOSDacInterface 接口](isosdacinterface-interface.md)\
+ 提供用于访问中的数据的帮助器方法 `SOS` 。
 
- [IXCLRData方法定义接口](ixclrdatamethoddefinition-interface.md)\
- 提供查询有关方法定义的信息的方法。
+ [IXCLRDataMethodDefinition 接口](ixclrdatamethoddefinition-interface.md)\
+ 提供用于查询有关方法定义的信息的方法。
 
- [IXCLRData方法实例接口](ixclrdatamethodinstance-interface.md)\
- 提供查询方法实例信息的方法。
+ [IXCLRDataMethodInstance 接口](ixclrdatamethodinstance-interface.md)\
+ 提供用于查询有关方法实例的信息的方法。
 
- [IXCLR数据模块接口](ixclrdatamodule-interface.md)\
- 提供查询有关加载模块的信息的方法。
+ [IXCLRDataModule 接口](ixclrdatamodule-interface.md)\
+ 提供用于查询有关已加载模块的信息的方法。
 
- [IXCLR数据处理接口](ixclrdataprocess-interface.md)\
- 提供了查询有关进程的信息的方法。
+ [IXCLRDataProcess 接口](ixclrdataprocess-interface.md)\
+ 提供用于查询有关进程的信息的方法。
   
 ## <a name="related-sections"></a>相关章节  
- [调试同类](debugging-coclasses.md)\
+
+ [调试组件类](debugging-coclasses.md)\
  [调试全局静态函数](debugging-global-static-functions.md)\
  [调试枚举](debugging-enumerations.md)\
  [调试结构](debugging-structures.md)\

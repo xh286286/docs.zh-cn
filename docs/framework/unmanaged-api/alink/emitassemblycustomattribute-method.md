@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2070d1ec2aec80638c20c764eed5086c4a42e0fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676356"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 方法
+
 调用以设置程序集级别的自定义特性。  
   
 ## <a name="syntax"></a>语法  
@@ -40,11 +41,12 @@ HRESULT EmitAssemblyCustomAttribute(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  程序集的 ID。  
   
  `FileToken`  
- 定义属性的文件。 如果 `AssemblyID` 不指示未绑定 .netmodule，则可以为 NULL。  
+ 定义属性的文件。 如果不 `AssemblyID` 指示未绑定的 .netmodule，则可以为 NULL。  
   
  `tkType`  
  自定义属性的类型。  
@@ -62,9 +64,11 @@ HRESULT EmitAssemblyCustomAttribute(
  如果要发出多个属性，则为 TRUE。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink  
   
 ## <a name="see-also"></a>另请参阅

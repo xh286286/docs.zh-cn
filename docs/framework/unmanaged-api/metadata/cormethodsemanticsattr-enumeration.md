@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-ms.openlocfilehash: 1572c206f4a5a5fe0fd189ca84d0bcda2249c6d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 347b323951b0125ffa5f82626b2d9b235079492c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007645"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676941"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 枚举
+
 包含一些值，用于描述方法和关联属性或事件之间的关系。  
   
 ## <a name="syntax"></a>语法  
@@ -41,7 +42,7 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`msSetter`|指定该方法是属性的 `set` 访问器。|  
 |`msGetter`|指定该方法是属性的 `get` 访问器。|  
@@ -51,7 +52,8 @@ typedef enum CorMethodSemanticsAttr {
 |`msFire`|指定方法引发事件。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

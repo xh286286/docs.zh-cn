@@ -6,14 +6,15 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-ms.openlocfilehash: b2e14b435aa567f231230da34307014210d46ccb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e380f533cfc290e952281c6a04f19978fa92aa3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828512"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677500"
 ---
 # <a name="unsealed-classes"></a>未密封类
+
 密封类不能从继承，它们会阻止可扩展性。 相反，可以从继承的类称为非密封类。
 
  ✔️考虑使用未密封的类，而不添加虚拟成员或受保护成员，这是为框架提供廉价但非常感谢的扩展性的极佳方式。

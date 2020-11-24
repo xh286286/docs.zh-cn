@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-ms.openlocfilehash: 7babd0a90b9882acb03b6360753f55c57a399b9e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c03497f48b8199da545d796637e5f8a5c532362
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005617"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675680"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 方法
+
 使用指定的元数据签名创建事件的定义，并获取该事件定义的标记。  
   
 ## <a name="syntax"></a>语法  
@@ -42,6 +43,7 @@ HRESULT DefineEvent (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `td`  
  中目标类或接口的标记。 这是 `mdTypeDef` 或 `mdTypeDefNil` 令牌。  
   
@@ -61,7 +63,7 @@ HRESULT DefineEvent (
  中用于取消订阅事件的方法，或为 null。  
   
  `mdFire`  
- 中使用的方法（由派生类）引发事件。  
+ 中派生类 (用来引发事件) 的方法。  
   
  `rmdOtherMethods[]`  
  中与事件关联的其他方法的标记数组。 使用标记终止数组 `mdMethodDefNil` 。  
@@ -70,11 +72,12 @@ HRESULT DefineEvent (
  弄分配给事件的元数据标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

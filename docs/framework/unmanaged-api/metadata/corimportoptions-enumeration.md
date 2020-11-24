@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3d5989d43644088403a77f26c02af9ffaae0732b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009192"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677201"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 枚举
+
 包含一些标志值，用于在导入当前作用域范围外的程序集的过程中控制行为。  
   
 ## <a name="syntax"></a>语法  
@@ -44,7 +45,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|指示用于跳过已删除记录的默认行为。|  
 |`MDImportOptionAll`|指示应枚举所有元数据。|  
@@ -57,7 +58,8 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|指示应对所有导出的类型（包括已删除的）进行枚举。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

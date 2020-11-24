@@ -2,14 +2,15 @@
 title: System.Xml 使用情况
 ms.date: 10/22/2008
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-ms.openlocfilehash: a01799bd130de0222d4d66dee4955375c1a1911f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 46282afa6548c731b04c40d8de91a1fed997c57c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677565"
 ---
 # <a name="systemxml-usage"></a>System.Xml 使用情况
+
 本部分介绍如何使用 <xref:System.Xml?displayProperty=nameWithType> 可用于表示 XML 数据的命名空间中的多个类型。
 
  ❌ 不要使用 <xref:System.Xml.XmlNode> 或 <xref:System.Xml.XmlDocument> 来表示 XML 数据。 优选 <xref:System.Xml.XPath.IXPathNavigable> 改用的、 <xref:System.Xml.XmlReader> 、 <xref:System.Xml.XmlWriter> 或子类型 <xref:System.Xml.Linq.XNode> 的实例。 `XmlNode` 和 `XmlDocument` 不用于公开公共 api。

@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: 6b02657012870de4d0f888f6c05b115b25073fa2
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f5f0f11683043f1c287dd3ca3071830bcfb46502
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677552"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes 方法
+
 为当前对象已强制转换为或用作的接口类型提供枚举器。  
   
 ## <a name="syntax"></a>语法  
@@ -32,16 +33,18 @@ HRESULT GetCachedInterfaceTypes(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `bIInspectableOnly`  
- 中一个值，该值指示方法是只返回 Windows 运行时接口（`IInspectable`接口）还是返回由运行时可调用包装（RCW）缓存的所有 COM 接口。  
+ 中一个值，该值指示方法是只返回 (`IInspectable` 接口) 或由运行时可调用 (包装器缓存的所有 COM 接口接口 Windows 运行时接口) 。  
   
  `ppInterfacesEnum`  
- 弄指向 ICorDebugTypeEnum 枚举器地址的指针，该枚举数提供对 ICorDebugType 对象的访问，这些对象表示根据筛选`bIInspectableOnly`的已筛选的缓存接口类型。  
+ 弄指向 ICorDebugTypeEnum 枚举器地址的指针，该枚举数提供对 ICorDebugType 对象的访问，这些对象表示根据筛选的已筛选的缓存接口类型 `bIInspectableOnly` 。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

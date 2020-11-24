@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 40e82997e58292a10f5e960cc9d9785d9ea8946a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007658"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676967"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 枚举
+
 包含一些值，用于描述方法实现功能。  
   
 ## <a name="syntax"></a>语法  
@@ -54,10 +55,10 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`miCodeTypeMask`|描述代码类型的标志。|  
-|`miIL`|指定方法实现为 Microsoft 中间语言（MSIL）。|  
+|`miIL`|指定方法实现为 Microsoft 中间语言 (MSIL) 。|  
 |`miNative`|指定方法实现为本机。|  
 |`miOPTIL`|指定方法实现为 OPTIL。|  
 |`miRuntime`|指定方法实现由公共语言运行时提供。|  
@@ -74,7 +75,8 @@ typedef enum CorMethodImpl {
 |`miMaxMethodImplVal`|的最大有效值 `CorMethodImpl` 。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

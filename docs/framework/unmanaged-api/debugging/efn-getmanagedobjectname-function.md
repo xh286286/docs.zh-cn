@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-ms.openlocfilehash: 708ac2e407bf6f87dbe314a0e87cdd16f45b2bcf
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 0fb694cf85256c0f3ac5ae179e53ff504ab707e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860754"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676200"
 ---
-# <a name="_efn_getmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 函数
+# <a name="_efn_getmanagedobjectname-function"></a>\_EFN \_ GetManagedObjectName 函数
+
 使用提供的托管对象指针获取类型的名称。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT _EFN_GetManagedObjectName(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `Client`  
  中指向调试客户端的指针。  
   
@@ -48,11 +50,13 @@ HRESULT _EFN_GetManagedObjectName(
  `cbName`  
  弄字符串缓冲区中的可用字符数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  如果当前上下文中的线程上没有托管代码，则该函数将返回具有0xa0 的工具值的 HRESULT SOS_E_NOMANAGEDCODE 和错误代码0x1000。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace。h  
   

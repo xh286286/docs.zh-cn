@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: 528db447df4d71d67441b05ad29e6a900c59afbb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 40df1416e68c86efe6d404119cb37277fe21ac56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892825"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677539"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue 接口
-提供用于检索与运行时可调用包装（RCW）关联的信息的方法。  
+
+提供方法以检索与运行时可调用包装关联的信息 (RCW) 。  
   
 ## <a name="methods"></a>方法  
   
@@ -31,11 +32,13 @@ ms.locfileid: "82892825"
 |[GetCachedInterfacePointers 方法](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|获取缓存在当前 RCW 上的原始接口指针。|  
 |[GetCachedInterfaceTypes 方法](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|为当前对象的大小写或用作的接口类型提供枚举器。|  
   
-## <a name="remarks"></a>备注  
- 若要检查 "ICorDebugValue" 接口的实例是否表示 RCW，调试程序使用`QueryInterface` `IID_ICorDebugComObjectValue`"ICorDebugValue" 调用。  
+## <a name="remarks"></a>注解  
+
+ 若要检查 "ICorDebugValue" 接口的实例是否表示 RCW，调试程序 `QueryInterface` 使用 "ICorDebugValue" 调用 `IID_ICorDebugComObjectValue` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
