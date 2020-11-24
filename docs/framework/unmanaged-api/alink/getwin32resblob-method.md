@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 03f6c97b4a5bbbdc0aeaf7b3f07277e66d7d0e9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684507"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 方法
+
 检索 Win32 资源 blob。 在设置程序集选项后调用此方法。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT GetWin32ResBlob(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  程序集的 ID。  
   
@@ -57,9 +59,11 @@ HRESULT GetWin32ResBlob(
  接收 blob 的大小。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink  
   
 ## <a name="see-also"></a>另请参阅

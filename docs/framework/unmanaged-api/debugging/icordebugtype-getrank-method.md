@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72d3d927-f590-4f2d-8f60-448f3dfb96af
 topic_type:
 - apiref
-ms.openlocfilehash: 5e28ccb53771be4a2b6681e2491094d15f01904e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: defd2623b85225f4139ff0bfce8495d16e3b4182
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379970"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684408"
 ---
 # <a name="icordebugtypegetrank-method"></a>ICorDebugType::GetRank 方法
+
 获取数组类型中的维度数。  
   
 ## <a name="syntax"></a>语法  
@@ -34,11 +35,13 @@ HRESULT GetRank (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pnRank`  
  弄指向维度数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-ms.openlocfilehash: 40df78cdf99c2e0f53be9664f3f5c6386b6c6f93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8c6fd7dca13afe7504e447caca9a217c8136c27
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179399"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684520"
 ---
 # <a name="getscope2-method"></a>GetScope2 方法
+
 获取导入范围。  
   
 ## <a name="syntax"></a>语法  
@@ -35,7 +36,8 @@ HRESULT GetScope2(
 ) PURE;
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  目标程序集的 ID。  
   
@@ -43,16 +45,18 @@ HRESULT GetScope2(
  要从中导入的文件的 ID。  
   
  `dwScope`  
- 要导入的零基作用域。  
+ 要导入的从零开始的范围。  
   
  `ppImportScope`  
- 接收指向[IMetaDataImport2 接口](../metadata/imetadataimport2-interface.md)的指针，用于指示的范围。  
+ 接收指向指定范围的 [IMetaDataImport2 接口](../metadata/imetadataimport2-interface.md) 接口的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则返回S_OK。  
+
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h.  
+
+ 需要 alink。  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69c99e2facfcb9077c3fc4131186ba3882c7cef6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684832"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
-将嵌套类型指定为可导出类型。 [导出类型方法](exporttype-method.md)还可以导出嵌套类型，但此方法更快。  
+
+指定嵌套类型为可导出。 [ExportType 方法](exporttype-method.md)还可以导出嵌套类型，但此方法的速度更快。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,33 +40,36 @@ HRESULT ExportNestedType(
 ) PURE;
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
+
  `AssemblyID`  
- 要导出的程序集的 ID。  
+ 要从中导出的程序集的 ID。  
   
  `FileToken`  
- 文件令牌或文件程序集，用于定义要导出的类型。  
+ 定义要导出的类型的文件标记或文件的程序集。  
   
  `TypeToken`  
- 类型令牌，使可导出。  
+ 要使其可导出的类型的类型标记。  
   
  `ParentType`  
- 父类型的令牌。  
+ 父类型的标记。  
   
  `pszTypename`  
- 要导出的完全限定类型名称。  
+ 要导出的完全限定的类型名称。  
   
  `dwFlags`  
- `ComType`标志，如`tdPublic``tdNested`或 。 此值可以传递给[定义导出类型方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ `ComType` 标志，如 `tdPublic` 或 `tdNested` 。 此值可传递给 [DefineExportedType 方法](../metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
  `pType`  
  接收导出类型的令牌。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则返回S_OK。  
+
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h  
+
+ 需要 alink  
   
 ## <a name="see-also"></a>另请参阅
 

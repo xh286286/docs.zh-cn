@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 484affb2ca87ca50a805d1bb46b7749d294d09f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614755"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683506"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute 方法
+
 基于名称定义自定义属性。 这些特性保存在符号存储区中，与元数据自定义特性不同。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT SetSymAttribute(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `parent`  
  中正在为其定义特性的元数据标记。  
   
@@ -43,15 +45,17 @@ HRESULT SetSymAttribute(
  中指向 `WCHAR` 包含特性名称的的指针。  
   
  `cData`  
- 中`ULONG32`指示数组大小的 `data` 。  
+ 中 `ULONG32` 指示数组大小的 `data` 。  
   
  `data`  
  中特性值。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

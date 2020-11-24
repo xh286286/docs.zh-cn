@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-ms.openlocfilehash: 4ba3f31ae6d6b67d7beaa2f709bf6174b721136d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a918b5c2334683348adc6a7382527faedb52d7b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609516"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683532"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 方法
+
 指定源文件内方法的真正开始和结尾。 使用此方法可以独立于方法中存在的序列点来指定方法的范围。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT SetMethodSourceRange(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `startDoc`  
  中指向包含起始位置的文档的指针。  
   
@@ -57,9 +59,11 @@ HRESULT SetMethodSourceRange(
  中结束列号。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

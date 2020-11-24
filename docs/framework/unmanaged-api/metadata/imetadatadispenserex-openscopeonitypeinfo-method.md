@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 8e119093800ea0a0119ba25ba38cf2eaf9afe96b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6056a64b354f69ce39692173da01892870fba9e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540833"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682843"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 方法
+
 未实现此方法。 如果调用，它将返回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT OpenScopeOnITypeInfo (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pITI`  
  中指向 [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) 接口的指针，该接口提供要打开范围的类型信息。  
   
@@ -50,6 +52,7 @@ HRESULT OpenScopeOnITypeInfo (
  弄指向返回接口的指针的指针。  
   
 ## <a name="requirements"></a>要求  
+
  **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
@@ -58,7 +61,7 @@ HRESULT OpenScopeOnITypeInfo (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IMetaDataDispenserEx 接口](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 接口](imetadatadispenser-interface.md)

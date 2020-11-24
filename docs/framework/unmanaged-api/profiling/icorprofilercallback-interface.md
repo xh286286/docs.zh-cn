@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8451f100f9e1b8d68045050d1b584ae44c29195d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500086"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684053"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 接口
-提供公共语言运行时（CLR）用于在探查器订阅的事件发生时通知代码探查器的方法。  
+
+提供公共语言运行时 (CLR) 用于在探查器订阅的事件发生时通知代码探查器的方法。  
   
 ## <a name="methods"></a>方法  
   
@@ -40,7 +41,7 @@ ms.locfileid: "84500086"
 |[ClassLoadStarted 方法](icorprofilercallback-classloadstarted-method.md)|通知探查器正在加载某个类。|  
 |[ClassUnloadFinished 方法](icorprofilercallback-classunloadfinished-method.md)|通知探查器类已经完成卸载。|  
 |[ClassUnloadStarted 方法](icorprofilercallback-classunloadstarted-method.md)|通知探查器正在卸载某个类。|  
-|[COMClassicVTableCreated 方法](icorprofilercallback-comclassicvtablecreated-method.md)|通知探查器已创建指定 IID 和类的运行时可调用包装（RCW）。|  
+|[COMClassicVTableCreated 方法](icorprofilercallback-comclassicvtablecreated-method.md)|通知探查器，运行时可调用包装器 (为指定 IID 和类创建了 RCW) 。|  
 |[COMClassicVTableDestroyed 方法](icorprofilercallback-comclassicvtabledestroyed-method.md)|通知探查器正在销毁某个 RCW。|  
 |[ExceptionCatcherEnter 方法](icorprofilercallback-exceptioncatcherenter-method.md)|通知探查器控制正在传递到适当的 `catch` 块。|  
 |[ExceptionCatcherLeave 方法](icorprofilercallback-exceptioncatcherleave-method.md)|通知探查器控制正在传递到适当的 `catch` 块。|  
@@ -60,10 +61,10 @@ ms.locfileid: "84500086"
 |[ExceptionUnwindFunctionLeave 方法](icorprofilercallback-exceptionunwindfunctionleave-method.md)|通知探查器异常处理的展开阶段已完成展开某个函数。|  
 |[FunctionUnloadStarted 方法](icorprofilercallback-functionunloadstarted-method.md)|通知探查器运行时已开始卸载某个函数。|  
 |[Initialize 方法](icorprofilercallback-initialize-method.md)|调用以在新的 CLR 应用程序启动时初始化探查器。|  
-|[JITCachedFunctionSearchFinished 方法](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|通知探查器搜索已完成以前使用 Ngen.exe 编译的函数。|  
-|[JITCachedFunctionSearchStarted 方法](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|通知探查器已开始搜索先前使用 Ngen.exe 编译的函数。|  
+|[JITCachedFunctionSearchFinished 方法](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|通知探查器搜索已完成先前使用 NGen.exe 编译的函数。|  
+|[JITCachedFunctionSearchStarted 方法](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|通知探查器搜索已开始使用 NGen.exe 以前编译过的函数。|  
 |[JITCompilationFinished 方法](icorprofilercallback-jitcompilationfinished-method.md)|通知探查器 JIT 编译器已经完成了对函数的编译。|  
-|[JITCompilationStarted 方法](icorprofilercallback-jitcompilationstarted-method.md)|通知探查器实时（JIT）编译器已开始编译函数。|  
+|[JITCompilationStarted 方法](icorprofilercallback-jitcompilationstarted-method.md)|通知探查器实时 (JIT) 编译器已开始编译函数。|  
 |[JITFunctionPitched 方法](icorprofilercallback-jitfunctionpitched-method.md)|通知探查器已从内存中删除了已进行 JIT 编译的函数。|  
 |[JITInlining 方法](icorprofilercallback-jitinlining-method.md)|通知探查器 JIT 编译器即将使用另一个函数插入一个函数。|  
 |[ManagedToUnmanagedTransition 方法](icorprofilercallback-managedtounmanagedtransition-method.md)|通知探查器已发生从托管代码到非托管代码的转换。|  
@@ -93,23 +94,25 @@ ms.locfileid: "84500086"
 |[RuntimeThreadResumed 方法](icorprofilercallback-runtimethreadresumed-method.md)|通知探查器指定的线程在挂起后已恢复。|  
 |[RuntimeThreadSuspended 方法](icorprofilercallback-runtimethreadsuspended-method.md)|通知探查器指定的线程已或即将挂起。|  
 |[Shutdown 方法](icorprofilercallback-shutdown-method.md)|通知探查器应用程序正在关闭。|  
-|[ThreadAssignedToOSThread 方法](icorprofilercallback-threadassignedtoosthread-method.md)|通知探查器使用特定操作系统（OS）线程实现了托管线程。|  
+|[ThreadAssignedToOSThread 方法](icorprofilercallback-threadassignedtoosthread-method.md)|通知探查器使用特定操作系统 (OS) 线程实现了托管线程。|  
 |[ThreadCreated 方法](icorprofilercallback-threadcreated-method.md)|通知探查器已创建一个线程。|  
 |[ThreadDestroyed 方法](icorprofilercallback-threaddestroyed-method.md)|通知探查器线程已销毁。|  
 |[UnmanagedToManagedTransition 方法](icorprofilercallback-unmanagedtomanagedtransition-method.md)|通知探查器已发生从非托管代码到托管代码的转换。|  
   
 ## <a name="remarks"></a>注解  
- CLR 调用 `ICorProfilerCallback` （或[ICorProfilerCallback2](icorprofilercallback2-interface.md)）接口中的方法，在事件发生时通知探查器。 这是 CLR 与代码探查器进行通信时所使用的主回调接口。  
+
+ CLR 在 `ICorProfilerCallback` (或 [ICorProfilerCallback2](icorprofilercallback2-interface.md)) 接口中调用方法，以便在探查器已订阅的事件发生时通知探查器。 这是 CLR 与代码探查器进行通信时所使用的主回调接口。  
   
  代码探查器必须实现接口的方法 `ICorProfilerCallback` 。 对于 .NET Framework 版本2.0 或更高版本，探查器还必须实现 `ICorProfilerCallback2` 方法。 每个方法实现都必须返回值为 "S_OK" 的 HRESULT，否则失败时 E_FAIL。 目前，CLR 将忽略每个回调返回的 HRESULT （ [ICorProfilerCallback：： ObjectReferences](icorprofilercallback-objectreferences-method.md)除外）。  
   
- 在 Microsoft Windows 注册表中，代码探查器必须注册其用于实现和接口的组件对象模型（COM）对象 `ICorProfilerCallback` `ICorProfilerCallback2` 。 代码探查器通过调用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)订阅要接收通知的事件。 通常在探查器的[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)实现中完成此操作。 然后，探查器可以在事件即将发生或刚刚发生在正在执行的运行时进程中时接收来自运行时的通知。  
+ 在 Microsoft Windows 注册表中，代码探查器必须将其组件对象模型注册 (COM) 实现 `ICorProfilerCallback` 和接口的对象 `ICorProfilerCallback2` 。 代码探查器通过调用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)订阅要接收通知的事件。 通常在探查器的 [ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)实现中完成此操作。 然后，探查器可以在事件即将发生或刚刚发生在正在执行的运行时进程中时接收来自运行时的通知。  
   
 > [!NOTE]
 > 探查器将注册一个 COM 对象。 如果探查器面向 .NET Framework 版本1.0 或1.1，则该 COM 对象只需实现的方法 `ICorProfilerCallback` 。 如果目标 .NET Framework 版本2.0 或更高版本，则 COM 对象还必须实现的方法 `ICorProfilerCallback2` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

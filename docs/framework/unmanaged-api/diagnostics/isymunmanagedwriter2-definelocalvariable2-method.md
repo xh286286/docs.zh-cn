@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-ms.openlocfilehash: ac7559bd5431f45b266602404ddde9081aa2944d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cdbb09d25f51e479a8a8ddfc23348305ba7c0a71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683415"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 方法
+
 在当前词法范围内定义单个变量。 对于在整个范围内具有多个住宅的同名变量，可以多次调用此方法。 但在这种情况下， `startOffset` 和参数的值 `endOffset` 不能重叠。  
   
 ## <a name="syntax"></a>语法  
@@ -41,6 +42,7 @@ HRESULT DefineLocalVariable2(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `name`  
  中局部变量名称。  
   
@@ -63,15 +65,17 @@ HRESULT DefineLocalVariable2(
  中参数规范的第三个地址。  
   
  `startOffset`  
- 中变量的起始偏移量。 该参数为可选参数。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
+ 中变量的起始偏移量。 此参数是可选的。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
   
  `endOffset`  
- 中变量的结束偏移量。 该参数为可选参数。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
+ 中变量的结束偏移量。 此参数是可选的。 如果为0，则忽略此参数，并在整个范围内定义变量。 如果它是非零值，则该变量将处于当前范围的偏移量内。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym .idl  
   
 ## <a name="see-also"></a>另请参阅

@@ -12,17 +12,18 @@ api_type:
 ms.assetid: f854b68f-009c-4ffb-89cd-ca874d1c0fb7
 topic_type:
 - apiref
-ms.openlocfilehash: 758e5b71443b127c80c820eb8531056530e81b13
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 81509db178b0ab1a524dcc4b00f39264e87a220d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495692"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682778"
 ---
 # <a name="icorprofilerinfo5geteventmask2-method"></a>ICorProfilerInfo5::GetEventMask2 方法
+
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
   
- 获取探查器要从公共语言运行时 (CLR) 中接收通知的当前事件类别。  它提供[ICorProfilerInfo：： GetEventMask](icorprofilerinfo-geteventmask-method.md)方法未提供的功能。  
+ 获取探查器要从公共语言运行时 (CLR) 中接收通知的当前事件类别。  它提供 [ICorProfilerInfo：： GetEventMask](icorprofilerinfo-geteventmask-method.md) 方法未提供的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,6 +35,7 @@ HRESULT GetEventMask2(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pdwEventsLow`  
  [out] 一个指向指定事件类别的 4 字节值的指针。 每个位都可控制不同的功能、行为或事件类型。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)枚举中描述了这些位。  
   
@@ -41,12 +43,14 @@ HRESULT GetEventMask2(
  [out] 一个指向指定事件类别的 4 字节值的指针。  每个位都可控制不同的功能、行为或事件类型。 [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md)枚举中描述了这些位。  
   
 ## <a name="remarks"></a>注解  
- `GetEventMask2` 方法用于确定探查器已订阅了哪些回调。 通常，您 `pdwEventsLow` 需要对和 `pdwEventsHigh` 值以及要设置的任何新位执行逻辑 "或"，然后调用[SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)方法。  
+
+ `GetEventMask2` 方法用于确定探查器已订阅了哪些回调。 通常，您 `pdwEventsLow` 需要对和 `pdwEventsHigh` 值以及要设置的任何新位执行逻辑 "或"，然后调用 [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) 方法。  
   
- 此方法是[GetEventMask](icorprofilerinfo-geteventmask-method.md)方法的建议替代方法。  
+ 此方法是 [GetEventMask](icorprofilerinfo-geteventmask-method.md) 方法的建议替代方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

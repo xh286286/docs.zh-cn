@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 42935813579d7f1d55a9f1daf9d8c6c1241f85be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426051"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684702"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
-检索在元数据中使用的实际 FileDef 令牌（而不是由 ALink 分配的令牌）。  
+
+检索元数据 (中使用的实际 FileDef 标记，而不是由 ALink) 分配的令牌。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,6 +36,7 @@ HRESULT GetFileDef(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  程序集的 ID。  
   
@@ -45,9 +47,11 @@ HRESULT GetFileDef(
  接收 FileDef 标记。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink  
   
 ## <a name="see-also"></a>另请参阅

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 899d6e74902e47f1f41b849bd5c25048baa175f7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3afb89a42d7e26c5e89e6f9458ef3406cc0102ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617134"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684182"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 函数
-获取具有指定的类的相应公共语言运行时（CLR）版本信息 `CLSID` 。  
+
+获取具有指定的类的相应公共语言运行时 (CLR) 版本信息 `CLSID` 。  
   
  此函数已在 .NET Framework 4 中弃用。  
   
@@ -39,8 +40,9 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `rclsid`  
- 中 `CLSID`组件的。  
+ 中 `CLSID` 组件的。  
   
  `pVersion`  
  弄 一个缓冲区，其中包含成功完成后的版本号字符串。  
@@ -54,9 +56,9 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  `dwResolutionFlags`  
  中 CLSID_RESOLUTION_FLAGS 值之一。 支持以下值：  
   
-- CLSID_RESOLUTION_DEFAULT：（0x0）指定应使用默认的互操作行为。  
+- CLSID_RESOLUTION_DEFAULT： (0x0) 指定应使用默认互操作行为。  
   
-- CLSID_RESOLUTION_REGISTERED：（0x1）指定应搜索注册表并应用填充程序策略。  
+- CLSID_RESOLUTION_REGISTERED： (0x1) 指定应搜索注册表并应用填充程序策略。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -66,10 +68,11 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |E_INVALIDARG|其中一个参数的类型或格式无效。|  
 |ERROR_INSUFFICIENT_BUFFER|`pVersion`缓冲区不够大，无法容纳整个版本字符串。|  
 |REGDB_E_CLASSNOTREG|没有用指定的注册的类 `CLSID` 。|  
-|E_POINTER|`dwLength`为 null，或 `cchBuffer` 足以容纳版本字符串，但 `pVersion` 为 null。|  
+|E_POINTER|`dwLength` 为 null，或 `cchBuffer` 足以容纳版本字符串，但 `pVersion` 为 null。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   

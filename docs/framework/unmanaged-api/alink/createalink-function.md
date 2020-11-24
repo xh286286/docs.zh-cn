@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc73bcb9-6af6-44d8-bc39-2f4400325dae
 topic_type:
 - apiref
-ms.openlocfilehash: 9165a4db7e65fb0f409a902b06d32e9c2988aa69
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 98c6ed4657dc69554a9fcca27145f65c621492f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446553"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683726"
 ---
 # <a name="createalink-function"></a>CreateALink 函数
+
 创建程序集链接器的实例，并设置指向指定接口的指针。  
   
 ## <a name="syntax"></a>语法  
@@ -39,10 +40,11 @@ HRESULT CreateALink (
 |参数|说明|  
 |---------------|-----------------|  
 |`riid`|某个程序集链接器接口的物理名称。|  
-|`ppInterface`|成功完成后的位置包含指向 `riid` 接口的指针。|  
+|`ppInterface`|成功完成后的位置包含指向接口的指针 `riid` 。|  
   
 ## <a name="requirements"></a>要求  
- **库**： alink  
+
+ **库**： alink.dll  
   
 ## <a name="see-also"></a>另请参阅
 

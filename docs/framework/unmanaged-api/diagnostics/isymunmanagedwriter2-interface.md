@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8e78faa4-cf43-44fb-a91d-94d6df692a25
 topic_type:
 - apiref
-ms.openlocfilehash: 1fe6055d930c6d30e947d6bc774d0520a9e175ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6feb48b7c78dda64ba372e470b83ffb14f21f2f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614677"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683324"
 ---
 # <a name="isymunmanagedwriter2-interface"></a>ISymUnmanagedWriter2 接口
-表示符号编写器，并提供定义文档、序列点、词法范围和变量的方法。 此接口扩展[ISymUnmanagedWriter](isymunmanagedwriter-interface.md)接口。  
+
+表示符号编写器，并提供定义文档、序列点、词法范围和变量的方法。 此接口扩展 [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) 接口。  
   
 ## <a name="methods"></a>方法  
   
@@ -33,6 +34,7 @@ ms.locfileid: "83614677"
 |[DefineLocalVariable2 方法](isymunmanagedwriter2-definelocalvariable2-method.md)|在当前词法范围内定义单个变量。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅
