@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-ms.openlocfilehash: 6e24db7da7abbdb597b8ff64515e8053667af3ff
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c4ea325a755ed05eed378d9201068de31ca8114f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681572"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue 方法
-设置或更新通过之前对 IMetaDataEmit 的调用定义的自定义特性的值[：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)。  
+
+设置或更新通过之前对 IMetaDataEmit 的调用定义的自定义特性的值 [：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,6 +37,7 @@ HRESULT SetCustomAttributeValue (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pcv`  
  中目标自定义属性的标记。  
   
@@ -46,11 +48,12 @@ HRESULT SetCustomAttributeValue (
  中自定义属性的大小（以字节为单位）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: a76c17e663fdf6555ed878cca1b86b6a9395730e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ea0e6f96028afc201f498119976eb87aa762a6eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008789"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681686"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 方法
-获取保存当前公共语言运行时（CLR）的目录。 此方法仅支持在进程外调试器中使用。 如果从另一个组件调用，它将返回 E_NOTIMPL。  
+
+获取 (CLR) 保存当前公共语言运行时的目录。 此方法仅支持在进程外调试器中使用。 如果从另一个组件调用，它将返回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,6 +37,7 @@ HRESULT GetCORSystemDirectory (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `szBuffer`  
  弄要接收目录名称的缓冲区。  
   
@@ -46,11 +48,12 @@ HRESULT GetCORSystemDirectory (
  弄中实际返回的字节数 `szBuffer` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

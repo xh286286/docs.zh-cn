@@ -2,12 +2,12 @@
 title: 记录
 description: '了解 F # 记录如何表示命名值的简单聚合，还可以选择包含成员。'
 ms.date: 08/15/2020
-ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812349"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682024"
 ---
 # <a name="records"></a>记录
 
@@ -34,7 +34,7 @@ type [accessibility-modifier] typename =
 
 每个标签都在单独的行上时，分号是可选的。
 
-您可以在称为 *记录表达式*的表达式中设置值。 如果标签与其他记录类型) 的 (完全不同，则编译器将从使用的标签推断类型。 大括号 ( {} ) 将记录表达式括起来。 下面的代码演示了一个记录表达式，该表达式使用带有标签、和的三个 float 元素初始化记录 `x` `y` `z` 。
+您可以在称为 *记录表达式* 的表达式中设置值。 如果标签与其他记录类型) 的 (完全不同，则编译器将从使用的标签推断类型。 大括号 ( {} ) 将记录表达式括起来。 下面的代码演示了一个记录表达式，该表达式使用带有标签、和的三个 float 元素初始化记录 `x` `y` `z` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -157,7 +157,7 @@ type Person =
     member this.WeirdToString() =
         this.Name + this.Address + string this.Age
 
-let p = { Name = "a"; Age = 12; Address = "abc123 }
+let p = { Name = "a"; Age = 12; Address = "abc123" }
 let weirdString = p.WeirdToString()
 ```
 
@@ -182,7 +182,7 @@ The records are equal.
 ## <a name="see-also"></a>另请参阅
 
 - [F# 类型](fsharp-types.md)
-- [类](classes.md)
+- [Classes](classes.md)
 - [F# 语言参考](index.md)
 - [引用相等](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [模式匹配](pattern-matching.md)

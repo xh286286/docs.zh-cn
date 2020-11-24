@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-ms.openlocfilehash: 0a4cb365ca8f7d52be505368a3d769a9728983bf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8daa84e3abbbc64c9a48d8957b4ad9c6756d0d8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502959"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682076"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread 方法
+
 获取一个对象，该对象可查询 ICorDebugThread 接口。 此方法在 .NET Framework 版本2.0 中已过时。  
   
 ## <a name="syntax"></a>语法  
@@ -33,14 +34,17 @@ HRESULT GetInprocInspectionIThisThread(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppicd`  
  可在接口上查询的[输出](/cpp/atl/iunknown)对象 `ICorDebugThread` 。  
   
 ## <a name="remarks"></a>注解  
- 在 .NET Framework 版本1.0 中，公共语言运行时（CLR）调试服务支持有限的进程内调试。 进程内调试使探查器能够使用调试 API 的检查部分。 由于客户反馈，已从版本2.0 中的 .NET Framework 中删除进程内调试，并将其替换为一组功能，这些功能与分析 API 是一种更多的功能。  
+
+ 公共语言运行时 (CLR) 调试服务在 .NET Framework 版本1.0 中支持有限的进程内调试。 进程内调试使探查器能够使用调试 API 的检查部分。 由于客户反馈，已从版本2.0 中的 .NET Framework 中删除进程内调试，并将其替换为一组功能，这些功能与分析 API 是一种更多的功能。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

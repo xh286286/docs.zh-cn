@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 性能
 description: 本文介绍 Windows Workflow Foundation 的主要修订版的性能特征，这是 .NET Framework 4 中的一部分。
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0a68548a8b5e521fccdb544e318c3091315814f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682336"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 性能
 
@@ -20,7 +20,7 @@ ms.locfileid: "90558337"
 
  [!INCLUDE[wf1](../../../includes/wf1-md.md)]在本主题的其余部分中，.NET Framework 4 中引入的版本将被称为 WF4。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 .NET Framework 3.0 中引入的，并且通过 .NET Framework 3.5 SP1 有一些次要修订版。 对于本主题的其余部分，Workflow Foundation 的 .NET Framework 3.5 版本将被称为 WF3。 WF3 随 WF4 一起提供 .NET Framework 4 并行提供。 有关将 WF3 项目迁移到 WF4 的详细信息，请参阅： [Windows Workflow Foundation 4 迁移指南](migration-guidance.md)。
 
- Windows Communication Foundation (WCF) 是 Microsoft 用于构建面向服务的应用程序的统一编程模型。 它最初是作为 .NET 3.0 的一部分引入的，它是 WF3 的一部分，现在是 .NET Framework 的关键组件之一。
+ Windows Communication Foundation (WCF) 是 Microsoft 用于构建面向服务的应用程序的统一编程模型。 它最初是作为 .NET Framework 3.0 的一部分引入的，WF3，现在是 .NET Framework 的关键组件之一。
 
  Windows Server AppFabric 是一组集成技术。你可以利用这些技术更轻松地生成、缩放和管理在 IIS 上运行的 Web 应用程序和复合应用程序。 它提供用于监视和管理服务与工作流的工具。 有关详细信息，请参阅 [Windows Server AppFabric 1.0](/previous-versions/appfabric/ff384253(v=azure.10))。
 
@@ -51,7 +51,7 @@ ms.locfileid: "90558337"
  使用异步编程时，应用程序对长时间运行的阻止操作（如 I/O）或分布式计算操作通常会表现出更佳的性能和可伸缩性。 WF4 通过基础活动类型 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供异步支持。 运行时本身就了解异步活动，因此可以在异步工作未处理时，自动将实例放入非持久性区域中。 自定义活动可以从这些类型派生，从而无需保留工作流计划程序线程和阻止能够并行运行的任何活动，即可执行异步工作。
 
 ### <a name="messaging"></a>消息传递
- 最初，WF3 通过外部事件或 Web 服务调用提供相当有限的消息传送支持。 在 .NET 3.5 中，工作流可以作为 WCF 客户端实现，也可以通过和公开为 WCF 服务 <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> 。 在 WF4 中，基于工作流的消息传递编程的概念通过将 WCF 消息传递逻辑紧密集成到 WF 中，进一步增强了这一概念。
+ 最初，WF3 通过外部事件或 Web 服务调用提供相当有限的消息传送支持。 在 .NET Framework 3.5 中，工作流可以作为 WCF 客户端实现，也可以通过和公开为 WCF 服务 <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> 。 在 WF4 中，基于工作流的消息传递编程的概念通过将 WCF 消息传递逻辑紧密集成到 WF 中，进一步增强了这一概念。
 
  .NET 4 的 WCF 中提供的统一消息处理管道可帮助 WF4 服务获得比 WF3 更好的性能和可伸缩性。 WF4 还提供了更丰富的消息传送编程支持，可以对复杂消息交换模式 (MEP) 进行建模。 开发人员可以使用类型化的服务协定实现简单的编程，也可以使用非类型化的服务协定获得更好的性能，而无需付出序列化成本。 WF4 中通过 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 类提供的客户端通道缓存支持可帮助开发人员以最小的工作量构建快速应用程序。 有关详细信息，请参阅 [更改发送活动的缓存共享级别](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。
 
@@ -452,5 +452,5 @@ public class Workflow1 : Activity
 
  可以注意到，使用 Interop 与直接使用 WF3 相比有显著的性能提升。  但是，与 WF4 活动比较后，增加则可以忽略不计。
 
-## <a name="summary"></a>“摘要”
+## <a name="summary"></a>总结
  WF4 对性能的巨大投资在许多重要的方面得到了回报。  由于更接近 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时，所以 WF4 中单个工作流组件性能在某些情况下能比 WF3 快数百倍。  延迟数字也得到显著改善。  这意味着，使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 而不是手动编码 WCF 业务流程服务的性能损失非常小，因为这样做的好处在于使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 。  暂留性能提高了 2.5 至 3.0 倍。  采用工作流跟踪方式的运行状况监视目前的开销非常低。  我们为那些考虑从 WF3 迁移到 WF4 的用户提供了一套全面的迁集指南。  所有这些使 WF4 成为您编写复杂应用程序的必备之选。

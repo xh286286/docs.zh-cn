@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 17757df566ba8d141e7adec00dcc1f75959d0e00
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 096a460f9d6581ebdd00f8487af68f652524d52f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005619"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681660"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
+
 使用指定的元数据签名创建要附加到指定对象的自定义属性的定义，并获取该自定义属性定义的标记。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT DefineCustomAttribute (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tkObj`  
  中所有者项的标记。  
   
@@ -51,14 +53,15 @@ HRESULT DefineCustomAttribute (
  中中的字节数 `pCustomAttribute` 。  
   
  `pcv`  
- 弄`mdCustomAttribute`分配的令牌。  
+ 弄 `mdCustomAttribute` 分配的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

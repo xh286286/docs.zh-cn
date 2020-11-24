@@ -14,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: e7b8f6b4-95bc-4ba5-b9eb-f5590a7326a4
 topic_type:
 - apiref
-ms.openlocfilehash: d19d7ed2262db6d3c6e7f15db0e96da52f86db4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0bf17e7c9d8ff16dc8f07e4a386f599284828f40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500853"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682232"
 ---
 # <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE 枚举
+
 指示缓存的函数搜索的结果。  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND`的值为零，因此 `COR_PRF_JIT_CACHE` 不能用作布尔代理项。  
+> `COR_PRF_CACHED_FUNCTION_FOUND` 的值为零，因此 `COR_PRF_JIT_CACHE` 不能用作布尔代理项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +39,14 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`COR_PRF_FUNCTION_FOUND`|搜索找到函数。|  
 |`COR_PRF_FUNCTION_NOT_FOUND`|搜索找不到函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
