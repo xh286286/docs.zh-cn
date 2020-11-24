@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b5785468-fcd7-4cc3-8a5d-8796337b53fc
 topic_type:
 - apiref
-ms.openlocfilehash: 5d6e19fe307373c2920fd60b04bff482b238c5c4
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 5b0e2265810b00fe0760d4e25c0f9904a96d9f2a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762950"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691040"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort 方法
-指示公共语言运行时（CLR）立即和无条件中止当前[ICLRTask 接口](iclrtask-interface.md)实例表示的任务。  
+
+指示公共语言运行时 (CLR) 立即和无条件中止当前 [ICLRTask 接口](iclrtask-interface.md) 实例表示的任务。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +36,7 @@ HRESULT RudeAbort ();
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`RudeAbort`已成功返回。|  
+|S_OK|`RudeAbort` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -43,14 +44,16 @@ HRESULT RudeAbort ();
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>注解  
+
  宿主调用 `RudeAbort` 立即中止任务。 不保证会执行终结器和异常处理例程。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

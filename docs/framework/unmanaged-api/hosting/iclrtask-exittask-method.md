@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 746c85a6-4b33-4f72-a2e9-379fdf2e96af
 topic_type:
 - apiref
-ms.openlocfilehash: 9294f149e020cfb22512b4f110d64c5dabb5e777
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: bcd1cac47e4b59cc47c95145f0ccf60c92ea54fe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762443"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690832"
 ---
 # <a name="iclrtaskexittask-method"></a>ICLRTask::ExitTask 方法
-通知公共语言运行时（CLR）当前[ICLRTask](iclrtask-interface.md)实例表示的任务正在结束，并尝试正常关闭任务。  
+
+通知公共语言运行时 (CLR) 当前 [ICLRTask](iclrtask-interface.md) 实例表示的任务正在结束，并尝试正常关闭任务。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +36,7 @@ HRESULT ExitTask ();
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`ExitTask`已成功返回。|  
+|S_OK|`ExitTask` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -43,14 +44,16 @@ HRESULT ExitTask ();
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>注解  
- `ExitTask`尝试完全关闭任务，其方式类似于从非托管类型库分离线程。  
+
+ `ExitTask` 尝试完全关闭任务，其方式类似于从非托管类型库分离线程。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

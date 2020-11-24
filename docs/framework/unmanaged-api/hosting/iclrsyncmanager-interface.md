@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a49f9d80-1c76-4ddd-8c49-34f913a5c596
 topic_type:
 - apiref
-ms.openlocfilehash: b0b9c0b7d178557806a9ab2893bff2d34dc408ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5bfab21a36becf943b1813f266cf70c4b5e5b1d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557731"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690988"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 接口
+
 定义一些方法，这些方法允许宿主获取有关所请求任务的信息，并检测其同步实现中的死锁。  
   
 ## <a name="methods"></a>方法  
@@ -34,7 +35,8 @@ ms.locfileid: "90557731"
 |[GetRWLockOwnerNext 方法](iclrsyncmanager-getrwlockownernext-method.md)|获取正在等待当前读取器-编写器锁的下一个任务。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
@@ -42,7 +44,7 @@ ms.locfileid: "90557731"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread>
 - [IHostSyncManager 接口](ihostsyncmanager-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 657d2d638a419ba88d4cf7152f4505de1bd23706
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ebf484524b32d8e917d88c21425fab314dfc41be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692613"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum 接口
+
 [ICorPublishEnum](icorpublishenum-interface.md)接口的子类，提供遍历[ICorPublishProcess](icorpublishprocess-interface.md)对象集合的方法。  
   
 ## <a name="methods"></a>方法  
@@ -30,13 +31,15 @@ ms.locfileid: "83421067"
 |------------|-----------------|  
 |[Next 方法](icorpublishprocessenum-next-method.md)|`ICorPublishProcess`从当前位置开始，获取集合中指定数量的实例。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `ICorPublishProcessEnum`接口实现抽象接口的方法[ICorPublishEnum](icorpublishenum-interface.md)。  
   
  `ICorPublishProcessEnum`实例由[ICorPublish：： EnumProcesses](icorpublish-enumprocesses-method.md)方法创建。 对象集合的遍历 `ICorPublishProcess` 基于创建实例时给定的筛选条件 `ICorPublishProcessEnum` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
   

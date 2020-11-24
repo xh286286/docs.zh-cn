@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-ms.openlocfilehash: 841379702e24428a8092cfd1d2cbd3c5b4e17ba4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f5d7df60a7b9c728b73fe6592226a8b6734b1e66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692145"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
+
 将嵌入源的指定范围返回到给定缓冲区中。 缓冲区必须足够大才能容纳源。  
   
 ## <a name="syntax"></a>语法  
@@ -40,6 +41,7 @@ HRESULT GetSourceRange(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `startLine`  
  中当前文档中的起始行。  
   
@@ -62,6 +64,7 @@ HRESULT GetSourceRange(
  弄源文档的指定范围的大小和长度（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则 S_OK。  
   
 ## <a name="see-also"></a>另请参阅
