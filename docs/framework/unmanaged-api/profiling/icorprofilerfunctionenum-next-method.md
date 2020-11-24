@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: df62ad1af0ea91783cb62bb0590b6e36d812de3a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 76e0fe011769217f3cecb40c8d2ba83904b26706
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503063"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669219"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next 方法
+
 从一个函数的顺序集合中获取指定数量的连续函数（从枚举器在序列中的当前位置开始）。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT Next([in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `celt`  
  [in]要检索的函数数量。  
   
@@ -45,6 +47,7 @@ HRESULT Next([in]  ULONG      celt,
  [out] 指向 `ids` 数组中实际返回的函数量的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|说明|  
@@ -53,7 +56,8 @@ HRESULT Next([in]  ULONG      celt,
 |S_FALSE|返回的元素少于 `celt` 个，表示枚举已完成。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

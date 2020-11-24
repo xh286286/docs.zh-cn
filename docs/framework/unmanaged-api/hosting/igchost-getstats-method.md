@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-ms.openlocfilehash: 67668aa7ff9faf035a047e485a8a3c8a451f45b9
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7e664d88bf9f67e936e693b663f27ca490da13ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805241"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670103"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats 方法
+
 获取垃圾收集系统的当前状态的统计信息。  
   
 ## <a name="syntax"></a>语法  
@@ -34,18 +35,21 @@ HRESULT GetStats (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pStats`  
- [in，out]指向[COR_GC_STATS](cor-gc-stats-structure.md)结构的指针，该结构包含垃圾收集系统的当前状态的统计信息。  
+ [in，out]指向 [COR_GC_STATS](cor-gc-stats-structure.md) 结构的指针，该结构包含垃圾收集系统的当前状态的统计信息。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  智能分配系统可以使用统计信息来帮助垃圾回收系统操作。 例如，在查看统计信息后，分配系统可能会确定它是否需要添加更多内存或强制集合。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** GCHost，GCHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09313cb5-06f6-43bd-94f4-1055c6b0c99a
 topic_type:
 - apiref
-ms.openlocfilehash: e975db68252e866a0bf7898f1c9d3cbe67bbe24f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f764be9b80a8d4dcb15791d406412ece9e7e7c87
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134580"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670922"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo 方法
+
 获取有关指定程序集的请求的数据。  
   
 ## <a name="syntax"></a>语法  
@@ -36,26 +37,28 @@ HRESULT QueryAssemblyInfo (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `dwFlags`  
  中在合成 .idl 中定义的标志。 支持以下值：  
   
-- QUERYASMINFO_FLAG_VALIDATE （0x00000001）  
+-  (0x00000001) QUERYASMINFO_FLAG_VALIDATE  
   
-- QUERYASMINFO_FLAG_GETSIZE （0x00000002）  
+- QUERYASMINFO_FLAG_GETSIZE (0x00000002)   
   
  `pszAssemblyName`  
  中将为其检索数据的程序集的名称。  
   
  `pAsmInfo`  
- [in，out]包含有关程序集的数据的[ASSEMBLY_INFO](assembly-info-structure.md)结构。  
+ [in，out]一个 [ASSEMBLY_INFO](assembly-info-structure.md) 结构，它包含有关程序集的数据。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IAssemblyCache 接口](iassemblycache-interface.md)

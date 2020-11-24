@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-ms.openlocfilehash: ac73c462aa210927f0665cae161fd7f3e17a0cdb
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f32b91f0d47449f80c38542162035999d616813b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670131"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
+
 为给定的生成强制执行回收，而不考虑当前垃圾回收的状态。  
   
 ## <a name="syntax"></a>语法  
@@ -34,15 +35,17 @@ HRESULT Collect (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `Generation`  
  中要对其执行垃圾回收的代。 如果值为-1，则表示所有代将进行垃圾回收。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** GCHost，GCHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
