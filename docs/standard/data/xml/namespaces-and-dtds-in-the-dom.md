@@ -1,14 +1,13 @@
 ---
 title: DOM 中的命名空间和 DTD
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-ms.openlocfilehash: 748be66c255aa018fb3e1ed541c6e5a92775408c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bd2a15b96cb456f475eb7dec439a0f328ae72a55
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288779"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830137"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM 中的命名空间和 DTD
 文档类型定义 (DTD) 使命名空间支持变得很复杂。 例如，在下面的 XML 中，默认属性的名称中包含冒号。  

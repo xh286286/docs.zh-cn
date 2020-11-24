@@ -2,7 +2,6 @@
 title: 正则表达式对象模型
 description: 查看 .NET 中的正则表达式对象模型。 使用与匹配、分组和捕获相关的正则表达式引擎、对象和集合。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: d6f85d74b40902037620d065f63f1d0ad6cfc205
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888641"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831281"
 ---
 # <a name="the-regular-expression-object-model"></a>正则表达式对象模型
 <a name="introduction"></a> 本主题介绍了处理 .NET 正则表达式时使用的对象模型。 它包含下列部分：  

@@ -1,7 +1,6 @@
 ---
 title: 使用 AsyncCallback 委托和状态对象
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-ms.openlocfilehash: e52ed550510253aba9401931c0f612211c7d1bf5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0a33c852d822e7d25d14ab17324459ec005853f9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276421"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829136"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>使用 AsyncCallback 委托和状态对象
 使用 <xref:System.AsyncCallback> 委托处理单独线程中的异步操作结果时，可以使用状态对象，在两个回调之间传递信息，并检索最终结果。 本主题通过扩展[使用 AsyncCallback 委托结束异步操作](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)中的示例，展示了此做法。  

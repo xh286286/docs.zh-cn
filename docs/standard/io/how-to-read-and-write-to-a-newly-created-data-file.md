@@ -2,7 +2,6 @@
 title: 如何：对新建的数据文件进行读取和写入
 description: 了解如何使用 System.IO.BinaryReader 和 System.IO.BinaryWriter 类读取和写入 .NET 中新创建的数据文件。
 ms.date: 01/21/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - I/O [.NET], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 236d50260efa66f21db6d0abba6cc5c258a74d8d
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 940d720edfde93f8707a4fd7040e5dd3618a2680
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188726"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830709"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：对新建的数据文件进行读取和写入
 

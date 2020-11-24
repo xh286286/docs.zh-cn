@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5418f96a3b4515224c49a1c1aa38784c348a86db
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: f2eb57bba462d471a041c17024fa7031c2c7f87d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516146"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830579"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! （null 包容）运算符（C# 参考）
 
@@ -51,7 +51,7 @@ null 包容运算符的一个用例是测试参数验证逻辑。 例如，请�
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-有关详细信息，请参阅[可为空的引用类型规范草案](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)的 [null 包容性运算符](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)部分。
+有关详细信息，请参阅[可为空的引用类型规范草案](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)的 [null 包容性运算符](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md#the-null-forgiving-operator)部分。
 
 ## <a name="see-also"></a>请参阅
 

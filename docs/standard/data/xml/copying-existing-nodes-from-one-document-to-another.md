@@ -1,14 +1,13 @@
 ---
 title: 将现有节点从一个文档复制到另一个文档
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 8ae7fd04e5c85e59ca9bd629c6957ad470d36b48
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289195"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829604"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>将现有节点从一个文档复制到另一个文档
 ImportNode  方法是一种机制，用于将节点或整个节点子树从一个 XmlDocument  复制到另一个 XmlDocument。 该调用返回的节点是源文档节点的副本，其中包括属性值、节点名、节点类型以及所有与命名空间相关的属性，如前缀、本地名称和命名空间统一资源标识符 (URI)。 源文档不更改。 导入该节点后，仍需使用插入节点的方法之一将该节点添加到树中。  

@@ -2,22 +2,21 @@
 title: 数据并行（任务并行库）
 description: 了解任务并行库 (TPL) 如何支持数据并行，以在 .NET 中同时对源集合或数组的元素执行相同的操作。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 617757581f6d2491098e1172072bdf0387c6852b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558909"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829370"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>数据并行（任务并行库）
-*数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。 在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  
+*数据并行* 指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。 在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  
   
  任务并行库 (TPL) 支持通过 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 类实现的数据并行。 此类对 [for](../../csharp/language-reference/keywords/for.md) 循环和 [foreach](../../csharp/language-reference/keywords/foreach-in.md) 循环（Visual Basic 中的 `For` 和 `For Each`）提供了基于方法的并行执行。 你为 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 循环编写的循环逻辑与编写连续循环的相似。 无需创建线程或列工作项。 在基本循环中，不需要加锁。 TPL 为你处理所有低级别的工作。 有关使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 的详细信息，请下载文档[并行编程模式：了解并应用与 .NET Framework 4 的并行模式](https://www.microsoft.com/download/details.aspx?id=19222)。 下面的代码示例演示了一个简单的 `foreach` 循环及其并行等效项。  
   

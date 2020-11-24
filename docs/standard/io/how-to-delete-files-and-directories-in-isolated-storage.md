@@ -1,7 +1,6 @@
 ---
 title: 如何：在独立存储中删除文件和目录
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-ms.openlocfilehash: 7797f319ca3b143bac6a4e68eaf820e966f1560e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 9340796c835d91fe5401e467edd82cab80b2e653
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187939"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830787"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>如何：在独立存储中删除文件和目录
 可以删除独立存储文件中的目录和文件。 在存储区中，文件名和目录名依赖于操作系统，并指定为虚拟文件系统根目录的相对路径。 在 Windows 操作系统中，它们不区分大小写。  

@@ -2,7 +2,6 @@
 title: 标准 TimeSpan 格式字符串
 description: 查看标准 TimeSpan 格式字符串，此类字符串使用单个格式说明符来定义 .NET 中 TimeSpan 值的文本表示形式。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888940"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831307"
 ---
 # <a name="standard-timespan-format-strings"></a>标准 TimeSpan 格式字符串
 
@@ -50,7 +49,7 @@ ms.locfileid: "92888940"
 ## <a name="the-constant-c-format-specifier"></a>常量（“c”）格式说明符。  
  “c”格式说明符返回的 <xref:System.TimeSpan> 值的字符串表示形式具有以下形式：  
   
- [-][ *d*.] *hh* : *mm* : *ss* [. *fffffff* ]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  方括号 ([ and ]) 中的元素是可选的。 句点 (.) 和冒号 (:) 是文字符号。 下表介绍了剩余的元素。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "92888940"
 ## <a name="the-general-short-g-format-specifier"></a>常规短（“g”）格式说明符  
  “g”<xref:System.TimeSpan> 格式说明符通过只包含所需元素来返回简洁形式的 <xref:System.TimeSpan> 值的字符串表示形式。 它具有以下形式：  
   
- [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
+ [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  方括号 ([ and ]) 中的元素是可选的。 冒号 (:) 是一种文字符号。 下表介绍了剩余的元素。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "92888940"
 ## <a name="the-general-long-g-format-specifier"></a>常规长（“G”）格式说明符  
  （“G”）<xref:System.TimeSpan> 格式说明符用始终包含日期和秒的小数部分的长格式返回 <xref:System.TimeSpan> 值的字符串表示形式。 “G”标准格式说明符生成的字符串具有以下形式：  
   
- [-] *d* : *hh* : *mm* : *ss*. *fffffff*  
+ [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
   
  方括号 ([ and ]) 中的元素是可选的。 冒号 (:) 是一种文字符号。 下表介绍了剩余的元素。  
   

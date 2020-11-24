@@ -2,7 +2,6 @@
 title: 正则表达式中的限定符
 description: 了解正则表达式限定符，该类限定符指定输入中必须存在字符、组或字符类的多少实例才能进行匹配。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 361286b992180e1d7fdf18d88022780cc3aa53fc
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 46f780dff948d290ee7906f8de7e74b03a404cc5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889421"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831034"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>正则表达式中的限定符
 限定符指定输入中必须存在字符、组或字符类的多少实例才能找到匹配项。  下表列出了 .NET 支持的限定符。  

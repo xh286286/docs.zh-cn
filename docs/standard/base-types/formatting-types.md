@@ -2,7 +2,6 @@
 title: .NET 中的格式设置类型
 description: 了解如何对 .NET 中的类型进行格式设置。 了解如何使用或替代 ToString 方法。 了解区分区域性的自定义复合格式设置。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -26,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET]
 - strings [.NET], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: f100c1abcb32e907b92c42f8cfa460d2c1927803
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a23df3ecfd3042927636813cdb94eecbb71438f0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888490"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828954"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式类型
 

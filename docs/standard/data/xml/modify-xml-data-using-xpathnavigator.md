@@ -1,18 +1,17 @@
 ---
 title: 使用 XPathNavigator 修改 XML 数据
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 3b64bc8666274798ebaefc87ef3883fcec1ef6b1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 79bb23b77557a5a10f021e2167c9fa8ae3ee044a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288831"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830189"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 数据
 <xref:System.Xml.XPath.XPathNavigator> 类提供一组方法用于修改 XML 文档中的节点和值。 要使用这些方法，<xref:System.Xml.XPath.XPathNavigator> 对象必须可编辑，即其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 属性必须为 `true`。  

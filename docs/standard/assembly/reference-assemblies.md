@@ -3,13 +3,12 @@ title: 引用程序集
 description: 了解引用程序集，这是 .NET 中一种特殊类型的程序集，它只包含库的公共 API 外围应用
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
-ms.technology: dotnet-standard
-ms.openlocfilehash: 43a9dab037f4d0f1926ff67f8f38eaa6734a6d67
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 2f7f026c7fca4b772be85671dcc3a2a6d50a385c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164519"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831047"
 ---
 # <a name="reference-assemblies"></a>引用程序集
 

@@ -1,19 +1,18 @@
 ---
 title: 了解 PLINQ 中的加速
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 627f1327a9fe87fc226dfbb40df50ec4855edfb9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284892"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829968"
 ---
 # <a name="understanding-speedup-in-plinq"></a>了解 PLINQ 中的加速
 PLINQ 的主要用途是，在多核计算机上并行执行查询委托，以加速执行 LINQ to Objects 查询。 如果单独处理源集合中的每个元素，且各个代理之间不涉及共享状态，PLINQ 的性能最佳。 此类操作在 LINQ to Objects 和 PLINQ 中很常见，通常称为“适合并行”，因为它们可以轻松适应计划多个线程的工作。 不过，并非所有查询完全都由适合并行操作组成；在大多数情况下，查询涉及一些无法并行执行或减慢并行执行的运算符。 即使查询完全都由适合并行组成，PLINQ 仍必须对数据源进行分区，并计划线程工作，通常还需要在查询完成时合并结果。 所有这些操作都增加了并行执行的计算成本；增加并行执行而产生的这些成本称为“开销”。 为了实现 PLINQ 查询的最佳性能，目标是最大限度地增加适合并行执行的部分，并尽量减少需要开销的部分。 本文有助于确保编写的 PLINQ 查询尽可能高效，且仍能产生正确结果。  

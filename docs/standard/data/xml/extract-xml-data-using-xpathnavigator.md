@@ -1,17 +1,16 @@
 ---
 title: 使用 XPathNavigator 提取 XML 数据
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-ms.openlocfilehash: e639931204a416c3cde87044730364a4f387799a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5cf132c302650a0069c6cc497248d1d0b50c779d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287761"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828902"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 提取 XML 数据
 可以通过多种不同的方式在 Microsoft .NET Framework 中表示 XML 文档。 包括使用 <xref:System.String>，或通过使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 类。 为了便于在这些不同的 XML 文档表示形式之间切换，<xref:System.Xml.XPath.XPathNavigator> 类提供了许多方法和属性，用于将 XML 作为 <xref:System.String>, <xref:System.Xml.XmlReader> 对象或 <xref:System.Xml.XmlWriter> 对象提取。  

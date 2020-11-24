@@ -2,12 +2,12 @@
 title: 收集容器中的诊断
 description: 在本文中，你将了解如何在 Docker 容器中使用 .NET Core 诊断工具。
 ms.date: 09/01/2020
-ms.openlocfilehash: e57f3696433bbf6f35b2e3e5d1e72ae8b1e3eeb3
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91450832"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916204"
 ---
 # <a name="collect-diagnostics-in-containers"></a>收集容器中的诊断
 
@@ -23,17 +23,17 @@ ms.locfileid: "91450832"
 
 ```dockerfile
 # In build stage
-# Install desired .NET CLI diagnostics tools
-RUN dotnet tool install --tool-path /tools dotnet-trace
-RUN dotnet tool install --tool-path /tools dotnet-counters
-RUN dotnet tool install --tool-path /tools dotnet-dump
+# Install desired .NET CLI diagnostics tools
+RUN dotnet tool install --tool-path /tools dotnet-trace
+RUN dotnet tool install --tool-path /tools dotnet-counters
+RUN dotnet tool install --tool-path /tools dotnet-dump
 
 ...
 
 # In final stage
-# Copy diagnostics tools
-WORKDIR /tools
-COPY --from=build /tools .
+# Copy diagnostics tools
+WORKDIR /tools
+COPY --from=build /tools .
 ```
 
 另外，还可以在需要时将在容器中安装 .NET Core SDK，以便安装 CLI 工具。 请注意，安装 .NET Core SDK 有重新安装 .NET Core 运行时的副作用。 因此，请确保安装与容器中存在的运行时匹配的 SDK 版本。
@@ -49,7 +49,7 @@ COPY --from=build /tools .
 
 **此工具适用于：✔️** .NET Core 2.1 及更高版本
 
-[`PerfCollect`](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/linux-performance-tracing.md) 脚本对于收集性能跟踪非常有用， .NET Core 3.0 之前建议使用此工具收集跟踪。 如果在容器中使用 `PerfCollect`，请记住以下要求：
+[`PerfCollect`](./trace-perfcollect-lttng.md) 脚本对于收集性能跟踪非常有用， .NET Core 3.0 之前建议使用此工具收集跟踪。 如果在容器中使用 `PerfCollect`，请记住以下要求：
 
 1. `PerfCollect` 需要 [`SYS_ADMIN` 功能](https://man7.org/linux/man-pages/man7/capabilities.7.html)（以运行 `perf` 工具），因此请确保[通过该功能](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)启动容器。
 2. `PerfCollect` 需要在其将分析的应用启动之前设置某些环境变量。 可以在 [Dockerfile](https://docs.docker.com/engine/reference/builder/#env) 中设置这些变量，也可以在[启动容器](https://docs.docker.com/engine/reference/run/#env-environment-variables)时设置。 由于在正常生产环境中不应设置这些变量，因此，在启动要分析的容器时添加它们是常见做法。 PerfCollect 需要的两个变量是：

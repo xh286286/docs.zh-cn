@@ -2,7 +2,6 @@
 title: 枚举格式字符串
 description: 使用 .NET 中的 Enum.ToString 方法创建枚举格式字符串。 格式化枚举成员的数字、十六进制或字符串值。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: e4d8ca27d99c211653269b2477be8f5632b78229
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 02a12c36e47a82c15c01e578333e1c4465bab142
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888654"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829617"
 ---
 # <a name="enumeration-format-strings"></a>枚举格式字符串
 

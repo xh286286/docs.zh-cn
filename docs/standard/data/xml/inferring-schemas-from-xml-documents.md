@@ -1,18 +1,17 @@
 ---
 title: 从 XML 文档推断架构
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5b0f9bea33346083ce0015fbf3cdfeb0e0ea1181
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1f7b8c8b3cf51aa707a17b3a9e58c6a8c0d3d833
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287657"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830228"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>从 XML 文档推断架构
 此主题描述如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XML 架构定义语言 (XSD) 架构。  

@@ -2,18 +2,17 @@
 title: 将字符串分离为子字符串
 description: 了解用于提取字符串各个部分的不同技术，其中包括 String.Split、正则表达式和 String.Substring。
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403467"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829644"
 ---
 # <a name="extract-substrings-from-a-string"></a>从字符串中提取子字符串
 

@@ -1,19 +1,18 @@
 ---
 title: PLINQ 数据示例
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291703"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830566"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
 此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  

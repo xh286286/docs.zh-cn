@@ -2,23 +2,22 @@
 title: 使用延续任务来链接任务
 description: 了解如何在 .NET 中使用延续任务来链接任务。 延续任务是由其他任务调用的异步任务。
 ms.date: 07/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: c7afbc1bb22a1743aed8e4ebd0a06c4f3fb57e86
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063830"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830605"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>使用延续任务来链接任务
 
-在异步编程中，一个异步操作在完成时调用另一个操作的情况较常见。 延续使后续操作可以使用第一次操作的结果。 传统上，延续性是通过使用回调方法完成的。 在任务并行库中， _延续任务_提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，在完成时由另一个任务（称为“先行任务”）调用。
+在异步编程中，一个异步操作在完成时调用另一个操作的情况较常见。 延续使后续操作可以使用第一次操作的结果。 传统上，延续性是通过使用回调方法完成的。 在任务并行库中， _延续任务_ 提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，在完成时由另一个任务（称为“先行任务”）调用。
 
 尽管延续相对容易使用，但也十分强大和灵活。 例如，你可以：
 

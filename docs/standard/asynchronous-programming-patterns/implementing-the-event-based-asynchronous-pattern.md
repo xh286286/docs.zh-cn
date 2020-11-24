@@ -2,7 +2,6 @@
 title: 实现基于事件的异步模式
 description: 了解如何在 .NET 中实现基于事件的异步模式 (EAP)。 EAP 是打包具有异步功能的类的标准方式。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3f48f5d4f03928f8c9a2db2724e542be2b38fc63
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888784"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830345"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式
 
@@ -65,7 +64,7 @@ ms.locfileid: "92888784"
 
 ## <a name="naming-asynchronous-methods"></a>命名异步方法
 
-对于要向其提供异步等效方法的每个同步方法 *MethodName* ：
+对于要向其提供异步等效方法的每个同步方法 *MethodName*：
 
 定义满足以下条件的 MethodNameAsync 方法：
 
@@ -215,7 +214,7 @@ ms.locfileid: "92888784"
 
 虽然一般情况下，建议不要在 .NET 中使用 `out` 和 `ref`，但以下是使用它们时要遵循的规则：
 
-给定同步方法 *MethodName* ：
+给定同步方法 *MethodName*：
 
 - MethodName 的 `out` 参数不应为 MethodNameAsync 的一部分。 它们应是 MethodNameCompletedEventArgs 的一部分，与 MethodName 中的相当参数同名（除非有更合适的名称）。
 

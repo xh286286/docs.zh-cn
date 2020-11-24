@@ -1,7 +1,6 @@
 ---
 title: 如何：在独立存储中读取和写入文件
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-ms.openlocfilehash: d0c95f418ff85654dceed296b7a891c025ab2e62
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eff020ebb1de40f83582bbf872339c7652d1d4b1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291794"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830696"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>如何：在独立存储中读取和写入文件
 若要读取或写入独立存储区的文件，请使用包含流读取器（<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 对象）或流编写器（<xref:System.IO.StreamReader> 对象）的 <xref:System.IO.StreamWriter> 对象。  

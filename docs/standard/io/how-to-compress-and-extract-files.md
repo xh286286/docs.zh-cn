@@ -2,7 +2,6 @@
 title: 如何：压缩和解压缩文件
 description: 使用 System.IO.Compression 压缩和提取文件。 请参阅使用 ZipFile、ZipArchive、ZipArchiveEntry、DeflateStream 和 GZipStream 的示例。
 ms.date: 01/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: ea078099aba3161818844d14af221eb582e7f11b
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: a1077c7277e0aa54e3c8883cfc27d93926485b8e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188284"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830852"
 ---
 # <a name="how-to-compress-and-extract-files"></a>如何：压缩和解压缩文件
 

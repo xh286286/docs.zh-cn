@@ -2,7 +2,6 @@
 title: 如何：使用命名管道进行网络进程间通信
 description: 查看两个示例，了解如何使用命名管道在网络中的管道服务器和一个或多个管道客户端之间提供进程间通信。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - impersonation [.NET], named pipes
 - full duplex communication [.NET], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: 8657597bee5855061bb5529d80d2fa5f0318e817
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: aad9ede3fb257899eec7bff95b6d77eaec5b97ca
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189311"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829734"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>如何：使用命名管道进行网络进程间通信
 

@@ -1,23 +1,22 @@
 ---
 title: 使用 foreach 删除 BlockingCollection 中的项
 ms.date: 05/04/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
-ms.openlocfilehash: 46638d2cd8078fefebc0eacc4b8f7798ffe178ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9346ead4bf0aef91a224e0ab11ffd30a7c205294
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288896"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830995"
 ---
 # <a name="use-foreach-to-remove-items-in-a-blockingcollection"></a>使用 foreach 删除 BlockingCollection 中的项
 
-除了使用 <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法从 <xref:System.Collections.Concurrent.BlockingCollection%601> 中提取项之外，还可结合使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)（在 Visual Basic 中为 [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)）和 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> 删除项，直至添加完成且集合为空。 由于与典型的 `foreach` (`For Each`) 循环不同，此枚举器通过删除项来修改源集合，因此将其称作*转变枚举*或*耗用枚举*。
+除了使用 <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法从 <xref:System.Collections.Concurrent.BlockingCollection%601> 中提取项之外，还可结合使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)（在 Visual Basic 中为 [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)）和 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> 删除项，直至添加完成且集合为空。 由于与典型的 `foreach` (`For Each`) 循环不同，此枚举器通过删除项来修改源集合，因此将其称作 *转变枚举* 或 *耗用枚举*。
 
 ## <a name="example"></a>示例
 

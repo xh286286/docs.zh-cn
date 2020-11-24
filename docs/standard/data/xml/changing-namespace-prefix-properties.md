@@ -1,17 +1,16 @@
 ---
 title: 更改命名空间前缀属性
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: b817a68ff9789be414118ff4c1a3d88ca3ea9f01
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 14a59a9fdc602e63822a62c102cbffa32d6ba850
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290910"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830267"
 ---
 # <a name="changing-namespace-prefix-properties"></a>更改命名空间前缀属性
 使用 XmlNode  类，可以更改与给定节点关联的命名空间前缀。 例如，下面的代码显示所更改元素的前缀。  

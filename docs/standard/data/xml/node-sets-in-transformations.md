@@ -1,14 +1,13 @@
 ---
 title: 转换中的节点集
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-ms.openlocfilehash: 33cbae05cf35904903189ce767090d3d3cca8e4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72b3af5b471d73cc159dd700ddd29c4ffb5ea639
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288740"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830111"
 ---
 # <a name="node-sets-in-transformations"></a>转换中的节点集
 节点集是从 XML 路径语言 (XPath) 表达式返回的四种基本数据类型之一。 节点集是按文档顺序创建的无重复节点的无序集合，可将其分配给样式表中的某个变量。  

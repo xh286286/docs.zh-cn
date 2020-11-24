@@ -1,17 +1,16 @@
 ---
 title: XslCompiledTransform 类的输入
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-ms.openlocfilehash: 1452bc19940a33aeebaccf3041857a07c976964d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 06427097e1e242171abe84ea557cdbb108d98a9d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287644"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830215"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输入
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法接受三种输入类型的源文档：实现 <xref:System.Xml.XPath.IXPathNavigable> 接口的对象、读取源文档的 <xref:System.Xml.XmlReader> 对象或字符串 URI。  

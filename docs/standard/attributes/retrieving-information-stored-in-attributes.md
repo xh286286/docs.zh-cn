@@ -2,7 +2,6 @@
 title: 检索存储在特性中的信息
 description: 了解如何检索存储在特性中的信息，例如，对于同一范围内的特性实例、多个实例，以及不同范围内的多个实例。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 710f3e3d1051bad4a61e59e330204d622b9fd683
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 8f58648f5cc73b911f0393f2a631b8976ac097b4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889200"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829019"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>检索存储在特性中的信息
 检索自定义属性的过程非常简单。 首先，声明要检索的属性实例。 然后，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法，用要检索的属性的值初始化新属性。 在初始化新属性后，只需使用它的属性即可获取值。  

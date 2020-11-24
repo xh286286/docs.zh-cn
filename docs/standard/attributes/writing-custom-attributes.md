@@ -2,7 +2,6 @@
 title: 编写自定义特性
 description: 在 .NET 中设计你自己的自定义属性。 自定义属性本质上是直接或间接派生自 System.Attribute 的类。
 ms.date: 07/17/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4c7051fa45dfc23a09b037b78030ff90af182a7d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889187"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829006"
 ---
 # <a name="writing-custom-attributes"></a>编写自定义特性
 要设计你自己的自定义特性，无需掌握许多新的概念。 如果你熟悉面向对象的编程，并且知道如何设计类，那么你已经具备大部分所需知识。 自定义特性本质上是直接或间接派生自 <xref:System.Attribute?displayProperty=nameWithType>的传统类。 与传统类一样，自定义特性包含用于存储和检索数据的方法。  

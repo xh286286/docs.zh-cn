@@ -2,7 +2,6 @@
 title: 演练：创建数据流管道
 description: 创建数据流管道，它是一系列组件或数据流块。 数据流块执行特定任务来贡献更大的目标。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,15 +10,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 9469bddf381ac33b35234756d4b8538500e55c6b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767866"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829929"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>演练：创建数据流管道
-尽管可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法从源块接收消息，但也可以连接消息块来形成一个*数据流管道*。 数据流管道是一系列组件或“数据流块”，每个组件或数据流块执行一个有助于实现更大目标的特定任务。 数据流管道中的每个数据流块会在收到来自另一数据流块的消息时执行工作。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，下一站则安装引擎，以此类推。 因为装配线可以同时装配多辆汽车，所以比一次装配整辆车拥有更高的产出。
+尽管可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法从源块接收消息，但也可以连接消息块来形成一个 *数据流管道*。 数据流管道是一系列组件或“数据流块”，每个组件或数据流块执行一个有助于实现更大目标的特定任务。 数据流管道中的每个数据流块会在收到来自另一数据流块的消息时执行工作。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，下一站则安装引擎，以此类推。 因为装配线可以同时装配多辆汽车，所以比一次装配整辆车拥有更高的产出。
 
  本文档演示了一个数据流管道，用于从网站上下载书籍《The Iliad of Homer》并搜索文本以将各个单词与反转第一个单词字符的单词相匹配。 本文档中数据流管道的形成包括以下步骤：  
   
@@ -105,7 +104,7 @@ ms.locfileid: "84767866"
 ## <a name="next-steps"></a>后续步骤  
  此示例发送一个通过数据流管道处理的 URL。 如果要通过管道发送多个输入值，可以将并行的形式引入应用程序，这与零件在汽车厂中移动的方式类似。 当管道的第一个成员将其结果发送给第二个成员时，它可以在第二个成员处理第一个结果时并行处理另一个项。  
   
- 通过使用数据流管道实现的并行称为*粗粒度并行*，因为它通常由几个较大的任务组成。 此外，你也可以在数据流管道中对短时间运行的较小任务使用*粒度较细的并行*。 在本示例中，管道的 `findReversedWords` 成员使用 [PLINQ](introduction-to-plinq.md) 并行处理工作列表中的多个项。 在粗粒度的管道中使用细粒度并行可以提高总吞吐量。  
+ 通过使用数据流管道实现的并行称为 *粗粒度并行*，因为它通常由几个较大的任务组成。 此外，你也可以在数据流管道中对短时间运行的较小任务使用 *粒度较细的并行*。 在本示例中，管道的 `findReversedWords` 成员使用 [PLINQ](introduction-to-plinq.md) 并行处理工作列表中的多个项。 在粗粒度的管道中使用细粒度并行可以提高总吞吐量。  
   
  另外，还可以将数据流块连接到多个目标块，以创建“数据流网络”。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法采用一个 <xref:System.Predicate%601> 对象，该对象定义了目标块是否根据其值来接受每个消息。 大多数充当源的数据流块类型按目标块连接的顺序向所有已连接的目标块提供消息，直到其中一个块接受此消息。 通过使用此筛选机制，您可以创建已连接数据流块的系统，指示某些数据通过一条路径，其他数据通过另一条路径。 有关使用筛选来创建数据流网络的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   

@@ -1,14 +1,13 @@
 ---
 title: 使用 XPathNavigator 的节点集定位
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-ms.openlocfilehash: 132154afdfd3e5bd6769bfcce338e598136e7515
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf0058f553488e453d0227291110d9edc96638f6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288753"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830124"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>使用 XPathNavigator 的节点集定位
 可以使用 <xref:System.Xml.XPath.XPathDocument> 类的节点集浏览方法在 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathNavigator> 对象中浏览节点。 可以浏览所有节点，也可以浏览 <xref:System.Xml.XPath.XPathNavigator> 类的一种选择方法返回的所选节点集。  

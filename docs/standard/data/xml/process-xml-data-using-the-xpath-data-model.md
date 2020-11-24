@@ -1,14 +1,13 @@
 ---
 title: 使用 XPath 数据模型处理 XML 数据
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-ms.openlocfilehash: d449fe19640b19b1417c41b3a1ac7bd3a4de907a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cc35b570c592557658cd3dda0c844847c8b23763
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291287"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829279"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>使用 XPath 数据模型处理 XML 数据
 <xref:System.Xml?displayProperty=nameWithType> 命名空间使用 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 类提供内存中 XML 文档、片断、节点或节点集的编程表示形式。  

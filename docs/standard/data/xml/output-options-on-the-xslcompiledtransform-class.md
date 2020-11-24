@@ -1,14 +1,13 @@
 ---
 title: XslCompiledTransform 类的输出选项
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-ms.openlocfilehash: e9ffdc1377dbf124f042802279e7e7a275222eff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 777324e81ac809866dab68259dceca89c6091a3c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288701"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830085"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输出选项
 本主题讨论可用的 XSLT 输出选项。 可以在样式表中指定输出选项，或在 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上指定输出选项。  

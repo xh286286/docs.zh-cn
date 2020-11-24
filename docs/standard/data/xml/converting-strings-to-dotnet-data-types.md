@@ -1,17 +1,16 @@
 ---
 title: 将字符串转换为 .NET 数据类型
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 28c84b04bde045643158d8d2b9fed44b74334e77
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688005"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830956"
 ---
 # <a name="convert-strings-to-net-data-types"></a>将字符串转换为 .NET 数据类型
 

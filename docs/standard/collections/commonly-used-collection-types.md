@@ -2,7 +2,6 @@
 title: 常用的集合类型
 description: 了解 .NET 中常用的集合类型，如哈希表、队列、堆栈、包、字典和列表。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - collections [.NET], generic
 - objects [.NET], grouping in collections
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 8677ba5b4404d49e2f6e07cda19ac437254a5897
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889382"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831242"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合类型
 集合类型是数据集合（如哈希表、队列、堆栈、包、字典和列表）的常见变体。  

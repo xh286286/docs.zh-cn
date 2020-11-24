@@ -1,17 +1,16 @@
 ---
 title: XML 数据类型的转换
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d8b60428bc129958355ce5b285662847e9e712c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282410"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830969"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML 数据类型的转换
 XmlConvert 类中的大多数方法都可用于在字符串和强类型格式之间转换数据。 这些方法与区域设置无关。 这意味着它们在执行转换时不考虑任何区域设置。  

@@ -1,14 +1,13 @@
 ---
 title: 使用 DOM 模型处理 XML 数据
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-ms.openlocfilehash: 242554cc948ef16972ffd26d5464dae2727ed339
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2608008f33eb8bc0dd0a9b5fe96e619df6138b51
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290832"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830904"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>使用 DOM 模型处理 XML 数据
 XML 文档对象模型 (DOM) 将 XML 数据作为一组标准的对象对待，用于处理内存中的 XML 数据。 `System.Xml` 命名空间提供 XML 文档、片断、节点或节点集的编程表示形式。 基于万维网联合会 (W3C) DOM 级别 1 核心和 DOM 级别 2 核心建议。  

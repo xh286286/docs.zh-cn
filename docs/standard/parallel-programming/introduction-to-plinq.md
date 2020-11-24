@@ -2,19 +2,18 @@
 title: PLINQ 介绍
 description: 了解如何使用 .NET 中的 PLINQ 并行执行查询。 PLINQ 代表并行语言集成查询 (LINQ)。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 9a6401e8955c51ea72db3ca203365147b00db64f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925345"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830644"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 介绍
 

@@ -1,7 +1,6 @@
 ---
 title: 演练：创建自定义数据流块类型
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-ms.openlocfilehash: 37857e465bf4089dbeecc4cfd532d0702f795495
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 71f9002cc13f30bfe7988540472b09979d4e9d0a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284697"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829955"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>演练：创建自定义数据流块类型
 尽管 TPL 数据流库提供了多种可启用各种功能的数据流块类型，但也可以创建自定义块类型。 本文档介绍了如何创建实现自定义行为的数据流块类型。  
