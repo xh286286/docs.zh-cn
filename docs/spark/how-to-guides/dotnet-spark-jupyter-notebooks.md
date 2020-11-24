@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441058"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688171"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>在 Jupyter 笔记本中使用 .NET for Apache Spark
 
@@ -48,7 +48,7 @@ ms.locfileid: "94441058"
 
 ## <a name="start-net-for-apache-spark"></a>启动 .NET for Apache Spark
 
-运行以下命令，在调试模式下启动 .NET for Apache Spark。 此 `spark-submit` 命令启动一个进程，并等待来自 [SparkSession](xref:Microsoft.Spark.Sql.SparkSession) 的连接。 确保为正在使用的相应版本的 .NET for Apache Spark 提供 `microsoft-spark-<version>.jar` 路径。
+运行以下命令，在调试模式下启动 .NET for Apache Spark。 此 `spark-submit` 命令启动一个进程，并等待来自 [SparkSession](xref:Microsoft.Spark.Sql.SparkSession) 的连接。 确保为正在使用的相应版本的 .NET for Apache Spark 提供 `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` 路径。
 
 **Ubuntu**
 

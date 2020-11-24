@@ -3,13 +3,13 @@ title: .NET Standard 中的新增功能
 description: 本文总结了所有新版 .NET Standard 中的新功能和增强功能。
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
-ms.technology: dotnet-standard
-ms.openlocfilehash: 36bd1f9a0dad06d11110b35e9a66f22140cee5ca
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.prod: dotnet-whatsnew
+ms.openlocfilehash: 299477a7375381fa7f8064562e2a68e221944a05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557267"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817169"
 ---
 # <a name="whats-new-in-net-standard"></a>.NET Standard 中的新增功能
 

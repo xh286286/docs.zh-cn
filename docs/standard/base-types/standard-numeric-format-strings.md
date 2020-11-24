@@ -2,7 +2,6 @@
 title: 标准数字格式字符串
 description: 本文介绍如何在 .NET 中使用标准数字格式字符串将常用数值类型格式化为文本表示形式。
 ms.date: 06/10/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b8537e8dcfdd45ed8da18b8b82aae5e9fc0cd96e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888966"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818760"
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 
@@ -37,7 +36,7 @@ ms.locfileid: "92888966"
   - 在 .NET Core 2.1 及更高版本上，运行时选择最低有效数字为偶数的结果（即使用 <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>）。
 
   > [!NOTE]
-  > 精度说明符确定结果字符串中的位数。 若要使用前导或尾随空格填充结果字符串，请使用 [复合格式设置](composite-formatting.md)功能，并在格式项中定义 *对齐组件* 。
+  > 精度说明符确定结果字符串中的位数。 若要使用前导或尾随空格填充结果字符串，请使用 [复合格式设置](composite-formatting.md)功能，并在格式项中定义 *对齐组件*。
 
 下列支持标准数字格式字符串：
 

@@ -2,7 +2,6 @@
 title: 如何：从文件中读取文本
 description: 在本文中，查看有关如何使用适用于桌面应用的 .NET 中的 StreamReader 类以同步或异步方式从文本文件中读取文本。
 ms.date: 01/03/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189324"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823363"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：从文件中读取文本
 

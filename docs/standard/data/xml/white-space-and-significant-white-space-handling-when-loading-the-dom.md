@@ -1,14 +1,13 @@
 ---
 title: 加载 DOM 时的空白和有效空白处理
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1b141a0a-50d8-4ebd-83cd-a84449bb22b2
-ms.openlocfilehash: 520d965737b82fda082aa44029f2a4042d948deb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dbb0962dc47ff5847ac78ed4f6252bf8ab9674aa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281762"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818474"
 ---
 # <a name="white-space-and-significant-white-space-handling-when-loading-the-dom"></a>加载 DOM 时的空白和有效空白处理
 加载文档时，可以将选项设置为暂留空格，并在文档树中创建 XmlWhitespace  节点。 若要创建空格节点，请将 PreserveWhitespace  属性设置为 true。 如果将此属性设置为默认值 false  ，不会创建空格节点。 无论 PreserveWhitespace  标志的设置如何，始终暂留重要的空格节点，并且始终在内存中创建 XmlSignificantWhitespace  节点来表示此数据。  

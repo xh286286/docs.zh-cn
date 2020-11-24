@@ -2,19 +2,18 @@
 title: BlockingCollection 概述
 description: 阅读有关 .NET 中线程安全集合类 BlockingCollection<T> 的信息。 此类提供一些功能，例如并发添加项或从多个线程中获取项。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-ms.openlocfilehash: fc11f6c28a551e56d3bac4c5be9c08a396c0c6b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0378d038d6081c7ad04fc233ac151ab2bb223fa5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600797"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818656"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概述
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是一个线程安全集合类，可提供以下功能：  

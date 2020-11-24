@@ -2,7 +2,6 @@
 title: 独立存储
 description: 了解独立存储（一种数据存储机制），它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1b123b231a7b6856ca527d00b5927c1a8d0e08b6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282020"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819131"
 ---
 # <a name="isolated-storage"></a>独立存储
 

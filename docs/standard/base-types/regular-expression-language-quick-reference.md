@@ -2,7 +2,6 @@
 title: 正则表达式语言 - 快速参考
 description: 此快速参考介绍了如何使用正则表达式模式匹配输入文本。 模式具有一个或多个字符文本、运算符或构造。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 f1_keywords:
 - VS.RegularExpressionBuilder
 helpviewer_keywords:
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 1b261211997837e8664ea60e9210a7f0517f7a9f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889304"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818799"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
 
@@ -47,8 +46,8 @@ ms.locfileid: "92889304"
 |`\f`|与换页符 \u000C 匹配。|`[\f]{2,}`|`"\f\f\f"` 中的 `"\f\f\f"`|
 |`\n`|与换行符 \u000A 匹配。|`\r\n(\w+)`|`"\r\nThese are\ntwo lines."` 中的 `"\r\nThese"`|
 |`\e`|与转义符 \u001B 匹配。|`\e`|`"\x001B"` 中的 `"\x001B"`|
-|`\` *nnn*|使用八进制表示形式指定字符（ *nnn* 由二位或三位数字组成）。|`\w\040\w`|`"a bc d"` 中的 `"a b"` 和 `"c d"`|
-|`\x` *nn*|使用十六进制表示形式指定字符（ *nn* 恰好由两位数字组成）。|`\w\x20\w`|`"a bc d"` 中的 `"a b"` 和 `"c d"`|
+|`\` *nnn*|使用八进制表示形式指定字符（*nnn* 由二位或三位数字组成）。|`\w\040\w`|`"a bc d"` 中的 `"a b"` 和 `"c d"`|
+|`\x` *nn*|使用十六进制表示形式指定字符（*nn* 恰好由两位数字组成）。|`\w\x20\w`|`"a bc d"` 中的 `"a b"` 和 `"c d"`|
 |`\c` *X*<br /><br /> `\c` x|匹配 *X* 或 *x* 指定的 ASCII 控制字符，其中 *X* 或 *x* 是控制字符的字母。|`\cC`|`"\x0003"` 中的 `"\x0003"` (Ctrl-C)|
 |`\u` *nnnn*|使用十六进制表示形式匹配 Unicode 字符（由 *nnnn* 正确表示的四位数）。|`\w\u0020\w`|`"a bc d"` 中的 `"a b"` 和 `"c d"`|
 |`\`|在后面带有不识别为本主题的此表和其他表中的转义符的字符时，与该字符匹配。 例如， `\*` 与 `\x2A`相同，而 `\.` 与 `\x2E`相同。 这样一来，正则表达式引擎可以区分语言元素（如 \* 或 ?）和字符文本（由 `\*` 或 `\?` 表示）。|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"` 中的 `"2+2"` 和 `"3*9"`|
@@ -140,7 +139,7 @@ ms.locfileid: "92889304"
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|匹配以竖线 (<code>&#124;</code>) 字符分隔的任何一个元素。|<code>th(e&#124;is&#124;at)</code>|`"this is the day."` 中的 `"the"` 和 `"this"`|
 |`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|如果由 *expression* 指定的正则表达式模式匹配，则匹配  *yes* ；否则，匹配可的 *no* 部分。 *expression* 解释为零宽度的断言。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10 C103 910"` 中的 `"A10"` 和 `"910"`|
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|如果 *name* (已命名或已编号的捕获组）具有匹项，则匹配 *yes* ；否则，匹配可的 *no* 。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""` 中的 `"Dogs.jpg "` 和 `"\"Yiska playing.jpg\""`|
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|如果 *name* (已命名或已编号的捕获组）具有匹项，则匹配 *yes*；否则，匹配可的 *no*。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""` 中的 `"Dogs.jpg "` 和 `"\"Yiska playing.jpg\""`|
 
 ## <a name="substitutions"></a>替代
 

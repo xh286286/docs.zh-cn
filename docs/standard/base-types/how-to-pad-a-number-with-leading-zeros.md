@@ -2,7 +2,6 @@
 title: 如何：用前导零填充数字
 description: 了解如何用前导零填充数字。 将前导零添加到整数或将数值添加到特定的总长度或特定数量的前导零。
 ms.date: 02/25/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET]
 - numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 911d6059d3594ca35eb1c1c3e2d29a5684bce738
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888451"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822043"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：用前导零填充数字
 

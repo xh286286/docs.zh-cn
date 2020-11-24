@@ -2,7 +2,6 @@
 title: .NET 正则表达式中的字符类
 description: 了解如何使用字符类表示 .NET 正则表达式中的一组字符。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 69cece42c5d7c92eb1af5e31f4fd83f5384b1d8e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888719"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823311"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 
@@ -58,13 +57,13 @@ ms.locfileid: "92888719"
 
 `[*character_group*]`
 
- 其中， *character_group* 是单个字符的列表，这些字符可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](character-escapes-in-regular-expressions.md)或字符类的任意组合。  
+ 其中，*character_group* 是单个字符的列表，这些字符可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
   
 `[firstCharacter-lastCharacter]`  
   
- 其中， *firstCharacter* 是范围的开始字符， *lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符。
+ 其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符。
 
 > [!NOTE]
 > 由于正字符组可以包含一组字符和一个字符范围，因此连字符 (`-`) 始终被解释为范围分隔符，除非它是该组的第一个或最后一个字符。
@@ -114,13 +113,13 @@ ms.locfileid: "92888719"
 
 `[*^character_group*]`
 
- 其中， *character_group* 是单个字符的列表，这些字符不可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](character-escapes-in-regular-expressions.md)或字符类的任意组合。  
+ 其中，*character_group* 是单个字符的列表，这些字符不可出现在输入字符串中以便成功匹配。 character_group 可以包含一个或多个文本字符、[转义字符](character-escapes-in-regular-expressions.md)或字符类的任意组合。  
   
  用于指定字符范围的语法如下：  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-其中， *firstCharacter* 是范围的开始字符， *lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符。
+其中，*firstCharacter* 是范围的开始字符，*lastCharacter* 是范围的结束字符。 字符范围是通过以下方式定义的一系列连续字符：指定系列中的第一个字符，连字符 (-)，然后指定系列中的最后一个字符。 如果两个字符具有相邻的 Unicode 码位，则这两个字符是连续的。 firstCharacter 必须是码位较低的字符，而 lastCharacter 必须是码位较高的字符。
 
 > [!NOTE]
 > 由于负字符组可以包含一组字符和一个字符范围，因此连字符 (`-`) 始终被解释为范围分隔符，除非它是该组的第一个或最后一个字符。

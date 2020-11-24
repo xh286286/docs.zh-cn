@@ -2,19 +2,18 @@
 title: 托管线程处理基本知识
 description: 点击链接查看其他关于托管线程的文章，其中包括异常、同步数据、前台线程和后台线程、本地存储等主题。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET], multiple threads
 - threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 16785b1c21c5810e55429f6756dcf591c90d8499
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189129"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819664"
 ---
 # <a name="managed-threading-basics"></a>托管线程处理基本知识
 

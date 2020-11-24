@@ -2,12 +2,12 @@
 title: 面向对象的编程 (C#)
 description: C# 提供针对面向对象的编程（包括抽象、封装、继承和多态性）的完整支持。
 ms.date: 09/30/2020
-ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471590"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687989"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 
@@ -173,6 +173,8 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 运行该程序，并检查结果。
 
 ## <a name="summary"></a>摘要
+
+如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)中查看本教程的源代码。
 
 本教程演示了面向对象的编程中使用的多种技术：
 

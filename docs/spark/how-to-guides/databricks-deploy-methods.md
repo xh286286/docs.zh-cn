@@ -4,12 +4,12 @@ description: 了解如何使用 spark-submit 和 Set Jar 将 .NET for Apache Spa
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fd04f78c47b34ca07042a4e60e2214f5f1ecac55
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954992"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688197"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>将 .NET for Apache Spark 作业提交到 Databricks
 
@@ -22,7 +22,7 @@ ms.locfileid: "91954992"
 1. 导航到 Databricks 工作区并创建一个作业。 选择作业的标题，然后选择“配置 spark-submit”。 在作业配置中粘贴以下参数，然后选择“确认”。
 
     ```
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
     ```
 
     > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "91954992"
 
 1. 导航到 Databricks 群集并选择左侧菜单的“作业”，后跟 Set JAR 。
 
-2. 上传相应的 `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar`。
+2. 上传相应的 `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar`。
 
 3. 修改以下参数，使其包含为替代 `<your-app-name>` 而发布的可执行文件的正确名称：
 

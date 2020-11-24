@@ -2,18 +2,17 @@
 title: 为多线程处理同步数据
 description: 了解如何在 .NET 中同步多线程处理数据。 选择同步代码区域、手动同步或同步上下文等策略。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188583"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819638"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 
@@ -62,7 +61,7 @@ ms.locfileid: "93188583"
 ### <a name="compiler-support"></a>编译器支持  
  Visual Basic 和 C# 均支持使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 锁定对象的语言关键字。 Visual Basic 支持 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 语句；C# 支持 [lock](../../csharp/language-reference/keywords/lock-statement.md) 语句。  
   
- 在这两种情况下，如果代码块中引发异常，则 **lock** 或 **SyncLock** 获取的锁将自动释放。 C# 和 Visual Basic 编译器在发出 **try**/**finally** 块时，在 try 的起始处使用 **Monitor.Enter** ，在 **finally** 块中使用 **Monitor.Exit** 。 如果 **lock** 或 **SyncLock** 块内部引发了异常，则会运行 **finally** 处理程序，从而允许执行任何清除工作。  
+ 在这两种情况下，如果代码块中引发异常，则 **lock** 或 **SyncLock** 获取的锁将自动释放。 C# 和 Visual Basic 编译器在发出 **try**/**finally** 块时，在 try 的起始处使用 **Monitor.Enter**，在 **finally** 块中使用 **Monitor.Exit**。 如果 **lock** 或 **SyncLock** 块内部引发了异常，则会运行 **finally** 处理程序，从而允许执行任何清除工作。  
   
 ## <a name="synchronized-context"></a>同步上下文  
 

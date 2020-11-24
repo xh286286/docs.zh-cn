@@ -1,19 +1,18 @@
 ---
 title: 如何：使用屏障来使并发操作保持同步
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-ms.openlocfilehash: 2e13dfb277807eb0a9f256f74c2845f5a4d2a047
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97a95250ff73b43d4404fb891078aed1b04f105e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279292"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819729"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>如何：使用屏障来使并发操作保持同步
 下面的示例展示了如何将并发任务与 <xref:System.Threading.Barrier> 同步。  

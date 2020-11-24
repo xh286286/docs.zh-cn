@@ -1,18 +1,17 @@
 ---
 title: 语言独立性和与语言无关的组件
 description: 了解如何使用 .NET 中支持的众多语言之一（如 C#、C++/CLI、F#、IronPython、VB、Visual COBOL 和 PowerShell）进行开发。
-ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
-ms.technology: dotnet-standard
+ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162981"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819079"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -2042,9 +2041,9 @@ End Class
 
 事件由其名称和类型定义。 事件类型是用于指示事件的委托。 例如，`DbConnection.StateChange` 事件的类型为 `StateChangeEventHandler`。 除事件本身外，带有基于事件名称的名称的三种方法提供事件的实现并在程序集的元数据中标记为 `SpecialName`：
 
-* 用于添加事件处理程序的名为 `add`_*EventName* 的方法。 例如，`DbConnection.StateChange` 事件的事件订阅方法名为 `add_StateChange`。
+* 用于添加事件处理程序的名为 `add`_ *EventName* 的方法。 例如，`DbConnection.StateChange` 事件的事件订阅方法名为 `add_StateChange`。
 
-* 用于移除事件处理程序的名为 `remove`_*EventName* 的方法。 例如，`DbConnection.StateChange` 事件的移除方法名为 `remove_StateChange`。
+* 用于移除事件处理程序的名为 `remove`_ *EventName* 的方法。 例如，`DbConnection.StateChange` 事件的移除方法名为 `remove_StateChange`。
 
 * 用于指示事件已发生的名为 `raise`\_EventName 的方法。
 

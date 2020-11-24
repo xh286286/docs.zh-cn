@@ -2,12 +2,12 @@
 title: 可为 null 的引用类型 - C# 引用
 description: 了解 C# 中可为 null 的引用类型及其使用方法
 ms.date: 04/06/2020
-ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: d961af9ba3b4776e6b4ec3eeea5392fb0d0394ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471858"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822420"
 ---
 # <a name="nullable-reference-types-c-reference"></a>可为 null 的引用类型（C# 引用）
 
@@ -72,7 +72,7 @@ try
 有关详细信息，请参阅 [C# 语言规范](~/_csharplang/spec/introduction.md)的以下建议：
 
 - [可为空引用类型](~/_csharplang/proposals/csharp-8.0/nullable-reference-types.md)
-- [可为空引用类型规范草案](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [可为空引用类型规范草案](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 
 ## <a name="see-also"></a>请参阅
 

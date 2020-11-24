@@ -2,7 +2,6 @@
 title: 数据流（任务并行库）
 description: 了解如何使用任务并行库 (TPL) 中的数据流组件来提高启用并发的应用程序的可靠性。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8c6eeab852f30535d721aa44b3c60e4b6febe0fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662545"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817635"
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并集成了 C#、Visual Basic 和 F# 语言的异步编程支持。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
@@ -28,7 +27,7 @@ ms.locfileid: "84662545"
  TPL 数据流库向具有高吞吐量和低滞后时间的占用大量 CPU 和 I/O 操作的应用程序的并行化和消息传递提供了基础。 它还能显式控制缓存数据的方式以及在系统中移动的方式。 为了更好地了解数据流编程模型，请考虑一个以异步方式从磁盘加载图像并创建复合图像的应用程序。 传统编程模型通常需要使用回调和同步对象（例如锁）来协调任务和访问共享数据。 通过使用数据流编程模型，您可以从磁盘读取时创建处理图像的数据流对象。 在数据流模型下，您可以声明当数据可用时的处理方式，以及数据之间的所有依赖项。 由于运行时管理数据之间的依赖项，因此通常可以避免这种要求来同步访问共享数据。 此外，因为运行时计划基于数据的异步到达，所以数据流可以通过有效管理基础线程提高响应能力和吞吐量。 有关在 Windows 窗体应用程序中使用数据流编程模型实现图像处理的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ### <a name="sources-and-targets"></a>源和目标  
- TPL 数据流库包括*数据流块*，它是缓冲并处理数据的数据结构。 TPL 定义了三种数据流块：源块、目标块和传播器块。 源块作为数据源，可以读取。 目标块作为数据接收方，可以写入。 传播器块作为源块和目标块，可以读取和写入。 TPL 定义 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 接口来表示源，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 表示目标以及 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> 表示传播器。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 继承自 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>。  
+ TPL 数据流库包括 *数据流块*，它是缓冲并处理数据的数据结构。 TPL 定义了三种数据流块：源块、目标块和传播器块。 源块作为数据源，可以读取。 目标块作为数据接收方，可以写入。 传播器块作为源块和目标块，可以读取和写入。 TPL 定义 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 接口来表示源，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 表示目标以及 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType> 表示传播器。 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 继承自 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>。  
   
  TPL 数据流库提供了多个预定义的数据流块类型，可以实现 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>、<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 接口。 这些数据流块类型在本文档的[预定义的数据流块类型](#predefined-dataflow-block-types)部分进行了说明。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "84662545"
 > 由于每个预定义源数据流块类型确保了消息是按照它们接收的顺序来传播的，因此每一条消息都必须在源块可以处理下一条消息之前从源块读取。 因此，当您使用筛选向一个源连接多个目标时，请确保至少一个目标块能够接收每一条消息。 否则，您的应用程序可能发生死锁。  
   
 ### <a name="message-passing"></a>消息传递  
- 数据流编程模型与*消息传递*这一概念相关，其中程序的独立组件通过发送消息相互通信。 在应用组件间传播消息的一种方法是，调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 方法，向目标数据流块发送消息（<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 同步运行，<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> 异步运行），再调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 方法接收源数据流块发送的消息。 您可以通过向头节点（目标块）发送输入数据，从管道的终端节点或网络的终端节点（一个或多个源块）接收输出数据来使用数据流管道或网络组合使用这些方法。 您还可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 方法从提供的第一个拥有可用数据的源读取数据，并对该数据执行操作。  
+ 数据流编程模型与 *消息传递* 这一概念相关，其中程序的独立组件通过发送消息相互通信。 在应用组件间传播消息的一种方法是，调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 方法，向目标数据流块发送消息（<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> 同步运行，<xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> 异步运行），再调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> 方法接收源数据流块发送的消息。 您可以通过向头节点（目标块）发送输入数据，从管道的终端节点或网络的终端节点（一个或多个源块）接收输出数据来使用数据流管道或网络组合使用这些方法。 您还可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> 方法从提供的第一个拥有可用数据的源读取数据，并对该数据执行操作。  
   
  源数据流块通过调用方法 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> 向目标数据流块提供数据。 目标块通过以下三种方式之一来回应提供的消息：它可以接受消息，拒绝消息或推迟消息。 当目标接受消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>。 当目标拒绝消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>。 当目标要求它不再接收来自源的任何消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>。 预定义的源块类型在这些返回值接收后不会向链接的目标提供消息，并且它们会自动取消这些目标的链接。  
   

@@ -1,14 +1,13 @@
 ---
 title: XML 架构对象模型 (SOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: 1de9fdf9950ba3ae356779ca802afb71f24a345e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b64e5bb88d5754447d8f75577f3c51f2aa467bb5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290313"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818396"
 ---
 # <a name="xml-schema-object-model-som"></a>XML 架构对象模型 (SOM)
 XML 架构是用于在符合该架构的 XML 文档中创建和验证结构的强大而复杂的工具。 与关系数据库中的数据建模类似，架构提供一种定义 XML 文档结构的方法，这种方法是指定可在文档中使用的元素，同时还要指定这些元素必须遵循的结构和类型，以便这些元素对于该特定架构来说是有效的。  

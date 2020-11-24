@@ -1,14 +1,13 @@
 ---
 title: 对 msxsl:node-set() 函数的支持
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 30652d8cbaac333cc1cb35954742b16dc7c4764b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 26ae3014af93377dc106b5638ba194bd38e3dc9e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071984"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818539"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>对 msxsl:node-set() 函数的支持
 `msxsl:node-set` 函数使你能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  

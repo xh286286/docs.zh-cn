@@ -1,14 +1,13 @@
 ---
 title: 嵌入到文档中的样式表指令
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 25946fd14a82428ae4367cd33511df68e9929203
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710149"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818565"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>嵌入到文档中的样式表指令
 

@@ -2,16 +2,15 @@
 title: 何时使用线程安全集合
 description: 了解何时在 .NET 中使用线程安全集合。 有五种专门为支持多线程添加和删除操作而设计的集合类型。
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 92fb912cdd2030f87bee1109b9944e1fa857dddd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326036"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819456"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>何时使用线程安全集合
 
