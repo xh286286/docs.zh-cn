@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-ms.openlocfilehash: 25e931ec17cad3508d548fb4ca7e53b0ade3f119
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e340dcb5dc093f965e6c08a24a3d65ed0aa6e07a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804957"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680815"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager 方法
+
 获取一个接口指针，该指针指向具有指定的接口的主机实现 `IID` 。  
   
 ## <a name="syntax"></a>语法  
@@ -35,8 +36,9 @@ HRESULT GetHostManager (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `riid`  
- 中`IID`公共语言运行时（CLR）正在查询的接口的。  
+ 中 `IID` 公共语言运行时 (CLR) 正在查询的接口的。  
   
  `ppObject`  
  弄指向宿主实现的接口的指针; 如果主机不支持此接口，则为 null。  
@@ -45,7 +47,7 @@ HRESULT GetHostManager (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager`已成功返回。|  
+|S_OK|`GetHostManager` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -54,7 +56,8 @@ HRESULT GetHostManager (
 |E_INVALIDARG|请求的无效 `IID` 。|  
 |E_NOINTERFACE|不支持请求的接口。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  CLR 将查询宿主，以确定它是否支持以下一个或多个接口：  
   
 - [IHostMemoryManager](ihostmemorymanager-interface.md)  
@@ -80,11 +83,12 @@ HRESULT GetHostManager (
  CLR 不会对 `Release` 主机管理器调用，即使您关闭它也是如此。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

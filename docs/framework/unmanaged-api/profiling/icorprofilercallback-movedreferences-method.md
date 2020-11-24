@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 996c71ae-0676-4616-a085-84ebf507649d
 topic_type:
 - apiref
-ms.openlocfilehash: 1214182c95f7d0304ec920a2ea7dae91b1f4a790
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4da09be6816174a1d4a131086d5e98b881c27b9c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503326"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680255"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences 方法
+
 调用以报告堆中对象的新布局（压缩垃圾回收产生的结果）。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT MovedReferences(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cMovedObjectIDRanges`  
  [in] 因压缩垃圾回收而被移动的连续对象的块数。 即 `cMovedObjectIDRanges` 的值是 `oldObjectIDRangeStart`、`newObjectIDRangeStart` 和 `cObjectIDRangeLength` 数组的总大小。  
   
@@ -55,7 +57,7 @@ HRESULT MovedReferences(
 ## <a name="remarks"></a>注解  
   
 > [!IMPORTANT]
-> 此方法将 64 位平台上大于 4 GB 的对象的大小报告为 `MAX_ULONG`。 若要获取大于 4 GB 的对象的大小，请改用[ICorProfilerCallback4：： MovedReferences2](icorprofilercallback4-movedreferences2-method.md)方法。  
+> 此方法将 64 位平台上大于 4 GB 的对象的大小报告为 `MAX_ULONG`。 若要获取大于 4 GB 的对象的大小，请改用 [ICorProfilerCallback4：： MovedReferences2](icorprofilercallback4-movedreferences2-method.md) 方法。  
   
  压缩垃圾回收器将收回由不活动对象占用的内存，但不会压缩释放的空间。 因此，可能在堆中移动活动对象，并且由以前的通知分发的 `ObjectID` 值也可能更改。  
   
@@ -69,16 +71,17 @@ HRESULT MovedReferences(
   
  对于以下范围内的任何 `i` 值：  
   
- 0 <=`i` < `cMovedObjectIDRanges`  
+ 0 <= `i` < `cMovedObjectIDRanges`  
   
  可以按以下方式计算出新的 `ObjectID`：  
   
- `newObjectID` = `newObjectIDRangeStart[i]`+ （ `oldObjectID` – `oldObjectIDRangeStart[i]` ）  
+ `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)   
   
  `MovedReferences` 传递的 `ObjectID` 值在回调过程中均是无效的，因为垃圾回收可能正处于将对象从旧位置移到新位置的阶段。 因此，探查器不应在 `MovedReferences` 调用期间尝试检查对象。 [ICorProfilerCallback2：： GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)回调指示所有对象已移动到其新位置，并可执行检查。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

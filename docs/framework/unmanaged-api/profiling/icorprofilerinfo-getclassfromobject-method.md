@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: 613267549329d2f48dcd18ae341e47538e414ac0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a7edc6045969861679d1b80c0563e99f48932cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680243"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject 方法
+
 在 `ClassID` 给定对象的情况下，获取该对象的 `ObjectID` 。  
   
 ## <a name="syntax"></a>语法  
@@ -34,6 +35,7 @@ HRESULT GetClassFromObject(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `objectId`  
  中要获取的对象的 ID `ClassID` 。  
   
@@ -41,10 +43,12 @@ HRESULT GetClassFromObject(
  弄指向返回的的指针 `ClassID` 。  
   
 ## <a name="remarks"></a>注解  
+
  如果为 null `pClassId` ， `objectId` 则表示具有正在卸载的类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179388"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680035"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
-确定可移植可执行类型，无论是特定于机器还是与机器无关。  
+
+确定可移植的可执行文件类型（特定于计算机或计算机不可知）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,24 +36,27 @@ HRESULT SetPEKind(
 ) PURE;
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  程序集的 ID。  
   
  `FileToken`  
- 要为其设置 PE 类型的文件令牌。 如果未`AssemblyID`指示未绑定网络模块，则可以为 NULL。  
+ 要为其设置 PE 类型的文件的标记。 如果不 `AssemblyID` 指示未绑定的 .netmodule，则可以为 NULL。  
   
  `dwPEKind`  
- PE 的类型，如[CorPEKind 枚举](../metadata/corpekind-enumeration.md)所示。  
+ PE 的类型，如 [CorPEKind 枚举](../metadata/corpekind-enumeration.md)所示。  
   
  `dwMachine`  
  目标计算机体系结构，如 NT 标头中所示。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则返回S_OK。  
+
+ 如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
- 需要 alink.h.  
+
+ 需要 alink。  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a4ae0d1f-ade9-4b0a-a122-93ed11a5e6b3
 topic_type:
 - apiref
-ms.openlocfilehash: 9dd89abb332853b966aa81dc506099b7af6ca3b2
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 1bffef31702aa051d9ca865b18a67ac90c00cd00
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804933"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680635"
 ---
 # <a name="ihostcontrol-interface"></a>IHostControl 接口
+
 提供用于配置程序集加载和确定宿主支持哪些宿主接口的方法。  
   
 ## <a name="methods"></a>方法  
@@ -32,11 +33,12 @@ ms.locfileid: "83804933"
 |[SetAppDomainManager 方法](ihostcontrol-setappdomainmanager-method.md)|通知宿主已创建应用程序域。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

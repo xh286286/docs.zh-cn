@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1bf00b42-69da-4019-91b3-bf88026e83fb
 topic_type:
 - apiref
-ms.openlocfilehash: 85adf2dbdbb8c02192a9017bc4f664274a08ee24
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 698f6abc872a7e072ae47520386aa9c7ddfb44fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496576"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681465"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules 方法
+
 返回一个枚举器，此枚举器提供方法以按顺序循环访问加载到应用程序的托管模块集合。  
   
 ## <a name="syntax"></a>语法  
@@ -32,13 +33,15 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppEnum`  
- 弄指向[ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)接口的指针。  
+ 弄指向 [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) 接口的指针。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   
