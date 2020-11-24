@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 87e00a69643b6bc403188fb0fdb6f9e3f3d82115
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3f8da08b96c47c90ecccae28dd1662a7abffaf1d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688557"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream 方法
+
 将当前范围中的所有元数据保存到指定的 `IStream` 。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT SaveToStream (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pIStream`  
  中要保存到的可写流。  
   
@@ -42,11 +44,12 @@ HRESULT SaveToStream (
  [in] 保留。 必须为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

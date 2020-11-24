@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831060"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687542"
 ---
 # <a name="key-security-concepts"></a>安全性的基础概念
 
@@ -49,6 +49,7 @@ ms.locfileid: "94831060"
 有关详细信息，请参阅[主体和标识对象](principal-and-identity-objects.md)。  
   
 ## <a name="authentication"></a>身份验证  
+
 身份验证是通过检查用户凭据和针对某些颁发机构对这些凭据进行验证来发现和验证主体的标识的过程。 身份验证期间获取的信息可直接为你的代码所用。 还可以使用基于 .NET 角色的安全性对当前用户进行身份验证并确定是否允许该主体访问代码。 请参阅 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的重载，了解有关如何对特定角色的主体进行身份验证的示例。 例如，可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 重载确定当前用户是否是“Administrators”组的成员。  
   
 目前使用多种身份验证机制，其中的许多机制可用于基于 .NET 角色的安全性。 最常用的一些机制包括 basic、digest、Passport、操作系统（例如，NTLM 或 Kerberos）或应用程序定义的机制。  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-ms.openlocfilehash: 711fccd65379bc3e5e178869e7220dd84fd07fbe
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 76b231f00651186518d3bccfafa5780f258c4f75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379700"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688180"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 方法
+
 获取一个接口指针，该指针指向包含此 ICorDebugThread 对象中所有堆栈链的 ICorDebugChainEnum 枚举器。  
   
 ## <a name="syntax"></a>语法  
@@ -34,10 +35,12 @@ HRESULT EnumerateChains (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppChains`  
- 弄指向对象地址的指针，该 `ICorDebugChainEnum` 对象允许枚举此线程中的所有堆栈链，从活动（即最近的）链开始。  
+ 弄指向对象地址的指针，该 `ICorDebugChainEnum` 对象允许枚举此线程中的所有堆栈链，从活动 (开始，即最近的) 链。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  堆栈链表示线程的物理调用堆栈。 以下情况会创建堆栈链边界：  
   
 - 托管到非托管或非托管的转换。  
@@ -51,7 +54,8 @@ HRESULT EnumerateChains (
  调试器可能需要将所有线程的物理调用堆栈重新排列为逻辑调用堆栈。 这涉及到通过其调用方/被调用方关系对所有线程链进行排序并 regrouping 它们。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-ms.openlocfilehash: a74d32478bc88ee634fa5ff9b61ac2059bc8e302
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: dcaa5adc41a9e451b123b088dd900f01d9161689
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688271"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper 方法
+
 创建一个 ICorDebugStepper 对象，该对象允许单步执行此 ICorDebugThread 的活动框架。  
   
 ## <a name="syntax"></a>语法  
@@ -34,16 +35,19 @@ HRESULT CreateStepper (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppStepper`  
  弄指向 `ICorDebugStepper` 允许单步执行此线程的活动帧的对象地址的指针。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  活动框架可能是非托管代码。  
   
  `ICorDebugStepper`接口必须用于执行实际步进。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

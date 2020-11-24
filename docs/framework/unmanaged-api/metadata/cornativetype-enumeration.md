@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-ms.openlocfilehash: dd97c479f12e7bdb015b39a802b398ca2b0bcd3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 95bbb0cc2f223cfa96e1314ed28f46016c81a2fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007632"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687692"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 枚举
+
 包含一些值，用于描述本机非托管类型。  
   
 ## <a name="syntax"></a>语法  
@@ -87,7 +88,7 @@ typedef enum CorNativeType {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|已过时。|  
 |`NATIVE_TYPE_VOID`|已过时。|  
@@ -138,7 +139,8 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_MAX`|一个无效值。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

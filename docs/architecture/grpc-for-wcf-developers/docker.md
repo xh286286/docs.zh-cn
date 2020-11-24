@@ -2,12 +2,12 @@
 title: 适用于 WCF 开发人员的 Docker gRPC
 description: 为 ASP.NET Core gRPC 应用程序创建 Docker 映像
 ms.date: 09/02/2019
-ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688440"
 ---
 # <a name="create-docker-images"></a>创建 Docker 映像
 
@@ -20,14 +20,14 @@ Microsoft 提供了一系列用于构建和运行 .NET Core 应用程序的基�
 - 用于生成和发布应用程序的 SDK 映像。
 - 用于部署的运行时映像。
 
-| 映像 | 描述 |
+| 映像 | 说明 |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 用于生成应用程序 `docker build` 。 不能在生产中使用。 |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 包含运行时和 ASP.NET Core 依赖项。 用于生产。 |
+| [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/) | 用于生成应用程序 `docker build` 。 不能在生产中使用。 |
+| [mcr.microsoft.com/dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) | 包含运行时和 ASP.NET Core 依赖项。 用于生产。 |
 
 对于每个映像，都有四个基于不同 Linux 分发的变量，由标记来区分。
 
-| 图像标记 (s)  | Linux | 说明 |
+| 图像标记 (s)  | Linux | 备注 |
 | --------- | ----- | ----- |
 | 3.0-buster、3。0 | Debian 10 | 如果未指定操作系统变体，则为默认映像。 |
 | 3.0-alpine | Alpine 3。9 | Alpine 基本映像比 Debian 或 Ubuntu 映像小得多。 |
@@ -41,11 +41,11 @@ Microsoft 提供了一系列用于构建和运行 .NET Core 应用程序的基�
 
 ## <a name="create-a-docker-image"></a>创建 Docker 映像
 
-Docker 映像由 *Dockerfile*定义。 这是一个文本文件，其中包含生成应用程序所需的所有命令，并安装生成或运行该应用程序所需的任何依赖项。 下面的示例演示 ASP.NET Core 3.0 应用程序的最简单的 Dockerfile：
+Docker 映像由 *Dockerfile* 定义。 这是一个文本文件，其中包含生成应用程序所需的所有命令，并安装生成或运行该应用程序所需的任何依赖项。 下面的示例演示 ASP.NET Core 3.0 应用程序的最简单的 Dockerfile：
 
 ```dockerfile
 # Application build steps
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
 
 WORKDIR /src
 
@@ -56,7 +56,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
 
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
@@ -95,7 +95,7 @@ Dockerfile 包含两个部分：第一个部分使用 `sdk` 基本映像来生�
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```
