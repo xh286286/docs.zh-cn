@@ -14,42 +14,45 @@ helpviewer_keywords:
 ms.assetid: 6a81c6fe-cc22-4062-ae27-d6eeee03a7b9
 topic_type:
 - apiref
-ms.openlocfilehash: 3611de471001d31c40984e71d49ce376bb3e4607
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 41d049c931091d2cc0b41bd1e9d74b3c15d7878d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504285"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679255"
 ---
-# <a name="iclrassemblyidentitymanager-interface"></a><span data-ttu-id="fb010-102">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="fb010-102">ICLRAssemblyIdentityManager Interface</span></span>
-<span data-ttu-id="fb010-103">提供一些方法，这些方法支持宿主与公共语言运行时（CLR）与程序集之间的通信。</span><span class="sxs-lookup"><span data-stu-id="fb010-103">Provides methods that support communication between the host and the common language runtime (CLR) about assemblies.</span></span>  
-  
-## <a name="methods"></a><span data-ttu-id="fb010-104">方法</span><span class="sxs-lookup"><span data-stu-id="fb010-104">Methods</span></span>  
-  
-|<span data-ttu-id="fb010-105">方法</span><span class="sxs-lookup"><span data-stu-id="fb010-105">Method</span></span>|<span data-ttu-id="fb010-106">说明</span><span class="sxs-lookup"><span data-stu-id="fb010-106">Description</span></span>|  
-|------------|-----------------|  
-|[<span data-ttu-id="fb010-107">GetBindingIdentityFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="fb010-107">GetBindingIdentityFromFile Method</span></span>](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)|<span data-ttu-id="fb010-108">获取指定文件路径处的程序集的程序集标识绑定数据。</span><span class="sxs-lookup"><span data-stu-id="fb010-108">Gets the assembly identity binding data for the assembly at the specified file path.</span></span>|  
-|[<span data-ttu-id="fb010-109">GetBindingIdentityFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="fb010-109">GetBindingIdentityFromStream Method</span></span>](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)|<span data-ttu-id="fb010-110">获取指定流中的程序集的规范程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="fb010-110">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>|  
-|[<span data-ttu-id="fb010-111">GetCLRAssemblyReferenceList 方法</span><span class="sxs-lookup"><span data-stu-id="fb010-111">GetCLRAssemblyReferenceList Method</span></span>](iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|<span data-ttu-id="fb010-112">从提供的部分程序集标识列表中获取[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)实例。</span><span class="sxs-lookup"><span data-stu-id="fb010-112">Gets an [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>|  
-|[<span data-ttu-id="fb010-113">GetProbingAssembliesFromReference 方法</span><span class="sxs-lookup"><span data-stu-id="fb010-113">GetProbingAssembliesFromReference Method</span></span>](iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|<span data-ttu-id="fb010-114">获取具有指定标识的程序集所引用的程序集标识的[ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md)枚举器。</span><span class="sxs-lookup"><span data-stu-id="fb010-114">Gets an [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) enumerator for the assembly identities referenced by the assembly with the specified identity.</span></span>|  
-|[<span data-ttu-id="fb010-115">GetReferencedAssembliesFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="fb010-115">GetReferencedAssembliesFromFile Method</span></span>](iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|<span data-ttu-id="fb010-116">获取一个[ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md)实例，该实例包含程序集在指定文件路径处引用的程序集的列表。</span><span class="sxs-lookup"><span data-stu-id="fb010-116">Gets an [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) instance that contains a list of assemblies referenced by the assembly at the specified file path.</span></span>|  
-|[<span data-ttu-id="fb010-117">GetReferencedAssembliesFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="fb010-117">GetReferencedAssembliesFromStream Method</span></span>](iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md)|<span data-ttu-id="fb010-118">获取一个指向 `ICLRReferenceAssemblyEnum` 对象的指针，该对象包含指定流中的程序集所引用的程序集的程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="fb010-118">Gets a pointer to an `ICLRReferenceAssemblyEnum` object that contains assembly identity data for the assemblies referenced by the assembly in the specified stream.</span></span>|  
-|[<span data-ttu-id="fb010-119">IsStronglyNamed 方法</span><span class="sxs-lookup"><span data-stu-id="fb010-119">IsStronglyNamed Method</span></span>](iclrassemblyidentitymanager-isstronglynamed-method.md)|<span data-ttu-id="fb010-120">获取一个值，该值指示指定的程序集是否具有强名称。</span><span class="sxs-lookup"><span data-stu-id="fb010-120">Gets a value that indicates whether the specified assembly is strongly named.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="fb010-121">注解</span><span class="sxs-lookup"><span data-stu-id="fb010-121">Remarks</span></span>  
- <span data-ttu-id="fb010-122">用于 `ICLRAssemblyIdentityManager` 获取的实例 `ICLRAssemblyReferenceList` 并枚举程序集标识。</span><span class="sxs-lookup"><span data-stu-id="fb010-122">Use `ICLRAssemblyIdentityManager` to get instances of `ICLRAssemblyReferenceList` and to enumerate assembly identities.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="fb010-123">要求</span><span class="sxs-lookup"><span data-stu-id="fb010-123">Requirements</span></span>  
- <span data-ttu-id="fb010-124">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fb010-124">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="fb010-125">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="fb010-125">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="fb010-126">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="fb010-126">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="fb010-127">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb010-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fb010-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fb010-128">See also</span></span>
+# <a name="iclrassemblyidentitymanager-interface"></a><span data-ttu-id="53211-102">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="53211-102">ICLRAssemblyIdentityManager Interface</span></span>
 
-- [<span data-ttu-id="fb010-129">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="fb010-129">ICLRAssemblyReferenceList Interface</span></span>](iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="fb010-130">ICLRProbingAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="fb010-130">ICLRProbingAssemblyEnum Interface</span></span>](iclrprobingassemblyenum-interface.md)
-- [<span data-ttu-id="fb010-131">承载接口</span><span class="sxs-lookup"><span data-stu-id="fb010-131">Hosting Interfaces</span></span>](hosting-interfaces.md)
+<span data-ttu-id="53211-103">提供一些方法，这些方法支持宿主与公共语言运行时之间的通信 (CLR) 有关程序集的信息。</span><span class="sxs-lookup"><span data-stu-id="53211-103">Provides methods that support communication between the host and the common language runtime (CLR) about assemblies.</span></span>  
+  
+## <a name="methods"></a><span data-ttu-id="53211-104">方法</span><span class="sxs-lookup"><span data-stu-id="53211-104">Methods</span></span>  
+  
+|<span data-ttu-id="53211-105">方法</span><span class="sxs-lookup"><span data-stu-id="53211-105">Method</span></span>|<span data-ttu-id="53211-106">说明</span><span class="sxs-lookup"><span data-stu-id="53211-106">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="53211-107">GetBindingIdentityFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="53211-107">GetBindingIdentityFromFile Method</span></span>](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)|<span data-ttu-id="53211-108">获取指定文件路径处的程序集的程序集标识绑定数据。</span><span class="sxs-lookup"><span data-stu-id="53211-108">Gets the assembly identity binding data for the assembly at the specified file path.</span></span>|  
+|[<span data-ttu-id="53211-109">GetBindingIdentityFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="53211-109">GetBindingIdentityFromStream Method</span></span>](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)|<span data-ttu-id="53211-110">获取指定流中的程序集的规范程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="53211-110">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>|  
+|[<span data-ttu-id="53211-111">GetCLRAssemblyReferenceList 方法</span><span class="sxs-lookup"><span data-stu-id="53211-111">GetCLRAssemblyReferenceList Method</span></span>](iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|<span data-ttu-id="53211-112">从提供的部分程序集标识列表中获取 [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) 实例。</span><span class="sxs-lookup"><span data-stu-id="53211-112">Gets an [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>|  
+|[<span data-ttu-id="53211-113">GetProbingAssembliesFromReference 方法</span><span class="sxs-lookup"><span data-stu-id="53211-113">GetProbingAssembliesFromReference Method</span></span>](iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|<span data-ttu-id="53211-114">获取具有指定标识的程序集所引用的程序集标识的 [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) 枚举器。</span><span class="sxs-lookup"><span data-stu-id="53211-114">Gets an [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) enumerator for the assembly identities referenced by the assembly with the specified identity.</span></span>|  
+|[<span data-ttu-id="53211-115">GetReferencedAssembliesFromFile 方法</span><span class="sxs-lookup"><span data-stu-id="53211-115">GetReferencedAssembliesFromFile Method</span></span>](iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|<span data-ttu-id="53211-116">获取一个 [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) 实例，该实例包含程序集在指定文件路径处引用的程序集的列表。</span><span class="sxs-lookup"><span data-stu-id="53211-116">Gets an [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) instance that contains a list of assemblies referenced by the assembly at the specified file path.</span></span>|  
+|[<span data-ttu-id="53211-117">GetReferencedAssembliesFromStream 方法</span><span class="sxs-lookup"><span data-stu-id="53211-117">GetReferencedAssembliesFromStream Method</span></span>](iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md)|<span data-ttu-id="53211-118">获取一个指向 `ICLRReferenceAssemblyEnum` 对象的指针，该对象包含指定流中的程序集所引用的程序集的程序集标识数据。</span><span class="sxs-lookup"><span data-stu-id="53211-118">Gets a pointer to an `ICLRReferenceAssemblyEnum` object that contains assembly identity data for the assemblies referenced by the assembly in the specified stream.</span></span>|  
+|[<span data-ttu-id="53211-119">IsStronglyNamed 方法</span><span class="sxs-lookup"><span data-stu-id="53211-119">IsStronglyNamed Method</span></span>](iclrassemblyidentitymanager-isstronglynamed-method.md)|<span data-ttu-id="53211-120">获取一个值，该值指示指定的程序集是否具有强名称。</span><span class="sxs-lookup"><span data-stu-id="53211-120">Gets a value that indicates whether the specified assembly is strongly named.</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="53211-121">注解</span><span class="sxs-lookup"><span data-stu-id="53211-121">Remarks</span></span>  
+
+ <span data-ttu-id="53211-122">用于 `ICLRAssemblyIdentityManager` 获取的实例 `ICLRAssemblyReferenceList` 并枚举程序集标识。</span><span class="sxs-lookup"><span data-stu-id="53211-122">Use `ICLRAssemblyIdentityManager` to get instances of `ICLRAssemblyReferenceList` and to enumerate assembly identities.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="53211-123">要求</span><span class="sxs-lookup"><span data-stu-id="53211-123">Requirements</span></span>  
+
+ <span data-ttu-id="53211-124">**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="53211-124">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="53211-125">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="53211-125">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="53211-126">**库：** 作为中的资源包含 MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="53211-126">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="53211-127">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53211-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="53211-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="53211-128">See also</span></span>
+
+- [<span data-ttu-id="53211-129">ICLRAssemblyReferenceList 接口</span><span class="sxs-lookup"><span data-stu-id="53211-129">ICLRAssemblyReferenceList Interface</span></span>](iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="53211-130">ICLRProbingAssemblyEnum 接口</span><span class="sxs-lookup"><span data-stu-id="53211-130">ICLRProbingAssemblyEnum Interface</span></span>](iclrprobingassemblyenum-interface.md)
+- [<span data-ttu-id="53211-131">承载接口</span><span class="sxs-lookup"><span data-stu-id="53211-131">Hosting Interfaces</span></span>](hosting-interfaces.md)
