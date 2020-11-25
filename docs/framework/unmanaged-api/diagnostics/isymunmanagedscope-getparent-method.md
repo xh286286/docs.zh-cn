@@ -15,34 +15,38 @@ helpviewer_keywords:
 ms.assetid: c7963c87-6ec5-49b3-a5cd-e0fe0c43f9b4
 topic_type:
 - apiref
-ms.openlocfilehash: 95ae081d61200e4fd020609a4d23783f265d2cc6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: db7fb5f2c1b5d1fa8be1328852ca4402538396f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615353"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725893"
 ---
-# <a name="isymunmanagedscopegetparent-method"></a><span data-ttu-id="e4c2a-102">ISymUnmanagedScope::GetParent 方法</span><span class="sxs-lookup"><span data-stu-id="e4c2a-102">ISymUnmanagedScope::GetParent Method</span></span>
-<span data-ttu-id="e4c2a-103">获取此范围的父范围。</span><span class="sxs-lookup"><span data-stu-id="e4c2a-103">Gets the parent scope of this scope.</span></span>  
+# <a name="isymunmanagedscopegetparent-method"></a><span data-ttu-id="360e2-102">ISymUnmanagedScope::GetParent 方法</span><span class="sxs-lookup"><span data-stu-id="360e2-102">ISymUnmanagedScope::GetParent Method</span></span>
+
+<span data-ttu-id="360e2-103">获取此范围的父范围。</span><span class="sxs-lookup"><span data-stu-id="360e2-103">Gets the parent scope of this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e4c2a-104">语法</span><span class="sxs-lookup"><span data-stu-id="e4c2a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="360e2-104">语法</span><span class="sxs-lookup"><span data-stu-id="360e2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetParent(  
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e4c2a-105">参数</span><span class="sxs-lookup"><span data-stu-id="e4c2a-105">Parameters</span></span>  
- `pRetVal`  
- <span data-ttu-id="e4c2a-106">弄指向返回的[ISymUnmanagedScope](isymunmanagedscope-interface.md)接口的指针。</span><span class="sxs-lookup"><span data-stu-id="e4c2a-106">[out] A pointer to the returned [ISymUnmanagedScope](isymunmanagedscope-interface.md) interface.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="e4c2a-107">返回值</span><span class="sxs-lookup"><span data-stu-id="e4c2a-107">Return Value</span></span>  
- <span data-ttu-id="e4c2a-108">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="e4c2a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="e4c2a-109">要求</span><span class="sxs-lookup"><span data-stu-id="e4c2a-109">Requirements</span></span>  
- <span data-ttu-id="e4c2a-110">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="e4c2a-110">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e4c2a-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e4c2a-111">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="360e2-105">参数</span><span class="sxs-lookup"><span data-stu-id="360e2-105">Parameters</span></span>  
 
-- [<span data-ttu-id="e4c2a-112">ISymUnmanagedScope 接口</span><span class="sxs-lookup"><span data-stu-id="e4c2a-112">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
-- [<span data-ttu-id="e4c2a-113">GetChildren 方法</span><span class="sxs-lookup"><span data-stu-id="e4c2a-113">GetChildren Method</span></span>](isymunmanagedscope-getchildren-method.md)
+ `pRetVal`  
+ <span data-ttu-id="360e2-106">弄指向返回的 [ISymUnmanagedScope](isymunmanagedscope-interface.md) 接口的指针。</span><span class="sxs-lookup"><span data-stu-id="360e2-106">[out] A pointer to the returned [ISymUnmanagedScope](isymunmanagedscope-interface.md) interface.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="360e2-107">返回值</span><span class="sxs-lookup"><span data-stu-id="360e2-107">Return Value</span></span>  
+
+ <span data-ttu-id="360e2-108">如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。</span><span class="sxs-lookup"><span data-stu-id="360e2-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="360e2-109">要求</span><span class="sxs-lookup"><span data-stu-id="360e2-109">Requirements</span></span>  
+
+ <span data-ttu-id="360e2-110">**标头：** CorSym，CorSym</span><span class="sxs-lookup"><span data-stu-id="360e2-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="360e2-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="360e2-111">See also</span></span>
+
+- [<span data-ttu-id="360e2-112">ISymUnmanagedScope 接口</span><span class="sxs-lookup"><span data-stu-id="360e2-112">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
+- [<span data-ttu-id="360e2-113">GetChildren 方法</span><span class="sxs-lookup"><span data-stu-id="360e2-113">GetChildren Method</span></span>](isymunmanagedscope-getchildren-method.md)
