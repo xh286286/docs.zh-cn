@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-ms.openlocfilehash: af226f9317b67b23e03d06614ed5b9c956939c22
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27c3ec349cf6c83f6783e252e6c5af5e99fa4b37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503414"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702831"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 方法
+
 获取与指定标记表示的泛型参数关联的泛型参数约束数组的枚举器。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT EnumGenericParamConstraints (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `phEnum`  
  [in，out]指向枚举器的指针。  
   
@@ -57,15 +59,16 @@ HRESULT EnumGenericParamConstraints (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints`已成功返回。|  
-|`S_FALSE`|`phEnum`没有成员元素。 在这种情况下， `pcGenericParameterConstraints` 设置为0（零）。|  
+|`S_OK`|`EnumGenericParameterConstraints` 已成功返回。|  
+|`S_FALSE`|`phEnum` 没有成员元素。 在这种情况下， `pcGenericParameterConstraints` 设置为 0 (零) 。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

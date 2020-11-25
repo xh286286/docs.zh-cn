@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-ms.openlocfilehash: f55af87e21b48430807166cb03e1d41271e830a1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 76c5519a6cd1b8994e2f869281f13d8269e89fde
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503427"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702818"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef 方法
+
 解析 <xref:System.Type> 指定的 TypeRef 标记所表示的引用。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT ResolveTypeRef (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tr`  
  中要为其返回引用的类型信息的 TypeRef 元数据标记。  
   
@@ -56,14 +58,15 @@ HRESULT ResolveTypeRef (
   
  `ResolveTypeRef`方法在其他模块中搜索类型定义。 如果找到类型定义，则 `ResolveTypeRef` 返回该模块范围的接口以及该类型的 TypeDef 标记。  
   
- 如果要解析的类型引用的解析范围为 AssemblyRef，则此 `ResolveTypeRef` 方法仅在已使用调用[IMetaDataDispenser：： OpenScope](imetadatadispenser-openscope-method.md)方法或[IMetaDataDispenser：： OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md)方法打开的元数据范围中搜索匹配项。 这是因为， `ResolveTypeRef` 无法仅从磁盘或全局程序集缓存中存储程序集的 AssemblyRef 范围进行确定。  
+ 如果要解析的类型引用的解析范围为 AssemblyRef，则此 `ResolveTypeRef` 方法仅在已使用调用 [IMetaDataDispenser：： OpenScope](imetadatadispenser-openscope-method.md) 方法或 [IMetaDataDispenser：： OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) 方法打开的元数据范围中搜索匹配项。 这是因为， `ResolveTypeRef` 无法仅从磁盘或全局程序集缓存中存储程序集的 AssemblyRef 范围进行确定。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e0c10549ab9075c2e7604a9adb18cae8b9a3b32b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494574"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702363"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 方法
+
 从对象的顺序集合中获取指定数目的连续对象，从该序列中的枚举器的当前位置开始。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `celt`  
  [in] 要检索的对象数。  
   
@@ -47,7 +49,8 @@ HRESULT Next (
  [out] 指向 `objects` 数组中实际返回的元素数目的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

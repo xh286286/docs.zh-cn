@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 71b07e11cd3fec1a0dbebe986d98067c2e6f18e1
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f1b9f55a383f1deb867c6b3e2fa385a82158d1e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860630"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703572"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase 方法
+
 获取指定的图像的基本内存地址。  
   
 ## <a name="syntax"></a>语法  
@@ -35,17 +36,20 @@ HRESULT GetImageBase (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `imagePath`  
  中图像的文件名，包括其路径。  
   
  `baseAddress`  
  弄指向存储图像基址的 CLRDATA_ADDRESS 的指针。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  图像文件名可以是也可以没有路径。 如果指定了路径，则在整个路径上完成匹配;否则，仅对文件名执行匹配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   

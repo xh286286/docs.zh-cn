@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-ms.openlocfilehash: 9190d021b801be951d214406dde7e6d76da15608
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b4dc1e60f3d29e2671882d1900a1c49e56969601
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503432"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702854"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken 方法
+
 获取指示指定的标记是否包含对代码对象的有效引用的值。  
   
 ## <a name="syntax"></a>语法  
@@ -34,18 +35,21 @@ BOOL IsValidToken (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tk`  
  中要检查其引用有效性的标记。  
   
 ## <a name="return-value"></a>返回值  
- `true`如果 `tk` 是当前范围内的有效元数据标记，则为。 否则为 `false`。  
+
+ `true` 如果 `tk` 是当前范围内的有效元数据标记，则为。 否则为 `false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

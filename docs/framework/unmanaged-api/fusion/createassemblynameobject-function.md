@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 995f1064c2f40005c4a19ef034d7edfd668b5d51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108712"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704157"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject 函数
-获取一个接口指针，该指针指向表示具有指定名称的程序集的唯一标识的[IAssemblyName](iassemblyname-interface.md)实例。  
+
+获取一个接口指针，该指针指向表示具有指定名称的程序集的唯一标识的 [IAssemblyName](iassemblyname-interface.md) 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,11 +39,12 @@ HRESULT CreateAssemblyNameObject (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppAssemblyNameObj`  
- 弄返回的 `IAssemblyName`。  
+ 弄返回的 `IAssemblyName` 。  
   
  `szAssemblyName`  
- 中要为其创建新 `IAssemblyName` 实例的程序集的名称。  
+ 中要为其创建新实例的程序集的名称 `IAssemblyName` 。  
   
  `dwFlags`  
  中要传递给对象构造函数的标志。  
@@ -51,15 +53,16 @@ HRESULT CreateAssemblyNameObject (
  中保留以供将来进行扩展。 `pvReserved` 必须为空引用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IAssemblyName 接口](iassemblyname-interface.md)
 - [合成全局静态函数](fusion-global-static-functions.md)

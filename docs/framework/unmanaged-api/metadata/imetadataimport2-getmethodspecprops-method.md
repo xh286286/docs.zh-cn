@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2eba599c0f7d47ab78c1b158129f03877a4a5d9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490440"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702610"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps 方法
+
 获取指定的 MethodSpec 标记所引用的方法的元数据签名。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT GetMethodSpecProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mi`  
  中一个 MethodSpec 标记，表示方法的实例化。  
   
@@ -50,11 +52,12 @@ HRESULT GetMethodSpecProps (
  弄的大小（以字节为单位） `ppvSigBlob` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

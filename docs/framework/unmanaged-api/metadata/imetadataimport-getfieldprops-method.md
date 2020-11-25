@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 458a90bc47711d9f831805faa8468a49f3e0d305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491236"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703988"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
+
 获取与指定 FieldDef 标记引用的字段关联的元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -44,6 +45,7 @@ HRESULT GetFieldProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mb`  
  中一个 FieldDef 标记，它表示要为其获取关联元数据的字段。  
   
@@ -54,7 +56,7 @@ HRESULT GetFieldProps (
  弄字段的名称。  
   
  `cchField`  
- 中*SzField*缓冲区的大小（以宽字符为大小）。  
+ 中 *SzField* 缓冲区的大小（以宽字符为大小）。  
   
  `pchField`  
  弄返回的缓冲区的实际大小。  
@@ -78,11 +80,12 @@ HRESULT GetFieldProps (
  弄的大小（以字符为字符 `ppValue` ），如果不存在任何字符串，则为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

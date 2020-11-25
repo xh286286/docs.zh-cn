@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-ms.openlocfilehash: 3626998c456e23fb922ae45a68bedb0e45a7ccba
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d335beecc12e0c1c895e42888ad7172f78062ff7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490427"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702532"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind 方法
-获取一个值，该值标识可移植可执行（PE）文件中代码的性质（通常为 DLL 或 EXE 文件），该文件在当前的元数据范围内定义。  
+
+获取一个值，该值标识可移植可执行文件中代码的性质 (PE) 文件（通常为 DLL 或 EXE 文件），该文件在当前的元数据范围内定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +36,15 @@ HRESULT GetPEKind (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pdwPEKind`  
- 弄一个指针，指向描述 PE 文件的[CorPEKind](corpekind-enumeration.md)枚举的值。  
+ 弄一个指针，指向描述 PE 文件的 [CorPEKind](corpekind-enumeration.md) 枚举的值。  
   
  `pdwMachine`  
  弄一个指针，指向用于标识计算机体系结构的值。 有关可能的值，请参阅下一节。  
   
 ## <a name="remarks"></a>注解  
+
  参数引用的值 `pdwMachine` 可以是下列值之一。  
   
 |Value|计算机体系结构|  
@@ -51,11 +54,12 @@ HRESULT GetPEKind (
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

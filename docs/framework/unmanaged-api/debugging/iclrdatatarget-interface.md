@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 30806394a8895084068acaec6f7d03c6b67bb14b
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 0d3e6a95d8fd71a67b97923dac53c1f615dfe666
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860564"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703416"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 接口
-提供与公共语言运行时（CLR）的目标项交互的方法。  
+
+提供与公共语言运行时的目标项 (CLR) 交互的方法。  
   
 ## <a name="methods"></a>方法  
   
@@ -33,18 +34,20 @@ ms.locfileid: "82860564"
 |[GetMachineType 方法](iclrdatatarget-getmachinetype-method.md)|获取目标进程正在使用的指令集类型的标识符。|  
 |[GetPointerSize 方法](iclrdatatarget-getpointersize-method.md)|获取指向当前目标的指针的大小（以字节为单位）。|  
 |[GetThreadContext 方法](iclrdatatarget-getthreadcontext-method.md)|获取一个指针，该指针指向具有指定标识符的线程的上下文。|  
-|[GetTLSValue 方法](iclrdatatarget-gettlsvalue-method.md)|在线程本地存储（TLS）中获取指定线程的指定索引处的值。|  
+|[GetTLSValue 方法](iclrdatatarget-gettlsvalue-method.md)|在线程本地存储区中获取指定线程 (TLS) 中的值。|  
 |[ReadVirtual 方法](iclrdatatarget-readvirtual-method.md)|将数据从指定的虚拟内存地址读入指定的缓冲区。|  
-|[Request 方法](iclrdatatarget-request-method.md)|由公共语言运行时（CLR）数据访问服务调用，用来请求操作，如实现所定义。|  
+|[Request 方法](iclrdatatarget-request-method.md)|由公共语言运行时调用 (CLR) 数据访问服务请求操作，如实现所定义。|  
 |[SetThreadContext 方法](iclrdatatarget-setthreadcontext-method.md)|设置目标进程中指定线程的当前上下文。|  
-|[SetTLSValue 方法](iclrdatatarget-settlsvalue-method.md)|在目标进程中指定线程的线程本地存储（TLS）中设置一个值。|  
+|[SetTLSValue 方法](iclrdatatarget-settlsvalue-method.md)|在目标进程中指定线程 (TLS) 中设置一个值。|  
 |[WriteVirtual 方法](iclrdatatarget-writevirtual-method.md)|将数据从指定的缓冲区写入指定的虚拟内存地址。|  
   
-## <a name="remarks"></a>备注  
- API 客户端（即调试器）必须根据特定目标项实现此接口。 例如，活动进程的实现将不同于内存转储的。  
+## <a name="remarks"></a>注解  
+
+ API 客户端 (即，调试器) 必须根据特定目标项实现此接口。 例如，活动进程的实现将不同于内存转储的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   
