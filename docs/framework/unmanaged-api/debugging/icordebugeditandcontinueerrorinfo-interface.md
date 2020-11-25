@@ -14,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6ae0204c-6bb2-4bda-b13e-94507203bc68
 topic_type:
 - apiref
-ms.openlocfilehash: 28d5a486f51aa81c56683f51da19c2636c320929
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 85e3e24612961f44f4bd9c07201c58fcdda8d226
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783273"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721395"
 ---
-# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="83890-102">ICorDebugEditAndContinueErrorInfo 接口</span><span class="sxs-lookup"><span data-stu-id="83890-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
-<span data-ttu-id="83890-103">`ICorDebugEditAndContinueErrorInfo` 已过时。</span><span class="sxs-lookup"><span data-stu-id="83890-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="83890-104">不要使用此接口。</span><span class="sxs-lookup"><span data-stu-id="83890-104">Do not use this interface.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="83890-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="83890-105">See also</span></span>
+# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="b322b-102">ICorDebugEditAndContinueErrorInfo 接口</span><span class="sxs-lookup"><span data-stu-id="b322b-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
 
-- [<span data-ttu-id="83890-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="83890-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+<span data-ttu-id="b322b-103">`ICorDebugEditAndContinueErrorInfo` 已过时。</span><span class="sxs-lookup"><span data-stu-id="b322b-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="b322b-104">不要使用此接口。</span><span class="sxs-lookup"><span data-stu-id="b322b-104">Do not use this interface.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b322b-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b322b-105">See also</span></span>
+
+- [<span data-ttu-id="b322b-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="b322b-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

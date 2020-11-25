@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-ms.openlocfilehash: ac822dda30d697cbbbcacf19eb6a57d1e5fb4c3b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6388d804df43964866073d7c3b32dca84fb2d06f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720420"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="0b4b5-102">CorArgType 枚举</span><span class="sxs-lookup"><span data-stu-id="0b4b5-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="0b4b5-103">包含一些值，用于描述运行时句柄的本机类型。</span><span class="sxs-lookup"><span data-stu-id="0b4b5-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="c913a-102">CorArgType 枚举</span><span class="sxs-lookup"><span data-stu-id="c913a-102">CorArgType Enumeration</span></span>
+
+<span data-ttu-id="c913a-103">包含一些值，用于描述运行时句柄的本机类型。</span><span class="sxs-lookup"><span data-stu-id="c913a-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b4b5-104">语法</span><span class="sxs-lookup"><span data-stu-id="0b4b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c913a-104">语法</span><span class="sxs-lookup"><span data-stu-id="c913a-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -44,13 +45,14 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0b4b5-105">要求</span><span class="sxs-lookup"><span data-stu-id="0b4b5-105">Requirements</span></span>  
- <span data-ttu-id="0b4b5-106">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0b4b5-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="0b4b5-107">**标头：** Corhdr。h</span><span class="sxs-lookup"><span data-stu-id="0b4b5-107">**Header:** CorHdr.h</span></span>  
-  
- <span data-ttu-id="0b4b5-108">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b4b5-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="0b4b5-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0b4b5-109">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="c913a-105">要求</span><span class="sxs-lookup"><span data-stu-id="c913a-105">Requirements</span></span>  
 
-- [<span data-ttu-id="0b4b5-110">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="0b4b5-110">Metadata Enumerations</span></span>](metadata-enumerations.md)
+ <span data-ttu-id="c913a-106">**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c913a-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="c913a-107">**标头：** Corhdr。h</span><span class="sxs-lookup"><span data-stu-id="c913a-107">**Header:** CorHdr.h</span></span>  
+  
+ <span data-ttu-id="c913a-108">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c913a-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c913a-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c913a-109">See also</span></span>
+
+- [<span data-ttu-id="c913a-110">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="c913a-110">Metadata Enumerations</span></span>](metadata-enumerations.md)

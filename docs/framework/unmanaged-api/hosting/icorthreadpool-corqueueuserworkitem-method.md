@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 29ac7898-a7c7-433e-8f79-cd5237e0bab8
 topic_type:
 - apiref
-ms.openlocfilehash: 5500f2b84f00e039cbc3f669b49be467789955f0
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 42de7cd566db53e43985088851fd01fb66feabd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762729"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720489"
 ---
-# <a name="icorthreadpoolcorqueueuserworkitem-method"></a><span data-ttu-id="9dd39-102">ICorThreadpool::CorQueueUserWorkItem 方法</span><span class="sxs-lookup"><span data-stu-id="9dd39-102">ICorThreadpool::CorQueueUserWorkItem Method</span></span>
-<span data-ttu-id="9dd39-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="9dd39-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorqueueuserworkitem-method"></a><span data-ttu-id="77427-102">ICorThreadpool::CorQueueUserWorkItem 方法</span><span class="sxs-lookup"><span data-stu-id="77427-102">ICorThreadpool::CorQueueUserWorkItem Method</span></span>
+
+<span data-ttu-id="77427-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="77427-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9dd39-104">语法</span><span class="sxs-lookup"><span data-stu-id="9dd39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="77427-104">语法</span><span class="sxs-lookup"><span data-stu-id="77427-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CorQueueUserWorkItem (  
@@ -36,15 +37,16 @@ HRESULT CorQueueUserWorkItem (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9dd39-105">要求</span><span class="sxs-lookup"><span data-stu-id="9dd39-105">Requirements</span></span>  
- <span data-ttu-id="9dd39-106">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9dd39-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="9dd39-107">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="9dd39-107">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="9dd39-108">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="9dd39-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="9dd39-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9dd39-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9dd39-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9dd39-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="77427-105">要求</span><span class="sxs-lookup"><span data-stu-id="77427-105">Requirements</span></span>  
 
-- [<span data-ttu-id="9dd39-111">ICorThreadpool 接口</span><span class="sxs-lookup"><span data-stu-id="9dd39-111">ICorThreadpool Interface</span></span>](icorthreadpool-interface.md)
+ <span data-ttu-id="77427-106">**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="77427-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="77427-107">**标头：** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="77427-107">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="77427-108">**库：** 作为中的资源包含 MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="77427-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="77427-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77427-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="77427-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="77427-110">See also</span></span>
+
+- [<span data-ttu-id="77427-111">ICorThreadpool 接口</span><span class="sxs-lookup"><span data-stu-id="77427-111">ICorThreadpool Interface</span></span>](icorthreadpool-interface.md)
