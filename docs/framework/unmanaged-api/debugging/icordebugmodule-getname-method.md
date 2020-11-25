@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710023"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 方法
+
 获取模块的文件名。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cchname`  
  [in] `szName` 数组的大小。  
   
@@ -45,11 +47,13 @@ HRESULT GetName(
  `szName`  
  弄存储返回的名称的数组。  
   
-## <a name="remarks"></a>备注  
- `GetName`如果模块的文件名与磁盘上的名称匹配，则该方法将返回 S_OK HRESULT。 `GetName`如果名称是虚构的，则返回 S_FALSE HRESULT，如用于动态或内存中的模块。  
+## <a name="remarks"></a>注解  
+
+ `GetName`如果模块的文件名与磁盘上的名称匹配，则该方法将返回 S_OK HRESULT。 `GetName` 如果名称是虚构的，则返回 S_FALSE HRESULT，如用于动态或内存中的模块。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -57,4 +61,4 @@ HRESULT GetName(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

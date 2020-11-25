@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 2a8200f942405395429db182b7501a07fc1f930a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 44f4c59f95c28f9982d67875584e2f9803c0ed3b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709565"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 方法
+
 为动态模块创建调试符号读取器。  
   
 ## <a name="syntax"></a>语法  
@@ -34,13 +35,15 @@ HRESULT CreateReaderForInMemorySymbols (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  riid  
- 中要返回的 COM 接口的 IID。 通常，这是一个[ISymUnmanagedReader 接口](../diagnostics/isymunmanagedreader-interface.md)。  
+ 中要返回的 COM 接口的 IID。 通常，这是一个 [ISymUnmanagedReader 接口](../diagnostics/isymunmanagedreader-interface.md)。  
   
  ppObj  
  弄指向返回接口的指针的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  S_OK  
  已成功创建读取器。  
   
@@ -53,15 +56,17 @@ HRESULT CreateReaderForInMemorySymbols (
  E_FAIL（或其他 E_ 返回代码）  
  无法创建读取器。  
   
-## <a name="remarks"></a>备注  
- 此方法还可用于为内存中（非动态）模块创建符号读取器对象，但仅在符号首次可用之后（由[UpdateModuleSymbols 方法](icordebugmanagedcallback-updatemodulesymbols-method.md)回调指示）。  
+## <a name="remarks"></a>注解  
+
+ 此方法还可用于为内存中 (非动态) 模块创建符号读取器对象，但仅在符号首次可用之后 ([UpdateModuleSymbols 方法](icordebugmanagedcallback-updatemodulesymbols-method.md) 回调) 指示。  
   
- 此方法将在每次调用时返回一个新的读取器实例（例如[CComPtrBase：： CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)）。 因此，调试器应缓存结果，并仅在基础数据可能已更改时（即，接收到[LoadClass 方法](icordebugmanagedcallback-loadclass-method.md)回调时）请求新的实例。  
+ 此方法会在每次调用时返回一个新的读取器实例 (如 [CComPtrBase：： CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)) 。 因此，只有当基础数据可能已更改时，调试器才应缓存结果，并请求新实例 (也就是说，当) 接收到 [LoadClass 方法](icordebugmanagedcallback-loadclass-method.md) 回调时。  
   
- 在加载第一个类型之前，动态模块没有可用的符号（如[LoadClass 方法](icordebugmanagedcallback-loadclass-method.md)回调所指示）。  
+ 在加载第一个类型之前，动态模块没有可用的任何符号 (如 [LoadClass 方法](icordebugmanagedcallback-loadclass-method.md) 回调) 所示。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -69,7 +74,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
  **.NET Framework 版本：** 4.5、4、3.5 SP1  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugRemoteTarget 接口](icordebugremotetarget-interface.md)
 - [ICorDebug 接口](icordebug-interface.md)

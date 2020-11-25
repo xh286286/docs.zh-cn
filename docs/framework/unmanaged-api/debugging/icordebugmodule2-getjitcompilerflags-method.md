@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7212d9f4-989b-44e3-b8d4-ffc35922f6a0
 topic_type:
 - apiref
-ms.openlocfilehash: 6af5bc22616be196be7fdb0d417800d631d87506
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c443fba711a3d122ed5f8f1566a220c79211631e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213642"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709669"
 ---
 # <a name="icordebugmodule2getjitcompilerflags-method"></a>ICorDebugModule2::GetJITCompilerFlags 方法
-获取用于控制此 ICorDebugModule2 的实时（JIT）编译的标志。  
+
+获取用于控制此 ICorDebugModule2 的实时 (JIT) 编译的标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +35,13 @@ HRESULT GetJITCompilerFlags (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pdwFlags`  
- 弄指向控制 JIT 编译的[CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md)枚举的值的指针。  
+ 弄指向控制 JIT 编译的 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 枚举的值的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

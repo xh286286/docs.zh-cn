@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-ms.openlocfilehash: c5fa55a84ed8907a5072f6099c3bf02cd6d78683
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 637cac67e73d38aca0fdc5eaeae5405c4a859aa3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213122"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709812"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory 方法
+
 获取一个值，该值指示此模块是否仅存在于内存中。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT IsInMemory(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pInMemory`  
- [out] `true`如果此模块仅存在于内存中，则为;否则为 `false` 。  
+ [out] `true` 如果此模块仅存在于内存中，则为;否则为 `false` 。  
   
-## <a name="remarks"></a>备注  
- 公共语言运行时（CLR）支持从原始字节流加载模块。 此类模块称为*内存中模块*，不存在于磁盘上。  
+## <a name="remarks"></a>注解  
+
+ 公共语言运行时 (CLR) 支持从原始字节流加载模块。 此类模块称为 *内存中模块* ，不存在于磁盘上。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -49,4 +53,4 @@ HRESULT IsInMemory(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

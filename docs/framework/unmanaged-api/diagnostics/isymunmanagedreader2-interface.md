@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a01a881b-82a3-4b3e-a3a9-9dc305c2e5f7
 topic_type:
 - apiref
-ms.openlocfilehash: d4c5ff46d37b1292059b18920abd8042c18bbf31
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3f34be833d3ccb5c636d2c5f18ccb6e216ef2c49
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615392"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709071"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 接口
-表示一个符号读取器，该读取器提供对符号存储区中的文档、方法和变量的访问。 此接口扩展[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口。  
+
+表示一个符号读取器，该读取器提供对符号存储区中文档、方法和变量的访问。 此接口扩展 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 接口。  
   
 ## <a name="methods"></a>方法  
   
@@ -33,6 +34,7 @@ ms.locfileid: "83615392"
 |[GetSymAttributePreRemap 方法](isymunmanagedreader2-getsymattributepreremap-method.md)|根据名称获取自定义属性。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

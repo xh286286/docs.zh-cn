@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-ms.openlocfilehash: 7d39d089c348b7320651ed21ea14ba07d7877fd4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 21fc79f62dba4b16a7a067dff8fb9dcc795c9d35
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708720"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo 方法
+
 获取指定索引处的元数据流的名称、大小和内容。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT GetMetaDataStreamInfo (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ix`  
  中请求的元数据流的索引。  
   
@@ -50,11 +52,12 @@ HRESULT GetMetaDataStreamInfo (
  弄的大小（以字节为单位） `ppv` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

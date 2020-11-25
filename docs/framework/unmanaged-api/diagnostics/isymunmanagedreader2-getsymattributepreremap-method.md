@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 812c0d08930efff9140c6e897d3f93c4909e8464
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614911"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709084"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 方法
+
 根据名称获取自定义属性。 与元数据自定义特性不同，这些特性保存在符号存储区中。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT GetSymAttributePreRemap(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `parent`  
  中父的元数据标记。  
   
@@ -45,7 +47,7 @@ HRESULT GetSymAttributePreRemap(
  中指向包含名称的的指针 `WCHAR` 。  
   
  `cBuffer`  
- 中`ULONG32`指示数组大小的 `buffer` 。  
+ 中 `ULONG32` 指示数组大小的 `buffer` 。  
   
  `pcBuffer`  
  弄指向的指针 `ULONG32` ，该指针接收包含特性字节所需的缓冲区大小。  
@@ -54,9 +56,11 @@ HRESULT GetSymAttributePreRemap(
  弄指向接收属性字节的缓冲区的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

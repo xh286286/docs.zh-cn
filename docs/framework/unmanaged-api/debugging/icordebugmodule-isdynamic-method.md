@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-ms.openlocfilehash: 4517f266bbb500223214a6a8fe5881e8b29566c3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 98c01993a85ed07d961902d8a098a96df4702c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709825"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>ICorDebugModule::IsDynamic 方法
+
 获取一个值，该值指示此模块是否为动态模块。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT IsDynamic(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pDynamic`  
- [out] `true`如果此模块是动态的，则为;否则为 `false` 。  
+ [out] `true` 如果此模块是动态的，则为;否则为 `false` 。  
   
-## <a name="remarks"></a>备注  
- 即使在模块加载后，动态模块也可以添加新类和删除现有类。 添加或删除类时， [ICorDebugManagedCallback：： LoadClass](icordebugmanagedcallback-loadclass-method.md)和[ICorDebugManagedCallback：： UnloadClass](icordebugmanagedcallback-unloadclass-method.md)回调会通知调试器。  
+## <a name="remarks"></a>注解  
+
+ 即使在模块加载后，动态模块也可以添加新类和删除现有类。 添加或删除类时， [ICorDebugManagedCallback：： LoadClass](icordebugmanagedcallback-loadclass-method.md) 和 [ICorDebugManagedCallback：： UnloadClass](icordebugmanagedcallback-unloadclass-method.md) 回调会通知调试器。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
