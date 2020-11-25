@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: d7417e8dc193172c77d23fe3fa72c8298d802b5c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894046"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699620"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass 接口
 
@@ -31,18 +31,20 @@ ms.locfileid: "82894046"
 |------------|-----------------|  
 |[GetModule 方法](icordebugclass-getmodule-method.md)|获取定义此类的模块。|  
 |[GetStaticFieldValue 方法](icordebugclass-getstaticfieldvalue-method.md)|获取指定的静态字段的值。|  
-|[GetToken 方法](icordebugclass-gettoken-method.md)|获取此`TypeDef`类的元数据标记。|  
+|[GetToken 方法](icordebugclass-gettoken-method.md)|获取 `TypeDef` 此类的元数据标记。|  
   
-## <a name="remarks"></a>备注  
- `ICorDebugClass`接口表示未实例化的泛型类型。 ICorDebugType 接口表示一个实例化的泛型类型。 例如， `Hashtable<K, V>`将由表示`ICorDebugClass`，而`Hashtable<Int32, String>`将由表示。 `ICorDebugType`  
+## <a name="remarks"></a>注解  
+
+ `ICorDebugClass`接口表示未实例化的泛型类型。 ICorDebugType 接口表示一个实例化的泛型类型。 例如，将由 `Hashtable<K, V>` 表示 `ICorDebugClass` ，而将由 `Hashtable<Int32, String>` 表示 `ICorDebugType` 。  
   
- 非泛型类型由`ICorDebugClass`和`ICorDebugType`表示。 后一种接口在 .NET Framework 版本2.0 中引入，用于处理类型实例化。  
+ 非泛型类型由 `ICorDebugClass` 和表示 `ICorDebugType` 。 后一种接口在 .NET Framework 版本2.0 中引入，用于处理类型实例化。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

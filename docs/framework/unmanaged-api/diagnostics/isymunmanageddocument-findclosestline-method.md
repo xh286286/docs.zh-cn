@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 9e6134d39096c4ab157aa545646d83339f92a0b8
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5ec67758e3174493cbd5cec1de0dcce30013ac43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441027"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698580"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine 方法
+
 如果此文档中的一行可能是也可能不是序列点，则返回作为序列点的最近行。  
   
 ## <a name="syntax"></a>语法  
@@ -34,6 +35,7 @@ HRESULT FindClosestLine(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `line`  
  中此文档中的一行。  
   
@@ -41,6 +43,7 @@ HRESULT FindClosestLine(
  弄指向接收行的变量的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则为错误代码。  
   
 ## <a name="see-also"></a>另请参阅

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 98b097ef-2276-4dd9-8551-b03c972e8179
 topic_type:
 - apiref
-ms.openlocfilehash: ccf48b6aea25bd602b55727c2e5958811702f6bf
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 34f996f4efe9c0db4c3f0f5277e30f53e91ec47f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696786"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString 方法
-获取与给定的[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)接口相关联的公共语言运行时（CLR）版本信息。  
+
+获取公共语言运行时 (CLR) 版本信息与给定的 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 接口相关联。  
   
  此方法取代了以下函数：  
   
@@ -40,18 +41,20 @@ HRESULT GetVersionString(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pwzBuffer`  
- 弄"V*A*" 格式的 .NET Framework 编译版本。*B.*[。*X*] "。 *A*、 *B*和*X*是与主版本、次版本和生成号对应的十进制数字。 *X*是可选的。 如果*X*不存在，则没有尾随句点。  
+ 弄"V *A*" 格式的 .NET Framework 编译版本。*B.*[。*X*] "。 *A*、 *B* 和 *X* 是与主版本、次版本和生成号对应的十进制数字。 *X* 是可选的。 如果 *X* 不存在，则没有尾随句点。  
   
 > [!NOTE]
 > 此参数必须匹配 .NET Framework 版本的目录名称，因为它显示在 C:\Windows\Microsoft.NET\Framework. 下。  
   
- 示例值为 "v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*"，其中*x*依赖于安装的生成号。 请注意，"v" 前缀是必需的。  
+ 示例值为 "v1.0.3705"、"v 1.1.4322"、"v 2.0.50727" 和 "v4.0"。*x*"，其中 *x* 依赖于安装的生成号。 请注意，"v" 前缀是必需的。  
   
  `pchBuffer`  
  [in，out]指定的大小 `pwzBuffer` 以避免缓冲区溢出。 如果 `pwzBuffer` 为 `null` ，则 `pchBuffer` 返回所需的大小 `pwzBuffer` 以允许预先分配。  
   
 ## <a name="return-value"></a>返回值  
+
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|说明|  
@@ -60,11 +63,12 @@ HRESULT GetVersionString(
 |E_POINTER|`pwzBuffer` 或 `pchBuffer` 为 null。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

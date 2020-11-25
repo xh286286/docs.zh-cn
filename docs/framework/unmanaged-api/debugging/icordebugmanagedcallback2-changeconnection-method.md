@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 7d209b7c319baff912b3462f8ed5f3f30f127750
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4ba04b1a4815587b40d03819fdac795dcc7f2c4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501906"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697267"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection 方法
+
 通知调试器与指定连接关联的任务集已更改。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT ChangeConnection (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pProcess`  
  中一个指向 "ICorDebugProcess" 对象的指针，该对象表示包含已更改的连接的进程。  
   
@@ -42,16 +44,18 @@ HRESULT ChangeConnection (
  中已更改的连接的 ID。  
   
 ## <a name="remarks"></a>注解  
+
  `ChangeConnection`在以下任一情况下，都将激发回调：  
   
-- 调试器附加到包含连接的进程时。 在这种情况下，运行时将为进程中的每个连接生成并调度一个[ICorDebugManagedCallback2：： CreateConnection](icordebugmanagedcallback2-createconnection-method.md)事件和一个 `ChangeConnection` 事件。 将 `ChangeConnection` 为每个现有连接生成一个事件，而不管该连接的一组任务在创建后是否已更改。  
+- 调试器附加到包含连接的进程时。 在这种情况下，运行时将为进程中的每个连接生成并调度一个 [ICorDebugManagedCallback2：： CreateConnection](icordebugmanagedcallback2-createconnection-method.md) 事件和一个 `ChangeConnection` 事件。 将 `ChangeConnection` 为每个现有连接生成一个事件，而不管该连接的一组任务在创建后是否已更改。  
   
 - 当主机在[托管 API](../hosting/index.md)中调用[ICLRDebugManager：： SetConnectionTasks](../hosting/iclrdebugmanager-setconnectiontasks-method.md)时。  
   
  调试器应扫描进程中的所有线程以选取新的更改。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

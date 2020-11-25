@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01de7ac6-0aad-42ef-bf93-50737667b0a4
 topic_type:
 - apiref
-ms.openlocfilehash: 11ce99fe650f68b80c380c740472e5e0ac8904db
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 064f87fe0cee8d0ad7efcba478e9cf1954a3f291
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500177"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699750"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a>ICorProfilerCallback::ExceptionSearchFunctionLeave 方法
+
 通知探查器异常处理的搜索阶段已经完成了对函数的搜索。  
   
 ## <a name="syntax"></a>语法  
@@ -32,7 +33,8 @@ HRESULT ExceptionSearchFunctionLeave();
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

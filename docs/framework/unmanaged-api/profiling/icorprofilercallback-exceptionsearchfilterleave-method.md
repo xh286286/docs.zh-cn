@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c28a2a82-dd11-4385-843f-b509fb61753b
 topic_type:
 - apiref
-ms.openlocfilehash: fbece20701fbde5551e025b4f116f9873abf444d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e9679b75e773ec884905ea773e804e03607a61d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500203"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699841"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a>ICorProfilerCallback::ExceptionSearchFilterLeave 方法
+
 通知探查器用户筛选器刚刚执行完毕。  
   
 ## <a name="syntax"></a>语法  
@@ -32,7 +33,8 @@ HRESULT ExceptionSearchFilterLeave();
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

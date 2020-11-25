@@ -2,14 +2,15 @@
 title: ICorDebugExceptionDebugEvent::GetNativeIP 方法
 ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
-ms.openlocfilehash: 82dc892f3081c9f33ff7a2f363c326091f7cf039
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: f3b29b3ceda521afe9543588af332531aa03e84e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976026"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697410"
 ---
 # <a name="icordebugexceptiondebugeventgetnativeip-method"></a>ICorDebugExceptionDebugEvent::GetNativeIP 方法
+
 获取此异常调试事件的本机指令指针。  
   
 ## <a name="syntax"></a>语法  
@@ -21,10 +22,12 @@ HRESULT GetNativeIP(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pIP`  
- [out] 指向此异常调试事件的指令指针的指针。 有关详细信息，请参阅“备注”部分。  
+ [out] 指向此异常调试事件的指令指针的指针。 有关详细信息，请参阅备注部分。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  此指令指针的含义取决于事件类型，如下表所示。  
   
 |事件类型|`pStackPointer` 值的含义|  
@@ -34,13 +37,14 @@ HRESULT GetNativeIP(
 |[MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](cordebugrecordformat-enumeration.md)|`catch`处理程序执行将在[GetStackPointer](icordebugexceptiondebugevent-getstackpointer-method.md)方法指示的帧中开始的代码地址。|  
 |[MANAGED_EXCEPTION_UNHANDLED](cordebugrecordformat-enumeration.md)|`pIP` 为 0。|  
   
- 可以从[ICorDebugDebugEvent：： GetEventKind](icordebugdebugevent-geteventkind-method.md)方法获取事件类型。  
+ 可以从 [ICorDebugDebugEvent：： GetEventKind](icordebugdebugevent-geteventkind-method.md) 方法获取事件类型。  
   
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

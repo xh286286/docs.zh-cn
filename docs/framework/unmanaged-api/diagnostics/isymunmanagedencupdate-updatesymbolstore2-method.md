@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-ms.openlocfilehash: f363bed8e7002bf898755b434c919f8722dea3fb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c68cf632b789a523b19cc78d8d919c2278b1befa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614495"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699568"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 方法
-如果行信息满足要求，则允许编译器省略未从程序数据库（PDB）流中修改的函数。 可以通过旧的 PDB 行信息和函数中所有行的一个增量来确定正确的行信息。  
+
+如果行信息满足要求，则允许编译器省略未从程序数据库 (PDB) 流中修改的函数。 可以通过旧的 PDB 行信息和函数中所有行的一个增量来确定正确的行信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,19 +36,22 @@ HRESULT UpdateSymbolStore2(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pIStream`  
- 中一个指针，指向包含行信息的[IStream](/windows/desktop/api/objidl/nn-objidl-istream) 。  
+ 中一个指针，指向包含行信息的 [IStream](/windows/desktop/api/objidl/nn-objidl-istream) 。  
   
  `pDeltaLines`  
- 中指向[SYMLINEDELTA](symlinedelta-structure.md)结构的指针，该结构包含已更改的行。  
+ 中指向 [SYMLINEDELTA](symlinedelta-structure.md) 结构的指针，该结构包含已更改的行。  
   
  `cDeltaLines`  
- 中`ULONG`，它表示已更改的行数。  
+ 中 `ULONG` ，它表示已更改的行数。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

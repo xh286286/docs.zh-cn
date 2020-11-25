@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-ms.openlocfilehash: 841827017262b731fd5e6f6bd0b5862fecaf2744
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 7730c2dddaca98e4cb06cdb381e8a46ff23c97f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699191"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale 方法
-向宿主通知公共语言运行时（CLR）已更改当前正在执行的任务的区域设置或区域性。  
+
+向宿主通知公共语言运行时 (CLR) 更改了当前正在执行的任务的区域设置（或区域性）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,6 +35,7 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `lcid`  
  中映射到新分配的地理区域和语言的区域设置标识符值。  
   
@@ -41,7 +43,7 @@ HRESULT SetLocale (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`SetLocale`已成功返回。|  
+|S_OK|`SetLocale` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -49,15 +51,17 @@ HRESULT SetLocale (
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
 |E_NOTIMPL|宿主不允许托管用户代码修改区域设置。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `SetLocale`当 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 托管代码更改属性的值时，运行时调用。 此方法为主机提供了对区域设置同步所需的任何机制的机会。 如果主机不允许从托管代码更改区域设置，或未实现同步区域设置的机制，则它应从此方法返回 E_NOTIMPL。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

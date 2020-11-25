@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-ms.openlocfilehash: 70c03d34bdf9bd315994b2bfa09631efac2565ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ef25d55defee2fdcfc7d744e481060eb7a7782ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699867"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound 方法
+
 通知探查器，异常处理的搜索阶段已找到引发的异常的处理程序。  
   
 ## <a name="syntax"></a>语法  
@@ -39,7 +40,8 @@ RESULT ExceptionSearchCatcherFound(
   \[in] 包含异常处理程序的函数的 ID。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

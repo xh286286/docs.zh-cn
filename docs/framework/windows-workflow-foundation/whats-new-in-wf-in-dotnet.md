@@ -1,23 +1,23 @@
 ---
-title: .NET 4.5 中的 Windows Workflow Foundation 中的新增功能
+title: .NET Framework 4.5 中 Windows Workflow Foundation 的新增功能
 description: .NET Framework 4.5 中的 Windows Workflow Foundation 引入了许多新功能，例如新的活动、设计器功能和工作流开发模型。
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556611"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697904"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>.NET Framework 4.5 中 Windows Workflow Foundation 的新增功能
 
-.NET Framework 4.5 (WF) Windows Workflow Foundation 引入了许多新功能，例如新的活动、设计器功能和工作流开发模型。 在重新托管的工作流设计器中支持 .NET Framework 4.5 中引入的许多（但不是全部）新工作流功能。 有关支持的新功能的详细信息，请参阅 [重新承载工作流设计器中对新 Workflow Foundation 4.5 功能的支持](wf-features-in-the-rehosted-workflow-designer.md)。 有关迁移 .NET 3.0 和 .NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅 [迁移指南](migration-guidance.md)。 本主题概述了 .NET Framework 4.5 中引入的新工作流功能。
+.NET Framework 4.5 (WF) Windows Workflow Foundation 引入了许多新功能，例如新的活动、设计器功能和工作流开发模型。 在重新托管的工作流设计器中支持 .NET Framework 4.5 中引入的许多（但不是全部）新工作流功能。 有关支持的新功能的详细信息，请参阅 [重新承载工作流设计器中对新 Workflow Foundation 4.5 功能的支持](wf-features-in-the-rehosted-workflow-designer.md)。 有关迁移 .NET Framework 3.0 和 .NET Framework 3.5 工作流应用程序以使用最新版本的详细信息，请参阅 [迁移指南](migration-guidance.md)。 本文概述了 .NET Framework 4.5 中引入的新工作流功能。
 
 > [!WARNING]
-> .NET Framework 4.5 中引入的新 Windows Workflow Foundation 功能对于面向以前版本 Framework 的项目不可用。 如果面向 .NET Framework 4.5 的项目将被重新定向到早期版本的框架，则可能会出现几个问题。
+> .NET Framework 4.5 中引入的新 Windows Workflow Foundation 功能对于面向以前版本 Framework 的项目不可用。 如果面向 .NET Framework 4.5 的项目将重定目标为以前版本的框架，则可能会出现几个问题。
 >
-> - 在设计器中，c # 表达式将替换为 **XAML**中的消息值。
+> - 在设计器中，c # 表达式将替换为 **XAML** 中的消息值。
 > - 将发生许多生成错误，包括以下错误。
 >
 > **文件格式与当前目标框架不兼容。若要转换文件格式，请显式保存文件。保存文件并重新打开设计器后，此错误消息将消失。**

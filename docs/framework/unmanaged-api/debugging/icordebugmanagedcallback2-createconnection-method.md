@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: 8e31f0a649fd1ca80d6557a0a7176549c67bf203
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a4ebf65dfaaa487e87f3fd78e54c468c7e24a89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501919"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697228"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection 方法
+
 通知调试器已创建新连接。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT CreateConnection (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pProcess`  
  中一个指向 "ICorDebugProcess" 对象的指针，该对象表示在其中创建连接的进程  
   
@@ -46,14 +48,16 @@ HRESULT CreateConnection (
  中指向新连接名称的指针。  
   
 ## <a name="remarks"></a>注解  
+
  `CreateConnection`在以下任一情况下，都将激发回调：  
   
-- 调试器附加到包含连接的进程时。 在这种情况下，运行时将 `CreateConnection` 为进程中的每个连接生成并调度一个事件和一个[ICorDebugManagedCallback2：： ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md)事件。  
+- 调试器附加到包含连接的进程时。 在这种情况下，运行时将 `CreateConnection` 为进程中的每个连接生成并调度一个事件和一个 [ICorDebugManagedCallback2：： ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) 事件。  
   
 - 当主机在[托管 API](../hosting/index.md)中调用[ICLRDebugManager：： BeginConnection](../hosting/iclrdebugmanager-beginconnection-method.md)时。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9f03eda511c2ef0c9565d270c52fd72bf54692d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698346"
 ---
 # <a name="naming-parameters"></a>命名参数
+
 除了可读性的明显原因外，请务必遵循有关参数名称的准则，因为当可视化设计工具提供 Intellisense 和类浏览功能时，参数将显示在文档和设计器中。
 
  ✔️在参数名称中使用 camelCasing。
@@ -23,6 +24,7 @@ ms.locfileid: "94820834"
  ✔️考虑使用基于参数含义而不是参数类型的名称。
 
 ### <a name="naming-operator-overload-parameters"></a>命名运算符重载参数
+
  `left` `right` 如果参数没有任何意义，✔️确实要使用和进行二元运算符重载参数名称。
 
  对于参数，✔️确实使用 `value` 一元运算符重载参数名称。

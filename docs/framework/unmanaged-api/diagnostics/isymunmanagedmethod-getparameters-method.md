@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c66fd810ae4976bc0b5e04572b899465cebe4bbb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614456"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699503"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters 方法
+
 获取此方法的参数。 按参数在方法签名中的定义顺序返回参数。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT GetParameters(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cParams`  
  [in] `params` 数组的大小。  
   
@@ -46,9 +48,11 @@ HRESULT GetParameters(
  弄指向接收参数的缓冲区的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅
