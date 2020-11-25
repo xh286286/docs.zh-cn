@@ -8,14 +8,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: 512fc3b7fde93279995a67be2fc0b285ba235f16
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5070f45beccd89d6f051f1b1d8345390e915d471
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820938"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706588"
 ---
 # <a name="member-design-guidelines"></a>成员设计准则
+
 方法、属性、事件、构造函数和字段统称为成员。 成员最终是指向框架的最终用户公开框架功能的方式。  
   
  成员可以为虚拟或非虚拟、具体或抽象、静态或实例，并可具有多个不同的可访问性范围。 所有这些组件都提供令人难以置信的表现力，但同时需要注意框架设计器的一部分。  
@@ -23,6 +24,7 @@ ms.locfileid: "94820938"
  本章提供设计任何类型的成员时应遵循的基本准则。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [成员重载](member-overloading.md)  
  [属性设计](property.md)  
  [构造函数设计](constructor.md)  

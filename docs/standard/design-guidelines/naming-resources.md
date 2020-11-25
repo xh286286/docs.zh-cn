@@ -9,14 +9,15 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: c01e041edbf30813c477e579867abb9099ce0528
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 08046fb78638546b3dcab856674424c92c03fe83
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820847"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706406"
 ---
 # <a name="naming-resources"></a>命名资源
+
 由于可以通过某些对象来引用可本地化的资源，就像它们是属性一样，因此资源的命名准则与属性准则类似。
 
  ✔️在资源键中使用 PascalCasing。

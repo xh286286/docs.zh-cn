@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b95739fe-d2fa-4776-ae0d-31d9707ef799
 topic_type:
 - apiref
-ms.openlocfilehash: d3e25f271fc434785e25e7b226ad98f86b5f8dfc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ab2f30c485a755d4788926c13c2608e55a716c5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492780"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704261"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta 方法
+
 将当前的 "编辑并继续" 会话中的更改保存到指定的文件。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT SaveDelta (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `szFile`  
  中用于保存更改的文件的名称。  
   
@@ -42,11 +44,12 @@ HRESULT SaveDelta (
  [in] 保留。 必须为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

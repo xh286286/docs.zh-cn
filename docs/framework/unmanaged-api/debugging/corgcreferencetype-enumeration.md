@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860913"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704989"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 枚举
+
 标识要进行垃圾回收的对象的源。  
   
 ## <a name="syntax"></a>语法  
@@ -60,19 +61,21 @@ typedef enum {
 |`CorHandleStrongSizedByref`|在垃圾回收时间保留所有对象和对象根的集体闭合的近似大小的强句柄。|  
 |`CorReferenceStack`|托管堆栈中的引用。|  
 |`CorReferenceFinalizer`|终结器队列中的引用。|  
-|CorHandleStrongOnly|仅返回句柄表中的强引用。 此值仅由[ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法使用。|  
-|`CorHandleWeakOnly`|仅返回句柄表中的弱引用。 此值仅由[ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法使用。|  
-|`CorHandleAll`|返回句柄表中的所有引用。 此值仅由[ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法使用。|  
+|CorHandleStrongOnly|仅返回句柄表中的强引用。 此值仅由 [ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 方法使用。|  
+|`CorHandleWeakOnly`|仅返回句柄表中的弱引用。 此值仅由 [ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 方法使用。|  
+|`CorHandleAll`|返回句柄表中的所有引用。 此值仅由 [ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 方法使用。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `CorGCReferenceType`枚举的使用方式如下：  
   
-- 作为`type` [COR_GC_REFERENCE](cor-gc-reference-structure.md)结构的字段的值，它指示引用或句柄的源。  
+- 作为 `type` [COR_GC_REFERENCE](cor-gc-reference-structure.md) 结构的字段的值，它指示引用或句柄的源。  
   
-- 作为`types` [ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法的参数，它指定要包括在枚举中的句柄的类型。  
+- 作为 `types` [ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 方法的参数，它指定要包括在枚举中的句柄的类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

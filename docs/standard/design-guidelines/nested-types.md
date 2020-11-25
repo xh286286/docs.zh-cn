@@ -9,14 +9,15 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: 1ac2f9f5e10149027b79cd67e5077ec6bc17f9c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bc0aee32b5cc1d40afdd9cce8260d5b5341a687d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820808"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706393"
 ---
 # <a name="nested-types"></a>嵌套类型
+
 嵌套类型是在另一种类型的作用域内定义的类型，称为封闭类型。 嵌套类型可以访问其封闭类型的所有成员。 例如，它可以访问在封闭类型中定义的私有字段，还可以访问在封闭类型的所有祖先中定义的受保护字段。
 
  一般而言，应慎用嵌套类型。 其原因有若干： 有些开发人员并不完全熟悉该概念。 例如，这些开发人员可能遇到声明嵌套类型变量的语法问题。 嵌套类型也与它们的封闭类型紧密耦合，因此不适合用作通用类型。

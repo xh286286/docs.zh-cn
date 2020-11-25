@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: b6651f30e0df3a5ffc29d310b9067e76761dcf01
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d76de80f87a8e5a63eac9f6a413f2efb0e394b0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007528"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706120"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 枚举
+
 包含一些值，用于描述属性的元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -40,7 +41,7 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`prSpecialName`|指定属性是特殊的，其名称描述了操作方法。|  
 |`prReservedMask`|保留供公共语言运行时内部使用。|  
@@ -49,7 +50,8 @@ typedef enum CorPropertyAttr {
 |`prUnused`|未使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

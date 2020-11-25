@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-ms.openlocfilehash: b05527f118de059c674ea659b1a22b7895126cf4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2f572f66f16ff701350fde3b05be822b9e8c78b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007762"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706822"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>IMetaDataEmit::SetTypeDefProps 方法
-设置由之前调用[IMetaDataEmit：:D efinetypedef](imetadataemit-definetypedef-method.md)定义的类型的功能。  
+
+设置由之前调用 [IMetaDataEmit：:D efinetypedef](imetadataemit-definetypedef-method.md)定义的类型的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +38,26 @@ HRESULT SetTypeDefProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `td`  
- 中`mdTypeDef`从对 IMetaDataEmit 的原始调用获取的标记[：:D efinetypedef](imetadataemit-definetypedef-method.md)。  
+ 中 `mdTypeDef` 从对 IMetaDataEmit 的原始调用获取的标记 [：:D efinetypedef](imetadataemit-definetypedef-method.md)。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef`属性. 这是一个值的位掩码 `CorTypeAttr` 。  
+ [in] `TypeDef` 属性. 这是一个值的位掩码 `CorTypeAttr` 。  
   
  `tkExtends`  
- 中`mdToken`基类的。 从之前对 IMetaDataEmit 的调用中获取[：:D efineimporttype](imetadataemit-defineimporttype-method.md)或 `null` 。  
+ 中 `mdToken` 基类的。 从之前对 IMetaDataEmit 的调用中获取 [：:D efineimporttype](imetadataemit-defineimporttype-method.md)或 `null` 。  
   
  `rtkImplements[]`  
  中此类型实现的接口的标记数组。 `mdTypeRef`使用[IMetaDataEmit：:D efineimporttype](imetadataemit-defineimporttype-method.md)获取这些令牌。 数组的最后一个元素必须是 `mdTokenNil` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

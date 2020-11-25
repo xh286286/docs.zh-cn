@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007541"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706133"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 枚举
+
 指定 PInvoke 调用的选项。  
   
 ## <a name="syntax"></a>语法  
@@ -63,7 +64,7 @@ typedef enum  CorPinvokeMap {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`pmNoMangle`|按指定使用每个成员名称。|  
 |`pmCharSetMask`|保留。|  
@@ -82,14 +83,15 @@ typedef enum  CorPinvokeMap {
 |`pmSupportsLastError`|允许被调用方在 `SetLastError` 从属性化方法返回之前调用 Win32 函数。|  
 |`pmCallConvMask`|保留|  
 |`pmCallConvWinapi`|使用默认平台调用约定。 例如，在 Windows 上，默认值为 `StdCall` ，在 Windows CE .net 上是 `Cdecl` 。|  
-|`pmCallConvCdecl`|使用 `Cdecl` 调用约定。 在这种情况下，调用方会清理堆栈。 这样就可以使用调用函数 `varargs` （即，接受可变数量的参数的函数）。|  
+|`pmCallConvCdecl`|使用 `Cdecl` 调用约定。 在这种情况下，调用方会清理堆栈。 这样就可以使用 (调用函数 `varargs` ，即接受数目可变的参数的函数) 。|  
 |`pmCallConvStdcall`|使用 `StdCall` 调用约定。 在这种情况下，被调用方清理堆栈。 这是使用平台 invoke 调用非托管函数的默认约定。|  
 |`pmCallConvThiscall`|使用 `ThisCall` 调用约定。 在这种情况下，第一个参数是 `this` 指针，它存储在寄存器 ECX 中。 其他参数被推送到堆栈上。 `ThisCall`调用约定用于对从非托管 DLL 导出的类调用方法。|  
 |`pmCallConvFastcall`|保留。|  
 |`pmMaxValue`|保留。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

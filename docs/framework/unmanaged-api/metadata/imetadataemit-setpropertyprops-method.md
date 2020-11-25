@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 553a82475f241fac3a56c1fb009e3ed56b2c14f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007775"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704235"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 方法
-设置由之前调用[DefineProperty 方法](imetadataemit-defineproperty-method.md)定义的属性的元数据中存储的功能。  
+
+设置由之前调用 [DefineProperty 方法](imetadataemit-defineproperty-method.md)定义的属性的元数据中存储的功能。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,6 +42,7 @@ HRESULT SetPropertyProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pr`  
  中要更改的属性的标记  
   
@@ -54,7 +56,7 @@ HRESULT SetPropertyProps (
  中属性的默认值。  
   
  `cchValue`  
- 中中的（Unicode）字符的计数 `pValue` 。  
+ 中中 (Unicode) 字符的计数 `pValue` 。  
   
  `mdSetter`  
  中用于设置属性值的方法。  
@@ -66,11 +68,12 @@ HRESULT SetPropertyProps (
  中与属性关联的其他方法的数组。 使用标记终止此数组 `mdTokenNil` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 30817373-0a21-49c1-a0c4-8e8daeecb8db
 topic_type:
 - apiref
-ms.openlocfilehash: 308c501e17446719067d2dc0580d698c1770bf53
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 95ad3cbea4269173f22e662d15772ff97f7ee900
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610660"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705444"
 ---
 # <a name="isymunmanagedsymbolsearchinfo-interface"></a>ISymUnmanagedSymbolSearchInfo 接口
-提供获取有关搜索路径的信息的方法。 通过 `QueryInterface` 对实现[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口的对象调用来获取此接口。  
+
+提供获取有关搜索路径的信息的方法。 通过 `QueryInterface` 对实现 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 接口的对象调用来获取此接口。  
   
 ## <a name="methods"></a>方法  
   
@@ -33,6 +34,7 @@ ms.locfileid: "83610660"
 |[GetSearchPathLength 方法](isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|获取搜索路径长度。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

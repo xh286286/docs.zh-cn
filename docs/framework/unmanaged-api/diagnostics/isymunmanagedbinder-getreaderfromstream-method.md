@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: aa38efd4-de7e-4482-a5d3-adc152093460
 topic_type:
 - apiref
-ms.openlocfilehash: 351bb2a1eb03684a0498fba35270e1bda44a93c0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 2d927b02b7deebecb53a2218e2ec0275a07307b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441742"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706952"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream 方法
-给定元数据接口和包含符号存储区的流时，将返回正确的[ISymUnmanagedReader](isymunmanagedreader-interface.md)结构，该结构将从给定的符号存储区中读取调试符号。  
+
+给定元数据接口和包含符号存储区的流时，将返回正确的 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 结构，该结构将从给定的符号存储区中读取调试符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,6 +36,7 @@ HRESULT GetReaderFromStream(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `importer`  
  中指向元数据导入接口的指针。  
   
@@ -42,12 +44,14 @@ HRESULT GetReaderFromStream(
  中指向包含符号存储区的流的指针。  
   
  `pRetVal`  
- 弄设置为返回的[ISymUnmanagedReader](isymunmanagedreader-interface.md)接口的指针。  
+ 弄设置为返回的 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 接口的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

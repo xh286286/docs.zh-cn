@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-ms.openlocfilehash: 649a9159f99afa64615c40c23a98a80318ae0d7f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e9c9674bfe0e5a8006a4881e103b633ee8f2af1d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009166"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706042"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 枚举
+
 指定公共语言运行时序列化对象的方式。  
   
 ## <a name="syntax"></a>语法  
@@ -55,7 +56,7 @@ typedef enum CorSerializationType {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|对象的序列化未定义。|  
 |`SERIALIZATION_TYPE_BOOLEAN`|将对象序列化为布尔类型|  
@@ -79,7 +80,8 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_ENUM`|将对象序列化为枚举。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

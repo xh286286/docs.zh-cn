@@ -14,18 +14,19 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60832e823ed2f51fdd13c467dbbef4378de27885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821094"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706705"
 ---
 # <a name="general-naming-conventions"></a>通用命名约定
 
 本部分介绍与 word 选项相关的常规命名约定、有关使用缩写和首字母缩写词的准则，以及如何避免使用特定于语言的名称的建议。
 
 ## <a name="word-choice"></a>Word 选项
+
  ✔️选择易于阅读的标识符名称。
 
  例如，名为的属性的 `HorizontalAlignment` 可读性比更强 `AlignmentHorizontal` 。
@@ -43,6 +44,7 @@ ms.locfileid: "94821094"
  根据公共语言规范的规则 4 (CLS) ，所有符合语言都必须提供一种机制，以允许访问使用该语言的关键字作为标识符的已命名项。 例如，在这种情况下，c # 使用 @ 符号作为转义机制。 不过，最好是避免使用常见关键字，因为使用转义序列的方法比没有它的方法更难。
 
 ## <a name="using-abbreviations-and-acronyms"></a>使用缩写和首字母缩写
+
  ❌ 不要使用缩写或缩写作为标识符名称的一部分。
 
  例如，使用 `GetWindow` 而不是 `GetWin` 。
@@ -50,6 +52,7 @@ ms.locfileid: "94821094"
  ❌ 不要使用未被广泛接受的任何首字母缩写，甚至在必要时才使用。
 
 ## <a name="avoiding-language-specific-names"></a>避免 Language-Specific 名称
+
  ✔️确实使用有语义的名称，而不是类型名称的特定于语言的关键字。
 
  例如， `GetLength` 是比更好的名称 `GetInt` 。
@@ -78,6 +81,7 @@ ms.locfileid: "94821094"
  ✔️使用公用名（如 `value` 或 `item` ），而不是重复类型名称，在极少数情况下，标识符没有语义含义，并且参数的类型并不重要。
 
 ## <a name="naming-new-versions-of-existing-apis"></a>命名现有 Api 的新版本
+
  创建现有 API 的新版本时，✔️使用类似于旧 API 的名称。
 
  这有助于突出显示 Api 之间的关系。

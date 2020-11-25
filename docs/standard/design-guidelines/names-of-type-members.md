@@ -12,17 +12,19 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 409e881198a359fa28356e22ea73d5b724742a0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820908"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706471"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
+
 类型由以下成员构成：方法、属性、事件、构造函数和字段。 以下各节介绍命名类型成员的准则。
 
 ## <a name="names-of-methods"></a>方法的名称
+
  方法是执行操作的方式，设计准则要求方法名称为谓词或谓词短语。 遵循此准则，还有利于区分方法名称与属性和类型名称，后者为名词或形容词性短语。
 
  ✔️为谓词或谓词短语指定方法名称。
@@ -36,6 +38,7 @@ public class String {
 ```
 
 ## <a name="names-of-properties"></a>属性的名称
+
  与其他成员不同，应向属性给定名词性短语或形容词性名称。 这是因为属性是指数据，属性的名称应反映这一点。 属性名称总是采用帕斯卡大小写。
 
  ✔️使用名词、名词短语或形容词名称属性。
@@ -62,6 +65,7 @@ public class Control {
 ```
 
 ## <a name="names-of-events"></a>事件的名称
+
  事件始终指操作，可以是即将发生的，也可以是已经发生的。 因此，对于方法，事件用谓词命名，并用谓词时态指示引发事件的时间。
 
  ✔️使用动词或动词短语来命名事件。
@@ -85,6 +89,7 @@ public class Control {
  ✔️用 "EventArgs" 后缀命名事件参数类。
 
 ## <a name="names-of-fields"></a>字段的名称
+
  字段命名准则适用于静态公开字段和受保护的字段。 原则不涉及内部和专用字段，而[成员设计准则](member.md)不允许使用公开字段或受保护的实例字段。
 
  ✔️在字段名称中使用 PascalCasing。

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4329ca9e74fa02411bd39755a432fc7d4858597d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821107"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706692"
 ---
 # <a name="field-design"></a>字段设计
+
 封装原则是面向对象的设计中最重要的概念之一。 此原则表明，存储在对象中的数据应只能访问该对象。
 
  解释此原则的一种有用方法是说，一种类型应设计为，以便对该类型的字段进行更改 (名称或类型) 更改，而不会中断类型成员的代码。 此解释会立即表示所有字段都必须是私有的。

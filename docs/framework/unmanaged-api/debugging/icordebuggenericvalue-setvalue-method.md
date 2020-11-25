@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-ms.openlocfilehash: 972a981188c36236b81f3da17c09abeeb1e32857
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 493793c45e7d13511e4c36fe76e472a856b50d72
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212186"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705730"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue 方法
+
 从指定的缓冲区复制新值。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT SetValue (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pFrom`  
  中指向要从中复制值的缓冲区的指针。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  对于引用类型，该值是引用，而不是内容。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -14,33 +14,35 @@ helpviewer_keywords:
 ms.assetid: 9180ac5a-7019-4716-9f83-8a91d157239a
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6a117d1e2fe76c271b0b014e6079370c8b4fe4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 867c09caa3bd3aed50de21c2ef91a02782830be2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127069"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704547"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity 接口
+
 表示对代码对象的唯一签名的引用。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|获取一个接口指针，该指针指向与此 `IReferenceIdentity`相同的新 `IReferenceIdentity` 实例，指定的特性更改除外。|  
-|`IReferenceIdentity::EnumAttributes`|获取一个接口指针，该指针指向包含与此 `IReferenceIdentity`关联的属性的 `IEnumIDENTITY_ATTRIBUTE` 实例。|  
+|`IReferenceIdentity::Clone`|获取一个指向与 `IReferenceIdentity` 此相同的新实例的接口指针 `IReferenceIdentity` ，指定的特性更改除外。|  
+|`IReferenceIdentity::EnumAttributes`|获取一个接口指针，该指针指向 `IEnumIDENTITY_ATTRIBUTE` 包含与此关联的特性的实例 `IReferenceIdentity` 。|  
 |`IReferenceIdentity::GetAttribute`|获取指定命名空间中具有指定名称的特性的值。|  
 |`IReferenceIdentity::SetAttribute`|将具有指定命名空间和指定名称的特性设置为指定值。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 隔离。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [合成接口](fusion-interfaces.md)
 - [IEnumIDENTITY_ATTRIBUTE 接口](ienumidentity-attribute-interface.md)

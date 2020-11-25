@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02bc53676dd5afb0222a1ea366a8f2bd1f94f62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705223"
 ---
 # <a name="importfile2-method"></a>ImportFile2 方法
-导入程序集和未绑定模块。 此方法类似于[ImportFile 方法](importfile-method.md)，但即使磁盘上没有要导入的文件也能正常工作。  
+
+导入程序集和未绑定模块。 此方法类似于 [ImportFile 方法](importfile-method.md)，但即使磁盘上没有要导入的文件也能正常工作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,6 +40,7 @@ HRESULT ImportFile2(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pszFilename`  
  要导入的文件的名称。  
   
@@ -46,7 +48,7 @@ HRESULT ImportFile2(
  可选输出文件名，可用于在文件链接到程序集时对其进行重命名。  
   
  `pAssemblyScopeIn`  
- 可选范围[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。  
+ 可选范围 [IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md) 接口。  
   
  `fSmartImport`  
  如果为 TRUE，则使用 ImportTypes，否则必须手动执行导入。  
@@ -55,15 +57,17 @@ HRESULT ImportFile2(
  接收文件或程序集的 ID。  
   
  `ppAssemblyScope`  
- 接收[IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md)接口。 如果文件不是程序集，则为 NULL。  
+ 接收 [IMetaDataAssemblyImport 接口](../metadata/imetadataassemblyimport-interface.md) 接口。 如果文件不是程序集，则为 NULL。  
   
  `pdwCountOfScopes`  
  接收导入的文件和/或范围的发现。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink。  
   
 ## <a name="see-also"></a>另请参阅

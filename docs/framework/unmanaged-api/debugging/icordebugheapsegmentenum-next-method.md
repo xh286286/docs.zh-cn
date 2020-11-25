@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 6398fa2962b347a260e23e4fed8cf272a2916a9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904268"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704612"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next 方法
-获取指定数量的[COR_SEGMENT](cor-segment-structure.md)实例，这些实例包含有关托管堆的内存区域的信息。  
+
+获取指定数量的 [COR_SEGMENT](cor-segment-structure.md) 实例，这些实例包含有关托管堆的内存区域的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,19 +36,21 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  celt  
  中要检索的段数。  
   
  段  
- 弄指针数组，其中每个都指向一个[COR_SEGMENT](cor-segment-structure.md)对象，该对象提供有关托管堆中的内存区域的信息。  
+ 弄指针数组，其中每个都指向一个 [COR_SEGMENT](cor-segment-structure.md) 对象，该对象提供有关托管堆中的内存区域的信息。  
   
  pceltFetched  
- 弄一个指针，指向在中实际返回的[COR_SEGMENT](cor-segment-structure.md)对象的数量 `segments` 。 如果 `celt` 为 1，此值可能为 `null`。  
+ 弄一个指针，指向在中实际返回的 [COR_SEGMENT](cor-segment-structure.md) 对象的数量 `segments` 。 如果 `celt` 为 1，此值可能为 `null`。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -2,14 +2,15 @@
 title: 集合准则
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821081"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706666"
 ---
 # <a name="guidelines-for-collections"></a>集合准则
+
 专门设计为操作一组具有某种常见特征的对象的任何类型都可以被视为集合。 对于这种类型的实现，几乎总是适当 <xref:System.Collections.IEnumerable> 的 <xref:System.Collections.Generic.IEnumerable%601> ，因此在本部分中，我们只考虑实现其中一个或两个接口都为集合的类型。
 
  ❌ 不要在公共 Api 中使用弱类型集合。
@@ -31,6 +32,7 @@ ms.locfileid: "94821081"
  ❌ 不要 `IEnumerator<T>` `IEnumerable<T>` 在同一类型上实现和。 这同样适用于非泛型接口 `IEnumerator` 和 `IEnumerable` 。
 
 ## <a name="collection-parameters"></a>集合参数
+
  ✔️确实使用最小专用类型作为参数类型。 将集合作为参数的大多数成员使用 `IEnumerable<T>` 接口。
 
  ❌<xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> 只需使用或作为参数即可访问 `Count` 属性。
@@ -38,6 +40,7 @@ ms.locfileid: "94821081"
  相反，请考虑使用 `IEnumerable<T>` 或 `IEnumerable` 并动态检查该对象是否实现 `ICollection<T>` 或 `ICollection` 。
 
 ## <a name="collection-properties-and-return-values"></a>集合属性和返回值
+
  ❌ 不要提供可设置的集合属性。
 
  用户可以通过先清除集合，然后添加新内容来替换集合的内容。 如果替换整个集合是一个常见方案，请考虑 `AddRange` 在集合上提供方法。
@@ -69,6 +72,7 @@ ms.locfileid: "94821081"
  一般规则是 (0 项) 集合或数组应视为相同。
 
 ### <a name="snapshots-versus-live-collections"></a>快照与活动集合
+
  表示某个时间点的状态的集合称为快照集合。 例如，包含从数据库查询返回的行的集合将为快照。 始终表示当前状态的集合称为活动集合。 例如，项的集合 `ComboBox` 为活动集合。
 
  ❌ 不要从属性返回快照集合。 属性应返回活动集合。
@@ -80,6 +84,7 @@ ms.locfileid: "94821081"
  通常，表示共享资源的所有集合 (例如，目录) 中的文件是可变的。 此类集合非常困难，或者无法实现为活动集合，除非实现只是一个只进枚举器。
 
 ## <a name="choosing-between-arrays-and-collections"></a>在数组和集合之间进行选择
+
  ✔️是否比数组更倾向于集合。
 
  集合可以更好地控制内容、随时间推移而变化，并且更易于使用。 此外，不建议对只读方案使用数组，因为克隆数组的成本是不高的。 可用性研究表明，某些开发人员更喜欢使用基于集合的 Api。
@@ -93,6 +98,7 @@ ms.locfileid: "94821081"
  ❌ 如果属性必须返回新数组 (例如，每次调用属性 getter 时) 内部数组的副本，请不要使用属性的数组。
 
 ## <a name="implementing-custom-collections"></a>实现自定义集合
+
  ✔️考虑 `Collection<T>` `ReadOnlyCollection<T>` `KeyedCollection<TKey,TItem>` 在设计新集合时从、或继承。
 
  ✔️ `IEnumerable<T>` 在设计新集合时实现。 请考虑实现甚至 `ICollection<T>` `IList<T>` 有意义的地方。
@@ -106,6 +112,7 @@ ms.locfileid: "94821081"
  ❌ 不要从非泛型基集合（如）继承 `CollectionBase` 。 请改用 `Collection<T>` 、 `ReadOnlyCollection<T>` 和 `KeyedCollection<TKey,TItem>` 。
 
 ### <a name="naming-custom-collections"></a>命名自定义集合
+
  用于实现) 的集合 (类型 `IEnumerable` 主要有两个原因： (1) 创建具有特定结构的操作的新数据结构，并且通常与现有数据结构的性能特征不同 (例如，、、  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601>) 和 (2) 创建专用集合来保存一组特定的项 (例如  <xref:System.Collections.Specialized.StringCollection>) 。 数据结构通常用于应用程序和库的内部实现。 专用集合主要在) 的属性和参数类型 (中公开。
 
  ✔️在实现或的抽象名称中使用 "Dictionary" 后缀 `IDictionary` `IDictionary<TKey,TValue>` 。

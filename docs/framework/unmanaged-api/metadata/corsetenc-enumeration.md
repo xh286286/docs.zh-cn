@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: df945803f2d56d04ccc68f314eb55665579ed7fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009153"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705977"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 枚举
+
 包含一些值，用于在元数据生成期间影响行为。  
   
 ## <a name="syntax"></a>语法  
@@ -44,7 +45,7 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`MDSetENCOn`|已过时。|  
 |`MDSetENCOff`|已过时。|  
@@ -56,7 +57,8 @@ typedef enum CorSetENC {
 |`MDUpdateMask`|包括 `MDUpdateENC` 、 `MDUpdateFull` 和 `MDUpdateIncremental` 。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

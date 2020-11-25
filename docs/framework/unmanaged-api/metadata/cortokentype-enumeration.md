@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007489"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705470"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 枚举
+
 指示元数据标记的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -61,7 +62,7 @@ typedef enum CorTokenType {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`mdtModule`|`mdModule`标记。|  
 |`mdtTypeRef`|`mdTypeRef`标记。|  
@@ -90,11 +91,13 @@ typedef enum CorTokenType {
 |`mdtName`|`mdName`标记。|  
 |`mdtBaseType`|未使用。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  每个值都等于对应的元数据标记中的顶部字节的值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

@@ -4,12 +4,12 @@ description: '了解如何创建方便的语法，以便在 F # 中编写可使�
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705301"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -17,7 +17,7 @@ F # 中的计算表达式提供了一种方便的语法，用于写入可使用�
 
 ## <a name="overview"></a>概述
 
-计算可以采用多种形式。 最常见的计算形式是单线程执行，它易于理解和修改。 但是，并非所有形式的计算都像单线程执行一样简单。 示例包括：
+计算可以采用多种形式。 最常见的计算形式是单线程执行，它易于理解和修改。 但是，并非所有形式的计算都像单线程执行一样简单。 一些示例包括：
 
 - 非确定性计算
 - 异步计算
@@ -181,7 +181,7 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 `return`关键字在与计算表达式对应的类型中包装值。 除了使用计算表达式以外 `yield` ，它还用于 "完成" 计算表达式：
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 `return!`关键字实现计算表达式的值，并将结果与计算表达式对应的类型进行包装：
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }
@@ -234,7 +234,7 @@ F # 核心库定义了三个内置计算表达式： [序列表达式](sequences
 
 下表描述了可在工作流生成器类中使用的方法。
 
-|**方法**|**典型签名 (s) **|**说明**|
+|**方法**|**典型签名 (s)**|**说明**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|`let!` `do!` 在计算表达式中为和调用。|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|将计算表达式包装为函数。|
@@ -410,7 +410,7 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-计算表达式具有表达式返回的基础类型。 基础类型可能表示可以执行的计算结果或延迟计算，或者它可能提供一种方法来循环访问某些类型的集合。 在上面的示例中，基础类型 **最终**是。 对于序列表达式，基础类型是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 。 对于查询表达式，基础类型是 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 。 对于异步工作流，基础类型是 [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) 。 `Async`对象表示要执行的工作来计算结果。 例如，调用 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) 以执行计算并返回结果。
+计算表达式具有表达式返回的基础类型。 基础类型可能表示可以执行的计算结果或延迟计算，或者它可能提供一种方法来循环访问某些类型的集合。 在上面的示例中，基础类型 **最终** 是。 对于序列表达式，基础类型是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 。 对于查询表达式，基础类型是 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 。 对于异步工作流，基础类型是 [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) 。 `Async`对象表示要执行的工作来计算结果。 例如，调用 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) 以执行计算并返回结果。
 
 ## <a name="custom-operations"></a>自定义操作
 

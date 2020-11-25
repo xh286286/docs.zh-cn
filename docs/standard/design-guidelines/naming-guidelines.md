@@ -11,14 +11,15 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: e82b6941d3ea0243f4ae16bc9d42ea8d1f1fccfb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: de68eeb287b13bc9f55230243f23cd03508f2561
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820873"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706419"
 ---
 # <a name="naming-guidelines"></a>命名准则
+
 在框架开发中采用一致的命名约定集可能是框架可用性的主要贡献。 它允许很多开发人员对广泛分隔的项目使用框架。 除了表单的一致性以外，框架元素的名称也必须易于理解，并且必须传达每个元素的功能。  
   
  本章的目的是提供一组一致的命名约定，以使开发人员能够立即了解名称。  
@@ -26,6 +27,7 @@ ms.locfileid: "94820873"
  尽管采用这些命名约定作为一般代码开发准则会使代码的命名更加一致，但你只需将它们应用到公开 (公共或受保护类型和成员的 Api，并) 显式实现的接口。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [大小写约定](capitalization-conventions.md)  
  [通用命名约定](general-naming-conventions.md)  
  [程序集和 Dll 的名称](names-of-assemblies-and-dlls.md)  
