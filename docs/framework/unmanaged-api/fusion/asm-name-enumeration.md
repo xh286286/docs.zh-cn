@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a34cdf92df345041cb94e9069bcc4d489e3cf5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178301"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728623"
 ---
-# <a name="asm_name-enumeration"></a><span data-ttu-id="31e38-102">ASM_NAME 枚举</span><span class="sxs-lookup"><span data-stu-id="31e38-102">ASM_NAME Enumeration</span></span>
-<span data-ttu-id="31e38-103">指示程序集的版本、生成、区域性、签名等，其属性将由[IAssemblyName](iassemblyname-interface.md)方法检索或设置。</span><span class="sxs-lookup"><span data-stu-id="31e38-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
+# <a name="asm_name-enumeration"></a><span data-ttu-id="b7c65-102">ASM_NAME 枚举</span><span class="sxs-lookup"><span data-stu-id="b7c65-102">ASM_NAME Enumeration</span></span>
+
+<span data-ttu-id="b7c65-103">指示程序集的版本、生成、区域性、签名等，其属性将由 [IAssemblyName](iassemblyname-interface.md) 方法检索或设置。</span><span class="sxs-lookup"><span data-stu-id="b7c65-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="31e38-104">语法</span><span class="sxs-lookup"><span data-stu-id="31e38-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7c65-104">语法</span><span class="sxs-lookup"><span data-stu-id="b7c65-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -62,16 +63,17 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="31e38-105">要求</span><span class="sxs-lookup"><span data-stu-id="31e38-105">Requirements</span></span>  
- <span data-ttu-id="31e38-106">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="31e38-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="31e38-107">**标题：** 融合.h</span><span class="sxs-lookup"><span data-stu-id="31e38-107">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="31e38-108">**库：** 作为资源包含在 MsCorEE.dll 中</span><span class="sxs-lookup"><span data-stu-id="31e38-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
-  
- <span data-ttu-id="31e38-109">**.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="31e38-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="31e38-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="31e38-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="b7c65-105">要求</span><span class="sxs-lookup"><span data-stu-id="b7c65-105">Requirements</span></span>  
 
-- [<span data-ttu-id="31e38-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="31e38-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="31e38-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="31e38-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+ <span data-ttu-id="b7c65-106">**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b7c65-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="b7c65-107">**标头：** 合成。h</span><span class="sxs-lookup"><span data-stu-id="b7c65-107">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="b7c65-108">**库：** 作为中的资源包含 MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b7c65-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="b7c65-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7c65-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b7c65-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b7c65-110">See also</span></span>
+
+- [<span data-ttu-id="b7c65-111">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="b7c65-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="b7c65-112">合成枚举</span><span class="sxs-lookup"><span data-stu-id="b7c65-112">Fusion Enumerations</span></span>](fusion-enumerations.md)

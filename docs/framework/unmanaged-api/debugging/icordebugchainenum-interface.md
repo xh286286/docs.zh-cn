@@ -14,37 +14,38 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 4556ebbd05e0660da14fb59d806c8feb0b45b9bb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd2507bb66e036dfbb1f4e8cc262f01d926adca1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894219"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728220"
 ---
-# <a name="icordebugchainenum-interface"></a><span data-ttu-id="03be1-102">ICorDebugChainEnum 接口</span><span class="sxs-lookup"><span data-stu-id="03be1-102">ICorDebugChainEnum Interface</span></span>
+# <a name="icordebugchainenum-interface"></a><span data-ttu-id="cd0fb-102">ICorDebugChainEnum 接口</span><span class="sxs-lookup"><span data-stu-id="cd0fb-102">ICorDebugChainEnum Interface</span></span>
 
-<span data-ttu-id="03be1-103">实现 ICorDebugEnum 方法，并枚举 ICorDebugChain 数组。</span><span class="sxs-lookup"><span data-stu-id="03be1-103">Implements ICorDebugEnum methods, and enumerates ICorDebugChain arrays.</span></span>  
+<span data-ttu-id="cd0fb-103">实现 ICorDebugEnum 方法，并枚举 ICorDebugChain 数组。</span><span class="sxs-lookup"><span data-stu-id="cd0fb-103">Implements ICorDebugEnum methods, and enumerates ICorDebugChain arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="03be1-104">方法</span><span class="sxs-lookup"><span data-stu-id="03be1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="cd0fb-104">方法</span><span class="sxs-lookup"><span data-stu-id="cd0fb-104">Methods</span></span>  
   
-|<span data-ttu-id="03be1-105">方法</span><span class="sxs-lookup"><span data-stu-id="03be1-105">Method</span></span>|<span data-ttu-id="03be1-106">说明</span><span class="sxs-lookup"><span data-stu-id="03be1-106">Description</span></span>|  
+|<span data-ttu-id="cd0fb-105">方法</span><span class="sxs-lookup"><span data-stu-id="cd0fb-105">Method</span></span>|<span data-ttu-id="cd0fb-106">说明</span><span class="sxs-lookup"><span data-stu-id="cd0fb-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="03be1-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="03be1-107">Next Method</span></span>](icordebugchainenum-next-method.md)|<span data-ttu-id="03be1-108">从当前位置开始，从`ICorDebugChain`枚举中获取指定数目的实例。</span><span class="sxs-lookup"><span data-stu-id="03be1-108">Gets the specified number of `ICorDebugChain` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="cd0fb-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="cd0fb-107">Next Method</span></span>](icordebugchainenum-next-method.md)|<span data-ttu-id="cd0fb-108">`ICorDebugChain`从当前位置开始，从枚举中获取指定数目的实例。</span><span class="sxs-lookup"><span data-stu-id="cd0fb-108">Gets the specified number of `ICorDebugChain` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="03be1-109">备注</span><span class="sxs-lookup"><span data-stu-id="03be1-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd0fb-109">注解</span><span class="sxs-lookup"><span data-stu-id="cd0fb-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="03be1-110">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="03be1-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="cd0fb-110">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="cd0fb-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03be1-111">要求</span><span class="sxs-lookup"><span data-stu-id="03be1-111">Requirements</span></span>  
- <span data-ttu-id="03be1-112">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03be1-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="03be1-113">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="03be1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="03be1-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03be1-114">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="03be1-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03be1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="03be1-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="03be1-116">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="cd0fb-111">要求</span><span class="sxs-lookup"><span data-stu-id="cd0fb-111">Requirements</span></span>  
 
-- [<span data-ttu-id="03be1-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="03be1-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+ <span data-ttu-id="cd0fb-112">**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd0fb-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="cd0fb-113">**标头**：CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cd0fb-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+  
+ <span data-ttu-id="cd0fb-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cd0fb-114">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="cd0fb-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd0fb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="cd0fb-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cd0fb-116">See also</span></span>
+
+- [<span data-ttu-id="cd0fb-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="cd0fb-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
