@@ -2,14 +2,15 @@
 title: ICorDebugDataTarget2::GetImageLocation 方法
 ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
-ms.openlocfilehash: 185b6a4979491a323f6eb15ab08a06f87fabc8d3
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: c909b46a9bb70d23d1cd3a769ac24fcf58479308
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976455"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713790"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation 方法
+
 返回模块基址中的模块路径。  
   
 ## <a name="syntax"></a>语法  
@@ -23,8 +24,9 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `baseAddress`  
- 中一个[CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md)值，该值表示模块的基址。  
+ 中一个 [CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md) 值，该值表示模块的基址。  
   
  `cchName`  
  [输入] 缓冲器中将接收模块路径的字符数。  
@@ -35,13 +37,14 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
  `szName`  
  [输出] 模块路径。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

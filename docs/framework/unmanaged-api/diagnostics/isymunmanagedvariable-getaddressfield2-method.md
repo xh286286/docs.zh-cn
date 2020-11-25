@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f25b294-72b6-4882-a49b-6c9d364b6008
 topic_type:
 - apiref
-ms.openlocfilehash: 6256d052780b1c610e61267be2517954d722a42d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 858341d5b8b1b3ecbe9dd5bd39a38f9cfd0d08dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610595"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714167"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 方法
+
 获取此变量的第二个地址字段。 其含义取决于地址的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -33,13 +34,16 @@ HRESULT GetAddressField2(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pRetVal`  
  弄指向的指针 `ULONG32` ，该指针接收第二个地址字段。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

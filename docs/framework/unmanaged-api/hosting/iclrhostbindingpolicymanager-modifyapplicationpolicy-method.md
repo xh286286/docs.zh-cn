@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-ms.openlocfilehash: e32714bba2403752f1ac2551ab182f2655f1fa75
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 8da9c9fea5cf5b3a27eeb9d0222f0845c832b7da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714193"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
+
 修改指定程序集的绑定策略，并创建该策略的新版本。  
   
 ## <a name="syntax"></a>语法  
@@ -40,6 +41,7 @@ HRESULT  ModifyApplicationPolicy (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pwzSourceAssemblyIdentity`  
  中要修改的程序集的标识。  
   
@@ -53,7 +55,7 @@ HRESULT  ModifyApplicationPolicy (
  中要替换的绑定策略的大小。  
   
  `dwPolicyModifyFlags`  
- 中[EHostBindingPolicyModifyFlags](ehostbindingpolicymodifyflags-enumeration.md)值的逻辑或组合，指示对重定向的控制。  
+ 中 [EHostBindingPolicyModifyFlags](ehostbindingpolicymodifyflags-enumeration.md) 值的逻辑或组合，指示对重定向的控制。  
   
  `pbNewApplicationPolicy`  
  弄指向包含新绑定策略数据的缓冲区的指针。  
@@ -66,23 +68,25 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|说明|  
 |-------------|-----------------|  
 |S_OK|已成功修改策略。|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`或为 `pwzTargetAssemblyIdentity` 空引用。|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` 或为 `pwzTargetAssemblyIdentity` 空引用。|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 太小。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|HOST_E_CLRNOTAVAILABLE| (CLR) 的公共语言运行时未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 方法返回 E_FAIL 后，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `ModifyApplicationPolicy`可以调用方法两次。 第一次调用应为参数提供 null 值 `pbNewApplicationPolicy` 。 此调用将返回，并具有的必需值 `pcbNewAppPolicySize` 。 第二次调用应为提供此值 `pcbNewAppPolicySize` ，并指向该大小的缓冲区 `pbNewApplicationPolicy` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

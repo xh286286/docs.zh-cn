@@ -14,29 +14,31 @@ helpviewer_keywords:
 ms.assetid: ce2770ae-23d0-45d9-8bcf-46504ac5020e
 topic_type:
 - apiref
-ms.openlocfilehash: 7b1fc70380fff3c551c56043f49c2deda507e366
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: e8ead998907d55b0bfbf82e5f6f4e7c504f657ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703842"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714154"
 ---
 # <a name="iclrhostprotectionmanager-interface"></a>ICLRHostProtectionManager 接口
+
 允许宿主阻止在部分受信任的代码中运行特定的托管类、方法、属性和字段。  
   
 ## <a name="methods"></a>方法  
   
 |方法|说明|  
 |------------|-----------------|  
-|[SetEagerSerializeGrantSets](iclrhostprotectionmanager-seteagerserializegrantsets-method.md)|保证某些极少数争用条件可能会导致严重的公共语言运行时（CLR）错误。|  
+|[SetEagerSerializeGrantSets](iclrhostprotectionmanager-seteagerserializegrantsets-method.md)|确保某些极少数争用条件可能会导致严重的公共语言运行时 (CLR) 错误。|  
 |[SetProtectedCategories 方法](iclrhostprotectionmanager-setprotectedcategories-method.md)|指定应阻止在部分受信任代码中运行的托管类型和成员的类别。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

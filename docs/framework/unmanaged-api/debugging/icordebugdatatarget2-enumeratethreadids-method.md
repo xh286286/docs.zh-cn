@@ -2,14 +2,15 @@
 title: ICorDebugDataTarget2::EnumerateThreadIDs 方法
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-ms.openlocfilehash: 4a65b76f384cdad68cba75af524dbe672c309624
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 31a839076b34901ae1a8f3b43021f64f77629fc0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976481"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713842"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs 方法
+
 返回一组活动线程 ID。  
   
 ## <a name="syntax"></a>语法  
@@ -23,6 +24,7 @@ HRESULT EnumerateThreadIDs(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  cThreadID  
  [输入] 线程 ID 可返回的上限数。  
   
@@ -32,13 +34,14 @@ HRESULT EnumerateThreadIDs(
  pThreadID  
  一组线程标识符。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。**标头：** Cordebug.idl，Cordebug.idl  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。**标头：** Cordebug.idl，Cordebug.idl  
   
  **库：** CorGuids.lib  
   
