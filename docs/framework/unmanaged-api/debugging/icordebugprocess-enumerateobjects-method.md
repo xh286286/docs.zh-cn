@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5cf8c5b0-6caa-4f5d-8afe-957573c5ee43
 topic_type:
 - apiref
-ms.openlocfilehash: b57e633d756893ef743d10b0529a5c62f1f934ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0b84b145ac49a40c679e6f84a69a2546b7c5d73
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128841"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724593"
 ---
-# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="a6622-102">ICorDebugProcess::EnumerateObjects 方法</span><span class="sxs-lookup"><span data-stu-id="a6622-102">ICorDebugProcess::EnumerateObjects Method</span></span>
-<span data-ttu-id="a6622-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="a6622-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessenumerateobjects-method"></a><span data-ttu-id="10fc0-102">ICorDebugProcess::EnumerateObjects 方法</span><span class="sxs-lookup"><span data-stu-id="10fc0-102">ICorDebugProcess::EnumerateObjects Method</span></span>
+
+<span data-ttu-id="10fc0-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="10fc0-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6622-104">语法</span><span class="sxs-lookup"><span data-stu-id="a6622-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10fc0-104">语法</span><span class="sxs-lookup"><span data-stu-id="10fc0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateObjects (  

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-ms.openlocfilehash: ef7851ddb33003b0b4b51065cf1fea3696ca6abd
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4d5bc66cdc292d390cb4ea187277fda8b8a071fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005942"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724203"
 ---
-# <a name="coiniticor-enumeration"></a><span data-ttu-id="353bc-102">COINITICOR 枚举</span><span class="sxs-lookup"><span data-stu-id="353bc-102">COINITICOR Enumeration</span></span>
-<span data-ttu-id="353bc-103">指定[CoInitializeCor](../hosting/coinitializecor-function.md)在初始化公共语言运行时时使用的常量。</span><span class="sxs-lookup"><span data-stu-id="353bc-103">Specifies constants used by [CoInitializeCor](../hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
+# <a name="coiniticor-enumeration"></a><span data-ttu-id="4073a-102">COINITICOR 枚举</span><span class="sxs-lookup"><span data-stu-id="4073a-102">COINITICOR Enumeration</span></span>
+
+<span data-ttu-id="4073a-103">指定 [CoInitializeCor](../hosting/coinitializecor-function.md) 在初始化公共语言运行时时使用的常量。</span><span class="sxs-lookup"><span data-stu-id="4073a-103">Specifies constants used by [CoInitializeCor](../hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="353bc-104">语法</span><span class="sxs-lookup"><span data-stu-id="353bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4073a-104">语法</span><span class="sxs-lookup"><span data-stu-id="4073a-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOINITCOR  
@@ -33,21 +34,22 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="353bc-105">成员</span><span class="sxs-lookup"><span data-stu-id="353bc-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4073a-105">成员</span><span class="sxs-lookup"><span data-stu-id="4073a-105">Members</span></span>  
   
-|<span data-ttu-id="353bc-106">成员</span><span class="sxs-lookup"><span data-stu-id="353bc-106">Member</span></span>|<span data-ttu-id="353bc-107">描述</span><span class="sxs-lookup"><span data-stu-id="353bc-107">Description</span></span>|  
+|<span data-ttu-id="4073a-106">成员</span><span class="sxs-lookup"><span data-stu-id="4073a-106">Member</span></span>|<span data-ttu-id="4073a-107">说明</span><span class="sxs-lookup"><span data-stu-id="4073a-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITCOR`|<span data-ttu-id="353bc-108">指示默认初始化模式。</span><span class="sxs-lookup"><span data-stu-id="353bc-108">Indicates the default initialization mode.</span></span>|  
+|`COINITCOR`|<span data-ttu-id="4073a-108">指示默认初始化模式。</span><span class="sxs-lookup"><span data-stu-id="4073a-108">Indicates the default initialization mode.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="353bc-109">要求</span><span class="sxs-lookup"><span data-stu-id="353bc-109">Requirements</span></span>  
- <span data-ttu-id="353bc-110">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="353bc-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="353bc-111">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="353bc-111">**Header:** Cor.h</span></span>  
-  
- <span data-ttu-id="353bc-112">**库：** 作为资源包括在 Mscoree.dll 中</span><span class="sxs-lookup"><span data-stu-id="353bc-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
-  
- <span data-ttu-id="353bc-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="353bc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="353bc-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="353bc-114">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="4073a-109">要求</span><span class="sxs-lookup"><span data-stu-id="4073a-109">Requirements</span></span>  
 
-- [<span data-ttu-id="353bc-115">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="353bc-115">Metadata Enumerations</span></span>](metadata-enumerations.md)
+ <span data-ttu-id="4073a-110">**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4073a-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="4073a-111">**标头：** Cor</span><span class="sxs-lookup"><span data-stu-id="4073a-111">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="4073a-112">**库：** 作为中的资源包含 MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4073a-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="4073a-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4073a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4073a-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4073a-114">See also</span></span>
+
+- [<span data-ttu-id="4073a-115">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="4073a-115">Metadata Enumerations</span></span>](metadata-enumerations.md)
