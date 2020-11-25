@@ -7,17 +7,19 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-ms.openlocfilehash: 776e559bb1629245c275cb4463531a8dd4b230ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28a3e40443c9f1be14243816b347da773705ff02
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821146"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734721"
 ---
 # <a name="design-guidelines-for-exceptions"></a>异常设计准则
+
 与基于返回值的错误报告相比，异常处理具有很多优点。 优秀的框架设计可帮助应用程序开发人员实现异常的好处。 本部分讨论异常的优点，并提供有效使用方法的指导原则。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [异常引发](exception-throwing.md)  
  [使用标准异常类型](using-standard-exception-types.md)  
  [异常和性能](exceptions-and-performance.md)  

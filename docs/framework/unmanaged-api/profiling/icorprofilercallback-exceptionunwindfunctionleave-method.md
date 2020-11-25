@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ebaad1d5-ee0a-4cb0-96bc-8ba5d371b747
 topic_type:
 - apiref
-ms.openlocfilehash: 8694a2d19c3b98487b86da4273eb0c68fb9d9ace
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9f88a3fde7d7cb5941e3a7f44a7d94056a959ab8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500112"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733914"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionLeave 方法
+
 通知探查器异常处理的展开阶段已完成展开某个函数。  
   
 ## <a name="syntax"></a>语法  
@@ -32,6 +33,7 @@ HRESULT ExceptionUnwindFunctionLeave();
 ```  
   
 ## <a name="remarks"></a>备注  
+
  `ExceptionUnwindFunctionLeave`调用方法时，将从堆栈中移除函数实例及其堆栈数据。  
   
  探查器不应在此调用期间被阻止，因为堆栈可能不处于允许垃圾回收的状态，因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收，则运行时将被阻止，直到此回调返回。  
@@ -39,7 +41,8 @@ HRESULT ExceptionUnwindFunctionLeave();
  此外，在此调用期间，探查器不得调入托管代码或以任何方式导致托管内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830033"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734811"
 ---
 # <a name="operator-overloads"></a>运算符重载
+
 运算符重载允许框架类型看起来像是内置语言基元。
 
  尽管在某些情况下允许和有用，但应慎重使用运算符重载。 在许多情况下，运算符重载已经被滥用，例如，当框架设计器开始对应该为简单方法的操作使用运算符时。 以下准则可帮助您决定何时以及如何使用运算符重载。
@@ -85,9 +86,11 @@ ms.locfileid: "94830033"
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>重载运算符 = =
+
  重载 `operator ==` 非常复杂。 运算符的语义需要与其他一些成员（如）兼容 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。
 
 ### <a name="conversion-operators"></a>转换运算符
+
  转换运算符是允许从一种类型转换为另一种类型的一元运算符。 运算符必须在操作数或返回类型上定义为静态成员。 有两种类型的转换运算符：隐式和显式。
 
  ❌ 如果最终用户不需要此类转换，请不要提供转换运算符。

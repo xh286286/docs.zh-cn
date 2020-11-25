@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: 1d9e4ff3cfb02b1db358c19786322622621329fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821198"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734746"
 ---
 # <a name="exceptions-and-performance"></a>异常和性能
+
 与异常相关的一个常见问题是，如果异常用于经常失败的代码，则实现的性能不可接受。 这是一个合理的担忧。 当成员引发异常时，其性能可以是较慢的顺序。 但是，可以获得良好的性能，同时严格遵守禁止使用错误代码的异常指导原则。 本节中所述的两种模式提供了执行此操作的方法。
 
  ❌ 不要使用错误代码，原因是异常可能会对性能产生负面影响。
@@ -23,6 +24,7 @@ ms.locfileid: "94821198"
  若要提高性能，可以使用以下两节中所述的 Tester-Doer 模式或 Try-Parse 模式。
 
 ## <a name="tester-doer-pattern"></a>Tester-Doer 模式
+
  有时异常引发成员的性能可以通过将成员分为两个来改进。 让我们看看 <xref:System.Collections.Generic.ICollection%601.Add%2A> 接口的方法 <xref:System.Collections.Generic.ICollection%601> 。
 
 ```csharp
@@ -46,6 +48,7 @@ if (!numbers.IsReadOnly)
  ✔️考虑在常见方案中可能会引发异常的成员的 Tester-Doer 模式，以避免与异常相关的性能问题。
 
 ## <a name="try-parse-pattern"></a>Try-Parse 模式
+
  对于极高性能的 Api，应使用比上一部分中所述的 Tester-Doer 模式更为快速的模式。 模式调用以调整成员名称，从而使定义完善的测试用例成为成员语义的一部分。 例如， <xref:System.DateTime> 定义在对 <xref:System.DateTime.Parse%2A> 字符串进行分析失败时引发异常的方法。 它还定义了一个 <xref:System.DateTime.TryParse%2A> 尝试进行分析的相应方法，但如果分析不成功，则返回 false，并使用参数返回成功分析的结果 `out` 。
 
 ```csharp

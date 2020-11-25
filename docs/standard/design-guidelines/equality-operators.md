@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 85a9e81d28995229e6b47d7fe4d0b541265999f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2331a852adb4dd254af85060a5077f454bcfe0eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821341"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734421"
 ---
 # <a name="equality-operators"></a>相等运算符
+
 本节讨论重载相等运算符并将 `operator==` 和 `operator!=` 作为相等运算符引用。
 
  ❌ 不要重载某个相等运算符而不是另一个相等运算符。
@@ -29,11 +30,13 @@ ms.locfileid: "94821341"
  例如，如果其中一个参数为 null 而不是引发，则返回 false `NullReferenceException` 。
 
 ## <a name="equality-operators-on-value-types"></a>值类型上的相等运算符
+
  ✔️如果相等性是有意义的，则对值类型重载相等运算符。
 
  在大多数编程语言中，值类型没有的默认实现 `operator==` 。
 
 ## <a name="equality-operators-on-reference-types"></a>引用类型上的相等运算符
+
  ❌ 避免对可变引用类型重载相等运算符。
 
  许多语言具有用于引用类型的内置相等运算符。 内置运算符通常实现引用相等性，而当默认行为更改为值相等性时，很多开发人员都很惊讶。

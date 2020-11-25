@@ -6,14 +6,15 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 6f22878a9ddfb394f6705a335930ef2cc270895f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d41467b971e43ca9b22c59e3b64bdd45d16c740b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734395"
 ---
 # <a name="exception-throwing"></a>异常引发
+
 本部分中所述的异常引发准则需要一个良好的定义来表示执行失败。 每当成员无法执行其设计时所用的操作时，将发生执行失败 (成员名称表示) 。 例如，如果该 `OpenFile` 方法无法向调用方返回打开的文件句柄，则会将其视为执行失败。
 
  大多数开发人员对使用错误（例如除以零或空引用）的使用异常感到非常熟悉。 在框架中，异常用于所有错误情况，包括执行错误。

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-ms.openlocfilehash: 9829f57da911b43626516284e4858adc4139a3ca
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: c8d18b78cf0185271eae763892610d13f76e42ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733992"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask 方法
-显式请求公共语言运行时（CLR）创建新任务。  
+
+显式请求公共语言运行时 (CLR) 创建新任务。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,8 +35,9 @@ HRESULT CreateTask (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pTask`  
- 弄指向新创建的[ICLRTask](iclrtask-interface.md)的地址的指针; 如果无法创建任务，则为 null。  
+ 弄指向新创建的 [ICLRTask](iclrtask-interface.md)的地址的指针; 如果无法创建任务，则为 null。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -50,19 +52,21 @@ HRESULT CreateTask (
 |E_OUTOFMEMORY|没有足够的内存可用于分配请求的资源。|  
   
 ## <a name="remarks"></a>注解  
+
  当用户代码通过使用命名空间中的类型创建线程时 <xref:System.Threading> ，或者当线程池的大小增加时，CLR 将自动创建一个新任务。 当非托管代码调用托管函数时，它还会创建任务。  
   
- `CreateTask`允许宿主发出显式请求，指示 CLR 创建了一个新的任务。 例如，宿主可以调用此方法来预先初始化数据结构。  
+ `CreateTask` 允许宿主发出显式请求，指示 CLR 创建了一个新的任务。 例如，宿主可以调用此方法来预先初始化数据结构。  
   
 > [!IMPORTANT]
-> 新任务在挂起状态返回，并保持挂起状态，直到主机显式调用[IHostTask：： Start](ihosttask-start-method.md)。  
+> 新任务在挂起状态返回，并保持挂起状态，直到主机显式调用 [IHostTask：： Start](ihosttask-start-method.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

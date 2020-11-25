@@ -6,14 +6,15 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7727ea7fcfdbbecf2e53ddd7a44b4cf907211f80
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734343"
 ---
 # <a name="virtual-members"></a>虚成员
+
 可以重写虚拟成员，从而更改子类的行为。 它们与回调在其提供的扩展性上非常相似，但它们在执行性能和内存消耗方面都更好。 此外，在需要创建一种特殊类型 (特殊化) 的方案中，虚拟成员更加自然。
 
  虚拟成员比回调和事件更好，但其性能不如非虚拟方法。

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734408"
 ---
 # <a name="event-design"></a>事件设计
+
 事件是最常用的回调形式 (构造，使框架可以调入用户代码) 。 其他回调机制包括采用委托、虚拟成员和基于接口的插件的成员。可用性研究中的数据表明，大多数开发人员比使用其他回调机制更喜欢使用事件。 事件与 Visual Studio 和多种语言完美集成。
 
  需要注意的是，有两组事件：在系统状态发生更改之前引发的事件（称为前期事件）和状态更改后引发的事件（称为后期事件）。 预事件的一个示例是 `Form.Closing` ，在关闭窗体前引发。 后事件的一个示例是 `Form.Closed` ，它在窗体关闭后引发。
@@ -52,6 +53,7 @@ ms.locfileid: "94821328"
  使用 <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> 或其子类作为事件参数，以允许最终用户取消事件。
 
 ### <a name="custom-event-handler-design"></a>自定义事件处理程序设计
+
  有些情况下 `EventHandler<T>` ，不能使用，例如当框架需要使用早期版本的 CLR 时，这种情况不支持泛型。 在这种情况下，可能需要设计和开发自定义事件处理程序委托。
 
  ✔️使用 void 的返回类型作为事件处理程序。

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42c933f1-30a8-4011-bdea-e117f3c3265e
 topic_type:
 - apiref
-ms.openlocfilehash: e3655f77a94da25f65bada2cd4067ef53550e778
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 38b3655da75750ffc3ea1c7983ce3b549d76f087
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733966"
 ---
 # <a name="icorthreadpoolcorunregisterwait-method"></a>ICorThreadpool::CorUnregisterWait 方法
+
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
   
 ## <a name="syntax"></a>语法  
@@ -36,11 +37,12 @@ HRESULT CorUnregisterWait (
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -7,19 +7,21 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-ms.openlocfilehash: 9e75ef433f3bd9af34e8dd40331a8267755e59fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b7b1bcfc907612be12e7f8ca7114183f7e830ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821380"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734447"
 ---
 # <a name="designing-for-extensibility"></a>扩展性设计
+
 设计框架的一个重要方面是确保已认真考虑框架的扩展性。 这需要您了解与各种扩展性机制相关的成本和好处。 本章可帮助您确定哪些可扩展性机制（子类、事件、虚拟成员、回调等）可以最大程度地满足您的框架的要求。  
   
  可以通过多种方式在框架中提供可扩展性。 它们的范围不太强大，但成本较低，且成本较高，但成本较高。 对于任何给定的扩展性要求，你应选择满足要求的成本最低的扩展性机制。 请记住，稍后可以添加更多的扩展性，但不会引入重大更改。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [未密封类](unsealed-classes.md)  
  [受保护成员](protected-members.md)  
  [事件和回调](events-and-callbacks.md)  

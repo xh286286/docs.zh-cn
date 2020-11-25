@@ -2,14 +2,15 @@
 title: 扩展方法
 ms.date: 10/22/2008
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-ms.openlocfilehash: d48651e9621beecd3c9a0665ca4be26894b50c45
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02a421c9a4b73c779474a392e77104d4ccfbb109
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821133"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734707"
 ---
 # <a name="extension-methods"></a>扩展方法
+
 扩展方法是一项语言功能，允许使用实例方法调用语法来调用静态方法。 这些方法必须至少采用一个参数，该参数表示方法要操作的实例。
 
  定义此类扩展方法的类称为 "发起方" 类，并且必须声明为静态。 若要使用扩展方法，必须导入用于定义主办方类的命名空间。
