@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: e249f9fc-e24a-4506-903c-92781f6eab7c
 topic_type:
 - apiref
-ms.openlocfilehash: 769e63ac6e23ae0264b79a1cd8d6e3cc1ac5a744
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9a82162023fa05e85fc9bbeb16961f2aafd9a4ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132411"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729793"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags 枚举
-指示对[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)方法的调用应包括哪些内存区域。  
+
+指示对 [ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) 方法的调用应包括哪些内存区域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,22 +35,23 @@ typedef enum CLRDataEnumMemoryFlags {
 } CLRDataEnumMemoryFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`CLRDATA_ENUM_MEM_DEFAULT`|小型转储，即稀疏内存转储。|  
 |`CLRDATA_ENUM_MEM_HEAP`|完整堆转储。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试枚举](debugging-enumerations.md)

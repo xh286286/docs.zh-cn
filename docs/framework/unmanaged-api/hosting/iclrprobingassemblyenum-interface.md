@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: e7d3ccab-b0f0-4872-8935-0ed72920171b
 topic_type:
 - apiref
-ms.openlocfilehash: e1e114070f39e75254fc1bc0f8c1bf3e4733d5a2
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 6df08889af30542af5a128cbffc38a57ce640fde
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728922"
 ---
 # <a name="iclrprobingassemblyenum-interface"></a>ICLRProbingAssemblyEnum 接口
-提供使宿主可以通过使用公共语言运行时（CLR）内部的程序集的标识信息来获取程序集的探测标识的方法，无需创建或了解该标识。  
+
+提供一些方法，这些方法使宿主可以通过使用公共语言运行时 (CLR) 内部的程序集的标识信息来获取程序集的探测标识，无需创建或了解该标识。  
   
 ## <a name="methods"></a>方法  
   
@@ -30,15 +31,17 @@ ms.locfileid: "83703370"
 |------------|-----------------|  
 |[Get 方法](iclrprobingassemblyenum-get-method.md)|获取指定索引处的程序集标识。|  
   
-## <a name="remarks"></a>备注  
- 方法（如[ICLRAssemblyIdentityManager：： GetProbingAssembliesFromReference](iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) ）返回 `ICLRProbingAssemblyEnum` 实例。  
+## <a name="remarks"></a>注解  
+
+ 方法（如 [ICLRAssemblyIdentityManager：： GetProbingAssembliesFromReference](iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) ）返回 `ICLRProbingAssemblyEnum` 实例。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

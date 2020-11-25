@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: de53cc8ef728ddc40bc8e1138a1d649e5c3e600b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 67ace547fc539ab0a2d7affb339f908eb9670a29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820301"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729351"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行解密
 
@@ -53,6 +53,7 @@ ms.locfileid: "94820301"
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
 ## <a name="example"></a>示例  
+
  此示例假定名为 `"test.xml"` 的文件与已编译程序存在于同一目录中。  它还假定 `"test.xml"` 包含 `"creditcard"` 元素。  可以将以下 XML 放在名为 `test.xml` 的文件，并将其用于以下示例。  
   
 ```xml  

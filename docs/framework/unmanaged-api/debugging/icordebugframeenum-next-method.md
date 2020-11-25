@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: 4652e4b34d614ad3b7b852925fcc63309bdd1498
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 76b96dfd9d22c7e770671dcc01cb421430df729f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209456"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728181"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next 方法
+
 从当前位置开始，获取指定数量的 ICorDebugFrame 实例。  
   
 ## <a name="syntax"></a>语法  
@@ -37,8 +38,9 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `celt`  
- 中`ICorDebugFrame`要检索的实例数。  
+ 中 `ICorDebugFrame` 要检索的实例数。  
   
  `frames`  
  弄指针的数组，其中每个都指向一个 `ICorDebugFrame` 对象。  
@@ -47,7 +49,8 @@ HRESULT Next (
  弄一个指针，指向 `ICorDebugFrame` 实际返回的实例数。 如果为1，则此值可以为 null `celt` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

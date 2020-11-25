@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-ms.openlocfilehash: f6ede42ac90f65f934e285f879bcef62d13b65cb
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8c91296bd4185fd98962d49f611a3cdcb5f0ad28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729650"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject 方法
+
 实例化一个新的参数化类型对象，并调用该对象的构造函数方法。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT NewParameterizedObject (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pConstructor`  
  中指向 ICorDebugFunction 对象的指针，该对象表示要实例化的对象的构造函数。  
   
@@ -53,11 +55,13 @@ HRESULT NewParameterizedObject (
  `ppArgs`  
  中指针的数组，其中每个都指向表示传递给构造函数的参数值的 ICorDebugValue 对象。  
   
-## <a name="remarks"></a>备注  
- 对象的构造函数可以接受<xref:System.Type>参数。  
+## <a name="remarks"></a>注解  
+
+ 对象的构造函数可以接受 <xref:System.Type> 参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

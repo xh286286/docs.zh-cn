@@ -6,17 +6,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework], fusion
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
-ms.openlocfilehash: 2bf7bbb59cf983ed536a579ee3a418603f78b49a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae3e3dd09a8509665f70527371afcc73adef049b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131642"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728584"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>合成（非托管 API 参考）
+
 合成 API 允许运行时主机访问应用程序资源的属性，以便为该应用程序查找这些资源的正确版本。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [合成接口](fusion-interfaces.md)  
  描述合成 API 使用的非托管接口。  
   

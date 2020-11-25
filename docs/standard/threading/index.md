@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826334"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728441"
 ---
 # <a name="managed-threading"></a>托管线程
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826334"
 > 自 .NET Framework 4 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的并发集合类以及基于任务（而非线程）概念的编程模型，多线程编程大大得到了简化。 有关详细信息，请参阅[并行编程](../parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [托管线程处理基本知识](managed-threading-basics.md)  
  概述了托管线程以及何时使用多线程。  
   
@@ -34,6 +35,7 @@ ms.locfileid: "94826334"
  介绍了可用于同步在不同线程上访问的线程活动和对象数据的托管类，并概述了线程池线程。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.Threading>  
  收录了用于使用和同步托管线程的类。  
   
@@ -44,6 +46,7 @@ ms.locfileid: "94826334"
  收录了用于创建和计划并发处理任务的类。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [应用程序域](../../framework/app-domains/application-domains.md)  
  概述了应用程序域及其在公共语言基础结构中的应用。  
   

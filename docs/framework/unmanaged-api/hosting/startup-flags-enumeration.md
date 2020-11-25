@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c3f4d644bd7073655d2d77fe7f65a3a46cfea24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729897"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS 枚举
-包含指示公共语言运行时（CLR）的启动行为的值。 默认情况下，垃圾回收不是并发的，并且仅将基类库加载到非特定于域的区域。  
+
+包含指示公共语言运行时 (CLR) 的启动行为的值。 默认情况下，垃圾回收不是并发的，并且仅将基类库加载到非特定于域的区域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,9 +54,9 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果调用方请求单处理器计算机上的服务器生成和并发垃圾回收，则会改为运行工作站构建和非并发垃圾回收。 **注意：** 在实现 Intel Itanium 体系结构（以前称为 IA-64）的64位系统上运行 WOW64 x86 模拟器的应用程序中不支持并发垃圾回收。 有关在64位 Windows 系统上使用 WOW64 的详细信息，请参阅[运行32位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。|  
+|`STARTUP_CONCURRENT_GC`|指定应使用并发垃圾回收。 如果调用方请求单处理器计算机上的服务器生成和并发垃圾回收，则会改为运行工作站构建和非并发垃圾回收。 **注意：**  在实施了64位系统上的 WOW64 x86 模拟器的应用程序中不支持并发垃圾回收，该程序实现了以前称为 IA-64) 的 Intel Itanium 架构 (。 有关在64位 Windows 系统上使用 WOW64 的详细信息，请参阅 [运行32位应用程序](/windows/desktop/WinProg64/running-32-bit-applications)。|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|指定应执行加载程序优化。|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|指定不以非特定于域的形式加载程序集。|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|指定以非特定于域的形式加载所有程序集。|  
@@ -68,16 +69,17 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|指定模拟应默认情况下不流经异步点。|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|指定当线程开始运行时，不应提交完整线程堆栈。|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|指定通过平台调用实现的托管模拟和模拟将流经异步点。 默认情况下，仅托管模拟将流经异步点。|  
-|`STARTUP_TRIM_GC_COMMIT`|指定在系统内存不足时垃圾回收将使用较少的已提交空间。 请 `gcTrimCommitOnLowMemory` 参阅[针对共享 Web 托管的优化](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)。|  
-|`STARTUP_ETW`|指定为公共语言运行时事件启用 Windows 事件跟踪（ETW）。 从 Windows Vista 开始，始终启用事件跟踪，因此该标志不起作用。 请参阅[控制 .NET Framework 日志记录](../../performance/controlling-logging.md)。|  
+|`STARTUP_TRIM_GC_COMMIT`|指定在系统内存不足时垃圾回收将使用较少的已提交空间。 请 `gcTrimCommitOnLowMemory` 参阅 [针对共享 Web 托管的优化](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)。|  
+|`STARTUP_ETW`|指定为 Windows (ETW) 启用了公共语言运行时事件的事件跟踪。 从 Windows Vista 开始，始终启用事件跟踪，因此该标志不起作用。 请参阅 [控制 .NET Framework 日志记录](../../performance/controlling-logging.md)。|  
 |`STARTUP_ARM`|指定启用应用程序域资源监视。 请参见 <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 属性和[ \<appDomainResourceMonitoring> 元素](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** Mscoree.dll  
+ **库：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

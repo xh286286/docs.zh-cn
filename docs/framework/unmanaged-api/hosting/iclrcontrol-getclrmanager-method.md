@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8a11bfa4-cbb0-4082-82b5-f9fba66c93f5
 topic_type:
 - apiref
-ms.openlocfilehash: 04cb45cd021532b6cb3d74a195cbd62e1ab8d31d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d18b3a5c06ac0d3a86f7823f3b140c76c6c9a746
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615847"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728350"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 方法
-获取一个接口指针，该指针指向主机可用于配置公共语言运行时（CLR）的任何管理器类型的实例。  
+
+获取一个接口指针，该指针指向主机可用于配置公共语言运行时 (CLR) 的任何管理器类型的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,22 +36,23 @@ HRESULT GetCLRManager (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `riid`  
- 中`IID`要返回的管理器类型的。 支持以下 `IID` 值。  
+ 中 `IID` 要返回的管理器类型的。 支持以下 `IID` 值。  
   
-- IID_ICLRDebugManager：指定 `ppObject` 将为[ICLRDebugManager](iclrdebugmanager-interface.md)类型。  
+- IID_ICLRDebugManager：指定 `ppObject` 将为 [ICLRDebugManager](iclrdebugmanager-interface.md)类型。  
   
-- IID_ICLRErrorReportingManager：指定 `ppObject` 将为[ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)类型。  
+- IID_ICLRErrorReportingManager：指定 `ppObject` 将为 [ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)类型。  
   
-- IID_ICLRGCManager：指定 `ppObject` 将为[ICLRGCManager](iclrgcmanager-interface.md)类型。  
+- IID_ICLRGCManager：指定 `ppObject` 将为 [ICLRGCManager](iclrgcmanager-interface.md)类型。  
   
-- IID_ICLRHostProtectionManager：指定 `ppObject` 将为[ICLRHostProtectionManager](iclrhostprotectionmanager-interface.md)类型。  
+- IID_ICLRHostProtectionManager：指定 `ppObject` 将为 [ICLRHostProtectionManager](iclrhostprotectionmanager-interface.md)类型。  
   
-- IID_ICLROnEventManager：指定 `ppObject` 将为[ICLROnEventManager](iclroneventmanager-interface.md)类型。  
+- IID_ICLROnEventManager：指定 `ppObject` 将为 [ICLROnEventManager](iclroneventmanager-interface.md)类型。  
   
-- IID_ICLRPolicyManager：指定 `ppObject` 将为[ICLRPolicyManager](iclrpolicymanager-interface.md)类型。  
+- IID_ICLRPolicyManager：指定 `ppObject` 将为 [ICLRPolicyManager](iclrpolicymanager-interface.md)类型。  
   
-- IID_ICLRTaskManager：指定 `ppObject` 将为[ICLRTaskManager](iclrtaskmanager-interface.md)类型。  
+- IID_ICLRTaskManager：指定 `ppObject` 将为 [ICLRTaskManager](iclrtaskmanager-interface.md)类型。  
   
  `ppObject`  
  弄指向请求的管理器的接口指针; 如果请求的管理器类型无效，则为 null。  
@@ -68,11 +70,12 @@ HRESULT GetCLRManager (
 |E_NOINTERFACE|接口类型不受支持。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

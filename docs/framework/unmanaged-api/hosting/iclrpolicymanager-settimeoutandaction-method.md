@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 41e13e20a1cf5a7000907b1cc7d8d2af5174ceba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728963"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 方法
-设置指定操作的超时值，并指定操作发生时公共语言运行时（CLR）应执行的策略操作。  
+
+设置指定操作的超时值，并指定操作发生时公共语言运行时 (CLR) 应执行的策略操作。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,8 +37,9 @@ HRESULT SetTimeoutAndAction (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `operation`  
- 中[EClrOperation](eclroperation-enumeration.md)值之一，指示要设置超时和策略的操作 `action` 。 支持以下值：  
+ 中 [EClrOperation](eclroperation-enumeration.md) 值之一，指示要设置超时和策略的操作 `action` 。 支持以下值：  
   
 - OPR_AppDomainUnload  
   
@@ -51,13 +53,13 @@ HRESULT SetTimeoutAndAction (
  中新的超时值（以毫秒为单位）。 如果值为 "无限" `operation` ，则永远不会超时。  
   
  `action`  
- 中[EPolicyAction](epolicyaction-enumeration.md)值之一，指示发生时 CLR 应执行的策略操作 `operation` 。  
+ 中 [EPolicyAction](epolicyaction-enumeration.md) 值之一，指示发生时 CLR 应执行的策略操作 `operation` 。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction`已成功返回。|  
+|S_OK|`SetTimeoutAndAction` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -66,17 +68,19 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|无法为指定的设置超时 `operation` ，或者为提供的值无效 `action` 。|  
   
 ## <a name="remarks"></a>注解  
- `SetTimeoutAndAction`封装了[ICLRPolicyManager：： SetTimeout](iclrpolicymanager-settimeout-method.md)和[ICLRPolicyManager：： SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md)方法的功能，可调用这些方法来代替对这两个方法的顺序调用。  
+
+ `SetTimeoutAndAction` 封装了 [ICLRPolicyManager：： SetTimeout](iclrpolicymanager-settimeout-method.md) 和 [ICLRPolicyManager：： SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) 方法的功能，可调用这些方法来代替对这两个方法的顺序调用。  
   
 > [!IMPORTANT]
 > 并非所有策略操作值都可以指定为 CLR 操作的超时行为。 有关有效值，请参阅主题的 "备注" 部分。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

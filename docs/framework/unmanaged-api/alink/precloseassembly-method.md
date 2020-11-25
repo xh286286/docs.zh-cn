@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6d23ac54-15ea-4027-a172-9ebef43e8f56
 topic_type:
 - apiref
-ms.openlocfilehash: fcfd3e79bbb52837a333b5ffacf5c13ae60f2490
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 31c0c5e23d1a985c2005693e25ca91379037482a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445611"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728675"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly 方法
+
 关闭程序集文件。 在关闭所有其他文件之后但在关闭程序集文件之前调用此方法。 不要对未绑定的模块调用此方法。  
   
 ## <a name="syntax"></a>语法  
@@ -33,13 +34,16 @@ HRESULT PreCloseAssembly(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  程序集的 ID。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink。  
   
 ## <a name="see-also"></a>另请参阅

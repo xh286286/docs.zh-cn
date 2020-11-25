@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-ms.openlocfilehash: edcc0ebcadc1bd95574b0276bfd0e2d42e5474fd
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5165ef081aad849c11747807d8cc76b2df0a6c74
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379824"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729312"
 ---
 # <a name="icordebugthread-interface"></a>ICorDebugThread 接口
+
 表示进程中的线程。 `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[ClearCurrentException 方法](icordebugthread-clearcurrentexception-method.md)|未实现此方法。 请勿使用。|  
 |[CreateEval 方法](icordebugthread-createeval-method.md)|创建一个对此运行的 ICorDebugEval 对象 `ICorDebugThread` 。|  
@@ -39,19 +40,20 @@ ms.locfileid: "83379824"
 |[GetDebugState 方法](icordebugthread-getdebugstate-method.md)|获取描述此的当前调试状态的 CorDebugThreadState 值 `ICorDebugThread` 。|  
 |[GetHandle 方法](icordebugthread-gethandle-method.md)|获取此的活动部分的当前句柄 `ICorDebugThread` 。|  
 |[GetID 方法](icordebugthread-getid-method.md)|获取此的活动部分的当前操作系统标识符 `ICorDebugThread` 。|  
-|[GetObject 方法](icordebugthread-getobject-method.md)|获取公共语言运行时（CLR）线程的接口指针。|  
+|[GetObject 方法](icordebugthread-getobject-method.md)| (CLR) 线程获取公共语言运行时的接口指针。|  
 |[GetProcess 方法](icordebugthread-getprocess-method.md)|获取一个接口指针，该指针指向此 `ICorDebugThread` 构成部分的进程。|  
 |[GetRegisterSet 方法](icordebugthread-getregisterset-method.md)|获取一个接口指针，该指针指向与此关联的寄存器集 `ICorDebugThread` 。|  
 |[GetUserState 方法](icordebugthread-getuserstate-method.md)|获取描述此的当前状态的 CorDebugUserState 值的按位组合 `ICorDebugThread` 。|  
 |[SetDebugState 方法](icordebugthread-setdebugstate-method.md)|设置 `CorDebugThreadState` 描述此的调试状态的值的按位组合 `ICorDebugThread` 。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -59,6 +61,6 @@ ms.locfileid: "83379824"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试接口](debugging-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 9d589bfc3093d03d87acb47ade0fc6c972bcd335
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 14274932461fa7a5278c9a09b421f50be098cb91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976104"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729657"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray 方法
+
 分配指定元素类型和维度的新数组。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT NewParameterizedArray(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pElementType`  
  中指向 ICorDebugType 对象的指针，该对象表示存储在数组中的元素的类型。  
   
@@ -49,11 +51,13 @@ HRESULT NewParameterizedArray(
  `lowBounds`  
  [in] 可选。 数组的每个维度的下限。 如果省略此值，则假定每个维度的下限为零。  
   
-## <a name="remarks"></a>备注  
- 数组的元素可以是泛型类型的实例。 始终在当前运行线程的应用程序域中创建数组。 在 .NET Framework 2.0 中，的`rank`值必须为1。  
+## <a name="remarks"></a>注解  
+
+ 数组的元素可以是泛型类型的实例。 始终在当前运行线程的应用程序域中创建数组。 在 .NET Framework 2.0 中，的值 `rank` 必须为1。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

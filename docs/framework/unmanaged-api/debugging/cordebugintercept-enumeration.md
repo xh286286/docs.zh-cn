@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795854"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729104"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 枚举
+
 指示可截获（即可单步执行）的代码的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -50,11 +51,13 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_INTERCEPTION`|未使用。|  
 |`INTERCEPT_ALL`|可以截获所有代码。|  
   
-## <a name="remarks"></a>备注  
- 使用[ICorDebugStepper：： SetInterceptMask](icordebugstepper-setinterceptmask-method.md)方法来建立可以截获的代码类型。  
+## <a name="remarks"></a>注解  
+
+ 使用 [ICorDebugStepper：： SetInterceptMask](icordebugstepper-setinterceptmask-method.md) 方法来建立可以截获的代码类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

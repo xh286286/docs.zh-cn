@@ -1,6 +1,6 @@
 ---
-title: 验证客户端密钥功能（非托管 API 引用）
-description: 验证客户端密钥功能可确保客户端密钥具有正确的安全性。
+title: 'VerifyClientKey 函数 (非托管 API 参考) '
+description: VerifyClientKey 函数可确保客户端密钥具有正确的安全性。
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: ebb794240494deb0c831b50e95461ec52017a215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26cffe9936f2e01078b6f54e8499b58519f1018e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176703"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729416"
 ---
-# <a name="verifyclientkey-function"></a>验证客户端密钥功能
+# <a name="verifyclientkey-function"></a>VerifyClientKey 函数
+
 确保客户端密钥具有正确的安全性。  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -34,16 +35,17 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，则返回值为`ERROR_SUCCESS`（0）。
+如果该函数成功，则返回值为 `ERROR_SUCCESS` (0) 。
 
-如果函数失败，返回值是在*WinError.h*中定义的非零错误代码。
+如果函数失败，则返回值为 *winerror.h* 中定义的非零错误代码。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** WMINet_Utils.def  
+ **标头：** WMINet_Utils .def  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

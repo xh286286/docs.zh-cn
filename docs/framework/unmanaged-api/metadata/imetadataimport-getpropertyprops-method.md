@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: cac5aaa7ed13b6a48b36ad550da8b73d0deb2ee7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: aded23e190de18d76bb2b9e2ffbae51cf2325419
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491038"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729221"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps 方法
+
 获取由指定标记表示的属性的元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -49,6 +50,7 @@ HRESULT GetPropertyProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `prop`  
  中一个标记，它表示要为其返回元数据的属性。  
   
@@ -65,7 +67,7 @@ HRESULT GetPropertyProps (
  弄返回的宽字符数 `szProperty` 。  
   
  `pdwPropFlags`  
- 弄指向应用于属性的任何属性标志的指针。 此值是[CorPropertyAttr](corpropertyattr-enumeration.md)枚举中的位掩码。  
+ 弄指向应用于属性的任何属性标志的指针。 此值是 [CorPropertyAttr](corpropertyattr-enumeration.md) 枚举中的位掩码。  
   
  `ppvSig`  
  弄指向属性的元数据签名的指针。  
@@ -98,11 +100,12 @@ HRESULT GetPropertyProps (
  弄中返回的 MethodDef 标记的数目 `rmdOtherMethod` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

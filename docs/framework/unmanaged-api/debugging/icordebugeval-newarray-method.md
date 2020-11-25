@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: 496a6a7e01dec8aa90ba4e849c431ccd499ef53d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: ef6cbe2cef3c52d9a4b47ff77e8aeb5159e89c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976195"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729754"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray 方法
+
 分配指定元素类型和维度的新数组。  
   
- 此方法在 .NET Framework 版本2.0 中已过时。 改[为使用 ICorDebugEval2：： NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) 。  
+ 此方法在 .NET Framework 版本2.0 中已过时。 改 [为使用 ICorDebugEval2：： NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,6 +41,7 @@ HRESULT NewArray (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `elementType`  
  中CorElementType 枚举的一个值，该值指定数组的元素类型。  
   
@@ -55,11 +57,13 @@ HRESULT NewArray (
  `lowBounds`  
  [in] 可选。 数组的每个维度的下限。 如果省略此值，则假定每个维度的下限为零。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  始终在当前执行线程的应用程序域中创建数组。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

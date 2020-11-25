@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a336997a8cb81f1838d9c5b1ec82bbb04326ed0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820184"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729325"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 证书加密 XML 元素
 
@@ -36,7 +36,7 @@ ms.locfileid: "94820184"
 
 若要运行此示例，需要创建测试证书，并将其保存到证书存储中。 仅为 Windows 证书创建工具提供该任务的说明 [ ( # A0) ](/windows/desktop/SecCrypto/makecert)。
 
-1. 使用 [Makecert.exe](/windows/desktop/SecCrypto/makecert) 生成 x.509 证书，并将其置于本地用户存储中。 必须生成一个交换密钥，且该密钥必须可导出。 运行以下命令：  
+1. 使用 [Makecert.exe](/windows/desktop/SecCrypto/makecert) 生成 x.509 证书，并将其置于本地用户存储中。 必须生成一个交换密钥，且该密钥必须可导出。 运行下面的命令：  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
@@ -93,6 +93,7 @@ ms.locfileid: "94820184"
      [!code-vb[HowToEncryptXMLElementX509#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#11)]  
   
 ## <a name="example"></a>示例  
+
  此示例假定名为 `"test.xml"` 的文件与已编译程序存在于同一目录中。  它还假定 `"test.xml"` 包含 `"creditcard"` 元素。  可以将以下 XML 放在名为 `test.xml` 的文件，并将其用于以下示例。  
   
 ```xml  

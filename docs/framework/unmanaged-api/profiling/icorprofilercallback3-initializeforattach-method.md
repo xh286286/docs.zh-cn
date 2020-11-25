@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c85bba9a5d913820b69cbc214275b733a53197ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499709"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729442"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach 方法
+
 由公共语言运行时 (CLR) 调用，从而给予分析器一个在附加操作后可将其状态初始化的机会。  
   
 ## <a name="syntax"></a>语法  
@@ -35,20 +36,23 @@ HRESULT InitializeForAttach(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pCorProfilerInfoUnk`  
  [in] `ICorProfilerInfo*` 接口的接口指针。  
   
  `pvClientData`  
- 中指向传递给其参数中的[IClrProfiling：： AttachProfiler](iclrprofiling-attachprofiler-method.md)方法的数据的指针 `pvClientData` 。 如果此参数为 NULL，则 `cbClientData` 将为 0（零）。 当 CLR 从 `InitializeForAttach` 返回时将释放此内存。  
+ 中指向传递给其参数中的 [IClrProfiling：： AttachProfiler](iclrprofiling-attachprofiler-method.md) 方法的数据的指针 `pvClientData` 。 如果此参数为 NULL，则 `cbClientData` 将为 0（零）。 当 CLR 从 `InitializeForAttach` 返回时将释放此内存。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的数据的大小（以字节为单位）。  
   
 ## <a name="remarks"></a>注解  
+
  CLR 调用 `InitializeForAttach` 以便给予分析器请求回调的机会。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

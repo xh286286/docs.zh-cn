@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16621f4c9b06f049239dc4e2335d70a167dd756
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491051"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729260"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
+
 获取指定的 ParamDef 标记所引用的参数的元数据值。  
   
 ## <a name="syntax"></a>语法  
@@ -43,6 +44,7 @@ HRESULT GetParamProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tk`  
  中一个 ParamDef 标记，它表示要为其返回元数据的参数。  
   
@@ -78,11 +80,12 @@ HRESULT GetParamProps (
 参数的序列值 `pulSequence` 从1开始。 返回值的序列号为0。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

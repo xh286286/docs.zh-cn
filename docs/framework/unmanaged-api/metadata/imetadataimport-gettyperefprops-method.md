@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-ms.openlocfilehash: 273922e00c3e5319d5a03652cc77b69f4479ea67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d98481d7934b4c96178aaa32fb0f9378eb359fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729159"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps 方法
+
 获取与指定的 TypeRef 标记所引用的关联的元数据 <xref:System.Type> 。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT GetTypeRefProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tr`  
  中TypeRef 标记，它表示要为其返回元数据的类型。  
   
@@ -54,11 +56,12 @@ HRESULT GetTypeRefProps (
  弄返回的宽字符大小 `szName` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

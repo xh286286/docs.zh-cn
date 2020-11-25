@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9e907450b4ae985ee30d9958eec8baba797b495a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728597"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 方法
+
 获取局部变量。  
   
 ## <a name="syntax"></a>语法  
@@ -37,22 +38,25 @@ HRESULT GetLocalVariables(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mdMethodToken`  
  中方法的元数据标记。  
   
  `cLocals`  
- 中`ULONG`指示参数大小的 `rgLocals` 。  
+ 中 `ULONG` 指示参数大小的 `rgLocals` 。  
   
  `rgLocals`  
- 弄返回的[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)实例的数组。  
+ 弄返回的 [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) 实例的数组。  
   
  `pceltFetched`  
  弄指向的指针 `ULONG` ，该指针接收 `rgLocals` 包含局部变量所需的缓冲区大小。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

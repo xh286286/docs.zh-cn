@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 467ba53f90081f0c3499fb22acab96b5e380a3f4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 47c0c4dfa78e85bcc83f0bb2a333955c8e8666fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395846"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728363"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress 方法
+
 获取此 "ICorDebugValue" 对象的地址，该对象处于调试过程中。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT GetAddress (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pAddress`  
  弄指向 `CORDB_ADDRESS` 对象的指针，该对象指定此值对象的地址。  
   
-## <a name="remarks"></a>备注  
- 如果值不可用，则返回0（零）。 如果值至少部分位于寄存器中或者存储在垃圾回收器句柄（）中，则可能会发生这种情况 `GCHandle` 。  
+## <a name="remarks"></a>注解  
+
+ 如果值不可用，则返回 0 (零) 。 如果值至少出现在寄存器中或者存储在垃圾回收器句柄 () 中，则可能会发生这种情况 `GCHandle` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -49,4 +53,4 @@ HRESULT GetAddress (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-ms.openlocfilehash: 90fce1710f97341fb49be1d07f7af2edf8cb848c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 796c6aa4c42a037fe612b4b1ee5267a678cf5224
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729637"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor 方法
+
 实例化指定类的一个新参数化类型对象，而不尝试调用构造函数方法。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT NewParameterizedObjectNoConstructor (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pClass`  
  中指向 ICorDebugClass 对象的指针，该对象表示要实例化的对象的类。  
   
@@ -45,11 +47,13 @@ HRESULT NewParameterizedObjectNoConstructor (
  `ppTypeArgs`  
  中指针的数组，其中每个都指向一个 ICorDebugType 对象，该对象表示要实例化的对象的类型参数。  
   
-## <a name="remarks"></a>备注  
- 如果`NewParameterizedObjectNoConstructor`传递的类型参数的数目不正确或类型参数的类型不正确，则方法将失败。  
+## <a name="remarks"></a>注解  
+
+ `NewParameterizedObjectNoConstructor`如果传递的类型参数的数目不正确或类型参数的类型不正确，则方法将失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

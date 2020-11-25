@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-ms.openlocfilehash: db07e2afa64ea2bf80416e6ab8cba5a4dcdc8dcf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd482bfe8e95a53cafd1530c88f09df146a1b150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499670"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729429"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 接口
-提供公共语言运行时（CLR）用来向探查器传达附加和分离状态信息的回调方法。  
+
+提供公共语言运行时 (CLR) 用来向探查器传达附加和分离状态信息的回调方法。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,7 +36,8 @@ ms.locfileid: "84499670"
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

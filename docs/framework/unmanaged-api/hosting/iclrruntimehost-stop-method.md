@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b8fd7daf-8f8d-4ad7-92ae-019db244cec1
 topic_type:
 - apiref
-ms.openlocfilehash: 55cd444ffedc92ba74239421ae548ffd930e6ab7
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 50e777bde34eb0122ca537da4b73a5e507ce7a7b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703930"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728792"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop 方法
-停止由公共语言运行时（CLR）执行的代码。  
+
+ (CLR) ，停止由公共语言运行时执行代码。  
   
 > [!IMPORTANT]
 > 此方法不会向主机释放资源、卸载应用程序域或销毁线程。 必须终止进程才能释放这些资源。  
@@ -38,7 +39,7 @@ HRESULT Stop();
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`Stop`已成功返回。|  
+|S_OK|`Stop` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -46,11 +47,12 @@ HRESULT Stop();
 |E_FAIL|发生未知的灾难性故障。 如果方法返回 E_FAIL，则 CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
