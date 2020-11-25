@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2ed6a387-ba45-483e-9a1e-b0c69f67998b
 topic_type:
 - apiref
-ms.openlocfilehash: 886ba693183a6b99eb03635e95a9661d105de40e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 40c437e109eaa4352a83c5566185593cbc6b0eba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610855"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725828"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 接口
-表示方法中的词法范围。 此接口扩展了[ISymUnmanagedScope](isymunmanagedscope-interface.md)接口，其中包含获取有关范围内定义的常量的信息的方法。  
+
+表示方法中的词法范围。 此接口扩展了 [ISymUnmanagedScope](isymunmanagedscope-interface.md) 接口，其中包含获取有关范围内定义的常量的信息的方法。  
   
 ## <a name="methods"></a>方法  
   
@@ -32,6 +33,7 @@ ms.locfileid: "83610855"
 |[GetConstants 方法](isymunmanagedscope2-getconstants-method.md)|获取在此范围内定义的局部变量。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

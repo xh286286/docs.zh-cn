@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f558d209d13fae93bd3a6f5e0e653afb91371a6a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: df42e58a9bb3bf00b3fa4df45086dc2219658e25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615327"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725841"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants 方法
+
 获取在此范围内定义的局部变量。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT GetConstants(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cConstants`  
  中参数指向的缓冲区的长度 `pcConstants` 。  
   
@@ -47,9 +49,11 @@ HRESULT GetConstants(
  弄用于存储常量的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2bc2b983171dc41d5ac37eda0359f1aaee4ebd6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004798"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725750"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
+
 使用指定的元数据签名创建字段的定义，并获取该字段定义的标记。  
   
 ## <a name="syntax"></a>语法  
@@ -42,8 +43,9 @@ HRESULT DefineField (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `td`  
- 中`mdTypeDef`封闭类或接口的标记。  
+ 中 `mdTypeDef` 封闭类或接口的标记。  
   
  `szName`  
  中Unicode 中的字段名称。  
@@ -64,17 +66,18 @@ HRESULT DefineField (
  中字段的常数值。  
   
  `cchValue`  
- 中的大小（Unicode）字符 `pValue` 。  
+ 中 (Unicode) 字符的大小 `pValue` 。  
   
  `pmd`  
- 弄`mdFieldDef`分配的令牌。  
+ 弄 `mdFieldDef` 分配的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

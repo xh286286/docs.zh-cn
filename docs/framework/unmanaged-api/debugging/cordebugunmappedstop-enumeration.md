@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: 772f1f0dee260ad3752b2f89e5fbe0d6bc27b87b
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: e251bf67adcaf2bbd6565eda068d487eb0d70efd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795646"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725763"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 枚举
+
 指定未映射代码的类型，这些代码可以中断分档器代码执行。  
   
 ## <a name="syntax"></a>语法  
@@ -50,11 +51,13 @@ typedef enum CorDebugUnmappedStop {
 |`STOP_UNMANAGED`|在非托管代码中停止。 此值仅适用于互操作调试。|  
 |`STOP_ALL`|在所有类型的未映射代码中停止。|  
   
-## <a name="remarks"></a>备注  
- 使用[ICorDebugStepper：： SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md)方法设置标志，这些标志指定分档器将停止的未映射代码。  
+## <a name="remarks"></a>注解  
+
+ 使用 [ICorDebugStepper：： SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md) 方法设置标志，这些标志指定分档器将停止的未映射代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

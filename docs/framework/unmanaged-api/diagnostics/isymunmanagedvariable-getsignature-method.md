@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 791b92c30fc2bf3d506113620b59ba20015e077e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610439"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725815"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature 方法
+
 获取此变量的签名。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT GetSignature(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cSig`  
  中参数指向的缓冲区的长度 `sig` 。  
   
@@ -46,9 +48,11 @@ HRESULT GetSignature(
  弄存储签名的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅
