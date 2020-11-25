@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4fedf8a0-08c8-43d0-aa00-20f2a521c991
 topic_type:
 - apiref
-ms.openlocfilehash: 52e52ac62e2dcfeb182da3014a863409f640274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cf73ada36be66edb3fa267d61873ae9acb088a34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446656"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717040"
 ---
-# <a name="addimport-method"></a><span data-ttu-id="41915-102">AddImport 方法</span><span class="sxs-lookup"><span data-stu-id="41915-102">AddImport Method</span></span>
-<span data-ttu-id="41915-103">将导入添加到程序集。</span><span class="sxs-lookup"><span data-stu-id="41915-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method"></a><span data-ttu-id="f595b-102">AddImport 方法</span><span class="sxs-lookup"><span data-stu-id="f595b-102">AddImport Method</span></span>
+
+<span data-ttu-id="f595b-103">将导入添加到程序集。</span><span class="sxs-lookup"><span data-stu-id="f595b-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41915-104">语法</span><span class="sxs-lookup"><span data-stu-id="41915-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f595b-104">语法</span><span class="sxs-lookup"><span data-stu-id="f595b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddImport(  
@@ -36,27 +37,30 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="41915-105">参数</span><span class="sxs-lookup"><span data-stu-id="41915-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f595b-105">参数</span><span class="sxs-lookup"><span data-stu-id="f595b-105">Parameters</span></span>  
+
  `AssemblyID`  
- <span data-ttu-id="41915-106">要扩充的程序集的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="41915-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="f595b-106">要扩充的程序集的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="f595b-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="41915-107">要导入的文件从[ImportFile 方法](importfile-method.md)检索的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="41915-107">Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="f595b-107">要导入的文件从 [ImportFile 方法](importfile-method.md)检索的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="f595b-107">Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="41915-108">COM + FileDef 标志，如 `ffContainsNoMetaData` 和 `ffWriteable`。</span><span class="sxs-lookup"><span data-stu-id="41915-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="41915-109">`dwFlags` 传递给[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。</span><span class="sxs-lookup"><span data-stu-id="41915-109">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="f595b-108">COM + FileDef 标志 `ffContainsNoMetaData` ，例如和 `ffWriteable` 。</span><span class="sxs-lookup"><span data-stu-id="f595b-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="f595b-109">`dwFlags` 传递给 [DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。</span><span class="sxs-lookup"><span data-stu-id="f595b-109">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="41915-110">指向接收结果文件的 ID 的标记的指针。</span><span class="sxs-lookup"><span data-stu-id="41915-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="f595b-110">指向接收结果文件的 ID 的标记的指针。</span><span class="sxs-lookup"><span data-stu-id="f595b-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="41915-111">返回值</span><span class="sxs-lookup"><span data-stu-id="41915-111">Return Value</span></span>  
- <span data-ttu-id="41915-112">如果方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="41915-112">Returns S_OK if the method succeeds.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="41915-113">要求</span><span class="sxs-lookup"><span data-stu-id="41915-113">Requirements</span></span>  
- <span data-ttu-id="41915-114">需要 alink</span><span class="sxs-lookup"><span data-stu-id="41915-114">Requires alink.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="41915-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="41915-115">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="f595b-111">返回值</span><span class="sxs-lookup"><span data-stu-id="f595b-111">Return Value</span></span>  
 
-- [<span data-ttu-id="41915-116">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="41915-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="41915-117">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="41915-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="41915-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="41915-118">ALink API</span></span>](index.md)
+ <span data-ttu-id="f595b-112">如果方法成功，则返回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="f595b-112">Returns S_OK if the method succeeds.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="f595b-113">要求</span><span class="sxs-lookup"><span data-stu-id="f595b-113">Requirements</span></span>  
+
+ <span data-ttu-id="f595b-114">需要 alink</span><span class="sxs-lookup"><span data-stu-id="f595b-114">Requires alink.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f595b-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f595b-115">See also</span></span>
+
+- [<span data-ttu-id="f595b-116">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="f595b-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="f595b-117">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="f595b-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="f595b-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="f595b-118">ALink API</span></span>](index.md)
