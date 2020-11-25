@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0b040a2741a44b9d361dabc38c26b8934659003b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492182"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711515"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls 方法
+
 枚举由指定实现的所有接口 `TypeDef` 。
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT EnumInterfaceImpls (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `phEnum`  
  [in，out]指向枚举器的指针。  
   
@@ -57,19 +59,20 @@ HRESULT EnumInterfaceImpls (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls`已成功返回。|  
+|`S_OK`|`EnumInterfaceImpls` 已成功返回。|  
 |`S_FALSE`|没有要枚举的 MethodDef 标记。 在这种情况下， `pcImpls` 设置为零。|  
 
 ## <a name="remarks"></a>注解
 
-枚举返回 `mdInterfaceImpl` 由指定的实现的每个接口的令牌集合 `TypeDef` 。 接口令牌按指定的顺序（通过 `DefineTypeDef` 或 `SetTypeDefProps` ）返回。 `mdInterfaceImpl`可以使用[GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)查询返回的标记的属性。
+枚举返回 `mdInterfaceImpl` 由指定的实现的每个接口的令牌集合 `TypeDef` 。 通过或)  (指定接口的顺序来返回接口令牌 `DefineTypeDef` `SetTypeDefProps` 。 `mdInterfaceImpl`可以使用[GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)查询返回的标记的属性。
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

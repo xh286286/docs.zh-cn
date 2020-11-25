@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-ms.openlocfilehash: 50aebb09924b93a622e5b7d84e65e41ee91f6018
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c11a4498610c3e82590a0ff9be1247173e70be76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006189"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713387"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly 方法
+
 未实现此方法。 如果调用，它将返回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>语法  
@@ -40,6 +41,7 @@ HRESULT FindAssembly(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `szAppBase`  
  中不使用。  
   
@@ -62,11 +64,12 @@ HRESULT FindAssembly(
  弄中实际返回的字符数 `szName` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

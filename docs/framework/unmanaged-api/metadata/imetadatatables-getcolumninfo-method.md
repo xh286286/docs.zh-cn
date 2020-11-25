@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: a044924810016eea60682b8765aeee448b552f0d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 227d9ab67ab3091508232be3018ca520a6b5dcc6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501191"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711047"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 方法
+
 获取有关指定表中指定列的数据。  
   
 ## <a name="syntax"></a>语法  
@@ -39,6 +40,7 @@ HRESULT GetColumnInfo (
 ```  
   
 ## <a name="parameters"></a>参数
+
 =======
 
  `ixTbl`  
@@ -65,32 +67,33 @@ HRESULT GetColumnInfo (
 
 | pType                    | 说明   | Helper 函数                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>（0-63）   | 去掉           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>（64.. 95） | 编码标记 | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT`（96）            | Int16         | **IsFixedType**                   |
-| `iUSHORT`（97）           | UInt16        | **IsFixedType**                   |
-| `iLONG`（98）             | Int32         | **IsFixedType**                   |
-| `iULONG`（99）            | UInt32        | **IsFixedType**                   |
-| `iBYTE`（100）            | Byte          | **IsFixedType**                   |
-| `iSTRING`（101）          | String        | **IsHeapType**                    |
-| `iGUID`（102）            | Guid          | **IsHeapType**                    |
-| `iBLOB`（103）            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br> (0. 63)    | 去掉           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br> (64.. 95)  | 编码标记 | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)             | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)            | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)              | Int32         | **IsFixedType**                   |
+| `iULONG` (99)             | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)             | Byte          | **IsFixedType**                   |
+| `iSTRING` (101)           | String        | **IsHeapType**                    |
+| `iGUID` (102)             | GUID          | **IsHeapType**                    |
+| `iBLOB` (103)             | Blob          | **IsHeapType**                    |
 
-可以使用读取存储在*堆*中的值（即 `IsHeapType == true` ）：
+存储在 *堆* 中的值 (即， `IsHeapType == true` 可以使用读取) ：
 
 - `iSTRING`： **IMetadataTables. GetString**
 - `iGUID`： **IMetadataTables. GetGUID**
 - `iBLOB`： **IMetadataTables. GetBlob**
 
 > [!IMPORTANT]
-> 若要使用上表中定义的常量，请包含 `#define _DEFINE_META_DATA_META_CONSTANTS` *cor*头文件提供的指令。
+> 若要使用上表中定义的常量，请包含 `#define _DEFINE_META_DATA_META_CONSTANTS` *cor* 头文件提供的指令。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

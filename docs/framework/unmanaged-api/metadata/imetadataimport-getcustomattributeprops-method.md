@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-ms.openlocfilehash: 320cfae93f8aae94f9315e8e20ed6cf7f9cced7c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b92e9ab714e2d8d2c66ed5546deba16352e8e390
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491311"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711138"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps 方法
+
 获取给定元数据标记的自定义属性的值。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT GetCustomAttributeProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cv`  
  [in] 表示要检索的自定义属性的元数据标记。  
   
@@ -54,14 +56,16 @@ HRESULT GetCustomAttributeProps (
  [out, optional] *`ppBlob` 中返回的数据大小（以字节为单位）。  
   
 ## <a name="remarks"></a>注解  
+
  自定义属性以元数据引擎理解的格式存储为数据数组。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

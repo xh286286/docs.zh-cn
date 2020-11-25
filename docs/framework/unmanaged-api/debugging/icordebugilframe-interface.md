@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4f34fdf9a0eeb47e027cc874afee5bd04f5bd9bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210236"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712386"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame 接口
 
-表示 Microsoft 中间语言（MSIL）代码的堆栈帧。 此接口是 ICorDebugFrame 接口的子类。  
+表示 Microsoft 中间语言 (MSIL) 代码的堆栈帧。 此接口是 ICorDebugFrame 接口的子类。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[CanSetIP 方法](icordebugilframe-cansetip-method.md)|获取一个值，该值指示是否可以安全地将指令指针设置为指定的偏移位置。|  
 |[EnumerateArguments 方法](icordebugilframe-enumeratearguments-method.md)|获取此帧中的参数的枚举数。|  
@@ -39,14 +39,16 @@ ms.locfileid: "83210236"
 |[GetStackValue 方法](icordebugilframe-getstackvalue-method.md)|未实现。|  
 |[SetIP 方法](icordebugilframe-setip-method.md)|将指令指针设置为指向 MSIL 代码中的指定偏移位置。|  
   
-## <a name="remarks"></a>备注  
- `ICorDebugILFrame`接口是专用的 ICorDebugFrame 接口。 它可用于 MSIL 代码框架或实时（JIT）编译的帧。 JIT 编译的帧实现 `ICorDebugILFrame` 接口和 ICorDebugNativeFrame 接口。  
+## <a name="remarks"></a>注解  
+
+ `ICorDebugILFrame`接口是专用的 ICorDebugFrame 接口。 它可用于 MSIL 代码帧或实时 (JIT) 编译的帧。 JIT 编译的帧实现 `ICorDebugILFrame` 接口和 ICorDebugNativeFrame 接口。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -54,6 +56,6 @@ ms.locfileid: "83210236"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试接口](debugging-interfaces.md)

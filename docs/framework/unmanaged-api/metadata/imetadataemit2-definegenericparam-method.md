@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: e4401ea8a70e7ace8d8efc5e0a6d29f6db51b3df
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c9ff918121e7bb4ee972e674207810358b3f36f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712906"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam 方法
+
 创建泛型类型参数的定义，并获取该泛型类型参数的令牌。  
   
 ## <a name="syntax"></a>语法  
@@ -40,14 +41,15 @@ HRESULT DefineGenericParam (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tk`  
- 中`mdTypeDef`或 `mdMethodDef` 标记，它表示要为其定义泛型参数的方法或构造函数。  
+ 中 `mdTypeDef` 或 `mdMethodDef` 标记，它表示要为其定义泛型参数的方法或构造函数。  
   
  `ulParamSeq`  
  中泛型参数的索引。  
   
  `dwParamFlags`  
- 中描述泛型参数类型的[CorGenericParamAttr](corgenericparamattr-enumeration.md)枚举的值。  
+ 中描述泛型参数类型的 [CorGenericParamAttr](corgenericparamattr-enumeration.md) 枚举的值。  
   
  `szname`  
  中参数的名称。  
@@ -62,11 +64,12 @@ HRESULT DefineGenericParam (
  弄表示泛型参数的标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

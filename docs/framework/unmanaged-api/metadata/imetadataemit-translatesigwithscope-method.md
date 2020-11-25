@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: 7ef6dbc46806febc6fba89b39a8b894377225c23
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 80d33da2eb2a7f0cfbe5dcb7279fff9973dada2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712919"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
+
 将程序集导入到当前作用域中，并为合并的作用域获取新的元数据签名。  
   
 ## <a name="syntax"></a>语法  
@@ -44,8 +45,9 @@ HRESULT TranslateSigWithScope (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pAssemImport`  
- 中导入程序集的接口（在其中定义签名）。  
+ 中导入程序集 (的接口) 在其中定义签名。  
   
  `pbHashValue`  
  中程序集的哈希 blob。  
@@ -78,11 +80,12 @@ HRESULT TranslateSigWithScope (
  弄已翻译签名中的实际字节数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

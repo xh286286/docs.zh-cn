@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 0443f58b79e60111756308cc4843daf86d1fc823
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 189a276b4228038ab1d70620ce3a4a0f4342b245
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795860"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712516"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes 枚举
+
 指定托管堆上内存区域的生成。  
   
 ## <a name="syntax"></a>语法  
@@ -47,7 +48,8 @@ typedef enum CorDebugGenerationTypes {
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

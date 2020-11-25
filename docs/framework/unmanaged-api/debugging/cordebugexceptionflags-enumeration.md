@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b22687a8-e9cf-4e65-a1b0-f92a81bc524e
 topic_type:
 - apiref
-ms.openlocfilehash: 45de821dd52f7e153fc79ffde056ed959c654fce
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a50272bce2e27963a1d684fef40bac30cf44e1f0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795937"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712711"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags 枚举
+
 提供有关异常的附加信息。  
   
 ## <a name="syntax"></a>语法  
@@ -40,11 +41,13 @@ typedef enum CorDebugExceptionFlags {
 |`DEBUG_EXCEPTION_NONE`|没有异常。|  
 |`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|异常是可截获的。<br /><br /> 异常的发生时间可能仍然会使调试器无法截获异常。 例如，如果当前回调或实时 (JIT) 连接引起的异常事件下没有托管代码，则无法截获异常。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  以后的版本可能会向此枚举中添加新值，因此你应针对意外值准备使用 `CorDebugExceptionFlags` 的代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

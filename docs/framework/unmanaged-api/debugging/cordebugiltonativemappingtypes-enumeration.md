@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-ms.openlocfilehash: 808fc70a308eff1b05aa49ea2bb89fe53377c973
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: ecb88195e3ecc7c540679a683005798247afe57f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795841"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712399"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 枚举
+
 指示本机指令的特定范围是否由 COR_DEBUG_IL_TO_NATIVE_MAP 结构的实例表示，是否对应于一个特殊的代码区域。  
   
 ## <a name="syntax"></a>语法  
@@ -43,7 +44,8 @@ typedef enum CorDebugIlToNativeMappingTypes {
 |`EPILOG`|本机指令的范围对应于 epilog。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

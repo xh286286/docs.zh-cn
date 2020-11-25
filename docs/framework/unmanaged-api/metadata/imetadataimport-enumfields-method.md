@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 1ff2dd64dc4797bc485550c30f7204644a3adb47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 74035e9551cb1d622b326e511c3884e1eadf057f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492273"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711580"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 方法
+
 枚举指定的 TypeDef 标记所引用的类型的 FieldDef 标记。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT EnumFields (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `phEnum`  
  [in，out]指向枚举器的指针。  
   
@@ -57,15 +59,16 @@ HRESULT EnumFields (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields`已成功返回。|  
+|`S_OK`|`EnumFields` 已成功返回。|  
 |`S_FALSE`|没有要枚举的字段。 在这种情况下， `pcTokens` 为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

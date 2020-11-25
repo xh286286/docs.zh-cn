@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: a889d6ba00c4a0eb96a9923a7dbe52f3b93aaba5
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 225523280a2e1e0d8f51321e9dd865d901e725ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795956"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712698"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 结构
+
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
   
  表示给定的一段中间语言 (IL) 代码的异常处理 (EH) 子句。  
@@ -42,7 +43,7 @@ typedef struct _CorDebugEHClause {
   
 |成员|说明|  
 |------------|-----------------|  
-|`Flags`|描述 EH 子句中的异常信息的位字段。 有关详细信息，请参见“备注”部分。|  
+|`Flags`|描述 EH 子句中的异常信息的位字段。 有关详细信息，请参阅“备注”部分。|  
 |`TryOffset`|方法主体开头的 `try` 块的偏移量（以字节为单位）。|  
 |`TryLength`|`try` 块的长度（以字节为单位）。|  
 |`HandlerOffset`|此 `try` 块的处理程序的位置。|  
@@ -50,10 +51,11 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|基于类型的异常处理程序的元数据标记。|  
 |`FilterOffset`|基于筛选器的异常处理程序的方法主体开头的偏移量（以字节为单位）。|  
   
-## <a name="remarks"></a>备注  
- [GetEHClauses](icordebugilcode-getehclauses-method.md)方法返回`CoreDebugEHClause`值的数组。  
+## <a name="remarks"></a>注解  
+
+ `CoreDebugEHClause` [GetEHClauses](icordebugilcode-getehclauses-method.md)方法返回值的数组。  
   
- EH 子句信息由 CLI 规范定义。 有关详细信息，请参阅[标准 ECMA-355：公共语言基础结构（CLI）、第六版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
+ EH 子句信息由 CLI 规范定义。 有关详细信息，请参阅 [标准 ECMA-355：公共语言基础结构 (CLI) ，第6版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
   
  `flags` 字段可以包含以下标志。 请注意，它们不会在 CorDebug.idl 或 CorDebug.h 中定义。  
   
@@ -65,7 +67,8 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Fault 子句（仅当引发异常时才调用的 `finally` 子句）。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: 4aeacc718632c133550ed8de6649716c5d8b7423
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3c7a14f828e55310435a99693c1195f2f0dd40c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504437"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711671"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 函数
-提供以下三个接口之一： [ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)或[ICLRDebugging](../debugging/iclrdebugging-interface.md)。  
+
+提供以下三个接口之一： [ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)或 [ICLRDebugging](../debugging/iclrdebugging-interface.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +37,18 @@ HRESULT CLRCreateInstance(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `clsid`  
  中三个类标识符之一： CLSID_CLRMetaHost、CLSID_CLRMetaHostPolicy 或 CLSID_CLRDebugging。  
   
  `riid`  
- 中三个接口标识符（Iid）之一： IID_ICLRMetaHost、IID_ICLRMetaHostPolicy 或 IID_ICLRDebugging。  
+ 中三个接口标识符中的一个 (Iid) ： IID_ICLRMetaHost、IID_ICLRMetaHostPolicy 或 IID_ICLRDebugging。  
   
  `ppInterface`  
- 弄以下三个接口之一： [ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)或[ICLRDebugging](../debugging/iclrdebugging-interface.md)。  
+ 弄以下三个接口之一： [ICLRMetaHost](iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)或 [ICLRDebugging](../debugging/iclrdebugging-interface.md)。  
   
 ## <a name="return-value"></a>返回值  
+
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|说明|  
@@ -54,6 +57,7 @@ HRESULT CLRCreateInstance(
 |E_POINTER|`ppInterface` 为 null。|  
   
 ## <a name="remarks"></a>注解  
+
  下表显示了和支持的组合 `clsid` `riid` 。  
   
 |`clsid`|`riid`|  
@@ -81,11 +85,12 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: 8dd070d2c895a94ac996be81e672bd67f59b83b7
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 6b3075613af0403527ecf67d574c0f5733a5cd8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795893"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712607"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 枚举
+
 指示垃圾回收器是在工作站还是服务器上运行。  
   
 ## <a name="syntax"></a>语法  
@@ -45,7 +46,8 @@ typedef enum CorDebugGCType {
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

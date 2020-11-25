@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 783dce92-8a98-43db-8f78-888d943dd5b2
 topic_type:
 - apiref
-ms.openlocfilehash: 4d2be9960f8935b754791a8badd4ea98b5d54912
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 30de1448a7d1452e1e9049411010e7f43d13eb70
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795906"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712620"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType 枚举
+
 指示在展开阶段正由回调发送信号的事件。  
   
 ## <a name="syntax"></a>语法  
@@ -41,7 +42,8 @@ typedef enum CorDebugExceptionUnwindCallbackType {
 |`DEBUG_EXCEPTION_INTERCEPTED`|异常已被截取。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 5f80125a67e634dda05b9427b5f46db8f21b29f8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 452635764794e01858baab10464a03c966a55271
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379201"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711931"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 方法
-获取[ICorDebugStackWalk](icordebugstackwalk-interface.md)对象中的当前帧。  
+
+获取 [ICorDebugStackWalk](icordebugstackwalk-interface.md) 对象中的当前帧。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,13 +33,15 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pFrame`  
  中指向所创建的帧对象的地址的指针，该对象表示堆栈中的当前帧。  
   
 ## <a name="return-value"></a>返回值  
+
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
 |S_OK|运行时成功返回了当前帧。|  
 |E_FAIL|当前帧未返回。|  
@@ -49,10 +52,12 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 ## <a name="exceptions"></a>例外  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugStackWalk`仅返回实际的堆栈帧。 使用[ICorDebugThread3：： GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md)方法返回内部帧。 （内部帧是由运行时推送到堆栈上的数据结构，用于存储临时数据。）  
+
+ `ICorDebugStackWalk` 仅返回实际的堆栈帧。 使用 [ICorDebugThread3：： GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md) 方法返回内部帧。  (内部帧是由运行时推送到堆栈上的数据结构，用于存储临时数据。 )   
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -60,7 +65,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugStackWalk 接口](icordebugstackwalk-interface.md)
 - [调试接口](debugging-interfaces.md)
