@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: dc76274d3b0acbbe0b03eb141d2b3e6ff9063afb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5a037695892252042d7827165595f7bad0feba56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421119"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693159"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName 方法
-获取此[ICorPublishProcess](icorpublishprocess-interface.md)引用的进程的可执行文件的完整路径。  
+
+获取此 [ICorPublishProcess](icorpublishprocess-interface.md)引用的进程的可执行文件的完整路径。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,6 +38,7 @@ HRESULT GetDisplayName (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cchName`  
  [in] `szName` 数组的大小。  
   
@@ -47,7 +49,8 @@ HRESULT GetDisplayName (
  弄用于存储可执行文件的名称（包括完整路径）的数组。 名称以 null 结尾。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
   

@@ -14,27 +14,29 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-ms.openlocfilehash: 8d958e949612b502ab218f5c6b75779174d34e19
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 8ee59e9d416d1c53312e4fccb6953f20b03b29b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421080"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693081"
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess 接口
+
 提供用于访问要显示的有关进程的信息的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|说明|  
 |------------|-----------------|  
-|[EnumAppDomains 方法](icorpublishprocess-enumappdomains-method.md)|获取一个[ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)实例，其中包含此所引用的进程中的应用程序域 `ICorPublishProcess` 。|  
+|[EnumAppDomains 方法](icorpublishprocess-enumappdomains-method.md)|获取一个 [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) 实例，其中包含此所引用的进程中的应用程序域 `ICorPublishProcess` 。|  
 |[GetDisplayName 方法](icorpublishprocess-getdisplayname-method.md)|获取此引用的进程的可执行文件的完整路径 `ICorPublishProcess` 。|  
 |[GetProcessID 方法](icorpublishprocess-getprocessid-method.md)|获取此引用的进程的操作系统标识符 `ICorPublishProcess` 。|  
 |[IsManaged 方法](icorpublishprocess-ismanaged-method.md)|获取一个值，该值指示由此引用的进程是否 `ICorPublishProcess` 已知正在运行托管代码。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
   
