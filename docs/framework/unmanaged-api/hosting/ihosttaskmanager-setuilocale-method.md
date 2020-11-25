@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: d0c87a9c-ea81-4237-a16b-c22b36ec9dc8
 topic_type:
 - apiref
-ms.openlocfilehash: e7e65c3b9bcafdf4c8b1185fcff1fc0740b2ef7c
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: bd1a1d7d2f7f945f345e8af802b881392d6d93e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724216"
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>IHostTaskManager::SetUILocale 方法
-向宿主通知公共语言运行时（CLR）已更改当前正在执行的任务的用户界面（UI）区域设置或区域性。  
+
+向宿主通知公共语言运行时 (CLR) 已更改当前正在执行的任务的用户界面 (UI) 区域设置或区域性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,6 +35,7 @@ HRESULT SetUILocale (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `lcid`  
  中映射到新分配的地理区域和语言的区域设置标识符值。  
   
@@ -41,7 +43,7 @@ HRESULT SetUILocale (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`SetUILocale`已成功返回。|  
+|S_OK|`SetUILocale` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -49,15 +51,17 @@ HRESULT SetUILocale (
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
 |E_NOTIMPL|宿主不允许托管用户代码更改 UI 区域性。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `SetUILocale`当 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 托管代码更改属性的值时，运行时调用。 此方法为主机提供了对区域设置同步所需的任何机制的机会。 如果主机不允许从托管代码更改 UI 区域设置，或未实现同步区域设置的机制，则它应从此方法返回 E_NOTIMPL。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

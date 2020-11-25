@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-ms.openlocfilehash: 2715a5b6b03a5ad33a6f18fb736fce3911bfbef0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 51fec26837b3c7f0a0328a7b64ff4a02148283da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500021"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725503"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched 方法
-通知探查器已从内存中删除了实时（JIT）编译的函数。  
+
+通知探查器已将实时 (JIT) 编译的函数从内存中删除。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,16 +34,19 @@ HRESULT JITFunctionPitched(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `functionId`  
  中已移除的函数的 ID。  
   
 ## <a name="remarks"></a>注解  
- 如果调用删除的函数，则在重新编译该函数时，探查器将接收新的 JIT 编译事件。 当前，公共语言运行时（CLR） JIT 编译器不会从内存中删除函数，因此，当前未使用此回调，探查器将不会接收该回调。  
+
+ 如果调用删除的函数，则在重新编译该函数时，探查器将接收新的 JIT 编译事件。 当前，公共语言运行时 (CLR) JIT 编译器不会从内存中删除函数，因此，当前不使用此回调，探查器将不会接收该回调。  
   
  重新 `functionId` 编译该函数之前，的值无效。 重新编译函数时， `functionId` 将使用相同的值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

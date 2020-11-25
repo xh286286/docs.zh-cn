@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: b913affb4728dc80ba67438384cbeac87265f76d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 4d0cf22b4b0644d6b25d6b3ef884718cb9ca1e42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723774"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request 方法
-由公共语言运行时（CLR）数据访问服务调用，用来请求操作，如实现所定义。  
+
+由公共语言运行时调用 (CLR) 数据访问服务请求操作，如实现所定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,6 +41,7 @@ HRESULT Request (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `reqCode`  
  中用户定义的。  
   
@@ -55,13 +57,15 @@ HRESULT Request (
  `outBuffer`  
  弄包含响应的缓冲区。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `Request`方法便于添加未指定的自定义操作。 也就是说，此方法提供了扩展性，无需版本的接口定义。  
   
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   

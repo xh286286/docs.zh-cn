@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 31782b36-d311-4518-8f45-25f65385af5b
 topic_type:
 - apiref
-ms.openlocfilehash: 57981ef134dc3f30337d47f5cee426a25d0414cf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7ce100a68a3e2b8963ed14bbf044fa9ba11d629f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500034"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725508"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted 方法
-通知探查器实时（JIT）编译器已开始编译函数。  
+
+通知探查器实时 (JIT) 编译器已开始编译函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,6 +35,7 @@ HRESULT JITCompilationStarted(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `functionId`  
  中要开始编译的函数的 ID。  
   
@@ -43,12 +45,14 @@ HRESULT JITCompilationStarted(
  尽管的值 `true` 不会损害运行时，但它可能会使分析结果变形。  
   
 ## <a name="remarks"></a>注解  
- `JITCompilationStarted`由于运行时处理类构造函数的方式，每个函数可以接收多对和[ICorProfilerCallback：： JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md)调用。 例如，运行时开始 JIT 编译方法 A，但类 B 的类构造函数需要运行。 因此，运行时 JIT 编译类 B 的构造函数并运行它。 当构造函数正在运行时，它会调用方法 A，这将导致再次 JIT 编译方法 A。 在此方案中，方法 A 的第一次 JIT 编译将暂停。 但是，将使用 JIT 编译事件来报告 JIT 编译方法 A 的两种尝试。 如果探查器将通过调用[ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)方法替换方法 A 的 Microsoft 中间语言（MSIL）代码，则它必须为这两个事件都 `JITCompilationStarted` 使用同一 MSIL 块。  
+
+ `JITCompilationStarted`由于运行时处理类构造函数的方式，每个函数可以接收多对和[ICorProfilerCallback：： JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md)调用。 例如，运行时开始 JIT 编译方法 A，但类 B 的类构造函数需要运行。 因此，运行时 JIT 编译类 B 的构造函数并运行它。 当构造函数正在运行时，它会调用方法 A，这将导致再次 JIT 编译方法 A。 在此方案中，方法 A 的第一次 JIT 编译将暂停。 但是，将使用 JIT 编译事件来报告 JIT 编译方法 A 的两种尝试。 如果探查器将使用 [ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) 方法替换方法 A 的 Microsoft 中间语言 (MSIL) 代码，它必须为这两个 `JITCompilationStarted` 事件都使用同一 msil 块。  
   
- 当两个线程同时进行回调时，探查器必须支持 JIT 回调的序列。 例如，线程 A 调用 `JITCompilationStarted` 。 但是，在线程 A 调用之前 `JITCompilationFinished` ，线程 B 使用线程 A 的回调中的函数 ID 调用[ICorProfilerCallback：： ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) `JITCompilationStarted` 。 由于探查器尚未收到对的调用，因此该函数 ID 可能会似乎无效 `JITCompilationFinished` 。 但是，在这种情况下，函数 ID 有效。  
+ 当两个线程同时进行回调时，探查器必须支持 JIT 回调的序列。 例如，线程 A 调用 `JITCompilationStarted` 。 但是，在线程 A 调用之前 `JITCompilationFinished` ，线程 B 使用线程 A 的回调中的函数 ID 调用 [ICorProfilerCallback：： ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) `JITCompilationStarted` 。 由于探查器尚未收到对的调用，因此该函数 ID 可能会似乎无效 `JITCompilationFinished` 。 但是，在这种情况下，函数 ID 有效。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

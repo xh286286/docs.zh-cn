@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: 6ae0fec0f8de2bbe3862f9f70ed9cf3d32af34c4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a0285970a8a42c078aa663579e1d5998d0d1c037
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894212"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724450"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 接口
 
@@ -30,7 +30,7 @@ ms.locfileid: "82894212"
 |方法|说明|  
 |------------|-----------------|  
 |[EnumerateFrames 方法](icordebugchain-enumerateframes-method.md)|获取一个枚举数，该枚举数包含链中所有托管堆栈帧（从最新帧开始）。|  
-|[GetActiveFrame 方法](icordebugchain-getactiveframe-method.md)|获取链上的活动（即最近的）帧。|  
+|[GetActiveFrame 方法](icordebugchain-getactiveframe-method.md)|获取当前链上的活动 (，即最近) 的帧。|  
 |[GetCallee 方法](icordebugchain-getcallee-method.md)|获取此链调用的链。|  
 |[GetCaller 方法](icordebugchain-getcaller-method.md)|获取调用此链的链。|  
 |[GetContext 方法](icordebugchain-getcontext-method.md)|未实现。|  
@@ -42,14 +42,16 @@ ms.locfileid: "82894212"
 |[GetThread 方法](icordebugchain-getthread-method.md)|获取此调用链所属的物理线程。|  
 |[IsManaged 方法](icordebugchain-ismanaged-method.md)|获取一个值，该值指示此链是否正在运行托管代码。|  
   
-## <a name="remarks"></a>备注  
- 链中的堆栈帧占用连续堆栈空间并共享相同的线程和上下文。 链可以表示托管或非托管代码链。 空`ICorDebugChain`实例表示非托管代码链。  
+## <a name="remarks"></a>注解  
+
+ 链中的堆栈帧占用连续堆栈空间并共享相同的线程和上下文。 链可以表示托管或非托管代码链。 空 `ICorDebugChain` 实例表示非托管代码链。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

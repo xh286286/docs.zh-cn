@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 90688132b98f8316a4b08988c08b2f7cc7ce0fd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894966"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725039"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue 接口
 
@@ -38,14 +38,16 @@ ms.locfileid: "82894966"
 |[GetRank 方法](icordebugarrayvalue-getrank-method.md)|获取数组中的维度数。|  
 |[HasBaseIndicies 方法](icordebugarrayvalue-hasbaseindicies-method.md)|确定数组是否具有基索引。|  
   
-## <a name="remarks"></a>备注  
- `ICorDebugArrayValue`支持一维数组和多维数组。  
+## <a name="remarks"></a>注解  
+
+ `ICorDebugArrayValue` 支持一维数组和多维数组。  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

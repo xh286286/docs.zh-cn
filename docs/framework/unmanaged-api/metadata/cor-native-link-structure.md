@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: a11b7d5939c4c20504b1ff3dfb4613f85bca0db4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 15f573ebc07bcf08a1ab8f5a5bbb88e940c5c8dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007970"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724164"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK 结构
+
 包含用于链接本机代码的信息。  
   
 ## <a name="syntax"></a>语法  
@@ -37,18 +38,19 @@ typedef struct
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`m_linkType`|要在本机代码中链接的类型。 此值为[CorNativeLinkType](cornativelinktype-enumeration.md)值之一。|  
-|`m_flags`|链接本机代码时链接器使用的标志。 此值为[CorNativeLinkFlags](cornativelinkflags-enumeration.md)值之一。|  
+|`m_linkType`|要在本机代码中链接的类型。 此值为 [CorNativeLinkType](cornativelinktype-enumeration.md) 值之一。|  
+|`m_flags`|链接本机代码时链接器使用的标志。 此值为 [CorNativeLinkFlags](cornativelinkflags-enumeration.md) 值之一。|  
 |`m_entryPoint`|表示入口点的 MemberRef 元数据标记。 格式为 `lib:entrypoint`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

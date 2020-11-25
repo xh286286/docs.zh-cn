@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 17c91200730431c4c6e230b8c1561ce7c4863868
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6d783e27c60db7381025f3b2382728e3996323ae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008178"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725724"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 方法
+
 创建 `Assembly` 包含指定程序集的元数据的结构，并返回关联的元数据标记。  
   
 ## <a name="syntax"></a>语法  
@@ -40,6 +41,7 @@ HRESULT DefineAssembly (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pbPublicKey`  
  中标识程序集发行者的公钥; 如果程序集没有强名称，则为 NULL。  
   
@@ -56,20 +58,22 @@ HRESULT DefineAssembly (
  中指向 ASSEMBLYMETADATA 实例的指针，其中包含程序集的版本、平台和区域设置信息。  
   
  `dwAssemblyFlags`  
- 中[CorAssemblyFlags](corassemblyflags-enumeration.md)值的组合，用于描述程序集的功能。  
+ 中 [CorAssemblyFlags](corassemblyflags-enumeration.md) 值的组合，用于描述程序集的功能。  
   
  `pmda`  
  弄指向元数据标记的指针。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `Assembly`清单中只能定义一个元数据结构。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

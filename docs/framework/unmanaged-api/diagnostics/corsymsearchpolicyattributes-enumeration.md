@@ -14,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 8af71314cf8a24c710d3b8980c082daaf9186715
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d5d19fb3fb7c727227827dacbaac2c910ac8b3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725217"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 枚举
+
 指定在搜索符号读取器时要使用的策略。 [ISymUnmanagedBinder2：： GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md)和[ISymUnmanagedBinder3：： GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md)方法使用这些常量。  
   
 > [!IMPORTANT]
-> 打开不受信任的源中的程序数据库（PDB）文件会带来安全风险。  
+> 从不受信任的源中打开程序数据库 (PDB) 文件会带来安全风险。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +42,7 @@ typedef enum CorSymSearchPolicyAttributes
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`AllowRegistryAccess`|在注册表中查询符号搜索路径。|  
 |`AllowSymbolServerAccess`|访问符号服务器。|  
@@ -49,6 +50,7 @@ typedef enum CorSymSearchPolicyAttributes
 |`AllowReferencePathAccess`|搜索 .exe 文件所在位置的 PDB。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

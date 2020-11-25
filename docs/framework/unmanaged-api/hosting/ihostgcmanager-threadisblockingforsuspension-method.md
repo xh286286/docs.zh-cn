@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-ms.openlocfilehash: 0417a4acc0f4f39d8254eb5d5df3b3e690921a8a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9120085f6a241bcda04946a843799987bf82bb84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804831"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723878"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>IHostGCManager::ThreadIsBlockingForSuspension 方法
+
 通知宿主从中发出方法调用的线程将要阻止垃圾回收。  
   
 ## <a name="syntax"></a>语法  
@@ -35,25 +36,27 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`ThreadIsBlockingForSuspension`已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|S_OK|`ThreadIsBlockingForSuspension` 已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE| (CLR) 的公共语言运行时未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  CLR 通常会调用 `ThreadIsBlockForSuspension` 方法来准备垃圾回收，从而为主机提供重新计划线程以执行非托管任务的机会。  
   
 > [!IMPORTANT]
-> 只有在调用之后，宿主才能重新安排任务 `ThreadIsBlockingForSuspension` 。 运行时调用[SuspensionStarting](ihostgcmanager-suspensionstarting-method.md)后，主机不得重新计划任务。  
+> 只有在调用之后，宿主才能重新安排任务 `ThreadIsBlockingForSuspension` 。 运行时调用 [SuspensionStarting](ihostgcmanager-suspensionstarting-method.md)后，主机不得重新计划任务。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

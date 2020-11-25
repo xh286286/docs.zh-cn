@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d3bbdea3b2f23ddd2207ff2a036f32978cd837e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442132"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725126"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay 接口
+
 提供显示有关正在运行的应用程序的当前绑定信息的方法。  
   
 ## <a name="methods"></a>方法  
@@ -32,7 +33,8 @@ ms.locfileid: "83442132"
 |[InitializeForProcess 方法](ibindingdisplay-initializeforprocess-method.md)|初始化 `IBindingDisplay` 对象。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** BindingDisplay  
   

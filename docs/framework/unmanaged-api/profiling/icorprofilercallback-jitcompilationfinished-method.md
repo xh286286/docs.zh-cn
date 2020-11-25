@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: 0da67f0d4be779cc21481d03a21209620289888e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 98e81d2d02a9495b678d49fb916f99068dd604f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500049"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725529"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished 方法
-通知探查器，实时（JIT）编译器已完成编译函数。  
+
+通知探查器实时 (JIT) 编译器已经完成了对函数的编译。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +52,8 @@ HRESULT JITCompilationFinished(
   尽管的值 `true` 不会损害运行时，但它可能会使分析结果变形。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

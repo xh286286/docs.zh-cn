@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-ms.openlocfilehash: 70514464f27d6123a4de1d5800ed016a39541287
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8e188f304908a8029a57bb059046205c35346f3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207545"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724684"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next 方法
-从当前位置开始，获取枚举中指定数量的对象的相对虚拟地址（Rva）。  
+
+从当前位置开始，获取枚举中指定数目的对象 (Rva) 的相对虚拟地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `celt`  
  [in] 要检索的对象数。  
   
@@ -47,7 +49,8 @@ HRESULT Next (
  弄一个指针，指向实际返回的对象数。 如果为1，则此值可以为 null `celt` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -55,4 +58,4 @@ HRESULT Next (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

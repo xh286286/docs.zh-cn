@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: e474cac6437413565a1ebddfa88c3e228fe59d41
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e676547d20dc9535241150d24b65e1fbaf9e89ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556344"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725100"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 枚举
+
 包含一些标志值，用于控制打开清单文件时的元数据行为。  
   
 ## <a name="syntax"></a>语法  
@@ -65,12 +66,13 @@ typedef enum CorOpenFlags
 |`ofReserved`|保留以供内部使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [元数据枚举](metadata-enumerations.md)

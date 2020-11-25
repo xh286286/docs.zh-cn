@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: c0b6d53ce3be3aed6a577bf6e38a281928499848
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 585a9e39f529294841cd11389f03d763968a0f5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009023"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723813"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps 方法
+
 获取具有指定元数据签名的清单资源的属性集。  
   
 ## <a name="syntax"></a>语法  
@@ -40,6 +41,7 @@ HRESULT GetManifestResourceProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mdmr`  
  中一个 `mdManifestResource` 标记，表示要获取其属性的资源。  
   
@@ -59,14 +61,15 @@ HRESULT GetManifestResourceProps (
  弄一个指向值的指针，该值指定文件中资源开始处的偏移量。  
   
  `pdwResourceFlags`  
- 弄一个指针，指向用于描述应用于资源的元数据的标志。 Flags 值是一个或多个[CorManifestResourceFlags](cormanifestresourceflags-enumeration.md)值的组合。  
+ 弄一个指针，指向用于描述应用于资源的元数据的标志。 Flags 值是一个或多个 [CorManifestResourceFlags](cormanifestresourceflags-enumeration.md) 值的组合。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

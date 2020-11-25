@@ -9,17 +9,19 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e376544a9d428ce5110a7e38b92a8e830f574664
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504467"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725178"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>诊断符号存储区接口
+
 本主题介绍了一些非托管接口，这些接口允许编译器生成符号信息以供调试器使用。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [IBindingDisplay 接口](ibindingdisplay-interface.md)  
  提供显示有关正在运行的应用程序的当前绑定信息的方法。  
   
@@ -39,13 +41,13 @@ ms.locfileid: "84504467"
  提供 "编辑并继续" 功能的信息。  
   
  [ISymUnmanagedAsyncMethod 接口](isymunmanagedasyncmethod-interface.md)  
- 此接口是[ISymUnmanagedAsyncMethodPropertiesWriter 接口](isymunmanagedasyncmethodpropertieswriter-interface.md)的读取补充。  
+ 此接口是 [ISymUnmanagedAsyncMethodPropertiesWriter 接口](isymunmanagedasyncmethodpropertieswriter-interface.md)的读取补充。  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter 接口](isymunmanagedasyncmethodpropertieswriter-interface.md)  
- 允许为每个方法符号定义可选的异步方法信息。 必须使用与已打开的方法（即，在对[OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)和[CloseMethod 方法](isymunmanagedwriter-closemethod-method.md)的调用之间）。  
+ 允许为每个方法符号定义可选的异步方法信息。 必须将与已打开的方法一起使用 (即，在对 [OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)的调用与 [CloseMethod 方法](isymunmanagedwriter-closemethod-method.md) 的调用之间) 。  
   
  [ISymUnmanagedBinder 接口](isymunmanagedbinder-interface.md)  
- 表示非托管代码的符号联编程序。  
+ 表示非托管代码的符号绑定器。  
   
  [ISymUnmanagedBinder2 接口](isymunmanagedbinder2-interface.md)  
  表示非托管代码的符号联编程序，并扩展 `ISymUnmanagedBinder` 接口。  
@@ -75,7 +77,7 @@ ms.locfileid: "84504467"
  表示命名空间。  
   
  [ISymUnmanagedReader 接口](isymunmanagedreader-interface.md)  
- 表示一个符号读取器，该读取器提供对符号存储区中的文档、方法和变量的访问。  
+ 表示一个符号读取器，该读取器提供对符号存储区中文档、方法和变量的访问。  
   
  [ISymUnmanagedReader2 接口](isymunmanagedreader2-interface.md)  
  给定方法标记和编辑和复制版本号，获取符号读取器方法。  
@@ -114,6 +116,7 @@ ms.locfileid: "84504467"
  ISymUnmanagedWriter5 接口。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [诊断符号存储区枚举](diagnostics-symbol-store-enumerations.md)  
   
  [诊断符号存储区结构](diagnostics-symbol-store-structures.md)  

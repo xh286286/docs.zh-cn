@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-ms.openlocfilehash: bbf43f3936823b9a8e562cb32cfa2eef08840033
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8b3f6ae92e39f5385bf29f8b29abbb1726136088
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895188"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724762"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType 方法
+
 获取指定类型的数组，或指定类型的指针或引用。  
   
 ## <a name="syntax"></a>语法  
@@ -37,20 +38,22 @@ HRESULT GetArrayOrPointerType (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `elementType`  
- 中CorElementType 枚举的一个值，该值指定要创建的基础本机类型（数组、指针或引用）。  
+ 中CorElementType 枚举的一个值，指定要创建的数组、指针或引用)  (基础本机类型。  
   
  `nRank`  
- 中数组的秩（即维度的数目）。 如果`elementType`指定指针或引用类型，则此值必须为0。  
+ 中秩 (为数组的维数) 。 如果 `elementType` 指定指针或引用类型，则此值必须为0。  
   
  `pTypeArg`  
  中指向 ICorDebugType 对象的指针，该对象表示要创建的数组、指针或引用的类型。  
   
  `ppType`  
- 弄指向`ICorDebugType`对象地址的指针，该对象表示构造的数组、指针类型或引用类型。  
+ 弄指向对象地址的指针 `ICorDebugType` ，该对象表示构造的数组、指针类型或引用类型。  
   
-## <a name="remarks"></a>备注  
- *ElementType*的值必须是下列值之一：  
+## <a name="remarks"></a>注解  
+
+ *ElementType* 的值必须是下列值之一：  
   
 - ELEMENT_TYPE_PTR  
   
@@ -58,10 +61,11 @@ HRESULT GetArrayOrPointerType (
   
 - ELEMENT_TYPE_ARRAY 或 ELEMENT_TYPE_SZARRAY  
   
- 如果*elementType*的值是 ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_BYREF，则*nRank*必须为零。  
+ 如果 *elementType* 的值是 ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_BYREF，则 *nRank* 必须为零。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

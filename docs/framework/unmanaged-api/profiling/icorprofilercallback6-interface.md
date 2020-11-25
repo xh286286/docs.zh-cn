@@ -11,17 +11,18 @@ api_type:
 ms.assetid: edc420b7-96d1-4dec-ace0-36d907f644bc
 topic_type:
 - apiref
-ms.openlocfilehash: 0156a7dfa2a67ce9e62b502df00fc6bc5fccf925
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2176b624a427994b9d2af4b5eba31a64c9288a0e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499176"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725464"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 接口
+
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
   
- 提供回调方法的[ICorProfilerCallback5](icorprofilercallback5-interface.md)的子类，公共语言运行时使用该方法通知探查器正在加载程序集。  
+ 提供回调方法的 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 的子类，公共语言运行时使用该方法通知探查器正在加载程序集。  
   
 ## <a name="methods"></a>方法  
   
@@ -32,7 +33,8 @@ ms.locfileid: "84499176"
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

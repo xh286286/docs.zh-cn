@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f71d8956e8706cdc71b94b6e6e2e8210e5b9161e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420612"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725230"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 枚举
+
 指示内存地址的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -44,9 +45,9 @@ typedef enum CorSymAddrKind
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|指示 Microsoft 中间语言（MSIL）本地变量或参数索引。|  
+|`ADDR_IL_OFFSET`|指示 (MSIL) 本地变量或参数索引的 Microsoft 中间语言。|  
 |`ADDR_NATIVE_RVA`|指示模块中的相对虚拟地址。|  
 |`ADDR_NATIVE_REGISTER`|指示 CPU 寄存器。|  
 |`ADDR_NATIVE_REGREL`|指示第一个地址是寄存器，第二个地址是偏移量。|  
@@ -58,6 +59,7 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_ISECTOFFSET`|指示第一个地址为节，第二个地址为偏移量。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅
