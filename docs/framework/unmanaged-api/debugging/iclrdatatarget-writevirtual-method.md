@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: 6a7a7736837f7e6bbf1ad4982e78a75550abbeab
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: df9315d4e007305fb38153e116dde02ba7f3a1b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860506"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723661"
 ---
-# <a name="iclrdatatargetwritevirtual-method"></a><span data-ttu-id="1b34e-102">ICLRDataTarget::WriteVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="1b34e-102">ICLRDataTarget::WriteVirtual Method</span></span>
-<span data-ttu-id="1b34e-103">将数据从指定的缓冲区写入指定的虚拟内存地址。</span><span class="sxs-lookup"><span data-stu-id="1b34e-103">Writes data from the specified buffer to the specified virtual memory address.</span></span>  
+# <a name="iclrdatatargetwritevirtual-method"></a><span data-ttu-id="a5b74-102">ICLRDataTarget::WriteVirtual 方法</span><span class="sxs-lookup"><span data-stu-id="a5b74-102">ICLRDataTarget::WriteVirtual Method</span></span>
+
+<span data-ttu-id="a5b74-103">将数据从指定的缓冲区写入指定的虚拟内存地址。</span><span class="sxs-lookup"><span data-stu-id="a5b74-103">Writes data from the specified buffer to the specified virtual memory address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b34e-104">语法</span><span class="sxs-lookup"><span data-stu-id="1b34e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5b74-104">语法</span><span class="sxs-lookup"><span data-stu-id="a5b74-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT WriteVirtual (  
@@ -37,28 +38,30 @@ HRESULT WriteVirtual (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1b34e-105">参数</span><span class="sxs-lookup"><span data-stu-id="1b34e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5b74-105">参数</span><span class="sxs-lookup"><span data-stu-id="a5b74-105">Parameters</span></span>  
+
  `address`  
- <span data-ttu-id="1b34e-106">中存储虚拟内存地址的 CLRDATA_ADDRESS。</span><span class="sxs-lookup"><span data-stu-id="1b34e-106">[in] A CLRDATA_ADDRESS that stores the virtual memory address.</span></span>  
+ <span data-ttu-id="a5b74-106">中存储虚拟内存地址的 CLRDATA_ADDRESS。</span><span class="sxs-lookup"><span data-stu-id="a5b74-106">[in] A CLRDATA_ADDRESS that stores the virtual memory address.</span></span>  
   
  `buffer`  
- <span data-ttu-id="1b34e-107">中指向存储要写入的数据的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="1b34e-107">[in] A pointer to a buffer that stores the data to be written.</span></span>  
+ <span data-ttu-id="a5b74-107">中指向存储要写入的数据的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="a5b74-107">[in] A pointer to a buffer that stores the data to be written.</span></span>  
   
  `bytesRequested`  
- <span data-ttu-id="1b34e-108">中要写入的字节数。</span><span class="sxs-lookup"><span data-stu-id="1b34e-108">[in] The number of bytes to be written.</span></span>  
+ <span data-ttu-id="a5b74-108">中要写入的字节数。</span><span class="sxs-lookup"><span data-stu-id="a5b74-108">[in] The number of bytes to be written.</span></span>  
   
  `bytesWritten`  
- <span data-ttu-id="1b34e-109">弄指向已写入的实际字节数的指针。</span><span class="sxs-lookup"><span data-stu-id="1b34e-109">[out] A pointer to the actual number of bytes that were written.</span></span>  
+ <span data-ttu-id="a5b74-109">弄指向已写入的实际字节数的指针。</span><span class="sxs-lookup"><span data-stu-id="a5b74-109">[out] A pointer to the actual number of bytes that were written.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b34e-110">要求</span><span class="sxs-lookup"><span data-stu-id="1b34e-110">Requirements</span></span>  
- <span data-ttu-id="1b34e-111">**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1b34e-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="1b34e-112">**标头：** ClrData，ClrData</span><span class="sxs-lookup"><span data-stu-id="1b34e-112">**Header:** ClrData.idl, ClrData.h</span></span>  
-  
- <span data-ttu-id="1b34e-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b34e-113">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="1b34e-114">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b34e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="1b34e-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1b34e-115">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="a5b74-110">要求</span><span class="sxs-lookup"><span data-stu-id="a5b74-110">Requirements</span></span>  
 
-- [<span data-ttu-id="1b34e-116">ICLRDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="1b34e-116">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)
+ <span data-ttu-id="a5b74-111">**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a5b74-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="a5b74-112">**标头：** ClrData，ClrData</span><span class="sxs-lookup"><span data-stu-id="a5b74-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+  
+ <span data-ttu-id="a5b74-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5b74-113">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="a5b74-114">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5b74-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="a5b74-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a5b74-115">See also</span></span>
+
+- [<span data-ttu-id="a5b74-116">ICLRDataTarget 接口</span><span class="sxs-lookup"><span data-stu-id="a5b74-116">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)
