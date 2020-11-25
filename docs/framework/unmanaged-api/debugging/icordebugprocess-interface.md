@@ -14,27 +14,28 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: ab48efccc88787f099a182627777db95304cdc3e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7f9d4ac99234545ef75d9b91e6e84f79a133ffef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212069"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694914"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess 接口
+
 表示正在执行托管代码的进程。 此接口是 ICorDebugController 的子类。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[ClearCurrentException 方法](icordebugprocess-clearcurrentexception-method.md)|清除给定线程上的当前非托管异常。|  
 |[EnableLogMessages 方法](icordebugprocess-enablelogmessages-method.md)|启用和禁用向调试器发送日志消息。|  
 |[EnumerateAppDomains 方法](icordebugprocess-enumerateappdomains-method.md)|枚举进程中的所有应用程序域。|  
 |[EnumerateObjects 方法](icordebugprocess-enumerateobjects-method.md)|未实现。|  
 |[GetHandle 方法](icordebugprocess-gethandle-method.md)|获取进程的句柄。|  
-|[GetHelperThreadID 方法](icordebugprocess-gethelperthreadid-method.md)|获取调试器的内部帮助器线程的操作系统（OS）线程 ID。|  
-|[GetID 方法](icordebugprocess-getid-method.md)|获取进程的操作系统（OS） ID。|  
+|[GetHelperThreadID 方法](icordebugprocess-gethelperthreadid-method.md)|获取调试器的内部帮助器线程 (操作系统) 线程 ID。|  
+|[GetID 方法](icordebugprocess-getid-method.md)|获取进程的操作系统 (操作系统) ID。|  
 |[GetObject 方法](icordebugprocess-getobject-method.md)|未实现。|  
 |[GetThread 方法](icordebugprocess-getthread-method.md)|获取具有指定 OS 线程 ID 的 ICorDebugThread 实例。|  
 |[GetThreadContext 方法](icordebugprocess-getthreadcontext-method.md)|获取给定线程的上下文。|  
@@ -46,13 +47,14 @@ ms.locfileid: "83212069"
 |[ThreadForFiberCookie 方法](icordebugprocess-threadforfibercookie-method.md)|已弃用。|  
 |[WriteMemory 方法](icordebugprocess-writememory-method.md)|将数据写入进程中的内存区域。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -60,7 +62,7 @@ ms.locfileid: "83212069"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebug 接口](icordebug-interface.md)
 - [调试接口](debugging-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-ms.openlocfilehash: 97d79f70097bef7768316907887cea2c38dd81e1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a90bba4a4dc9ca92ccdc4af1636d194f92fd7373
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212823"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695718"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue 方法
+
 获取为此本机帧存储在指定寄存器中的参数或局部变量的值。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT GetLocalRegisterValue (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `reg`  
  中"CorDebugRegister" 枚举的一个值，它指定包含该值的寄存器。  
   
@@ -49,11 +51,13 @@ HRESULT GetLocalRegisterValue (
  `ppValue`  
  弄一个指向 "ICorDebugValue" 对象地址的指针，该对象表示存储在指定寄存器中的检索到的值。  
   
-## <a name="remarks"></a>备注  
- `GetLocalRegisterValue`方法可以在本机框架或实时（JIT）编译的框架中使用。  
+## <a name="remarks"></a>注解  
+
+ `GetLocalRegisterValue`方法既可以在本机框架中使用，也可以在实时 (JIT) 编译的框架中使用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -61,4 +65,4 @@ HRESULT GetLocalRegisterValue (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

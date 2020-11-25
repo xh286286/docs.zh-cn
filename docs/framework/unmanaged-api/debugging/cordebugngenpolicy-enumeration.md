@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: edb4e4d2-3166-44d4-8b17-bf302f7ea093
 topic_type:
 - apiref
-ms.openlocfilehash: 036d3f12b38c19259fefaba674d0f9025a58d688
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b64de0fa2ecbddd2decf69a4099d9897ec42a563
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795750"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696422"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 枚举
+
 提供用于确定调试器是否从本机映像缓存中加载本机 (NGen) 映像的值。  
   
 ## <a name="syntax"></a>语法  
@@ -40,11 +41,13 @@ enum CorDebugNGENPolicy {
 |-----------------|-----------------|  
 |`DISABLE_LOCAL_NIC`|在 Windows 8.x 应用商店应用中，禁用了本地本机映像缓存中的映像。 在桌面应用中，此设置不起作用。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `CorDebugNGENPolicy`枚举由[ICorDebugProcess5：： EnableNGENPolicy](icordebugprocess5-enablengenpolicy-method.md)方法使用。 禁用本地本机映像缓存中的映像可提供一致的调试体验，方法是确保调试器加载可调试 JIT 编译的映像，而不是优化的本机映像。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

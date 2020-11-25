@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-ms.openlocfilehash: e542145e888049231a6c5e4cccbb4ee96c62f98b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9aee95c554afad5b2ea3cf157fc9e62c9b7e40e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213252"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696110"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken 方法
+
 获取此函数的元数据标记。  
   
 ## <a name="syntax"></a>语法  
@@ -34,11 +35,13 @@ HRESULT GetToken (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pMethodDef`  
  弄指向 `mdMethodDef` 引用此函数的元数据的标记的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

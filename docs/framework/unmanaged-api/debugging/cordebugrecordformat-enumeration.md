@@ -10,14 +10,15 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: cfbd856c73ab10642a7cf7c16cfb2d70e7fe9756
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b3a22d7b32eb258263d373ae91b3fb7fbc9aae99
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795724"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696383"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>“Cor调试记录格式”枚举
+
 描述包含本机异常调试事件相关信息的字节数组的数据格式。  
   
 ## <a name="syntax"></a>语法  
@@ -36,14 +37,16 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|数据为 32 位 Windows 异常记录。|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|数据为 64 位 Windows 异常记录。|  
   
-## <a name="remarks"></a>备注  
- 枚举的成员将传递给[DecodeEvent](icordebugprocess6-decodeevent-method.md)方法，以便在其`pRecord`参数中指示字节数组的格式。 `CorDebugRecordFormat`  
+## <a name="remarks"></a>注解  
+
+ 枚举的成员 `CorDebugRecordFormat` 将传递给 [DecodeEvent](icordebugprocess6-decodeevent-method.md) 方法，以便在其参数中指示字节数组的格式 `pRecord` 。  
   
 > [!NOTE]
 > 此枚举仅用于 .NET Native 调试方案。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

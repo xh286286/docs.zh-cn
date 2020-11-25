@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1c94e03aa088d8f48eb7f7a418cebd0492319513
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795824"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696578"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 枚举
-标识堆栈帧的类型。 此枚举由[ICorDebugInternalFrame：： GetFrameType](icordebuginternalframe-getframetype-method.md)方法使用。  
+
+标识堆栈帧的类型。 此枚举由 [ICorDebugInternalFrame：： GetFrameType](icordebuginternalframe-getframetype-method.md) 方法使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +48,7 @@ typedef enum CorDebugInternalFrameType {
   
 |成员|说明|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|一个 null 值。 `ICorDebugInternalFrame::GetFrameType`方法从不返回此值。|  
+|`STUBFRAME_NONE`|Null 值。 `ICorDebugInternalFrame::GetFrameType`方法从不返回此值。|  
 |`STUBFRAME_M2U`|托管到非托管的存根帧。|  
 |`STUBFRAME_U2M`|非托管到托管的存根帧。|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|应用程序域之间的转换。|  
@@ -60,7 +61,8 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_JIT_COMPILATION`|运行时对方法进行 JIT 编译。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

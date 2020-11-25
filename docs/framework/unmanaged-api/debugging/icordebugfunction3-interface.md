@@ -10,14 +10,15 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 8c9c507f00780d5ef5c5aeb28a1b10493351f37e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 17eda7470e5f2e4b41d1f2ed164843eaeeedea93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546967"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695864"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 接口
+
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
   
  对 ICorDebugFunction 接口进行逻辑扩展，以提供对 ReJIT 请求中的代码的访问。  
@@ -31,7 +32,8 @@ ms.locfileid: "90546967"
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -39,8 +41,8 @@ ms.locfileid: "90546967"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试接口](debugging-interfaces.md)
 - [调试](index.md)
-- [ReJIT：操作方法指南](/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT： How-To 指南](/archive/blogs/davbr/rejit-a-how-to-guide)
