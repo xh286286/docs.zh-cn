@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6185c5dda69a0cf7e9847ddc021448612a426b19
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716052"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason 枚举
+
 指示启动调用链的一个或多个原因。  
   
 ## <a name="syntax"></a>语法  
@@ -44,9 +45,9 @@ typedef enum CorDebugChainReason {
 } CorDebugChainReason;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`CHAIN_NONE`|尚未启动任何调用链。|  
 |`CHAIN_CLASS_INIT`|由构造函数启动该链。|  
@@ -62,18 +63,20 @@ typedef enum CorDebugChainReason {
 |`CHAIN_CONTEXT_SWITCH`|未使用。|  
 |`CHAIN_FUNC_EVAL`|由函数求值启动该链。|  
   
-## <a name="remarks"></a>备注  
- 使用[ICorDebugChain：： GetReason](icordebugchain-getreason-method.md)方法来确定启动调用链的原因。  
+## <a name="remarks"></a>注解  
+
+ 使用 [ICorDebugChain：： GetReason](icordebugchain-getreason-method.md) 方法来确定启动调用链的原因。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试枚举](debugging-enumerations.md)

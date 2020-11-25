@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 87a5224247c2d94613de482fbaa34bf978198bf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008893"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715532"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc 方法
+
 将 .reloc 指令添加到基本代码。  
   
  此方法已过时，不应使用。  
@@ -39,6 +40,7 @@ HRESULT AddSectionReloc (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `section`  
  中要将 .reloc 指令添加到的内存中代码部分。  
   
@@ -49,14 +51,15 @@ HRESULT AddSectionReloc (
  中引用的部分 `offset` 。  
   
  `relocType`  
- 中[CeeSectionRelocType](ceesectionreloctype-enumeration.md)值之一，指示要添加的 .reloc 指令的类型。  
+ 中 [CeeSectionRelocType](ceesectionreloctype-enumeration.md) 值之一，指示要添加的 .reloc 指令的类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

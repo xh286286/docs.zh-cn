@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808e1f1d-52f4-47c4-83cc-dcf47d075219
 topic_type:
 - apiref
-ms.openlocfilehash: 164a8c15a501af44aabb95852400621f05bbe873
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: a3f52deab4d0c8ca56fae2e65912217e51abe58a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762777"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715857"
 ---
 # <a name="iclrvalidatorformateventinfo-method"></a>ICLRValidator::FormatEventInfo 方法
+
 获取有关指定验证错误的详细消息。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT FormatEventInfo (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `hVECode`  
  中传递给验证错误处理程序的 HRESULT 值。  
   
@@ -57,19 +59,20 @@ HRESULT FormatEventInfo (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`FormatEventInfo`已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|S_OK|`FormatEventInfo` 已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE| (CLR) 的公共语言运行时未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** IValidator，IValidator  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

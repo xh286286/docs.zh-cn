@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bc389b7247a6b1d6ce16cb3cf350f1672213b2e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716416"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 方法
+
 定义单个全局变量。  
   
 ## <a name="syntax"></a>语法  
@@ -40,6 +41,7 @@ HRESULT DefineGlobalVariable(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `name`  
  中指向 `WCHAR` 的指针，该指针定义全局变量名称。  
   
@@ -65,9 +67,11 @@ HRESULT DefineGlobalVariable(
  中参数规范的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

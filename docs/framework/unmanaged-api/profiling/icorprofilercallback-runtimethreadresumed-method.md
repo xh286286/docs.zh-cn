@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-ms.openlocfilehash: d3949189a72583ebb50b67a270694a31f1eb23dc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0996d7eb5b7354a67106ec7aa8818d5e4d46232e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503206"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717220"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed 方法
+
 通知探查器指定的线程在挂起后已恢复。  
   
 ## <a name="syntax"></a>语法  
@@ -33,11 +34,13 @@ HRESULT RuntimeThreadResumed(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `threadId`  
  中已恢复的线程的 ID。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

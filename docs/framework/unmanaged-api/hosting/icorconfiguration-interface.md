@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: aaf96116-372b-4538-afb1-9e0fcdac1f98
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8c9421dea4040a9f183b886f1ad8575cace780
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fa8d15bc8e504a57d5cc87c170a3a5b022798add
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715779"
 ---
 # <a name="icorconfiguration-interface"></a>ICorConfiguration 接口
-提供用于配置公共语言运行时（CLR）的方法。  
+
+提供 (CLR) 配置公共语言运行时的方法。  
   
 ## <a name="methods"></a>方法  
   
@@ -34,11 +35,12 @@ ms.locfileid: "83762419"
 |[SetGCThreadControl 方法](icorconfiguration-setgcthreadcontrol-method.md)|设置回调接口，用于为非运行时任务计划线程，否则将阻止垃圾回收。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

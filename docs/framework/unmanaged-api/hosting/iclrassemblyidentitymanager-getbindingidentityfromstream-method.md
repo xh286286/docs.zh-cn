@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40123b30-a589-46b3-95d3-af7b2b0baa05
 topic_type:
 - apiref
-ms.openlocfilehash: abba19600616cad8ba3377ae2ebb23459449d2a0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f1e6a47c0838782ae0610d49ca7fce3eb8554458
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615977"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716702"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream 方法
+
 获取指定流中的程序集的规范程序集标识数据。  
   
 ## <a name="syntax"></a>语法  
@@ -37,11 +38,12 @@ HRESULT GetBindingIdentityFromStream (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pStream`  
  中要计算的程序集流。  
   
  `dwFlags`  
- 中提供用于将来的扩展性。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT 是当前版本的公共语言运行时（CLR）支持的唯一值。  
+ 中提供用于将来的扩展性。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT 是公共语言运行时的当前版本 (CLR) 支持的唯一值。  
   
  `pwzBuffer`  
  弄包含不透明程序集标识数据的缓冲区。  
@@ -63,11 +65,12 @@ HRESULT GetBindingIdentityFromStream (
 |E_FAIL|发生未知的灾难性故障。 如果方法返回 E_FAIL，则 CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

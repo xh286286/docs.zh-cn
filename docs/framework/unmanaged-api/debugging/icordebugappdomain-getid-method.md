@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-ms.openlocfilehash: 63346c679efc083dea9ab0eaa4f983a5308695f8
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 88866d75cc97d40c827359450e8e7bdbe13ef3ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895256"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715883"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId 方法
+
 获取应用程序域的唯一标识符。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pId`  
  弄应用程序域的唯一标识符。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  应用程序域的标识符在包含进程中是唯一的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

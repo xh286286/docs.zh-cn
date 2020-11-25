@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-ms.openlocfilehash: 772f0c00bb850e35a6f5bf7fa4df2b3052999df5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6cd931f6c680a07327915ab4680702af298ca1ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499787"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717302"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated 方法
+
 通知代码探查器已创建垃圾回收句柄。  
   
 ## <a name="syntax"></a>语法  
@@ -34,6 +35,7 @@ HRESULT HandleCreated(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `handleId`  
  中垃圾回收的句柄的 ID。  
   
@@ -41,7 +43,8 @@ HRESULT HandleCreated(
  中为其创建垃圾回收句柄的对象的 ID。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

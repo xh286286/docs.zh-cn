@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 功能详细信息
 description: 本文介绍 .NET Framework 4 添加到 Windows Workflow Foundation 的新功能，以及这些功能可能有用的方案。
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6c508e184aee0e4aa0634d128de94ac45ef78f45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554601"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716286"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 
@@ -114,7 +114,7 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 ## <a name="data-contract-resolver"></a>数据协定解析程序
 
-.NET 3.5 中包含对已知类型的设计的几个限制：
+在 .NET Framework 3.5 中，已知类型的设计存在一些限制：
 
 - 在序列化或反序列化过程中不能动态添加已知类型。
 
@@ -122,7 +122,7 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 - 用户无法指定他们想要在网络上显示的 xsi:type，例如，使网络上的序列化实例更小一些。
 
-[DataContractResolver](../wcf/samples/datacontractresolver.md)在 .net 4.5 中解决了这些问题。
+[DataContractResolver](../wcf/samples/datacontractresolver.md)在 .NET Framework 4.5 中解决了这些问题。
 
 ### <a name="getting-started"></a>入门
 
@@ -144,7 +144,7 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 ## <a name="flowchart"></a>流程图
 
-流程图是用于以可视方式表示域问题的已知范例。 它是我们在 .NET 4 中引入的新的控制流样式。 流程图的核心特点是，在任何给定时间只能执行一个活动。 流程图可以表示循环和备选结果，但无法表示多个节点的并发执行。
+流程图是用于以可视方式表示域问题的已知范例。 这是我们在 .NET Framework 4 中引入的新的控制流样式。 流程图的核心特点是，在任何给定时间只能执行一个活动。 流程图可以表示循环和备选结果，但无法表示多个节点的并发执行。
 
 ### <a name="getting-started"></a>入门
 
@@ -264,7 +264,7 @@ WCF 配置架构很复杂，并为用户提供很多难以查找功能的用户�
 
 ## <a name="wcf-routing-service"></a>WCF 路由服务
 
-路由服务是一种通用软件路由器，可用于控制 WCF 消息在客户端和服务之间的流动方式。 使用路由服务，您可以将客户端与服务分离，这为您提供了更大的可支持的配置，并且在考虑如何托管服务时具有的灵活性。 在 .NET 3.5 中，客户端和服务紧密耦合;客户端必须了解它需要与之通信的所有服务。 此外，.NET Framework 3.5 中的 WCF 具有以下限制：
+路由服务是一种通用软件路由器，可用于控制 WCF 消息在客户端和服务之间的流动方式。 使用路由服务，您可以将客户端与服务分离，这为您提供了更大的可支持的配置，并且在考虑如何托管服务时具有的灵活性。 在 .NET Framework 3.5 中，客户端和服务紧密耦合;客户端必须了解它需要与之通信的所有服务。 此外，.NET Framework 3.5 中的 WCF 具有以下限制：
 
 - 错误处理较为复杂，因为必须将此逻辑硬编码到客户端中。
 

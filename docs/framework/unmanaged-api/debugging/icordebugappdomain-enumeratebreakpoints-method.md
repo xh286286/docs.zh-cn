@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 206069c5-25cb-4794-9d69-67c5aa7ed0af
 topic_type:
 - apiref
-ms.openlocfilehash: bb994ae32c9e0e61c06c60521361a5c6c78d12fa
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 20c8a1987e48a88a3b8c92cf9f36fb58166cda9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895280"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715974"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>ICorDebugAppDomain::EnumerateBreakpoints 方法
+
 获取应用程序域中所有活动断点的枚举器。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT EnumerateBreakpoints (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppBreakpoints`  
  弄指向 ICorDebugBreakpointEnum 对象地址的指针，该对象是应用程序域中所有活动断点的枚举器。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  枚举器包含所有类型的断点，包括函数断点和数据断点。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

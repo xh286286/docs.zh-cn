@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cff6707496c7d9657796deb8bf6fa9165ff295a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446663"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717079"
 ---
 # <a name="addfile2-method"></a>AddFile2 方法
+
 将文件添加到程序集。 还可用于创建未绑定的模块。  
   
 ## <a name="syntax"></a>语法  
@@ -38,6 +39,7 @@ HRESULT AddFile2(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  向其中添加文件的程序集的 ID。  
   
@@ -45,7 +47,7 @@ HRESULT AddFile2(
  要添加的文件的名称。  
   
  `dwFlags`  
- COM + `FileDef` 标志，如 `ffContainsNoMetaData` 和 `ffWriteable`。 `dwFlags` 传递给[DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
+ COM + `FileDef` 标志 `ffContainsNoMetaData` ，例如和 `ffWriteable` 。 `dwFlags` 传递给 [DefineFile 方法](../metadata/imetadataassemblyemit-definefile-method.md)。  
   
  `pEmitter`  
  [IMetaDataEmit2 接口](../metadata/imetadataemit2-interface.md)接口的接口。  
@@ -54,9 +56,11 @@ HRESULT AddFile2(
  接收要添加的文件的 ID。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink。  
   
 ## <a name="see-also"></a>另请参阅
