@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-ms.openlocfilehash: 38f49e8fe632e9b38ede8815de6d8865278351f9
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 44ecba99999d04603477f411e68834548f6a7cda
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693536"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone 方法
-创建此[ICorPublishEnum](icorpublishenum-interface.md)对象的副本。  
+
+创建此 [ICorPublishEnum](icorpublishenum-interface.md) 对象的副本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +35,13 @@ HRESULT Clone (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppEnum`  
  弄指向作为 `ICorPublishEnum` 此对象副本的对象地址的指针 `ICorPublishEnum` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** CorPub，CorPub  
   
