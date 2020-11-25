@@ -2,14 +2,15 @@
 title: ICorDebugMergedAssemblyRecord::GetSimpleName 方法
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: f6c6682c8bb23143d308aa4f1a6887b28ea82fcd
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 11e43846f7b119933fb53bdf21423e28bbb792ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209703"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710540"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName 方法
+
 获取程序集的简单名。  
   
 ## <a name="syntax"></a>语法  
@@ -23,6 +24,7 @@ HRESULT GetSimpleName(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cchName`  
  [in] `szName` 缓冲区中的字符数。  
   
@@ -32,14 +34,16 @@ HRESULT GetSimpleName(
  `szName`  
  指向字符数组的指针。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  此方法检索程序集的简单名（例如“System.Collections”），该名称不带文件扩展名、版本、区域性或公钥标记。 它对应托管代码中的 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 属性。  
   
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -47,7 +51,7 @@ HRESULT GetSimpleName(
   
  **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugMergedAssemblyRecord 接口](icordebugmergedassemblyrecord-interface.md)
 - [调试接口](debugging-interfaces.md)

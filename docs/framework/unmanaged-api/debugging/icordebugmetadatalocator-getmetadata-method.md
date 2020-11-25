@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: d9269339e8e2ae8d00da701b015aa30cd51cbef3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 63efb788d8bca84da94921371309704cc7b20ac4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213369"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710436"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
+
 要求调试器返回模块（完成该调试器请求的操作需要其元数据）的完整路径。  
   
 ## <a name="syntax"></a>语法  
@@ -40,11 +41,12 @@ HRESULT GetMetaData(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `wszImagePath`  
- [in] 以 null 结尾的字符串，表示文件的完整路径。 如果完整路径不可用，则为该文件的名称和扩展名（*文件名*）。*扩展名*）。  
+ [in] 以 null 结尾的字符串，表示文件的完整路径。 如果未提供完整路径，则文件的名称和扩展名 (*filename*。*扩展*) 。  
   
  `dwImageTimeStamp`  
- [in] 来自图像 PE 文件头的时间戳。 此参数可能用于符号服务器（[SymSrv](/windows/desktop/debug/using-symsrv)）查找。  
+ [in] 来自图像 PE 文件头的时间戳。 此参数可能用于符号服务器 ([SymSrv](/windows/desktop/debug/using-symsrv)) lookup。  
   
  `dwImageSize`  
  [in] PE 文件头中的图像大小。 此参数可能可以用于 SymSrv 查找。  
@@ -63,18 +65,21 @@ HRESULT GetMetaData(
  `ofReadOnly` [CorOpenFlags](../metadata/coropenflags-enumeration.md)枚举中的标志用于请求对此文件中元数据的只读访问。  
   
 ## <a name="return-value"></a>返回值  
+
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。 所有其他失败的 HRESULT 均指示文件不可检索。  
   
-|HRESULT|描述|  
+|HRESULT|说明|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。 `wszPathBuffer` 包含文件的完整路径，以 null 结尾。|  
 |E_NOT_SUFFICIENT_BUFFER|`wszPathBuffer` 的当前大小不足以容纳完整路径。 在这种情况下，`pcchPathBuffer` 包含所需的 `WCHAR` 计数（包括终止 null 字符），并且使用请求的缓冲区大小第二次调用 `GetMetaData`。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  如果 `wszImagePath` 包含转储中模块的完整路径，则它从收集转储的计算机指定路径。 文件可能不位于此位置，或者具有相同名称的不正确文件可能存储在该路径上。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -82,7 +87,7 @@ HRESULT GetMetaData(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugThread4 接口](icordebugthread4-interface.md)
 - [调试接口](debugging-interfaces.md)
