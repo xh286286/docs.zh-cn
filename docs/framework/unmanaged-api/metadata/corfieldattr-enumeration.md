@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4e40f684cc1578672cb8ff474972ce9cdc39efb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718821"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 枚举
+
 包含一些值，用于描述字段的相应元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -58,7 +59,7 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|指定辅助功能信息。|  
 |`fdPrivateScope`|指定该字段不能被引用。|  
@@ -81,7 +82,8 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|指定该字段具有相对虚拟地址。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

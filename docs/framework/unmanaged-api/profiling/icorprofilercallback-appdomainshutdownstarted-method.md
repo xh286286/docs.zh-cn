@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 1b973cdeaffbec0dad1f2d082c44e8001647fdcc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cb0b763059c787b8f3e93e6c46b0e7fb2f8f8b2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500450"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718457"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 方法
+
 通知探查器正在从进程中卸载应用程序域。  
   
 ## <a name="syntax"></a>语法  
@@ -39,10 +40,12 @@ HRESULT AppDomainShutdownStarted(
   \[中的] 标识存储应用程序的程序集的域。
 
 ## <a name="remarks"></a>注解  
+
  `appDomainId`此方法返回后，的值对任何信息请求都无效 `AppDomainShutdownStarted` -这是探查器获取有关此应用程序域的信息的最后机会。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

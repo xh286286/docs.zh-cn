@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-ms.openlocfilehash: ffbc9a10ff48b3dfd59b95c0f6b9ecab80b6a49c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: dd599ce8c63fa94e1a18b4e2d18fa334238728bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718873"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 枚举
+
 指定可以使用声明性安全执行的安全操作。  
   
 ## <a name="syntax"></a>语法  
@@ -56,7 +57,7 @@ typedef enum CorDeclSecurity {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`dclActionMask`|保留。|  
 |`dclActionNil`|保留。|  
@@ -68,7 +69,7 @@ typedef enum CorDeclSecurity {
 |`dclLinktimeCheck`|需要在给定的时间段内向直接调用方授予指定的权限。|  
 |`dclInheritanceCheck`|需要继承另一个类或重写方法的派生类已被授予指定的权限。|  
 |`dclRequestMinimum`|调用方可以请求运行代码所需的最小权限。 此操作仅可以在程序集的作用域内使用。|  
-|`dclRequestOptional`|调用方可以请求可选的附加权限（不需要运行）。 此请求隐式拒绝所有未明确请求的其他权限。 此操作仅可以在程序集的作用域内使用。|  
+|`dclRequestOptional`|调用方可以请求其他可选权限，这 (不需要运行) 。 此请求隐式拒绝所有未明确请求的其他权限。 此操作仅可以在程序集的作用域内使用。|  
 |`dclRequestRefuse`|调用方对可能被误用的权限的请求将不会被授予。 此操作仅可以在程序集的作用域内使用。|  
 |`dclPrejitGrant`|保留。|  
 |`dclPrejitDenied`|保留。|  
@@ -81,7 +82,8 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|保留。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1bda761-6292-4750-a14b-7d5db8f33456
 topic_type:
 - apiref
-ms.openlocfilehash: ff1dabcfc366607639cd98be4392f8dd59dc83a1
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fe2db3df688f91ec6e1aadd8cc3bb43726e5c30f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442002"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719952"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn 方法
+
 当调用返回时调用。  
   
 ## <a name="syntax"></a>语法  
@@ -37,8 +38,9 @@ HRESULT OnSyncCallReturn
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `in_CallID`  
- 中从其返回的调用的 ID。 请参阅[CALL_ID 结构](call-id-structure.md)。  
+ 中从其返回的调用的 ID。 请参阅 [CALL_ID 结构](call-id-structure.md)。  
   
  `in_pBuffer`  
  中调用缓冲区。  
@@ -47,9 +49,11 @@ HRESULT OnSyncCallReturn
  中调用缓冲区的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另请参阅

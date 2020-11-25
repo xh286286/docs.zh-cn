@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: ae30140e69926be32570960a32524a74b850bda4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b83c868f1a804d4e6f32adffc190ae086aa5e0a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719328"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
+
 获取在指定范围内定义的类型（位于当前范围之外）的元数据标记。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT DefineTypeRefByName (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tkResolutionScope`  
  中指定解析范围的标记。 以下令牌类型有效：  
   
@@ -56,11 +58,12 @@ HRESULT DefineTypeRefByName (
  弄指向分配给类型的标记的指针 `mdTypeRef` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

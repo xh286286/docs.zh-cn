@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 99dc141cca0f911c8dd65645f6c22d950cc678d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004349"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719536"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 方法
+
 创建类型定义的元数据签名，返回 `mdTypeDef` 该类型的标记，并指定该定义类型是参数所引用的类型的成员 `tdEncloser` 。  
   
 ## <a name="syntax"></a>语法  
@@ -39,11 +40,12 @@ HRESULT DefineNestedType (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `szTypeDef`  
  中Unicode 中类型的名称。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef`属性. 这是一个值的位掩码 `CorTypeAttr` 。  
+ [in] `TypeDef` 属性. 这是一个值的位掩码 `CorTypeAttr` 。  
   
  `tkExtends`  
  中基类的标记。 这是 `mdTypeDef` 或 `mdTypeRef` 令牌。  
@@ -55,14 +57,15 @@ HRESULT DefineNestedType (
  中封闭类型的标记。 数组的最后一个元素必须是 `mdTokenNil` 。  
   
  `ptd`  
- 弄`mdTypeDef`分配的令牌。  
+ 弄 `mdTypeDef` 分配的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

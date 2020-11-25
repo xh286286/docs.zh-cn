@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-ms.openlocfilehash: dd82709064fe7f7d912d93f4b3f0248769f02b9e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8a2a6be0db76f5ee2c7fa67c2038e0a5c845bd0f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894890"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719705"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted 方法
+
 获取一个值，该值指示运行时安全系统是否已向程序集授予完全信任。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT IsFullyTrusted(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pbFullyTrusted`  
- 弄`true`如果程序集已被运行时安全系统授予完全信任，则为; 否则为。否则为`false`。  
+ [out] `true` 如果程序集已被运行时安全系统授予完全信任，则为; 否则为。否则为 `false` 。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  如果程序集的安全策略尚未解析（即，如果尚未运行程序集中的代码），则此方法将返回 CORDBG_E_NOTREADY 的 HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

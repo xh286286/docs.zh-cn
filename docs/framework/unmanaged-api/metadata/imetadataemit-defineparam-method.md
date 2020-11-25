@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5b3f89bb14be0d7128682f8702548545b1e50928
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004343"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719523"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
+
 创建具有指定标记所引用的方法的指定签名的参数定义，并获取该参数定义的标记。  
   
 ## <a name="syntax"></a>语法  
@@ -41,6 +42,7 @@ HRESULT DefineParam (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `md`  
  中正在定义其参数的方法的标记。  
   
@@ -63,17 +65,19 @@ HRESULT DefineParam (
  中的大小（以 Unicode 字符为格式） `pValue` 。  
   
  `ppd`  
- 弄`mdParamDef`分配的令牌。  
+ 弄 `mdParamDef` 分配的令牌。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  参数的序列值 `ulParamSeq` 从1开始。 返回值的序列号为0。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

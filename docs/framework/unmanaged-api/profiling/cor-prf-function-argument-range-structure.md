@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: 8b3785955ec138bbf898e84aa4deb5ed2a6e6b53
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 028395b1c8677d07d4a6481740ecdc7ebb48c180
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718509"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 结构
+
 表示内存中按从左向右的顺序连续存储的函数自变量块。  
   
 ## <a name="syntax"></a>语法  
@@ -41,7 +42,8 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 |`length`|连续块的长度。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
   

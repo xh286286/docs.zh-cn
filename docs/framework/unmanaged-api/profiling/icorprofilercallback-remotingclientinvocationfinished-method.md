@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea4b283b-1210-4f41-a7a2-c398b1adde4e
 topic_type:
 - apiref
-ms.openlocfilehash: f5786db1f17e8a463dc78f9c93464145be3a8f32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d41ccd30707eba269bbac7231e06792363615544
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499982"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719315"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a>ICorProfilerCallback::RemotingClientInvocationFinished 方法
+
 通知探查器远程处理调用已在客户端上完成运行。  
   
 ## <a name="syntax"></a>语法  
@@ -32,15 +33,16 @@ HRESULT RemotingClientInvocationFinished();
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果远程处理调用是同步的，则它还会在服务器上运行到完成。 如果远程处理调用是异步的，则在处理调用时可能仍会出现回复。 如果需要答复，则会作为对[ICorProfilerCallback：： RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md)的调用，以及对的其他调用 `RemotingClientInvocationFinished` 以指示异步调用所需的辅助处理。  
+
+ 如果远程处理调用是同步的，则它还会在服务器上运行到完成。 如果远程处理调用是异步的，则在处理调用时可能仍会出现回复。 如果需要答复，则会作为对 [ICorProfilerCallback：： RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) 的调用，以及对的其他调用 `RemotingClientInvocationFinished` 以指示异步调用所需的辅助处理。  
   
  以下每对回调都将在同一线程上进行：  
   
-- `RemotingClientInvocationStarted`和[ICorProfilerCallback：： RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted` 和 [ICorProfilerCallback：： RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
-- [ICorProfilerCallback：： RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md)和[ICorProfilerCallback：： RemotingClientInvocationFinished](icorprofilercallback-remotingclientinvocationfinished-method.md)  
+- [ICorProfilerCallback：： RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) 和 [ICorProfilerCallback：： RemotingClientInvocationFinished](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
-- [ICorProfilerCallback：： RemotingServerInvocationReturned](icorprofilercallback-remotingserverinvocationreturned-method.md)和[ICorProfilerCallback：： RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md)  
+- [ICorProfilerCallback：： RemotingServerInvocationReturned](icorprofilercallback-remotingserverinvocationreturned-method.md) 和 [ICorProfilerCallback：： RemotingServerSendingReply](icorprofilercallback-remotingserversendingreply-method.md)  
   
  应注意远程处理回调的以下问题：  
   
@@ -49,7 +51,8 @@ HRESULT RemotingClientInvocationFinished();
 - 探查器不会为异步远程处理事件接收准确的通知。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

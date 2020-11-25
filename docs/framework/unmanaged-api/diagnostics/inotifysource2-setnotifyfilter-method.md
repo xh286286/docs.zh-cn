@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6351fc92-b126-4af6-9bf3-0a8ce92845fc
 topic_type:
 - apiref
-ms.openlocfilehash: 7ba9f68e102696da107b5cb782c76cb55ed95ee6
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 99bce831405d722f1f1ca0ae56e60f95f2d905e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441963"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719926"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter 方法
+
 分配用于此源的通知筛选器。  
   
 ## <a name="syntax"></a>语法  
@@ -36,16 +37,19 @@ HRESULT SetNotifyFilter
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `in_NotifyFilter`  
- 中[NOTIFY_FILTER](notify-filter-enumeration.md)枚举值的按位组合，这些值用于标识调试器 API 的回调。  
+ 中 [NOTIFY_FILTER](notify-filter-enumeration.md) 枚举值的按位组合，这些值用于标识调试器 API 的回调。  
   
  `in_pUserThreadFilter`  
- 中一个指针，指向用于标识调试器 API 的线程的[USER_THREAD](user-thread-structure.md)结构。  
+ 中一个指针，指向用于标识调试器 API 的线程的 [USER_THREAD](user-thread-structure.md) 结构。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另请参阅

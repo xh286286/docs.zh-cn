@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007918"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718964"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 枚举
+
 指定可应用属性的应用程序元素。  
   
 ## <a name="syntax"></a>语法  
@@ -60,10 +61,10 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`catAssembly`|可以对程序集应用属性。|  
-|`catModule`|特性可应用到可移植的可执行文件（.dll 或 .exe）模块。|  
+|`catModule`|特性可应用到可移植的可执行文件 ( .dll 或 .exe) 模块。|  
 |`catClass`|可以对类应用属性。|  
 |`catStruct`|可以对结构应用属性，即值类型。|  
 |`catEnum`|可以对枚举应用属性。|  
@@ -79,13 +80,15 @@ typedef enum CorAttributeTargets
 |`catAll`|可以对任何应用程序元素应用属性。|  
 |`catClassMembers`|特性可应用于类的成员。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `CorAttributeTargets`枚举值可以与按位 "或" 运算组合在一起，以获取首选组合。  
   
  等效 `CorAttributeTargets` 托管 <xref:System.AttributeTargets?displayProperty=nameWithType> 枚举。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

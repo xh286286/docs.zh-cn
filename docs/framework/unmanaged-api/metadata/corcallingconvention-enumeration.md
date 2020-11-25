@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c9b20500a4a9e4649a938e00e3b059d1395da1d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007896"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718925"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 枚举
+
 包含一些值，用于描述托管代码中执行的调用约定类型。  
   
 ## <a name="syntax"></a>语法  
@@ -50,7 +51,7 @@ typedef enum CorCallingConvention
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`IMAGE_CEE_CS_CALLCONV_DEFAULT`|指示默认调用约定。|  
 |`IMAGE_CEE_CS_CALLCONV_VARARG`|指示该方法采用可变数量的参数。|  
@@ -67,7 +68,8 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|指示包含类型参数的显式数目的泛型方法签名。 这优先于普通参数计数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corhdr。h  
   

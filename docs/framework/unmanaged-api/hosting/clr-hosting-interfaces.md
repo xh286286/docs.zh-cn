@@ -6,19 +6,21 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-ms.openlocfilehash: e6913e18a4ff6e616f357a4ef43fb8b892264943
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 77f2ba64d9bdbe9793d56e88dae46fd506119ab8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616835"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719042"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 承载接口
-本节介绍非托管主机可用于将公共语言运行时（CLR）集成到其应用程序中的接口。 此信息适用于2.0 版及更高版本的 .NET Framework。 这些接口使宿主能够控制运行时的更多方面，而不是在版本1.0 和1.1 中提供的，并且在 CLR 与宿主的执行模型之间提供了更紧密的集成。  
+
+本部分介绍了非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序的接口。 此信息适用于2.0 版及更高版本的 .NET Framework。 这些接口使宿主能够控制运行时的更多方面，而不是在版本1.0 和1.1 中提供的，并且在 CLR 与宿主的执行模型之间提供了更紧密的集成。  
   
  在 .NET Framework 版本1.0 和1.1 中，托管模型启用了一个非托管主机，用于将 CLR 加载到进程中、配置特定设置以及接收事件通知。 不过，通常情况下，主机和 CLR 在该进程中单独运行。 在 .NET Framework 版本2.0 及更高版本中，新的抽象层允许宿主提供当前由 Win32 程序集中的类型提供的多个资源，并扩展主机可配置的功能集。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [IActionOnCLREvent 接口](iactiononclrevent-interface.md)  
  提供一个方法，该方法对已注册的事件执行回调。  
   
@@ -29,7 +31,7 @@ ms.locfileid: "83616835"
  提供设置运行时配置的方法。  
   
  [ICatalogServices 接口](icatalogservices-interface.md)  
- 提供用于编录服务的方法。 （此接口支持 .NET Framework 基础结构，不应在代码中直接使用。）  
+ 提供用于编录服务的方法。  (此接口支持 .NET Framework 基础结构，不应在代码中直接使用。 )   
   
  [ICLRAssemblyIdentityManager 接口](iclrassemblyidentitymanager-interface.md)  
  提供一些方法，这些方法支持宿主与 CLR 之间的有关程序集的通信。  
@@ -74,7 +76,7 @@ ms.locfileid: "83616835"
  提供一些方法，这些方法使宿主可以使用 CLR 内部的程序集标识数据来操作由文件或流引用的程序集集，而无需创建或了解这些标识。  
   
  [ICLRRuntimeHost 接口](iclrruntimehost-interface.md)  
- 提供类似于[ICorRuntimeHost](icorruntimehost-interface.md)的功能，另外还提供了一个用于设置宿主控件接口的方法。  
+ 提供类似于 [ICorRuntimeHost](icorruntimehost-interface.md)的功能，另外还提供了一个用于设置宿主控件接口的方法。  
   
  [ICLRSyncManager 接口](iclrsyncmanager-interface.md)  
  为宿主提供方法，以获取有关请求任务的信息，并在其同步实现中检测死锁。  
@@ -86,7 +88,7 @@ ms.locfileid: "83616835"
  提供使宿主能够显式请求 CLR 创建新任务、获取当前正在执行的任务以及设置任务的地理语言和区域性的方法。  
   
  [ICLRValidator 接口](iclrvalidator-interface.md)  
- 提供用于验证可移植可执行（PE）映像和报告验证错误的方法。  
+ 提供用于验证 (PE) 映像和报告验证错误的可移植可执行文件的方法。  
   
  [ICorConfiguration 接口](icorconfiguration-interface.md)  
  提供配置 CLR 的方法。  
@@ -104,7 +106,7 @@ ms.locfileid: "83616835"
  提供一些方法，用于获取有关垃圾回收系统的信息并控制垃圾回收的某些方面。  
   
  [IGCHost2 接口](igchost2-interface.md)  
- 提供[SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md)方法，该方法使宿主可以将垃圾回收段的大小和垃圾回收系统的代零的最大大小设置为大于的值 `DWORD` 。  
+ 提供 [SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md) 方法，该方法使宿主可以将垃圾回收段的大小和垃圾回收系统的代零的最大大小设置为大于的值 `DWORD` 。  
   
  [IGCHostControl 接口](igchostcontrol-interface.md)  
  提供一个方法，该方法使垃圾回收器能够请求宿主更改虚拟内存的限制。  
@@ -173,18 +175,19 @@ ms.locfileid: "83616835"
  提供了一种方法，用于从间接寻址解包按值封送对象。  
   
  [ITypeName 接口](itypename-interface.md)  
- 提供用于获取类型名称信息的方法。 （此接口支持 .NET Framework 基础结构，不应在代码中直接使用。）  
+ 提供用于获取类型名称信息的方法。  (此接口支持 .NET Framework 基础结构，不应在代码中直接使用。 )   
   
  [ITypeNameBuilder 接口](itypenamebuilder-interface.md)  
- 提供用于生成类型名称的方法。 （此接口支持 .NET Framework 基础结构，不应在代码中直接使用。）  
+ 提供用于生成类型名称的方法。  (此接口支持 .NET Framework 基础结构，不应在代码中直接使用。 )   
   
  [ITypeNameFactory 接口](itypenamefactory-interface.md)  
- 提供用于析构类型名称的方法。 （此接口支持 .NET Framework 基础结构，不应在代码中直接使用。）  
+ 提供用于析构类型名称的方法。  (此接口支持 .NET Framework 基础结构，不应在代码中直接使用。 )   
   
  IValidator  
- 提供用于验证可移植可执行（PE）映像和报告验证错误的方法。  
+ 提供用于验证 (PE) 映像和报告验证错误的可移植可执行文件的方法。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [弃用的 CLR 承载接口和 Coclass](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  包含描述 .NET Framework 版本1.0 和1.1 中提供的托管接口的主题。  
   

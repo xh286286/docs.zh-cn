@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: a308017dc80dd973cbf108ba9df824193775f5ff
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3058229a3c2b3c529136dad70fea35a23708a33
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501048"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718652"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE 枚举
+
 指示代码刚进入或离开的异常子句的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|异常子句无效。|  
 |`COR_PRF_CLAUSE_FILTER`|Exception 子句是一个筛选器表达式。|  
@@ -45,7 +46,8 @@ typedef enum {
 |`COR_PRF_CLAUSE_FINALLY`|Exception 子句为 `finally` 语句。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

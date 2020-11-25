@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2a4a15126f34666a58021a59e9e193685b15a49
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719484"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
+
 使用指定的和方法访问器创建指定类型的属性定义， `get` `set` 并获取该属性定义的标记。  
   
 ## <a name="syntax"></a>语法  
@@ -45,6 +46,7 @@ HRESULT DefineProperty (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `td`  
  中正在为其定义属性的类或接口的标记。  
   
@@ -67,7 +69,7 @@ HRESULT DefineProperty (
  中属性的默认值。  
   
  `cchValue`  
- 中中的（Unicode）字符的计数 `pValue` 。  
+ 中中 (Unicode) 字符的计数 `pValue` 。  
   
  `mdSetter`  
  中用于设置属性值的方法。  
@@ -79,14 +81,15 @@ HRESULT DefineProperty (
  中与属性关联的其他方法的数组。 使用终止数组 `mdTokenNil` 。  
   
  `pmdProp`  
- 弄`mdProperty`分配的令牌。  
+ 弄 `mdProperty` 分配的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

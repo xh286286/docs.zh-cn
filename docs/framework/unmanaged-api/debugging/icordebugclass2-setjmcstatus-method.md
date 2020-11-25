@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-ms.openlocfilehash: 9fb2f960098e970b4d3d9f0be499f4d9fda6558e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1db2c9b5e65ae150f05242172f5ea16db433bbb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893896"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717820"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus 方法
+
 对于类的每个方法，设置一个值，该值指示该方法是否为用户定义的代码。  
   
 ## <a name="syntax"></a>语法  
@@ -34,16 +35,19 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `bIsJustMyCode`  
- 中设置为`true`以指示该方法是用户定义的代码;否则，将设置`false`为。  
+ 中如果设置为，则 `true` 指示该方法是用户定义的代码; 否则设置为 `false` 。  
   
-## <a name="remarks"></a>备注  
- 仅我的代码（JMC）分档器将跳过非用户定义的代码。 用户定义的代码必须是可调试代码的子集。  
+## <a name="remarks"></a>注解  
+
+ ) 分档器 (JMC 的简单代码将跳过非用户定义的代码。 用户定义的代码必须是可调试代码的子集。  
   
- `SetJMCStatus`如果无法为任何方法设置值，则返回 S_FALSE 的 HRESULT 值，即使它成功设置了所有其他方法的值也是如此。  
+ `SetJMCStatus` 如果无法为任何方法设置值，则返回 S_FALSE 的 HRESULT 值，即使它成功设置了所有其他方法的值也是如此。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

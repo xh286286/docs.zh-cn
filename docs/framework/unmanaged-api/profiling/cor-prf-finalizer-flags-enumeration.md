@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 297d7721-3911-4f36-9e34-d9da0c33e22a
 topic_type:
 - apiref
-ms.openlocfilehash: b273faafd7abb86ace58bb5c24473406af3ce20e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2b766715d6d87ab17a7cdabf721bbebf67e1ff13
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500966"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718574"
 ---
 # <a name="cor_prf_finalizer_flags-enumeration"></a>COR_PRF_FINALIZER_FLAGS 枚举
+
 描述对象的终结器。  
   
 ## <a name="syntax"></a>语法  
@@ -34,15 +35,17 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`COR_PRF_FINALIZER_CRITICAL`|终结器至关重要。|  
   
 ## <a name="remarks"></a>注解  
+
  `COR_PRF_FINALIZER_FLAGS` [ICorProfilerCallback2：： FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md)方法使用枚举来描述对象的终结器。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

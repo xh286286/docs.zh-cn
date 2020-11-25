@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0014bb66-590c-486c-9ade-f2133905cd99
 topic_type:
 - apiref
-ms.openlocfilehash: 34b5f3bd5908d3833a2223b078f8d796234641be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1eef43858e4f38888f9f31e3076b092fbdd5633
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134454"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719900"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone 方法
-创建此[IAssemblyEnum](iassemblyenum-interface.md)对象的浅表副本。  
+
+创建此 [IAssemblyEnum](iassemblyenum-interface.md) 对象的浅表副本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,16 +35,18 @@ HRESULT Clone (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppEnum`  
  弄指向复制的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IAssemblyEnum 接口](iassemblyenum-interface.md)

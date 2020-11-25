@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0803f0b55f19b779f5b6608a9f8200d2b085b504
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 76134a2447cbc40b5c97304540d9907648bc89e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615151"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719913"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken 方法
+
 返回此方法的元数据标记。  
   
 ## <a name="syntax"></a>语法  
@@ -33,13 +34,16 @@ HRESULT GetToken(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pToken`  
  弄指向的指针， `mdMethodDef` 该指针接收包含元数据所需的缓冲区大小（以字符数表示）。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

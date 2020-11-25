@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cc507cb0-df2e-49c2-b32e-0c3271a8df9a
 topic_type:
 - apiref
-ms.openlocfilehash: f9b00d5e34300f1ed16eaddff3bf8e877219f910
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c796e3782a498c798c9b47f028ef05c2de00f54d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893791"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717662"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress 方法
-获取此 "ICorDebugCode" 接口表示的代码段的相对虚拟地址（RVA）。  
+
+获取此 "ICorDebugCode" 接口表示的代码段 (RVA) 的相对虚拟地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +35,13 @@ HRESULT GetAddress (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pStart`  
  弄指向代码段的 RVA 的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

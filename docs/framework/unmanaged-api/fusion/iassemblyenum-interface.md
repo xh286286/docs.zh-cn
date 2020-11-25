@@ -14,32 +14,34 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22fcdb834f84bb3a9304e22a4b45ebb340f3590f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134424"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719874"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum 接口
-表示 `IAssemblyName` 对象的数组的枚举数。  
+
+表示对象数组的枚举器 `IAssemblyName` 。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[Clone 方法](iassemblyenum-clone-method.md)|创建此 `IAssemblyEnum` 对象的浅表副本。|  
-|[GetNextAssembly 方法](iassemblyenum-getnextassembly-method.md)|获取一个指针，该指针指向此 `IAssemblyEnum` 对象中包含的下一个 `IAssemblyName`。|  
+|[Clone 方法](iassemblyenum-clone-method.md)|创建此对象的浅表副本 `IAssemblyEnum` 。|  
+|[GetNextAssembly 方法](iassemblyenum-getnextassembly-method.md)|获取一个指针，该指针指向 `IAssemblyName` 此对象中包含的下一个 `IAssemblyEnum` 。|  
 |[Reset 方法](iassemblyenum-reset-method.md)|将此 `IAssemblyEnum` 对象重置为其起始位置。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 合成。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [合成接口](fusion-interfaces.md)
 - [IAssemblyName 接口](iassemblyname-interface.md)

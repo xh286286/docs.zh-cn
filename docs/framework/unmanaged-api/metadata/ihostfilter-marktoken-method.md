@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7061343-d0a3-4fd5-b312-61974f98bd62
 topic_type:
 - apiref
-ms.openlocfilehash: 11529ce896f265f2b200fa6e511d4b913e9147c8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b4db3b115517f0a146aeab469f091008d31efc86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008217"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718223"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken 方法
+
 指示将处理指定的元数据标记。  
   
 ## <a name="syntax"></a>语法  
@@ -34,18 +35,21 @@ HRESULT MarkToken (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tk`  
  中要处理的元数据标记。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  通常，如果令牌在元数据范围内，则需要对其进行处理。 `MarkToken`方法通过[IMetaDataEmit：： SetHandler](imetadataemit-sethandler-method.md)方法传递给元数据引擎。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
