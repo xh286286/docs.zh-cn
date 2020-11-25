@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-ms.openlocfilehash: 8f3697f8b193319ebb7b155ad79b8ec25a0a2266
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: eb95bf779e54742cd2cc4b688c24a49e6d85a40d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205278"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731899"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError 方法
-通知调试器在尝试处理来自公共语言运行时（CLR）的事件时出错。  
+
+通知调试器在尝试处理来自公共语言运行时 (CLR) 的事件时出错。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,6 +37,7 @@ HRESULT DebuggerError (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pProcess`  
  中一个指向 "ICorDebugProcess" 对象的指针，该对象表示发生事件的进程。  
   
@@ -45,13 +47,15 @@ HRESULT DebuggerError (
  `errorCode`  
  中一个整数，指定 CLR 错误。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  根据错误的性质，此过程可能会置于直通模式下。  
   
- `DebugError`回调指示调试服务由于错误而被禁用，因此调试器应向用户提供错误消息。 [ICorDebugProcess：： GetID](icordebugprocess-getid-method.md)可以安全调用，但所有其他方法（包括[ICorDebug：： Terminate](icordebug-terminate-method.md)）都不应调用。 调试器应使用操作系统工具来终止进程。  
+ `DebugError`回调指示调试服务由于错误而被禁用，因此调试器应向用户提供错误消息。 [ICorDebugProcess：： GetID](icordebugprocess-getid-method.md) 可以安全调用，但所有其他方法（包括 [ICorDebug：： Terminate](icordebug-terminate-method.md)）都不应调用。 调试器应使用操作系统工具来终止进程。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -59,6 +63,6 @@ HRESULT DebuggerError (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

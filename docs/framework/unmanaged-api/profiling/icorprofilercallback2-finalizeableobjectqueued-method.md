@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: e2e01c396a67614464e3d4ca50de992388961463
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4429524b5f3baff3251acbd7ef7954d30a3e0093
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731942"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued 方法
+
 通知代码探查器，具有终结器的对象已排入终结器线程，以执行其 `Finalize` 方法。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,16 @@ HRESULT FinalizeableObjectQueued(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `finalizerFlags`  
- 中一个[COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md)枚举的值，该值描述终结器的各个方面。  
+ 中一个 [COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md) 枚举的值，该值描述终结器的各个方面。  
   
  `objectID`  
  中已排队的对象的 ID。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

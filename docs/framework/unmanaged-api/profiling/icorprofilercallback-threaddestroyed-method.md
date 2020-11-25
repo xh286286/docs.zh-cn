@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-ms.openlocfilehash: c63b91c39ded58ed208f6920c2bfaeba410c093c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0cef868861155d553aba42fe28c3f1f1b86763b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731964"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed 方法
+
 通知探查器线程已销毁。  
   
 ## <a name="syntax"></a>语法  
@@ -33,14 +34,17 @@ HRESULT ThreadDestroyed(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `threadId`  
  中已销毁的线程的 ID。  
   
 ## <a name="remarks"></a>注解  
+
  `threadId`此调用时，该值不再有效。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

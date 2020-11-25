@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: ac6de9a16fad6ba9d14f3960ddd28c42c111f254
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b1672d98d76241e5af4b6b60a38785f1278e15a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009387"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731587"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 方法
+
 获取一个指针，该指针指向导出的类型（给定其名称和封闭类型）。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT FindExportedTypeByName (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `szName`  
  中导出的类型的名称。  
   
@@ -45,15 +47,17 @@ HRESULT FindExportedTypeByName (
  `ptkExportedType`  
  弄一个指针，指向 `mdExportedType` 表示导出类型的标记。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `FindExportedTypeByName`方法使用公共语言运行时所使用的标准规则来解析引用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

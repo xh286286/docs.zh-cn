@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-ms.openlocfilehash: 2d0461709accf1a9300c072b62bd58734cb33fb8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 05fed13a556cbcc3b8362e41d73c2b659b1e5eeb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209807"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731782"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception 方法
+
 通知调试器已从托管代码引发了异常。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT Exception (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pAppDomain`  
  中指向 ICorDebugAppDomain 对象的指针，该对象表示引发异常的应用程序域。  
   
@@ -45,11 +47,13 @@ HRESULT Exception (
  `unhandled`  
  中如果此值为 `false` ，则应用程序尚未处理异常; 否则，异常未得到处理，将终止进程。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  可以从线程对象中检索特定的异常。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -57,6 +61,6 @@ HRESULT Exception (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)
