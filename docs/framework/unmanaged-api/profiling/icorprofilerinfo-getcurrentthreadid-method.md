@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-ms.openlocfilehash: fa0fe827300a86a906a254292434e2a56ebb4a47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 18298c4c726d7d850e67afbf82ca77b7511d8917
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498396"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722580"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID 方法
+
 获取当前线程的 ID （如果它是托管线程）。  
   
 ## <a name="syntax"></a>语法  
@@ -33,14 +34,17 @@ HRESULT GetCurrentThreadID(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pThreadId`  
  弄指向托管线程的返回 ID 的指针。  
   
 ## <a name="remarks"></a>注解  
+
  如果当前线程是内部运行时线程或其他非托管线程，则 `GetCurrentThreadID` 返回 CORPROF_E_NOT_MANAGED_THREAD 作为 HRESULT，并且参数的返回值 `pThreadId` 将为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

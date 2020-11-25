@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860815"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723059"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 结构
 
@@ -61,7 +61,7 @@ struct DacpMethodDescData
 | `wSlotNumber`                | 方法表中的方法的槽号。                                                   |
 | `NativeCodeAddr`             | 方法的初始本机地址。                                                            |
 | `data`                       | 指向运行时内部使用的缓冲区的指针。                                             |
-| `MethodDescPtr`              | 指向运行时`MethodDesc`中的的指针。                                                     |
+| `MethodDescPtr`              | 指向 `MethodDesc` 运行时中的的指针。                                                     |
 | `nativeCodeInfo`             | 指向由运行时内部用于跟踪方法的缓冲区的指针。                            |
 | `moduleInfo`                 | 指向由运行时内部用于模块信息的缓冲区的指针。                      |
 | `MDToken`                    | 与给定方法关联的标记。                                                         |
@@ -73,12 +73,13 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | 请求的本机地址的 Rejit 信息。                                             |
 | `cJittedRejitVersions`       | 方法已通过检测 rejitted 的次数。                           |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。
 
 ## <a name="requirements"></a>要求
-**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
 **标头：** 内容  
 **库：** 内容  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

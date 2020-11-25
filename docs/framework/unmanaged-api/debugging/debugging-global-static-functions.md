@@ -6,17 +6,19 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-ms.openlocfilehash: c20d8719b63cb40074dc740506ae4a3c0fc3a251
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 04906322e311b580abddeca7744cf3e75d471e05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793785"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722981"
 ---
 # <a name="debugging-global-static-functions"></a>调试全局静态函数
+
 本节介绍了调试 API 使用的非托管全局静态函数。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [_EFN_GetManagedExcepStack 函数](efn-getmanagedexcepstack-function.md)  
  给定托管的异常对象地址后，将返回其中包含的堆栈跟踪的字符串版本。  
   
@@ -36,7 +38,8 @@ ms.locfileid: "76793785"
  指向 CLR 数据访问服务调用来创建指定目标进程的指定接口对象的函数。  
   
 ## <a name="related-sections"></a>相关章节  
- [调试组件类](debugging-coclasses.md)  
+
+ [调试 Coclass](debugging-coclasses.md)  
   
  [调试接口](debugging-interfaces.md)  
   

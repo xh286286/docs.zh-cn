@@ -15,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-ms.openlocfilehash: 44bb98f54debb129f951cc388fea81ca0f17b20c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: cf9c9d11c4725908fcf7ff4a0c91882b70a80190
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723371"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 方法
-终止`ICorDebug`对象。  
+
+终止 `ICorDebug` 对象。  
   
 > [!NOTE]
-> `Terminate`在为所有正在调试的进程接收到[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回调之前，不应调用。  
+> `Terminate` 在为所有正在调试的进程接收到 [ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md) 回调之前，不应调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +36,12 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>备注  
- `Terminate`当不再需要`ICorDebug`对象时，必须调用。  
+
+ `Terminate` 当不再需要对象时，必须调用 `ICorDebug` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c4f6b54-5ce7-4a2a-83e1-6dec16441f50
 topic_type:
 - apiref
-ms.openlocfilehash: 79af7b5679598ffa82471dcb69adabc2394b13fa
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6fc6cf9b7333dd4caad3c5a4b081fecb060c8f86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009296"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722084"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>IMetaDataEmit::DeletePinvokeMap 方法
+
 销毁指定标记所引用的对象的 PInvoke 映射元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -34,15 +35,17 @@ HRESULT DeletePinvokeMap (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `tk`  
- 中`mdFieldDef`或 `mdMethodDef` 标记，它表示要为其删除 PInvoke 映射元数据的对象。  
+ 中 `mdFieldDef` 或 `mdMethodDef` 标记，它表示要为其删除 PInvoke 映射元数据的对象。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

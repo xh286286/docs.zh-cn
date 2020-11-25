@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e93b99e-5aca-415c-8e37-7f33753b612d
 topic_type:
 - apiref
-ms.openlocfilehash: 4fbee938ae86b338f2beb0b48feeee46f144a4a0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7d19a43048da742e702636faaa46ecf1458556f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722579"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>ICorProfilerInfo::GetClassIDInfo 方法
+
 获取指定类的父模块和元数据标记。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT GetClassIDInfo(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `classId`  
  中要获取其信息的类的 ID。  
   
@@ -45,12 +47,14 @@ HRESULT GetClassIDInfo(
  弄指向类的元数据标记的指针。  
   
 ## <a name="remarks"></a>注解  
- 探查器代码可调用[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)以获取给定模块的元数据接口。 返回至 `pTypeDefToken` 所引用的位置的元数据标记可用于访问类的元数据。  
+
+ 探查器代码可调用 [ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 以获取给定模块的元数据接口。 返回至 `pTypeDefToken` 所引用的位置的元数据标记可用于访问类的元数据。  
   
- 若要获取有关泛型类型的详细信息，请使用[ICorProfilerInfo2：： GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md)。  
+ 若要获取有关泛型类型的详细信息，请使用 [ICorProfilerInfo2：： GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

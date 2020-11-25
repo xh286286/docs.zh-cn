@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: ff4b32185e604611eaaead2847c11bc139d405a6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b511c5abe10ab6c0ec856a5686b082132ed4a5d9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500684"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722853"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 函数
-通知探查器控制正在传递到函数，并提供一个句柄，该句柄可传递给[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](icorprofilerinfo3-getfunctionenter3info-method.md)以检索堆栈帧和函数自变量。  
+
+通知探查器控制正在传递到函数，并提供一个句柄，该句柄可传递给 [ICorProfilerInfo3：： GetFunctionEnter3Info 方法](icorprofilerinfo3-getfunctionenter3info-method.md) 以检索堆栈帧和函数自变量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,13 +44,14 @@ void __stdcall FunctionEnter3WithInfo(
   \[in] 一个表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
 
 ## <a name="remarks"></a>注解  
- `FunctionEnter3WithInfo`回调方法会在调用函数时通知探查器，并使探查器可以使用[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](icorprofilerinfo3-getfunctionenter3info-method.md)来检查参数值。 若要访问参数信息， `COR_PRF_ENABLE_FUNCTION_ARGS` 必须设置标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md)来设置事件标志，然后使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)来注册此函数的实现。  
+
+ `FunctionEnter3WithInfo`回调方法会在调用函数时通知探查器，并使探查器可以使用[ICorProfilerInfo3：： GetFunctionEnter3Info 方法](icorprofilerinfo3-getfunctionenter3info-method.md)来检查参数值。 若要访问参数信息， `COR_PRF_ENABLE_FUNCTION_ARGS` 必须设置标志。 探查器可以使用 [ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md) 来设置事件标志，然后使用 [ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) 来注册此函数的实现。  
   
  `FunctionEnter3WithInfo`函数是回调; 必须实现它。 实现必须使用 `__declspec(naked)` 存储类特性。  
   
  在调用此函数之前，执行引擎不会保存任何注册。  
   
-- 进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。  
+- 进入时，必须保存使用的所有寄存器，包括 (FPU) 的浮点单元中的寄存器。  
   
 - 退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。  
   
@@ -58,7 +60,8 @@ void __stdcall FunctionEnter3WithInfo(
  `FunctionEnter3WithInfo`函数不得调入托管代码或以任何方式导致托管内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
   

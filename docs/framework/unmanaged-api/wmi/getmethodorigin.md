@@ -1,5 +1,5 @@
 ---
-title: 获取方法源函数（非托管 API 引用）
+title: 'GetMethodOrigin 函数 (非托管 API 参考) '
 description: GetMethodOrigin 函数确定声明方法的类。
 ms.date: 11/06/2017
 api_name:
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 5b4609b6649be875aea7dfcf52ba36b1e98ab7bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 434392ffb4d9124e319bcd9c42fdd340d3fec5b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176794"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722773"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 函数
+
 确定声明方法的类。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -37,44 +38,45 @@ HRESULT GetMethodOrigin (
 );
 ```  
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>参数
 
 `vFunc`  
-[在]此参数未使用。
+中此参数未使用。
 
 `ptr`  
-[在]指向[IWbem ClassObject 实例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指针。
+中指向 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 实例的指针。
 
 `wszMethodName`  
-[在]正在请求其拥有类的对象的方法的名称。
+中正在请求其所属类的对象的方法的名称。
 
 `pstrClassName`  
-[出]接收拥有 方法的类的名称。
+弄接收拥有方法的类的名称。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回的以下值在*WbemCli.h*标头文件中定义，或者您可以在代码中将它们定义为常量：
+此函数返回的以下值是在 *WbemCli* 头文件中定义的，也可以在代码中将它们定义为常量：
 
-|一直  |值  |说明  |
+|返回的常量  |Value  |说明  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0 x80041002 | 找不到指定的方法。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的方法。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数无效。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-此函数包装对[IWbem ClassObject 的调用：：获取方法原点](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)方法。
+此函数包装对 [IWbemClassObject：： GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) 方法的调用。
 
-由于类可以从一个或多个基类继承方法，因此开发人员通常希望确定在其中定义给定方法的类。
+由于类可以从一个或多个基类继承方法，因此开发人员通常需要确定定义给定方法的类。
 
-在`pstrClassName`调用函数之前，参数不能指向`BSTR`有效，因为这是一个`out`参数;因此，参数在调用函数之前，不能指向该参数。函数返回后，此指针不会处理。
+在 `pstrClassName` 调用函数之前，参数必须指向有效的， `BSTR` 因为这是一个 `out` 参数; 在函数返回后，不释放此指针。
 
 ## <a name="requirements"></a>要求  
-**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

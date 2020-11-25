@@ -6,22 +6,24 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdd4b60d068677ae2a0874b589294ba220f0d854
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179142"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722994"
 ---
 # <a name="debugging-enumerations"></a>调试枚举
+
 本节介绍了调试 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [CLR_DEBUGGING_PROCESS_FLAGS 枚举](clr-debugging-process-flags-enumeration.md)  
- 提供[ICLR 调试中使用的值：：打开虚拟进程](iclrdebugging-openvirtualprocess-method.md)方法。  
+ 提供 [ICLRDebugging：： OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) 方法使用的值。  
   
  [CLRDataEnumMemoryFlags 枚举](clrdataenummemoryflags-enumeration.md)  
- 指示调用[ICLRDataEnum 记忆区域：：枚举记忆区域](iclrdataenummemoryregions-enummemoryregions-method.md)方法应包括哪些内存区域。  
+ 指示对 [ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) 方法的调用应包括哪些内存区域。  
   
  [COR_PUB_ENUMPROCESS 枚举](cor-pub-enumprocess-enumeration.md)  
  标识要枚举的进程的类型。  
@@ -32,23 +34,23 @@ ms.locfileid: "79179142"
  CorDebugChainReason  
  指示启动调用链的一个或多个原因。  
   
- [CorDebugCodeInvokeKind 枚举](cordebugcodeinvokekind-enumeration.md)  
+ [“Cor调试代码调用类型”枚举](cordebugcodeinvokekind-enumeration.md)  
  描述导出函数如何调用托管代码。  
   
  [“Cor调试代码调用目的”枚举](cordebugcodeinvokepurpose-enumeration.md)  
  描述为何导出的函数会调用托管代码。  
   
  CorDebugCreateProcessFlags  
- 提供可在调用[ICorDebug：：：createProcess](icordebug-createprocess-method.md)方法时使用的其他调试选项。  
+ 提供可在对 [ICorDebug：： CreateProcess](icordebug-createprocess-method.md) 方法的调用中使用的其他调试选项。  
   
  [“Cor调试调试事件类型”枚举](cordebugdebugeventkind-enumeration.md)  
- 指示其信息由[解码事件](icordebugprocess6-decodeevent-method.md)方法解码的事件类型。  
+ 指示 [DecodeEvent](icordebugprocess6-decodeevent-method.md) 方法对其信息进行解码的事件类型。  
   
- [CorDebugDecodeEventFlagsWindows 枚举](cordebugdecodeeventflagswindows-enumeration.md)  
+ [“Cor调试解码事件标志窗口”枚举](cordebugdecodeeventflagswindows-enumeration.md)  
  提供关于 Windows 平台上的调试事件的其他信息。  
   
  CorDebugExceptionCallbackType  
- 指示从[ICorDebug 托管回调 2：：异常](icordebugmanagedcallback2-exception-method.md)事件进行的回调类型。  
+ 指示从 [ICorDebugManagedCallback2：： Exception](icordebugmanagedcallback2-exception-method.md) 事件进行的回调类型。  
   
  [CorDebugExceptionFlags 枚举](cordebugexceptionflags-enumeration.md)  
  提供有关异常的附加信息。  
@@ -81,7 +83,7 @@ ms.locfileid: "79179142"
  包含影响托管的实时 (JIT) 编译器的行为的值。  
   
  [CorDebugJITCompilerFlagsDeprecated 枚举](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 已过时。 改用`CORDEBUG_JIT_DEFAULT` [CorDebugJIT 编译器标志](cordebugjitcompilerflags-enumeration.md)枚举的成员。  
+ 已过时。 改为使用 `CORDEBUG_JIT_DEFAULT` [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 枚举的成员。  
   
  CorDebugMappingResult  
  提供如何获取指令指针 (IP) 的值的详细信息。  
@@ -93,7 +95,7 @@ ms.locfileid: "79179142"
  提供用于确定调试器是否从本机映像缓存中加载本机 (NGen) 映像的值。  
   
  [CorDebugPlatform 枚举](cordebugplatform-enumeration.md)  
- 提供[ICorDebugDataTarget：：getPlatform](icordebugdatatarget-getplatform-method.md)方法使用的目标平台值。  
+ 提供 [ICorDebugDataTarget：： GetPlatform](icordebugdatatarget-getplatform-method.md) 方法使用的目标平台值。  
   
  [“Cor调试记录格式”枚举](cordebugrecordformat-enumeration.md)  
  描述包含本机异常调试事件相关信息的字节数组的数据格式。  
@@ -104,7 +106,7 @@ ms.locfileid: "79179142"
  [CorDebugSetContextFlag 枚举](cordebugsetcontextflag-enumeration.md)  
  指示上下文是来自堆栈上的活动（或叶）帧，还是已通过从另一个帧展开来进行计算。  
   
- [CorDebugStateChange 枚举](cordebugstatechange-enumeration.md)  
+ [“Cor调试状态已更改”枚举](cordebugstatechange-enumeration.md)  
  描述基于进程变化必须删除的缓存数据数量。  
   
  CorDebugStepReason  
@@ -113,7 +115,7 @@ ms.locfileid: "79179142"
  CorDebugThreadState  
  指定用于调试的线程的状态。  
   
- \>科调试未映射停止  
+ \>CorDebugUnmappedStop  
  指定未映射代码的类型，这些代码可以中断分档器代码执行。  
   
  CorDebugUserState  
@@ -137,10 +139,11 @@ ms.locfileid: "79179142"
  [WriteableMetadataUpdateMode 枚举](writeablemetadataupdatemode-enumeration.md)  
  提供用于指定元数据的内存中更新对调试器是否可见的值。
 
- [ClrDataSource 类型枚举](clrdatasourcetype-enumeration.md)提供CLRDATA_IL_ADDRESS_MAP结构使用的值。
+ [ClrDataSourceType 枚举](clrdatasourcetype-enumeration.md) 提供 CLRDATA_IL_ADDRESS_MAP 结构使用的值。
 
 ## <a name="related-sections"></a>相关章节  
- [调试组件类](debugging-coclasses.md)  
+
+ [调试 Coclass](debugging-coclasses.md)  
   
  [调试接口](debugging-interfaces.md)  
   

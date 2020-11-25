@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 4436ece72b0a6a405fc41cba5413093fc42ce750
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 46708acc77dad00727ee35e7d06e4228eacbd502
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860776"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723033"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData 结构
 
@@ -55,12 +55,13 @@ struct MSLAYOUT DacpReJitData
 | `flags`          | 一个标志，指示给定版本的该方法的 ReJit 检测的当前状态。 |
 | `NativeCodeAddr` | 该方法的 rejitted 实现的基址。                                         |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。 如果不使用 Microsoft 编译器，还`ms_struct`必须使用打包来定义结构。
+此结构存在于运行时中，并且不会通过任何标头或库文件公开。 若要使用它，请定义上面指定的结构。 如果不使用 Microsoft 编译器，还必须使用打包来定义结构 `ms_struct` 。
 
 ## <a name="requirements"></a>要求
-**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
 **标头：** 内容  
 **库：** 内容  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

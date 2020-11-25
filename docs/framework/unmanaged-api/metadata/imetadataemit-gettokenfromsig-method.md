@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: 740dad54bc3a79ff546176abdc35487d89ed8f44
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b41891227d94b66bf59128d620eba9da117fe92a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009244"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722043"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig 方法
+
 获取指定元数据签名的令牌。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT GetTokenFromSig (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pvSig`  
  中要保持和存储的签名。  
   
@@ -43,14 +45,15 @@ HRESULT GetTokenFromSig (
  中中的字节数 `pvSig` 。  
   
  `pmsig`  
- 弄`mdSignature`分配的令牌。  
+ 弄 `mdSignature` 分配的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

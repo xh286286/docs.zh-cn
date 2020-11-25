@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: ad309290319396ff4e74e30d572effeffe802d1d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f0ba2342e9704ba06dd1d3612f699298c734a5eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723514"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 方法
-由公共语言运行时（CLR）数据访问服务调用以检索图像的元数据。  
+
+由公共语言运行时调用 (CLR) 数据访问服务检索图像的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,6 +44,7 @@ HRESULT GetMetadata(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `imagePath`  
  中一个字符串，指定图像文件的路径。  
   
@@ -56,7 +58,7 @@ HRESULT GetMetadata(
  中图像的全局唯一标识符。  
   
  `mdRva`  
- 中元数据的相对虚拟地址（RVA）。 地址相对于映像基址。  
+ 中元数据 (RVA) 的相对虚拟地址。 地址相对于映像基址。  
   
  `flags`  
  中保留供将来使用。  
@@ -70,11 +72,13 @@ HRESULT GetMetadata(
  `dataSize`  
  弄返回的元数据的大小。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** ClrData，ClrData  
   

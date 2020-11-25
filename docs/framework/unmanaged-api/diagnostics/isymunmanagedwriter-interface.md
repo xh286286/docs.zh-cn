@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-ms.openlocfilehash: 8f0bbd26bde562df5482d167c9d2775e01426f55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fddfd2a163f6e6513b648ee0b724c0b5bd54c81a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610049"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722929"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter 接口
+
 表示符号编写器，并提供定义文档、序列点、词法范围和变量的方法。  
   
 ## <a name="methods"></a>方法  
@@ -40,9 +41,9 @@ ms.locfileid: "83610049"
 |[DefineLocalVariable 方法](isymunmanagedwriter-definelocalvariable-method.md)|在当前词法范围内定义单个变量。|  
 |[DefineParameter 方法](isymunmanagedwriter-defineparameter-method.md)|在当前方法中定义单个参数。|  
 |[DefineSequencePoints 方法](isymunmanagedwriter-definesequencepoints-method.md)|在当前方法内定义一组序列点。|  
-|[GetDebugInfo 方法](isymunmanagedwriter-getdebuginfo-method.md)|返回编译器编写可移植可执行（PE）文件头中的调试目录条目所需的信息。|  
+|[GetDebugInfo 方法](isymunmanagedwriter-getdebuginfo-method.md)|返回编译器将 (PE 中的调试目录项写入) 文件头所需的信息。|  
 |[Initialize 方法](isymunmanagedwriter-initialize-method.md)|设置此编写器将与之关联的元数据发射器接口，并设置调试符号将写入的输出文件名。|  
-|[Initialize2 方法](isymunmanagedwriter-initialize2-method.md)|设置此编写器将与之关联的元数据发射器接口，设置调试符号将写入的输出文件名，并设置程序数据库（PDB）文件的最终位置。|  
+|[Initialize2 方法](isymunmanagedwriter-initialize2-method.md)|设置此编写器将与之关联的元数据发射器接口，设置调试符号将写入到的输出文件名，并将程序数据库 (PDB) 文件的最终位置设置为。|  
 |[OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)|打开要在其中发出符号信息的方法。|  
 |[OpenNamespace 方法](isymunmanagedwriter-opennamespace-method.md)|打开一个新的命名空间。|  
 |[OpenScope 方法](isymunmanagedwriter-openscope-method.md)|在当前方法中打开新的词法范围。|  
@@ -54,6 +55,7 @@ ms.locfileid: "83610049"
 |[UsingNamespace 方法](isymunmanagedwriter-usingnamespace-method.md)|指定在当前打开的词法范围内使用给定的完全限定的命名空间名称。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

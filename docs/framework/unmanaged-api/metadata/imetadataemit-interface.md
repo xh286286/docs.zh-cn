@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3b48fd47-7397-4e2c-8bec-8157aa08978c
 topic_type:
 - apiref
-ms.openlocfilehash: a2c2512abc28f0140fc261c5136c7e1255db96de
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f5495c170abf3e991a6e28016687f8ae77f0b423
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009205"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722019"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit 接口
+
 提供用于创建、修改和保存有关当前定义的范围中的程序集的元数据的方法。 元数据可存储在内存中或保存到磁盘。  
   
 ## <a name="methods"></a>方法  
@@ -79,11 +80,12 @@ ms.locfileid: "84009205"
 |[TranslateSigWithScope 方法](imetadataemit-translatesigwithscope-method.md)|将程序集导入到当前作用域中，并为合并的作用域获取新的元数据签名。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

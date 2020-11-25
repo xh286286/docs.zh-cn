@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5fa6ffff3cdb64a7471568e1f6e76fea9194c5a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500658"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722279"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 函数
+
 通知探查器函数将要返回到调用方，并提供有关堆栈帧和函数返回值的信息。  
   
 ## <a name="syntax"></a>语法  
@@ -43,28 +44,29 @@ void __stdcall FunctionLeave2 (
 
 - `clientData`
 
-  \[in] 重新映射的函数标识符，先前通过[FunctionIDMapper](functionidmapper-function.md)函数指定的探查器。
+  \[in] 重新映射的函数标识符，先前通过 [FunctionIDMapper](functionidmapper-function.md) 函数指定的探查器。
 
 - `func`
 
   \[in] 一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。
 
-  探查器应将此视为不透明的句柄，该句柄可传递回[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)方法中的执行引擎。  
+  探查器应将此视为不透明的句柄，该句柄可传递回 [ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 方法中的执行引擎。  
   
 - `retvalRange`
 
-  \[in] 一个指向[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)结构的指针，该结构指定函数的返回值的内存位置。
+  \[in] 一个指向 [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 结构的指针，该结构指定函数的返回值的内存位置。
 
-  若要访问返回值信息， `COR_PRF_ENABLE_FUNCTION_RETVAL` 必须设置标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法来设置事件标志。
+  若要访问返回值信息， `COR_PRF_ENABLE_FUNCTION_RETVAL` 必须设置标志。 探查器可以使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md) 方法来设置事件标志。
 
 ## <a name="remarks"></a>注解  
+
  `func` `retvalRange` 当函数返回后，和参数的值无效， `FunctionLeave2` 因为值可能会更改或被销毁。  
   
- `FunctionLeave2`函数是回调; 必须实现它。 实现必须使用 `__declspec` （ `naked` ）存储类特性。  
+ `FunctionLeave2`函数是回调; 必须实现它。 实现必须使用 `__declspec` `naked`) 存储类特性的 (。  
   
  在调用此函数之前，执行引擎不会保存任何注册。  
   
-- 进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。  
+- 进入时，必须保存使用的所有寄存器，包括 (FPU) 的浮点单元中的寄存器。  
   
 - 退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。  
   
@@ -73,7 +75,8 @@ void __stdcall FunctionLeave2 (
  此外，该 `FunctionLeave2` 函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
   

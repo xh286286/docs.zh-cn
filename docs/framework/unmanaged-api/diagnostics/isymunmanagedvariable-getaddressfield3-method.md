@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-ms.openlocfilehash: ff888d3e2b86efeea3f4e3d33528f731d85886bf
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 13746c4ac6322a401e547c1c7acc99c0eda9accf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615262"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723332"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 方法
+
 获取此变量的第三个地址字段。 其含义取决于地址的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -33,13 +34,16 @@ HRESULT GetAddressField3(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pRetVal`  
  弄指向的指针 `ULONG32` ，该指针接收第三个地址字段。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

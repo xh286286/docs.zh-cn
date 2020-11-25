@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d0fcfa-1601-4fba-868f-da8c97303467
 topic_type:
 - apiref
-ms.openlocfilehash: fe11c0bbe273ae07cdae43f681a558e07a291ffb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 98b64289b7d512c4e73cf4d40e89319532c6704a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722812"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum 接口
+
 提供用于按顺序循环访问应用程序或探查器加载的模块集合的方法。  
   
 ## <a name="methods"></a>方法  
@@ -35,10 +36,12 @@ ms.locfileid: "84494886"
 |[Skip 方法](icorprofilermoduleenum-skip-method.md)|前移枚举器的光标位置，以便跳过指定的元素数。|  
   
 ## <a name="remarks"></a>注解  
+
  `ICorProfilerModuleEnum` 接口是一个枚举器。 它可以让数组接收器以其合适的速率从发送器拉取元素。 换而言之，接收器可以显式控制数组元素流，从而避免将大型数组作为方法形参传递方面的相关问题。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: f076044b44859cc39d90be528ee6648f5eaa626c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c23c791197c9925038f71e70409e4ca3ebabb23e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500580"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722852"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 函数
-通知探查器，当前正在执行的函数即将对另一个函数执行尾调用，并提供一个可传递给[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md)以检索堆栈帧的句柄。  
+
+通知探查器，当前正在执行的函数即将对另一个函数执行尾调用，并提供一个可传递给 [ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md) 以检索堆栈帧的句柄。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,13 +44,14 @@ void __stdcall FunctionTailcall3WithInfo(
   \[in] 一个表示有关给定堆栈帧的信息的不透明的句柄。 此句柄仅在其传递到的回调期间有效。
 
 ## <a name="remarks"></a>注解  
- `FunctionTailcall3WithInfo`回调方法会在调用函数时通知探查器，并允许探查器使用[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md)检查堆栈帧。 若要访问堆栈帧信息， `COR_PRF_ENABLE_FRAME_INFO` 必须设置标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md)来设置事件标志，然后使用[ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)来注册此函数的实现。  
+
+ `FunctionTailcall3WithInfo`回调方法会在调用函数时通知探查器，并允许探查器使用[ICorProfilerInfo3：： GetFunctionTailcall3Info 方法](icorprofilerinfo3-getfunctiontailcall3info-method.md)检查堆栈帧。 若要访问堆栈帧信息， `COR_PRF_ENABLE_FRAME_INFO` 必须设置标志。 探查器可以使用 [ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md) 来设置事件标志，然后使用 [ICorProfilerInfo3：： SetEnterLeaveFunctionHooks3WithInfo 方法](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) 来注册此函数的实现。  
   
  `FunctionTailcall3WithInfo`函数是回调; 必须实现它。 实现必须使用 `__declspec(naked)` 存储类特性。  
   
  在调用此函数之前，执行引擎不会保存任何注册。  
   
-- 进入时，必须保存使用的所有寄存器，包括浮点单元（FPU）中的所有寄存器。  
+- 进入时，必须保存使用的所有寄存器，包括 (FPU) 的浮点单元中的寄存器。  
   
 - 退出时，必须通过弹出由其调用方推送的所有参数来还原堆栈。  
   
@@ -58,7 +60,8 @@ void __stdcall FunctionTailcall3WithInfo(
  此外，FunctionTailcall3WithInfo 函数不得调入托管代码或以任何方式引发托管内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl .idl  
   

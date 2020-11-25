@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: ed534890fc90d3b8543a1166c85903f10163f0a8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9ce3afded5f914ecf970d8db738becc7f5cfff84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008310"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723137"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
+
 获取代码库的节块。  
   
  此方法已过时，不应使用。  
@@ -39,6 +40,7 @@ HRESULT GetSectionBlock (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `section`  
  中要从中检索基本代码块的部分。  
   
@@ -51,15 +53,17 @@ HRESULT GetSectionBlock (
  `ppBytes`  
  弄一个指针，指向接收检索到的块的地址的位置。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `GetSectionBlock`仅当有特殊部分的要求不是由其他方法处理时才调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
