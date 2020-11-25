@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 2cd362279f5c5ff281b9674fe3d1e293ddbab5f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441898"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707290"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument 方法
+
 获取特定文档中该方法的最小起始行和最大结束行。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT GetSourceExtentInDocument(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `document`  
  中指向文档的指针。  
   
@@ -45,9 +47,11 @@ HRESULT GetSourceExtentInDocument(
  弄指向 `ULONG32` 的指针，该指针接收结束行。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

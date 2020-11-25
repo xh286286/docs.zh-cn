@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-ms.openlocfilehash: 54c8c7f5c3ba6b4afd4ff352a8afb947a92e2d61
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: acb8d48ed6314756e2c1a10fff314a303799fb24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441872"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707277"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod 接口
+
 提供 "编辑并继续" 功能的信息。  
   
 ## <a name="methods"></a>方法  
@@ -35,6 +36,7 @@ ms.locfileid: "83441872"
 |[GetSourceExtentInDocument 方法](isymencunmanagedmethod-getsourceextentindocument-method.md)|获取特定文档中该方法的最小起始行和最大结束行。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d42bea4e-5848-4e43-a883-69af7a313ce9
 topic_type:
 - apiref
-ms.openlocfilehash: 3bcb642ac62fb00780a4fda7aaeebaabb386db33
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d9b295060426acd7f925bcf19c05ba216fdc2a4d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707893"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace 接口
+
 表示命名空间。  
   
 ## <a name="methods"></a>方法  
@@ -33,6 +34,7 @@ ms.locfileid: "83615067"
 |[GetVariables 方法](isymunmanagednamespace-getvariables-method.md)|返回在此命名空间中的全局范围内定义的所有变量。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

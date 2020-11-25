@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8eef973c4c054b704b7c3f798e5dc1aa455dda96
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707765"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces 方法
+
 获取此命名空间的子级。  
   
 ## <a name="syntax"></a>语法  
@@ -36,8 +37,9 @@ HRESULT GetNamespaces(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cNameSpaces`  
- 中`ULONG32`指示数组大小的 `namespaces` 。  
+ 中 `ULONG32` 指示数组大小的 `namespaces` 。  
   
  `pcNameSpaces`  
  弄指向的指针， `ULONG32` 该指针接收包含命名空间所需的缓冲区大小（以字符数表示）。  
@@ -46,9 +48,11 @@ HRESULT GetNamespaces(
  弄指向包含命名空间的缓冲区的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

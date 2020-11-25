@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: a19d875b8fb81f2af3821e69452f0f0ed591cd22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176885"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708473"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize 函数
-返回强名称签名的大小。 `StrongNameSignatureSize`编译器通常用于确定在创建延迟签名程序集时文件中保留的空间。  
+
+返回强名称签名的大小。 `StrongNameSignatureSize` 通常由编译器用来确定在创建延迟签名程序集时要在文件中保留多少空间。  
   
- 此函数已被弃用。 改用[ICLR 强名称：：强名称签名大小](../hosting/iclrstrongname-strongnamesignaturesize-method.md)方法。  
+ 此函数已弃用。 改为使用 [ICLRStrongName：： StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) 方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,30 +37,34 @@ BOOLEAN StrongNameSignatureSize (
 );
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
+
  `pbPublicKeyBlob`  
- [在][公共密钥Blob](publickeyblob-structure.md)类型的结构，其中包含用于生成强名称签名的密钥对的公共部分。  
+ 中 [PublicKeyBlob](publickeyblob-structure.md) 类型的结构，它包含用于生成强名称签名的密钥对的公共部分。  
   
  `cbPublicKeyBlob`  
- [在]的大小（以字节为单位）的大小`pbPublicKeyBlob`。  
+ 中的大小（以字节为单位） `pbPublicKeyBlob` 。  
   
  `pcbSize`  
- [在]存储强名称签名所需的字节数。  
+ 中存储强名称签名所需的字节数。  
   
 ## <a name="return-value"></a>返回值  
- `true`成功完成;否则， `false`.  
+
+ `true` 成功完成时;否则为 `false` 。  
   
-## <a name="remarks"></a>备注  
- 如果`StrongNameSignatureSize`函数未成功完成，请调用[StrongNameErrorInfo 函数](strongnameerrorinfo-function.md)以检索上次生成的错误。  
+## <a name="remarks"></a>注解  
+
+ 如果 `StrongNameSignatureSize` 函数未成功完成，请调用 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 函数来检索上次生成的错误。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 强名称.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 作为资源包含在 MsCorEE.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

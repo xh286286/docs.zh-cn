@@ -1,6 +1,6 @@
 ---
-title: 祝福IWbem服务功能（非托管 API 引用）
-description: 祝福IWbem服务功能指示用户凭据是否允许访问 IWbemServices 类。
+title: 'BlessIWbemServices 函数 (非托管 API 参考) '
+description: BlessIWbemServices 函数指示用户凭据是否允许对 IWbemServices 类的访问。
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 4b15af840cc00b3ec261604db4f3625c6b975d3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ef617ee754c9dcd661b31abba6b17434563c22
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176859"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708148"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 函数
-指示用户凭据是否允许访问指定的[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)类。
+
+指示用户凭据是否允许访问指定的 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 类。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,45 +40,45 @@ HRESULT BlessIWbemServices (
 );
 ```  
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>参数
 
 `pIWbemServices`\
-[在]指向需要权限的[IWbem 服务](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象的指针。
+中指向需要其权限的 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 对象的指针。
 
 `strUser`\
-[在]用户名。
+中用户名。
 
 `strPassword`\
-[在]与`strUser`关联的密码。
+中与关联的密码 `strUser` 。
 
 `strAuthority`\
-[在]用户的域名。 有关详细信息，请参阅[ConnectServerWmi](connectserverwmi.md)函数。
+中用户的域名。 有关详细信息，请参阅 [ConnectServerWmi](connectserverwmi.md) 函数。
 
 `impLevel`\
-[在]模拟级别。
+中模拟级别。
 
 `authnLevel`\
-[在]授权级别。
+中授权级别。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回的以下值在*WinError.h*标头文件中定义，或者您可以在代码中将它们定义为常量：
+此函数返回的以下值是在 *winerror.h* 头文件中定义的，也可以在代码中将它们定义为常量：
 
-|一直  |值  |说明  |
+|返回的常量  |Value  |说明  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 一个或多个参数无效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 为 `null`。 |
 | `E_FAIL` | 0x80000008 | 发生了未知错误。 |
-| `E_OUTOFMEMORY` | 0x80000002 | 可用内存不足以执行操作。 |
+| `E_OUTOFMEMORY` | 0x80000002 | 内存不足，无法执行此操作。 |
 | `S_OK` | 0 | 函数调用成功。 |
 
 ## <a name="requirements"></a>要求  
 
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** WMINet_Utils.idl  
+ **标头：** WMINet_Utils .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

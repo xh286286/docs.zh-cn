@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 815075198f34c0c045603b9d377b9d5fbdf1a91d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828798"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707875"
 ---
 # <a name="parameter-design"></a>参数设计
 
@@ -40,6 +40,7 @@ ms.locfileid: "94828798"
  这更好地传达了方法之间的关系。
 
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>选择枚举参数和布尔参数  
+
  如果成员将使用两个或多个布尔参数，✔️确实使用枚举。
 
  ❌ 不要使用布尔值，除非你完全确定不需要两个以上的值。
@@ -49,6 +50,7 @@ ms.locfileid: "94828798"
  ✔️考虑为构造函数参数使用布尔值，这些参数是真正的双状态值，只用于初始化布尔属性。
 
 ### <a name="validating-arguments"></a>验证参数
+
  ✔️验证传递到公共、受保护或显式实现的成员的参数。 <xref:System.ArgumentException?displayProperty=nameWithType>如果验证失败，则引发或其子类之一。
 
  请注意，实际验证不一定要在公共或受保护的成员本身中发生。 在某些专用或内部例程中，它可能会在较低的级别上发生。 要点是向最终用户公开的整个图面区域会检查参数。
@@ -66,6 +68,7 @@ ms.locfileid: "94828798"
  如果成员区分安全，则建议您创建一个副本，然后验证并处理参数。
 
 ### <a name="parameter-passing"></a>参数传递
+
  从框架设计器的角度来看，有三个主要参数组：按值参数、 `ref` 参数和 `out` 参数。
 
  当通过值参数传递参数时，该成员将接收传入的实参的副本。 如果参数是值类型，则将参数的副本放在堆栈上。 如果参数是引用类型，则将引用的副本放在堆栈上。 最常用的 CLR 语言（例如 c #、VB.NET 和 c + +）默认为通过值传递参数。
@@ -83,6 +86,7 @@ ms.locfileid: "94828798"
  规则有一些例外情况，例如可用于交换引用的方法。
 
 ### <a name="members-with-variable-number-of-parameters"></a>参数数目可变的成员
+
  可以通过提供数组参数来表示可采用可变数量的参数的成员。 例如， <xref:System.String> 提供以下方法：
 
 ```csharp
@@ -140,6 +144,7 @@ public class String {
  某些 CLR 语言（如 c + +）支持用于传递变量参数列表（称为方法）的替代约定 `varargs` 。 不应在框架中使用约定，因为它不符合 CLS。
 
 ### <a name="pointer-parameters"></a>指针参数
+
  通常，指针不应出现在设计良好的托管代码框架的公共表面区中。 大多数情况下，应封装指针。 但是，在某些情况下，出于互操作性原因需要使用指针，因此在这种情况下使用指针是合适的。
 
  ✔️确实为采用指针参数的任何成员提供了一种替代方法，因为指针不符合 CLS。
