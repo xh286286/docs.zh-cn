@@ -12,14 +12,15 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 05ba9abbc9495d927b7f58ebb06f152c0c15772f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701245"
 ---
 # <a name="choosing-between-class-and-struct"></a>在类和结构之间选择
+
 每个框架设计器所面临的一项基本设计决策是，是将类型设计为作为类 (引用类型) 还是作为结构 () 值类型。 充分了解引用类型和值类型的行为差异对于做出此选择至关重要。
 
  引用类型和值类型的第一个区别在于，引用类型在堆上分配并进行垃圾回收，而值类型则在堆栈上分配，或在包含类型中以内联方式分配，在堆栈展开或其包含类型释放时释放。 因此，值类型的分配和释放通常比引用类型的分配和释放更便宜。

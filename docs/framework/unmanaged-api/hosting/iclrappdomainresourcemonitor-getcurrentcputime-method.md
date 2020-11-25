@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-ms.openlocfilehash: b411190ff36410c1d293f1e48b31975be8a13aee
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a0b966e85bedcbef622aba2f6b181b98e0950e01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616029"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700673"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime 方法
+
 获取自应用程序域创建以来在当前应用程序域中执行时所有线程已使用的总处理器时间。  
   
 ## <a name="syntax"></a>语法  
@@ -33,6 +34,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `dwAppDomainId`  
  中请求的应用程序域的 ID。  
   
@@ -47,19 +49,21 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 |COR_E_APPDOMAINUNLOADED|应用程序域已卸载或不存在。|  
 |E_FAIL|未启用应用程序域资源监视。<br /><br /> -或-<br /><br /> 所有其他失败。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  此方法是托管属性的非托管等效项 <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ICLRAppDomainResourceMonitor 接口](iclrappdomainresourcemonitor-interface.md)
 - [承载接口](hosting-interfaces.md)

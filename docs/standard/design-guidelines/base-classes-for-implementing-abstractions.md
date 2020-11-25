@@ -5,14 +5,15 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e49b79609a2d16a79a80727295d53bb36ec5943
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821588"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701310"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>用于实现抽象的基类
+
 严格地说，当另一个类派生类时，该类将成为基类。 不过，在本部分中，基类是设计用于提供公共抽象的类，或用于其他类的类，通过继承来重用某些默认实现。 基类通常位于继承层次结构中，在层次结构的根下的抽象之间，还有几个自定义实现。
 
  它们充当实现抽象的实现帮助程序。 例如，用于项的有序集合的某个框架抽象是 <xref:System.Collections.Generic.IList%601> 接口。 实现并 <xref:System.Collections.Generic.IList%601> 不重要，因此，该框架提供了多个基类，如 <xref:System.Collections.ObjectModel.Collection%601> 和 <xref:System.Collections.ObjectModel.KeyedCollection%602> ，它们用作实现自定义集合的帮助器。

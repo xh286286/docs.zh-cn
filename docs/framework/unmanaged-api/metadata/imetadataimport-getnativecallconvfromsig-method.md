@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-ms.openlocfilehash: 44439eda62f85c32893b73f17bd057195cf6b2e1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d44ad493a786aaa35150515b7c254965490bd714
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503544"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701670"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig 方法
+
 获取指定的签名指针所表示的方法的本机调用约定。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT GetNativeCallConvFromSig (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pvSig`  
  中指向要为其返回调用约定的方法的元数据签名的指针。  
   
@@ -46,11 +48,12 @@ HRESULT GetNativeCallConvFromSig (
  弄指向本机调用约定的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

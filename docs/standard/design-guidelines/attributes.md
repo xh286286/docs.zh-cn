@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c02c41244fa74b686277c2f3c3940405fe2d95ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821614"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701362"
 ---
-# <a name="attributes"></a>属性
+# <a name="attributes"></a>特性
+
 <xref:System.Attribute?displayProperty=nameWithType> 用于定义自定义属性的基类。
 
  特性是可以添加到编程元素（如程序集、类型、成员和参数）的批注。 它们存储在程序集的元数据中，并且可在运行时使用反射 Api 进行访问。 例如，框架定义 <xref:System.ObsoleteAttribute> ，它可以应用于类型或成员，以指示类型或成员已弃用。

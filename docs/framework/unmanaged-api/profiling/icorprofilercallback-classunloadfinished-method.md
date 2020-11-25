@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 114d5d58d0d9098944299aefd0cb99a70c5da09d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700257"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 方法
+
 通知探查器类已经完成卸载。  
   
 ## <a name="syntax"></a>语法  
@@ -44,10 +45,12 @@ HRESULT ClassUnloadFinished(
   \[在] 中指示是否已成功卸载类的 HRESULT。
   
 ## <a name="remarks"></a>注解  
+
  卸载类的某些部分可能会在回调后继续 `ClassUnloadFinished` 。 中的 HRESULT 失败 `hrStatus` 表示失败。 但是，中的成功 HRESULT `hrStatus` 仅指示卸载类的第一部分已成功。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

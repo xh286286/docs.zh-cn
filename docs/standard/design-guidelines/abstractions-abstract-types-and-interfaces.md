@@ -7,14 +7,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6acefa2d4a2aed8fca5d0b7db634d393baac6b58
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5169cf730dc987526765c9538978901d424814b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821627"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701401"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象（抽象类型和接口）
+
 抽象是一种类型，它描述协定，但不提供协定的完全实现。 抽象通常作为抽象类或接口实现，它们附带一组明确定义的参考文档，其中描述了实现协定的类型所需的语义。 .NET Framework 中的一些最重要的抽象包括 <xref:System.IO.Stream> 、 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Object> 。
 
  您可以通过实现支持抽象协定的具体类型，并将此具体类型与) 抽象 (操作的框架 Api 结合使用来扩展框架。

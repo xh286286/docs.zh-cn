@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: 4be2a50664b001e865b5ecdd9aabe8ba727b8c26
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3be00d278a92398ad282a071f3e313e5de0e65a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500385"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700283"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished 方法
+
 通知探查器类已经完成加载。  
   
 ## <a name="syntax"></a>语法  
@@ -44,12 +45,14 @@ HRESULT ClassLoadFinished(
   \[在] 中指示是否已成功加载类的 HRESULT。
 
 ## <a name="remarks"></a>注解  
+
  在 `classId` 调用方法之前，的值对信息请求无效 `ClassLoadFinished` 。  
   
  在回调后，某些加载类的部分可能会继续 `ClassLoadFinished` 。 中的 HRESULT 失败 `hrStatus` 表示失败。 但是，中的成功 HRESULT `hrStatus` 仅指示加载类的第一部分已成功。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

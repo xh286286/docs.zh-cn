@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: aaac8f98-5cf4-42c7-b04b-556cce367e36
 topic_type:
 - apiref
-ms.openlocfilehash: b79c8dd9f27805e00535dde53c6ee9f5ee457b42
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1a9e377ba98c0c2302e341149bd5acb46c24051a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500258"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699984"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute 方法
-当异常的 `catch` 块在公共语言运行时（CLR）本身内执行时调用。 此方法在 .NET Framework 版本2.0 中已过时。  
+
+在 `catch` 公共语言运行时中执行异常时调用 (CLR) 自身。 此方法在 .NET Framework 版本2.0 中已过时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,7 +33,8 @@ HRESULT ExceptionCLRCatcherExecute();
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

@@ -6,22 +6,24 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: 1a9781fa1b4b608152faa7d5edc80bd4866f0c81
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8956a09cf76aa54452e8c020239e650e55d8a0d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868130"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701609"
 ---
 # <a name="profiling-enumerations"></a>分析枚举
+
 本节描述分析 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [COR_PRF_CLAUSE_TYPE 枚举](cor-prf-clause-type-enumeration.md)  
  指示代码刚进入或离开的异常子句的类型。  
   
  [COR_PRF_CODEGEN_FLAGS 枚举](cor-prf-codegen-flags-enumeration.md)  
- 定义可以用[ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md)方法设置的代码生成标志。  
+ 定义可以用 [ICorProfilerFunctionControl：： SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 方法设置的代码生成标志。  
   
  [COR_PRF_FINALIZER_FLAGS 枚举](cor-prf-finalizer-flags-enumeration.md)  
  描述对象的终结器。  
@@ -36,10 +38,10 @@ ms.locfileid: "76868130"
  指示垃圾回收器根的属性。  
   
  [COR_PRF_GC_ROOT_KIND 枚举](cor-prf-gc-root-kind-enumeration.md)  
- 指示由[ICorProfilerCallback2：： RootReferences2](icorprofilercallback2-rootreferences2-method.md)回调公开的垃圾回收器根的类型。  
+ 指示由 [ICorProfilerCallback2：： RootReferences2](icorprofilercallback2-rootreferences2-method.md) 回调公开的垃圾回收器根的类型。  
   
  [COR_PRF_HIGH_MONITOR 枚举](cor-prf-high-monitor-enumeration.md)  
- 除了在[COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)枚举中找到的标记外，还提供了标志，在加载时，探查器可以为[ICorProfilerInfo5：： SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)方法指定这些标志。  
+ 除了在 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) 枚举中找到的标记外，还提供了标志，在加载时，探查器可以为 [ICorProfilerInfo5：： SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) 方法指定这些标志。  
   
  [COR_PRF_JIT_CACHE 枚举](cor-prf-jit-cache-enumeration.md)  
  指示缓存的函数搜索的结果。  
@@ -69,9 +71,10 @@ ms.locfileid: "76868130"
  指示从托管代码向非托管代码转换或从非托管代码向托管代码转换的原因。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [分析概述](profiling-overview.md)  
   
- [Profiling 接口](profiling-interfaces.md)  
+ [分析接口](profiling-interfaces.md)  
   
  [分析全局静态函数](profiling-global-static-functions.md)  
   
