@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b5f9b41e-7301-429c-911f-21d5422292b3
 topic_type:
 - apiref
-ms.openlocfilehash: f577e9252d97ec188ff1076fd8340336b16c8257
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ca4bb1fe35451f95f752a4e71f5f0b541b55e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721772"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent 接口
-提供了[IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md)方法，该方法对已通过调用[ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法注册的事件执行回调。  
+
+提供了 [IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md) 方法，该方法对已通过调用 [ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) 方法注册的事件执行回调。  
   
 ## <a name="methods"></a>方法  
   
@@ -31,11 +32,12 @@ ms.locfileid: "84504324"
 |[OnEvent 方法](iactiononclrevent-onevent-method.md)|对已注册的事件执行回调。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

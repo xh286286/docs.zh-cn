@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 420f22a242a20f8bdf5d5b84f47a297a2f503db0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546016"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720615"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 接口
+
 提供一些方法，这些方法使宿主可以显式启动和停止公共语言运行时 (CLR) ，以创建和配置应用程序域、访问默认域以及枚举在进程中运行的所有域。  
   
  在 .NET Framework 版本2.0 中，此接口由 [ICLRRuntimeHost](iclrruntimehost-interface.md)取代。  
@@ -51,7 +52,8 @@ ms.locfileid: "90546016"
 |[UnloadDomain 方法](icorruntimehost-unloaddomain-method.md)|从当前进程中卸载指定的应用程序域。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
@@ -59,7 +61,7 @@ ms.locfileid: "90546016"
   
  **.NET Framework 版本：** 1.0、1。1  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.AppDomain>
 - [承载](index.md)

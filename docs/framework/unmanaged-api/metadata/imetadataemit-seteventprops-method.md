@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5c2880ac07f0317bc36ff4bbde68cd3a25febf52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008750"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721980"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-设置或更新通过之前对 IMetaDataEmit 的调用定义的事件的指定功能[：:D efineevent](imetadataemit-defineevent-method.md)。  
+
+设置或更新通过之前对 IMetaDataEmit 的调用定义的事件的指定功能 [：:D efineevent](imetadataemit-defineevent-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,6 +41,7 @@ HRESULT SetEventProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ev`  
  中事件标记。  
   
@@ -56,17 +58,18 @@ HRESULT SetEventProps (
  中用于取消订阅事件的方法，或为 null。  
   
  `mdFire`  
- 中使用的方法（由派生类）引发事件。  
+ 中派生类 (用来引发事件) 的方法。  
   
  `rmdOtherMethods[]`  
  中与事件关联的其他方法的标记数组。 数组的最后一个元素必须是 `mdMethodDefNil` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

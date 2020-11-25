@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-ms.openlocfilehash: 73b6bb9eac3f706df5cb1fd63b2f67c9791c8ed2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 657c16f6e96633e568903ca4a55b4c68c1a49fa5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720316"
 ---
 # <a name="ialink-interface"></a>IALink 接口
+
 有助于构造 .NET Framework 程序集。 除此之外，接口还包含一些方法，这些方法可帮助编写多模块程序集的程序集清单、用强名称对程序集进行签名，并创建 netmodule。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [AddFile 方法](addfile-method.md)  
   
  [AddImport 方法](addimport-method.md)  

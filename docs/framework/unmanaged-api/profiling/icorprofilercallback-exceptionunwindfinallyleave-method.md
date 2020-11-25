@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2350351e-f253-4c0c-a191-f952bc5700e6
 topic_type:
 - apiref
-ms.openlocfilehash: 8da9098e882dd4b4c1f60e4428ebe68421e629e1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e02716350aa2bf32bdd7c4b2e01841405de6dc14
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720394"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyLeave 方法
+
 通知探查器异常处理的展开阶段已离开 `finally` 子句。  
   
 ## <a name="syntax"></a>语法  
@@ -32,12 +33,14 @@ HRESULT ExceptionUnwindFinallyLeave();
 ```  
   
 ## <a name="remarks"></a>备注  
+
  探查器不应在此调用期间被阻止，因为堆栈可能不处于允许垃圾回收的状态，因此无法启用抢先垃圾回收。 如果探查器在此处阻止并且试图进行垃圾回收，则运行时将被阻止，直到此回调返回。  
   
  此外，在此调用期间，探查器不得调入托管代码或以任何方式导致托管内存分配。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

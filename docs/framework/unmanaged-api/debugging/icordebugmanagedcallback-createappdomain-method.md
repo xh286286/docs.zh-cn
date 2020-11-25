@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 48d410d7-6749-4125-a8fd-f9562c7088e9
 topic_type:
 - apiref
-ms.openlocfilehash: 89fba6af9b76f729ca40d4ee63f525611bdf43a9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5f831f0f42231f594e170567535af75216e68c45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205636"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721304"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>ICorDebugManagedCallback::CreateAppDomain 方法
+
 通知调试器已创建应用程序域。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT CreateAppDomain (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pProcess`  
  中指向 ICorDebugProcess 对象的指针，该对象表示在其中创建应用程序域的进程。  
   
@@ -42,7 +44,8 @@ HRESULT CreateAppDomain (
  中指向 ICorDebugAppDomain 对象的指针，该对象表示已创建的应用程序域。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -50,6 +53,6 @@ HRESULT CreateAppDomain (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

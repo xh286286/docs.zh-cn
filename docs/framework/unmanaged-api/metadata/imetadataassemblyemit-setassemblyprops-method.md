@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-ms.openlocfilehash: 7c6adcbcfe64f63048078b4ccba6727a58531033
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3736e7279056e015b157758b1233cf6dc5aa6d8d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008100"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720199"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps 方法
+
 修改指定的 `Assembly` 元数据结构。  
   
 ## <a name="syntax"></a>语法  
@@ -40,8 +41,9 @@ HRESULT SetAssemblyProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pma`  
- 中`Assembly`用于指定要修改的元数据结构的元数据标记。  
+ 中 `Assembly` 用于指定要修改的元数据结构的元数据标记。  
   
  `pbPublicKey`  
  中指向程序集发布者的公钥的指针。  
@@ -59,17 +61,19 @@ HRESULT SetAssemblyProps (
  中指向包含程序集的版本、平台和区域设置信息的 ASSEMBLYMETADATA 的指针。  
   
  `dwAssemblyFlags`  
- 中[AssemblyFlags](assemblyflags-enumeration.md)值的按位组合，用于指定程序集的各种属性。  
+ 中 [AssemblyFlags](assemblyflags-enumeration.md) 值的按位组合，用于指定程序集的各种属性。  
   
-## <a name="remarks"></a>备注  
- 若要创建 `Assembly` 元数据结构，请使用[IMetaDataAssemblyEmit：:D efineassembly](imetadataassemblyemit-defineassembly-method.md)方法。  
+## <a name="remarks"></a>注解  
+
+ 若要创建 `Assembly` 元数据结构，请使用 [IMetaDataAssemblyEmit：:D efineassembly](imetadataassemblyemit-defineassembly-method.md) 方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: cdfd4e10236d546af2555b125d44233172849a21
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4545f5f8d78e588c655a72340210a785b0feb619
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503726"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720407"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs 方法
+
 枚举表示当前范围内的所有类型的 TypeDef 标记。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT EnumTypeDefs (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `phEnum`  
  弄指向新枚举器的指针。 第一次调用此方法时，此值必须为 NULL。  
   
@@ -53,18 +55,20 @@ HRESULT EnumTypeDefs (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`已成功返回。|  
+|`S_OK`|`EnumTypeDefs` 已成功返回。|  
 |`S_FALSE`|没有要枚举的令牌。 在这种情况下， `pcTypeDefs` 为零。|  
   
 ## <a name="remarks"></a>注解  
+
  TypeDef 标记表示一种类型，如类或接口，以及通过扩展性机制添加的任何类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

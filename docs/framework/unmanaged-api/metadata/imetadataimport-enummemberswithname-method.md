@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: ea451bdd645d2d4dea4c5dd00408e0bc51804803
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 35b82c33e54619eb9bebd5e5749ae202e905357a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492038"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720981"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName 方法
+
 枚举表示具有指定名称的指定类型的成员的 MemberDef 标记。  
   
 ## <a name="syntax"></a>语法  
@@ -39,6 +40,7 @@ HRESULT EnumMembersWithName (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `phEnum`  
  [in，out]指向枚举器的指针。  
   
@@ -58,21 +60,23 @@ HRESULT EnumMembersWithName (
  弄中返回的 MemberDef 令牌的实际数量 `rMembers` 。  
   
 ## <a name="remarks"></a>注解  
- 此方法枚举字段和方法，而不是属性或事件。 与[IMetaDataImport：： EnumMembers](imetadataimport-enummembers-method.md)不同，会 `EnumMembersWithName` 丢弃所有不具有指定名称的字段和成员标记。  
+
+ 此方法枚举字段和方法，而不是属性或事件。 与 [IMetaDataImport：： EnumMembers](imetadataimport-enummembers-method.md)不同，会 `EnumMembersWithName` 丢弃所有不具有指定名称的字段和成员标记。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`已成功返回。|  
+|`S_OK`|`EnumTypeDefs` 已成功返回。|  
 |`S_FALSE`|没有要枚举的 MemberDef 令牌。 在这种情况下， `pcTokens` 为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

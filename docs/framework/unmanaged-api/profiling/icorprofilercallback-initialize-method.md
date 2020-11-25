@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: ea4fc8ab39d616415106150f56f4b7afd5f68237
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 26df1599af247bd08d3702d4ef3c5aa2f648620c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500099"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720368"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 方法
-调用以在新的公共语言运行时（CLR）应用程序启动时初始化代码探查器。  
+
+调用以在新的公共语言运行时 (CLR) 应用程序启动时初始化代码探查器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +37,15 @@ HRESULT Initialize(
 
 - `pICorProfilerInfoUnk`
 
-  \[in] 指向[IUnknown](/cpp/atl/iunknown)接口的指针，探查器必须查询[ICorProfilerInfo](icorprofilerinfo-interface.md)接口指针。  
+  \[in] 指向 [IUnknown](/cpp/atl/iunknown) 接口的指针，探查器必须查询 [ICorProfilerInfo](icorprofilerinfo-interface.md) 接口指针。  
 
 ## <a name="remarks"></a>注解  
- `Initialize`调用是启用（或禁用）不可变回调的唯一机会。 一旦调用启用了回调 `Initialize` ，以后就不能再使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)来禁用它。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)枚举的 COR_PRF_MONITOR_IMMUTABLE 值指示哪些事件是不可变的。  
+
+ `Initialize`调用是启用 (或禁用不可变的) 回调的唯一机会。 一旦调用启用了回调 `Initialize` ，以后就不能再使用 [ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)来禁用它。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)枚举的 COR_PRF_MONITOR_IMMUTABLE 值指示哪些事件是不可变的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

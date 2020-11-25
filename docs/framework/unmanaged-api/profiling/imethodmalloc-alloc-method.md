@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-ms.openlocfilehash: a82a2150f32b1b335da083ca235ed9d2966a0b6e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58809f12e4dd4419b754caafc3f8b883b8bc5089
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721161"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc 方法
 
-尝试为新的 Microsoft 中间语言（MSIL）函数体分配指定的内存量。
+尝试将指定数量的内存分配给新的 Microsoft 中间语言 (MSIL) 函数体。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,8 @@ PVOID Alloc (
  `Alloc`应将方法与[ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)方法结合使用。
 
 ## <a name="requirements"></a>要求
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。
 
  **头文件：** CorProf.idl、CorProf.h
 

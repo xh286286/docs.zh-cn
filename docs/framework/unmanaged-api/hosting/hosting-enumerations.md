@@ -6,19 +6,21 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 907b1343ddbfa28b97ac2210e28b99cd38aa6fd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721824"
 ---
 # <a name="hosting-enumerations"></a>承载枚举
+
 本部分介绍宿主 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [CLSID_RESOLUTION_FLAGS 枚举](clsid-resolution-flags-enumeration.md)  
- 包含指示公共语言运行时（CLR）应如何解析的值 `CLSID` 。  
+ 包含指示公共语言运行时 (CLR) 应如何解析的值 `CLSID` 。  
   
  [COR_GC_STAT_TYPES 枚举](cor-gc-stat-types-enumeration.md)  
  指定要为垃圾回收记录的统计信息。  
@@ -54,10 +56,10 @@ ms.locfileid: "84504298"
  包含一些值，这些值指示在报告错误时要包含在堆转储的自定义子集中的项。  
   
  [ECustomDumpItemKind 枚举](ecustomdumpitemkind-enumeration.md)  
- 保留以供将来扩展[CustomDumpItem 结构](customdumpitem-structure.md)。  
+ 保留以供将来扩展 [CustomDumpItem 结构](customdumpitem-structure.md) 。  
   
  [EHostApplicationPolicy 枚举](ehostapplicationpolicy-enumeration.md)  
- 指示如何修改[IHostAssemblyManager 接口](ihostassemblymanager-interface.md)接口对象。 此枚举已弃用。  
+ 指示如何修改 [IHostAssemblyManager 接口](ihostassemblymanager-interface.md) 接口对象。 此枚举已弃用。  
   
  [EHostBindingPolicyModifyFlags 枚举](ehostbindingpolicymodifyflags-enumeration.md)  
  允许主机在将策略修改从源程序集应用到目标程序集时指定 CLR 应执行的重定向类型。  
@@ -72,13 +74,13 @@ ms.locfileid: "84504298"
  包含一些值，这些值指示在请求特定内存分配但无法满足时，失败所造成的影响。  
   
  [EPolicyAction 枚举](epolicyaction-enumeration.md)  
- 描述主机可为[EClrOperation 枚举](eclroperation-enumeration.md)描述的操作和[EClrFailure 枚举](eclrfailure-enumeration.md)描述的故障设置的策略操作。  
+ 描述主机可为 [EClrOperation 枚举](eclroperation-enumeration.md) 描述的操作和 [EClrFailure 枚举](eclrfailure-enumeration.md)描述的故障设置的策略操作。  
   
  [ESymbolReadingPolicy 枚举](esymbolreadingpolicy-enumeration.md)  
- 包含设置用于读取程序数据库（PDB）文件的策略的值。  
+ 包含一些值，这些值设置用于读取程序数据库 (PDB) 文件的策略。  
   
  [ETaskType 枚举](etasktype-enumeration.md)  
- 包含一些值，这些值指示由[ICLRTask 接口](iclrtask-interface.md)或[IHostTask 接口](ihosttask-interface.md)接口表示的任务的类型。  
+ 包含一些值，这些值指示由 [ICLRTask 接口](iclrtask-interface.md) 或 [IHostTask 接口](ihosttask-interface.md) 接口表示的任务的类型。  
   
  [HOST_TYPE 枚举](host-type-enumeration.md)  
  包含的值用于指定启动应用程序的主机的类型。  
@@ -87,7 +89,7 @@ ms.locfileid: "84504298"
  包含指定正在分配的内存特性的值。  
   
  [METAHOST_CONFIG_FLAGS 枚举](metahost-config-flags-enumeration.md)  
- 描述在 `pdwConfigFlags` [ICLRMetaHostPolicy：： GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md)方法的参数中返回的可能的标志。  
+ 描述在 `pdwConfigFlags` [ICLRMetaHostPolicy：： GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) 方法的参数中返回的可能的标志。  
   
  [METAHOST_POLICY_FLAGS 枚举](metahost-policy-flags-enumeration.md)  
  提供大多数运行时主机通用的绑定策略。  
@@ -102,12 +104,13 @@ ms.locfileid: "84504298"
  包含指示 CLR 的启动行为的值。  
   
  [ValidatorFlags 枚举](validatorflags-enumeration.md)  
- 包含一些值，这些值指示应在调用[验证方法](iclrvalidator-validate-method.md)时执行的验证类型。  
+ 包含一些值，这些值指示应在调用 [验证方法](iclrvalidator-validate-method.md)时执行的验证类型。  
   
  [WAIT_OPTION 枚举](wait-option-enumeration.md)  
  指示 CLR 请求的操作阻止时主机应执行的操作。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [承载组件类](hosting-coclasses.md)  
   
  [承载接口](hosting-interfaces.md)  

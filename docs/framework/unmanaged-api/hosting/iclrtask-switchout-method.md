@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: b6fb168c-b24b-4ecf-a390-2b5ba3317ae6
 topic_type:
 - apiref
-ms.openlocfilehash: 75517ae55ebae07242f19c19c5473780ce4b0809
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 1b27983b3f10eba225442dcd2f5df02062e53ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762911"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720264"
 ---
 # <a name="iclrtaskswitchout-method"></a>ICLRTask::SwitchOut 方法
-通知公共语言运行时（CLR）当前[ICLRTask](iclrtask-interface.md)实例表示的任务不再处于可运行状态。  
+
+通知公共语言运行时 (CLR) 当前 [ICLRTask](iclrtask-interface.md) 实例表示的任务不再处于可运行状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +36,7 @@ HRESULT SwitchOut ();
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`SwitchOut`已成功返回。|  
+|S_OK|`SwitchOut` 已成功返回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
@@ -43,14 +44,16 @@ HRESULT SwitchOut ();
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>注解  
+
  宿主调用 `SwitchOut` 以通知 CLR 它已暂时停止执行当前实例所表示的任务 `ICLRTask` ，并将重新计划任务。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

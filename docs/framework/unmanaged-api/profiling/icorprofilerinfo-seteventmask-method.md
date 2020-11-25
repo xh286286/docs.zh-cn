@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44bc0f56-32fa-491e-a62d-52fc96d48125
 topic_type:
 - apiref
-ms.openlocfilehash: f7dee16373fc67580130c57482a130ba02f50204
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9d319b6523b2c2a1bcc5cb6ea7a28efa67d898e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497460"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720940"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>ICorProfilerInfo::SetEventMask 方法
+
 设置一个值，用于指定探查器需要从公共语言运行时 (CLR) 接收其相关通知的事件的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -33,16 +34,18 @@ HRESULT SetEventMask(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `dwEvents`  
  [in] 一个指定事件类别的 4 字节的值。 每个位都可控制不同的功能、行为或事件类型。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)枚举中描述了这些位。  
   
 ## <a name="remarks"></a>注解  
   
 > [!NOTE]
-> 应调用[SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)方法，而不是此方法。 尽管此 `SetEventMask` 方法继续受支持，但[SetEventMask2](icorprofilerinfo5-seteventmask2-method.md)提供其他功能。  
+> 应调用 [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) 方法，而不是此方法。 尽管此 `SetEventMask` 方法继续受支持，但 [SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) 提供其他功能。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

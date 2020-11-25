@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: d28991254fba73de7a55135844d16417580d8792
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 147694431d2c378b856577ef5a60e8a8b4e9a7a7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494379"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721213"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum 接口
+
 提供方法以按顺序循环访问公共语言运行时中的线程集合。  
   
 ## <a name="methods"></a>方法  
@@ -35,10 +36,12 @@ ms.locfileid: "84494379"
 |[Skip 方法](icorprofilerthreadenum-skip-method.md)|从当前位置前移枚举器的光标，以便跳过指定的元素数量。|  
   
 ## <a name="remarks"></a>注解  
+
  `ICorProfilerThreadEnum` 接口是一个枚举器。 它可以让数组接收器以其合适的速率从发送器拉取元素。 换而言之，接收器可以显式控制数组元素流，从而避免将大型数组作为方法形参传递方面的相关问题。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

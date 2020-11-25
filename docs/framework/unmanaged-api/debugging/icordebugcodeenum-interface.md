@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-ms.openlocfilehash: cce0efa925683b5361a5422112db3f8231e2dfb4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b611dcabc1e5cc36f5c6342f0a832cc81de8c1d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720732"
 ---
 # <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum 接口
 
@@ -29,15 +29,16 @@ ms.locfileid: "82893279"
   
 |方法|说明|  
 |------------|-----------------|  
-|[Next 方法](icordebugcodeenum-next-method.md)|从当前位置开始，从`ICorDebugCode`枚举中获取指定数目的实例。|  
+|[Next 方法](icordebugcodeenum-next-method.md)|`ICorDebugCode`从当前位置开始，从枚举中获取指定数目的实例。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

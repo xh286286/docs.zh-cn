@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: ccad76e1c8a49222d4f527f8b7b18d4e40ff8cae
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: bc647ad025b5e22187b476383ed0128761cb632f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721031"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start 方法
-启动公共语言运行时（CLR）。  
+
+ (CLR) 启动公共语言运行时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,14 +42,16 @@ HRESULT Start ();
 |HOST_E_CLRNOTAVAILABLE|CLR 未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
   
 ## <a name="remarks"></a>注解  
+
  通常不需要调用 `Start` 方法，因为 CLR 会在首次运行托管代码请求时自动启动。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：** 1.0、1。1  
   

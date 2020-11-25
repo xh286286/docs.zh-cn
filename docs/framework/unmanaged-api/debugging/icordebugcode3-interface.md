@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 70f07c9e-0614-4bee-ac34-09fe6c51c5a9
 topic_type:
 - apiref
-ms.openlocfilehash: 6f66e4a903be2e9b12a573f74638a62c58005689
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 609cd557db71fac53aadf613534a23e988b14bde
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720750"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 接口
+
 提供一个方法，该方法将 "ICorDebugCode" 和 "ICorDebugCode2" 扩展为提供有关托管返回值的信息。  
   
 ## <a name="methods"></a>方法  
@@ -30,13 +31,14 @@ ms.locfileid: "82893457"
 |------------|-----------------|  
 |[GetReturnValueLiveOffset 方法](icordebugcode3-getreturnvalueliveoffset-method.md)|对于指定的 IL 偏移量，获取应放置断点的本机偏移量，以便调试器可以从函数中获取返回值。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

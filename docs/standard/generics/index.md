@@ -26,18 +26,19 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: f361e0e250368694d7afa078183b1e5cb7ef1464
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707862"
 ---
 # <a name="generics-in-net"></a>.NET 中的泛型
 
 借助泛型，你可以根据要处理的精确数据类型定制方法、类、结构或接口。 例如，不使用允许键和值为任意类型的 <xref:System.Collections.Hashtable> 类，而使用 <xref:System.Collections.Generic.Dictionary%602> 泛型类并指定允许的密钥和值类型。 泛型的优点包括：代码的可重用性增加，类型安全性提高。  
 
 ## <a name="defining-and-using-generics"></a>定义和使用泛型
+
  泛型是为所存储或使用的一个或多个类型具有占位符（类型形参）的类、结构、接口和方法。 泛型集合类可以将类型形参用作其存储的对象类型的占位符；类型形参呈现为其字段的类型和其方法的参数类型。 泛型方法可将其类型形参用作其返回值的类型或用作其形参之一的类型。 以下代码举例说明了一个简单的泛型类定义。  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -51,6 +52,7 @@ ms.locfileid: "95098809"
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
 
 ### <a name="generics-terminology"></a>泛型术语  
+
  介绍 .NET 中的泛型需要用到以下术语：  
   
 - *泛型类型定义* 是用作模板的类、结构或接口声明，带有可包含或使用的类型的占位符。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 类可以包含两种类型：密钥和值。 由于泛型类型定义只是一个模板，所以你无法创建作为泛型类型定义的类、结构或接口的实例。  
@@ -80,6 +82,7 @@ ms.locfileid: "95098809"
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
 ## <a name="advantages-and-disadvantages-of-generics"></a>泛型的利与弊
+
  使用泛型集合和委托有很多好处：  
   
 - 类型安全。 泛型将类型安全的负担从你那里转移到编译器。 没有必要编写代码来测试正确的数据类型，因为它会在编译时强制执行。 降低了强制类型转换的必要性和运行时错误的可能性。  
@@ -112,6 +115,7 @@ ms.locfileid: "95098809"
      有关详细信息，请参阅 <xref:System.Type.MakeGenericType%2A>中的“嵌套类型”。  
 
 ## <a name="class-library-and-language-support"></a>类库和语言支持  
+
  .NET 在以下命名空间中提供了大量泛型集合类：  
   
 - <xref:System.Collections.Generic> 命名空间包含 .NET 提供的大部分泛型集合类型（如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型类）。  
@@ -127,6 +131,7 @@ ms.locfileid: "95098809"
  Visual C++、C# 和 Visual Basic 都对定义和使用泛型提供完全支持。 有关语言支持的详细信息，请参阅 [Visual Basic 中的泛型类型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型简介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)。
 
 ## <a name="nested-types-and-generics"></a>嵌套类型和泛型  
+
  嵌套在泛型类型中的类型可取决于封闭泛型类型的类型参数。 公共语言运行时将嵌套类型看作泛型，即使它们不具有自己的泛型类型形参。 创建嵌套类型的实例时，必须指定所有封闭泛型类型的类型实参。  
 
 ## <a name="related-topics"></a>相关主题  
@@ -145,6 +150,7 @@ ms.locfileid: "95098809"
 |[Visual C++ 中的泛型概述](/cpp/windows/overview-of-generics-in-visual-cpp)|为 C++ 用户描述泛型功能，包括泛型和模板之间的差异。|  
 
 ## <a name="reference"></a>参考  
+
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

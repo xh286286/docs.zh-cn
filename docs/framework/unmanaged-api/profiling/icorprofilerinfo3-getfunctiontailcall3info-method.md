@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: e4d0d9ed07c707e51e5833483b71079f2c330505
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27bbb1aac376866be7458a3737af9d89bf761411
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496524"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721603"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 方法
-提供由[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)函数向探查器报告的函数的堆栈帧。 仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。  
+
+提供由 [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) 函数向探查器报告的函数的堆栈帧。 仅在 `FunctionTailcall3WithInfo` 回调时可调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,8 +36,9 @@ HRESULT GetFunctionTailcall3Info(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `functionId`  
- 中`FunctionID`正在返回的函数的。  
+ 中 `FunctionID` 正在返回的函数的。  
   
  `eltInfo`  
  [in] 表示有关给定堆栈帧的信息的不透明的句柄。 探查器应提供 `eltInfo` 由函数为探查器提供的相同的 `FunctionTailcall3WithInfo` 。  
@@ -47,7 +49,8 @@ HRESULT GetFunctionTailcall3Info(
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

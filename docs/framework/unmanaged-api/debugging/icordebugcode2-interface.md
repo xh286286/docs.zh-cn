@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 39767ea2603018d088aaefc5da32879aaf49fee6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1e5b92d99d8ae52c88f1517f9c3d7db8e70598ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720797"
 ---
 # <a name="icordebugcode2-interface"></a>ICorDebugCode2 接口
 
@@ -30,15 +30,16 @@ ms.locfileid: "82893487"
 |方法|说明|  
 |------------|-----------------|  
 |[GetCodeChunks 方法](icordebugcode2-getcodechunks-method.md)|获取包含此代码对象的代码块。|  
-|[GetCompilerFlags 方法](icordebugcode2-getcompilerflags-method.md)|获取标志，这些标志指定此代码对象是实时（JIT）编译或使用本机映像生成器（Ngen.exe）生成的。|  
+|[GetCompilerFlags 方法](icordebugcode2-getcompilerflags-method.md)|获取一些标志，这些标志指定此代码对象是实时 (JIT) 使用本机映像)  ( 生成器编译或生成的。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

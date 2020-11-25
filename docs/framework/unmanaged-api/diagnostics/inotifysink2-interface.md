@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 255fe51f86157842a5807145bf7c58ae1ff5ba8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442054"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720017"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 接口
+
 声明接收器通知的方法。  
   
 ## <a name="methods"></a>方法  
@@ -34,6 +35,7 @@ ms.locfileid: "83442054"
 |[OnSyncCallReturn 方法](inotifysink2-onsynccallreturn-method.md)|当调用返回时调用。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** ProtocolNotify2 .idl  
   
 ## <a name="see-also"></a>另请参阅

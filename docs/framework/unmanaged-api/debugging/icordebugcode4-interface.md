@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 870ac1e62363493989fe638483ea474d648c8c69
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8a373afdf41590ec44a7cbac7360719a12faa82e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720719"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 接口
+
 提供一个方法，该方法使调试器可以枚举函数中的局部变量和参数。  
   
 ## <a name="methods"></a>方法  
@@ -30,13 +31,14 @@ ms.locfileid: "82893308"
 |------------|-----------------|  
 |[EnumerateVariableHomes 方法](icordebugcode4-enumeratevariablehomes-method.md)|获取函数中局部变量和参数的枚举器。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

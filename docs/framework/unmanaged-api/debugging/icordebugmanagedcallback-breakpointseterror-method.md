@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa25dd33223ad2a9521aed0917ce35a2a33fa2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cac8393408de626efe2360999e259780eac29f38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213382"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721330"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError 方法
-通知调试器，公共语言运行时无法准确绑定在实时（JIT）函数编译之前设置的断点。  
+
+通知调试器公共语言运行时无法准确绑定在实时 (JIT) 编译的函数之前设置的断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,6 +38,7 @@ HRESULT BreakpointSetError (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pAppDomain`  
  中指向 ICorDebugAppDomain 对象的指针，该对象表示包含未绑定断点的应用程序域。  
   
@@ -49,11 +51,13 @@ HRESULT BreakpointSetError (
  `dwError`  
  中指示错误的整数。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  将永远不会命中给定的断点。 调试器应停用并将其重新绑定。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -61,6 +65,6 @@ HRESULT BreakpointSetError (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugManagedCallback 接口](icordebugmanagedcallback-interface.md)

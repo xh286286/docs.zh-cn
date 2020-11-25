@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-ms.openlocfilehash: bab52d9179d7454cab4a47e1a2bfe80a49b00c2a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f365a95b0859f4f97dab96ec85af6d7dfb96d8e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502829"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721608"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info 方法
-提供由[FunctionLeave3WithInfo 函数](functionleave3withinfo-function.md)函数向探查器报告的函数的堆栈帧和返回值。 仅在 `FunctionLeave3WithInfo` 回调时可调用此方法。  
+
+提供由 [FunctionLeave3WithInfo 函数](functionleave3withinfo-function.md) 函数向探查器报告的函数的堆栈帧和返回值。 仅在 `FunctionLeave3WithInfo` 回调时可调用此方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,22 +37,24 @@ HRESULT GetFunctionLeave3Info(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `functionId`  
- 中`FunctionID`正在返回的函数的。  
+ 中 `FunctionID` 正在返回的函数的。  
   
  `eltInfo`  
- [in] 表示有关给定堆栈帧的信息的不透明的句柄。 探查器应提供 `eltInfo` [FunctionLeave3WithInfo](functionleave3withinfo-function.md)函数为探查器提供的相同的。  
+ [in] 表示有关给定堆栈帧的信息的不透明的句柄。 探查器应提供 `eltInfo` [FunctionLeave3WithInfo](functionleave3withinfo-function.md) 函数为探查器提供的相同的。  
   
  `pFrameInfo`  
  [out] 表示有关给定堆栈帧的泛型信息的不透明的句柄。 此句柄仅在探查器调用 `GetFunctionLeave3Info` 方法的 `FunctionLeave3WithInfo` 回调时有效。  
   
  `pRetvalRange`  
- 弄指向[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)结构的指针，该结构包含从函数返回的值。 若要访问返回值信息， `COR_PRF_ENABLE_FUNCTION_RETVAL` 必须设置标志。 探查器可以使用[ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md)来设置事件标志。  
+ 弄指向 [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 结构的指针，该结构包含从函数返回的值。 若要访问返回值信息， `COR_PRF_ENABLE_FUNCTION_RETVAL` 必须设置标志。 探查器可以使用 [ICorProfilerInfo：： SetEventMask 方法](icorprofilerinfo-seteventmask-method.md) 来设置事件标志。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

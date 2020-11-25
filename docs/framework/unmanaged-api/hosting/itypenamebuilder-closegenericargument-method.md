@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9a8178d-be1f-4ad4-abdb-d38470659b82
 topic_type:
 - apiref
-ms.openlocfilehash: 4b083b5225b500fa19ed40cc6550630e155e8c52
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 22a9bdc014358ac3cda0da166f3f29d1c60d09ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008685"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721239"
 ---
 # <a name="itypenamebuilderclosegenericargument-method"></a>ITypeNameBuilder::CloseGenericArgument 方法
+
 此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
   
 ## <a name="syntax"></a>语法  
@@ -32,11 +33,12 @@ HRESULT CloseGenericArgument ( );
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

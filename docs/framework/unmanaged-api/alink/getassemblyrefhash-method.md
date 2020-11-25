@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: af040c4a6c9b85930d2d9261f8587ba69eb204e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433873"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721473"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 方法
+
 检索给定程序集的哈希 blob。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT GetAssemblyRefHash(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `FileToken`  
  哈希将引用的程序集的 ID。  
   
@@ -45,9 +47,11 @@ HRESULT GetAssemblyRefHash(
  接收哈希 blob 的大小（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink  
   
 ## <a name="see-also"></a>另请参阅

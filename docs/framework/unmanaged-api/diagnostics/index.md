@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], diagnostics symbol store
 - native API reference [.NET Framework], diagnostics symbol store
 ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
-ms.openlocfilehash: 044ed9caaf0633e84c783103a338891017fd1ac1
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: f53c9dfce6b2e962a355fedf805e612345b4f381
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720069"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>诊断符号存储区（非托管 API 参考）
+
 诊断符号存储区 API 允许编译器生成符号信息以供调试器使用。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [诊断符号存储区接口](diagnostics-symbol-store-interfaces.md)  
  描述诊断符号存储区 API 使用的非托管接口。  
   

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: fd3c941d89fbd93f30fc1af235f6310b23758973
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8a5fc42191634a2e5a441baecc4b78212ffad687
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720485"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager 接口
-提供一些方法，使公共语言运行时（CLR）可以通过调用主机而不是使用 Win32 同步函数来创建同步基元。  
+
+提供一些方法，使公共语言运行时 (CLR) 通过调用主机而不是使用 Win32 同步函数来创建同步基元。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,18 +36,20 @@ ms.locfileid: "84501451"
 |[CreateMonitorEvent 方法](ihostsyncmanager-createmonitorevent-method.md)|创建监视的自动重置事件对象。|  
 |[CreateRWLockReaderEvent 方法](ihostsyncmanager-createrwlockreaderevent-method.md)|创建手动重置的事件对象，以便实现读取器锁。|  
 |[CreateRWLockWriterEvent 方法](ihostsyncmanager-createrwlockwriterevent-method.md)|创建自动重置事件对象，以便实现编写器锁。|  
-|[CreateSemaphore 方法](ihostsyncmanager-createsemaphore-method.md)|为 CLR 创建一个[IHostSemaphore](ihostsemaphore-interface.md)对象，以用作等待事件的信号量。|  
-|[SetCLRSyncManager 方法](ihostsyncmanager-setclrsyncmanager-method.md)|设置要与当前实例关联的[ICLRSyncManager](iclrsyncmanager-interface.md)实例 `IHostSyncManager` 。|  
+|[CreateSemaphore 方法](ihostsyncmanager-createsemaphore-method.md)|为 CLR 创建一个 [IHostSemaphore](ihostsemaphore-interface.md) 对象，以用作等待事件的信号量。|  
+|[SetCLRSyncManager 方法](ihostsyncmanager-setclrsyncmanager-method.md)|设置要与当前实例关联的 [ICLRSyncManager](iclrsyncmanager-interface.md) 实例 `IHostSyncManager` 。|  
   
 ## <a name="remarks"></a>注解  
- CLR `IHostSyncManager` 通过使用 IID_IHostSyncManager 的调用[IHostControl：： GetHostManager](ihostcontrol-gethostmanager-method.md)方法来发现主机的实现 `IID` 。  
+
+ CLR `IHostSyncManager` 通过使用 IID_IHostSyncManager 的调用 [IHostControl：： GetHostManager](ihostcontrol-gethostmanager-method.md) 方法来发现主机的实现 `IID` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

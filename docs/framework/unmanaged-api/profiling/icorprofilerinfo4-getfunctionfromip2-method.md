@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-ms.openlocfilehash: ea66474e809b3813faceef79a69dd8a639a72a3b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a522df8abfba1c5837e3136f966935ff1f56d8d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721538"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 方法
+
 将托管代码指令指针映射到函数的 JIT 重新编译版本。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT GetFunctionFromIP2(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ip`  
  中托管代码中的指令指针。  
   
@@ -45,13 +47,15 @@ HRESULT GetFunctionFromIP2(
  弄函数的 JIT 重新编译版本的标识。  
   
 ## <a name="remarks"></a>注解  
- `GetFunctionFromIP2`类似于 `GetFunctionFromIP` ，只不过它会获取 JIT 重新编译的 ID，而不是包含指定 IP 地址的函数的函数 ID。  
+
+ `GetFunctionFromIP2` 类似于 `GetFunctionFromIP` ，只不过它会获取 JIT 重新编译的 ID，而不是包含指定 IP 地址的函数的函数 ID。  
   
 > [!NOTE]
-> `GetFunctionFromIP2`可以触发垃圾回收，而 `GetFunctionFromIP` 不会。  有关详细信息，请参阅[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md)。  
+> `GetFunctionFromIP2` 可以触发垃圾回收，而 `GetFunctionFromIP` 不会。  有关详细信息，请参阅 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

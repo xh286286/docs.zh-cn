@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4030da31400b7075952d146e5d6740306863e9ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441092"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721083"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 方法
+
 获取校验和。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT GetCheckSum(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cData`  
  中参数所提供的缓冲区的长度 `data`  
   
@@ -45,6 +47,7 @@ HRESULT GetCheckSum(
  弄接收校验和的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则为错误代码。  
   
 ## <a name="see-also"></a>另请参阅
