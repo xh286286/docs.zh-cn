@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf6f9c5fe8777f3333e449a804a3c3a0a64ff19
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e55c53b9610dcadee92ba9871bf52e3dacb5796b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213083"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726231"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next 方法
-获取指定数量的[COR_GC_REFERENCE](cor-gc-reference-structure.md)实例，这些实例包含有关将进行垃圾回收的对象的信息。  
+
+获取指定数量的 [COR_GC_REFERENCE](cor-gc-reference-structure.md) 实例，这些实例包含有关将进行垃圾回收的对象的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,19 +36,21 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  celt  
  中要检索的根的数目。  
   
  根目录  
- 弄指针的数组，其中每个都指向一个[COR_GC_REFERENCE](cor-gc-reference-structure.md)对象，该对象表示要进行垃圾回收的对象的根。  
+ 弄指针的数组，其中每个都指向一个 [COR_GC_REFERENCE](cor-gc-reference-structure.md) 对象，该对象表示要进行垃圾回收的对象的根。  
   
  pceltFetched  
- 弄一个指针，指向在中实际返回的[COR_GC_REFERENCE](cor-gc-reference-structure.md)对象的数量 `roots` 。 如果 `celt` 为 1，此值可能为 `null`。  
+ 弄一个指针，指向在中实际返回的 [COR_GC_REFERENCE](cor-gc-reference-structure.md) 对象的数量 `roots` 。 如果 `celt` 为 1，此值可能为 `null`。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -55,7 +58,7 @@ HRESULT Next(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugGCReferenceEnum 接口](icordebuggcreferenceenum-interface.md)
 - [调试接口](debugging-interfaces.md)

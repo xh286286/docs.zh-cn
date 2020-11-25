@@ -2,12 +2,12 @@
 title: 如何对 .NET Core 运行时和 SDK 进行版本控制
 description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（类似于语义版本控制）。
 ms.date: 06/24/2020
-ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619749"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726699"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 
@@ -113,4 +113,4 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 - [.NET Core 分发打包](../distribution-packaging.md)
 - [.NET Core 支持生命周期简报](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)
-- [.NET Core 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)
+- [.NET Core 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet/)

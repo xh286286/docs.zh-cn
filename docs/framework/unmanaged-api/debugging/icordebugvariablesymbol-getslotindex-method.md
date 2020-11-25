@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::GetSlotIndex 方法
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-ms.openlocfilehash: 251a978e96ff396d0d9d9282ded7f8a25ae0ba0b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: fc42517cb95dfc14c472b5bb9111ebd70639cee7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397082"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725984"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex 方法
+
 获取本地变量的托管槽索引。  
   
 ## <a name="syntax"></a>语法  
@@ -21,20 +22,24 @@ HRESULT GetSlotIndex(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pSlotIndex`  
  [out] 指向本地变量的槽索引的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  `S_OK` 如果成功。 如果变量是一个函数自变量，则为 `E_FAIL`。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  本地变量的托管槽索引可用于检索变量的元数据信息  
   
 > [!NOTE]
 > 此方法仅适用于 .NET Native。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -42,7 +47,7 @@ HRESULT GetSlotIndex(
   
  **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ICorDebugVariableSymbol 接口](icordebugvariablesymbol-interface.md)
 - [调试接口](debugging-interfaces.md)

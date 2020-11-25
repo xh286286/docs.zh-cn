@@ -6,14 +6,15 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6f8cbb757ffb42f63903b212fee33cdcbba7ecb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821003"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727674"
 ---
 # <a name="interface-design"></a>接口设计
+
 尽管大多数 Api 是使用类和结构进行最佳建模的，但在某些情况下，接口更合适，或者是唯一的选择。
 
  CLR 不支持多个继承 (也就是说，CLR 类不能从多个基类) 继承，但它允许类型实现一个或多个接口，并从基类继承。 因此，接口通常用于实现多重继承的效果。 例如， <xref:System.IDisposable> 是一个接口，该接口允许类型独立于要参与的任何其他继承层次结构来支持 disposability。

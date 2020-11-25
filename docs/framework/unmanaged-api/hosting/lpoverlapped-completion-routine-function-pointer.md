@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: c0bdd9e59f5794dbb0d447dc2cc6cb682bfdf09f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: a3a45a13073cf422064d28554a274e068db6f517
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727505"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 函数指针
-指向一个函数，该函数在设备的重叠（即异步） i/o 完成时通知宿主。  
+
+指向一个函数，该函数在重叠 (即设备的异步) i/o 完成时通知宿主。  
   
  此函数指针在 .NET Framework 4 中已弃用。  
   
@@ -37,6 +38,7 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `dwErrorCode`  
  中如果设备已关闭，则为错误代码的值;否则，此值为零。  
   
@@ -48,15 +50,17 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  `lpOverlapped`  
  中指向结构的指针，该结构包含用于完成 i/o 请求的信息。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  指向该函数的 `LPOVERLAPPED_COMPLETION_ROUTINE` 点是回调函数，并且必须由宿主应用程序的编写器实现。 回调函数允许主机处理已完成的 i/o 请求。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** Mscorwks.dll  
+ **库：** MSCorWks.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

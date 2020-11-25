@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: e48b5c64-049f-4f93-ad87-d07ae9cd5845
 topic_type:
 - apiref
-ms.openlocfilehash: 986ae69e7ebb8f607be5d37fab426bcc787abb26
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25a1c29ab94a785304b83d5b1bcb2d7176742a68
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445639"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726013"
 ---
 # <a name="init-method"></a>Init 方法
-准备实现[IALink 接口](ialink-interface.md)以便使用的对象。  
+
+准备实现 [IALink 接口](ialink-interface.md) 以便使用的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,6 +35,7 @@ HRESULT Init(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pDispenser`  
  指向元数据分配器的[IMetaDataDispenserEx 接口](../metadata/imetadatadispenserex-interface.md)指针。  
   
@@ -41,9 +43,11 @@ HRESULT Init(
  指向可选错误处理接口的[IMetaDataError 接口](../metadata/imetadataerror-interface.md)指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink  
   
 ## <a name="see-also"></a>另请参阅

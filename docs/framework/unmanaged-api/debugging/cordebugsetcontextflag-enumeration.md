@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: a3214fc4e52918716f183720c7c616b1fff74bdb
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 078dfefc70704eaadb9cf3c06cfe58f276f7dfce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795672"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726010"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 枚举
+
 指示上下文是来自堆栈上的活动（或叶）帧，还是已通过从另一个帧展开来进行计算。  
   
 ## <a name="syntax"></a>语法  
@@ -41,11 +42,13 @@ typedef enum CorDebugSetContextFlag
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|上下文是线程的活动上下文。|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|已通过从另一个帧展开上下文来计算上下文。|  
   
-## <a name="remarks"></a>备注  
- `CorDebugSetContextFlag`提供[ICorDebugStackWalk：： SetContext](icordebugstackwalk-setcontext-method.md)方法使用的值。  
+## <a name="remarks"></a>注解  
+
+ `CorDebugSetContextFlag` 提供 [ICorDebugStackWalk：： SetContext](icordebugstackwalk-setcontext-method.md) 方法使用的值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

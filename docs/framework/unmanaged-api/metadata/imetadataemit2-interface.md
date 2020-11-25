@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 866dc96b-bbfc-4c0f-80c2-38ce93072106
 topic_type:
 - apiref
-ms.openlocfilehash: 5a232f30da8812c6f3bd94647d74151312a8593b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b8ad159dace734c343297b256092162f17ab829b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493016"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726478"
 ---
 # <a name="imetadataemit2-interface"></a>IMetaDataEmit2 接口
-扩展[IMetaDataEmit](imetadataemit-interface.md)接口，主要用于提供使用泛型类型的能力。  
+
+扩展 [IMetaDataEmit](imetadataemit-interface.md) 接口，主要用于提供使用泛型类型的能力。  
   
 ## <a name="methods"></a>方法  
   
@@ -38,11 +39,12 @@ ms.locfileid: "84493016"
 |[SetGenericParamProps 方法](imetadataemit2-setgenericparamprops-method.md)|设置指定的标记所引用的泛型参数定义的属性值。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

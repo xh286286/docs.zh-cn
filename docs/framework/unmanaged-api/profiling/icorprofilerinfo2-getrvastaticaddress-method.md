@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: 525fa2efa39909390d874fb97d9f11e647340ea9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ea4f6f129cf2919124b1bef1fd837f2b1e13760e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496940"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727050"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 方法
-获取指定的相对虚拟地址（RVA）静态字段的地址。  
+
+获取 (RVA) 静态字段的指定相对虚拟地址的地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,6 +36,7 @@ HRESULT GetRVAStaticAddress(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `classId`  
  中包含请求的 RVA 静态字段的类的 ID。  
   
@@ -45,6 +47,7 @@ HRESULT GetRVAStaticAddress(
  弄指向 RVA 静态字段的地址的指针。  
   
 ## <a name="remarks"></a>注解  
+
  此 `GetRVAStaticAddress` 方法可能会返回以下内容之一：  
   
 - 如果未在指定的上下文中为给定的静态字段分配地址，则 CORPROF_E_DATAINCOMPLETE HRESULT。  
@@ -54,7 +57,8 @@ HRESULT GetRVAStaticAddress(
  在类的类构造函数完成之前， `GetRVAStaticAddress` 将为其所有静态字段返回 CORPROF_E_DATAINCOMPLETE，不过，某些静态字段可能已经初始化并且可能是对垃圾回收对象的根。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

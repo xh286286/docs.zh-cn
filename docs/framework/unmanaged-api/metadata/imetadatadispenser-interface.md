@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 989840b3-9822-4ce5-a6c5-b375d3340a7a
 topic_type:
 - apiref
-ms.openlocfilehash: 2bdfe65dbf923ec61d91a259b5257d892fef53da
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c798aeba46adf91a8c13f8143c00f02173a0bb52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007333"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726101"
 ---
 # <a name="imetadatadispenser-interface"></a>IMetaDataDispenser 接口
+
 提供创建新的元数据范围或打开现有元数据范围的方法。  
   
 ## <a name="methods"></a>方法  
@@ -33,11 +34,12 @@ ms.locfileid: "84007333"
 |[OpenScopeOnMemory 方法](imetadatadispenser-openscopeonmemory-method.md)|打开包含现有元数据的内存区域。 也就是说，此方法将打开一个指定的内存区域，其中的现有数据将被视为元数据。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

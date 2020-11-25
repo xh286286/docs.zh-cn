@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-ms.openlocfilehash: 874951d6b5efed0dc08e6d0e166962767e295c3e
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 72b7f6e3a5a09bd06e8a7fbb94680ed3ea89b225
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842044"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727297"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask 方法
+
 获取一个接口指针，该指针指向正在进行此调用的操作系统线程上当前正在执行的任务。  
   
 ## <a name="syntax"></a>语法  
@@ -34,30 +35,33 @@ HRESULT GetCurrentTask (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pTask`  
- 弄指向表示当前正在执行的任务的[IHostTask](ihosttask-interface.md)实例的地址的指针; 如果当前没有执行任何任务，则为 null。  
+ 弄指向表示当前正在执行的任务的 [IHostTask](ihosttask-interface.md) 实例的地址的指针; 如果当前没有执行任何任务，则为 null。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask`已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|S_OK|`GetCurrentTask` 已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE| (CLR) 的公共语言运行时未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_INVALIDOPERATION|`GetCurrentTask`在宿主控件之外的操作系统线程上调用了。|  
+|HOST_E_INVALIDOPERATION|`GetCurrentTask` 在宿主控件之外的操作系统线程上调用了。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  宿主还可以将参数设置 `pTask` 为 null，以防止它在进入 CLR 时未启动的任务。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

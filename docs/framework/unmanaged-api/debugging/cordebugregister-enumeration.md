@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 19d0dcf8a5633371765861fcc29df4ef8c91ebc4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795711"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726049"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 枚举
+
 指定与给定处理器体系结构关联的寄存器。  
   
 ## <a name="syntax"></a>语法  
@@ -189,7 +190,8 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_R12`|ARM 处理器上的寄存器 R12。|  
 |`REGISTER_ARM_LR`|ARM 处理器上的链接寄存器 (R14)。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  IA-64 处理器上共有 128 种通用数据寄存器和 128 种浮点数据寄存器，但只提供了值 `REGISTER_IA64_R0` 和 `REGISTER_IA64_F0`。 可按如下方式确定其他值：  
   
 - 将寄存器号与 `REGISTER_IA64_R0` 相加，获得值 `REGISTER_IA64_R1` 到 `REGISTER_IA64_R127`（对应于 IA-64 处理器上的 #1 数据寄存器到 #127 数据寄存器）。  
@@ -199,7 +201,8 @@ typedef enum CorDebugRegister {
  例如，如果需要指定 IA-64 处理器上的 #83 数据寄存器，请使用 `REGISTER_IA64_R0` + 83。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

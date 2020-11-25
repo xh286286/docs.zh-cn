@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-ms.openlocfilehash: 843c6df1ef41fdd3227b92275182432ad4cc43b1
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6ca4c1ad5ef575db075a5066146bacb6d1e59ea2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379729"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728077"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>ICorDebugThread::GetActiveFrame 方法
-获取一个接口指针，该指针指向此 ICorDebugThread 对象上的活动（最新的）帧。  
+
+获取一个接口指针，该指针指向此 ICorDebugThread 对象上的活动 (最新) 帧。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,14 +35,17 @@ HRESULT GetActiveFrame (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppFrame`  
  弄指向表示帧的 ICorDebugFrame 接口对象地址的指针。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  `ppFrame`如果当前没有活动帧，则参数为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

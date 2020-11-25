@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 8809d00e-beaa-4dcf-b4e8-e89d0a5406b7
 topic_type:
 - apiref
-ms.openlocfilehash: 206e4fb232f4786a76525d24aa379b25d6d2f71d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd85ba2e6a907ff9546614e02b4da5f45e74b924
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099350"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726634"
 ---
 # <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE 结构
+
 包含代码区域的偏离量信息。  
   
- 此结构由[ICorDebugStepper：： StepRange](icordebugstepper-steprange-method.md)方法使用。  
+ 此结构由 [ICorDebugStepper：： StepRange](icordebugstepper-steprange-method.md) 方法使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,23 +36,24 @@ typedef struct {
 } COR_DEBUG_STEP_RANGE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`startOffset`|范围开始处的偏移量。|  
 |`endOffset`|范围末尾的偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cordebug.idl .idl  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [StepRange 方法](icordebugstepper-steprange-method.md)
 - [调试结构](debugging-structures.md)

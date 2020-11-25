@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa26df07-e0a6-4608-bdef-d4afafec89aa
 topic_type:
 - apiref
-ms.openlocfilehash: e6e8eb91bbc41faf0dcea010da9aa54995058653
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a9d1faf5a834cb5d9be19f995aaa3eee1202171b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894976"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727440"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>ICorDebugArrayValue::HasBaseIndicies 方法
+
 获取一个值，该值指示此数组的任何维度是否具有非零的基本索引。  
   
 ## <a name="syntax"></a>语法  
@@ -34,11 +35,13 @@ HRESULT HasBaseIndicies (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pbHasBaseIndicies`  
- 弄指向布尔值的指针， `true`如果此`ICorDebugArrayValue`对象的一个或多个维度的基本索引为非零，则为;否则，布尔值为`false`。  
+ 弄指向布尔值的指针， `true` 如果此对象的一个或多个维度的 `ICorDebugArrayValue` 基本索引为非零，则为; 否则为布尔值 `false` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b9b6260-98ac-4cfd-88e5-5d7614f94a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 606453424d34dcb22716c308d210fb257d1c37a7
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 7d3575909f54c8d676c9fd4246e6eac4a8a0ea1c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378869"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727973"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>ICorDebugThread::GetRegisterSet 方法
+
 获取一个接口指针，该指针指向与此 ICorDebugThread 对象的活动部分关联的寄存器集。  
   
 ## <a name="syntax"></a>语法  
@@ -34,11 +35,13 @@ HRESULT GetRegisterSet (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppRegisters`  
- 弄指向[ICorDebugRegisterSet](icordebugregisterset-interface.md)接口对象地址的指针，该对象表示此线程的活动部分的寄存器集。  
+ 弄指向 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 接口对象地址的指针，该对象表示此线程的活动部分的寄存器集。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

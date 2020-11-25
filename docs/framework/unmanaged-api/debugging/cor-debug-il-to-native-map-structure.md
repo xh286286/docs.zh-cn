@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 61544d0dfe876f35fdfbe5afa945fad0620c0eb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726647"
 ---
 # <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 结构
+
 包含用于将 Microsoft 中间语言 (MSIL) 代码映射到本机代码的偏移量。  
   
 ## <a name="syntax"></a>语法  
@@ -34,24 +35,25 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`ilOffset`|MSIL 代码的偏移量。|  
 |`nativeStartOffset`|本机代码起始位置的偏移量。|  
 |`nativeEndOffset`|本机代码末尾的偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Corprof.idl、Cordebug.idl  
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [GetILToNativeMapping 方法](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
 - [GetILToNativeMapping 方法](icordebugcode-getiltonativemapping-method.md)

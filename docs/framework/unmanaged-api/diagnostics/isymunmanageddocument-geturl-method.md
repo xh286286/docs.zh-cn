@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-ms.openlocfilehash: 3685707f1983ffec413e9cea2df5034ac53f643a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c862b6d3bfa415b622b68898db1ff30c6759e8f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615587"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726933"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
-返回此文档的统一资源定位器（URL）。  
+
+返回此文档 (URL) 的统一资源定位符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,6 +36,7 @@ HRESULT GetURL(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cchUrl`  
  中缓冲区的大小（以字符为字符） `szURL` 。  
   
@@ -45,6 +47,7 @@ HRESULT GetURL(
  弄包含 URL 的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则为错误代码。  
   
 ## <a name="see-also"></a>另请参阅

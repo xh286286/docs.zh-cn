@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 368b8f270797beb525e0745a29990667913f4071
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a1e321e141059ccf1da7292d28e7099418a5134e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497345"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727193"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 方法
+
 获取有关数组对象的详细信息。  
   
 ## <a name="syntax"></a>语法  
@@ -37,11 +38,12 @@ HRESULT GetArrayObjectInfo(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `objectId`  
  中有效数组对象的 ID。  
   
  `cDimensions`  
- 中数组的秩（维数）。  
+ 中数组) 维度的排名 (。  
   
  `pDimensionSizes`  
  弄一个包含整数的数组，每个整数表示数组维度的大小。  
@@ -53,10 +55,12 @@ HRESULT GetArrayObjectInfo(
  弄指向数组的原始缓冲区的地址的指针，该缓冲区根据 c + + 约定进行布局。  
   
 ## <a name="remarks"></a>注解  
+
  `pDimensionSizes`和 `pDimensionLowerBounds` 是并行数组，因此位于每个数组中同一索引处的元素是同一实体的特征。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

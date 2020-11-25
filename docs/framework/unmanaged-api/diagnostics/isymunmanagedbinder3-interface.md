@@ -14,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-ms.openlocfilehash: 5a26de2a8f5439b7c81560927c991d449e57b76c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0cb0b91f2dca8203c37599400b3b61f84eb7d282
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441586"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727310"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 接口
+
 扩展符号联编程序接口。 通过对实现接口的对象调用来获取此接口 `QueryInterface` `ISymUnmanagedBinder` 。  
   
 > [!IMPORTANT]
-> 打开不受信任的源中的程序数据库（PDB）文件会带来安全风险。  
+> 从不受信任的源中打开程序数据库 (PDB) 文件会带来安全风险。  
   
 ## <a name="methods"></a>方法  
   
@@ -34,6 +35,7 @@ ms.locfileid: "83441586"
 |[GetReaderFromCallback 方法](isymunmanagedbinder3-getreaderfromcallback-method.md)|允许用户通过回调来实现或提供， `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` 以从内存中获取调试目录信息|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

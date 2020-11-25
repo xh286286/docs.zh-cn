@@ -3,12 +3,12 @@ title: 数据集和 DataTable 安全指南
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679450"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726062"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>数据集和 DataTable 安全指南
 
@@ -18,7 +18,7 @@ ms.locfileid: "90679450"
 * .NET Core 和更高版本
 * .NET 5.0 及更高版本
 
-[数据集](/dotnet/api/system.data.dataset)和[DataTable](/dotnet/api/system.data.datatable)类型是旧的 .net 组件，可将数据集表示为托管对象。 这些组件在 .NET 1.0 中作为原始 [ADO.NET 基础结构](./index.md)的一部分引入。 其目标是通过关系数据集提供托管视图，并将数据的基础数据源抽象到 XML、SQL 或其他技术。
+[数据集](/dotnet/api/system.data.dataset)和[DataTable](/dotnet/api/system.data.datatable)类型是旧的 .net 组件，可将数据集表示为托管对象。 这些组件在 .NET Framework 1.0 中引入，作为原始 [ADO.NET 基础结构](./index.md)的一部分。 其目标是通过关系数据集提供托管视图，并将数据的基础数据源抽象到 XML、SQL 或其他技术。
 
 有关 ADO.NET 的详细信息，包括更多新式数据视图模式，请参阅 [ADO.NET 文档](../index.md)。
 
@@ -34,13 +34,9 @@ ms.locfileid: "90679450"
 
 如果传入的 XML 数据包含其类型不在此列表中的对象：
 
-* 使用以下消息和堆栈跟踪引发异常。  
-错误消息：  
-\<Type Name\>此处不允许使用 InvalidOperationException： Type '、Version =、 \<n.n.n.n\> Culture = \<culture\> 、PublicKeyToken = \<token value\> '。 [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)有关更多详细信息，请参阅。  
-堆栈跟踪：  
-在 TypeLimiter. EnsureTypeIsAllowed (Type type，TypeLimiter capturedLimiter)   
-在 UpdateColumnType (类型类型，StorageType typeCode)   
-在 set_DataType (类型值)   
+* 使用以下消息和堆栈跟踪引发异常。
+此处不允许出现错误消息： "InvalidOperationException： Type" \<Type Name\> 、Version = \<n.n.n.n\> 、Culture = \<culture\> 、PublicKeyToken = \<token value\> '。 [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)有关更多详细信息，请参阅。
+Stack 跟踪：在 TypeLimiter. EnsureTypeIsAllowed (Type type，TypeLimiter capturedLimiter) 在 (Type，UpdateColumnType StorageType) ，System.Data.DataColumn.set_DataType (类型值) 
 
 * 反序列化操作失败。
 
@@ -72,7 +68,7 @@ table.ReadXml(xmlReader); // this call will succeed
 
 ### <a name="extend-the-list-of-allowed-types"></a>扩展允许的类型列表
 
-除了上面列出的内置类型外，应用程序还可以扩展允许的类型列表以包括自定义类型。 如果扩展允许的类型列表，则更改会_all_影响 `DataSet` `DataTable` 应用内的所有和实例。 不能从内置允许类型列表中删除类型。
+除了上面列出的内置类型外，应用程序还可以扩展允许的类型列表以包括自定义类型。 如果扩展允许的类型列表，则更改会 _all_ 影响 `DataSet` `DataTable` 应用内的所有和实例。 不能从内置允许类型列表中删除类型。
 
 #### <a name="extend-through-configuration-net-framework-40---48"></a>通过配置 ( 扩展 .NET Framework 4.0-4.8) 
 
@@ -134,7 +130,7 @@ string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName
 
 #### <a name="extend-programmatically-net-framework-net-core-net-50"></a>以编程方式扩展 ( .NET Framework，.NET Core，.NET 5.0 +) 
 
-还可以通过将[DataSetDefaultAllowedTypes 与众所周知的密钥](/dotnet/api/system.appdomain.setdata)_系统_一起使用，以编程方式扩展允许的类型列表，如下面的代码所示。
+还可以通过将 [DataSetDefaultAllowedTypes 与众所周知的密钥](/dotnet/api/system.appdomain.setdata)_系统_ 一起使用，以编程方式扩展允许的类型列表，如下面的代码所示。
 
 ```csharp
 Type[] extraAllowedTypes = new Type[]
@@ -157,7 +153,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 > [!WARNING]
 > 在 "审核模式" 下运行应用程序时，只应使用临时度量值进行测试。 当启用审核模式时， `DataSet` 并且 `DataTable` 不强制实施类型限制，这可能会在应用内引入安全漏洞。 有关详细信息，请参阅标题为删除[不受信任输入](#swr)相关的[所有类型限制](#ratr)和安全性部分。
 
-可以通过 _App.config_启用审核模式：
+可以通过 _App.config_ 启用审核模式：
 
 * 请参阅本文档中的 [扩展配置](#etc) 部分，了解要为元素放入的适当值 `<configSections>` 。
 * 使用 `<allowedTypes auditOnly="true">` 启用审核模式，如以下标记所示。
@@ -178,7 +174,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 </configuration>
 ```
 
-一旦启用了审核模式，就可以使用_App.config_将您首选的内置 `TraceListener` `DataSet` `TraceSource.` 跟踪_System.Data.DataSet_源名称连接到 "system.string"。 下面的示例演示如何将跟踪事件写入控制台 _和_ 磁盘上的日志文件。
+一旦启用了审核模式，就可以使用 _App.config_ 将您首选的内置 `TraceListener` `DataSet` `TraceSource.` 跟踪 _System.Data.DataSet_ 源名称连接到 "system.string"。 下面的示例演示如何将跟踪事件写入控制台 _和_ 磁盘上的日志文件。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -224,7 +220,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 
 `AppContext` `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` 当设置为时，开关会 `true` 从和中移除所有类型限制限制 `DataSet` `DataTable` 。
 
-在 .NET Framework 中，可以通过 _App.config_启用此开关，如以下配置所示：
+在 .NET Framework 中，可以通过 _App.config_ 启用此开关，如以下配置所示：
 
 ```xml
 <configuration>
@@ -235,7 +231,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 </configuration>
 ```
 
-在 ASP.NET 中， `<AppContextSwitchOverrides>` 元素不可用。 相反，可以通过 _Web.config_启用交换机，如以下配置所示：
+在 ASP.NET 中， `<AppContextSwitchOverrides>` 元素不可用。 相反，可以通过 _Web.config_ 启用交换机，如以下配置所示：
 
 ```xml
 <configuration>
@@ -248,7 +244,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 
 有关详细信息，请参阅 [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素。
 
-在 .NET Core、.NET 5 和 ASP.NET Core 中，此设置由 _runtimeconfig.js_控制，如以下 JSON 中所示：
+在 .NET Core、.NET 5 和 ASP.NET Core 中，此设置由 _runtimeconfig.js_ 控制，如以下 JSON 中所示：
 
 ```json
 {
@@ -278,7 +274,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 * 管理员必须配置注册表。
 * 使用注册表是计算机范围的更改，将影响计算机上运行的 _所有_ 应用。
 
-| 类型  |  值 |
+| 类型  |  Value |
 |---|---|
 | **注册表项** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **值名称** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
@@ -293,7 +289,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 
 ## <a name="safety-with-regard-to-untrusted-input"></a>不受信任输入相关的安全
 
-尽管 `DataSet` 和 `DataTable` 确实对允许在反序列化 XML 有效负载时存在的类型施加默认限制，但__ `DataSet` `DataTable` 在使用不受信任的输入进行填充时，和都是不安全的。__ 下面是 `DataSet` 或 `DataTable` 实例可能读取不受信任的输入的一系列非详尽列表。
+尽管 `DataSet` 和 `DataTable` 确实对允许在反序列化 XML 有效负载时存在的类型施加默认限制，但 __`DataSet` `DataTable` 在使用不受信任的输入进行填充时，和都是不安全的。__ 下面是 `DataSet` 或 `DataTable` 实例可能读取不受信任的输入的一系列非详尽列表。
 
 * `DataAdapter`引用数据库， `DataAdapter.Fill` 方法用于使用 `DataSet` 数据库查询的内容来填充。
 * `DataSet.ReadXml`或 `DataTable.ReadXml` 方法用于读取包含列和行信息的 XML 文件。
@@ -479,9 +475,9 @@ public class MyClass
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>通过 BinaryFormatter 反序列化 DataSet 或 DataTable
 
-开发人员决不能使用 `BinaryFormatter` 、 `NetDataContractSerializer` 、 `SoapFormatter` 或相关的 ***unsafe*** 格式化 `DataSet` `DataTable` 程序从不受信任的负载反序列化或实例：
+开发人员决不能使用 `BinaryFormatter` 、 `NetDataContractSerializer` 、 `SoapFormatter` 或相关的 ***unsafe** _ 格式化 `DataSet` `DataTable` 程序从不受信任的负载反序列化或实例：
 
-* 这很容易受到完全远程代码执行攻击。
+_ 这容易遭受完全远程代码执行攻击。
 * 使用自定义 `SerializationBinder` 并不足以防止这种攻击。
 
 ## <a name="safe-replacements"></a>安全替换

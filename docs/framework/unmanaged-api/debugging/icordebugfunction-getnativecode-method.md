@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8a34916-0eef-4987-8d29-c8bcb4be9cf6
 topic_type:
 - apiref
-ms.openlocfilehash: 98aee38415709974d84873df50c39263490f2f23
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e34dff2ebdb6e1ea56c2682b351c3e17a44416f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213265"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726309"
 ---
 # <a name="icordebugfunctiongetnativecode-method"></a>ICorDebugFunction::GetNativeCode 方法
+
 获取此 ICorDebugFunction 实例所表示的函数的本机代码。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT GetNativeCode (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppCode`  
- 弄指向表示此函数的本机代码的 ICorDebugCode 实例的指针; 如果此函数是尚未实时（JIT）编译的 Microsoft 中间语言（MSIL）代码，则为 null。  
+ 弄一个指针，指向表示此函数的本机代码的 ICorDebugCode 实例，如果此函数为 Microsoft 中间语言，则为 null; 如果此函数为 Microsoft 中间 (语言，则为) 代码，该代码不是实时 (JIT) 编译的。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  如果此实例表示的函数已多次 `ICorDebugFunction` JIT 编译（如泛型类型），则 `GetNativeCode` 返回随机的本机代码对象。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8f3c83a7a89553ba600f3e0e368eec0ddd0350e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614859"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727603"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren 方法
+
 获取此作用域的子级。  
   
 ## <a name="syntax"></a>语法  
@@ -36,8 +37,9 @@ HRESULT GetChildren(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `cChildren`  
- 中`ULONG32`指示数组大小的 `children` 。  
+ 中 `ULONG32` 指示数组大小的 `children` 。  
   
  `pcChildren`  
  弄指向的指针 `ULONG32` ，该指针接收包含子级所需的缓冲区大小。  
@@ -46,9 +48,11 @@ HRESULT GetChildren(
  弄返回的子元素数组。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

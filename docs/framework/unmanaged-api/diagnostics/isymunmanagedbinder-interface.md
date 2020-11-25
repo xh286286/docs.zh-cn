@@ -14,27 +14,29 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-ms.openlocfilehash: f4f925282d65cd9cbc8eb1c8825f358602de68ed
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 554e59484f00626726f7f024c69e93a5e6647130
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727375"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder 接口
-表示非托管代码的符号联编程序。  
+
+表示非托管代码的符号绑定器。  
   
 > [!IMPORTANT]
-> 打开不受信任的源中的程序数据库（PDB）文件会带来安全风险。  
+> 从不受信任的源中打开程序数据库 (PDB) 文件会带来安全风险。  
   
 ## <a name="methods"></a>方法  
   
 |方法|说明|  
 |------------|-----------------|  
-|[GetReaderForFile 方法](isymunmanagedbinder-getreaderforfile-method.md)|给定元数据接口和文件名后，将返回正确的[ISymUnmanagedReader](isymunmanagedreader-interface.md)结构，该结构将读取与模块关联的调试符号。|  
-|[GetReaderFromStream 方法](isymunmanagedbinder-getreaderfromstream-method.md)|给定元数据接口和包含符号存储区的流时，将返回正确的[ISymUnmanagedReader](isymunmanagedreader-interface.md)结构，该结构将从给定的符号存储区中读取调试符号。|  
+|[GetReaderForFile 方法](isymunmanagedbinder-getreaderforfile-method.md)|给定元数据接口和文件名后，将返回正确的 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 结构，该结构将读取与模块关联的调试符号。|  
+|[GetReaderFromStream 方法](isymunmanagedbinder-getreaderfromstream-method.md)|给定元数据接口和包含符号存储区的流时，将返回正确的 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 结构，该结构将从给定的符号存储区中读取调试符号。|  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym，CorSym  
   
 ## <a name="see-also"></a>另请参阅

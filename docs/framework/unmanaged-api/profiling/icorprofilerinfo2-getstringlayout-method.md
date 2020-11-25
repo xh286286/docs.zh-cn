@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-ms.openlocfilehash: 257cf24fa476c75d6ec949e17a5b83fc015b8d43
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d141a78a953d4e0ab922535ad2363c79f2e18ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727037"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 方法
-获取有关字符串对象布局的信息。 此方法在 .NET Framework 4 中已弃用，并且被[ICorProfilerInfo3：： GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md)方法取代。  
+
+获取有关字符串对象布局的信息。 此方法在 .NET Framework 4 中已弃用，并且被 [ICorProfilerInfo3：： GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md) 方法取代。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,6 +36,7 @@ HRESULT GetStringLayout(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pBufferLengthOffset`  
  弄一个指针， `ObjectID` 它指向存储字符串长度的相对于指针的位置偏移量。 长度存储为 `DWORD` 。  
   
@@ -48,6 +50,7 @@ HRESULT GetStringLayout(
  弄一个指针， `ObjectID` 它指向存储宽字符字符串的缓冲区相对于指针的偏移量。  
   
 ## <a name="remarks"></a>注解  
+
  `GetStringLayout`方法获取 `ObjectID` 在其中存储下列位置的相对于指针的偏移量：  
   
 - 字符串缓冲区的长度。  
@@ -59,7 +62,8 @@ HRESULT GetStringLayout(
  字符串可以以 null 结尾。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

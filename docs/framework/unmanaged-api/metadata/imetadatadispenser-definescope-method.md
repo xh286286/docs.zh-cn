@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 87a39350986cb7bb62f76b0d9a6a9aae8f82e2f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726088"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 方法
+
 在内存中创建一个新区域，您可以在其中创建新的元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT DefineScope (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `rclsid`  
  中要创建的元数据结构版本的 CLSID。 对于 .NET Framework 版本2.0，此值必须为 CLSID_CorMetaDataRuntime。  
   
@@ -52,16 +54,18 @@ HRESULT DefineScope (
  弄指向返回的接口的指针。  
   
 ## <a name="remarks"></a>注解  
- `DefineScope`创建一组内存中的元数据表，为元数据生成唯一的 GUID （模块版本标识符或 MVID），并在模块表中为发出的编译单元创建一个条目。  
+
+ `DefineScope` 创建一组内存中的元数据表，为元数据生成一个唯一的 GUID (模块版本标识符或 MVID) ，并在模块表中为发出的编译单元创建一个条目。  
   
- 根据需要，可以使用[IMetaDataEmit：： SetModuleProps](imetadataemit-setmoduleprops-method.md)或[IMetaDataEmit：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)方法，将属性作为一个整体附加到元数据范围。  
+ 根据需要，可以使用 [IMetaDataEmit：： SetModuleProps](imetadataemit-setmoduleprops-method.md) 或 [IMetaDataEmit：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md) 方法，将属性作为一个整体附加到元数据范围。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

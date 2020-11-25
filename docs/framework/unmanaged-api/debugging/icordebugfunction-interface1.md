@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213231"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726286"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction 接口
 
@@ -27,19 +27,20 @@ ms.locfileid: "83213231"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[CreateBreakpoint 方法](icordebugfunction-createbreakpoint-method.md)|在此函数的开头创建一个断点。|  
 |[GetClass 方法](icordebugfunction-getclass-method.md)|获取一个 ICorDebugClass 对象，该对象表示此函数所属的类。|  
 |[GetCurrentVersionNumber 方法](icordebugfunction-getcurrentversionnumber-method.md)|获取对此函数进行的最新编辑的版本号。|  
-|[GetILCode 方法](icordebugfunction-getilcode-method.md)|获取此函数的 Microsoft 中间语言（MSIL）代码。|  
+|[GetILCode 方法](icordebugfunction-getilcode-method.md)|获取此函数的 Microsoft 中间语言 (MSIL) 代码。|  
 |[GetLocalVarSigToken 方法](icordebugfunction-getlocalvarsigtoken-method.md)|获取由此实例表示的函数的局部变量签名的元数据标记 `ICorDebugFunction` 。|  
 |[GetModule 方法](icordebugfunction-getmodule-method.md)|获取在其中定义此函数的模块。|  
 |[GetNativeCode 方法](icordebugfunction-getnativecode-method.md)|获取此函数的本机代码。|  
 |[GetToken 方法](icordebugfunction-gettoken-method.md)|获取此函数的元数据标记。|  
   
-## <a name="remarks"></a>备注  
- `ICorDebugFunction`接口不表示包含泛型类型参数的函数。 例如，一个 `ICorDebugFunction` 实例将表示， `Func<T>` 而不是 `Func<string>` 。 调用[ICorDebugILFrame2：： EnumerateTypeParameters](icordebugilframe2-enumeratetypeparameters-method.md)以获取泛型类型参数。  
+## <a name="remarks"></a>注解  
+
+ `ICorDebugFunction`接口不表示包含泛型类型参数的函数。 例如，一个 `ICorDebugFunction` 实例将表示， `Func<T>` 而不是 `Func<string>` 。 调用 [ICorDebugILFrame2：： EnumerateTypeParameters](icordebugilframe2-enumeratetypeparameters-method.md) 以获取泛型类型参数。  
   
  方法的元数据标记、 `mdMethodDef` 和方法的对象之间的关系 `ICorDebugFunction` 取决于函数是否允许 "编辑并继续"：  
   
@@ -51,14 +52,15 @@ ms.locfileid: "83213231"
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
- **库：** Corguids.lib  
+ **库：**  Corguids.lib  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试接口](debugging-interfaces.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1e0b654-ccaf-4fa2-9aa3-8e007813c84d
 topic_type:
 - apiref
-ms.openlocfilehash: 8056750e3d0107e27339a85c8cf814632dcece47
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c3fed9166d95c0ca71ac44f5447b95eee97af310
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726829"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags 枚举
+
 指示程序集标识的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -34,12 +35,13 @@ typedef enum _CLRAssemblyIdentityFlags {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|标识为规范化。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-ms.openlocfilehash: 624469ca1ae4c96b4143f8768b4c5ff9c2601a2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2c13ead228296525b57245be8b3bdbcdf38ae173
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378873"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727999"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject 方法
-获取公共语言运行时（CLR）线程的接口指针。  
+
+ (CLR) 线程获取公共语言运行时的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,11 +35,13 @@ HRESULT GetObject (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppObject`  
  弄指向表示 CLR 线程的 ICorDebugValue 接口对象地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -46,6 +49,6 @@ HRESULT GetObject (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Threading.Thread>

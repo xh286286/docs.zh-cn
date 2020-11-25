@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 53a70c53a06ac55a2dab7c646018d63189ee0b36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501659"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726218"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS 结构
-提供有关公共语言运行时（CLR）的垃圾回收机制的统计信息。  
+
+提供有关公共语言运行时 (CLR) 的垃圾回收机制的统计信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +45,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`Flags`|指示应计算并返回的字段值。|  
 |`ExplicitGCCount`|指示外部请求强制执行的垃圾回收数。|  
@@ -59,9 +60,10 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen1`|从第一代升级到第二代的对象的大小（以 kb 为单位）。|  
   
 ## <a name="remarks"></a>注解  
+
  [ICLRGCManager：： GetStats](iclrgcmanager-getstats-method.md)方法要求将 `Flags` 结构的字段 `COR_GC_STATS` 设置为一个或多个[COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)枚举的值，以指定要设置的统计信息。  
   
- 下表将此结构提供的统计信息映射到两个[COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)枚举值 `COR_GC_COUNTS` 和 `COR_GC_MEMORYUSAGE` 。  
+ 下表将此结构提供的统计信息映射到两个 [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) 枚举值 `COR_GC_COUNTS` 和 `COR_GC_MEMORYUSAGE` 。  
   
 |指定者 COR_GC_COUNTS|指定者 COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
@@ -76,11 +78,12 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** GCHost .idl  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

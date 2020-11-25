@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-ms.openlocfilehash: 9c2771d1338943406921447d96dd9a8748153a36
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: bdc17e2c6c63deae1420fe738eac51153f6b368e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209612"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726335"
 ---
 # <a name="icordebugframe-interface"></a>ICorDebugFrame 接口
 
@@ -27,7 +27,7 @@ ms.locfileid: "83209612"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[CreateStepper 方法](icordebugframe-createstepper-method.md)|获取用于执行与此相关的单步执行操作的 ICorDebugStepper `ICorDebugFrame` 。|  
 |[GetCallee 方法](icordebugframe-getcallee-method.md)|获取一个指针，该指针指向 `ICorDebugFrame` 此框架调用的当前链中的，如果这是链中的最内层帧，则返回 null。|  
@@ -38,13 +38,14 @@ ms.locfileid: "83209612"
 |[GetFunctionToken 方法](icordebugframe-getfunctiontoken-method.md)|获取包含与此堆栈帧关联的代码的函数的元数据标记。|  
 |[GetStackRange 方法](icordebugframe-getstackrange-method.md)|获取此所表示的堆栈帧的绝对地址范围 `ICorDebugFrame` 。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -52,6 +53,6 @@ ms.locfileid: "83209612"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试接口](debugging-interfaces.md)

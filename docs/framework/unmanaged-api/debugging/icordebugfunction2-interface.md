@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: 611091d39da6d7f646457457f20ce1eaf37db361
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d9e84a70d72db1338c80140ce3350774bfae4bca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213200"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726270"
 ---
 # <a name="icordebugfunction2-interface"></a>ICorDebugFunction2 接口
 
@@ -27,20 +27,21 @@ ms.locfileid: "83213200"
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[EnumerateNativeCode 方法](icordebugfunction2-enumeratenativecode-method.md)|（尚未实现。）获取一个指向 ICorDebugCodeEnum 的接口指针，该指针包含此 ICorDebugFunction2 对象引用的函数中的本机代码语句。|  
+|[EnumerateNativeCode 方法](icordebugfunction2-enumeratenativecode-method.md)| (尚未实现。 ) 获取一个指向 ICorDebugCodeEnum 的接口指针，该指针包含此 ICorDebugFunction2 对象引用的函数中的本机代码语句。|  
 |[GetJMCStatus 方法](icordebugfunction2-getjmcstatus-method.md)|获取一个值，该值指示此函数是否被标记为 "用户代码"。|  
 |[GetVersionNumber 方法](icordebugfunction2-getversionnumber-method.md)|获取此函数的 "编辑并继续" 版本。|  
 |[SetJMCStatus 方法](icordebugfunction2-setjmcstatus-method.md)|将此函数标记仅我的代码单步执行。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
@@ -48,6 +49,6 @@ ms.locfileid: "83213200"
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试接口](debugging-interfaces.md)

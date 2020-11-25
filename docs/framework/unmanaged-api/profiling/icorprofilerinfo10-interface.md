@@ -3,12 +3,12 @@ title: ICorProfilerInfo10 接口
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7e483bae9b7898e25c376fa92d0449fc49c6f9ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a99fa8410bbd0dedeaeb9e1713107a3dcc9ada6b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548679"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727219"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10 接口
 
@@ -26,10 +26,11 @@ ms.locfileid: "90548679"
 |[ResumeRuntime 方法](icorprofilerinfo10-resumeruntime-method.md)| 恢复运行时，而不执行 GC。 |
 
 ## <a name="requirements"></a>要求  
+
 **平台：** 请参阅 [支持 .Net Core 的操作系统](../../../core/install/windows.md?pivots=os-windows)。  
 **头文件：** CorProf.idl、CorProf.h  
 **.Net 版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析接口](profiling-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-ms.openlocfilehash: d01936481ec139757566d5b96cb95ea887cb8c20
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 85cfd7ba648f21721f1a9689843eac232489cb42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378059"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728012"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID 方法
+
 获取此 ICorDebugThread 的活动部分的当前操作系统标识符。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `pdwThreadId`  
  弄线程的标识符。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  操作系统标识符在进程执行期间可能会发生更改，并且可以是线程的不同部分的不同值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   
