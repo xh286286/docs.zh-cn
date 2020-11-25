@@ -7,17 +7,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559299"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732744"
 ---
 # <a name="unmanaged-api-reference"></a>非托管 API 参考
+
 本节包括有关可由与托管代码相关的应用程序（例如运行时主机、编译器、反汇编程序、模糊处理程序、调试器和探查器）使用的非托管 API 的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [常见数据类型](common-data-types-unmanaged-api-reference.md)  
  列出使用的常见数据类型，特别是非托管分析和调试 API 中的常见数据类型。  
   
@@ -61,4 +63,5 @@ ms.locfileid: "90559299"
  描述类型库导出程序 (Tlbexp.exe) 在从程序集到类型库的转换过程中使用的两个 Helper 函数和接口。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [开发指南](../development-guide.md)

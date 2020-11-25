@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493313"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733693"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 枚举
-包含一些值，这些值指示由[ICLRTask](iclrtask-interface.md)或[IHostTask](ihosttask-interface.md)接口表示的任务的类型。  
+
+包含一些值，这些值指示由 [ICLRTask](iclrtask-interface.md) 或 [IHostTask](ihosttask-interface.md) 接口表示的任务的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +45,7 @@ typedef enum ETaskType {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|接口表示应用程序域卸载任务。|  
 |`TT_DEBUGGERHELPER`|接口表示调试器帮助器任务。|  
@@ -59,11 +60,12 @@ typedef enum ETaskType {
 |`TT_USER`|接口表示用户任务。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** Mscoree.dll  
+ **库：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

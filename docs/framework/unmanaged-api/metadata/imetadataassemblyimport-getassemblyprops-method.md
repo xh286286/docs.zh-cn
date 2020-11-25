@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: a90deaf3e9ddf326c6fca558cbb4681fc40e022d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1e1a86cdf55812197aae653dca256fb910a7f168
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009049"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733888"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps 方法
+
 获取具有指定元数据签名的程序集的属性集。  
   
 ## <a name="syntax"></a>语法  
@@ -42,6 +43,7 @@ HRESULT GetAssemblyProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mda`  
  [in]。 `mdAssembly`表示要获取其属性的程序集的元数据标记。  
   
@@ -67,14 +69,15 @@ HRESULT GetAssemblyProps (
  弄指向 ASSEMBLYMETADATA 结构的指针，该结构包含程序集元数据。  
   
  `pdwAssemblyFlags`  
- 弄描述应用于程序集的元数据的标志。 此值是一个或多个[CorAssemblyFlags](corassemblyflags-enumeration.md)值的组合。  
+ 弄描述应用于程序集的元数据的标志。 此值是一个或多个 [CorAssemblyFlags](corassemblyflags-enumeration.md) 值的组合。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

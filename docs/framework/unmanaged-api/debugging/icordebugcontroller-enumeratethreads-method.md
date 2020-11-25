@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-ms.openlocfilehash: 4d69f13d4716b43c815148ff0fe4aa087b57c6e5
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f98118f9206d9ccd7dc9dc9a943500c7b4cd676a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892752"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732653"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>ICorDebugController::EnumerateThreads 方法
+
 获取进程中活动托管线程的枚举器。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,17 @@ HRESULT EnumerateThreads (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppThreads`  
  弄一个指向 "ICorDebugThreadEnum" 对象地址的指针，该对象表示在进程中处于活动状态的所有托管线程的枚举器。  
   
-## <a name="remarks"></a>备注  
- 在调度了[ICorDebugManagedCallback：： CreateThread](icordebugmanagedcallback-createthread-method.md)回调之后以及在调度[ICorDebugManagedCallback：： ExitThread](icordebugmanagedcallback-exitthread-method.md)回调之前，线程被视为处于活动状态。 托管线程在其堆栈上可能不一定有任何托管帧。 甚至可以在[ICorDebugManagedCallback：： CreateProcess](icordebugmanagedcallback-createprocess-method.md)回调之前枚举线程。 枚举自然将为空。  
+## <a name="remarks"></a>注解  
+
+ 在调度了 [ICorDebugManagedCallback：： CreateThread](icordebugmanagedcallback-createthread-method.md) 回调之后以及在调度 [ICorDebugManagedCallback：： ExitThread](icordebugmanagedcallback-exitthread-method.md) 回调之前，线程被视为处于活动状态。 托管线程在其堆栈上可能不一定有任何托管帧。 甚至可以在 [ICorDebugManagedCallback：： CreateProcess](icordebugmanagedcallback-createprocess-method.md) 回调之前枚举线程。 枚举自然将为空。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

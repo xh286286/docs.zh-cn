@@ -6,14 +6,15 @@ helpviewer_keywords:
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e431f3a41fadb7247f20d7ab9bb9120e827b0cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732289"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
+
 强命名 API 允许客户端管理程序集的强名称签名。  
   
  使用强名称对程序集进行签名将向包含程序集清单的文件添加公钥加密。 强名称签名帮助验证名称的唯一性，避免名称欺骗，并在解析引用时向调用方提供唯一标识。 但是，任何信任级别都不会与强名称关联。  
@@ -101,7 +102,7 @@ ms.locfileid: "73140631"
  [StrongNameTokenFromPublicKey 函数](strongnametokenfrompublickey-function.md)  
  获取表示公钥的令牌。 从 .NET Framework 4 开始已弃用。  
   
- [PublicKeyBlob Strong Naming](publickeyblob-structure.md)  
+ [PublicKeyBlob 结构](publickeyblob-structure.md)  
  表示二进制格式的公钥/私钥对中的公钥。  
   
 ## <a name="see-also"></a>另请参阅

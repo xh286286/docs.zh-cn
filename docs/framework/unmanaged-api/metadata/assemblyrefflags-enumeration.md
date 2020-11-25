@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-ms.openlocfilehash: 1307f555c9d8b6d28febcf25db89ae856c143d71
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0a99d2f79645bdc46ff4db86d7280614eeb1faf5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732757"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags 枚举
+
 包含用于描述程序集引用的功能的值。  
   
 ## <a name="syntax"></a>语法  
@@ -34,12 +35,13 @@ typedef enum {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`arfFullOriginator`|指定程序集引用包含有关程序集的发布服务器的完整的未哈哈希信息。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   

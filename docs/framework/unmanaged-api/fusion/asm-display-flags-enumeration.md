@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1eefd1ee5597ded269c56c05eec118b11294dd8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176599"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732129"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 枚举
-指示程序集的版本、生成、区域性、签名等，其显示名称将由[IAssemblyname：getDisplayName](iassemblyname-getdisplayname-method.md)方法检索。  
+
+指示程序集的版本、生成、区域性、签名等，其显示名称将由 [IAssemblyName：： GetDisplayName](iassemblyname-getdisplayname-method.md) 方法检索。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,16 +51,18 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>备注  
- `ASM_DISPLAYF_FULL`反映对[IAssemblyName](iassemblyname-interface.md)对象版本所做的任何更改。 不要假定返回的值是不可变的。  
+
+ `ASM_DISPLAYF_FULL` 反映对 [IAssemblyName](iassemblyname-interface.md) 对象的版本所做的任何更改。 不要假设返回值是不可变的。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 融合.h  
+ **标头：** 合成。h  
   
- **库：** 作为资源包含在 MsCorEE.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

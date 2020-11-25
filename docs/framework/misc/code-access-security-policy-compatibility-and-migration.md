@@ -1,27 +1,27 @@
 ---
 title: 代码访问安全策略兼容性和迁移
-description: 阅读摘要，查看有关 .NET 4 中的代码访问安全策略兼容性和迁移的链接。
+description: 阅读摘要，查看有关代码访问安全策略兼容性和迁移的链接（.NET Framework 4）。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-ms.openlocfilehash: e5affd9d16635fa28342b5b7390a083185975f2b
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 389976556175c0b6b300e75d01327d91f94f0db9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281727"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733381"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>代码访问安全策略兼容性和迁移
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-代码访问安全性 (CA) 的策略部分在 .NET Framework 4 中已过时。 因此，如果通过) 的其他类型和成员[显式](#explicit_use)或[隐式](#implicit_use)地 (调用过时的策略类型和成员，则可能会遇到编译警告和运行时异常。
+代码访问安全性 (CA) 的策略部分在 .NET Framework 4 中已过时。 因此，如果通过) 的其他类型和成员 [显式](#explicit_use) 或 [隐式](#implicit_use) 地 (调用过时的策略类型和成员，则可能会遇到编译警告和运行时异常。
 
 可以通过以下任一方法来避免这些警告和错误：
 
-- [迁移](#migration)到 .NET Framework 4 替换已过时的调用。
+- [迁移](#migration) 到 .NET Framework 4 替换已过时的调用。
 
    \- 或 -
 
@@ -125,7 +125,7 @@ CAS 策略通常用于确定程序集或应用程序域的权限授予集或信�
 
 ### <a name="application-domain-sandboxing"></a>应用程序域沙盒
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用于对应用程序域中的程序集进行沙盒处理。 .NET Framework 4 公开无需用于 <xref:System.Security.Policy.PolicyLevel> 此目的的成员。 有关详细信息，请参阅[如何：在沙盒中运行部分受信任的代码](how-to-run-partially-trusted-code-in-a-sandbox.md)。
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用于对应用程序域中的程序集进行沙盒处理。 .NET Framework 4 公开无需用于 <xref:System.Security.Policy.PolicyLevel> 此目的的成员。 有关详细信息，请参阅 [如何：在沙盒中运行部分受信任的代码](how-to-run-partially-trusted-code-in-a-sandbox.md)。
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>确定部分受信任的代码的“安全”或“合理”权限集
 
@@ -157,4 +157,4 @@ CAS 策略通常用于确定程序集或应用程序域的权限授予集或信�
 ## <a name="see-also"></a>另请参阅
 
 - [如何：运行沙盒中部分受信任的代码](how-to-run-partially-trusted-code-in-a-sandbox.md)
-- [代码安全维护指南](../../standard/security/secure-coding-guidelines.md)
+- [安全编码准则](../../standard/security/secure-coding-guidelines.md)

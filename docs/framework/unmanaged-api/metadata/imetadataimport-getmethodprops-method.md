@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-ms.openlocfilehash: 3c7c3525f2f8753241c9a206e4cf5e552bf06efe
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0eb4e9d713581cf32cec18bb02a6bd13542e517a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503616"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733175"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps 方法
+
 获取与指定的 MethodDef 标记引用的方法关联的元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -43,6 +44,7 @@ HRESULT GetMethodProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mb`  
  中MethodDef 标记，它表示要为其返回元数据的方法。  
   
@@ -74,11 +76,12 @@ HRESULT GetMethodProps (
  弄一个指针，指向方法的任何实现标志。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-ms.openlocfilehash: 5644c20ec5df2606c7258131573691997f424e50
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a6e5ecee9a89da98a73dfb20935c5ec594d5958f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732926"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition 方法
+
 获取位于给定位置的元素，并将该数组视为从零开始的一维数组。  
   
 ## <a name="syntax"></a>语法  
@@ -35,17 +36,20 @@ HRESULT GetElementAtPosition (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `nPosition`  
  中要检索的元素的位置。  
   
  `ppValue`  
  弄指向表示元素值的 ICorDebugValue 对象地址的指针。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  多维数组的布局遵循数组布局的 c + + 样式。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

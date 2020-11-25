@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 7a3ad94a4149d6ebb70e077926771e28d7f82779
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94c2c159cf386e00dfc0d1df97536d7ade53407e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494808"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732939"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next 方法
+
 从模块的序列集合中获取指定的连续模块数，从枚举器在该序列的当前位置开始。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT Next([in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `celt`  
  [in] 要检索的模块的数量。  
   
@@ -45,6 +47,7 @@ HRESULT Next([in]  ULONG      celt,
  [out] 指向 `ids` 数组中实际返回的元素数目的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|说明|  
@@ -53,7 +56,8 @@ HRESULT Next([in]  ULONG      celt,
 |S_FALSE|返回的元素少于 `celt` 个，表示枚举已完成。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

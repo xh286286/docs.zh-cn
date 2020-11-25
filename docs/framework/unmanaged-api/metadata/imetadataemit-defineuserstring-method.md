@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: def77bb64e21b1421983cf263d488ecc1ddb9452
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ed3c20fe8272ca3205079d26df0b7bde12e58307
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009311"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732692"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString 方法
+
 获取指定文本字符串的元数据标记。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT DefineUserString (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `szString`  
  中要存储的用户字符串。  
   
@@ -46,11 +48,12 @@ HRESULT DefineUserString (
  弄分配的字符串标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,44 +14,46 @@ helpviewer_keywords:
 ms.assetid: ec354fa1-1efd-41b0-bc43-b90597b6e253
 topic_type:
 - apiref
-ms.openlocfilehash: 004e4f70e3385e7a71c356cce38e64d0253dcfa4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a344f2ab5d9a7aa92018c47ee7a162cd1721aeb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127132"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732107"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority 接口
+
 提供一些方法，这些方法可为应用程序标识和引用生成和比较键。  
   
 ## <a name="methods"></a>方法  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|`IAppIdAuthority::AreDefinitionsEqual`|获取一个值，该值指示两个指定的[IDefinitionAppId](idefinitionappid-interface.md)实例是否相等。 可以传递标志值 IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION 来忽略其各自的版本信息。|  
-|`IAppIdAuthority::AreReferencesEqual`|获取一个值，该值指示两个指定的[IReferenceAppId](ireferenceappid-interface.md)实例是否相等。 可以传递标志值 IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION 来忽略其各自的版本信息。|  
-|`IAppIdAuthority::AreTextualDefinitionsEqual`|获取一个值，该值指示两个指定的字符串定义是否相等。 可以传递标志值 IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION 来忽略其各自的版本信息。|  
-|`IAppIdAuthority::AreTextualReferencesEqual`|获取一个值，该值指示两个指定的字符串引用是否相等。 可以传递标志值 IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION 来忽略其各自的版本信息。|  
-|`IAppIdAuthority::CreateDefinition`|获取一个接口指针，该指针指向表示当前范围内的程序集的新生成的 `IDefinitionAppId` 实例。|  
-|`IAppIdAuthority::CreateReference`|获取一个指向新创建的 `IReferenceAppId` 的接口指针，该指针表示当前范围内的程序集。|  
-|`IAppIdAuthority::DefinitionToText`|使用指定的标志值获取指定 `IDefinitionAppId`的字符串版本。|  
-|`IAppIdAuthority::DoesDefinitionMatchReference`|获取一个值，该值指示指定的 `IDefinitionAppId` 和 `IReferenceAppId` 是否表示相同的程序集。|  
+|`IAppIdAuthority::AreDefinitionsEqual`|获取一个值，该值指示两个指定的 [IDefinitionAppId](idefinitionappid-interface.md) 实例是否相等。 可以将标志值 IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION 传递给，以忽略其各自的版本信息。|  
+|`IAppIdAuthority::AreReferencesEqual`|获取一个值，该值指示两个指定的 [IReferenceAppId](ireferenceappid-interface.md) 实例是否相等。 可以将标志值 IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION 传递给，以忽略其各自的版本信息。|  
+|`IAppIdAuthority::AreTextualDefinitionsEqual`|获取一个值，该值指示两个指定的字符串定义是否相等。 可以将标志值 IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION 传递给，以忽略其各自的版本信息。|  
+|`IAppIdAuthority::AreTextualReferencesEqual`|获取一个值，该值指示两个指定的字符串引用是否相等。 可以将标志值 IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION 传递给，以忽略其各自的版本信息。|  
+|`IAppIdAuthority::CreateDefinition`|获取一个接口指针，该指针指向 `IDefinitionAppId` 表示当前范围内的程序集的新生成的实例。|  
+|`IAppIdAuthority::CreateReference`|获取一个接口指针，该指针指向 `IReferenceAppId` 表示当前范围内的程序集的新创建的。|  
+|`IAppIdAuthority::DefinitionToText`|使用指定的标志值获取指定的的字符串版本 `IDefinitionAppId` 。|  
+|`IAppIdAuthority::DoesDefinitionMatchReference`|获取一个值，该值指示指定的 `IDefinitionAppId` 是否 `IReferenceAppId` 表示相同的程序集。|  
 |`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|获取一个值，该值指示指定的定义字符串和引用字符串是否表示相同的程序集。|  
-|`IAppIdAuthority::GenerateDefinitionKey`|获取表示指定的 `IDefinitionAppId` 实例的字符串键。|  
-|`IAppIdAuthority::GenerateReferenceKey`|获取表示指定的 `IReferenceAppId` 实例的字符串键。|  
-|`IAppIdAuthority::HashDefinition`|获取指定 `IDefinitionAppId` 实例的哈希键。|  
-|`IAppIdAuthority::HashReference`|获取指定 `IReferenceAppId` 实例的哈希键。|  
-|`IAppIdAuthority::ReferenceToText`|使用指定的标志值获取指定 `IReferenceAppId`的字符串版本。|  
-|`IAppIdAuthority::TextToDefinition`|获取一个指向 `IDefinitionAppId` 实例的接口指针，该实例表示指定的字符串键所引用的程序集。|  
-|`IAppIdAuthority::TextToReference`|获取一个指向 `IReferenceAppId` 实例的接口指针，该实例表示指定的字符串键所引用的程序集。|  
+|`IAppIdAuthority::GenerateDefinitionKey`|获取表示指定实例的字符串键 `IDefinitionAppId` 。|  
+|`IAppIdAuthority::GenerateReferenceKey`|获取表示指定实例的字符串键 `IReferenceAppId` 。|  
+|`IAppIdAuthority::HashDefinition`|获取指定实例的哈希键 `IDefinitionAppId` 。|  
+|`IAppIdAuthority::HashReference`|获取指定实例的哈希键 `IReferenceAppId` 。|  
+|`IAppIdAuthority::ReferenceToText`|使用指定的标志值获取指定的的字符串版本 `IReferenceAppId` 。|  
+|`IAppIdAuthority::TextToDefinition`|获取一个接口指针，该指针指向 `IDefinitionAppId` 表示指定字符串键所引用的程序集的实例。|  
+|`IAppIdAuthority::TextToReference`|获取一个接口指针，该指针指向 `IReferenceAppId` 表示指定字符串键所引用的程序集的实例。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** 隔离。h  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [合成接口](fusion-interfaces.md)

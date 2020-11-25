@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f01d65a339c77e6af3e768c620f17ef0190c1e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503635"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733212"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
-获取存储在指定的成员定义的元数据中的信息，包括 <xref:System.Type> 指定的元数据标记所引用的成员的名称、二进制签名和相对虚拟地址。 这是一个简单的帮助器方法：如果*mb*是 MethodDef，则调用**GetMethodProps** ;如果*mb*是 FieldDef，则调用**GetFieldProps** 。 有关详细信息，请参阅其他方法。
+
+获取存储在指定的成员定义的元数据中的信息，包括 <xref:System.Type> 指定的元数据标记所引用的成员的名称、二进制签名和相对虚拟地址。 这是一个简单的帮助器方法：如果 *mb* 是 MethodDef，则调用 **GetMethodProps** ;如果 *mb* 是 FieldDef，则调用 **GetFieldProps** 。 有关详细信息，请参阅其他方法。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,6 +47,7 @@ HRESULT GetMemberProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mb`  
  中引用要为其获取关联元数据的成员的标记。  
   
@@ -86,11 +88,12 @@ HRESULT GetMemberProps (
  弄的大小（以字符为大小 `ppValue` ）; 如果不保存字符串，则为零 `ppValue` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

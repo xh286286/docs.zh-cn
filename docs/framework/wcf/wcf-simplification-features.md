@@ -2,12 +2,12 @@
 title: WCF 简化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: d582c075377cf53d75ddf1bb9f37764e24e486ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545072"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732913"
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 
@@ -88,13 +88,13 @@ WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务�
 
 - 向 WCF 添加了对异步流的新支持。 若要启用异步流，请将 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 终结点行为添加到服务主机，并将其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 属性设置为 `true`。 在服务将经过流处理的消息发送到多个正在缓慢读取的客户端时，这样做有益于可伸缩性。 WCF 不再阻止每个客户端的一个线程，并将释放该线程以便为另一个客户端提供服务。
 
-- 消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 在 .NET 4.5 中已取消这种缓冲，现在，IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入流，从而实现真正的流处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 有关详细信息， `maxRequestLength` 请参阅[ \<httpRuntime> 配置元素](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))。 你仍需要配置 maxAllowedContentLength，有关详细信息，请参阅 [IIS 请求限制](/previous-versions/iis/settings-schema/ms689462(v=vs.90))。
+- 消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 此缓冲已在 .NET Framework 4.5 中被删除，现在 IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入的流，从而启用真正的流式处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 有关详细信息， `maxRequestLength` 请参阅[ \<httpRuntime> 配置元素](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))。 你仍需要配置 maxAllowedContentLength，有关详细信息，请参阅 [IIS 请求限制](/previous-versions/iis/settings-schema/ms689462(v=vs.90))。
 
 ## <a name="new-transport-default-values"></a>新传输默认值
 
 下表描述了已更改的设置以及可在何处找到其他信息。
 
-|properties|启用|新默认值|更多信息|
+|properties|开|新默认值|更多信息|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|此属性可确定 TCP 连接使用 .NET 组帧协议对自身进行身份验证所需的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 此超时被有意设置为小于 ReceiveTimeout（10 分钟），这样，未经身份验证的恶意客户端就无法长时间保持绑到该服务器的连接。 默认值为 30 秒。 有关的详细信息 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 处理器数|此套接字级别的属性描述了要排队的“挂起接受”请求的数目。 如果侦听积压工作 (backlog) 队列已满，则会拒绝新的套接字请求。 有关的详细信息 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

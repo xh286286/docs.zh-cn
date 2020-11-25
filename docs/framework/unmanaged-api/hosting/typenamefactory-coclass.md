@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-ms.openlocfilehash: 7245a4c222e2ad3ef1854f3c9e2d0abe37e0650a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 257761d32ff37782e01167bbbc9b12664a9d586d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009478"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732852"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory 组件类
+
 提供用于管理类型名称的析构的接口。  
   
 ## <a name="syntax"></a>语法  
@@ -32,18 +33,19 @@ coclass TypeNameFactory {
 };  
 ```  
   
-## <a name="interfaces"></a>接口  
+## <a name="interfaces"></a>界面  
   
 |接口|说明|  
 |---------------|-----------------|  
 |[ITypeNameFactory 接口](itypenamefactory-interface.md)|此接口支持 .NET Framework 基础结构，但不适合直接在代码中使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

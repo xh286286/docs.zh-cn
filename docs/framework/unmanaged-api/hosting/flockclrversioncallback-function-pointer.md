@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-ms.openlocfilehash: af42de820b2d835e8ea137a2643a51678e382ff0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d18702a1bb15d2cc6c7b8577b91ed011e9bd0c05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617277"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733667"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback 函数指针
-指向一个函数，公共语言运行时（CLR）会调用该函数以指示初始化已启动或已完成。  
+
+指向公共语言运行时 (CLR) 调用以指示初始化已启动或已完成的函数。  
   
  此函数指针在 .NET Framework 4 中已弃用。  
   
@@ -33,14 +34,16 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
 ```  
   
 ## <a name="remarks"></a>备注  
+
  此函数由主机实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** Mscorwks.dll  
+ **库：** MSCorWks.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

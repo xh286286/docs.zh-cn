@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f7aa9699e9929608c90020c6b2d66c301fc11955
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006022"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732705"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 枚举
+
 提供一些值，以影响对 `reloc` [ICeeGen：： AddSectionReloc](iceegen-addsectionreloc-method.md)的调用中发出的指令的类型。  
   
 ## <a name="syntax"></a>语法  
@@ -50,7 +51,7 @@ typedef enum  {
   
 ## <a name="members"></a>成员  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |`srRelocAbsolute`|仅生成一个相对节 `reloc` ，不向 .reloc 节发送任何内容。|  
 |`srRelocHighLow`|`reloc`为指针大小的位置生成。 这会根据平台转换为 BASED_HIGHLOW 或 BASED_DIR64。|  
@@ -69,11 +70,12 @@ typedef enum  {
 |`srRelocPtr`|一个值，该值指示内存的修正内容是指针而不是节偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

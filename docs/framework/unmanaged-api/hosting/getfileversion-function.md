@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 57b30824c7849127f48d4da61872945366e7141e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617195"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733238"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 函数
-使用指定的缓冲区获取指定文件的公共语言运行时（CLR）版本信息。  
+
+使用指定的缓冲区获取公共语言运行时 (CLR) 指定文件的版本信息。  
   
  此函数已在 .NET Framework 4 中弃用。  
   
@@ -38,6 +39,7 @@ HRESULT GetFileVersion (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `szFilename`  
  中要检查的文件的路径。  
   
@@ -51,7 +53,8 @@ HRESULT GetFileVersion (
  弄返回的的大小（以字节为单位） `szBuffer` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   

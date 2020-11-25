@@ -10,14 +10,15 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-ms.openlocfilehash: 6732457220d795bbf8ae54277ef9f5c07cf96359
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6917900b7494550992dfa82f45ed0140f95e68cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495354"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733615"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7：： ReadInMemorySymbols
+
 [仅在 .NET Framework 4.6.1 及更高版本中受支持]  
   
  从内存中的符号流中读取字节。  
@@ -35,6 +36,7 @@ HRESULT ReadInMemorySymbols(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `moduleId`  
  中包含内存中流的模块的标识符。  
   
@@ -51,18 +53,21 @@ HRESULT ReadInMemorySymbols(
  弄当该方法返回时，包含所读取的实际字节数。  
   
 ## <a name="return-value"></a>返回值  
+
  `S_OK`如果读取的字节数为非零，则为。  
   
  `CORPROF_E_MODULE_IS_DYNAMIC`如果该模块是使用创建的，则为 <xref:System.Reflection.Emit> 。  
   
 ## <a name="remarks"></a>注解  
- 此 `ReadInMemorySymbols` 方法尝试 `countSymbolBytes` 从 `symbolsReadOffset` 内存中流内的偏移量开始读取数据。 将数据复制到 `pSymbolBytes` ，该数据应具有 `countSymbolBytes` 可用空间。     `pCountSymbolsBytesRead`包含读取的实际字节数， `countSymbolBytes` 如果已到达流的末尾，则可以小于。  
+
+ 此 `ReadInMemorySymbols` 方法尝试 `countSymbolBytes` 从      `symbolsReadOffset` 内存中流内的偏移量开始读取数据。 将数据复制到 `pSymbolBytes` ，该数据应具有 `countSymbolBytes` 可用空间。     `pCountSymbolsBytesRead` 包含读取的实际字节数， `countSymbolBytes` 如果已到达流的末尾，则可以小于。  
   
 > [!NOTE]
 > 当前实现不支持反射。发出。 如果该模块是使用反射创建的，则该方法返回 `CORPROF_E_MODULE_IS_DYNAMIC` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

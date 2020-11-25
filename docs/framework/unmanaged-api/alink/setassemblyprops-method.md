@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-ms.openlocfilehash: 4bfad8b985a8ef059031464e99a8004842b276c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b0de5f9759491f1303edc978b1548e91214daf8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445583"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733745"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 方法
+
 分配程序集级别属性。  
   
 ## <a name="syntax"></a>语法  
@@ -36,11 +37,12 @@ HRESULT SetAssemblyProps(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `AssemblyID`  
  程序集的 ID。  
   
  `FileToken`  
- 定义属性的文件。 如果 `AssemblyID` 不指示未绑定 .netmodule，则可以为 NULL。  
+ 定义属性的文件。 如果不 `AssemblyID` 指示未绑定的 .netmodule，则可以为 NULL。  
   
  `Option`  
  指示要修改的选项。  
@@ -49,9 +51,11 @@ HRESULT SetAssemblyProps(
  选项的新值。  
   
 ## <a name="return-value"></a>返回值  
+
  如果方法成功，则返回 S_OK。  
   
 ## <a name="requirements"></a>要求  
+
  需要 alink。  
   
 ## <a name="see-also"></a>另请参阅

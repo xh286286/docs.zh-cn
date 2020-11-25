@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-ms.openlocfilehash: 8f316d91aab4c3862a0ad45b41539a4b80791ab9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 5f799c140705a5279c996b6bec90ab1f29bd42ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762783"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732428"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale 方法
-通知公共语言运行时（CLR）宿主已经修改了当前正在执行的任务的区域设置标识符的值（映射到地理区域和语言）。  
+
+通知公共语言运行时 (CLR) 宿主已修改区域设置标识符的值 (该标识符映射到当前正在执行的任务) 的地理区域和语言。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,6 +35,7 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `lcid`  
  中映射到新分配的地理区域和语言的区域设置标识符值。  
   
@@ -49,14 +51,16 @@ HRESULT SetLocale (
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>注解  
- `SetLocale`使宿主有机会执行它可能对区域设置进行同步的任何机制。  
+
+ `SetLocale` 使宿主有机会执行它可能对区域设置进行同步的任何机制。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

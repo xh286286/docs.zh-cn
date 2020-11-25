@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 31833a2d-a0d6-48a1-b05f-995ca307a08f
 topic_type:
 - apiref
-ms.openlocfilehash: 2e59d02093b9c2e2bda72c45de25975cbbdb7a29
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cb65663ec1c1562009d0281c2e176b628b6366b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732172"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>“Cor调试代码调用目的”枚举
+
 描述为何导出的函数会调用托管代码。  
   
 ## <a name="syntax"></a>语法  
@@ -41,14 +42,16 @@ typedef enum CorDebugCodeInvokePurpose
 |`CODE_INVOKE_PURPOSE_CLASS_INIT`|托管代码会运行一个静态构造函数。|  
 |`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|托管代码会运行一些受调用的接口方法的实施。|  
   
-## <a name="remarks"></a>备注  
- 此枚举由[ICorDebugProcess6：： GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md)方法用来提供有关单步执行托管代码的信息。  
+## <a name="remarks"></a>注解  
+
+ 此枚举由 [ICorDebugProcess6：： GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md) 方法用来提供有关单步执行托管代码的信息。  
   
 > [!NOTE]
 > 此枚举仅用于 .NET Native 调试方案。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

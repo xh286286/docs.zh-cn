@@ -3,12 +3,12 @@ title: ICorProfilerInfo8 接口
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 2cca915eda44d73aea7469e5f752c57309c2300d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: eedd16006781de517587e5138543b9b9eca3ff90
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495159"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733602"
 ---
 # <a name="icorprofilerinfo8-interface"></a>ICorProfilerInfo8 接口
 
@@ -23,7 +23,8 @@ ms.locfileid: "84495159"
 |[GetDynamicFunctionInfo 方法](icorprofilerinfo8-getdynamicfunctioninfo-method.md)| 检索有关动态方法的信息。 |
 
 ## <a name="requirements"></a>要求  
-**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
 **头文件：** CorProf.idl、CorProf.h  
 **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 

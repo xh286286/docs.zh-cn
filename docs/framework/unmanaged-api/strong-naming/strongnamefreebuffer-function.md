@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: eda21ecf-4734-4f92-aaba-9f34884385db
 topic_type:
 - apiref
-ms.openlocfilehash: 50e3cc6e677de45be9256a2a818ebd6ed7d8b843
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d93bda046a79dbdec2195eee48fefc1e5538b2e4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176911"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732250"
 ---
 # <a name="strongnamefreebuffer-function"></a>StrongNameFreeBuffer 函数
+
 释放先前调用 [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、[StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md) 或 [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md) 强名称函数分配的内存。  
   
- 此函数已被弃用。 改用[ICLR 强名称：：强名称自由缓冲区](../hosting/iclrstrongname-strongnamefreebuffer-method.md)方法。  
+ 此函数已弃用。 改为使用 [ICLRStrongName：： StrongNameFreeBuffer](../hosting/iclrstrongname-strongnamefreebuffer-method.md) 方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +39,20 @@ VOID StrongNameFreeBuffer (
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
+
  `pbMemory`  
- [在]指向要释放的内存的指针。  
+ 中指向要释放的内存的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
- **标题：** 强名称.h  
+ **标头：** Stackexchange.redis.strongname  
   
- **库：** 作为资源包含在 MsCorEE.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另请参阅
 

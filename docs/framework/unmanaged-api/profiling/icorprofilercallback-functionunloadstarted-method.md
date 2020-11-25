@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 320aaf074452fd02cd8ee8e80194a4c35b831eb4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: bab8d446347646081cee635035e954da58c3550c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503375"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733875"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted 方法
+
 通知探查器运行时已开始卸载某个函数。  
   
 ## <a name="syntax"></a>语法  
@@ -39,10 +40,12 @@ HRESULT FunctionUnloadStarted(
   \[in] 正在卸载的函数的 ID。
 
 ## <a name="remarks"></a>注解  
+
  `functionId`此方法返回到调用方后，该参数的值不再有效。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

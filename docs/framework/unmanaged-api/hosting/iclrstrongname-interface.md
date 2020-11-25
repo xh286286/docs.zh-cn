@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501646"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733628"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 接口
+
 提供用于对具有强名称的程序集进行签名的基本全局静态函数。 所有 `ICLRStrongName` 方法都返回标准 COM hresult。  
   
 ## <a name="methods"></a>方法  
@@ -35,7 +36,7 @@ ms.locfileid: "84501646"
 |[GetHashFromFileW 方法](iclrstrongname-gethashfromfilew-method.md)|生成由 Unicode 字符串指定的文件内容的哈希。|  
 |[GetHashFromHandle 方法](iclrstrongname-gethashfromhandle-method.md)|使用指定的哈希算法，生成具有指定文件句柄的文件内容的哈希。|  
 |[StrongNameCompareAssemblies 方法](iclrstrongname-strongnamecompareassemblies-method.md)|确定两个程序集是否仅是强名称签名不同。|  
-|[StrongNameFreeBuffer 方法](iclrstrongname-strongnamefreebuffer-method.md)|释放以前对强名称方法（如[StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)或[StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)）的调用所分配的内存。|  
+|[StrongNameFreeBuffer 方法](iclrstrongname-strongnamefreebuffer-method.md)|释放以前对强名称方法（如 [StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)或 [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)）的调用所分配的内存。|  
 |[StrongNameGetBlob 方法](iclrstrongname-strongnamegetblob-method.md)|使用指定地址处可执行文件的二进制表示形式填充指定的缓冲区。|  
 |[StrongNameGetBlobFromImage 方法](iclrstrongname-strongnamegetblobfromimage-method.md)|获取指定内存地址处程序集映像的二进制表示形式。|  
 |[StrongNameGetPublicKey 方法](iclrstrongname-strongnamegetpublickey-method.md)|从私钥/公钥对中获取公钥。|  
@@ -55,14 +56,16 @@ ms.locfileid: "84501646"
 |[StrongNameTokenFromPublicKey 方法](iclrstrongname-strongnametokenfrompublickey-method.md)|获取表示公钥的令牌。|  
   
 ## <a name="remarks"></a>注解  
- 可以 `ICLRStrongName` 通过使用和作为参数调用[ICLRRuntimeInfo：： GetInterface](iclrruntimeinfo-getinterface-method.md)方法来获取的实例 `CLSID_CLRStrongName` `IID_ICLRStrongName` 。  
+
+ 可以 `ICLRStrongName` 通过使用和作为参数调用 [ICLRRuntimeInfo：： GetInterface](iclrruntimeinfo-getinterface-method.md) 方法来获取的实例 `CLSID_CLRStrongName` `IID_ICLRStrongName` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** MetaHost  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

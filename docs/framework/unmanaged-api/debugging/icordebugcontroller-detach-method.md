@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fae364-f2c6-4a50-aa7e-3da9f2684dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 480fec4897dac73594515ba8bc0f0e96ceb79ace
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 55acb6e3ec60925cba3d8aa5328547c54f270356
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892912"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732666"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach 方法
+
 将调试器与进程或应用程序域分离。  
   
 ## <a name="syntax"></a>语法  
@@ -32,12 +33,14 @@ HRESULT Detach ();
 ```  
   
 ## <a name="remarks"></a>备注  
+
  进程或应用程序域将继续正常执行，但 "ICorDebugProcess" 或 "ICorDebugAppDomain" 对象不再有效，且不会发生进一步的回调。  
   
  在 .NET Framework 版本2.0 中，如果启用了非托管调试，则此方法将因操作系统限制而失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

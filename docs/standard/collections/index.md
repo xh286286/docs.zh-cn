@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823844"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733511"
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823844"
 自 .NET Framework 4 起，<xref:System.Collections.Concurrent> 命名空间中的集合可提供高效的线程安全操作，以便从多个线程访问集合项。 <xref:System.Collections.Immutable> 命名空间（[NuGet 包](https://www.nuget.org/packages/System.Collections.Immutable)）中的不可变集合类本质上就是线程安全的，因为操作在原始集合的副本上进行且不能修改原始集合。
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>常用集合功能
 
 所有集合都提供用于在集合中添加、删除或查找项的方法。 此外，所有直接或间接实现 <xref:System.Collections.ICollection> 接口或 <xref:System.Collections.Generic.ICollection%601> 接口的集合均共享这些功能：
@@ -57,6 +58,7 @@ ms.locfileid: "94823844"
     <xref:System.Collections> 命名空间中的非泛型集合类型通过同步提供一些线程安全性；通常通过 <xref:System.Collections.ICollection.SyncRoot%2A> 和 <xref:System.Collections.ICollection.IsSynchronized%2A> 成员公开。 这些集合不是默认为线程安全的。 如需对集合进行可扩展、高效的多线程访问，请使用 <xref:System.Collections.Concurrent> 命名空间中的一个类或考虑使用不可变集合。 有关详细信息，请参阅[线程安全集合](thread-safe/index.md)。
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>选择集合
 
 一般情况下，应使用泛型集合。 下表介绍了一些常用的集合方案和可用于这些方案的集合类。 如果你是使用泛型集合的新手，此表将帮助你选择最适合你的任务的泛型集合。
@@ -94,6 +96,7 @@ ms.locfileid: "94823844"
 此外，`SortedSet<T>` 与 `ImmutableSortedSet<T>` 的复杂性相同。 这是因为它们都使用了二进制树。 当然，显著的差异在于 `ImmutableSortedSet<T>` 使用不可变的二进制树。 由于 `ImmutableSortedSet<T>` 还提供了一个允许变化的 <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> 类，因此可以同时实现不可变性和保障性能。
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>相关主题
 
 |Title|描述|
@@ -108,7 +111,9 @@ ms.locfileid: "94823844"
 |System.Collections.Immutable|介绍不可变集合并提供各集合类型的链接。|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>参考
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

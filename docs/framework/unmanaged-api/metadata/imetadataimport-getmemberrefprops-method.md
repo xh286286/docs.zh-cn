@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3237b67f8f711e9ef213d6fc66f1513c534fbdeb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503609"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733199"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 方法
+
 获取与指定标记引用的成员关联的元数据。  
   
 ## <a name="syntax"></a>语法  
@@ -40,6 +41,7 @@ HRESULT GetMemberRefProps (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `mr`  
  中要为其返回关联的元数据的 MemberRef 标记。  
   
@@ -62,11 +64,12 @@ HRESULT GetMemberRefProps (
  弄的大小（以字节为单位） `ppvSigBlob` 。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MsCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
