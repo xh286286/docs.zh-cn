@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3a2cd90-7c4e-4374-bb87-b41befb8344f
 topic_type:
 - apiref
-ms.openlocfilehash: bac29b5950f1547c5c60ac716d40d2ef4b1a2cc2
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b6625b0ef4dc3de4067514a0b39849c7a958d5c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730755"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager 接口
-提供一些方法，使公共语言运行时（CLR）可以配置线程池并将工作项排队到线程池。  
+
+提供一些方法，这些方法使公共语言运行时 (CLR) 配置线程池并将工作项排队到线程池。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,15 +36,17 @@ ms.locfileid: "83842474"
 |[SetMaxThreads 方法](ihostthreadpoolmanager-setmaxthreads-method.md)|设置宿主可在线程池中维护的最大线程数。|  
 |[SetMinThreads 方法](ihostthreadpoolmanager-setminthreads-method.md)|设置主机在预期请求中必须保持的空闲线程的最小数目。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
+
  主机不需要使用对和方法的调用中指定的值来配置线程池 `SetMaxThreads` `SetMinThreads` 。 在这种情况下，宿主应从这些方法返回 E_NOTIMPL 的 HRESULT 值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

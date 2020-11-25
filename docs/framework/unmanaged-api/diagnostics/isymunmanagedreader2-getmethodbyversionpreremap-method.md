@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: b12ecfdaf7c90589ce2e96b39f7437444cb91b09
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5484242562deaf463b7435ad4e54735a7abee45e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730482"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap 方法
+
 在给定方法标记和编辑并继续版本号的情况下，获取符号读取器方法。 版本号从1开始，并在每次通过 "编辑并继续" 操作的结果更改方法时递增。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT GetMethodByVersionPreRemap(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `token`  
  中方法元数据标记。  
   
@@ -42,12 +44,14 @@ HRESULT GetMethodByVersionPreRemap(
  中方法版本。  
   
  `pRetVal`  
- 弄指向返回的[ISymUnmanagedMethod](isymunmanagedmethod-interface.md)接口的指针。  
+ 弄指向返回的 [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) 接口的指针。  
   
 ## <a name="return-value"></a>返回值  
+
  如果该方法成功，则 S_OK;否则，E_FAIL 或其他一些错误代码。  
   
 ## <a name="requirements"></a>要求  
+
  **标头：** CorSym。 CorSym  
   
 ## <a name="see-also"></a>另请参阅

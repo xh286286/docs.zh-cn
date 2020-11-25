@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-ms.openlocfilehash: b3d77e30cd48310c392d38dc29f62fab565c8b42
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4537d367518dd80b2559f8ca058684e234ff7a91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842460"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730742"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem 方法
+
 将函数排队以便执行，并指定包含该函数要使用的数据的对象。 当线程变为可用时，该函数执行。  
   
 ## <a name="syntax"></a>语法  
@@ -36,6 +37,7 @@ HRESULT QueueUserWorkItem (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `Function`  
  中表示要执行的函数的函数指针。  
   
@@ -49,22 +51,24 @@ HRESULT QueueUserWorkItem (
   
 |HRESULT|说明|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem`已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时（CLR）未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
+|S_OK|`QueueUserWorkItem` 已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE| (CLR) 的公共语言运行时未加载到进程中，或 CLR 处于无法运行托管代码或成功处理调用的状态。|  
 |HOST_E_TIMEOUT|调用超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
 |HOST_E_ABANDONED|已阻止的线程或纤程正在等待某个事件时，该事件被取消。|  
 |E_FAIL|发生未知的灾难性故障。 当方法返回 E_FAIL 时，CLR 在该进程内将不再可用。 对宿主方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
   
-## <a name="remarks"></a>备注  
- `QueueUserWorkItem`将工作项排队到线程池中的工作线程。 其签名和参数类型与具有相同名称的对应 Win32 函数的签名和参数类型相同。 有关详细信息，请参阅 Windows 平台文档。  
+## <a name="remarks"></a>注解  
+
+ `QueueUserWorkItem` 将工作项排队到线程池中的工作线程。 其签名和参数类型与具有相同名称的对应 Win32 函数的签名和参数类型相同。 有关详细信息，请参阅 Windows 平台文档。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-ms.openlocfilehash: 90304eb94e6f53d3132c97f5ababdc45f6053d7c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: dd053134792b80a006849e465bc0025cf77a9ad8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006566"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729949"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW 函数
+
 执行指定的命令。  
   
  此函数已在 .NET Framework 4 中弃用。  
@@ -38,6 +39,7 @@ HRESULT RunDll32ShimW (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `hwnd`  
  中将在其中显示命令输出的窗口的句柄。  
   
@@ -51,11 +53,12 @@ HRESULT RunDll32ShimW (
  中一个整数，指定 "输出" 窗口的显示模式。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** Mscoree.dll  
+ **库：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

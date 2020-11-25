@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: e391a02571481d75ce88ae3f3b2b6421705d661c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 97e06a2f20dcc2bb3815b98ba29ff230e37ff29d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894705"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730157"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum 接口
 
@@ -29,15 +29,16 @@ ms.locfileid: "82894705"
   
 |方法|说明|  
 |------------|-----------------|  
-|[Next 方法](icordebugbreakpointenum-next-method.md)|从当前位置开始，从`ICorDebugBreakpoint`枚举中获取指定数目的实例。|  
+|[Next 方法](icordebugbreakpointenum-next-method.md)|`ICorDebugBreakpoint`从当前位置开始，从枚举中获取指定数目的实例。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 > [!NOTE]
 > 此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头**：CorDebug.idl、CorDebug.h  
   

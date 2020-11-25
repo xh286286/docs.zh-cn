@@ -7,14 +7,15 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf8aad5d79e659ad9a767c2b0992eb9ee05fd531
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730937"
 ---
 # <a name="sealing"></a>密封
+
 面向对象的框架的一项功能是，开发人员可以采用框架设计器无法预料的方式对其进行扩展和自定义。 这是可扩展设计的强大功能和危险。 当你设计框架时，这一点非常重要，需要在需要时认真设计扩展性，并在有风险时限制扩展性。
 
  阻止扩展性的强大机制是密封的。 可以密封类或单个成员。 密封类可防止用户从类继承。 密封成员可防止用户重写特定成员。

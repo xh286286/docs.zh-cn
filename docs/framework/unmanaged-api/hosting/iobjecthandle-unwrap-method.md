@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 794c6f8e-ed58-416b-b756-e864f2c958f7
 topic_type:
 - apiref
-ms.openlocfilehash: 0ff088731514b2da0d8b1fa51ef48d8b71d16528
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 32b6d2c05a96658ab2b8ec1df288d2be05bb947f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842226"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730657"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap 方法
+
 从间接寻址将按值封送对象解包。  
   
 ## <a name="syntax"></a>语法  
@@ -34,14 +35,16 @@ HRESULT Unwrap (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `ppv`  
  弄指向要解包的对象的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-ms.openlocfilehash: d429995e41006798aee5f796150bedbd6ae87f6f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8468b0e7faa520fe2d27e17674af5503871d3b62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003862"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730378"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA 方法
+
 为指定的标记所引用的字段的相对虚拟地址设置全局变量值。  
   
 ## <a name="syntax"></a>语法  
@@ -35,6 +36,7 @@ HRESULT SetFieldRVA (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `fd`  
  中目标字段的标记。  
   
@@ -42,11 +44,12 @@ HRESULT SetFieldRVA (
  中代码或数据区域的地址。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730963"
 ---
 # <a name="property-design"></a>属性设计
+
 尽管从技术上讲，属性非常类似于方法，但它们的使用方案非常不同。 它们应显示为智能字段。 它们具有字段的调用语法以及方法的灵活性。
 
  如果调用方不能更改属性的值，✔️确实要创建只获得属性。
@@ -38,6 +39,7 @@ ms.locfileid: "94828733"
  属性 getter 应为简单操作，不应具有任何前置条件。 如果 getter 可能引发异常，则可能会将其重新设计为方法。 请注意，此规则不适用于索引器，在这种情况下，我们预期会在验证参数时引发异常。
 
 ### <a name="indexed-property-design"></a>索引属性设计
+
  索引属性是一个特殊属性，它可以具有参数，并可使用类似于数组索引的特殊语法进行调用。
 
  索引属性通常称为索引器。 索引器仅应在提供对逻辑集合中的项的访问的 Api 中使用。 例如，字符串是字符的集合，并添加了的索引器 <xref:System.String?displayProperty=nameWithType> 以访问其字符。
@@ -69,6 +71,7 @@ ms.locfileid: "94828733"
  这是由 c # 编译器强制执行的。
 
 ### <a name="property-change-notification-events"></a>属性更改通知事件
+
  有时，提供事件来向用户通知属性值的更改是非常有用的。 例如， `System.Windows.Forms.Control` `TextChanged` 在其属性的值发生更改后引发事件 `Text` 。
 
  ✔️考虑在高级别 Api 中的属性值 (通常修改设计器组件) 时引发更改通知事件。

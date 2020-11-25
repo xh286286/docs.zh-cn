@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 8615deb2e42b039120d97b3eb5af23beb31b0808
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5cc3436716bcfc2ed0f9fd7ff7982bac7a48de9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502842"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731197"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule 方法
+
 获取其中已加载给定模块的应用程序域的标识符。  
   
 ## <a name="syntax"></a>语法  
@@ -37,6 +38,7 @@ HRESULT GetAppDomainsContainingModule(
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `moduleId`  
  [in] 已加载模块的 ID。  
   
@@ -50,10 +52,12 @@ HRESULT GetAppDomainsContainingModule(
  [out] 应用程序域 ID 值的数组。  
   
 ## <a name="remarks"></a>注解  
+
  此方法使用调用方分配的缓冲区。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
   

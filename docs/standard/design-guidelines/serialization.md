@@ -2,14 +2,15 @@
 title: 序列化
 ms.date: 10/22/2008
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: 85481e9d759a71346d83c66f67d9623fc32e76ec
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 58ed937df5b60daf9fcbcb7610d6026c5e9805fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730924"
 ---
 # <a name="serialization"></a>序列化
+
 序列化是指将对象转换为可随时保存或传输的格式的过程。 例如，可以序列化对象，使用 HTTP 在 Internet 上传输该对象，并在目标计算机上对其进行反序列化。
 
  .NET Framework 提供了针对各种序列化方案进行优化的三种主要序列化技术。 下表列出了这些技术以及与这些技术相关的主要 Framework 类型。
@@ -23,6 +24,7 @@ ms.locfileid: "94828668"
  ✔️在设计新类型时要考虑序列化。
 
 ## <a name="choosing-the-right-serialization-technology-to-support"></a>选择要支持的合适的序列化技术
+
  ✔️如果可能需要在 Web 服务中保留或使用类型的实例，则应考虑支持数据协定序列化。
 
  如果需要对序列化类型时生成的 XML 格式进行更好的控制，✔️应考虑支持 XML 序列化，而不是或除了数据协定序列化。
@@ -34,6 +36,7 @@ ms.locfileid: "94828668"
  ❌ 出于一般持久性原因，请避免仅支持运行时序列化或 XML 序列化。 改用数据协定序列化。
 
 ## <a name="supporting-data-contract-serialization"></a>支持数据协定序列化
+
  类型可通过将应用 <xref:System.Runtime.Serialization.DataContractAttribute> 到类型，并将应用到类型 <xref:System.Runtime.Serialization.DataMemberAttribute> (字段和属性) 的成员，从而支持数据协定序列化。
 
  如果类型可用于部分信任，✔️考虑将类型为 public 的数据成员标记为公共。
@@ -63,6 +66,7 @@ ms.locfileid: "94828668"
  序列化程序可通过此接口确保在往返期间不丢失任何数据。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType>属性用于存储来自当前版本未知的类型的未来版本的任何数据，因此它不能将它存储在其数据成员中。 当随后序列化当前版本并将其反序列化为未来版本时，可在序列化流中使用附加数据。
 
 ## <a name="supporting-xml-serialization"></a>支持 XML 序列化
+
  数据协定序列化是 .NET Framework 中的主要 (默认) 序列化技术，但存在数据协定序列化不支持的序列化方案。 例如，数据协定序列化无法让您完全控制序列化程序生成或使用的 XML 的形状。 如果需要此类精细控制，则必须使用 XML 序列化，并且你需要设计类型以支持此序列化技术。
 
  ❌ 除非您有很好的理由来控制生成的 XML 的形状，否则应避免专门设计用于 XML 序列化的类型。 此序列化技术已由上一节讨论的数据协定序列化所取代。
@@ -70,6 +74,7 @@ ms.locfileid: "94828668"
  <xref:System.Xml.Serialization.IXmlSerializable>如果需要更好地控制序列化 XML 的形状，而不是应用 XML 序列化属性所提供的内容，✔️考虑实现接口。 利用此接口的两种方法（<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>），你可以完全控制序列化的 XML 流。 还可以通过应用来控制为类型生成的 XML 架构 `XmlSchemaProviderAttribute` 。
 
 ## <a name="supporting-runtime-serialization"></a>支持运行时序列化
+
  运行时序列化是 .NET 远程处理所使用的一种技术。 如果你认为将使用 .NET 远程处理传输类型，则需要确保它们支持运行时序列化。
 
  可以通过应用来提供对运行时序列化的基本支持 <xref:System.SerializableAttribute> ，更高级的方案涉及实现一个简单的运行时可序列化模式 (实现 <xref:System.Runtime.Serialization.ISerializable> 和提供序列化构造函数) 。

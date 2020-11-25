@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bc82d9b-9544-4be3-ba51-a2d4d806158a
 topic_type:
 - apiref
-ms.openlocfilehash: a02456393680169ce33369ee5914f6c5216081c6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 486d545413337f6696bd9f21c516466fc3747256
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009211"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730352"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags 方法
+
 设置或更新指定的标记所引用的继承方法实现的元数据签名。  
   
 ## <a name="syntax"></a>语法  
@@ -35,18 +36,20 @@ HRESULT SetMethodImplFlags (
 ```  
   
 ## <a name="parameters"></a>参数  
+
  `md`  
  中要更改的方法的标记。  
   
  `dwImplFlags`  
- 中用于指定方法实现功能的[CorMethodImpl](cormethodimpl-enumeration.md)枚举值的组合。  
+ 中用于指定方法实现功能的 [CorMethodImpl](cormethodimpl-enumeration.md) 枚举值的组合。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Cor  
   
- **库：** 用作 Mscoree.dll 中的资源  
+ **库：** 用作 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

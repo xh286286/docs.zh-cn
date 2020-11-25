@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1fbbf572-6d28-41a5-82fb-579ac90bfcf5
 topic_type:
 - apiref
-ms.openlocfilehash: 8439be4d466c13feaaf4ac6cf946b5960e2862a3
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 51402168a4e01ed10465d3172465fef69b89de7a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842317"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730677"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject 接口
+
 提供用于控制托管对象的方法。  
   
 ## <a name="methods"></a>方法  
@@ -32,11 +33,12 @@ ms.locfileid: "83842317"
 |[GetSerializedBuffer 方法](imanagedobject-getserializedbuffer-method.md)|获取此托管对象的字符串表示形式。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+
+ **平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。  
   
  **标头：** Mscoree.dll  
   
- **库：** 作为资源包括在 Mscoree.dll 中  
+ **库：** 作为中的资源包含 MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
