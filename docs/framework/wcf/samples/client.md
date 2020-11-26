@@ -2,34 +2,36 @@
 title: 客户端
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 8f2d93458c2bec16b737d8bfcbd423494941dc3e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9887d6200a0101be2185b5bc2fdcc969fc7c69e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585280"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243295"
 ---
-# <a name="client"></a><span data-ttu-id="14712-102">客户端</span><span class="sxs-lookup"><span data-stu-id="14712-102">Client</span></span>
-<span data-ttu-id="14712-103">本节包含演示 Windows Communication Foundation （WCF）客户端应用程序的示例。</span><span class="sxs-lookup"><span data-stu-id="14712-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
+# <a name="client"></a><span data-ttu-id="44abf-102">客户端</span><span class="sxs-lookup"><span data-stu-id="44abf-102">Client</span></span>
+
+<span data-ttu-id="44abf-103">本节包含演示 Windows Communication Foundation (WCF) 客户端应用程序的示例。</span><span class="sxs-lookup"><span data-stu-id="44abf-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="14712-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="14712-104">In This Section</span></span>  
- [<span data-ttu-id="14712-105">客户端互操作性</span><span class="sxs-lookup"><span data-stu-id="14712-105">Client Interoperability</span></span>](client-interoperability.md)  
- <span data-ttu-id="14712-106">说明 WCF 与其他技术之间的互操作性。</span><span class="sxs-lookup"><span data-stu-id="14712-106">Demonstrates interoperability between WCF and other technologies.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="44abf-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="44abf-104">In This Section</span></span>  
+
+ [<span data-ttu-id="44abf-105">客户端互操作性</span><span class="sxs-lookup"><span data-stu-id="44abf-105">Client Interoperability</span></span>](client-interoperability.md)  
+ <span data-ttu-id="44abf-106">说明 WCF 与其他技术之间的互操作性。</span><span class="sxs-lookup"><span data-stu-id="44abf-106">Demonstrates interoperability between WCF and other technologies.</span></span>  
   
- [<span data-ttu-id="14712-107">地址标头</span><span class="sxs-lookup"><span data-stu-id="14712-107">Address Headers</span></span>](address-headers.md)  
- <span data-ttu-id="14712-108">演示客户端如何使用 WCF 将引用参数传递给服务。</span><span class="sxs-lookup"><span data-stu-id="14712-108">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
+ [<span data-ttu-id="44abf-107">地址标头</span><span class="sxs-lookup"><span data-stu-id="44abf-107">Address Headers</span></span>](address-headers.md)  
+ <span data-ttu-id="44abf-108">演示客户端如何使用 WCF 将引用参数传递给服务。</span><span class="sxs-lookup"><span data-stu-id="44abf-108">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
   
- [<span data-ttu-id="14712-109">通道工厂</span><span class="sxs-lookup"><span data-stu-id="14712-109">Channel Factory</span></span>](channel-factory.md)  
- <span data-ttu-id="14712-110">演示客户端应用程序如何使用 <xref:System.ServiceModel.ChannelFactory> 类而不是生成的客户端创建通道。</span><span class="sxs-lookup"><span data-stu-id="14712-110">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
+ [<span data-ttu-id="44abf-109">通道工厂</span><span class="sxs-lookup"><span data-stu-id="44abf-109">Channel Factory</span></span>](channel-factory.md)  
+ <span data-ttu-id="44abf-110">演示客户端应用程序如何使用 <xref:System.ServiceModel.ChannelFactory> 类而不是生成的客户端创建通道。</span><span class="sxs-lookup"><span data-stu-id="44abf-110">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
   
- [<span data-ttu-id="14712-111">预期异常</span><span class="sxs-lookup"><span data-stu-id="14712-111">Expected Exceptions</span></span>](expected-exceptions.md)  
- <span data-ttu-id="14712-112">演示在使用类型化客户端时如何捕获预期异常。</span><span class="sxs-lookup"><span data-stu-id="14712-112">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
+ [<span data-ttu-id="44abf-111">预期异常</span><span class="sxs-lookup"><span data-stu-id="44abf-111">Expected Exceptions</span></span>](expected-exceptions.md)  
+ <span data-ttu-id="44abf-112">演示在使用类型化客户端时如何捕获预期异常。</span><span class="sxs-lookup"><span data-stu-id="44abf-112">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
   
- [<span data-ttu-id="14712-113">检索元数据</span><span class="sxs-lookup"><span data-stu-id="14712-113">Retrieve Metadata</span></span>](retrieve-metadata.md)  
- <span data-ttu-id="14712-114">演示如何实现一个客户端，它能从服务中动态检索元数据以选择用来通信的终结点。</span><span class="sxs-lookup"><span data-stu-id="14712-114">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
+ [<span data-ttu-id="44abf-113">检索元数据</span><span class="sxs-lookup"><span data-stu-id="44abf-113">Retrieve Metadata</span></span>](retrieve-metadata.md)  
+ <span data-ttu-id="44abf-114">演示如何实现一个客户端，它能从服务中动态检索元数据以选择用来通信的终结点。</span><span class="sxs-lookup"><span data-stu-id="44abf-114">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
   
- [<span data-ttu-id="14712-115">使用“关闭”和“中止”发布 WCF 客户端资源</span><span class="sxs-lookup"><span data-stu-id="14712-115">Use Close and Abort to release WCF client resources</span></span>](use-close-abort-release-wcf-client-resources.md)  
- <span data-ttu-id="14712-116">演示在使用类型化客户端时，不应使用 C# 的“using”语句自动清除资源。</span><span class="sxs-lookup"><span data-stu-id="14712-116">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
+ [<span data-ttu-id="44abf-115">使用“关闭”和“中止”发布 WCF 客户端资源</span><span class="sxs-lookup"><span data-stu-id="44abf-115">Use Close and Abort to release WCF client resources</span></span>](use-close-abort-release-wcf-client-resources.md)  
+ <span data-ttu-id="44abf-116">演示在使用类型化客户端时，不应使用 C# 的“using”语句自动清除资源。</span><span class="sxs-lookup"><span data-stu-id="44abf-116">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
   
- [<span data-ttu-id="14712-117">类型化客户端</span><span class="sxs-lookup"><span data-stu-id="14712-117">Typed Client</span></span>](typed-client.md)  
- <span data-ttu-id="14712-118">演示如何从[Svcutil.exe 元数据实用工具（）](../servicemodel-metadata-utility-tool-svcutil-exe.md)生成的类型化客户端获取信息。</span><span class="sxs-lookup"><span data-stu-id="14712-118">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
+ [<span data-ttu-id="44abf-117">类型化客户端</span><span class="sxs-lookup"><span data-stu-id="44abf-117">Typed Client</span></span>](typed-client.md)  
+ <span data-ttu-id="44abf-118">演示如何从 [ ( # A0) 的工作的元数据实用工具工具 ](../servicemodel-metadata-utility-tool-svcutil-exe.md)生成的类型化客户端获取信息。</span><span class="sxs-lookup"><span data-stu-id="44abf-118">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
