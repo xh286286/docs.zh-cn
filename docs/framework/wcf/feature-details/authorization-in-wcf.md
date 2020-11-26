@@ -5,17 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 67da01508fbb8f14b6405b79445bdef297e63288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556253"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247481"
 ---
 # <a name="authorization-in-wcf"></a>WCF 中的授权
+
 授权是控制对资源（例如服务或文件）的访问和权限的过程。 本部分中的主题介绍如何以各种方式在 Windows Communication Foundation (WCF) 中执行此基本任务。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [访问控制机制](access-control-mechanisms.md)  
  简要概述 WCF 中的授权机制，并提供建议的用法。  
   
@@ -35,6 +37,7 @@ ms.locfileid: "90556253"
  说明委托和模拟之间的区别。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel.Security>  
   
  <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
@@ -44,9 +47,10 @@ ms.locfileid: "90556253"
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [身份验证](authentication-in-wcf.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全性概述](security-overview.md)
 - [Windows Server App Fabric 的安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

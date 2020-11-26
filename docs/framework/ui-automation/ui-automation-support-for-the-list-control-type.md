@@ -7,14 +7,15 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: 01827250ac216dbcb57a8a139637e7c48d59566d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b56856e3157ad4b770173cf0b34c7e092ffff075
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166088"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247234"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI 自动化对 List 控件类型的支持
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -25,17 +26,19 @@ ms.locfileid: "87166088"
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]以下各节中的要求适用于实现 List 控件类型的所有控件，无论是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 还是 Windows 窗体。 List 容器控件是实现 List 控件类型的控件示例。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>必需的 UI 自动化树结构  
+
  下表描述了与列表控件有关的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的两种视图，以及说明了每种视图中可包含的内容。 控件视图只包含作为控件的元素，而内容视图从树中删除冗余信息。 例如，用来标记组合框的文本控件将作为 `ComboBox NameProperty`公开。 因为文本控件已通过控件视图以这种方式公开，所以没有必要让它公开两次 ；因此将它从内容视图中删除。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的详细信息，请参阅 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控件视图|内容视图|  
 |------------------|------------------|  
 |包含对应于控件的元素。|从树中删除冗余信息，以便辅助技术使用最小部分的对最终用户有意义的信息。|  
-|列出<br /><br /> -DataItem （0个或多个）<br />-项（0个或多个）<br />-Group （0个或多个）<br />-滚动条（0个、1个或2个）|列出<br /><br /> -DataItem （0个或多个）<br />-项（0个或多个）<br />-Group （0个或多个）|  
+|列出<br /><br /> -DataItem (0 个或更多) <br />- (0 个或多个) <br />-Group (0 个或多个) <br />-滚动条 (0、1或 2) |列出<br /><br /> -DataItem (0 个或更多) <br />- (0 个或多个) <br />-Group (0 个或多个) |  
   
  实现 List 控件类型（如列表控件）的控件的控件视图组成如下：  
   
-- 列表控件中的零个或多个项（项可以基于列表项或数据项控件类型）。
+- 列表控件中的零个或多个项 (项可以基于) 的列表项或数据项控件类型。
   
 - 列表控件中的零个或多个组控件。
   
@@ -43,7 +46,7 @@ ms.locfileid: "87166088"
   
 实现 List 控件类型（如列表控件）的控件的内容视图组成如下：  
   
-- 列表控件中的零个或多个项（项可以基于列表项或数据项控件类型）。
+- 列表控件中的零个或多个项 (项可以基于) 的列表项或数据项控件类型。
   
 - 列表控件中的零个或多个组。
 
@@ -52,8 +55,10 @@ ms.locfileid: "87166088"
  在列表控件中可选择的项都可从列表控件的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中的子代获取。 列表控件中的所有项都必须都属于同一个选择组。 在列表中的可选择项应作为 ListItem（而不是 DataItem）控件类型公开。  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表控件尤其相关。 有关属性的详细信息 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ，请参阅[客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)。  
+
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表控件尤其相关。 有关属性的详细信息 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ，请参阅 [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|注释|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -71,7 +76,9 @@ ms.locfileid: "87166088"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|请参阅注释。|列表控件的帮助文本应解释为什么要求用户从选项列表中进行选择。 例如，“从此列表中选择项将会设置显示监视器的分辨率。”|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>必需的 UI 自动化控件模式和属性  
+
  下表列出需要由列表控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
 |控件模式/模式属性|支持/值|注释|  
@@ -85,16 +92,18 @@ ms.locfileid: "87166088"
 |<xref:System.Windows.Automation.Provider.ITableProvider>|从不|List 控件类型从不支持`ITableProvider` 。 如果控件应该支持此控件模式，该该控件应基于的数据网格控件类型。|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
+
  下表列出需要由所有文本控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持/值|注释|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|依赖的对象|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|依赖的对象|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必需|无|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必需|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 属性更改事件。|必选|无|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 属性更改事件。|必选|无|  
 |<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> 属性更改事件。|依赖的对象|无|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 属性更改事件。|依赖的对象|无|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 属性更改事件。|依赖的对象|无|  

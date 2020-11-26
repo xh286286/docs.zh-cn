@@ -6,17 +6,19 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2334a8c024238f38e1c927a278a4e25e7dabd9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558272"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247533"
 ---
 # <a name="authentication-in-wcf"></a>WCF 中的身份验证
+
 以下主题介绍了 Windows Communication Foundation (WCF) 提供身份验证的多种不同机制，这些机制提供身份验证，例如 Windows 身份验证、x.509 证书以及用户名和密码。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [如何：使用 ASP.NET 成员资格提供程序](how-to-use-the-aspnet-membership-provider.md)  
  ASP.NET 功能包括成员资格和角色提供程序、用于存储用户名/密码对以供进行身份验证的数据库，以及用于身份验证的用户角色。 本主题说明 WCF 服务如何使用同一个数据库对用户进行身份验证和授权。  
   
@@ -33,12 +35,14 @@ ms.locfileid: "90558272"
  重点说明使用 Windows 身份验证时所遇到的常见问题。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [常用安全方案](common-security-scenarios.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全性概述](security-overview.md)
 - [Windows Server App Fabric 的安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

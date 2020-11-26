@@ -1,6 +1,6 @@
 ---
 title: loadFromContext MDA
-description: 了解 .NET 中的 loadFromContext 托管调试助手（MDA），如果将程序集加载到 LoadFrom 上下文，则会激活该助手。
+description: 了解 .NET 中的 loadFromContext 托管调试助手 () MDA，如果将程序集加载到 LoadFrom 上下文，则会激活该助手。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), LoadFrom context
@@ -8,22 +8,27 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 631939b38ace4d26d0deb5b104cc5de0df3d9f3a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051644"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247351"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
+
 如果程序集加载到 `LoadFrom` 上下文，将激活 `loadFromContext` 托管调试助手 (MDA)。 这种情况可能由于调用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或其他类似方法而发生。  
   
 ## <a name="symptoms"></a>症状  
+
  使用某些加载器方法可能导致在 `LoadFrom` 上下文中加载程序集。 使用此上下文可能导致序列化、转换和依赖项解析出现意外的行为。 通常，建议将程序集加载到 `Load` 上下文来避免这些问题。 如果没有此 MDA，很难确定程序集加载到了哪个上下文。  
   
 ## <a name="cause"></a>原因  
+
  通常，如果从 `Load` 上下文外部的路径加载程序集（例如全局程序集缓存或 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 属性），则会将程序集加载到 `LoadFrom` 上下文。  
   
 ## <a name="resolution"></a>解决方法  
+
  配置应用程序使其不再需要 <xref:System.Reflection.Assembly.LoadFrom%2A> 调用。 可以使用以下技术进行此操作：  
   
 - 在全局程序集缓存中安装程序集。  
@@ -35,12 +40,14 @@ ms.locfileid: "86051644"
  每种情况下，均可将代码更改为使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法。  
   
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
+
  MDA 对 CLR 没有任何影响。 它报告由于加载请求而使用的上下文。  
   
 ## <a name="output"></a>输出  
+
  MDA 报告程序集已加载到 `LoadFrom` 上下文。 它指定程序集的简单名称和路径。 它还建议避免使用 `LoadFrom` 上下文来减轻风险。  
   
-## <a name="configuration"></a>配置  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -51,6 +58,7 @@ ms.locfileid: "86051644"
 ```  
   
 ## <a name="example"></a>示例  
+
  以下代码示例展示了一种可激活该 MDA 的情况：  
   
 ```csharp
@@ -70,6 +78,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)
