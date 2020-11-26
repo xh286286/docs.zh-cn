@@ -2,17 +2,19 @@
 title: System.ServiceModel.Channels.MsmqPoisonMessageMovedRetry
 ms.date: 03/30/2017
 ms.assetid: 5c6c0a55-f92d-442c-a61e-7841341a79df
-ms.openlocfilehash: cbd69a165b39ff370f1e336f7ef7b40abc7dcf36
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2eb3d2d0f132b30c92e54c7cddc8925831b5a29
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598393"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243737"
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagemovedretry"></a>System.ServiceModel.Channels.MsmqPoisonMessageMovedRetry
+
 System.ServiceModel.Channels.MsmqPoisonMessageMovedRetry  
   
 ## <a name="description"></a>描述  
+
  移入重试子队列的病毒消息。  
   
 ## <a name="see-also"></a>另请参阅

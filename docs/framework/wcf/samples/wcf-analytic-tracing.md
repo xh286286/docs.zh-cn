@@ -2,14 +2,15 @@
 title: WCF 分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 13c66fbe1b59158cb9d2ba3829bb12f1180ad576
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 490c67c92407626a67ea8561a378ef3e70266fe2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243659"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
+
 此示例演示如何将您自己的跟踪事件添加到分析跟踪流中，Windows Communication Foundation (WCF) 写入中的 ETW [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> api 写入与 WCF 服务集成的事件。  
   
  有关这些 api 的详细信息 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> ，请参阅 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> 。  
@@ -17,9 +18,11 @@ ms.locfileid: "90552974"
  若要了解有关 Windows 中的事件跟踪的详细信息，请参阅 [通过 ETW 改善调试和性能优化](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)。  
   
 ## <a name="disposing-eventprovider"></a>释放 EventProvider  
+
  此示例使用 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 类，该类实现 <xref:System.IDisposable?displayProperty=nameWithType>。 在为 WCF 服务实现跟踪时，可能会在 <xref:System.Diagnostics.Eventing.EventProvider> 服务的生存期内使用的资源。 因此，为了便于阅读，此示例永远不会释放已包装的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果出于某种原因，您的服务具有不同的跟踪需求，并且必须释放此资源，则应根据释放非托管资源的最佳做法来修改此示例。 有关释放非托管资源的详细信息，请参阅 [实现 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自承载与 Web 承载  
+
  对于 Web 承载的服务，WCF 的分析跟踪提供了一个名为 "HostReference" 的字段，该字段用于标识发出跟踪的服务。 可扩展的用户跟踪可以参与此模型，此示例演示执行该操作的最佳做法。 当 "&#124;" 字符实际上出现在生成的字符串中时，Web 主机引用的格式可以是以下任意一种格式：  
   
 - 如果该应用程序不在根处。  
@@ -33,9 +36,10 @@ ms.locfileid: "90552974"
  对于自承载服务，WCF 的分析跟踪不填充 "HostReference" 字段。 此示例中的 `WCFUserEventProvider` 类在由自承载服务使用时，其行为是一致的。  
   
 ## <a name="custom-event-details"></a>自定义事件详细信息  
+
  WCF 的 ETW 事件提供程序清单定义了三个事件，这些事件旨在由 WCF 服务作者从服务代码中发出。 下表显示了这三个事件的分类。  
   
-|事件|说明|事件 ID|  
+|事件|描述|事件 ID|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|服务中发生的说明内容不是一个问题时发出此事件。 例如，可以在对数据库成功进行调用后发出一个事件。|301|  
 |UserDefinedWarningOccurred|发生的问题可能导致将来出现错误时发出此事件。 例如，如果调用数据库失败，但能够通过回退到冗余数据存储区进行恢复，则可以发出一个警告事件。|302|  
@@ -77,9 +81,9 @@ ms.locfileid: "90552974"
   
 10. 使用 WCF 测试客户端来测试服务。  
   
-    1. 在 WCF 测试客户端中，双击 "ICalculator" 服务节点下的 " **添加 ( ** "。  
+    1. 在 WCF 测试客户端中，双击 "ICalculator" 服务节点下的 " **添加 (** "。  
   
-         **添加 ( # B1**方法将显示在右侧窗格中，其中包含两个参数。  
+         **添加 ( # B1** 方法将显示在右侧窗格中，其中包含两个参数。  
   
     2. 为第一个参数键入 2，为第二个参数键入 3。  
   
@@ -106,7 +110,8 @@ ms.locfileid: "90552974"
 4. 单击 " **清除** " 以清除事件。  
   
 ## <a name="known-issue"></a>已知问题  
- **事件查看器**中存在一个已知问题，在这种情况下，可能无法解码 ETW 事件。 你可能会看到一条错误消息，指出： "来自源 Microsoft 的事件 ID 的描述 \<id> -应用程序服务器-应用程序无法找到。 未在本地计算机上安装引发此事件的组件，或者安装已损坏。 您可以在本地计算机上安装或修复该组件。 " 如果遇到此错误，请从 "**操作**" 菜单选择 "**刷新**"。 然后，该事件应能正确解码。  
+
+ **事件查看器** 中存在一个已知问题，在这种情况下，可能无法解码 ETW 事件。 你可能会看到一条错误消息，指出： " \<id> 找不到来自源 Microsoft-Windows-应用程序 Server-Applications 的事件 ID 的描述。 未在本地计算机上安装引发此事件的组件，或者安装已损坏。 您可以在本地计算机上安装或修复该组件。 " 如果遇到此错误，请从 "**操作**" 菜单选择 "**刷新**"。 然后，该事件应能正确解码。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -117,6 +122,6 @@ ms.locfileid: "90552974"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 监视示例](/previous-versions/appfabric/ff383407(v=azure.10))

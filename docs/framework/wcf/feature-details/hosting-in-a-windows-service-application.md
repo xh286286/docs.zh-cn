@@ -2,14 +2,15 @@
 title: 在 Windows 服务应用程序中承载
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555843"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243067"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服务应用程序中承载
+
 Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。 Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。 你可以将 Windows 服务进程配置为在计算机启动时自动启动，使其成为适用于 "alwayson" 应用程序的合适宿主环境。 有关 Windows 服务应用程序的详细信息，请参阅 [Windows 服务应用程序](https://go.microsoft.com/fwlink/?LinkId=89450)。  
   
  承载长时间运行 Windows Communication Foundation 的应用程序 (WCF) 服务与 Windows 服务共享许多特性。 特别是，WCF 服务是长时间运行的服务器可执行文件，这些可执行文件不会直接与用户交互，因此不实现任何形式的用户界面。 同样，在 Windows 服务应用程序中托管 WCF 服务是一种用于生成可靠、长时间运行的 WCF 应用程序的选项。  
@@ -36,7 +37,7 @@ Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于
   
      部署和管理承载 WCF 服务的 windows 服务应用程序的方式与未使用 WCF 的 Windows 服务应用程序相同。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceProcess>
 - [演练：在组件设计器中创建 Windows 服务应用程序](https://go.microsoft.com/fwlink/?LinkId=94875)

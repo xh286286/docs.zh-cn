@@ -14,12 +14,12 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-ms.openlocfilehash: f266bf7278f472c51dd355df5ba04a123cbd7df0
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 2e556358490409a0fa7b345c4454eb43cf607e32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415961"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244361"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用调试器显示特性增强调试
 
@@ -42,11 +42,12 @@ class MyHashtable
 例如，如果 C# 对象有重写的 `ToString()`，则调试器将调用该重写并显示重写的结果而不是标准 `{<typeName>}.`。因此，如果有重写的 `ToString()`，用户无需使用 <xref:System.Diagnostics.DebuggerDisplayAttribute>。 在同时使用这两者时，<xref:System.Diagnostics.DebuggerDisplayAttribute> 特性将优先于 `ToString()` 重写。
 
 ## <a name="using-the-debuggerbrowsableattribute"></a>使用 DebuggerBrowsableAttribute
+
  将 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 应用于字段或属性，指定字段或属性在调试器窗口中的显示方式。 此属性的构造函数采用一个 <xref:System.Diagnostics.DebuggerBrowsableState> 枚举值，指定以下任一状态：
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.Never> 表示未在数据窗口中显示成员。  例如，将此值用于字段上的 <xref:System.Diagnostics.DebuggerBrowsableAttribute>，则会从层次结构中删除该字段，单击类型实例的加号 (+) 展开封闭类型时，不会显示该字段。
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 表示显示成员，但默认情况下不展开。  这是默认行为。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 表示显示成员，但默认情况下不展开。  此选项为默认行为。
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 表示不显示成员本身，但如果成员是一个数组或集合，则会显示其组成对象。
 
@@ -61,6 +62,7 @@ public static string y = "Test String";
 ```
 
 ## <a name="using-the-debuggertypeproxy"></a>使用 DebuggerTypeProxy
+
  如需从根本上大幅更改某个类型的调试视图，但不改变类型本身，请使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性用于为类型指定显示代理，允许开发人员为类型定制视图。  该属性与 <xref:System.Diagnostics.DebuggerDisplayAttribute> 类似，可以在程序集级别使用，在这种情况下，<xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> 属性指定将使用代理的类型。 建议使用该属性指定在应用属性的类型内发生的私有嵌套类型。  显示类型时，支持类型查看器的表达式计算器将检查此属性。 如果找到该属性，表达式计算器会将显示代理类型替换为应用该属性的类型。
 
  显示 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 时，调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。 属性增强视图不会改变数据窗口的行为。
@@ -94,7 +96,7 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 可在 Visual Studio 中查看下面的代码示例，以查看应用 <xref:System.Diagnostics.DebuggerDisplayAttribute> 、 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 和特性的结果 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 。
 

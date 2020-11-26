@@ -2,14 +2,15 @@
 title: 对 COM 客户端使用 WCF 标记
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: b36b646f650c2a2974c7b0689a9367961075ea14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eb2f14db8b58fd182bbe711bf559055659a02652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553014"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243685"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>对 COM 客户端使用 WCF 标记
+
 此示例演示如何使用 Windows Communication Foundation (WCF) 服务名字对象将 Web 服务集成到基于 COM 的开发环境中，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 本示例由 Windows 脚本宿主客户端 (.vbs)、客户端支持库 (.dll) 和 Internet 信息服务 (IIS) 承载的服务库 (.dll) 组成。 该服务是一个计算器服务，COM 客户端将对服务调用数学运算（加、减、乘和除）。 客户端活动显示在消息框窗口中。  
   
 > [!NOTE]
@@ -50,6 +51,7 @@ public interface ICalculator
 - 元数据交换协定 - 该协定可在运行时从元数据交换 (MEX) 终结点进行检索。  
   
 ## <a name="typed-contract"></a>类型化协定  
+
  若要对类型化协定用法使用标记，必须向 COM 注册服务协定的经适当属性化的类型。 首先，必须使用 [ ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md)来生成客户端。 在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。  
   
 ```console  
@@ -103,6 +105,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
  运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 这说明了使用类型化名字对象发出 COM 调用以便与 WCF 服务进行通信的 COM 客户端。 虽然在客户端应用程序中使用了 COM，但与服务的通信仅由 Web 服务调用组成。  
   
 ## <a name="wsdl-contract"></a>WSDL 协定  
+
  使用具有 WSDL 协定的标记不需要注册任何客户端库，但必须通过带外机制（如使用浏览器访问服务的 WSDL 终结点）来检索服务的 WSDL 协定。 标记之后可以在执行时访问该协定。  
   
  ComCalcClient.vbs 客户端应用程序使用 `FileSystemObject` 访问保存在本地的 WSDL 文件，然后再次使用 `GetObject` 函数来构造服务的代理。  
@@ -148,6 +151,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
  运行示例时，操作响应将显示在 Windows 脚本宿主消息框窗口中。 这说明了使用带有 WSDL 协定的名字对象进行 COM 调用以便与 WCF 服务进行通信的 COM 客户端。  
   
 ## <a name="metadata-exchange-contract"></a>元数据交换协定  
+
  和 WSDL 协定一样，使用具有 MEX 协定的标记不需要注册任何客户端。 服务的协定通过内部使用元数据交换在执行时进行检索。  
   
  ComCalcClient.vbs 客户端应用程序也使用 `GetObject` 函数来构造服务的代理。  

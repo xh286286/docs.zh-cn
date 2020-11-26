@@ -2,22 +2,25 @@
 title: 有关跟踪的安全注意事项和有用提示
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 415b27f5ac40d097c5bdf7b09d63ce901003f83f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243872"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>有关跟踪的安全注意事项和有用提示
+
 本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。  
   
 ## <a name="using-a-custom-trace-listener-with-webhost"></a>将自定义跟踪侦听器与 WebHost 一起使用  
+
  如果您正在编写自己的跟踪侦听器，则应当注意在 Web 承载的服务中，跟踪可能会丢失。 当 WebHost 回收时，它会关闭活动进程，由一个副本进程来接替该进程。 但是，在一段时间内，这两个进程必须仍具有对同一资源的访问权，具体取决于侦听器类型。 在这种情况下，`XmlWriterTraceListener` 会为第二个进程创建一个新的跟踪文件，Windows 事件跟踪会对同一会话中的多个进程进行管理并给予同一文件的访问权。 如果您自己的侦听器无法提供类似功能，则当该文件被这两个进程锁定时，跟踪可能会丢失。  
   
  您还应当注意，自定义跟踪侦听器可以在网络上发送跟踪和消息，例如发送到远程数据库。 作为应用程序部署人员，您应当使用适当的访问控制来配置自定义侦听器。 您还应当对可以在远程位置上公开的任何个人信息应用安全控制。  
   
 ## <a name="logging-sensitive-information"></a>记录敏感信息  
+
  当消息在范围内时，跟踪包含消息头。 启用跟踪后，特定于应用程序的标头中的个人信息（例如查询字符串）以及正文信息（例如信用卡号）会在日志中变为可见。 应用程序部署人员负责实施对配置和跟踪文件的访问控制。 如果您不希望此类信息可见，应当禁用跟踪，或者如果您希望共享跟踪日志，则筛选出其中的部分数据。  
   
  下面的提示可帮助您避免意外公开跟踪文件的内容：  
@@ -90,6 +93,6 @@ ms.locfileid: "90555037"
   
  另外，对于面向连接的传输，每次连接时会记录一次消息发送方的 IP 地址；对于非面向连接的传输，每发送一条消息会记录一次消息发送方的 IP 地址。 这是在未经发送方同意的情况下进行的。 不过，只有在“信息”或“详细”跟踪级别才会发生此日志记录，这些级别不是生产中的默认或推荐跟踪级别（现场调试时除外）。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [跟踪](index.md)

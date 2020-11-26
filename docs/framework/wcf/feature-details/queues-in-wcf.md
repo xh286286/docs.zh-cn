@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: d1fee4fdde18563ec6ccce4f0675d8581184be08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d63b03e519484ad6ec90b4267a49b77738593e45
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596729"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244647"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的队列
-本节中的主题讨论 Windows Communication Foundation （WCF）对队列的支持。 WCF 通过利用 Microsoft 消息队列（以前称为 MSMQ）作为传输来提供队列支持，并启用以下方案：  
+
+本节中的主题讨论队列 Windows Communication Foundation (WCF) 支持。 WCF 通过利用 Microsoft 消息队列 (之前称为 MSMQ) 作为传输来提供队列支持，并启用以下方案：  
   
 - 松耦合应用程序。 发送应用程序可以将消息发送到队列，而无需知道接收应用程序是否可用于处理该消息。 队列提供了处理独立性，它允许发送应用程序将消息以一定的速率发送到队列，该速率不依赖于接收应用程序的消息处理速度。 如果向队列发送消息的操作与消息处理的操作不是紧密耦合的，则会提高系统的整体可用性。  
   
@@ -22,9 +23,10 @@ ms.locfileid: "84596729"
   
 - 断开连接的操作。 在高延迟网络或有限可用性网络上通信（例如，在移动设备中）时，发送、接收和处理操作可能会断开连接。 队列允许这些操作继续执行，即使终结点断开连接也是如此。 重新建立连接后，队列将消息转发到接收应用程序。  
   
- 若要在 WCF 应用程序中使用队列功能，可以使用其中一个标准绑定，如果其中一个标准绑定不满足你的要求，则可以创建自定义绑定。 有关相关标准绑定和如何选择的详细信息，请参阅[如何：与 WCF 终结点和消息队列应用程序交换消息](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../extending/custom-bindings.md)。  
+ 若要在 WCF 应用程序中使用队列功能，可以使用其中一个标准绑定，如果其中一个标准绑定不满足你的要求，则可以创建自定义绑定。 有关相关标准绑定和如何选择的详细信息，请参阅 [如何：与 WCF 终结点和消息队列应用程序交换消息](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [队列概述](queues-overview.md)  
  消息队列概念概述。  
   

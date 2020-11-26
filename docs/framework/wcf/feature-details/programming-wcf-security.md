@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4ffbf6a05abd3ed9ebcea4b2e85f0dc305a4f2db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244764"
 ---
 # <a name="programming-wcf-security"></a>WCF 安全编程
+
 本主题介绍用于创建安全 Windows Communication Foundation (WCF) 应用程序的基本编程任务。 本主题仅介绍身份验证、机密性和完整性，共同称为 *传输安全性*。 本主题不涵盖 (访问资源或服务) 的授权;有关授权的信息，请参阅 [授权](authorization-in-wcf.md)。  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ ms.locfileid: "90535893"
  WCF 安全编程基于三个步骤设置：安全模式、客户端凭据类型和凭据值。 可以通过代码或配置执行这些步骤。  
   
 ## <a name="setting-the-security-mode"></a>设置安全模式  
+
  下面说明了在 WCF 中用安全模式编程的一般步骤：  
   
 1. 选择一个适合于应用程序要求的预定义绑定。 有关绑定选项的列表，请参阅 [系统提供的绑定](../system-provided-bindings.md)。 默认情况下，几乎每个绑定都启用了安全。 一种例外情况是 <xref:System.ServiceModel.BasicHttpBinding> 使用配置) 的类 ([\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 。  
@@ -55,6 +57,7 @@ ms.locfileid: "90535893"
      当客户端和服务使用对称密钥创建通道时（客户端和服务器在整个对话过程中都使用相同的密钥，直到对话结束），将发生安全会话。  
   
 ## <a name="setting-the-client-credential-type"></a>设置客户端凭据类型  
+
  选择适当的客户端凭据类型。 有关详细信息，请参阅 [选择凭据类型](selecting-a-credential-type.md)。 下列客户端凭据类型可用：  
   
 - `Windows`  
@@ -92,12 +95,14 @@ ms.locfileid: "90535893"
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>设置服务凭据值  
+
  一旦选择了客户端凭据类型，就必须设置可供服务和客户端使用的实际凭据。 在服务上，使用 <xref:System.ServiceModel.Description.ServiceCredentials> 类设置凭据，并且由 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 类的 <xref:System.ServiceModel.ServiceHostBase> 属性返回。 所使用的绑定暗示了服务凭据类型、选择的安全模式和客户端凭据类型。 下面的代码为服务凭据设置了证书。  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>设置客户端凭据值  
+
  在客户端上，使用 <xref:System.ServiceModel.Description.ClientCredentials> 类设置客户端凭据值，并且通过 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 类的 <xref:System.ServiceModel.ClientBase%601> 属性返回该值。 下面的代码在使用 TCP 协议的客户端上将证书设置为凭据。  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
