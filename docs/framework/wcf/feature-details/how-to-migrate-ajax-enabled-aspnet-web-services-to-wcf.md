@@ -2,15 +2,16 @@
 title: 如何：将支持 AJAX 的 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 6f356f47922945218e02271371d9ddea36ecc5a2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 89c9601ba6afcef9733d7653564a98664a1ed70f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597002"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241897"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将支持 AJAX 的 ASP.NET Web 服务迁移到 WCF
-本主题概述将基本 ASP.NET AJAX 服务迁移到等效的启用 AJAX Windows Communication Foundation （WCF）服务的过程。 它演示如何创建 ASP.NET AJAX 服务的功能等效的 WCF 版本。 然后，可以并行使用这两个服务，或者可以使用 WCF 服务来替换 ASP.NET AJAX 服务。
+
+本主题概述了将基本 ASP.NET AJAX 服务迁移到等效 AJAX 的 Windows Communication Foundation (WCF) 服务的过程。 它演示如何创建 ASP.NET AJAX 服务的功能等效的 WCF 版本。 然后，可以并行使用这两个服务，或者可以使用 WCF 服务来替换 ASP.NET AJAX 服务。
 
  将现有的 ASP.NET AJAX 服务迁移到 WCF AJAX 服务可提供以下优势：
 
@@ -22,25 +23,25 @@ ms.locfileid: "84597002"
 
  从本主题概述的过程中得到的代码将在过程后面的示例中提供。
 
- 有关通过启用 AJAX 的终结点公开 WCF 服务的详细信息，请参阅[如何：使用配置添加 ASP.NET AJAX 终结点](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。
+ 有关通过启用 AJAX 的终结点公开 WCF 服务的详细信息，请参阅 [如何：使用配置添加 ASP.NET AJAX 终结点](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) 主题。
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>创建并测试 ASP.NET Web 服务应用程序
 
 1. 打开 Visual Studio 2012。
 
-2. 从 "**文件**" 菜单中依次选择 "**新建**"、"**项目**"、" **Web**"，然后选择 " **ASP.NET Web 服务应用程序**"。
+2. 从 " **文件** " 菜单中依次选择 " **新建**"、" **项目**"、" **Web**"，然后选择 " **ASP.NET Web 服务应用程序**"。
 
 3. 将项目命名为 `ASPHello` ，然后单击 **"确定"**。
 
 4. 在 Service1.asmx.cs 文件中，取消对包含 `System.Web.Script.Services.ScriptService]` 的行的注释，以便为此服务启用 AJAX。
 
-5. 在 "**生成**" 菜单中，选择 "**生成解决方案**"。
+5. 在 " **生成** " 菜单中，选择 " **生成解决方案**"。
 
-6. 在“调试”**** 菜单中，选择“启动但不调试”****。
+6. 从“调试”菜单中选择“开始执行（不调试）”。
 
 7. 在生成的网页上，选择 `HelloWorld` 操作。
 
-8. 单击 "测试" 页上的 "**调用**" 按钮 `HelloWorld` 。 您应收到以下 XML 响应。
+8. 单击 "测试" 页上的 " **调用** " 按钮 `HelloWorld` 。 您应收到以下 XML 响应。
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,9 +54,9 @@ ms.locfileid: "84597002"
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>创建等效的 WCF AJAX 服务应用程序
 
-1. 右键单击 " **ASPHello** " 项目，然后依次选择 "**添加**"、"**新建项**" 和 "**启用 AJAX 的 WCF 服务**"。
+1. 右键单击 " **ASPHello** " 项目，然后依次选择 " **添加**"、" **新建项**" 和 " **启用 AJAX 的 WCF 服务**"。
 
-2. 为服务命名 `WCFHello` ，然后单击 "**添加**"。
+2. 为服务命名 `WCFHello` ，然后单击 " **添加**"。
 
 3. 打开 WCFHello.svc.cs 文件。
 
@@ -98,9 +99,9 @@ ms.locfileid: "84597002"
     }
     ```
 
-8. 在 "**生成**" 菜单中，选择 "**生成解决方案**"。
+8. 在 " **生成** " 菜单中，选择 " **生成解决方案**"。
 
-9. 打开 Wcfhello.svc 文件，并从 "**调试**" 菜单中选择 "**启动（不调试**）"。
+9. 打开 Wcfhello.svc 文件，并从 " **调试** " 菜单中选择 " **启动（不调试**）"。
 
 10. 现在，服务在中公开一个终结点 `WCFHello.svc/HelloWorld` ，该终结点响应 HTTP POST 请求。 HTTP POST 请求不能从浏览器进行测试，但终结点会返回以下 XML。
 
@@ -111,6 +112,7 @@ ms.locfileid: "84597002"
 11. `WCFHello.svc/HelloWorld`和 `Service1.aspx/HelloWorld` 端点现在功能等效。
 
 ## <a name="example"></a>示例
+
  从本主题概述的过程中得到的代码将在下面的示例中提供。
 
 ```csharp
@@ -195,7 +197,7 @@ d.Add("two", 2);
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将其表示为 [{"Key":"one","Value":1},{"Key":"two","Value":2}]
 
-- ASP.NET AJAX {"one"：1，"两个"： 2}<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- ASP.NET AJAX {"one"：1，"两个"： 2} <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可以处理其中的键类型不是字符串的词典，而 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 则无法处理，在这一方面前者的功能更为强大。 但后者与 JSON 的兼容性更好。
 
@@ -204,11 +206,11 @@ d.Add("two", 2);
 |差异类别|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |将空缓冲区（新 byte[0]）反序列化为 <xref:System.Object>（或 <xref:System.Uri>，或某些其他类）。|SerializationException|Null|
-|<xref:System.DBNull.Value> 的序列化|{}（或 {"__type"： "#System"}）|Null|
+|<xref:System.DBNull.Value> 的序列化|{} (或 {"__type"： "#System"} ) |Null|
 |[Serializable] 类型的私有成员的序列化。|已序列化|未序列化|
 |<xref:System.Runtime.Serialization.ISerializable> 类型的公共属性的序列化。|未序列化|已序列化|
 |JSON 的“扩展”|遵循 JSON 规范，该规范要求为对象成员名称加上引号 ({"a":"hello"})。|支持不带引号的对象成员名称 ({a:"hello"})。|
-|<xref:System.DateTime> 协调世界时 (UTC)|不支持格式 " \\ /Date （123456789U） \\ /" 或 " \\ /Date \\ （\d + （U&#124; （ \\ + \\ -[\d {4} ]））？ \\ ） \\ \\/)".|支持格式 " \\ /Date （123456789U） \\ /" 和 " \\ /Date \\ （\d + （U&#124; （ \\ + \\ -[\d {4} ]））？ \\ ） \\ \\/） "为 DateTime 值。|
+|<xref:System.DateTime> 协调世界时 (UTC)|不支持格式 " \\ /Date (123456789U) \\ /" 或 " \\ /Date \\ ( \d + (U&#124; (\\ + \\ -[\d {4} ] ) # A6？ \\) \\ \\ /) "。|支持格式 " \\ /Date (123456789U) \\ /" 和 " \\ /Date \\ ( \d + (U&#124; (\\ + \\ -[\d {4} ] ) # A6？ \\) \\ \\ /) "作为 DateTime 值。|
 |词典的表示形式|KeyValuePair 的数组 \<K,V> ，处理不是字符串的键类型。|作为实际的 JSON 对象 - 但仅处理是字符串的键类型。|
 |转义符|始终应带有转义正斜杠 (/)；切勿使用非转义的无效 JSON 字符，例如“\n”。|对于 DateTime 值，带有转义正斜杠 (/)。|
 

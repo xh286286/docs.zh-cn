@@ -2,17 +2,19 @@
 title: 变量和自变量跟踪
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 85cecbfaf1db224152d4582325326f1f80e08266
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552487"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242898"
 ---
 # <a name="variable-and-argument-tracking"></a>变量和自变量跟踪
+
 当跟踪工作流的执行时，提取数据往往很有用。 这在访问跟踪记录后续执行时可提供其他上下文。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，你可以使用跟踪在工作流的任意活动范围内提取所有可见变量或自变量。 跟踪配置文件简化了对数据的提取。  
   
 ## <a name="variables-and-arguments"></a>变量和自变量  
+
  变量和参数在活动发出 ActivityStateRecord 时提取。  仅当变量位于活动范围中时，才能提取该变量。 按如下方式指定将在活动中提取的变量：  
   
 - 如果变量用变量名称指定，跟踪则在正跟踪的当前活动和父活动中查找变量。 系统将在当前活动范围和父范围中搜索变量。  
@@ -38,6 +40,7 @@ ms.locfileid: "90552487"
 ```  
   
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>保护存储在变量和参数中的信息  
+
  默认情况下，跟踪变量或自变量对 WF 运行时可见。 工作流开发人员可以采取以下步骤，阻止访问这些变量或参数：  
   
 1. 对变量的值进行加密。  
@@ -46,7 +49,7 @@ ms.locfileid: "90552487"
   
 3. 对于自定义跟踪参与者，请确保 WF 代码不会泄露存储在变量或参数中的敏感信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows Server App Fabric 监视](/previous-versions/appfabric/ee677251(v=azure.10))
 - [用 App Fabric 监视应用程序](/previous-versions/appfabric/ee677276(v=azure.10))

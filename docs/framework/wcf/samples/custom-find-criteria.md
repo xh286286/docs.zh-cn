@@ -2,14 +2,15 @@
 title: 自定义查找条件
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 3bafe89f5c114106eece02c41599cf485591c1cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9271ae1ec4bbd555fe93df24c7d38f0f345a03ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183858"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241806"
 ---
 # <a name="custom-find-criteria"></a>自定义查找条件
+
 本示例演示如何使用逻辑来创建自定义范围匹配以及如何实现自定义发现服务。 客户端使用自定义范围匹配功能在系统提供的 WCF Discovery 查找功能基础之上进行优化并进一步生成。 本示例包含的方案如下所示：  
   
 1. 客户端查找计算器服务。  
@@ -24,8 +25,9 @@ ms.locfileid: "79183858"
   
 - 通过算法实现自定义范围匹配。  
   
-## <a name="discussion"></a>讨论区  
- 客户端正在查找"OR"类型匹配条件。 如果服务终结点上的范围与客户端提供的任何范围匹配，则服务响应回客户端。 在本例中，客户端查找具有下面列表中任何范围的计算器服务：  
+## <a name="discussion"></a>讨论 (Discussion)  
+
+ 客户端查找 "或" 类型匹配条件。 如果服务终结点上的范围与客户端提供的任何范围匹配，则服务响应回客户端。 在本例中，客户端查找具有下面列表中任何范围的计算器服务：  
   
 1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -39,13 +41,13 @@ ms.locfileid: "79183858"
   
  打开服务项目。 有三个文件用于实现自定义发现服务：  
   
-1. **AsyncResult.cs**：这是发现方法所需的实现`AsyncResult`。  
+1. **AsyncResult.cs**：这是 `AsyncResult` 发现方法所需的的实现。  
   
-2. **CustomDiscoveryService.cs**： 此文件实现自定义发现服务。 该实现扩展 <xref:System.ServiceModel.Discovery.DiscoveryService> 类并重写必需的方法。 请注意 <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 方法的实现。 该方法进行检查以确定客户端是否指定了按规则进行的自定义范围匹配。 这与客户端之前指定的自定义 URI 相同。 如果指定了自定义规则，则遵循实现"OR"匹配逻辑的代码路径。  
+2. **CustomDiscoveryService.cs**：此文件实现自定义发现服务。 该实现扩展 <xref:System.ServiceModel.Discovery.DiscoveryService> 类并重写必需的方法。 请注意 <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 方法的实现。 该方法进行检查以确定客户端是否指定了按规则进行的自定义范围匹配。 这与客户端之前指定的自定义 URI 相同。 如果指定了自定义规则，则遵循实现 "OR" 匹配逻辑的代码路径。  
   
      此自定义逻辑遍历服务具有的每个终结点上的所有范围。 如果有任何终结点的范围与客户端提供的任何范围匹配，则发现服务会将该终结点添加到发送回客户端的响应中。  
   
-3. **CustomDiscoveryExtension.cs**： 实现发现服务的最后一步是将自定义发现服务的此实现连接到服务主机。 此处使用的帮助程序类是 `CustomDiscoveryExtension` 类。 此类扩展 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 类。 用户必须重写 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在这种情况中，方法返回之前创建的自定义发现服务的实例。 `PublishedEndpoints` 是 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，它包含要添加到 <xref:System.ServiceModel.ServiceHost> 的所有应用程序终结点。 自定义发现服务用此填充其内部列表。 用户也可以添加其他终结点元数据。  
+3. **CustomDiscoveryExtension.cs**：实现发现服务的最后一步是将此自定义发现服务的实现连接到服务主机。 此处使用的帮助程序类是 `CustomDiscoveryExtension` 类。 此类扩展 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 类。 用户必须重写 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在这种情况中，方法返回之前创建的自定义发现服务的实例。 `PublishedEndpoints` 是 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，它包含要添加到 <xref:System.ServiceModel.ServiceHost> 的所有应用程序终结点。 自定义发现服务用此填充其内部列表。 用户也可以添加其他终结点元数据。  
   
  最后，打开 Program.cs。 请注意，<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 和 `CustomDiscoveryExtension` 都添加到主机中。 在此操作完成，并且主机具有可用于接收发现消息的终结点后，应用程序便可以使用自定义发现服务。  
   
@@ -66,6 +68,6 @@ ms.locfileid: "79183858"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

@@ -8,15 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-ms.openlocfilehash: 355fa326fc19e9a50a74e21ace0a6353f5c740c5
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 6cbda2bd45f2cdc5085ca30af878824069fb019a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904229"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242170"
 ---
 # <a name="lazy-initialization"></a>延迟初始化
-对象的** 迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语 "*迟缓初始化*" 和 "*迟缓实例化*" 是同义词。）迟缓初始化主要用于提高性能，避免浪费计算，并降低程序内存要求。 以下是常见方案：  
+
+对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。  (本主题中，术语 " *迟缓初始化* " 和 " *迟缓实例化* " 是同义词。 ) 迟缓初始化主要用于提高性能，避免浪费计算，并降低程序内存要求。 以下是常见方案：  
   
 - 对象创建成本高且程序可能不会使用它。 例如，假定内存中有具有 `Orders` 属性的 `Customer` 对象，该对象包含大量 `Order` 对象，初始化这些对象需要数据库连接。 如果用户永远不要求显示 Orders 或在计算中使用该数据，则无需使用系统内存或计算周期来创建它。 通过使用 `Lazy<Orders>` 来声明 `Orders` 对象用于迟缓初始化，可以避免在不使用该对象时浪费系统资源。  
   
@@ -26,13 +27,14 @@ ms.locfileid: "84904229"
   
  下表列出了 .NET Framework 版本 4 提供的在不同方案中启用迟缓初始化的类型。  
   
-|类型|说明|  
+|类型|描述|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|为任何类库或用户定义类型提供迟缓初始化语义的包装类。|  
 |<xref:System.Threading.ThreadLocal%601>|类似于 <xref:System.Lazy%601>，除了该包装类基于线程本地提供迟缓初始化语义。 每个线程都可以访问自己唯一的值。|  
 |<xref:System.Threading.LazyInitializer>|为对象的迟缓初始化提供高级 `static`（Visual Basic 中的 `Shared`）方法，无需支付类的成本。|  
   
 ## <a name="basic-lazy-initialization"></a>基本迟缓初始化  
+
  若要定义迟缓初始化类型（例如 `MyType`），使用 `Lazy<MyType>`（Visual Basic 中的 `Lazy(Of MyType)`），如以下示例所示。 如果没有在 <xref:System.Lazy%601> 构造函数中传入委托，则在首次访问值属性时，将使用 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 创建包装类型。 如果该类型没有无参数构造函数，则会引发运行时异常。  
   
  在以下示例中，假定 `Orders` 是包含从数据库检索的大量 `Order` 对象的类。 `Customer` 对象包含 `Orders` 的实例，但根据用户操作，可能不需要 `Orders` 对象的数据。  
@@ -50,7 +52,7 @@ ms.locfileid: "84904229"
  [!code-csharp[Lazy#3](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#3)]
  [!code-vb[Lazy#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#3)]  
   
- <xref:System.Lazy%601> 对象总是返回其初始化的相同对象或值。 因此，<xref:System.Lazy%601.Value%2A> 属性为只读。 如果 <xref:System.Lazy%601.Value%2A> 存储了引用类型，将无法为其分配新对象。 （但是，您可以更改其可设置的公共字段和属性的值。）如果 <xref:System.Lazy%601.Value%2A> 存储值类型，则不能修改其值。 但是，可以通过再次调用变量构造函数，使用新参数来创建新变量。  
+ <xref:System.Lazy%601> 对象总是返回其初始化的相同对象或值。 因此，<xref:System.Lazy%601.Value%2A> 属性为只读。 如果 <xref:System.Lazy%601.Value%2A> 存储了引用类型，将无法为其分配新对象。 但 (可以更改其可设置的公共字段和属性的值。 ) 如果 <xref:System.Lazy%601.Value%2A> 存储值类型，则不能修改其值。 但是，可以通过再次调用变量构造函数，使用新参数来创建新变量。  
   
  [!code-csharp[Lazy#4](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#4)]
  [!code-vb[Lazy#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#4)]  
@@ -58,6 +60,7 @@ ms.locfileid: "84904229"
  新的迟缓实例与之前的实例一样，不会实例化 `Orders`，直到首次访问其 <xref:System.Lazy%601.Value%2A> 属性。  
   
 ### <a name="thread-safe-initialization"></a>线程安全初始化  
+
  默认情况下，<xref:System.Lazy%601> 对象是线程安全的。 也就是说，如果构造函数没有指定线程安全性的类型，该函数创建的 <xref:System.Lazy%601> 对象是线程安全的。 在多线程方案中，访问线程安全 <xref:System.Lazy%601> 对象的 <xref:System.Lazy%601.Value%2A> 属性的第一个线程会为所有线程上的所有后续访问对其初始化，且所有线程共享相同的数据。 因此，哪个线程初始化对象并不重要，争用条件是良性的。  
   
 > [!NOTE]
@@ -85,7 +88,9 @@ ms.locfileid: "84904229"
  指定 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> 允许多个线程尝试初始化 <xref:System.Lazy%601> 实例。 只有一个线程可以赢得此争用，而其他所有线程都将接收成功的线程初始化的值。 如果在初始化期间，某个线程引发了异常，则此线程不会接收成功的线程设置的值。 不会缓存异常，因此随后尝试访问 <xref:System.Lazy%601.Value%2A> 属性可能会导致初始化成功。 这与其他模式中的异常处理方式不同，下面将对此进行描述。 有关详细信息，请参见 <xref:System.Threading.LazyThreadSafetyMode> 枚举。  
   
 <a name="ExceptionsInLazyObjects"></a>
+
 ## <a name="exceptions-in-lazy-objects"></a>迟缓对象的异常  
+
  如前所述，<xref:System.Lazy%601> 对象始终返回其初始化的相同对象或值，因此 <xref:System.Lazy%601.Value%2A> 属性是只读的。 如果启用异常缓存，则此永久性还会扩展到异常行为。 如果延迟初始化的对象已启用异常缓存并在第一次访问该属性时从其初始化方法引发异常 <xref:System.Lazy%601.Value%2A> ，则每次访问该属性的尝试都会引发相同的异常 <xref:System.Lazy%601.Value%2A> 。 也就是说，即使在多线程方案中，包装类型的构造函数也绝不会被重新调用。 因此，<xref:System.Lazy%601> 对象不能在一次访问时引发异常，并在随后访问时返回值。  
   
  当使用任何采用初始化方法（`valueFactory` 参数）的 <xref:System.Lazy%601?displayProperty=nameWithType> 构造函数时，都会启用异常缓存；例如，当使用 `Lazy(T)(Func(T))` 构造函数时，会启用异常缓存。 如果构造函数还使用 <xref:System.Threading.LazyThreadSafetyMode> 值（`mode` 参数），请指定 <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> 或 <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>。 指定初始化方法可启用这两种模式的异常缓存。 初始化方法非常简单。 例如，它可能会调用的无参数构造函数 `T` ： `new Lazy<Contents>(() => new Contents(), mode)` 在 c # 中，或 `New Lazy(Of Contents)(Function() New Contents())` 在 Visual Basic 中。 如果使用不指定初始化方法的 <xref:System.Lazy%601?displayProperty=nameWithType> 构造函数，则不会缓存 `T` 无参数构造函数引发的异常。 有关详细信息，请参见 <xref:System.Threading.LazyThreadSafetyMode> 枚举。  
@@ -107,6 +112,7 @@ ms.locfileid: "84904229"
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|用户指定|是|如果用户指定 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 则为 no；否则为 yes。|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>实现迟缓初始化的属性  
+
  若要通过使用迟缓初始化实现公共属性，则将该属性的支持字段定义为 <xref:System.Lazy%601>，并从该属性的 `get` 访问器返回 <xref:System.Lazy%601.Value%2A> 属性。  
   
  [!code-csharp[Lazy#5](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#5)]
@@ -115,7 +121,8 @@ ms.locfileid: "84904229"
  <xref:System.Lazy%601.Value%2A> 属性是只读的；因此，将其公开的属性没有 `set` 访问器。 如果需要由 <xref:System.Lazy%601> 对象支持的读取/写入属性，则 `set` 访问器必须创建一个新的 <xref:System.Lazy%601> 对象并将其分配到后备存储。 `set` 访问器必须创建一个 lambda 表达式（该表达式返回传递给 `set` 访问器的新属性值），并将该 lambda 表达式传递给新的 <xref:System.Lazy%601> 对象的构造函数。 下一次访问 <xref:System.Lazy%601.Value%2A> 属性将导致新 <xref:System.Lazy%601> 的初始化，并且其 <xref:System.Lazy%601.Value%2A> 属性此后会返回已分配给该属性的新值。 进行此复杂安排的原因是保留内置于 <xref:System.Lazy%601> 的多线程保护。 否则，属性访问器必须缓存由 <xref:System.Lazy%601.Value%2A> 属性返回的第一个值并仅修改缓存值，而用户必须编写自己的线程安全代码才能执行此操作。 因为由 <xref:System.Lazy%601> 对象支持的读取/写入属性需要其他初始化，因此此性能可能不可接受。 此外，可能需要额外的协调以避免资源库与 getter 之间的争用条件，具体取决于特定方案。  
   
 ## <a name="thread-local-lazy-initialization"></a>线程本地迟缓初始化  
- 在一些多线程方案中，可能需要为每个线程提供其专用数据。 此类数据称为线程本地数据**。 在 .NET Framework 版本 3.5 及先前版本中，可以将 `ThreadStatic` 属性应用到静态变量，使其成为本地线程。 然而，使用 `ThreadStatic` 属性可能会导致细微的错误。 例如，即使是基本的初始化语句也将导致仅在访问其的首个线程上初始化变量，如以下示例所示。  
+
+ 在一些多线程方案中，可能需要为每个线程提供其专用数据。 此类数据称为线程本地数据。 在 .NET Framework 版本 3.5 及先前版本中，可以将 `ThreadStatic` 属性应用到静态变量，使其成为本地线程。 然而，使用 `ThreadStatic` 属性可能会导致细微的错误。 例如，即使是基本的初始化语句也将导致仅在访问其的首个线程上初始化变量，如以下示例所示。  
   
  [!code-csharp[Lazy#6](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#6)]
  [!code-vb[Lazy#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#6)]  
@@ -139,9 +146,11 @@ ms.locfileid: "84904229"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For 和 ForEach 中的线程本地变量  
- 当使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法来并行循环访问数据源时，可以使用包含针对线程本地数据的内置支持的重载。 在这些方法中，通过使用本地委托来创建、访问和清理数据，可以实现线程本地性。 有关详细信息，请参阅[如何：编写具有线程本地变量的 Parallel.For 循环](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：编写具有分区本地变量的 Parallel.ForEach 循环](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
+
+ 当使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法来并行循环访问数据源时，可以使用包含针对线程本地数据的内置支持的重载。 在这些方法中，通过使用本地委托来创建、访问和清理数据，可以实现线程本地性。 有关详细信息，请参阅[如何：编写具有线程局部变量的 Parallel.For 循环](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：使用分区本地变量编写 Parallel.ForEach 循环](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>将迟缓初始化用于开销较低的方案  
+
  在必须迟缓初始化大量对象的方案中，你可能会认为在 <xref:System.Lazy%601> 中包装每个对象需要过多的内存或过多的计算资源。 或者，你可能对如何公开迟缓初始化有严格要求。 在这种情况下，可以使用 <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> 类的 `static`（Visual Basic 中的 `Shared`）方法来迟缓初始化每个对象，而不会将其包装在 <xref:System.Lazy%601> 的实例中。  
   
  在以下示例中，假定你仅具有所需的迟缓初始化的单个`Order` 对象，而不是将整个 `Orders` 对象包装在一个 <xref:System.Lazy%601> 对象中。  
@@ -151,7 +160,7 @@ ms.locfileid: "84904229"
   
  在此示例中，请注意循环的每次迭代都会调用初始化过程。 在多线程方案中，所有线程都会知道调用初始化过程的第一个线程的值。 后续线程也会调用初始化过程，但不会使用其值。 如果这种潜在的争用条件是不可接受的，请使用 <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> 的重载，获取布尔参数和同步对象。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [托管线程处理基本知识](../../standard/threading/managed-threading-basics.md)
 - [线程与线程处理](../../standard/threading/threads-and-threading.md)

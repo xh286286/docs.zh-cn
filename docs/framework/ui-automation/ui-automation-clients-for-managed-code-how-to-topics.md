@@ -8,20 +8,22 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 83364db3873ed7e263921e9d259e6cdf4db2b8ef
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: aa5235fcfef66c672288e9ae9b7837a77f5f7ca2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163953"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241988"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>托管代码的 UI 自动化客户端帮助主题
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本部分提供有关 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 在客户端应用程序中实现的功能的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [基于属性条件查找 UI 自动化元素](find-a-ui-automation-element-based-on-a-property-condition.md)  
  [使用 TreeWalker 在 UI 自动化元素之间导航](navigate-among-ui-automation-elements-with-treewalker.md)  
  [查找列表项的 UI 自动化元素](find-a-ui-automation-element-for-a-list-item.md)  

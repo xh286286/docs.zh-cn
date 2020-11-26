@@ -8,20 +8,22 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b7c3e425312652fb37ed8e2203d0a0155fea25b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95ac13409156b553962aee5ea4f5ca717375c133
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163920"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241975"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>托管代码的 UI 自动化客户端
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本部分包含概述和帮助主题以帮助你开发 UI 自动化客户端。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [UI 自动化和屏幕缩放](ui-automation-and-screen-scaling.md)  
  [UI 自动化对标准控件的支持](ui-automation-support-for-standard-controls.md)  
  [客户端的 UI 自动化事件](ui-automation-events-for-clients.md)  
@@ -33,5 +35,6 @@ ms.locfileid: "87163920"
  [UI 自动化线程处理问题](ui-automation-threading-issues.md)  
  [操作指南主题](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
+
  <xref:System.Windows.Automation>

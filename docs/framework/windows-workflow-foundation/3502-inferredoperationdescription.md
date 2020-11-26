@@ -2,27 +2,30 @@
 title: 3502 - InferredOperationDescription
 ms.date: 03/30/2017
 ms.assetid: 6aebb614-3c72-4537-ba11-3cc7200ef1f1
-ms.openlocfilehash: 752cd73066c3c15ecbb36c40c417ee84b3fcf184
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05278067e3f86612ee4aafbe7d5eb66dc934cb85
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756086"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242105"
 ---
 # <a name="3502---inferredoperationdescription"></a>3502 - InferredOperationDescription
+
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|Id|3502|  
+|ID|3502|  
 |关键字|WFServices|  
-|级别|信息|  
+|Level|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  
   
 ## <a name="description"></a>描述  
+
  指示已从 WorkflowService 中推断出 OperationDescription。  
   
 ## <a name="message"></a>消息  
+
  已从 WorkflowService 中推断出协定“%2”中含有 Name='%1' 的 OperationDescription。 IsOneWay=%3。  
   
 ## <a name="details"></a>详细信息  

@@ -2,17 +2,19 @@
 title: 承载工作流服务概述
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
-ms.openlocfilehash: 10ea35fc1988e1b3e6ceb44aca098e63bfc7d7e4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 150cb98ab3cef8231489219a16709344cbd19bd5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597288"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242963"
 ---
 # <a name="hosting-workflow-services-overview"></a>承载工作流服务概述
+
 工作流服务必须进行承载才能执行。 <xref:System.ServiceModel.WorkflowServiceHost> 是现成的工作流主机，可支持多个实例、配置和 WCF 消息传递（虽然工作流无需使用消息传递即可进行承载）。  它还通过一组服务行为集成了持久性、跟踪和实例控件。  正如 WCF 的 <xref:System.ServiceModel.ServiceHost> 一样，<xref:System.ServiceModel.WorkflowServiceHost> 可以在任何托管 .NET 应用程序中自承载，或是在 IIS/WAS 中进行 Web 承载（作为 .xamlx 文件）。  本节中的主题描述如何承载工作流服务。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [承载工作流服务](hosting-workflow-services.md)  
  描述承载工作流服务。  
   
@@ -32,6 +34,7 @@ ms.locfileid: "84597288"
  描述如何控制持久性、跟踪、空闲和未经处理的异常行为。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
  <xref:System.ServiceModel.Activities.WorkflowService>  
@@ -43,4 +46,5 @@ ms.locfileid: "84597288"
  <xref:System.ServiceModel.Activation.WorkflowServiceHostFactory>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [工作流服务](workflow-services.md)

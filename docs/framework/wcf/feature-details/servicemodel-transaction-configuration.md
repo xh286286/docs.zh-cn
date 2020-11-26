@@ -4,22 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 1d04a7bb756cccb33b436c1f57decc0249764828
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 27deaf38a8809b8a7fca560cc6783bd24dc43686
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600330"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242885"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 事务配置
-Windows Communication Foundation （WCF）提供了三个属性，用于为服务配置事务： `transactionFlow` 、 `transactionProtocol` 和 `transactionTimeout` 。  
+
+Windows Communication Foundation (WCF) 提供三个属性，用于为服务配置事务： `transactionFlow` 、 `transactionProtocol` 和 `transactionTimeout` 。  
   
 ## <a name="configuring-transactionflow"></a>配置 transactionFlow  
- WCF 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以将绑定配置为使用特定的事务流协议为特定终结点接受传入事务。 此外，你可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成你自己的自定义绑定。 有关设置配置元素的详细信息，请参阅 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) 和[WCF 配置架构](../../configure-apps/file-schema/wcf/index.md)。  
+
+ WCF 提供的大多数预定义绑定都包含 `transactionFlow` 和 `transactionProtocol` 属性，以便您可以将绑定配置为使用特定的事务流协议为特定终结点接受传入事务。 此外，你可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成你自己的自定义绑定。 有关设置配置元素的详细信息，请参阅 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) 和 [WCF 配置架构](../../configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 属性指定是否为使用绑定的服务终结点启用事务流。  
   
 ## <a name="configuring-transactionprotocol"></a>配置 transactionProtocol  
+
  `transactionProtocol` 属性指定要应用于使用绑定的服务终结点的事务协议。  
   
  下面是一个配置节示例，该配置节将指定的绑定配置为支持事务流并且使用 WS-AtomicTransaction 协议。  
@@ -42,6 +45,7 @@ Windows Communication Foundation （WCF）提供了三个属性，用于为服�
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>配置 transactionTimeout  
+
  您可以 `transactionTimeout` 在配置文件的元素中配置您的 WCF 服务的属性 `behavior` 。 下面的代码演示如何执行此操作。  
   
 ```xml  
