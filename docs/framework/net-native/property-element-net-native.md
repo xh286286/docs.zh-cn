@@ -2,14 +2,15 @@
 title: <Property>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250848"
 ---
 # <a name="property-element-net-native"></a>\<Property>元素 (.NET Native)
+
 将运行时反射策略应用到一个属性。  
   
 ## <a name="syntax"></a>语法  
@@ -22,11 +23,12 @@ ms.locfileid: "73128214"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
+
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
   
-|属性|属性类型|说明|  
+|属性|属性类型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|常规|必需的特性。 指定属性名称。|  
 |`Browse`|反射|可选特性。 制对该属性信息的查询或列举该属性，但并不在运行时间启用任何动态访问。|  
@@ -35,30 +37,33 @@ ms.locfileid: "73128214"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|method_name**|属性名称。 属性的类型由父级 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素定义。|  
+|method_name|属性名称。 属性的类型由父级 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素定义。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |*策略_设置*|该设置将应用到这个属性的策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
+
  无。  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
+
  如果一个属性的策略没有得到显式定义，它将继承其父元素的运行时间策略。  
   
 ## <a name="example"></a>示例  
+
  以下实例使用反射实例化了一个 `Book` 对象并显示了其属性值。 该项目的原始 default.rd.xml 文件显示如下：  
   
 ```xml  
@@ -81,7 +86,7 @@ ms.locfileid: "73128214"
   
 - 通过 `Dynamic` `Book` 在其元素中定义类型的策略 [\<Type>](type-element-net-native.md) 。  
   
-- 通过 [\<Property>](property-element-net-native.md) 为要调用其 getter 的每个属性添加嵌套元素，如下面的 default.aspx .xml 文件所示。  
+- 通过为要 [\<Property>](property-element-net-native.md) 调用其 getter 的每个属性添加一个嵌套元素，如下 default.rd.xml 文件所示。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

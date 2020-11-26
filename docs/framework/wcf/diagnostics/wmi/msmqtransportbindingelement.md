@@ -2,14 +2,15 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: 706cec5c414197ebabda7939728b95be32582e0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6590c5188e4e1758987a75fbd007099703ea6bc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963301"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250419"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
+
 MsmqTransportBindingElement  
   
 ## <a name="syntax"></a>语法  
@@ -24,12 +25,15 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 ```  
   
 ## <a name="methods"></a>方法  
+
  MsmqTransportBindingElement 类不定义任何方法。  
   
 ## <a name="properties"></a>属性  
+
  MsmqTransportBindingElement 类具有以下属性：  
   
 ### <a name="maxpoolsize"></a>MaxPoolSize  
+
  数据类型：sint32  
   
  访问类型：只读  
@@ -37,13 +41,15 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
  包含内部 MSMQ 消息对象的池的最大大小。  
   
 ### <a name="queuetransferprotocol"></a>QueueTransferProtocol  
- 数据类型：String  
+
+ 数据类型：字符串  
   
  访问类型：只读  
   
  一个枚举值，指示此绑定使用的排队通信通道传输。  
   
 ### <a name="useactivedirectory"></a>UseActiveDirectory  
+
  数据类型：Boolean  
   
  访问类型：只读  
@@ -56,6 +62,6 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

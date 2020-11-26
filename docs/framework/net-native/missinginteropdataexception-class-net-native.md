@@ -5,24 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-ms.openlocfilehash: faf14245cd9dd7aa4bf8e89d5a05901279956509
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bbbb484e5cb8060568b321a2a41474d60c9f87f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128272"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250913"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>缺少互操作数据异常类 (.NET Native)
+
 **适用于 Windows 10 的 .NET for Windows apps，仅 .NET Native**  
   
  当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。  
   
- 命名空间：**** System.Runtime.CompilerServices  
+ 命名空间：System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException`类仅供 .NET Native 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参见“备注”部分。  
+> `MissingInteropDataException`类仅供 .NET Native 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
   
 ## <a name="syntax"></a>语法  
+
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
  [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
   
@@ -36,7 +38,7 @@ ms.locfileid: "73128272"
   
 ## <a name="properties"></a>属性  
   
-|属性|说明|  
+|属性|描述|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|获取键/值对的集合，这些键/值对提供有关该异常的其他用户定义信息。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
 |`public string HelpLink { get; set; }`|获取或设置指向与此异常关联的帮助文件链接。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
@@ -63,14 +65,15 @@ ms.locfileid: "73128272"
   
 ## <a name="events"></a>事件  
   
-|事件|说明|  
+|事件|描述|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|当异常被序列化用来创建包含有关该异常的徐列出数据的异常状态对象时会出现该问题。 （从 <xref:System.Exception?displayProperty=nameWithType> 继承。）|  
   
 ## <a name="usage-details"></a>使用情况详细信息  
+
  由于类型信息无效而导致无法成功调用 COM 或 Windows 运行时组件时会引发 `MissingInteropDataException` 异常。  
   
- 在运行时可用于应用程序的元数据由运行时指令（XML 配置）文件（web.config）定义。 \* 为防止应用发生此异常，你必须修改该文件，以定义运行时必须存在的元数据。 通常会通过将 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 属性添加到运行时指令文件中的相应程序元素来解决该错误。 有关本文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)。  
+ 在运行时可用于应用的元数据由运行时指令定义 (XML 配置) 文件， \*.rd.xml。 为防止应用发生此异常，你必须修改该文件，以定义运行时必须存在的元数据。 通常会通过将 `MarshalObject`、`MarshalDelegate` 或 `MarshalStructure` 属性添加到运行时指令文件中的相应程序元素来解决该错误。 有关本文件的格式信息，请参阅[运行时指令 (rd.xml) 配置文件参考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 > [!IMPORTANT]
 > 由于此异常表示应用程序需要的元数据在运行时间不可用，因此不应在 `try`/`catch` 块中处理此异常。 相反，你应该诊断引起此异常的原因并通过将适当的条目添加到运行时指令文件消除异常。  

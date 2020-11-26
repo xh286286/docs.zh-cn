@@ -3,25 +3,27 @@ title: 如何：检查或修改客户端上的消息
 description: 了解如何通过实现相应的接口来检查或修改 WCF 客户端或服务上的传入或传出消息。
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6f6a3d20d7f3a9fb79de5cd3e29096e270d0f188
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f8b75001754739b48d10ee577ae26a175e72860
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247502"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249041"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>如何：检查或修改客户端上的消息
-通过实现 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 并将其插入到客户端运行时中，可以通过 WCF 客户端检查或修改传入或传出消息。 有关详细信息，请参阅[扩展客户端](extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例，请参阅[消息检查](../samples/message-inspectors.md)器示例。  
+
+通过实现 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 并将其插入到客户端运行时中，可以通过 WCF 客户端检查或修改传入或传出消息。 有关详细信息，请参阅 [扩展客户端](extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例，请参阅 [消息检查](../samples/message-inspectors.md) 器示例。  
   
 ### <a name="to-inspect-or-modify-messages"></a>检查或修改消息  
   
 1. 实现 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 接口。  
   
-2. 实现 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，具体取决于您希望在其中插入客户端消息检查器的作用域。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>允许您在终结点级别更改行为。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>允许您更改协定级别的行为。  
+2. 实现 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，具体取决于您希望在其中插入客户端消息检查器的作用域。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 允许您在终结点级别更改行为。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 允许您更改协定级别的行为。  
   
-3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，插入行为。 有关详细信息，请参阅[配置和扩展运行时的行为](configuring-and-extending-the-runtime-with-behaviors.md)。  
+3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，插入行为。 有关详细信息，请参阅 [配置和扩展运行时的行为](configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例按顺序演示以下各项：  
   
 - 客户端检查器实现。  
@@ -127,7 +129,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>

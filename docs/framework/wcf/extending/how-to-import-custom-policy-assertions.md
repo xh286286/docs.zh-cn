@@ -1,21 +1,22 @@
 ---
-title: 如何：导入自定义策略断言
+title: 如何：导人自定义策略断言
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ed8aae30875e3b17f65be5857c7d93af98db9b3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb5e3ba5faca1b32eef63ac174bcd7731ee50771
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185555"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249145"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>如何：导入自定义策略断言
+# <a name="how-to-import-custom-policy-assertions"></a>如何：导人自定义策略断言
+
 策略断言说明服务终结点的功能和要求。  客户端应用程序可以在服务元数据中使用策略断言来配置客户端绑定或自定义服务终结点的服务协定。  
   
- 自定义策略断言可通过实现 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 接口并将该对象传递给元数据系统或通过在应用程序配置文件中注册实现类型来导入。  接口的<xref:System.ServiceModel.Description.IPolicyImportExtension>实现必须提供无参数构造函数。  
+ 自定义策略断言可通过实现 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 接口并将该对象传递给元数据系统或通过在应用程序配置文件中注册实现类型来导入。  接口的实现 <xref:System.ServiceModel.Description.IPolicyImportExtension> 必须提供无参数的构造函数。  
   
 ### <a name="to-import-custom-policy-assertions"></a>导入自定义策略断言  
   
@@ -25,7 +26,7 @@ ms.locfileid: "79185555"
   
 3. 使用配置文件。 请参见下面的过程。  
   
-4. 使用与[ServiceModel 元数据实用程序工具 （Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)一起使用的配置文件。 请参见下面的过程。  
+4. 将配置文件与配置的 [元数据实用工具工具一起使用 ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md)。 请参见下面的过程。  
   
 5. 以编程方式插入策略导入程序。 请参见下面的过程。  
   
@@ -40,11 +41,11 @@ ms.locfileid: "79185555"
   
 3. 对支持策略断言指定的功能或需求的绑定或协定执行自定义。 断言通常指示绑定需要特定配置或特定绑定元素。 可以通过访问 <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> 属性来进行这些修改。 其他断言需要您修改协定。  可以使用 <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> 属性来访问并修改该协定。  请注意，对于同一个绑定和协定，可能会多次调用策略导入程序，但导入的是不同的替代策略（如果一个替代策略导入失败）。 你的代码应该能够处理这一行为。  
   
-4. 从断言集合中删除自定义策略断言。 如果不删除断言 Windows 通信基础 （WCF） 假定策略导入不成功，并且不导入关联的绑定。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法定位自定义策略断言并在一个步骤中将该断言从集合中删除，则不必执行此步骤。  
+4. 从断言集合中删除自定义策略断言。 如果不删除断言 Windows Communication Foundation (WCF) 会假定策略导入不成功且不导入关联的绑定。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法定位自定义策略断言并在一个步骤中将该断言从集合中删除，则不必执行此步骤。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>使用配置文件将自定义策略导入程序插入到元数据系统  
   
-1. 将导入器类型添加到客户端`<extensions>`配置文件中[\<的策略导入器>](../../configure-apps/file-schema/wcf/policyimporters.md)元素中的元素。  
+1. 将导入程序类型添加到 `<extensions>` [\<policyImporters>](../../configure-apps/file-schema/wcf/policyimporters.md) 客户端配置文件中元素内的元素中。  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
   
@@ -55,9 +56,9 @@ ms.locfileid: "79185555"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>使用 Svcutil.exe 将自定义策略导入程序插入到元数据系统  
   
-1. 将导入器类型添加到`<extensions>`[\<策略导入器>](../../configure-apps/file-schema/wcf/policyimporters.md) Svcutil.exe.config 配置文件中的元素。 也可以通过使用 `/svcutilConfig` 选项指示 Svcutil.exe 加载在其他配置文件中注册的策略导入程序类型。  
+1. 将导入程序类型添加到 `<extensions>` [\<policyImporters>](../../configure-apps/file-schema/wcf/policyimporters.md) Svcutil.exe.config 配置文件中元素内的元素中。 也可以通过使用 `/svcutilConfig` 选项指示 Svcutil.exe 加载在其他配置文件中注册的策略导入程序类型。  
   
-2. 使用[ServiceModel 元数据实用程序工具 （Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)导入元数据，并自动调用导入程序。  
+2. 使用工作 [元数据实用工具工具 ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md) 导入元数据，并自动调用导入程序。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>以编程方式将自定义策略导入程序插入到元数据系统  
   

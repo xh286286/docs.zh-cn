@@ -2,17 +2,19 @@
 title: 利用反射的 API
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-ms.openlocfilehash: 1d8daceb6b744b984f86b011ad7952d0da583a79
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2c361962f4570200d63037a68ef39b0c982bd5f7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251134"
 ---
 # <a name="apis-that-rely-on-reflection"></a>利用反射的 API
+
 在某些情况下，在代码中使用反射并不明显，因此 .NET Native 工具链不会保留运行时所需的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType 方法  
+
  你可以通过使用以下所示代码调用 `AppClass<T>` 方法来动态实例化一个泛型类型 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>：  
   
  [!code-csharp[ProjectN#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/type_makegenerictype1.cs#1)]  
@@ -41,6 +43,7 @@ ms.locfileid: "79181091"
  `AppClass<T>` 上的每个不同的实例化都要求一个不同的指令（如果该实例化是使用 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 方法创建的并且不静态使用）。  
   
 ## <a name="methodinfomakegenericmethod-method"></a>MethodInfo.MakeGenericMethod 方法  
+
  给定一个含有泛型方法 `Class1` 的类 `GetMethod<T>(T t)`，`GetMethod` 可以使用类似以下所示的代码通过反射得到调用：  
   
  [!code-csharp[ProjectN#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/makegenericmethod1.cs#2)]  
@@ -68,6 +71,7 @@ ms.locfileid: "79181091"
  遭到动态调用的方法的每个不同实例化都需要一个 `MethodInstantiation` 指令，并且 `Arguments` 元素会得到更新以反射每个不同的实例化参数。  
   
 ## <a name="arraycreateinstance-and-typemaketypearray-methods"></a>Array.CreateInstance 和 Type.MakeTypeArray 方法  
+
  以下实例在 <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 类型上调用了 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 和 `Class1` 方法。  
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  

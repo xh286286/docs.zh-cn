@@ -2,14 +2,15 @@
 title: NamedPipeTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c201309c-c528-4b92-a53c-4d48151c5749
-ms.openlocfilehash: 080c5e55fb2f92e9c9739b12fef371b14e8babae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e403ec02b09d0dbc165c40c2bd28d54d0219325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963145"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250406"
 ---
 # <a name="namedpipetransportbindingelement"></a>NamedPipeTransportBindingElement
+
 NamedPipeTransportBindingElement  
   
 ## <a name="syntax"></a>语法  
@@ -22,12 +23,15 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 ```  
   
 ## <a name="methods"></a>方法  
+
  NamedPipeTransportBindingElement 类不定义任何方法。  
   
 ## <a name="properties"></a>属性  
+
  NamedPipeTransportBindingElement 类具有以下属性：  
   
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
+
  数据类型：NamedPipeConnectionPoolSettings  
   
  访问类型：只读  
@@ -40,6 +44,6 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>

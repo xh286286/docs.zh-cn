@@ -2,14 +2,15 @@
 title: 基于消息队列的消息安全性
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1733cea17c82f85751b810f4a6033caefd828e29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558636"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248911"
 ---
 # <a name="message-security-over-message-queuing"></a>基于消息队列的消息安全性
+
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS-Security 和 X.509v3 证书身份验证，并要求使用服务器的 X.509v3 证书对 MSMQ 进行服务器身份验证。 有时候消息安全性更重要，以确保 MSMQ 存储区中的消息始终是加密的，并且应用程序能够对消息执行其自己的身份验证。
 
  此示例基于已进行 [事务处理的 MSMQ 绑定](transacted-msmq-binding.md) 示例。 消息已经过加密和签名。
@@ -83,16 +84,19 @@ ms.locfileid: "90558636"
     > 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果你已运行 Windows Communication Foundation 跨计算机使用证书 (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
 
 ## <a name="requirements"></a>要求
+
  此示例要求安装并运行 MSMQ。
 
 ## <a name="demonstrates"></a>演示
+
  客户端使用服务的公钥对消息进行加密，并使用其自己的证书对消息进行签名。 从队列中读取消息的服务使用其受信任人的存储区中的证书对客户端证书进行身份验证。 然后它对消息进行解密并将消息调度给服务操作。
 
  由于 Windows Communication Foundation (WCF) 消息作为 MSMQ 消息正文中的负载进行传递，因此正文在 MSMQ 存储区中保持加密。 这样可以保护消息，以防意外泄漏。 请注意，MSMQ 本身并不知道它携带的消息是否经过加密。
 
  此示例演示如何在消息级别对 MSMQ 进行相互身份验证。 证书是在带外交换的。 对于排队的应用程序始终是这样，因为服务和客户端不是必须同时处于开启状态并正在运行。
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
+
  示例客户端和服务代码与 [事务处理的 MSMQ 绑定](transacted-msmq-binding.md) 示例相同，但有一个区别。 操作协定是通过保护级别批注的，这说明消息必须是经过签名和加密的。
 
 ```csharp

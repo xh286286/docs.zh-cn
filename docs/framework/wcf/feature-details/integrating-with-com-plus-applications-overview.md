@@ -5,15 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 57a1537e1bde1efcd3586d032efee063561efcca
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586489"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248963"
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
-Windows Communication Foundation （WCF）提供了一个用于创建分布式应用程序的丰富环境。 如果已在使用 COM + 中承载的基于组件的应用程序逻辑，则可以使用 WCF 来扩展现有的逻辑，而不必重写它。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
+
+Windows Communication Foundation (WCF) 提供了一个用于创建分布式应用程序的丰富环境。 如果已在使用 COM + 中承载的基于组件的应用程序逻辑，则可以使用 WCF 来扩展现有的逻辑，而不必重写它。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
   
  在 COM+ 组件上的接口作为 Web 服务公开时，这些服务的规范和协定取决于在应用程序初始化时执行的自动映射。 下面的列表演示此映射的概念模型：  
   
@@ -40,11 +41,12 @@ Windows Communication Foundation （WCF）提供了一个用于创建分布式�
   
 2. 选择相应的宿主模式。  
   
-3. 使用 COM+ 服务模块配置工具 (ComSvcConfig.exe) 为该接口添加 Web 服务。 有关如何使用 Comsvcconfig.exe 的详细信息，请参阅[如何：使用 COM + 服务模型配置工具](how-to-use-the-com-service-model-configuration-tool.md)。  
+3. 使用 COM+ 服务模块配置工具 (ComSvcConfig.exe) 为该接口添加 Web 服务。 有关如何使用 ComSvcConfig.exe 的详细信息，请参阅 [如何：使用 COM + 服务模型配置工具](how-to-use-the-com-service-model-configuration-tool.md)。  
   
-4. 在应用程序配置文件中配置任何其他服务设置。 有关如何配置组件的详细信息，请参阅[如何：配置 COM + 服务设置](how-to-configure-com-service-settings.md)。  
+4. 在应用程序配置文件中配置任何其他服务设置。 有关如何配置组件的详细信息，请参阅 [如何：配置 COM + 服务设置](how-to-configure-com-service-settings.md)。  
   
 ## <a name="supported-interfaces"></a>支持的接口  
+
  对可作为 Web 服务公开的接口的类型有一些限制。 不支持以下类型的接口：  
   
 - 将对象引用作为参数传递的接口 –“受限对象引用支持”一节中介绍了以下受限对象引用方法。  
@@ -62,9 +64,10 @@ Windows Communication Foundation （WCF）提供了一个用于创建分布式�
 - 尚未添加到全局程序集缓存中的企业服务组件的接口。  
   
 ### <a name="limited-object-reference-support"></a>受限对象引用支持  
+
  由于许多已部署的 COM+ 组件需要根据引用参数来使用对象（如返回 ADO Recordset 对象），因此 COM+ 集成为对象引用参数提供了有限支持。 该支持仅限于实现 `IPersistStream` COM 接口的对象。 其中包括 ADO Recordset 对象，并且可针对应用程序特定的 COM 对象实现。  
   
- 若要启用此支持，Comsvcconfig.exe 工具提供了**allowreferences**开关，用于禁用常规方法签名参数并检查该工具是否运行以确保不使用对象引用参数。 此外，你作为参数传递的对象类型必须在 <> 配置元素内进行命名和标识， `persistableTypes` 该元素是 <> 元素的子元素 `comContract` 。  
+ 为了实现此支持，ComSvcConfig.exe 工具提供了 **allowreferences** 开关，该开关可禁用常规方法签名参数并检查该工具是否运行以确保不使用对象引用参数。 此外，你作为参数传递的对象类型必须在 <> 配置元素内进行命名和标识， `persistableTypes` 该元素是 <> 元素的子元素 `comContract` 。  
   
  使用此功能时，COM+ 集成服务使用 `IPersistStream` 接口来序列化或反序列化对象实例。 如果对象实例不支持 `IPersistStream`，则会引发异常。  
   
@@ -74,6 +77,7 @@ Windows Communication Foundation （WCF）提供了一个用于创建分布式�
 > 由于序列化方法的自定义和平台特定性质，这最适用于 WCF 客户端和 WCF 服务之间的使用。  
   
 ## <a name="selecting-the-hosting-mode"></a>选择宿主模式  
+
  COM+ 可以通过以下宿主模式之一来公开 Web 服务：  
   
 - COM+ 承载  
@@ -89,6 +93,7 @@ Windows Communication Foundation （WCF）提供了一个用于创建分布式�
      Web 服务和 COM+ 应用程序逻辑承载于 Web 服务器工作进程中。 这样可以自动激活 Web 承载模式，而不会导致 Web 服务请求产生进程跃点。 其缺点在于无法通过 DCOM 访问服务器应用程序。  
   
 ### <a name="security-considerations"></a>安全注意事项  
+
  与其他 WCF 服务类似，公开服务的安全设置通过 WCF 通道的配置设置进行管理。 不会强制执行传统的 DCOM 安全设置，如 DCOM 计算机范围内的权限设置。 若要强制执行 COM+ 应用程序角色，必须为组件启用“组件级别访问检查”授权。  
   
  使用非安全绑定可能会致使通信被篡改或信息泄漏。 为防止发生此类情况，建议您使用安全绑定。  

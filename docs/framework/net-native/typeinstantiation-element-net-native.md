@@ -2,14 +2,15 @@
 title: <TypeInstantiation>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128679"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250744"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation>元素 (.NET Native)
+
 将运行时反射策略应用到一个构造泛型类型。  
   
 ## <a name="syntax"></a>语法  
@@ -30,11 +31,12 @@ ms.locfileid: "73128679"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
+
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
   
-|属性|属性类型|说明|  
+|属性|属性类型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|常规|必需的特性。 指定类型名称。|  
 |`Arguments`|常规|必需的特性。 指定泛型类型参数。 如果存在多个自变量，它们之间用逗号分割。|  
@@ -51,25 +53,25 @@ ms.locfileid: "73128679"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|*type_name*|类型名称。 如果此 `<TypeInstantiation>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素、元素或另一个元素的子元素，则 [\<Type>](type-element-net-native.md) `<TypeInstantiation>` *type_name*可以指定该类型的名称，而无需命名空间。 否则，type_name** 必须包含完全限定的类型名称。 该类型名称没有经过修饰。 例如，对于一个 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，`<TypeInstantiation>` 元素可能显示如下：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|type_name|类型名称。 如果此 `<TypeInstantiation>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素、元素或另一个元素的子元素，则 [\<Type>](type-element-net-native.md) `<TypeInstantiation>` *type_name* 可以指定该类型的名称，而无需命名空间。 否则，type_name 必须包含完全限定的类型名称。 该类型名称没有经过修饰。 例如，对于一个 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，`<TypeInstantiation>` 元素可能显示如下：<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>自变量特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|type_argument**|指定泛型类型参数。 如果存在多个自变量，它们之间用逗号分割。 每个自变量必须包含一个完全限定的类型名称。|  
+|type_argument|指定泛型类型参数。 如果存在多个自变量，它们之间用逗号分割。 每个自变量必须包含一个完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |*策略_设置*|该设置将应用到这个构造泛型类型的策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Event>](event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|  
 |[\<Field>](field-element-net-native.md)|将反射策略应用到属于这种类型的一个字段。|  
@@ -82,7 +84,7 @@ ms.locfileid: "73128679"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|  
 |[\<Assembly>](assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|  
@@ -91,17 +93,19 @@ ms.locfileid: "73128679"
 |[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
 |`<TypeInstantiation>`|将反射策略应用到一种构造泛型类型及其所有成员。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
+
  反射、序列化和互操作特性都是可选项。 然而，至少一个特性必须存在。  
   
  如果 `<TypeInstantiation>` 元素是 [\<Assembly>](assembly-element-net-native.md) 、 [\<Namespace>](namespace-element-net-native.md) 、或元素的子元素 [\<Type>](type-element-net-native.md) ，则它会重写由父元素定义的策略设置。 如果 [\<Type>](type-element-net-native.md) 元素定义了一个相应的泛型类型定义，则 `<TypeInstantiation>` 元素只会重写指定的构造泛型类型的实例化的运行时反射策略。  
   
 ## <a name="example"></a>示例  
+
  以下实例使用反射从一个构造的 <xref:System.Collections.Generic.Dictionary%602> 对象取回了泛型类型定义。 它还使用反射显示了代表构造泛型类型和构造类型定义的有关 <xref:System.Type> 对象的信息。 `b`示例中的变量是一个 <xref:Windows.UI.Xaml.Controls.TextBlock> 控件。  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- 使用 .NET Native 工具链进行编译之后，该示例在调用方法的行上引发[MissingMetadataException](missingmetadataexception-class-net-native.md)异常 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> 。 你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：  
+ 使用 .NET Native 工具链进行编译之后，该示例在调用方法的行上引发 [MissingMetadataException](missingmetadataexception-class-net-native.md) 异常 <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> 。 你可通过将以下 `<TypeInstantiation>` 元素添加到运行时指令文件来消除异常并提供必需的元数据：  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
