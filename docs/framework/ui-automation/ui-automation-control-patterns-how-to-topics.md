@@ -8,22 +8,24 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: ff8602382c8064cc5b7f6df44bda3413a7e67de1
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 929f44ca2d4daa75d733059b4072690a6b8f8d91
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163861"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241949"
 ---
-# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="a9a64-103">UI 自动化控件模式帮助主题</span><span class="sxs-lookup"><span data-stu-id="a9a64-103">UI Automation Control Patterns How-to Topics</span></span>
+# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="2a672-103">UI 自动化控件模式帮助主题</span><span class="sxs-lookup"><span data-stu-id="2a672-103">UI Automation Control Patterns How-to Topics</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="a9a64-104">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="a9a64-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a9a64-105">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="a9a64-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="2a672-104">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="2a672-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="2a672-105">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="2a672-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="a9a64-106">本部分包含有关实现控件模式的详细信息。</span><span class="sxs-lookup"><span data-stu-id="a9a64-106">This section contains detailed information about implementing control patterns.</span></span>  
+ <span data-ttu-id="2a672-106">本部分包含有关实现控件模式的详细信息。</span><span class="sxs-lookup"><span data-stu-id="2a672-106">This section contains detailed information about implementing control patterns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a9a64-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="a9a64-107">In This Section</span></span>  
- [<span data-ttu-id="a9a64-108">使用 UI 自动化公开表的内容</span><span class="sxs-lookup"><span data-stu-id="a9a64-108">Expose the Content of a Table Using UI Automation</span></span>](expose-the-content-of-a-table-using-ui-automation.md)  
- [<span data-ttu-id="a9a64-109">获取受支持的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="a9a64-109">Get Supported UI Automation Control Patterns</span></span>](get-supported-ui-automation-control-patterns.md)  
- [<span data-ttu-id="a9a64-110">使用 UI 自动化获取复选框的切换状态</span><span class="sxs-lookup"><span data-stu-id="a9a64-110">Get the Toggle State of a Check Box Using UI Automation</span></span>](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [<span data-ttu-id="a9a64-111">使用 UI 自动化调用控件</span><span class="sxs-lookup"><span data-stu-id="a9a64-111">Invoke a Control Using UI Automation</span></span>](invoke-a-control-using-ui-automation.md)  
- [<span data-ttu-id="a9a64-112">移动 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="a9a64-112">Move a UI Automation Element</span></span>](move-a-ui-automation-element.md)
+## <a name="in-this-section"></a><span data-ttu-id="2a672-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="2a672-107">In This Section</span></span>  
+
+ [<span data-ttu-id="2a672-108">使用 UI 自动化公开表的内容</span><span class="sxs-lookup"><span data-stu-id="2a672-108">Expose the Content of a Table Using UI Automation</span></span>](expose-the-content-of-a-table-using-ui-automation.md)  
+ [<span data-ttu-id="2a672-109">获取受支持的 UI 自动化控件模式</span><span class="sxs-lookup"><span data-stu-id="2a672-109">Get Supported UI Automation Control Patterns</span></span>](get-supported-ui-automation-control-patterns.md)  
+ [<span data-ttu-id="2a672-110">使用 UI 自动化获取复选框的切换状态</span><span class="sxs-lookup"><span data-stu-id="2a672-110">Get the Toggle State of a Check Box Using UI Automation</span></span>](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="2a672-111">使用 UI 自动化调用控件</span><span class="sxs-lookup"><span data-stu-id="2a672-111">Invoke a Control Using UI Automation</span></span>](invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="2a672-112">移动 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="2a672-112">Move a UI Automation Element</span></span>](move-a-ui-automation-element.md)

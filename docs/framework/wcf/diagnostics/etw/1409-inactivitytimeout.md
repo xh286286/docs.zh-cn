@@ -2,27 +2,30 @@
 title: 1409 - InactivityTimeout
 ms.date: 03/30/2017
 ms.assetid: 38fb99b7-b00d-4b55-b9d0-48bd17c441aa
-ms.openlocfilehash: f5239332b7093a38b59fcc37b25b325b2c5db373
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc00b751c0c20acf33b02733ac9153aa06d7b36c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241351"
 ---
-# <a name="1409---inactivitytimeout"></a><span data-ttu-id="a120e-102">1409 - InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="a120e-102">1409 - InactivityTimeout</span></span>
-## <a name="properties"></a><span data-ttu-id="a120e-103">属性</span><span class="sxs-lookup"><span data-stu-id="a120e-103">Properties</span></span>  
+# <a name="1409---inactivitytimeout"></a><span data-ttu-id="dfbae-102">1409 - InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="dfbae-102">1409 - InactivityTimeout</span></span>
+
+## <a name="properties"></a><span data-ttu-id="dfbae-103">属性</span><span class="sxs-lookup"><span data-stu-id="dfbae-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a120e-104">Id</span><span class="sxs-lookup"><span data-stu-id="a120e-104">ID</span></span>|<span data-ttu-id="a120e-105">1409</span><span class="sxs-lookup"><span data-stu-id="a120e-105">1409</span></span>|  
-|<span data-ttu-id="a120e-106">关键字</span><span class="sxs-lookup"><span data-stu-id="a120e-106">Keywords</span></span>|<span data-ttu-id="a120e-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a120e-107">ServiceModel</span></span>|  
-|<span data-ttu-id="a120e-108">级别</span><span class="sxs-lookup"><span data-stu-id="a120e-108">Level</span></span>|<span data-ttu-id="a120e-109">信息</span><span class="sxs-lookup"><span data-stu-id="a120e-109">Information</span></span>|  
-|<span data-ttu-id="a120e-110">通道</span><span class="sxs-lookup"><span data-stu-id="a120e-110">Channel</span></span>|<span data-ttu-id="a120e-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="a120e-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="dfbae-104">ID</span><span class="sxs-lookup"><span data-stu-id="dfbae-104">ID</span></span>|<span data-ttu-id="dfbae-105">1409</span><span class="sxs-lookup"><span data-stu-id="dfbae-105">1409</span></span>|  
+|<span data-ttu-id="dfbae-106">关键字</span><span class="sxs-lookup"><span data-stu-id="dfbae-106">Keywords</span></span>|<span data-ttu-id="dfbae-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="dfbae-107">ServiceModel</span></span>|  
+|<span data-ttu-id="dfbae-108">Level</span><span class="sxs-lookup"><span data-stu-id="dfbae-108">Level</span></span>|<span data-ttu-id="dfbae-109">信息</span><span class="sxs-lookup"><span data-stu-id="dfbae-109">Information</span></span>|  
+|<span data-ttu-id="dfbae-110">通道</span><span class="sxs-lookup"><span data-stu-id="dfbae-110">Channel</span></span>|<span data-ttu-id="dfbae-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="dfbae-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a120e-112">描述</span><span class="sxs-lookup"><span data-stu-id="a120e-112">Description</span></span>  
- <span data-ttu-id="a120e-113">出现不活动超时时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="a120e-113">This event is emitted on inactivity timeout.</span></span>  
+## <a name="description"></a><span data-ttu-id="dfbae-112">描述</span><span class="sxs-lookup"><span data-stu-id="dfbae-112">Description</span></span>  
+
+ <span data-ttu-id="dfbae-113">出现不活动超时时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="dfbae-113">This event is emitted on inactivity timeout.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a120e-114">消息</span><span class="sxs-lookup"><span data-stu-id="a120e-114">Message</span></span>  
- <span data-ttu-id="a120e-115">1%</span><span class="sxs-lookup"><span data-stu-id="a120e-115">1%</span></span>  
+## <a name="message"></a><span data-ttu-id="dfbae-114">消息</span><span class="sxs-lookup"><span data-stu-id="dfbae-114">Message</span></span>  
+
+ <span data-ttu-id="dfbae-115">1%</span><span class="sxs-lookup"><span data-stu-id="dfbae-115">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a120e-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="a120e-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="dfbae-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="dfbae-116">Details</span></span>
