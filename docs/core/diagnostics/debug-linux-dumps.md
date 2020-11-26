@@ -2,12 +2,12 @@
 title: 调试 Linux 转储
 description: 在本文中，你将了解如何从 Linux 环境收集和分析转储。
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598288"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099141"
 ---
 # <a name="debug-linux-dumps"></a>调试 Linux 转储
 
@@ -23,7 +23,7 @@ ms.locfileid: "89598288"
 
 ### <a name="core-dumps-with-createdump"></a>使用 `createdump` 的核心转储
 
-作为创建仅托管转储的 `dotnet-dump` 的替代方法，[`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) 是推荐的工具，用于在包含本机和托管信息的 Linux 上创建核心转储。 其他工具（例如 gdb 或 gcore）也可以用于创建核心转储，但可能会缺失托管调试所需的状态，从而导致在分析过程中出现“未知”类型或函数名称。
+作为创建仅托管转储的 `dotnet-dump` 的替代方法，建议使用 [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) 这一工具在包含本机和托管信息的 Linux 上创建核心转储。 其他工具（例如 gdb 或 gcore）也可以用于创建核心转储，但可能会缺失托管调试所需的状态，从而导致在分析过程中出现“未知”类型或函数名称。
 
 `createdump` 工具与 .NET Core 运行时一起安装，可以在 libcoreclr.so（通常位于“/usr/share/dotnet/shared/Microsoft.NETCore.App/[version]”中）旁边找到。 该工具采用进程 ID 将转储作为其主要参数收集，还可以采用可选参数来指定要收集的转储类型（带有堆的小型转储是默认类型）。 选项包括：
 
@@ -57,7 +57,7 @@ ms.locfileid: "89598288"
 
   启用诊断消息。
 
-请注意，收集核心转储需要 `SYS_PTRACE` 功能，或者需要 `createdump` 与 sudo 或 su 一起运行。
+收集核心转储需要 `SYS_PTRACE` 功能，或者需要 `createdump` 与 sudo 或 su 一起运行。
 
 ## <a name="analyze-dumps-on-linux"></a>在 Linux 上分析转储
 

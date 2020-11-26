@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ca6dab01cbd639594da0b51f145272a9a150e93c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223999"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687748"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>在 .NET for Apache Spark 中使用广播变量
 
@@ -96,6 +96,11 @@ Func<Column, Column> udf2 = Udf<string, string>(
 // Calling udf2 works fine as expected
 df.Select(udf2(df["_1"])).Show();
 ```
+
+## <a name="faqs"></a>常见问题解答
+
+**为什么广播变量无法与 .NET Interactive 一起使用？**  
+广播变量不能与交互式方案一起使用的原因在于，.NET 交互窗口的设计会将单元格中定义的每个对象都追加到其单元格提交类中，这是因为未标记为可序列化，因此失败，并出现如前所示的同一异常。 有关详细信息，请查看[此文章](dotnet-interactive-udf-issue.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

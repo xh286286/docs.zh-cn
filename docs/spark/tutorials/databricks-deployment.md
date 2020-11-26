@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 Databri
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1f705878a577a7fa375346cae18010d8c8cc77e1
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: d17fd5002d47dcde804cb43fc27edb2c2c9be595
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955442"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688145"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教程：将 .NET for Apache Spark 应用程序部署到 Databricks
 
@@ -85,7 +85,7 @@ ms.locfileid: "91955442"
 
 Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信息。
 
-1. 运行 Databricks CLI 命令 `databricks configure --token`。
+1. 运行 Databricks CLI 命令 `databricks configure --token`。
 
 2. 运行配置命令后，系统会提示你进入主机。 你的主机 URL 使用的格式为 `https://<Location>.azuredatabricks.net`。 例如，如果在创建 Azure Databricks 服务期间选择了“eastus2”，则主机将为 `https://eastus2.azuredatabricks.net`。
 
@@ -105,7 +105,10 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 
 ## <a name="download-worker-dependencies"></a>下载辅助角色依赖项
 
-1. Microsoft.Spark.Worker 可帮助 Apache Spark 执行你的应用，例如你可能已编写的任何用户定义函数 (UDF)。 下载 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz)。
+> [!Note]
+> Azure 和 AWS Databricks 都基于 Linux。 因此，如果要将应用部署到 Databricks，请确保应用与 .NET Standard 兼容，并且使用 .NET Core 编译器编译应用。
+
+1. Microsoft.Spark.Worker 可帮助 Apache Spark 执行你的应用，例如你可能已编写的任何用户定义函数 (UDF)。 下载 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)。
 
 2. install-worker.sh 是一个脚本，可使用该脚本将 .NET for Apache Spark 依赖项文件复制到群集的节点中。
 
@@ -115,7 +118,7 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 
    在本地计算机上创建一个名为 db-init.sh 的新文件，并粘贴位于 GitHub 上的 [db-init.sh 内容](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)。
 
-   在刚刚创建的文件中，将 `DOTNET_SPARK_RELEASE` 变量设置为 `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`。 按原样保留 db-init.sh 文件的其余部分。
+   在刚刚创建的文件中，将 `DOTNET_SPARK_RELEASE` 变量设置为 `https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz`。 按原样保留 db-init.sh 文件的其余部分。
 
 > [!Note]
 > 如果使用 Windows，请验证 install-worker.sh 中的行尾和 db-init.sh 脚本是否为 Unix 样式 (LF) 。 可通过文本编辑器（例如，记事本++ 和 Atom）更改行尾。
@@ -152,10 +155,10 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
    ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
-   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz
    ```
 
-2. 运行以下命令以上传群集运行应用所需的其余文件：已压缩的发布文件夹、input.txt 和 microsoft-spark-2.4.x-0.3.1.jar 。
+2. 运行以下命令以上传群集运行应用所需的其余文件：已压缩的发布文件夹、input.txt 和 microsoft-spark-2-4_2.11-1.0.0.jar 。
 
    ```console
    cd mySparkApp
@@ -163,7 +166,7 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 
    cd mySparkApp\bin\Release\netcoreapp3.1\ubuntu.16.04-x64 directory
    databricks fs cp publish.zip dbfs:/spark-dotnet/publish.zip
-   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   databricks fs cp microsoft-spark-2-4_2.11-1.0.0.jar dbfs:/spark-dotnet/microsoft-spark-2-4_2.11-1.0.0.jar
    ```
 
 ## <a name="create-a-job"></a>创建作业
@@ -181,7 +184,7 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 3. 在作业配置中粘贴以下参数。 然后，选择“确认”。
 
    ```
-   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2-4_2.11-1.0.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
 ## <a name="create-a-cluster"></a>创建群集
@@ -206,7 +209,7 @@ Databricks CLI 安装完毕之后，接下来需要设置身份验证详细信�
 
    ![Azure Databricks 作业输出表](./media/databricks-deployment/table-output.png)
 
-   恭喜，你已在云中运行了第一个 .NET for Apache Spark 应用程序！
+   恭喜，你已在 Azure Databricks 中运行了第一个 .NET for Apache Spark 应用程序！
 
 ## <a name="clean-up-resources"></a>清理资源
 

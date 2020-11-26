@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 16ccc8f40f290c4bc10f03d1f4d1b296b17f6b11
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955403"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687814"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教程：.NET for Apache Spark 入门
 
@@ -53,40 +53,40 @@ Apache Spark 以 .tgz 压缩文件的形式下载。 使用提取程序（如 [7
 
 ### <a name="4-install-apache-spark"></a>4.安装 Apache Spark
 
-[下载并安装 Apache Spark](https://spark.apache.org/downloads.html)。 需要从版本 2.3.* 或者 2.4.0、2.4.1、2.4.3 或 2.4.4 中进行选择（.NET for Apache Spark 与其他版本的 Apache Spark 不兼容）。
+[下载并安装 Apache Spark](https://spark.apache.org/downloads.html)。 需要从版本 2.3.* 或者 2.4.0、2.4.1、2.4.3、2.4.4、2.4.5、2.4.6、2.4.7、3.0.0 或 3.0.1 中进行选择（.NET for Apache Spark 与其他版本的 Apache Spark 不兼容）。
 
-以下步骤中使用的命令假定你已[下载并安装 Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)。 若想要使用其他版本，请将 2.4.1 替换为适当的版本号。 然后，提取 .tar 文件和 Apache Spark 文件。
+以下步骤中使用的命令假定你已[下载并安装 Apache Spark 3.0.1](https://spark.apache.org/downloads.html)。 若想要使用其他版本，请将 3.0.1 替换为适当的版本号。 然后，提取 .tar 文件和 Apache Spark 文件。
 
 要提取嵌套的 .tar 文件：
 
-* 找到你已下载的 spark-2.4.1-bin-hadoop2.7.tgz 文件。
+* 找到你已下载的 spark-3.0.1-bin-hadoop2.7.tgz 文件。
 * 右键单击该文件，然后选择“7-Zip”->“提取到此处”。
-* spark-2.4.1-bin-hadoop2.7.tar 是与你下载的 .tgz 文件一起创建的 。
+* spark-3.0.1-bin-hadoop2.7.tar 是与你下载的 .tgz 文件一起创建的 。
 
 要提取 Apache Spark 文件：
 
-* 右键单击 spark-2.4.1-bin-hadoop2.7.tar，然后选择“7-Zip”->“提取文件...”
+* 右键单击 spark-3.0.1-bin-hadoop2.7.tar，然后选择“7-Zip”->“提取文件...” 
 * 在“提取到”字段输入“C:\bin” 。
 * 取消勾选“提取到”字段下面的复选框。
 * 选择“确定”。
-* Apache Spark 文件会提取到 C:\bin\spark-2.4.1-bin-hadoop2.7\
+* Apache Spark 文件会提取到 C:\bin\spark-3.0.1-bin-hadoop2.7\
 
-![安装 Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+![安装 Spark](./media/spark-extract-with-7-zip.png)
 
 运行以下命令，以设置用于查找 Apache Spark 的环境变量。 在 Windows 上，确保在管理员模式下运行命令提示符。
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
 setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
 #### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
 ```bash
-export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
+export SPARK_HOME=~/bin/spark-3.0.1-bin-hadoop2.7/
 export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
@@ -109,24 +109,22 @@ spark-submit --version
 
 要提取 Microsoft.Spark.Worker：
 
-* 找到你已下载的 Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip 文件。
+* 找到你已下载的 Microsoft.Spark.Worker.netcoreapp3.1.win-x64-1.0.0.zip 文件。
 * 右键单击并选择“7-Zip”->“提取文件...”。
 * 在“提取到”字段输入“C:\bin” 。
 * 取消勾选“提取到”字段下面的复选框。
 * 选择“确定”。
 
-![安装 .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
-
 ### <a name="6-install-winutils-windows-only"></a>6.安装 WinUtils（仅限 Windows）
 
-.NET for Apache Spark 要求与 Apache Spark 一起安装 WinUtils。 [下载 winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)。 然后，将 WinUtils 复制到 C:\bin\spark-2.4.1-bin-hadoop2.7\bin。
+.NET for Apache Spark 要求与 Apache Spark 一起安装 WinUtils。 [下载 winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)。 然后，将 WinUtils 复制到 C:\bin\spark-3.0.1-bin-hadoop2.7\bin。
 
 > [!NOTE]
 > 如果你在使用其他版本的 Hadoop（相关批注可参见 Spark 安装文件夹名称的末尾），请[选择与你的 Hadoop 版本兼容的 WinUtils 版本](https://github.com/steveloughran/winutils)。
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7.设置 DOTNET_WORKER_DIR 并检查依赖项
 
-运行以下命令之一来设置 `DOTNET_WORKER_DIR` 环境变量，.NET 应用使用该变量查找 .NET for Apache Spark。 确保将 `<PATH-DOTNET_WORKER_DIR>` 替换为你下载并提取 `Microsoft.Spark.Worker` 的目录。 在 Windows 上，确保在管理员模式下运行命令提示符。
+运行以下命令之一来设置 `DOTNET_WORKER_DIR` 环境变量，.NET 应用使用该变量查找 .NET for Apache Spark 辅助角色二进制文件。 确保将 `<PATH-DOTNET_WORKER_DIR>` 替换为你下载并提取 `Microsoft.Spark.Worker` 的目录。 在 Windows 上，确保在管理员模式下运行命令提示符。
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
@@ -242,7 +240,7 @@ dotnet build
 spark-submit ^
 --class org.apache.spark.deploy.dotnet.DotnetRunner ^
 --master local ^
-microsoft-spark-2.4.x-<version>.jar ^
+microsoft-spark-3-0_2.12-<version>.jar ^
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 
@@ -252,7 +250,7 @@ dotnet MySparkApp.dll <path-of-input.txt>
 spark-submit \
 --class org.apache.spark.deploy.dotnet.DotnetRunner \
 --master local \
-microsoft-spark-2.4.x-<version>.jar \
+microsoft-spark-3-0_2.12-<version>.jar \
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 

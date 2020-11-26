@@ -1,31 +1,33 @@
 ---
 title: 如何将字符串转换为数字 - C# 编程指南
 description: 了解如何通过调用 Parse、TryParse 或 Convert 类方法，在 C# 中将字符串转换为数字。
-ms.date: 02/11/2019
+ms.date: 11/20/2020
 helpviewer_keywords:
 - conversions [C#]
 - conversions [C#], string to int
 - converting strings to int [C#]
 - strings [C#], converting to int
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: acaa013c89aff8dcb672a12df0c01911d8e52a1c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0a9585d05a817d09308e06558352f78a5347a8f1
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556188"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099167"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何将字符串转换为数字（C# 编程指南）
 
 可以调用各种数值类型（`int`、`long`、`double` 等）中找到的 `Parse` 或 `TryParse` 方法或使用 <xref:System.Convert?displayProperty=nameWithType> 类中的方法将[字符串](../../language-reference/builtin-types/reference-types.md)转换为数字。  
   
- 如果有字符串，则调用 `TryParse` 方法（例如，[`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)）或 `Parse` 方法（例如，[`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)）会稍微更加高效且简单。  使用 <xref:System.Convert> 方法对于实现 <xref:System.IConvertible> 的常规对象更有用。  
+ 调用 `TryParse` 方法（例如，[`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)）或 `Parse` 方法（例如，[`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)）会稍微高效和简单一些。  使用 <xref:System.Convert> 方法对于实现 <xref:System.IConvertible> 的常规对象更有用。  
   
- 可以对预期字符串会包含的数值类型（如 <xref:System.Int32?displayProperty=nameWithType> 类型）使用 `Parse` 或 `TryParse` 方法。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 方法在内部使用 <xref:System.Int32.Parse%2A>。  `Parse` 方法返回转换后的数字；`TryParse` 方法返回 <xref:System.Boolean> 值，该值指示转换是否成功，并以 [`out` 参数](../../language-reference/keywords/out.md)形式返回转换后的数字。 如果字符串的格式无效，则 `Parse` 会引发异常，而 `TryParse` 会返回 `false`。 调用 `Parse` 方法时，应始终使用异常处理来捕获分析操作失败时的 <xref:System.FormatException>。  
+ 对预期字符串会包含的数值类型（如 <xref:System.Int32?displayProperty=nameWithType> 类型）使用 `Parse` 或 `TryParse` 方法。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 方法在内部使用 <xref:System.Int32.Parse%2A>。  `Parse` 方法返回转换后的数字；`TryParse` 方法返回 <xref:System.Boolean> 值，该值指示转换是否成功，并以 [`out` 参数](../../language-reference/keywords/out.md)形式返回转换后的数字。 如果字符串的格式无效，则 `Parse` 会引发异常，但 `TryParse` 会返回 `false`。 调用 `Parse` 方法时，应始终使用异常处理来捕获分析操作失败时的 <xref:System.FormatException>。  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>调用 Parse 和 TryParse 方法
 
-`Parse` 和 `TryParse` 方法会忽略字符串开头和末尾的空格，但所有其他字符都必须是组成合适数值类型（`int`、`long`、`ulong`、`float`、`decimal` 等）的字符。  如果组成数字的字符串中有任何空格，都会导致错误。  例如，可以使用 `decimal.TryParse` 分析“10”、“10.3”或“  10  ”，但不能使用此方法分析从“10X”、“1 0”（注意嵌入的空格）、“10 .3”（注意嵌入的空格）、“10e1”（`float.TryParse` 在此处适用）等中分析出 10。 此外，无法成功分析值为 `null` 或 <xref:System.String.Empty?displayProperty=nameWithType> 的字符串。 在尝试通过调用 <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 方法分析字符串之前，可以检查字符串是否为 Null 或为空。
+`Parse` 和 `TryParse` 方法会忽略字符串开头和末尾的空格，但所有其他字符都必须是组成合适数值类型（`int`、`long`、`ulong`、`float`、`decimal` 等）的字符。  如果组成数字的字符串中有任何空格，都会导致错误。  例如，可以使用 `decimal.TryParse` 分析“10”、“10.3”或“  10  ”，但不能使用此方法分析从“10X”、“1 0”（注意嵌入的空格）、“10 .3”（注意嵌入的空格）、“10e1”（`float.TryParse` 在此处适用）等中分析出 10。 无法成功分析值为 `null` 或 <xref:System.String.Empty?displayProperty=nameWithType> 的字符串。 在尝试通过调用 <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 方法分析字符串之前，可以检查字符串是否为 Null 或为空。
 
 下面的示例演示了对 `Parse` 和 `TryParse` 的成功调用和不成功的调用。  
   

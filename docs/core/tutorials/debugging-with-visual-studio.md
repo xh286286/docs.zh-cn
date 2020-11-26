@@ -1,25 +1,25 @@
 ---
-title: 使用 Visual Studio 调试 .NET Core 控制台应用程序
-description: 了解如何使用 Visual Studio 调试 .NET Core 控制台应用。
+title: 使用 Visual Studio 调试 .NET 控制台应用程序
+description: 了解如何使用 Visual Studio 调试 .NET 控制台应用。
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 8a914dc6cf069c011ea5b077ada514bf8cec331d
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957220"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916180"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>教程：使用 Visual Studio 调试 .NET Core 控制台应用程序
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio"></a>教程：使用 Visual Studio 调试 .NET 控制台应用程序
 
 本教程介绍了 Visual Studio 中提供的调试工具。
 
 ## <a name="prerequisites"></a>先决条件
 
-- 本教程适用于在[使用 Visual Studio 创建 .NET Core 控制台应用程序](with-visual-studio.md)中创建的控制台应用。
+- 本教程适用于在[使用 Visual Studio 创建 .NET 控制台应用程序](with-visual-studio.md)中创建的控制台应用。
 
 ## <a name="use-debug-build-configuration"></a>使用“调试”生成配置
 
@@ -31,11 +31,11 @@ ms.locfileid: "88957220"
 
 1. 启动 Visual Studio。
 
-1. 打开在[使用 Visual Studio 创建 .NET Core 控制台应用程序](with-visual-studio.md)中创建的项目。
+1. 打开在[使用 Visual Studio 创建 .NET 控制台应用程序](with-visual-studio.md)中创建的项目。
 
    当前的生成配置显示在工具栏上。 下面的工具栏图像显示 Visual Studio 配置为编译应用的“调试”版本：
 
-   ![突出显示“调试”的 Visual Studio 工具栏](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png" alt-text="突出显示“调试”的 Visual Studio 工具栏":::
 
 ## <a name="set-a-breakpoint"></a>设置断点
 
@@ -45,7 +45,7 @@ ms.locfileid: "88957220"
 
    如下图所示，Visual Studio 通过突出显示此代码行并在左边缘显示红点来指示设置了断点的行。
 
-   ![设置断点后的 Visual Studio 程序窗口](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/set-breakpoint-in-editor.png" alt-text="设置断点后的 Visual Studio 程序窗口":::
 
 1. 按 <kbd>F5</kbd>，在调试模式下运行程序。 启动调试的另一种方法是从菜单中选择“调试” > “启动调试”。
 
@@ -53,7 +53,7 @@ ms.locfileid: "88957220"
 
 1. 到达断点时，程序停止执行，然后执行 `Console.WriteLine` 方法。 “局部变量”窗口显示当前正在执行的方法中定义的变量值。
 
-   ![Visual Studio 中断点的屏幕截图](./media/debugging-with-visual-studio/breakpoint-hit.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-hit.png" alt-text="Visual Studio 中断点的屏幕截图":::
 
 ## <a name="use-the-immediate-window"></a>使用“即时”窗口
 
@@ -67,13 +67,13 @@ ms.locfileid: "88957220"
 
    “即时”窗口显示字符串变量的值和 <xref:System.DateTime> 值的属性。 此外，“局部变量”窗口中也会更新变量值。
 
-   ![Visual Studio 2019 中的“局部变量”和“即时”窗口](./media/debugging-with-visual-studio/locals-immediate-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/locals-immediate-window.png" alt-text="Visual Studio 2019 中的“局部变量”和“即时”窗口":::
 
 1. 按 <kbd>F5</kbd> 继续执行程序。 继续操作的另一种方法是从菜单中选择“调试” > “继续”。
 
    控制台窗口中显示的值对应于在“即时”窗口中所做的更改。
 
-   ![显示输入值的控制台窗口](./media/debugging-with-visual-studio/console-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/console-window.png" alt-text="显示输入值的控制台窗口":::
 
 1. 按任意键，退出应用程序并停止调试。
 
@@ -83,7 +83,7 @@ ms.locfileid: "88957220"
 
 1. 右键单击表示断点的红点。 在上下文菜单中，选择“条件”，打开“断点设置”对话框 。 选择“条件”框（如果尚未选择）。
 
-   ![显示断点设置面板的编辑器 - C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-settings.png" alt-text="显示断点设置面板的编辑器 - C#":::
 
 1. 对于条件表达式，在显示测试 `x` 是否为 5 的示例代码的字段中输入以下代码。 如果未显示想要使用的语言，请更改页面顶部的语言选择器。
 
@@ -121,7 +121,7 @@ ms.locfileid: "88957220"
 
    问号指示即时窗口[计算表达式](/visualstudio/ide/reference/immediate-window#enter-commands)。
 
-   ![在执行语句后返回值 true 的即时窗口 - C#](./media/debugging-with-visual-studio/immediate-window-output.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/immediate-window-output.png" alt-text="在执行语句后返回值 true 的即时窗口 - C#":::
 
 1. 按 <kbd>F5</kbd> 继续执行程序。
 
@@ -139,11 +139,11 @@ ms.locfileid: "88957220"
 
    C#
 
-   ![Visual Studio 单步执行方法 - C#](./media/debugging-with-visual-studio/step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-method.png" alt-text="Visual Studio 单步执行方法 - C#":::
 
    Visual Basic
 
-   ![Visual Studio 单步执行方法 - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-method.png" alt-text="Visual Studio 单步执行方法 - Visual Basic":::
 
    此时，“局部变量”窗口显示 `args` 数组为空，`name` 和 `date` 具有默认值。 此外，Visual Studio 还打开了一个空白控制台窗口。
 
@@ -151,11 +151,11 @@ ms.locfileid: "88957220"
 
    C#
 
-   ![Visual Studio 单步执行方法源 - C#](./media/debugging-with-visual-studio/step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-source-method.png" alt-text="Visual Studio 单步执行方法源 - C#":::
 
    Visual Basic
 
-   ![Visual Studio 单步执行方法源 - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-source-method.png" alt-text="Visual Studio 单步执行方法源 - Visual Basic":::
 
 1. 按下 F11<kbd></kbd>。 Visual Studio 突出显示包含 `name` 变量赋值的语句。 “局部变量”窗口显示 `name` 为 `null`，控制台窗口显示字符串“What is your name?”。
 
@@ -179,7 +179,7 @@ ms.locfileid: "88957220"
 
 若要生成和测试控制台应用程序的发布版本，请将工具栏上的生成配置从“调试”更改为“发布”。
 
-![默认 Visual Studio 工具栏，其中突出显示调试](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
+:::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-release.png" alt-text="突出显示版本的默认 Visual Studio 工具栏":::
 
 按 F5<kbd></kbd> 或选择“生成”菜单中的“生成解决方案”后，Visual Studio 会编译应用程序的“发布”版本。 可像测试“调试”版本一样测试“发布”版本。
 
@@ -188,4 +188,4 @@ ms.locfileid: "88957220"
 在本教程中，你使用了 Visual Studio 调试工具。 在下一教程中，你将发布应用的可部署版本。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 发布 .NET Core 控制台应用程序](publishing-with-visual-studio.md)
+> [使用 Visual Studio 发布 .NET 控制台应用程序](publishing-with-visual-studio.md)

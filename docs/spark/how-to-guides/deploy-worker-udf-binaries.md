@@ -4,12 +4,12 @@ description: 了解如何部署 .NET for Apache Spark 辅助角色和用户定�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 19ecd4736baaf789a409229d35a6946c6021db45
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954953"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688184"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>部署 .NET for Apache Spark 辅助角色和用户定义的函数二进制文件
 
@@ -60,7 +60,7 @@ ms.locfileid: "91954953"
 ### <a name="after-submitting-my-spark-application-i-get-the-error-systemtypeloadexception-could-not-load-type-systemruntimeremotingcontextscontext"></a>提交 Spark 应用程序后，出现 `System.TypeLoadException: Could not load type 'System.Runtime.Remoting.Contexts.Context'` 错误。
 >  错误：[Error] [TaskRunner] [0] ProcessStream() 失败，出现异常：System.TypeLoadException 异常:未能从程序集 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=...' 加载类型 'System.Runtime.Remoting.Contexts.Context'。
 
-**答：** 检查你使用的 `Microsoft.Spark.Worker` 版本。 有两个版本： **.NET Framework 4.6.1** 和 **.NET Core 2.1.x**。 在本例中，应使用 `Microsoft.Spark.Worker.net461.win-x64-<version>`（可以[下载](https://github.com/dotnet/spark/releases)），因为 `System.Runtime.Remoting.Contexts.Context` 仅适用于 .NET Framework。
+**答：** 检查你使用的 `Microsoft.Spark.Worker` 版本。 有两个版本：.NET Framework 4.6.1 和 .NET Core 3.1.x 。 在本例中，应使用 `Microsoft.Spark.Worker.net461.win-x64-<version>`（可以[下载](https://github.com/dotnet/spark/releases)），因为 `System.Runtime.Remoting.Contexts.Context` 仅适用于 .NET Framework。
 
 ### <a name="how-do-i-run-my-spark-application-with-udfs-on-yarn-which-environment-variables-and-parameters-should-i-use"></a>如何在 YARN 上通过 UDF 运行 Spark 应用程序？ 应该使用哪些环境变量和参数？
 
@@ -74,7 +74,7 @@ spark-submit \
 --conf spark.yarn.appMasterEnv.DOTNET_WORKER_DIR=./worker/Microsoft.Spark.Worker-<version> \
 --conf spark.yarn.appMasterEnv.DOTNET_ASSEMBLY_SEARCH_PATHS=./udfs \
 --archives hdfs://<path to your files>/Microsoft.Spark.Worker.net461.win-x64-<version>.zip#worker,hdfs://<path to your files>/mySparkApp.zip#udfs \
-hdfs://<path to jar file>/microsoft-spark-2.4.x-<version>.jar \
+hdfs://<path to jar file>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
 hdfs://<path to your files>/mySparkApp.zip mySparkApp
 ```
 

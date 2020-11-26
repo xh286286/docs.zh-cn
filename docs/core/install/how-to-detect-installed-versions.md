@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d924e5bc58052cd760f367e906666d68ab79b764
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507210"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687436"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>如何检查是否已安装 .NET
 
@@ -189,5 +189,5 @@ C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\
 ## <a name="next-steps"></a>后续步骤
 
 - [安装 .NET 运行时和适用于 Windows 的 SDK](windows.md)。
-- [安装 .NET 运行时和适用于 MacOS 的 SDK](linux.md)。
-- [安装 .NET 运行时和适用于 Linux 的 SDK](macos.md)。
+- [安装 .NET 运行时和适用于 macOS 的 SDK](macos.md)。
+- [安装 .NET 运行时和适用于 Linux 的 SDK](linux.md)。

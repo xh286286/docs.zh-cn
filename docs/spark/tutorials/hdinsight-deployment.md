@@ -4,12 +4,12 @@ description: 了解如何将 .NET for Apache Spark 应用程序部署到 HDInsig
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c745231f76142c11002ac6663906c8c44c69cdae
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: f7a3b0c0d972d5cb6dbc6eea818fe794c5060eae
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223360"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687899"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>教程：将 .NET for Apache Spark 应用程序部署到 Azure HDInsight
 
@@ -65,7 +65,7 @@ ms.locfileid: "92223360"
     |位置   | 选择资源组的位置。 模板将此位置用于创建群集，以及用于默认群集存储。 |
     |群集类型| 选择“Spark”作为群集类型。 |
     |群集版本|选择群集类型后，此字段中将自动填充默认版本。 选择 2.3 或 2.4 版本的 Spark。|
-    |群集登录用户名| 输入群集登录用户名。  默认名称为 *admin* 。 |
+    |群集登录用户名| 输入群集登录用户名。  默认名称为 *admin*。 |
     |群集登录密码| 输入任何登录密码。 |
     |安全外壳 (SSH) 用户名| 输入 SSH 用户名。 默认情况下，此帐户的密码与群集登录用户名帐户的密码相同  。 |
 
@@ -90,14 +90,14 @@ ms.locfileid: "92223360"
 
    ```dotnetcli
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   dotnet publish -c Release -f netcoreapp3.1 -r win-x64
    ```
 
    **在 Linux 上：**
 
    ```bash
    cd mySparkApp
-   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.1 -r ubuntu.16.04-x64
    ```
 
 2. 执行以下任务以压缩已发布的应用文件，以便你可以轻松地将其上传到 HDInsight 群集。 压缩发布文件夹（如 publish.zip）的内容，该文件夹是在步骤 1 中创建的。 所有程序集都应位于 ZIP 文件的第一层，并且不应有中间文件夹层。 这意味着，当你解压缩 publish.zip 时，所有程序集都将被提取到当前工作目录中。
@@ -119,12 +119,12 @@ ms.locfileid: "92223360"
 * Microsoft.Spark.Worker
 * install-worker.sh
 * publish.zip
-* microsoft-spark-2.3.x-0.3.0.jar
-* input.txt。
+* microsoft-spark-2-4_2.11-1.0.0.jar
+* input.txt
 
 1. 打开 Azure 存储资源管理器，然后从左侧菜单导航到存储帐户。 在存储帐户中的“Blob 容器”下，向下钻取到群集的 blob 容器。
 
-2. Microsoft.Spark.Worker 可帮助 Apache Spark 执行你的应用，例如你可能已编写的任何用户定义函数 (UDF)。 下载 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz)。 然后，在 Azure 存储资源管理器中选择“上传”以上传辅助角色。
+2. Microsoft.Spark.Worker 可帮助 Apache Spark 执行你的应用，例如你可能已编写的任何用户定义函数 (UDF)。 下载 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)。 然后，在 Azure 存储资源管理器中选择“上传”以上传辅助角色。
 
    ![将文件上传到 Azure 存储资源管理器](./media/hdinsight-deployment/upload-files-to-storage.png)
 
@@ -132,11 +132,11 @@ ms.locfileid: "92223360"
 
    在本地计算机上创建一个名为 install-worker.sh 的新文件，并粘贴位于 GitHub 上的 [install-worker.sh 内容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)。 然后，将 install-worker.sh 上传到 blob 容器中。
 
-4. 群集需要 publish.zip 文件，后者包含应用的已发布文件。 导航到已发布文件夹“mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64”，并找到“publish.zip”。 然后，将 publish.zip 上传到 blob 容器。
+4. 群集需要 publish.zip 文件，后者包含应用的已发布文件。 导航到已发布文件夹“mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64”，并找到“publish.zip” 。 然后，将 publish.zip 上传到 blob 容器。
 
-5. 群集需要已打包到 jar 文件中的应用程序代码。 导航到已发布文件夹“mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64”，并找到“microsoft-spark-2.3.x-0.3.0.jar”。 然后，将 jar 文件上传到 blob 容器。
+5. 群集需要打包为 jar 的应用程序代码，作为 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) nuget 的一部分包含在内，并置在应用的生成输出目录中。 导航到已发布文件夹“mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64”，并找到“microsoft-spark-2-4_2.11-1.0.0.jar” 。 然后，将 jar 文件上传到 blob 容器。
 
-   对于 2.3.x 和 2.4.x 版的 Spark，可能存在多个 .jar 文件。 你需要选择与在群集创建期间选择的 Spark 版本相匹配的 .jar 文件。 例如，如果在群集创建期间选择了 Spark 2.3.2，请选择 microsoft-spark-2.3.x-0.3.0.jar。
+   对于 2.3.x、2.4.x 和 3.0.x 版的 Spark，可能存在多个 .jar 文件。 你需要选择与在群集创建期间选择的 Spark 版本相匹配的 .jar 文件。 例如，如果在群集创建期间选择了 Spark 2.4，请选择 microsoft-spark-2-4_2.11-1.0.0.jar。
 
 6. 群集需要应用的输入。 导航到 mySparkApp 目录，并找到“input.txt”。 将输入文件上传到 blob 容器中的 user/sshuser 目录。 你将通过 ssh 连接到群集，群集将在此文件夹中查找其输入。 input.txt 文件是上传到特定目录的唯一文件。
 
@@ -154,7 +154,7 @@ ms.locfileid: "92223360"
    | “属性” | 安装辅助角色|
    | Bash 脚本 URI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> 要确认此 URI，请在 Azure 存储资源管理器中右键单击“install-worker.sh”，然后选择“属性”。 |
    | 节点类型| 辅助角色|
-   | 参数 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
+   | 参数 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz </br> /usr/local/bin
 
 3. 选择“创建”，提交脚本。
 
@@ -170,7 +170,7 @@ ms.locfileid: "92223360"
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
    --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2-4_2.11-1.0.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
@@ -187,4 +187,5 @@ HDInsight 将数据保存在 Azure 存储中，因此可以在群集不用时安
 在本教程中，你已将 .NET for Apache Spark 应用程序部署到 Azure HDInsight。 要了解有关 HDInsight 的详细信息，请继续阅读 Azure HDInsight 文档。
 
 > [!div class="nextstepaction"]
+> [在 Azure HDInsight 上远程提交作业](../how-to-guides/hdinsight-deploy-methods.md)
 > [Azure HDInsight 文档](/azure/hdinsight/)

@@ -2,12 +2,12 @@
 title: .NET Core 中的 EventCounters
 description: 本文将介绍什么是 EventCounters，如何实现它们，以及如何使用它们。
 ms.date: 08/07/2020
-ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955312"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687637"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 中的 EventCounters
 
@@ -17,7 +17,7 @@ EventCounters 是一些 .NET Core API，用于轻量级、跨平台、准实时�
 
 .NET Core 运行时和几个 .NET 库使用从 .NET Core 3.0 开始引入的 EventCounters 发布基本诊断信息。 除了 .NET 运行时提供的 EventCounters 外，你还可以选择实现自己的 EventCounters。 可使用 EventCounters 跟踪各种指标。
 
-EventCounters 作为 <xref:System.Diagnostics.Tracing.EventSource> 的一部分实时自动定期推送到侦听器工具。 与 <xref:System.Diagnostics.Tracing.EventSource> 上所有其他事件一样，可以通过 <xref:System.Diagnostics.Tracing.EventListener> 和 EventPipe 在进程内和进程外使用它们。 本文重点介绍 EventCounters 的跨平台功能，并特意排除 PerfView 和 ETW（Windows 事件跟踪）- 尽管两者都可用于 EventCounters。
+EventCounters 作为 <xref:System.Diagnostics.Tracing.EventSource> 的一部分实时自动定期推送到侦听器工具。 与 <xref:System.Diagnostics.Tracing.EventSource> 上所有其他事件一样，可以通过 <xref:System.Diagnostics.Tracing.EventListener> 和 [EventPipe](./eventpipe.md) 在进程内和进程外使用它们。 本文重点介绍 EventCounters 的跨平台功能，并特意排除 PerfView 和 ETW（Windows 事件跟踪）- 尽管两者都可用于 EventCounters。
 
 ![EventCounters 进程内和进程外示意图](media/event-counters.svg)
 

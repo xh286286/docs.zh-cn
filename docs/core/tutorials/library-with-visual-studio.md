@@ -1,29 +1,29 @@
 ---
-title: 在 Visual Studio 中创建 .NET Standard 类库
-description: 了解如何使用 Visual Studio 创建 .NET Standard 类库。
+title: 使用 Visual Studio 创建 .NET 类库
+description: 了解如何使用 Visual Studio 创建 .NET 类库。
 ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3af08b5a92c61f29a3700a3417043170f41407bc
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118255"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916111"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>教程：在 Visual Studio 中创建 .NET Standard 库
+# <a name="tutorial-create-a-net-class-library-using-visual-studio"></a>教程：使用 Visual Studio 创建 .NET 类库
 
 在本教程中，将创建包含一个字符串处理方法的简单类库。
 
-类库定义的是可以由应用程序调用的类型和方法。 借助面向 .NET Standard 2.0 的类库，任何支持相应 .NET Standard 版本的 .NET 实现都可以调用库。
+类库定义的是可以由应用程序调用的类型和方法。 如果库以 .NET Standard 2.0 为目标，则支持 .NET Standard 2.0 的任何 .NET 实现（包括 .NET Framework）均可调用该库。 如果库以 .NET 5 为目标，则以 .NET 5 为目标的任何应用程序均可调用该库。 本教程演示如何以 .NET 5 为目标。
 
-完成类库后，可将其作为 NuGet 包或作为与使用该类库的应用程序捆绑在一起的组件进行分发。
+创建类库后，可将其作为 NuGet 包或作为与使用该类库的应用程序捆绑在一起的组件进行分发。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-- 安装了具有“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019 版本 16.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 选择此工作负载时，将自动安装 .NET Core 3.1 SDK。
+- 安装了具有“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019 版本 16.8 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 选择此工作负载时，将自动安装 .NET 5.0 SDK。 本教程假设已启用“在‘新建项目’中显示所有 .NET Core 模板”，如[教程：使用 Visual Studio 创建 .NET 控制台应用程序](with-visual-studio.md)中所示。
 
 ## <a name="create-a-solution"></a>创建解决方案
 
@@ -37,27 +37,27 @@ ms.locfileid: "89118255"
 
 3. 在“创建新项目”页面上，在搜索框中输入“解决方案”。 选择“空白解决方案”模板，然后选择“下一步”。
 
-   ![Visual Studio 中的空白解决方案模板](media/library-with-visual-studio/blank-solution.png)
+   :::image type="content" source="media/library-with-visual-studio/blank-solution.png" alt-text="Visual Studio 中的空白解决方案模板":::
 
 4. 在“配置新项目”页面上，在“项目名称”框中输入“ClassLibraryProjects”。 然后选择“创建”。
 
 ## <a name="create-a-class-library-project"></a>创建类库项目
 
-1. 将名为“StringLibrary”的新 .NET Standard 类库项目添加到解决方案。
+1. 将名为“StringLibrary”的新 .NET 类库项目添加到解决方案。
 
    1. 在“解决方案资源管理器”中，右键单击解决方案并选择“添加” > “新建项目”  。
 
-   1. 在“创建新项目”页面上，在搜索框中输入“库”。 从“语言”列表中选择“C#”或“Visual Basic”，然后从“平台”列表中选择“所有平台”。 选择“类库 (.NET Standard)”模板，然后选择“下一步”。
+   1. 在“创建新项目”页面上，在搜索框中输入“库”。 从“语言”列表中选择“C#”或“Visual Basic”，然后从“平台”列表中选择“所有平台”。 选择“类库”模板，然后选择“下一步” 。
 
-   1. 在“配置新项目”页面，在“项目名称”框中输入“StringLibrary”。 然后，选择“创建”。
+   1. 在“配置新项目”页的“项目名称”框中，输入“StringLibrary”，然后选择“下一步”   。
 
-1. 请检查以确保库面向 .NET Standard 的正确版本。 右键单击“解决方案资源管理器”中的库项目，然后选择“属性”。 “目标框架”文本框显示项目面向 .NET Standard 2.0。
+   1. 在“其他信息”页上，选择“.NET 5.0 (当前)”，然后选择“创建”  。
 
-   ![类库的项目属性](./media/library-with-visual-studio/library-project-properties.png)
+1. 请检查以确保库以 .NET 的正确版本为目标。 右键单击“解决方案资源管理器”中的库项目，然后选择“属性”。 “目标框架”文本框显示项目以 .NET 5.0 为目标。
 
 1. 如果使用 Visual Basic，请清除“根命名空间”文本框中的文本。
 
-   ![类库的项目属性](./media/library-with-visual-studio/vb/library-project-properties.png)
+   :::image type="content" source="./media/library-with-visual-studio/vb/library-project-properties.png" alt-text="类库的项目属性":::
 
    对于每个项目，Visual Basic 会自动创建一个与项目名称对应的命名空间。 在本教程中，通过使用代码文件中的 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 关键字定义顶级命名空间。
 
@@ -76,15 +76,17 @@ ms.locfileid: "89118255"
 
 添加使用类库的控制台应用程序。 应用将提示用户输入字符串，并报告字符串是否以大写字符开头。
 
-1. 将名为“ShowCase”的新 .NET Core 控制台应用程序添加到解决方案。
+1. 将名为“ShowCase”的新 .NET 控制台应用程序添加到解决方案。
 
    1. 在“解决方案资源管理器”中右键单击解决方案并选择“添加” > “新建项目”。
 
    1. 在“创建新项目”页面，在搜索框中输入“控制台”。 从“语言”列表中选择“C#”或“Visual Basic”，然后从“平台”列表中选择“所有平台”。
 
-   1. 选择“控制台应用 (.NET Core)”模板，然后选择“下一步”。
+   1. 选择“控制台应用程序”模板，然后选择“下一步” 。
 
-   1. 在“配置新项目”页面，在“项目名称”框中输入“ShowCase”。 然后选择“创建”。
+   1. 在“配置新项目”页面，在“项目名称”框中输入“ShowCase”。 然后选择“下一步”  。
+
+   1. 在“其他信息”页上，选择“目标框架”框中的“.NET 5.0 (当前)”  。 然后选择“创建”。
 
 1. 在“Program.cs”或“Program.vb”文件的代码窗口中，将所有代码替换为以下代码 。
 
@@ -101,21 +103,21 @@ ms.locfileid: "89118255"
 
 1. 在“解决方案资源管理器”中，右键单击 `ShowCase` 项目的“依赖项”节点，并选择“添加项目引用”  。
 
-   ![在 Visual Studio 中添加引用上下文菜单](media/library-with-visual-studio/add-reference-context-menu.png)
+   :::image type="content" source="media/library-with-visual-studio/add-reference-context-menu.png" alt-text="在 Visual Studio 中添加引用上下文菜单":::
 
 1. 在“引用管理器”对话框中，选择“StringLibrary”项目，然后选择“确定”按钮  。
 
-   ![选择了“StringLibrary”的“引用管理器”对话框](media/library-with-visual-studio/manage-project-references.png)
+   :::image type="content" source="media/library-with-visual-studio/manage-project-references.png" alt-text="选择了“StringLibrary”的“引用管理器”对话框":::
 
 ## <a name="run-the-app"></a>运行应用
 
 1. 在“**解决方案资源管理器**”中，右键单击“**ShowCase**”项目，在上下文菜单中选择“**设为启动项目**”。
 
-   ![Visual Studio 中用于设置启动项目的项目上下文菜单](media/library-with-visual-studio/set-startup-project-context-menu.png)
+   :::image type="content" source="media/library-with-visual-studio/set-startup-project-context-menu.png" alt-text="Visual Studio 中用于设置启动项目的项目上下文菜单":::
 
 1. 按 Ctrl+F5 编译并运行程序，而不进行调试<kbd></kbd><kbd></kbd>。
 
-   ![Visual Studio 中显示“调试”按钮的项目工具栏](media/library-with-visual-studio/visual-studio-project-toolbar.png)
+   :::image type="content" source="media/library-with-visual-studio/visual-studio-project-toolbar.png" alt-text="Visual Studio 中显示“调试”按钮的项目工具栏":::
 
 1. 输入字符串并按 Enter 以试用程序，然后按 Enter 退出<kbd></kbd><kbd></kbd>。
 
@@ -123,15 +125,14 @@ ms.locfileid: "89118255"
 
 ## <a name="additional-resources"></a>其他资源
 
-* [使用 .NET Core CLI 开发库](libraries.md)
-* [.NET Standard 版本及其支持的平台](../../standard/net-standard.md)。
+* [使用 .NET CLI 开发库](libraries.md)
 
 ## <a name="next-steps"></a>后续步骤
 
 在本教程中，你创建了一个类库。 在下一教程中，你将了解如何对类库进行单元测试。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 对 .NET Standard 库进行单元测试](testing-library-with-visual-studio.md)
+> [使用 Visual Studio 对 .NET 类库进行单元测试](testing-library-with-visual-studio.md)
 
 或者，你可以跳过自动单元测试，并了解如何通过创建 NuGet 包来共享库：
 
@@ -141,4 +142,4 @@ ms.locfileid: "89118255"
 同时，还可以了解如何发布控制台应用。 如果从本教程中创建的解决方案发布控制台应用，类库将以 .dll 文件的形式随附。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 发布 .NET Core 控制台应用程序](publishing-with-visual-studio.md)
+> [使用 Visual Studio 发布 .NET 控制台应用程序](publishing-with-visual-studio.md)

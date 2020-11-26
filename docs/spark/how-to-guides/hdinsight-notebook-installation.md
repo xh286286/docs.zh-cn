@@ -4,12 +4,12 @@ description: 了解如何在 Azure HDInsight 的 Jupyter Notebook 中安装 .NET
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5689c9ccdd13209fec33674ad8fc80dcc369660
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955044"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688275"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>在 Azure HDInsight Spark 群集的 Jupyter Notebook 中安装 .NET for Apache Spark
 
@@ -73,7 +73,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
    | “属性” | *安装 .NET for Apache Spark 交互式笔记本体验* |
    | Bash 脚本 URI | 向其上传 `install-interactive-notebook.sh` 的 URI。 |
    | 节点类型| 头节点和工作节点 |
-   | 参数 | .NET for Apache Spark 版本。 可以查看 [.NET for Apache Spark 版本](https://github.com/dotnet/spark/releases)。 例如，如果要安装 Sparkdotnet 版本 0.6.0，则为 `0.6.0`。
+   | 参数 | .NET for Apache Spark 版本。 可以查看 [.NET for Apache Spark 版本](https://github.com/dotnet/spark/releases)。 例如，如果要安装 Sparkdotnet 版本 1.0.0，则为 `1.0.0`。
 
    当脚本操作状态旁边出现绿色勾选标记时，转到下一步。
 
@@ -101,7 +101,7 @@ Azure HDInsight 群集已附带 Jupyter Notebook，因此只需将 Jupyter Noteb
 
    * **属性 2** 使用包含到前文中脚本操作的 .NET for Apache Spark 版本。
        * 键：&ensp;&ensp;`spark.dotnet.packages`
-       * 值：`["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
+       * 值：`["nuget: Microsoft.Spark, 1.0.0", "nuget: Microsoft.Spark.Extensions.Delta, 1.0.0"]`
 
    * **属性 3**
        * 键：&ensp;&ensp;`spark.dotnet.interpreter`

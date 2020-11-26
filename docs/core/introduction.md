@@ -2,14 +2,14 @@
 title: .NET 简介和概述
 description: 了解用于构建多种应用的免费开源开发平台 .NET。
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506735"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687512"
 ---
 # <a name="introduction-to-net"></a>.NET 简介
 
@@ -264,9 +264,9 @@ GC 是一种有助于确保内存安全的 CLR 服务。 如果某个程序仅�
 
 ## <a name="runtime-libraries"></a>运行时库
 
-.NET 具有一组广泛的标准类库。 核心集称为基类库 (BCL)。 完整的集称为运行时库或框架库。 这些库为许多常规用途类型和特定于工作负载的类型和实用工具功能提供实现。
+.NET 具有一组广泛的标准类库，称为[运行时库](../standard/glossary.md#runtime)、[框架库](../standard/glossary.md#framework-libraries)或[基类库 (BCL)](../standard/glossary.md#bcl)。 这些库为许多常规用途类型和特定于工作负载的类型和实用工具功能提供实现。
 
-下面是在运行时库中定义的一些类型示例：
+下面是在 .NET 运行时库中定义的一些类型示例：
 
 * 基元类型，如 <xref:System.Boolean?displayProperty=nameWithType> 和 <xref:System.Int32?displayProperty=nameWithType>。
 * 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
@@ -276,9 +276,9 @@ GC 是一种有助于确保内存安全的 CLR 服务。 如果某个程序仅�
 * [序列化](../standard/serialization/index.md)实用程序类型，例如 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 和 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>。
 * 高性能类型，例如 <xref:System.Span%601?displayProperty=nameWithType>、<xref:System.Numerics.Vector?displayProperty=nameWithType> 和 [Pipelines](../standard/io/pipelines.md)。
 
-有关详细信息，请参阅[框架库](../standard/framework-libraries.md)和[库的源代码](https://github.com/dotnet/runtime/tree/master/src/libraries)。
+有关详细信息，请参阅[运行时库概述](../standard/runtime-libraries-overview.md)。 库的源代码位于 [GitHub dotnet/运行时存储库](https://github.com/dotnet/runtime/tree/master/src/libraries)中。
 
-## <a name="microsoftextensions-libraries"></a>Microsoft.Extensions 库
+### <a name="extensions-to-the-runtime-libraries"></a>运行时库的扩展
 
 某些常用应用程序功能的库没有包含在运行时库中，但在 NuGet 包中提供，如下所示：
 
@@ -344,6 +344,7 @@ Entity Framework (EF) Core 是一种可用作 ORM 的[开源](https://github.com
   | Target Framework — 目标 Framework | .NET 应用或库依赖的 API 集合。 示例：.NET Core 3.1、.NET Standard 2.0 |
   | 目标框架名字对象 (TFM)  | TFM 是一种标准化令牌格式，用于指定 .NET 应用或库的目标框架。 示例：`net462`（对于 .NET Framework 4.6.2）。 |
   | 依赖于框架的应用 | 只能在从 [.NET 下载页](https://dotnet.microsoft.com/download/dotnet-core)安装了运行时的计算机上运行的应用。 此用法中的“框架”与你从 .NET 下载页下载的“运行时”是相同的。 |
+  | 框架库 | 有时用作[运行时库](#runtime-libraries)的同义词。 |
 
 * **SDK**
 

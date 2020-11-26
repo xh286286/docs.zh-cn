@@ -1,24 +1,24 @@
 ---
-title: dotnet-symbol - .NET Core
-description: 安装和使用 dotnet-symbol 命令行工具。
-ms.date: 08/26/2020
-ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+title: dotnet-symbol 诊断工具 - .NET CLI
+description: 了解如何安装和使用 dotnet-symbol CLI 工具来下载调试 .NET 转储和小型转储所需的文件。
+ms.date: 11/17/2020
+ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679183"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825333"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>符号下载器 (dotnet-symbol)
 
 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
-## <a name="install-dotnet-symbol"></a>安装 dotnet-symbol
+## <a name="install"></a>安装
 
-若要安装最新版 `dotnet-symbol` [NuGet 包](https://www.nuget.org/packages/dotnet-symbol)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+若要安装最新版 `dotnet-trace` [NuGet 包](https://www.nuget.org/packages/dotnet-trace)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
 
 ```dotnetcli
-dotnet tool install -g dotnet-symbol
+dotnet tool install --global dotnet-symbol
 ```
 
 ## <a name="synopsis"></a>摘要

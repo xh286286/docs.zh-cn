@@ -1,25 +1,39 @@
 ---
-title: dotnet-sos - .NET Core
-description: 了解如何安装和使用 dotnet-sos 命令行工具。
-ms.date: 08/26/2020
-ms.openlocfilehash: ba83105718909038ca56129ed8a5063aeff12e89
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+title: dotnet-sos 诊断工具 - .NET CLI
+description: 了解如何安装和使用 dotnet-sos CLI 工具来管理 SOS 调试器扩展，该扩展可与 Windows 和 Linux 上的本机调试器一起使用。
+ms.date: 11/17/2020
+ms.openlocfilehash: 59512c42a778f68bb3cd092dc854dcc727fd2881
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065079"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825437"
 ---
 # <a name="sos-installer-dotnet-sos"></a>SOS 安装程序 (dotnet-sos)
 
 本文适用于： ✔️ .NET Core 2.1 SDK 及更高版本
 
-## <a name="install-dotnet-sos"></a>安装 dotnet-sos
+## <a name="install"></a>安装
 
-若要安装最新版 `dotnet-sos` [NuGet 包](https://www.nuget.org/packages/dotnet-sos)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+可采用两种方法来下载和安装 `dotnet-sos`：
 
-```dotnetcli
-dotnet tool install -g dotnet-sos
-```
+- **dotnet 全局工具：**
+
+  若要安装最新版 `dotnet-sos` [NuGet 包](https://www.nuget.org/packages/dotnet-sos)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-sos
+  ```
+
+- **直接下载：**
+
+  下载与平台相匹配的工具可执行文件：
+
+  | (OS)  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-sos/win-x86) \| [x64](https://aka.ms/dotnet-sos/win-x64) \| [arm](https://aka.ms/dotnet-sos/win-arm) \| [arm-x64](https://aka.ms/dotnet-sos/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-sos/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-sos/linux-x64) \| [arm](https://aka.ms/dotnet-sos/linux-arm) \| [arm64](https://aka.ms/dotnet-sos/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-sos/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-sos/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>摘要
 

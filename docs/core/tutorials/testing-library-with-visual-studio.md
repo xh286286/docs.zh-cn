@@ -1,25 +1,25 @@
 ---
-title: 在 Visual Studio 中使用 .NET Core 测试 .NET Standard 类库
-description: 为 .NET Core 类库创建单元测试项目。 验证 .NET Core 类库能否正确地进行单元测试。
-ms.date: 06/08/2020
+title: 使用 Visual Studio 测试 .NET 类库
+description: 了解如何使用 Visual Studio 针对 .NET 类库创建和运行单元测试项目。
+ms.date: 11/18/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d56627b937fa0ad5f8002f396ce617e09ce9d2c
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177288"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916116"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>教程：在 Visual Studio 中使用 .NET Core 测试 .NET Standard 类库
+# <a name="tutorial-test-a-net-class-library-with-net-using-visual-studio"></a>教程：使用 Visual Studio 通过 .NET 测试 .NET 类库
 
 本教程演示如何通过将测试项目添加到解决方案来自动执行单元测试。
 
 ## <a name="prerequisites"></a>先决条件
 
-- 本教程适用于在[使用 Visual Studio 创建 .NET Standard 库](library-with-visual-studio.md)中创建的解决方案。
+- 本教程适用于在[使用 Visual Studio 创建 .NET 类库](library-with-visual-studio.md)中创建的解决方案。
 
 ## <a name="create-a-unit-test-project"></a>创建单元测试项目
 
@@ -27,7 +27,7 @@ ms.locfileid: "91177288"
 
 1. 启动 Visual Studio。
 
-1. 打开在[使用 Visual Studio 创建 .NET Standard 库](library-with-visual-studio.md)中创建的 `ClassLibraryProjects` 解决方案。
+1. 打开在[使用 Visual Studio 创建 .NET 类库](library-with-visual-studio.md)中创建的 `ClassLibraryProjects` 解决方案。
 
 1. 将名为“StringLibraryTest”的新单元测试项目添加到解决方案。
 
@@ -35,9 +35,11 @@ ms.locfileid: "91177288"
 
    1. 在“添加新项目”页面，在搜索框中输入“mstest”。 从“语言”列表中选择“C#”或“Visual Basic”，然后从“平台”列表中选择“所有平台”。
 
-   1. 选择“MSTest 测试项目(.NET Core)”模板，然后选择“下一步” 。
+   1. 选择“单元测试项目”模板，然后选择“下一步” 。
 
-   1. 在“配置新项目”页面，在“项目名称”框中输入“StringLibraryTest”。 然后选择“创建”。
+   1. 在“配置新项目”页面，在“项目名称”框中输入“StringLibraryTest”。 然后选择“下一步”  。
+
+   1. 在“其他信息”页上，选择“目标框架”框中的“.NET 5.0 (当前)”  。 然后选择“创建”。
 
 1. 此时，Visual Studio 会创建项目，并在具有以下代码的代码窗口中打开类文件。 如果未显示想要使用的语言，请更改页面顶部的语言选择器。
 
@@ -122,21 +124,21 @@ ms.locfileid: "91177288"
 1. 在菜单栏上，选择“文件” > “将 UnitTest1.cs 另存为”或“文件” > “将 UnitTest1.vb 另存为”。 在“文件另存为”对话框中，选择“保存”按钮旁边的箭头，然后选择“保存时使用编码”。
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio“文件另存为”对话框](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/save-file-as-dialog.png" alt-text="Visual Studio“文件另存为”对话框":::
 
 1. 在“确认另存为”对话框中，选择“是”按钮，保存文件。
 
 1. 在“高级保存选项”对话框的“编码”下拉列表中，选择“Unicode (UTF-8 带签名) - 代码页 65001”，然后选择“确定”。
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio“高级保存选项”对话框](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/advanced-save-options.png" alt-text="Visual Studio“高级保存选项”对话框":::
 
    如果无法将源代码保存为 UTF8 编码文件，Visual Studio 可能会将其另存为 ASCII 文件。 在这种情况下，运行时将无法准确解码 ASCII 范围以外的 UTF8 字符，且测试结果也会不正确。
 
 1. 在菜单栏上，选择“测试” > “运行所有测试” 。 如果“测试资源管理器”窗口未打开，请选择“测试” > “测试资源管理器”来将其打开  。 “通过的测试”部分列出了三个测试，“摘要”部分报告了测试运行结果。
 
    > [!div class="mx-imgBorder"]
-   > ![通过测试的“测试资源管理器”窗口](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/test-explorer-window.png" alt-text="通过测试的“测试资源管理器”窗口":::
 
 ## <a name="handle-test-failures"></a>处理测试失败
 
@@ -158,14 +160,14 @@ ms.locfileid: "91177288"
 1. 从菜单栏中选择“测试” > “运行所有测试”，运行测试 。 “测试资源管理器”窗口指示有两个测试成功，还有一个失败。
 
    > [!div class="mx-imgBorder"]
-   > ![未通过测试的“测试资源管理器”窗口](./media/testing-library-with-visual-studio/failed-test-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-window.png" alt-text="未通过测试的“测试资源管理器”窗口":::
 
 1. 选择失败的测试，`TestDoesNotStartWith`。
 
    “测试资源管理器”窗口显示断言生成的消息：“Assert.IsFalse 失败。 “Error”应返回 false；实际返回 True”。 由于此次失败，数组中“Error”之后的所有字符串都未进行测试。
 
    > [!div class="mx-imgBorder"]
-   > ![显示 IsFalse 断言失败的“测试资源管理器”窗口](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-detail.png" alt-text="显示 IsFalse 断言失败的“测试资源管理器”窗口":::
 
 1. 删除在步骤 1 中添加的字符串“Error”。 重新运行测试，测试将通过。
 
@@ -178,25 +180,25 @@ ms.locfileid: "91177288"
 1. 在 Visual Studio 工具栏中，将生成配置从 **“调试”** 更改为 **“发行”** 。
 
    > [!div class="mx-imgBorder"]
-   > ![突出显示发布版本的 Visual Studio 工具栏](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png" alt-text="突出显示发布版本的 Visual Studio 工具栏":::
 
 1. 在“解决方案资源管理器”中，右键单击“StringLibrary”项目，从上下文菜单中选择“生成”，重新编译库。
 
    > [!div class="mx-imgBorder"]
-   > ![带有生成命令的 StringLibrary 上下文菜单](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/build-library-context-menu.png" alt-text="带有生成命令的 StringLibrary 上下文菜单":::
 
 1. 从菜单栏中选择“测试运行” > “所有测试”，运行单元测试 。 测试通过。
 
 ## <a name="debug-tests"></a>调试测试
 
-如果使用 Visual Studio 作为 IDE，则可以使用[教程：使用 Visual Studio 调试 .NET Core 控制台应用程序](debugging-with-visual-studio.md)中所示的相同过程，来通过使用单元测试项目调试代码。 右键单击“StringLibraryTests”项目，然后从上下文菜单中选择“调试测试”，而不是启动 ShowCase 应用项目。
+如果使用 Visual Studio 作为 IDE，则可以使用[教程：使用 Visual Studio 调试 .NET 控制台应用程序](debugging-with-visual-studio.md)中所示的相同过程，使用单元测试项目来调试代码。 右键单击“StringLibraryTests”项目，然后从上下文菜单中选择“调试测试”，而不是启动 ShowCase 应用项目。
 
 Visual Studio 启动附有调试器的测试项目。 执行将在添加到测试项目的任何断点或基础库代码处停止。
 
 ## <a name="additional-resources"></a>其他资源
 
 * [单元测试基础知识 - Visual Studio](/visualstudio/test/unit-test-basics)
-* [.NET Core 和 .NET Standard 中的单元测试](../testing/index.md)
+* [.NET 中的单元测试](../testing/index.md)
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -213,4 +215,4 @@ Visual Studio 启动附有调试器的测试项目。 执行将在添加到测�
 库并非必须作为包进行分发。 它还可与使用它的控制台应用捆绑在一起。 若要了解如何发布控制台应用，请参阅本系列中前面的教程：
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 发布 .NET Core 控制台应用程序](publishing-with-visual-studio.md)
+> [使用 Visual Studio 发布 .NET 控制台应用程序](publishing-with-visual-studio.md)

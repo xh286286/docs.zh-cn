@@ -1,26 +1,26 @@
 ---
-title: 使用 Visual Studio Code 创建 .NET Core 控制台应用程序
-description: 了解如何使用 Visual Studio Code 和 .NET Core CLI 创建 .NET Core 控制台应用程序。
-ms.date: 05/22/2020
-ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+title: 使用 Visual Studio Code 创建 .NET 控制台应用程序
+description: 了解如何使用 Visual Studio Code 和 .NET CLI 创建 .NET 控制台应用程序。
+ms.date: 11/17/2020
+ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811921"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915864"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>教程：使用 Visual Studio Code 创建 .NET Core 控制台应用程序
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>教程：使用 Visual Studio Code 创建 .NET 控制台应用程序
 
-本教程演示如何使用 Visual Studio Code 和 .NET Core CLI 创建并运行 .NET Core 控制台应用程序。 项目任务（例如创建、编译和运行项目）通过使用 .NET Core CLI 来完成。 你可以遵循本教程中的步骤使用其他代码编辑器，然后在终端中运行命令（如果你愿意）。
+本教程演示如何使用 Visual Studio Code 和 .NET CLI 创建并运行 .NET 控制台应用程序。 项目任务（例如创建、编译和运行项目）通过使用 .NET CLI 来完成。 你可以遵循本教程中的步骤使用其他代码编辑器，然后在终端中运行命令（如果你愿意）。
 
 ## <a name="prerequisites"></a>先决条件
 
 1. 已安装 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) 的 [Visual Studio Code](https://code.visualstudio.com/)。 有关如何在 Visual Studio Code 上安装扩展的信息，请访问 [VS Code 扩展市场](https://code.visualstudio.com/docs/editor/extension-gallery)。
-2. [.NET Core 3.1 SDK 或更高版本](https://dotnet.microsoft.com/download)
+2. [.NET 5.0 SDK 或更高版本](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>创建应用
 
-创建一个名为“HelloWorld”的 .NET Core 控制台应用项目。
+创建一个名为“HelloWorld”的 .NET 控制台应用项目。
 
 1. 启动 Visual Studio Code。
 
@@ -120,7 +120,7 @@ dotnet run
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你创建了一个 .NET Core 控制台应用程序。 在下一教程中，你将调试该应用。
+在本教程中，你创建了一个 .NET 控制台应用程序。 在下一教程中，你将调试该应用。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio Code 调试 .NET Core 控制台应用程序](debugging-with-visual-studio-code.md)
+> [使用 Visual Studio Code 调试 .NET 控制台应用程序](debugging-with-visual-studio-code.md)

@@ -2,12 +2,12 @@
 title: C# 9.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 9.0 中提供的新功能。
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557215"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687355"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -104,9 +104,13 @@ C# 9.0 引入了记录类型，这是一种引用类型，它提供合成方法�
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-上述行创建新的 `Person` 记录，其中 `LastName` 属性是 `person` 的副本，`FirstName` 为 `"Paul"`。 可在 `with` 表达式中设置任意数量的属性。
+上一行创建新的 `Person` 记录，其中 `LastName` 属性是 `person` 的副本，`FirstName` 为 `"Paul"`。 可在 `with` 表达式中设置任意数量的属性。 还可以使用 `with` 表达式来创建精确的副本。 为要修改的属性指定空集：
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 你可编写除“克隆”方法以外的任何合成成员。 如果记录类型的方法与任何合成方法的签名匹配，则编译器不会合成该方法。 较早的 `Dog` 记录示例包含手动编码的 <xref:System.String.ToString> 方法作为示例。
+
+了解有关此[浏览记录](../tutorials/exploration/records.md)教程中记录类型的详细信息。
 
 ## <a name="init-only-setters"></a>仅限 Init 的资源库
 
