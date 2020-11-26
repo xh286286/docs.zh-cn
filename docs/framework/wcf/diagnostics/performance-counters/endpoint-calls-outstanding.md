@@ -1,16 +1,18 @@
 ---
-title: 终结点：Calls Outstanding（未完成的调用次数）
+title: 终结点：未完成的调用次数
 ms.date: 03/30/2017
 ms.assetid: cf1e854a-92bc-4850-81a2-a8134c9fd7d2
-ms.openlocfilehash: 4827d2b4031e4560ad240dd25f3123cbe144fcf1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc088f5c3813f00c03d6d740ce9ff69c937f8a11
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797236"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250133"
 ---
-# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="191aa-102">终结点：Calls Outstanding（未完成的调用次数）</span><span class="sxs-lookup"><span data-stu-id="191aa-102">Endpoint: Calls Outstanding</span></span>
-<span data-ttu-id="191aa-103">计数器名称：Calls Outstanding（未完成的调用次数）</span><span class="sxs-lookup"><span data-stu-id="191aa-103">Counter Name: Calls Outstanding</span></span>  
+# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="fde5c-102">终结点：未完成的调用次数</span><span class="sxs-lookup"><span data-stu-id="fde5c-102">Endpoint: Calls Outstanding</span></span>
+
+<span data-ttu-id="fde5c-103">计数器名称：Calls Outstanding（未完成的调用次数）</span><span class="sxs-lookup"><span data-stu-id="fde5c-103">Counter Name: Calls Outstanding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="191aa-104">描述</span><span class="sxs-lookup"><span data-stu-id="191aa-104">Description</span></span>  
- <span data-ttu-id="191aa-105">对此终结点正在进行的调用数。</span><span class="sxs-lookup"><span data-stu-id="191aa-105">Number of in-progress calls to this endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="fde5c-104">描述</span><span class="sxs-lookup"><span data-stu-id="fde5c-104">Description</span></span>  
+
+ <span data-ttu-id="fde5c-105">对此终结点正在进行的调用数。</span><span class="sxs-lookup"><span data-stu-id="fde5c-105">Number of in-progress calls to this endpoint.</span></span>
