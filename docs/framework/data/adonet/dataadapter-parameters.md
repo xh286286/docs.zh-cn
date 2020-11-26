@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177706"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 参数
@@ -49,14 +49,14 @@ parameter.SourceVersion = DataRowVersion.Original
   
  下表显示可以与 <xref:System.Data.DataRowVersion> 一起使用的 `SourceVersion` 枚举值。  
   
-|DataRowVersion 枚举|描述|  
+|DataRowVersion 枚举|说明|  
 |--------------------------------|-----------------|  
 |`Current`|该参数使用列的当前值。 这是默认设置。|  
 |`Default`|该参数使用列的 `DefaultValue`。|  
 |`Original`|该参数使用列的原始值。|  
 |`Proposed`|该参数使用建议值。|  
   
- 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`参数用于将**CustomerID**列更新为中的当前值 `DataRow` 。 因此， `CustomerID` `SourceColumn` `SourceVersion` 使用带有的 `Current` 。 `@OldCustomerID`参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
+ 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`参数用于将 **CustomerID** 列更新为中的当前值 `DataRow` 。 因此， `CustomerID` `SourceColumn` `SourceVersion` 使用带有的 `Current` 。 `@OldCustomerID`参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
   
 ## <a name="working-with-sqlclient-parameters"></a>使用 SqlClient 参数  
 
@@ -167,9 +167,9 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> 如果没有为参数提供参数名称，则会为该参数指定增量默认名称 parameter*N* *，* 以 "Parameter1" 开头。 建议在提供参数名称时避免使用参数*N* 命名约定，因为所提供的名称可能会与中现有的默认参数名称冲突 `ParameterCollection` 。 如果提供的名称已经存在，将引发异常。  
+> 如果没有为参数提供参数名称，则会为该参数指定增量默认名称 parameter *N* *，* 以 "Parameter1" 开头。 建议在提供参数名称时避免使用参数 *N* 命名约定，因为所提供的名称可能会与中现有的默认参数名称冲突 `ParameterCollection` 。 如果提供的名称已经存在，将引发异常。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [DataAdapter 和 DataReader](dataadapters-and-datareaders.md)
 - [命令和参数](commands-and-parameters.md)

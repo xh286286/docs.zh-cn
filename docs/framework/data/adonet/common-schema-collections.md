@@ -3,10 +3,10 @@ title: 公共架构集合
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91203808"
 ---
 # <a name="common-schema-collections"></a>公共架构集合
@@ -31,7 +31,7 @@ ms.locfileid: "91203808"
 
  此架构集合为 .NET Framework 管理的提供程序当前连接到的数据源公开有关信息。  
   
-|ColumnName|数据类型|描述|  
+|ColumnName|数据类型|说明|  
 |----------------|--------------|-----------------|  
 |CompositeIdentifierSeparatorPattern|字符串|匹配复合标识符中的复合分隔符的正则表达式。 例如“\\”。 SQL Server 的 () 或 " \@&#124;" \\ 。 （针对 Oracle）。<br /><br /> 复合标识符通常用于数据库对象名称，例如： pubs. dbo. 作者或 pubs \@ dbo。<br /><br /> 对于 SQL Server，请使用正则表达式 " \\ ."。 对于 System.data.oracleclient，请使用 " \@&#124;\\ 。"。<br /><br /> 对于 ODBC，使用 Catalog_name_seperator。<br /><br /> 对于 OLE DB，使用 DBLITERAL_CATALOG_SEPARATOR 或 DBLITERAL_SCHEMA_SEPARATOR。|  
 |DataSourceProductName|字符串|通过提供程序访问的产品名称，例如“Oracle”或“SQLServer”。|  
@@ -55,7 +55,7 @@ ms.locfileid: "91203808"
 
  此架构集合为 .NET Framework 管理的提供程序当前连接到的数据库公开所支持的数据类型的有关信息。  
   
-|ColumnName|数据类型|描述|  
+|ColumnName|数据类型|说明|  
 |----------------|--------------|-----------------|  
 |TypeName|字符串|提供程序特定的数据类型名称。|  
 |ProviderDbType|int|指定参数类型时应使用的特定于提供程序的类型值。 例如 SqlDbType.Money 或 OracleType.Blob。|  
@@ -96,11 +96,11 @@ ms.locfileid: "91203808"
 
  此架构集合为 .NET Framework 管理的提供程序当前连接到的数据库公开所保留的关键字的有关信息。  
   
-|ColumnName|数据类型|描述|  
+|ColumnName|数据类型|说明|  
 |----------------|--------------|-----------------|  
 |ReservedWord|字符串|提供程序特定的保留字。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [检索数据库架构信息](retrieving-database-schema-information.md)
 - [GetSchema 和架构集合](getschema-and-schema-collections.md)

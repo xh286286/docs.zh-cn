@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91059153"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 编码约定
@@ -45,7 +45,7 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
 - 每行仅使用一个声明。  
   
-- 如果在很多情况下 ** (重新格式化) 的代码** 不会自动设置延续行的格式，则手动将连续行缩进一个制表位。 但是，始终左对齐列表中的项。  
+- 如果在很多情况下 **(重新格式化) 的代码** 不会自动设置延续行的格式，则手动将连续行缩进一个制表位。 但是，始终左对齐列表中的项。  
   
     ```vb  
     a As Integer,  
@@ -214,6 +214,6 @@ Microsoft 将按照本主题中的准则开发示例和文档。 如果遵循相
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../../standard/security/secure-coding-guidelines.md)
