@@ -2,12 +2,12 @@
 title: 日志记录和跟踪 - .NET Core
 description: .NET Core 日志记录和跟踪简介。
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439919"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820574"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 日志记录和跟踪
 
@@ -55,7 +55,7 @@ ms.locfileid: "94439919"
   - 仅允许跟踪可序列化的对象。
   - 可以通过配置为使用 EventSource 的任何 [EventListener](xref:System.Diagnostics.Tracing.EventListener) 实例在进程中使用。
   - 可通过以下方式在进程外使用：
-    - 所有平台上的 .NET Core EventPipe
+    - 所有平台上的 [.NET Core EventPipe](./eventpipe.md)
     - [Windows 事件跟踪 (ETW)](/windows/win32/etw/event-tracing-portal)
     - [适用于 Linux 的 LTTng 跟踪框架](https://lttng.org/)
       - 演练：[使用 PerfCollect 收集 LTTng 跟踪](trace-perfcollect-lttng.md)。
@@ -93,6 +93,8 @@ ms.locfileid: "94439919"
 - [.NET 中的日志记录](../extensions/logging.md)提供它所支持的日志记录技术的概述。
 
 - [C# 字符串内插](../../csharp/language-reference/tokens/interpolated.md)可以简化日志记录代码的编写。
+
+- [运行时提供程序事件列表](../../fundamentals/diagnostics/runtime-events.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType> 属性对日志记录异常很有用。
 

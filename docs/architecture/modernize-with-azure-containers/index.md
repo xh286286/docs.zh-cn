@@ -2,24 +2,20 @@
 title: 通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第 2 版）
 description: 阅读此电子书，了解如何将现有应用程序直接迁移到 Azure 云和 Windows 容器以实现现代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172250"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705327"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>通过 Azure 云和 Windows 容器现代化现有 .NET 应用程序（第 2 版）
 
 ![现代化 .NET 应用程序指南的封面图像。](./media/index/web-application-guide-cover-image.png)
 
-发布者  
-Microsoft Press 和 Microsoft DevDiv  
-Microsoft Corporation 的部门  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+由 Microsoft 出版社和 Microsoft Corporation 的 Microsoft DevDiv 部门出版，华盛顿州雷蒙德市 One Microsoft Way 98052-6399
 
-版权所有 © 2020 Microsoft Corporation  
+版权所有 © 2020 Microsoft Corporation
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制本书中的任何内容。
 
@@ -37,12 +33,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 > **Cesar de la Torre**，Microsoft Corp .NET 产品团队的高级项目经理。
 
 参与者和审阅者：
-> **Scott Hunter**，Microsoft .NET 团队的合作伙伴总监项目经理  
-> **Paul Yuknewicz**，Microsoft Visual Studio Tools 团队的主要项目经理  
-> **Lisa Guthrie**，Microsoft Visual Studio Tools 团队的高级项目经理  
-> **Ankit Asthana**，Microsoft .NET 团队的主要项目经理  
-> **Unai Zorrilla**，Plain Concepts 的开发者领导  
-> **Javier Valero**，Grupo Solutio 的首席运营官  
+> .NET 团队的合作伙伴总监项目经理 Scott Hunter、Microsoft Visual Studio Tools 团队的主要项目经理 Paul Yuknewicz、Microsoft Visual Studio Tools 团队的高级项目经理 Lisa Guthrie、Microsoft .NET 团队的主要项目经理 Ankit Asthana、Microsoft Plain Concepts 的开发者领导 Unai Zorrilla、Grupo Solutio 的首席运营官 Javier Valero
 
 ## <a name="introduction"></a>介绍
 
@@ -70,7 +61,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 图 1-1 显示了采用递增性方法将现有 .NET 应用程序移动到云时可能使用的途径。
 
- ![现有 .NET 应用程序和服务的更新途径](./media/image1-1.png)
+ ![现有 .NET 应用程序和服务的更新途径](./media/image1-1.png)
 
 **图 1-1**。 现有 .NET 应用程序和服务的更新途径
 
@@ -78,14 +69,14 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 每个应用程序成熟度的定义和简短说明如下所示：
 
-**级别 1：云基础结构就绪**的应用程序：使用此迁移方法，将当前本地应用程序迁移或重新托管到基础结构即服务 ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) 平台即可。 应用的组成与之前基本一致，但现在可将它们部署到云中的 VM。
+**级别 1：云基础结构就绪** 的应用程序：使用此迁移方法，将当前本地应用程序迁移或重新托管到基础结构即服务 ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) 平台即可。 应用的组成与之前基本一致，但现在可将它们部署到云中的 VM。
 这种简单类型的迁移在业内通常称为“直接迁移”。
 
-**级别 2：云优化**的应用程序：在此级别，仍无需重新架构或改写大量代码，可以利用容器和其他云托管服务等现代化技术在云中运行应用，从而获得更多益处。 通过优化企业开发操作 (DevOps) 流程，可以提高应用程序的敏捷性，以实现更快交付。 这可以通过使用某种技术（如基于 Docker 引擎的 Windows 容器）实现。 分多个阶段部署时，容器可以消除因应用程序依赖项造成的冲突。 在此成熟度模型中，可以在 IaaS 或 PaaS 上部署容器，同时使用与数据库、缓存即服务、监视以及持续集成/持续部署 (CI/CD) 管道相关的其他云托管服务。
+**级别 2：云优化** 的应用程序：在此级别，仍无需重新架构或改写大量代码，可以利用容器和其他云托管服务等现代化技术在云中运行应用，从而获得更多益处。 通过优化企业开发操作 (DevOps) 流程，可以提高应用程序的敏捷性，以实现更快交付。 这可以通过使用某种技术（如基于 Docker 引擎的 Windows 容器）实现。 分多个阶段部署时，容器可以消除因应用程序依赖项造成的冲突。 在此成熟度模型中，可以在 IaaS 或 PaaS 上部署容器，同时使用与数据库、缓存即服务、监视以及持续集成/持续部署 (CI/CD) 管道相关的其他云托管服务。
 
 第三个成熟度级别是云中的最终目标，但对于很多应用它是可选的，并不是本指南的主要重点：
 
-**级别 3：云本机**应用程序：此迁移方法通常由业务需求驱动，目的是更新任务关键型应用程序。 在此级别，使用 PaaS 服务将应用移动到 PaaS 计算平台。 实现[云原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)应用程序和微服务体系结构，以改进应用程序，使其具有长期的敏捷性并扩展至新的限制。 此类更新通常需要专门针对云进行构建。 通常必须编写新代码，尤其是移动到基于云原生应用程序和微服务的模型时。 此方法有助于获得一些益处，这些益处在单片和本地应用程序环境中很难实现。
+**级别 3：云本机** 应用程序：此迁移方法通常由业务需求驱动，目的是更新任务关键型应用程序。 在此级别，使用 PaaS 服务将应用移动到 PaaS 计算平台。 实现[云原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)应用程序和微服务体系结构，以改进应用程序，使其具有长期的敏捷性并扩展至新的限制。 此类更新通常需要专门针对云进行构建。 通常必须编写新代码，尤其是移动到基于云原生应用程序和微服务的模型时。 此方法有助于获得一些益处，这些益处在单片和本地应用程序环境中很难实现。
 
 表 1-1 介绍了选择每种迁移或更新方法的主要优点和原因。
 
@@ -103,7 +94,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>各成熟度级别使用的关键技术和体系结构
 
-.NET Framework 应用程序的初始版本为 .NET Framework 1.0，该版本于 2001 年年底发布。 然后，公司发布了更新的版本（如 2.0、3.5 和 .NET 4.x）。 这些应用程序中的大部分都在 Windows Server 和 Internet Information Server (IIS) 上运行，并使用关系数据库，如 SQL Server、Oracle、MySQL 或任何其他关系数据库管理系统。
+.NET Framework 应用程序的初始版本为 .NET Framework 1.0，该版本于 2001 年年底发布。 然后，公司发布了更新的版本（如 2.0、3.5 和 .NET Framework 4.x）。 这些应用程序中的大部分都在 Windows Server 和 Internet Information Server (IIS) 上运行，并使用关系数据库，如 SQL Server、Oracle、MySQL 或任何其他关系数据库管理系统。
 
 当今大部分现有 .NET 应用程序可能都基于 .NET Framework 4.x，甚至 .NET Framework 3.5，并使用 Web 框架，如 ASP.NET MVC、ASP.NET Web 窗体、ASP.NET Web API、Windows Communication Foundation (WCF)、ASP.NET SignalR 和 ASP.NET 网页。 这些既定的 .NET Framework 技术都依赖于 Windows。 如果只是简单地迁移旧版应用并希望对应用程序基础结构作出最少的更改，依赖项是一项重要的考虑因素。
 
@@ -124,7 +115,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 初次更新期间，还可以从云中添加资产，如使用如下工具进行监视：[Azure Application Insights](/azure/application-insights/app-insights-overview)适用于应用生命周期且带 [Azure DevOps 服务](https://azure.microsoft.com/services/devops/)的 CI/CD 管道，以及 Azure 中提供的许多其他数据资源服务。 例如，可以修改单片 Web 应用，该应用最初使用传统 [ASP.NET Web 窗体](https://www.asp.net/web-forms)或 [ASP.NET MVC](https://www.asp.net/mvc) 开发，但现在使用 Windows 容器部署。 使用 Windows 容器时，还需要将数据迁移到 [Azure SQL 数据库托管实例](/azure/sql-database/)中的数据库，但不需要更改应用程序的核心体系结构。
 
-- **云本机**：如上所述，在以大型复杂应用程序为目标，由多个独立开发团队独立开发和部署不同的微服务时，应考虑架构[云本机](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)应用程序。 此外，还有一个原因是每个微服务有精细化且独立的可扩展性。 这种体系结构方法面临着非常重要的挑战和复杂性，但使用云 PaaS、[Azure Kubernetes 服务 (AKS/ACS)](https://azure.microsoft.com/services/container-service/)（托管 Kubernetes）等业务流程协调程序和 [Azure Functions](https://azure.microsoft.com/services/functions/) 构建无服务器方法，可大大简化工作。 以上所有方法（如微服务和无服务器）通常需要架构云并编写新代码，新代码应适用于特定的 PaaS 平台或符合特定的体系结构（如微服务）。
+- **云本机**：如上所述，在以大型复杂应用程序为目标，由多个独立开发团队独立开发和部署不同的微服务时，应考虑架构 [云本机](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)应用程序。 此外，还有一个原因是每个微服务有精细化且独立的可扩展性。 这种体系结构方法面临着非常重要的挑战和复杂性，但使用云 PaaS、[Azure Kubernetes 服务 (AKS/ACS)](https://azure.microsoft.com/services/container-service/)（托管 Kubernetes）等业务流程协调程序和 [Azure Functions](https://azure.microsoft.com/services/functions/) 构建无服务器方法，可大大简化工作。 以上所有方法（如微服务和无服务器）通常需要架构云并编写新代码，新代码应适用于特定的 PaaS 平台或符合特定的体系结构（如微服务）。
 
 图 1-3 显示了每个成熟度级别可使用的内部技术：
 

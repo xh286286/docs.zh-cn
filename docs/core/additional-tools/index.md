@@ -4,12 +4,12 @@ description: 概述了可安装的支持和扩展 .NET Core 功能的其他工�
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557927"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698996"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 附加工具概述
 
@@ -37,7 +37,7 @@ WCF (Windows Communication Foundation) [Web ervice Reference 工具](wcf-web-ser
 
 WCF [dotnet-svcutil 工具](dotnet-svcutil-guide.md)是一个 .NET 工具，可从网络位置上的 Web 服务中或从 WSDL 文件中检索元数据。 还可生成与 .NET Core 兼容的源文件并使用可用于访问 Web 服务操作的方法定义 WCF 代理类。
 
-dotnet-svcutil 工具是 [WCF Web Service Reference](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代产品********。 dotnet-svcutil**** 工具作为一种 .NET 工具，可用于 Linux、macOS 和 Windows。
+dotnet-svcutil 工具是 [WCF Web Service Reference](wcf-web-service-reference-guide.md) Visual Studio 连接服务提供程序（随 Visual Studio 2017 版本 15.5 首次推出）的替代产品。 dotnet-svcutil 工具作为一种 .NET 工具，可用于 Linux、macOS 和 Windows。
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tool"></a>WCF dotnet-svcutil.xmlserializer 工具
 
@@ -46,3 +46,7 @@ dotnet-svcutil 工具是 [WCF Web Service Reference](wcf-web-service-reference-g
 ## <a name="xml-serializer-generator"></a>XML 序列化程序生成器
 
 正如 [XML 序列化程序生成器工具 (Sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) 适用于 .NET Framework，[Microsoft.XmlSerializer.Generator NuGet 包](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) 是适用于 .NET Core 和 .NET 标准库的解决方案。 它为程序集中包含的类型创建 XML 序列化程序集，从而提高使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化这些类型对象时，XML 序列化的启动性能。
+
+## <a name="generating-self-signed-certificates"></a>生成自签名证书
+
+可以使用 [dotnet dev-certs](self-signed-certificates-guide.md) 创建用于开发和测试方案的自签名证书。

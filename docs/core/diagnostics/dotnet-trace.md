@@ -1,25 +1,39 @@
 ---
-title: dotnet-trace 工具 - .NET Core
-description: 安装和使用 dotnet-trace 命令行工具。
-ms.date: 11/21/2019
-ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: dotnet-trace 诊断工具 - .NET CLI
+description: 了解如何通过使用 .NET EventPipe 来安装和使用 dotnet-trace CLI 工具，以在没有本机探查器的情况下收集运行中的进程的 .NET 跟踪。
+ms.date: 11/17/2020
+ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507221"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829305"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 性能分析实用工具
 
 本文适用于： ✔️ .NET Core 3.0 SDK 及更高版本
 
-## <a name="install-dotnet-trace"></a>安装 dotnet-trace
+## <a name="install"></a>安装
 
-使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令安装 `dotnet-trace` [NuGet 包](https://www.nuget.org/packages/dotnet-trace)：
+可采用两种方法来下载和安装 `dotnet-trace`：
 
-```dotnetcli
-dotnet tool install --global dotnet-trace
-```
+- **dotnet 全局工具：**
+
+  若要安装最新版 `dotnet-trace` [NuGet 包](https://www.nuget.org/packages/dotnet-trace)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-trace
+  ```
+
+- **直接下载：**
+
+  下载与平台相匹配的工具可执行文件：
+
+  | (OS)  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [arm](https://aka.ms/dotnet-trace/win-arm) \| [arm-x64](https://aka.ms/dotnet-trace/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [arm](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>摘要
 
@@ -33,7 +47,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 * 是一个跨平台的 .NET Core 工具。
 * 在不使用本机探查器的情况下启用正在运行的进程的 .NET Core 跟踪集合。
-* 它是围绕 .NET Core 运行时的跨平台 `EventPipe` 技术而构建的。
+* 是基于 .NET Core 运行时的 [`EventPipe`](./eventpipe.md) 构建的。
 * 在 Windows、Linux 或 macOS 上提供相同体验。
 
 ## <a name="options"></a>选项
@@ -196,11 +210,12 @@ dotnet-trace list-profiles [-h|--help]
 
 ## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>启动子应用程序，并使用 dotnet-trace 从启动中收集跟踪
 
-注意：这仅适用于运行 .NET 5.0 或更高版本的应用。
+> [!IMPORTANT]
+> 这仅适用于运行 .NET 5.0 或更高版本的应用。
 
 有时，从进程启动中收集进程的跟踪可能很有用。 对于运行 .NET 5.0 或更高版本的应用，可以使用 dotnet-trace 来做到这一点。
 
-这将启动 `hello.exe`并以 `arg1` 及 `arg2` 作为其命令行参数，从其运行时启动中收集跟踪：
+这将启动 `hello.exe` 并以 `arg1` 和 `arg2` 作为其命令行参数，从其运行时启动中收集跟踪：
 
 ```console
 dotnet-trace collect -- hello.exe arg1 arg2

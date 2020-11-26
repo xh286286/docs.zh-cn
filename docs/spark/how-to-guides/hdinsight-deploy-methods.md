@@ -4,12 +4,12 @@ description: 了解如何使用 spark-submit 和 Apache Livy 将 .NET for Apache
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: cb99cd8028d504924d2dd69910efed0065d0a2e2
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 74be4ecf33a9a881633da0630fa1c1a4bf0b19c6
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954914"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688158"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>将 .NET for Apache Spark 作业提交到 Azure HDInsight
 
@@ -23,13 +23,13 @@ ms.locfileid: "91954914"
 
 2. 复制 ssh 登录信息，并将登录名粘贴到终端。 使用在群集创建期间设置的密码登录到群集。 应会看到“欢迎使用 Ubuntu 和 Spark”的消息。
 
-3. 使用 spark-submit 命令在 HDInsight 群集上运行应用  。 请记得将示例脚本中的 mycontainer 和 mystorageaccount 替换为 blob 容器和存储帐户的实际名称   。 另外，请确保将 `microsoft-spark-2.3.x-0.6.0.jar` 替换为要用于部署的适当的 jar 文件。 `2.3.x` 表示 Apache Spark 的版本，`0.6.0` 表示 [.NET for Apache Spark 辅助角色](https://github.com/dotnet/spark/releases)的版本。
+3. 使用 spark-submit 命令在 HDInsight 群集上运行应用  。 请记得将示例脚本中的 mycontainer 和 mystorageaccount 替换为 blob 容器和存储帐户的实际名称   。 另外，还需将 microsoft-spark jar 替换为要使用的 Spark 和 .NET for Apache Spark 版本。
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
    --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
@@ -46,7 +46,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 -H "X-Requested-By: <hdinsight username>" \
 -d @- << EOF
 {
-    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
+    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar",
     "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
     "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
     "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]

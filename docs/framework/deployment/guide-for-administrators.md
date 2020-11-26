@@ -6,16 +6,16 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: b358f0909147e52293fd802bc98caa31b284d7b1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 12076334d3ede0c8ab9b618ba2018f23c9fc6ae4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558714"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817089"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 
-本文分步说明系统管理员可以如何使用 Microsoft Endpoint Configuration Manager 在网络中部署 .NET Framework 4.5 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 .NET Framework 4.5 的软件和硬件要求列表，请参阅[系统需求](../get-started/system-requirements.md)。
+本文分步说明系统管理员如何使用 Microsoft Endpoint Configuration Manager 在网络中部署 .NET Framework 4.5 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 .NET Framework 4.5 的软件和硬件要求列表，请参阅[系统需求](../get-started/system-requirements.md)。
 
 > [!NOTE]
 > 本文档中提到的软件（包括但不限于 .NET Framework 4.5、Configuration Manager 和 Active Directory）均受许可条款和条件的约束。 下列说明假定，软件的适当被许可方已查看并接受此类许可条款和条件。 这些说明不免除此类许可协议中的任何条款和条件。
@@ -39,7 +39,7 @@ ms.locfileid: "90558714"
 
 在设置好支持基础结构之后，可以使用 Configuration Manager 将 .NET Framework 可再发行组件包部署到网络上的计算机。 构建基础结构涉及创建并定义 5 个主要区域：集合、软件的包和程序、分发点以及部署。
 
-- “集合”是将 .NET Framework 部署到的 Configuration Manager 资源（用户、用户组或计算机）组。 有关详细信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的集合简介](/configmgr/core/clients/manage/collections/introduction-to-collections)。
+- “集合”是将 .NET Framework 部署到的 Configuration Manager 资源（如用户、用户组或计算机）组。 有关详细信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的集合简介](/configmgr/core/clients/manage/collections/introduction-to-collections)。
 
 - “包和程序”通常表示要安装在客户端计算机上的软件应用程序，但它们还可能包含单个文件、更新，甚至是单个命令。 有关详细信息，请参阅 Configuration Manager 文档库中的 [Configuration Manager 中的包和程序](/configmgr/apps/deploy-use/packages-and-programs)。
 
@@ -52,9 +52,9 @@ ms.locfileid: "90558714"
 
 <a name="deploying_in_a_test_environment"></a>
 
-## <a name="deploying-the-net-framework"></a>部署 .NET Framework
+## <a name="deploying-net-framework"></a>部署 .NET Framework
 
-你可以使用 Configuration Manager 部署 .NET Framework 4.5 的无提示安装（用户不与安装过程进行交互）。 请执行这些步骤：
+可使用 Configuration Manager 部署 .NET Framework 4.5 的无提示安装（在安装过程中无需用户交互）。 请执行这些步骤：
 
 1. [创建集合](#creating_a_collection)。
 
@@ -94,7 +94,7 @@ ms.locfileid: "90558714"
 
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>为 .NET Framework 可再发行组件包创建包和程序
 
-以下步骤为 .NET Framework 可再发行组件手动创建包。 该包包含用于安装 .NET Framework 的指定参数以及要用于将包分发到目标计算机的位置。
+以下步骤为 .NET Framework 可再发行组件手动创建包。 该包包含用于安装 .NET Framework 的指定参数，以及将在其中向目标计算机分发包的位置。
 
 创建包：
 
@@ -184,12 +184,12 @@ ms.locfileid: "90558714"
 
 7. 在该向导的“部署设置”页上，确认“操作”已设置为“安装”，且“目标”设置为“必需”。 这可确保软件包将是目标计算机上的必需安装。 选择“下一步”。
 
-8. 在该向导的“计划”页上，指定希望何时安装 .NET Framework。 可以选择“新建”以指定安装时间，也可以指示在用户登录或注销时安装软件或尽快安装软件。 选择“下一步”。
+8. 在该向导的“计划”页上，指定希望安装 .NET Framework 的时间。 可以选择“新建”以指定安装时间，也可以指示在用户登录或注销时安装软件或尽快安装软件。 选择“下一步”。
 
 9. 在该向导的“用户体验”页上，使用默认值并选择“下一步”。
 
     > [!WARNING]
-    > 你的生产环境可能具有需要选择不同的部署计划的策略。 有关这些选项的信息，请参阅[播发名称属性：“计划”选项卡](/previous-versions/system-center/configuration-manager-2007/bb694016(v=technet.10))。
+    > 你的生产环境可能具有需要选择不同的部署计划的策略。
 
 10. 在该向导的“分发点”页上，使用默认值并选择“下一步”。
 
@@ -220,8 +220,6 @@ ms.locfileid: "90558714"
 System Center 2012 Configuration Manager（既充当管理点又充当分发点）：
 
 - [System Center 2012 Configuration Manager 的站点管理](/previous-versions/system-center/system-center-2012-R2/gg681983(v=technet.10))
-
-- [Configuration Manager 单站点计划和部署](/previous-versions/system-center/configuration-manager-2007/bb680961(v=technet.10))
 
 适用于 Windows 计算机的 System Center 2012 Configuration Manager 客户端：
 

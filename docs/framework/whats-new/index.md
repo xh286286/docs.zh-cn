@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 3421afee304125413f4fcade6b20df990e922f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557241"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704794"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework 中的新增功能
 
@@ -71,7 +71,7 @@ ms.locfileid: "94557241"
 
 #### <a name="base-classes"></a>基类
 
-**减少 FIPS 对加密的影响** 。 在 .NET framework 的早期版本中，当在“FIPS 模式”下配置系统加密库时，<xref:System.Security.Cryptography.SHA256Managed> 等托管加密提供程序类会引发 <xref:System.Security.Cryptography.CryptographicException>。 引发这些异常的原因是加密提供程序类的托管版本尚未进行 FIPS（联邦信息处理标准）140-2 认证，这与系统加密库不同。 由于几个开发人员使其开发计算机处于 FIPS 模式，因此通常会在生产系统中引发异常。
+**减少 FIPS 对加密的影响**。 在 .NET framework 的早期版本中，当在“FIPS 模式”下配置系统加密库时，<xref:System.Security.Cryptography.SHA256Managed> 等托管加密提供程序类会引发 <xref:System.Security.Cryptography.CryptographicException>。 引发这些异常的原因是加密提供程序类的托管版本尚未进行 FIPS（联邦信息处理标准）140-2 认证，这与系统加密库不同。 由于几个开发人员使其开发计算机处于 FIPS 模式，因此通常会在生产系统中引发异常。
 
 默认情况下，在面向 .NET Framework 4.8 的应用程序中，以下托管加密类在这种情况下不再引发 <xref:System.Security.Cryptography.CryptographicException>：
 
@@ -190,11 +190,11 @@ ServiceHealthBehavior 是一个 WCF 服务行为，该行为可扩展 <xref:Syst
 
 .NET Framework 4.8 中的运行时包含以下更改和改进：
 
-**JIT 编译器的改进** 。 .NET Framework 4.8 中的实时 (JIT) 编译器基于 .NET Core 2.1 中的 JIT 编译器。 对 .NET Core 2.1 JIT 编译器所做的多个优化和所有 bug 修复都包含在 .NET Framework 4.8 JIT 编译器中。
+**JIT 编译器的改进**。 .NET Framework 4.8 中的实时 (JIT) 编译器基于 .NET Core 2.1 中的 JIT 编译器。 对 .NET Core 2.1 JIT 编译器所做的多个优化和所有 bug 修复都包含在 .NET Framework 4.8 JIT 编译器中。
 
-**NGEN 改进** 。 运行时改进了[本机映像生成器](../tools/ngen-exe-native-image-generator.md) (NGEN) 映像的内存管理，以便从 NGEN 映像映射的数据不驻留在内存中。 这将缩减可受到攻击的外围应用，攻击方法为试图通过修改将执行的内存来执行任意代码。
+**NGEN 改进**。 运行时改进了[本机映像生成器](../tools/ngen-exe-native-image-generator.md) (NGEN) 映像的内存管理，以便从 NGEN 映像映射的数据不驻留在内存中。 这将缩减可受到攻击的外围应用，攻击方法为试图通过修改将执行的内存来执行任意代码。
 
-**所有程序集的反恶意软件扫描** 。 在 .NET Framework 的早期版本中，运行时使用 Windows Defender 或第三方反恶意软件扫描从磁盘加载的所有程序集。 但是，从其他源加载的程序集（例如，通过 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 方法）不会进行扫描，并且可能包含未检测到的恶意软件。 从 Windows 10 上运行的 .NET Framework 4.8 开始，运行时通过实现[反恶意软件扫描界面 (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) 的反恶意软件解决方案来触发扫描。
+**所有程序集的反恶意软件扫描**。 在 .NET Framework 的早期版本中，运行时使用 Windows Defender 或第三方反恶意软件扫描从磁盘加载的所有程序集。 但是，从其他源加载的程序集（例如，通过 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 方法）不会进行扫描，并且可能包含未检测到的恶意软件。 从 Windows 10 上运行的 .NET Framework 4.8 开始，运行时通过实现[反恶意软件扫描界面 (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) 的反恶意软件解决方案来触发扫描。
 
 <a name="v472"></a>
 
@@ -720,11 +720,11 @@ _ *对象缓存扩展性**
 
 自 .NET Framework 4.7 起，ASP.NET 新增了一组 API，以便开发者可以替换内存中对象缓存和内存监视的默认 ASP.NET 实现代码。 现在，如果 ASP.NET 实现代码不充分，开发者可以替换以下三个组件中的任意一个：
 
-- **对象缓存存储** ： 在新的缓存提供程序配置部分中，开发者可以使用新接口 **ICacheStoreProvider** 为 ASP.NET 应用程序插入对象缓存的新实现代码。
+- **对象缓存存储**： 在新的缓存提供程序配置部分中，开发者可以使用新接口 **ICacheStoreProvider** 为 ASP.NET 应用程序插入对象缓存的新实现代码。
 
-- **内存监视** ： 当运行的应用程序接近所配置的专用字节进程限制，或计算机的可用总物理内存不足时，ASP.NET 中的默认内存监视器就会通知应用程序。 接近这些限制时，就会触发通知。 对于某些应用程序，通知的触发点与限制过近，无法及时响应。 开发人员现在可以编写自己的内存监视器，以通过使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 属性替换默认的内存监视器。
+- **内存监视**： 当运行的应用程序接近所配置的专用字节进程限制，或计算机的可用总物理内存不足时，ASP.NET 中的默认内存监视器就会通知应用程序。 接近这些限制时，就会触发通知。 对于某些应用程序，通知的触发点与限制过近，无法及时响应。 开发人员现在可以编写自己的内存监视器，以通过使用 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 属性替换默认的内存监视器。
 
-- **内存限制响应** ： 默认情况下，当接近专用字节进程限制时，ASP.NET 会尝试释放对象缓存，并定期调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType>。 对于某些应用程序，<xref:System.GC.Collect%2A?displayProperty=nameWithType> 调用频率或缓存释放量的效率低下。 开发者现在可以向应用程序的内存监视器添加 **IObserver** 实现代码，从而替换或补充默认行为。
+- **内存限制响应**： 默认情况下，当接近专用字节进程限制时，ASP.NET 会尝试释放对象缓存，并定期调用 <xref:System.GC.Collect%2A?displayProperty=nameWithType>。 对于某些应用程序，<xref:System.GC.Collect%2A?displayProperty=nameWithType> 调用频率或缓存释放量的效率低下。 开发者现在可以向应用程序的内存监视器添加 **IObserver** 实现代码，从而替换或补充默认行为。
 
 <a name="wcf47"></a>
 
@@ -1585,9 +1585,9 @@ WPF 包括一个 [NuGet 包](https://www.nuget.org/packages/Microsoft.Wpf.Intero
 
     使用一致的开关格式是有益的，因为它们是由库公开的正式协定。 以下是两种明显的格式。
 
-    - *Switch*. *namespace*. *switchname*
+    - *Switch*.*namespace*.*switchname*
 
-    - *Switch*. *library*. *switchname*
+    - *Switch*.*library*.*switchname*
 
   - **更改为基于任务的异步模式 (TAP)**
 
@@ -1623,7 +1623,7 @@ WPF 包括一个 [NuGet 包](https://www.nuget.org/packages/Microsoft.Wpf.Intero
 
   - **HDPI 改进**
 
-    在 .NET Framework 4.6 中，WPF 现提供更出色的 HDPI 支持。 已对布局舍入进行了更改，以减少带边框的控件中的剪切实例。 默认情况下，仅当你的 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 设置为 .NET 4.6 时才启用此功能。  对于面向旧版 Framework，但在 .NET Framework 4.6 上运行的应用程序，可通过在 app.config 文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，选择启用新行为：
+    在 .NET Framework 4.6 中，WPF 现提供更出色的 HDPI 支持。 已对布局舍入进行了更改，以减少带边框的控件中的剪切实例。 默认情况下，仅当 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 设置为 .NET Framework 4.6 时，才启用此功能。  对于面向旧版 Framework，但在 .NET Framework 4.6 上运行的应用程序，可通过在 app.config 文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，选择启用新行为：
 
     ```xml
     <AppContextSwitchOverrides
@@ -1843,7 +1843,7 @@ WPF 包括一个 [NuGet 包](https://www.nuget.org/packages/Microsoft.Wpf.Intero
 
 ## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1 中的新增功能
 
-**2014 年 4 月版更新** ：
+**2014 年 4 月版更新**：
 
 - [Visual Studio 2013 Update 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) 包括对可移植类库模板的更新，以支持以下方案：
 
@@ -1967,7 +1967,7 @@ Windows 窗体的改进包括：
 
 ### <a name="parallel-computing"></a>并行计算
 
-.NET Framework 4.5 新增了多项有关并行计算的功能和改进。 其中包括改进的性能、增强的控件、对异步编程的增强支持、新的数据流库以及对并行调试和性能分析的增强支持。 请参阅“使用 .NET 进行并行编程”博客中的 [.NET 4.5 中有关并行的新增功能](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/)条目。
+.NET Framework 4.5 新增了多项有关并行计算的功能和改进。 其中包括改进的性能、增强的控件、对异步编程的增强支持、新的数据流库以及对并行调试和性能分析的增强支持。 请参阅“使用 .NET 进行并行编程”博客中的 [.NET Framework 4.5 中有关并行的新增功能](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/)条目。
 
 <a name="web"></a>
 

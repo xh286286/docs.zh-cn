@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134505"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982389"
 ---
 # <a name="is-c-reference"></a>is（C# 参考）
 
@@ -24,9 +24,7 @@ ms.locfileid: "89134505"
 从 C# 7.0 开始，`is` 和 [switch](switch.md) 语句支持模式匹配。 `is` 关键字支持以下模式：
 
 - [类型模式](#type-pattern)，用于测试表达式是否可转换为指定类型，如果可以，则将其转换为该类型的一个变量。
-
 - [常量模式](#constant-pattern)，用于测试表达式计算结果是否为指定的常数值。
-
 - [var 模式](#var-pattern)，始终成功的匹配，可将表达式的值绑定到新局部变量。
 
 ### <a name="type-pattern"></a>类型模式
@@ -39,19 +37,16 @@ ms.locfileid: "89134505"
 
 其中 expr 是计算结果为某个类型的实例的表达式，type 是 expr 结果要转换到的类型的名称，varname 是 expr 结果要转换到的对象（如果 `is` 测试为 `true`）    。
 
-如果 expr** 不为 `null` 且以下任意内容为 true，那么 `is` 表达式为 `true`：
+如果 expr 不为 `null` 且以下任意条件为 true，那么 `is` 表达式为 `true`：
 
 - *expr* 是与 *type* 具有相同类型的一个实例。
-
 - *expr* 是派生自 *type* 的类型的一个实例。 换言之，*expr* 结果可以向上转换为 *type* 的一个实例。
-
-- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型** 是其声明中定义的变量类型。 变量的运行时类型是分配给该变量的实例类型。
-
+- *expr* 具有属于 *type* 的一个基类的编译时类型，*expr* 还具有属于 *type* 或派生自 *type* 的运行时类型。 变量的编译时类型是其声明中定义的变量类型。 变量的运行时类型是分配给该变量的实例类型。
 - *expr* 是实现 *type* 接口的类型的一个实例。
 
-自 C# 7.1 起，expr** 可能有泛型类型参数及其约束定义的编译时类型。
+自 C# 7.1 起，expr 可能有泛型类型参数及其约束定义的编译时类型。
 
-如果 *expr* 为 `true` 且 `is` 与 `if` 语句配合使用，则仅在 `if` 语句内分配 *varname*。 *varname* 的使用范围：从 `is` 表达式到封闭 `if` 语句的块的末尾。 在任何其他位置使用 *varname* 都会因使用尚未分配的变量而生成编译时错误。
+如果 *expr* 为 `true` 且 `is` 与 `if` 语句配合使用，则仅在 `if` 语句内分配 *varname*。 *varname* 的使用范围：从 `is` 表达式到封闭 `if` 语句的块的末尾。 在任何其他位置使用 varname 都会因使用尚未分配的变量而生成编译时错误。
 
 下列示例使用 `is` 类型模式为类型的 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 方法提供实现。
 
@@ -104,6 +99,8 @@ ms.locfileid: "89134505"
 下面的示例显示 `null` 检查的比较：
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
+
+对于引用类型和可以为 null 的值类型，表达式 `x is null` 的计算方式有所不同。 对于可以为 null 的值类型，它使用 <xref:System.Nullable%601.HasValue?displayProperty=nameWithType>。 对于引用类型，它使用 `(object)x == null`。
 
 ### <a name="var-pattern"></a>var 模式
 

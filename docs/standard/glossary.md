@@ -1,14 +1,13 @@
 ---
 title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224408"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687774"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -56,11 +55,18 @@ ms.locfileid: "92224408"
 
 ## <a name="bcl"></a>BCL
 
-基类库。 也称为框架库。
+基类库。
 
 一组构成 System.\*（在一定的程度上构成 Microsoft.\*）命名空间的库。 BCL 是用于生成 ASP.NET Core 等较高级应用程序框架的较低级通用框架。
 
-[.NET 5（和 .NET Core）及更高版本](#net-5-and-later-versions)的 BCL 的源代码包含在 [.NET 运行时存储库](https://github.com/dotnet/runtime)中。 .NET Framework 中也提供了用于此 .NET 较新实现的大多数 BCL API，因此可将此源代码视为 .NET Framework BCL 源代码的分支。
+[.NET 5（和 .NET Core）及更高版本](#net-5-and-later-versions)的 BCL 的源代码包含在 [.NET 运行时存储库](https://github.com/dotnet/runtime)中。 这些 BCL API 中的大多数也可以在 .NET Framework 中获取，因此可将此源代码视为 .NET Framework BCL 源代码的一个分支。
+
+以下术语通常指 BCL 引用的相同 API 集合：
+
+- [核心 .NET 库](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [框架库](#framework-libraries)
+- [运行时库](#runtime)
+- [共享框架](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ CLR 处理内存分配和管理。 CLR 也是一种虚拟机，不仅可执行�
 
 “框架”一词在以下术语中有不同的含义：
 
+- [框架库](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [共享框架](#shared-framework)
 - [目标框架](#target-framework)
 - [TFM（目标框架名字对象）](#tfm)
 - [依赖于框架的应用](../core/deploying/index.md#publish-framework-dependent)
 
-在旧的 .NET 文档中，“框架”有时指 [.NET 的实现](#implementation-of-net)。 例如，某文章可能会将 .NET 5 称为框架。
+有时，“框架”指的是 [.NET 实现](#implementation-of-net)。 例如，某文章可能会将 .NET 5 称为框架。
+
+## <a name="framework-libraries"></a>框架库
+
+含义取决于上下文。 可指适用于 [.NET 5（和 .NET Core）及更高版本](#net-5-and-later-versions)的框架库，在这种情况下，它指 [BCL](#bcl) 引用的相同的库。 它也可指在 BCL 上构建并为 Web 应用提供其他 API 的 ASP.NET Core 框架库。
 
 ## <a name="gc"></a>GC
 
@@ -145,7 +157,7 @@ C# 等较高级的 .NET 语言编译为称为中间语言 (IL) 的硬件无关�
 .NET 实现的示例：
 
 - [.NET Framework](#net-framework)
-- [.NET 5 及更高版本（包括 .NET Core 2.1-3.1](#net-5-and-later-versions)
+- [.NET 5 及更高版本（包括 .NET Core 2.1-3.1）](#net-5-and-later-versions)
 - [通用 Windows 平台 (UWP)](#uwp)
 - [Mono](#mono)
 
@@ -258,21 +270,34 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具�
 - .NET Native（适用于 UWP）
 - Mono 运行时
 
-“运行时”一词在以下上下文中有不同的含义：
+“运行时”一词在某些上下文中有不同的含义：
 
-* [.NET 下载页](https://dotnet.microsoft.com/download)。
+* [.NET 5.0 下载页](https://dotnet.microsoft.com/download/dotnet/5.0)上的 .NET 运行时。
 
-  此处的“运行时”表示 [CLR](#clr) 与 [BCL](#bcl)（框架库）一起使用，可在计算机上下载和安装这些内容，以便能够在计算机上运行[依赖于框架](../core/deploying/index.md#publish-framework-dependent)的应用。
+  可下载 .NET 运行时或其他运行时，如 ASP.NET Core 运行时 。 在此用法中运行时是一组必须安装在计算机上的组件，这样才能在计算机上运行[依赖于框架](../core/deploying/index.md#publish-framework-dependent)的应用。 .NET 运行时包括 [CLR](#clr) 和 .NET [共享框架](#shared-framework)，后者提供 [BCL](#bcl)。
 
-* 适用于 [.NET 5（和 .NET Core）及更高版本](#net-5-and-later-versions)的[运行时标识 (RID)](../core/rid-catalog.md)。
+* .NET 运行时库
 
-  此处的“运行时”表示 .NET 应用运行的 OS 平台和 CPU 体系结构，例如 `linux-x64`。
+  指 [BCL](#bcl) 引用的相同的库。 但是，其他运行时（例如 ASP.NET Core 运行时）具有不同的[共享框架](#shared-framework)，并具有在 BCL 上构建的其他库。
 
-旧的 .NET 文档有时在 [.NET 的实现](#implementation-of-net)中使用“运行时”，如以下示例中所示：
+* [运行时标识符 (RID)](../core/rid-catalog.md)。
 
-- “各种 .NET 运行时实现特定版本的 .NET Standard。”
-- “计划在多个运行时上运行的库应将此框架作为目标。” （参阅 .NET Standard）
-- “各种 .NET 运行时实现特定版本的 .NET Standard。 … 每个 .NET 运行时版本都将会公布它所支持的最高 .NET Standard 版本...”
+  此处的“运行时”表示运行 .NET 应用的 OS 平台和 CPU 体系结构，例如：`linux-x64`。
+
+* 有时在 [.NET 实现](#implementation-of-net)的意义上使用“运行时”，如以下示例中所示：
+
+  - “各种 .NET 运行时实现特定版本的 .NET Standard。 … 每个 .NET 运行时版本都将会公布它所支持的最高 .NET Standard 版本...”
+  - “计划在多个运行时上运行的库应将此框架作为目标。” （参阅 .NET Standard）
+
+## <a name="shared-framework"></a>共享框架
+
+含义取决于上下文。 .NET 共享框架指 [.NET 运行时](#runtime)中包含的库。 在这种情况下，适用于 [.NET 5（和 .NET Core）及更高版本](#net-5-and-later-versions)的共享框架指 [BCL](#bcl) 引用的相同的库。
+
+也存在其他共享框架。 ASP.NET Core 共享框架指 [ASP.NET Core 运行时](#runtime)中包含的库，其中包括 BCL 以及供 Web 应用使用的其他 API。
+
+对于[依赖于框架的应用](../core/deploying/index.md#publish-framework-dependent)，共享框架由库组成，这些库包含在运行应用的计算机上的文件夹中的程序集内。 对于[自包含应用](../core/deploying/index.md#publish-self-contained)，共享框架程序集包含在该应用中。
+
+有关详细信息，请参阅[深入了解 .NET Core 基元，第 2 部分：共享框架](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/)。
 
 ## <a name="stack"></a>堆栈
 

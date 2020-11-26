@@ -3,18 +3,19 @@ title: 平台兼容性分析器
 description: 可帮助检测跨平台应用和库中的平台兼容性问题的 Roslyn 分析器。
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805293"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819482"
 ---
 # <a name="platform-compatibility-analyzer"></a>平台兼容性分析器
 
 你可能听说过“一个 .NET”的格言：一个统一的平台，用于生成任何类型的应用程序。 .NET 5.0 SDK 包括 ASP.NET Core、Entity Framework Core、WinForms、WPF、Xamarin 和 ML.NET，并且随着时间的推移，将添加对更多平台的支持。 .NET 5.0 旨在提供一种无需推出不同 .NET 风格，但不会尝试完全抽象出基础操作系统 (OS) 的体验。 你将继续能够调用特定于平台的 API，例如 P/Invoke、WinRT 或适用于 iOS 和 Android 的 Xamarin 绑定。
 
-但在组件上使用特定于平台的 API 意味着代码在所有平台上都不再有效。 我们需要一种在设计时进行检测的方法，使开发人员在无意中使用特定于平台的 API 时获得诊断。 为了实现此目标，.NET 5.0 引入了[平台兼容性分析器](/visualstudio/code-quality/ca1416)和补充 API，帮助开发人员根据需要识别和使用特定于平台的 API。
+但在组件上使用特定于平台的 API 意味着代码在所有平台上都不再有效。 我们需要一种在设计时进行检测的方法，使开发人员在无意中使用特定于平台的 API 时获得诊断。 为了实现此目标，.NET 5.0 引入了[平台兼容性分析器](../../fundamentals/code-analysis/quality-rules/ca1416.md)和补充 API，帮助开发人员根据需要识别和使用特定于平台的 API。
+
 新的 API 包括：
 
 - <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 用于将 API 批注为特定于平台，<xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> 用于将 API 批注为在特定 OS 上不受支持。 这些属性可以选择包括版本号，并且已应用于核心 .NET 库中的某些特定于平台的 API。
@@ -25,7 +26,7 @@ ms.locfileid: "91805293"
 
 ## <a name="prerequisites"></a>先决条件
 
-平台兼容性分析器是 Roslyn 代码质量分析器之一。 从 .NET 5.0 开始，这些分析器[包含在 .NET SDK 中](../../fundamentals/code-analysis/overview.md)。 默认情况下，仅为面向 `net5.0` 或更高版本的项目启用平台兼容性分析器。 但是，可以为面向其他框架的项目[启用](/visualstudio/code-quality/ca1416.md#configurability)该分析器。
+平台兼容性分析器是 Roslyn 代码质量分析器之一。 从 .NET 5.0 开始，这些分析器[包含在 .NET SDK 中](../../fundamentals/code-analysis/overview.md)。 默认情况下，仅为面向 `net5.0` 或更高版本的项目启用平台兼容性分析器。 但是，可以为面向其他框架的项目[启用该分析器](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability)。
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>分析器如何确定平台依赖关系
 

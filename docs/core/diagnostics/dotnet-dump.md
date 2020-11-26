@@ -1,28 +1,42 @@
 ---
-title: dotnet-dump - .NET Core
-description: 安装和使用 dotnet-dump 命令行工具。
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: dotnet-dump 诊断工具 - .NET CLI
+description: 了解如何安装和使用 dotnet-dump CLI 工具，以在没有任何本机调试器的情况下收集和分析 Windows 和 Linux 转储。
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598108"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822199"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>转储收集和分析实用工具 (dotnet-dump)
 
  本文适用于： ✔️ .NET Core 3.0 SDK 及更高版本
 
 > [!NOTE]
-> macOS 上不支持 `dotnet-dump`。
+> macOS 的 `dotnet-dump` 仅在 .NET 5.0 及更高版本中受支持。
 
-## <a name="install-dotnet-dump"></a>安装 dotnet-dump
+## <a name="install"></a>安装
 
-若要安装最新版 `dotnet-dump` [NuGet 包](https://www.nuget.org/packages/dotnet-dump)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+可采用两种方法来下载和安装 `dotnet-dump`：
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **dotnet 全局工具：**
+
+  若要安装最新版 `dotnet-dump` [NuGet 包](https://www.nuget.org/packages/dotnet-dump)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **直接下载：**
+
+  下载与平台相匹配的工具可执行文件：
+
+  | (OS)  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>摘要
 
@@ -58,7 +72,7 @@ dotnet-dump [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>摘要
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
 ### <a name="options"></a>选项
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  指定从中收集内存转储的进程的 ID 号。
+  指定从中收集转储的进程的 ID 号。
+
+- **`-n|--name <name>`**
+
+  指定从中收集转储的进程的名称。
 
 - **`--type <Full|Heap|Mini>`**
 

@@ -1,25 +1,39 @@
 ---
-title: dotnet-counters - .NET Core
-description: 了解如何安装和使用 dotnet-counter 命令行工具。
-ms.date: 02/26/2020
-ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: dotnet-counters 诊断工具 - .NET CLI
+description: 了解如何安装和使用 dotnet-counter CLI 工具进行临时运行状况监视和初级性能调查。
+ms.date: 11/17/2020
+ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507249"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822212"
 ---
-# <a name="dotnet-counters"></a>dotnet-counters
+# <a name="investigate-performance-counters-dotnet-counters"></a>调查性能计数器 (dotnet-counters)
 
  本文适用于： ✔️ .NET Core 3.0 SDK 及更高版本
 
-## <a name="install-dotnet-counters"></a>安装 dotnet-counters
+## <a name="install"></a>安装
 
-若要安装最新版 `dotnet-counters` [NuGet 包](https://www.nuget.org/packages/dotnet-counters)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+可采用两种方法来下载和安装 `dotnet-counters`：
 
-```dotnetcli
-dotnet tool install --global dotnet-counters
-```
+- **dotnet 全局工具：**
+
+  若要安装最新版 `dotnet-counters` [NuGet 包](https://www.nuget.org/packages/dotnet-counters)，请使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令：
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-counters
+  ```
+
+- **直接下载：**
+
+  下载与平台相匹配的工具可执行文件：
+
+  | (OS)  | 平台 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-counters/win-x86) \| [x64](https://aka.ms/dotnet-counters/win-x64) \| [arm](https://aka.ms/dotnet-counters/win-arm) \| [arm-x64](https://aka.ms/dotnet-counters/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-counters/linux-x64) \| [arm](https://aka.ms/dotnet-counters/linux-arm) \| [arm64](https://aka.ms/dotnet-counters/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-counters/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-counters/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>摘要
 
@@ -57,14 +71,18 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>摘要
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>选项
 
 - **`-p|--process-id <PID>`**
 
-  要监视的进程的 ID。
+  要从中收集计数器数据的进程的 ID。
+
+- **`-n|--name <name>`**
+
+  要从中收集计数器数据的进程的名称。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -86,8 +104,8 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
   在集合配置参数之后，用户可以追加 `--`，后跟一个命令，以启动至少具有 5.0 运行时的 .NET 应用程序。 `dotnet-counters` 将启动一个进程，并收集请求的指标。 这通常用于收集应用程序的启动路径的指标，并可用于诊断或监视在主入口点前后发生的问题。
 
-> [!NOTE]
-> 使用此选项监视第一个 .NET 5.0 进程，该进程与该工具通信，这意味着如果命令启动多个 .NET 应用程序，它将仅收集第一个应用。 因此，建议在自包含应用程序上使用此选项，或使用 `dotnet exec <app.dll>` 选项。
+  > [!NOTE]
+  > 使用此选项监视第一个 .NET 5.0 进程，该进程与该工具通信，这意味着如果命令启动多个 .NET 应用程序，它将仅收集第一个应用。 因此，建议在自包含应用程序上使用此选项，或使用 `dotnet exec <app.dll>` 选项。
 
 ### <a name="examples"></a>示例
 
@@ -162,7 +180,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>摘要
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>选项
@@ -170,6 +188,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 - **`-p|--process-id <PID>`**
 
   要监视的进程的 ID。
+
+- **`-n|--name <name>`**
+
+  要监视的进程的名称。
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -245,7 +267,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
 - 启动 `my-aspnet-server.exe` 并从其启动监视加载的程序集的数量（仅限 .NET 5.0 或更高版本）：
 
-  注意：这仅适用于运行 .NET 5.0 或更高版本的应用。
+  > [!IMPORTANT]
+  > 这仅适用于运行 .NET 5.0 或更高版本的应用。
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
@@ -259,7 +282,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
   
 - 启动 `my-aspnet-server.exe`，以 `arg1` 及 `arg2` 作为命令行参数，并从其启动监视其工作集和 GC 堆大小（仅限 .NET 5.0 或更高版本）：
 
-  注意：这仅适用于运行 .NET 5.0 或更高版本的应用。
+  > [!IMPORTANT]
+  > 这仅适用于运行 .NET 5.0 或更高版本的应用。
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2

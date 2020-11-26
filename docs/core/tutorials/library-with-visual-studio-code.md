@@ -1,24 +1,26 @@
 ---
-title: 在 Visual Studio Code 中创建 .NET Standard 类库
-description: 了解如何使用 Visual Studio Code 创建 .NET Standard 类库。
-ms.date: 06/08/2020
-ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: 使用 Visual Studio Code 创建 .NET 类库
+description: 了解如何使用 Visual Studio Code 创建 .NET 类库。
+ms.date: 11/18/2020
+ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495507"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916086"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>教程：在 Visual Studio Code 中创建 .NET Standard 库
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>教程：使用 Visual Studio Code 创建 .NET 类库
 
-在本教程中，将创建包含一个字符串处理方法的简单实用工具库。 我们把它作为[扩展方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)进行实现，这样就可以把它作为 <xref:System.String> 类成员进行调用。
+在本教程中，将创建包含一个字符串处理方法的简单实用工具库。
 
-类库定义的是可以由应用程序调用的类型和方法。 借助面向 .NET Standard 2.0 的类库，任何支持相应 .NET Standard 版本的 .NET 实现都可以调用库。 完成类库后，可以将其作为第三方组件进行分发，也可以作为与一个或多个应用程序捆绑在一起的组件进行分发。
+类库定义的是可以由应用程序调用的类型和方法。 如果库以 .NET Standard 2.0 为目标，则支持 .NET Standard 2.0 的任何 .NET 实现（包括 .NET Framework）均可调用该库。 如果库以 .NET 5 为目标，则以 .NET 5 为目标的任何应用程序均可调用该库。 本教程演示如何以 .NET 5 为目标。
+
+创建类库后，可将其作为第三方组件进行分发，也可将其作为与一个或多个应用程序捆绑在一起的组件进行分发。
 
 ## <a name="prerequisites"></a>先决条件
 
 1. 已安装 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) 的 [Visual Studio Code](https://code.visualstudio.com/)。 有关如何在 Visual Studio Code 上安装扩展的信息，请访问 [VS Code 扩展市场](https://code.visualstudio.com/docs/editor/extension-gallery)。
-2. [.NET Core 3.1 SDK 或更高版本](https://dotnet.microsoft.com/download)
+2. [.NET 5.0 SDK 或更高版本](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>创建解决方案
 
@@ -48,7 +50,7 @@ ms.locfileid: "89495507"
 
 ## <a name="create-a-class-library-project"></a>创建类库项目
 
-将名为“StringLibrary”的新 .NET Standard 类库项目添加到解决方案。
+将名为“StringLibrary”的新 .NET 类库项目添加到解决方案。
 
 1. 在终端中，运行以下命令创建库项目：
 
@@ -81,15 +83,15 @@ ms.locfileid: "89495507"
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. 请检查以确保库面向 .NET Standard 的正确版本。 在资源管理器中，打开 StringLibrary/StringLibrary.csproj。
+1. 检查以确保该库以 .NET 5 为目标。 在资源管理器中，打开 StringLibrary/StringLibrary.csproj。
 
-   `TargetFramework` 元素表明项目面向 .NET Standard 2.0。
+   `TargetFramework` 元素表明项目以 .NET 5.0 为目标。
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
 
      <PropertyGroup>
-       <TargetFramework>netstandard2.0</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
      </PropertyGroup>
 
    </Project>
@@ -116,7 +118,7 @@ ms.locfileid: "89495507"
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
+     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\net5.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
        0 Error(s)
@@ -208,12 +210,11 @@ ms.locfileid: "89495507"
 
 ## <a name="additional-resources"></a>其他资源
 
-* [使用 .NET Core CLI 开发库](libraries.md)
-* [.NET Standard 版本及其支持的平台](../../standard/net-standard.md)。
+* [使用 .NET CLI 开发库](libraries.md)
 
 ## <a name="next-steps"></a>后续步骤
 
 在本教程中，你创建了一个解决方案，添加了一个库项目，并添加了一个使用该库的控制台应用项目。 在下一教程中，将向解决方案中添加单元测试项目。
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio Code 中使用 .NET Core 测试 .NET Standard 库](testing-library-with-visual-studio-code.md)
+> [使用 Visual Studio Code 通过 .NET 测试 .NET 类库](testing-library-with-visual-studio-code.md)

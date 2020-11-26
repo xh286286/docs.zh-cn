@@ -4,14 +4,13 @@ description: 了解如何使用基于 .NET 任务的异步模型直接编写绑�
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fcc41c4ea5037d643402fc722e8f16f28d560ee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70169106"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823324"
 ---
 # <a name="async-in-depth"></a>深入了解异步
 
@@ -84,7 +83,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 请求完成且数据通过设备驱动程序返回后，会经由中断通知 CPU 新接收到的数据。  处理中断的方式因操作系统不同而有所不同，但最终都会通过操作系统将数据传递到系统互操作调用（例如，Linux 中的中断处理程序将安排 IRQ 的下半部分通过操作系统异步向上传递数据）。  请注意这仍  是异步进行的！  在下一个可用线程能执行异步方法且“解包”已完成任务的结果前，结果会排入队列。
 
-在整个过程中，关键点在于**没有线程专用于运行任务**。  尽管需要在一些上下文中执行工作（即，操作系统确实必须将数据传递到设备驱动程序并响应中断），但没有专用于*等待*数据从请求返回的线程。  这让系统能处理更多的工作而不是等待某些 I/O 调用结束。
+在整个过程中，关键点在于 **没有线程专用于运行任务**。  尽管需要在一些上下文中执行工作（即，操作系统确实必须将数据传递到设备驱动程序并响应中断），但没有专用于 *等待* 数据从请求返回的线程。  这让系统能处理更多的工作而不是等待某些 I/O 调用结束。
 
 虽从上述内容来看需要完成许多工作，但以实际时间来计量，这远少于执行实际 I/O 工作所花费的时间。 虽然不是完全精确，但此类调用可能的时间线如下所示：
 

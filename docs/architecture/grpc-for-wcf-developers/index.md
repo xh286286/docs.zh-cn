@@ -2,12 +2,12 @@
 title: 适用于 WCF 开发人员的 ASP.NET Core gRPC - 适用于 WCF 开发人员的 gRPC
 description: 在适用于 WCF 开发人员的 ASP.NET Core 3.0 中构建 gRPC 服务的简介
 ms.date: 09/02/2019
-ms.openlocfilehash: 6e18ecfdb8fcbe20f71fd0a7c77076166451427a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c9cc5ef9c06d5262fb85850f8a3b178d46e5c6fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144352"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689272"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>适用于 WCF 开发人员的 ASP.NET Core gRPC
 
@@ -49,7 +49,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 ## <a name="introduction"></a>介绍
 
-gRPC 是用于构建网络服务和分布式应用程序的新式框架。 假设结合了 SOAP 跨平台互操作性的 Windows Communication Foundation (WCF) NetTCP 绑定的性能。 gRPC 建立在 HTTP/2 和 Protobuf 消息编码协议的基础上，在应用程序和服务之间提供高性能、低带宽的通信。 它支持跨最常用的编程语言和平台（包括 .NET、Java、Python、Node.js、Go、C++）生成服务器和客户端代码。 凭借对 ASP.NET Core 3.0 中的 gRPC 的第一类支持，外加适用于 .NET 4.x 的现有 gRPC 工具和库，WCF 是希望在组织中采用 .NET Core 的开发团队的一种很好的替代方法。
+gRPC 是用于构建网络服务和分布式应用程序的新式框架。 假设结合了 SOAP 跨平台互操作性的 Windows Communication Foundation (WCF) NetTCP 绑定的性能。 gRPC 建立在 HTTP/2 和 Protobuf 消息编码协议的基础上，在应用程序和服务之间提供高性能、低带宽的通信。 它支持跨最常用的编程语言和平台（包括 .NET、Java、Python、Node.js、Go、C++）生成服务器和客户端代码。 凭借对 ASP.NET Core 3.0 中的 gRPC 的卓越支持，外加适用于 .NET Framework 4.x 的现有 gRPC 工具和库，WCF 是希望在组织中采用 .NET Core 的开发团队的一种很好的替代方法。
 
 ## <a name="who-should-use-this-guide"></a>本指南的目标读者
 

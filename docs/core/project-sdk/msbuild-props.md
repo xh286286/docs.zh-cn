@@ -4,12 +4,12 @@ description: .NET SDK 可以理解的 MSBuild 属性和项的引用。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063223"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687466"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 项目的 MSBuild 引用
 
@@ -123,7 +123,7 @@ ms.locfileid: "93063223"
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost` 属性是在 .NET SDK 的 2.1.400 版本中引入的。 它控制是否为部署创建本机可执行文件。 自包含部署需要本机可执行文件。
+`UseAppHost` 属性控制是否为部署创建本机可执行文件。 自包含部署需要本机可执行文件。
 
 在 .NET Core3.0 及更高版本中，默认情况下会创建依赖于框架的可执行文件。 将 `UseAppHost` 属性设置为 `false` 可禁用可执行文件的生成。
 
@@ -354,7 +354,7 @@ ms.locfileid: "93063223"
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [引用](#reference)
-- [还原属性](#restore-properties)
+- [与还原相关的属性](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
@@ -412,13 +412,44 @@ ms.locfileid: "93063223"
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a>还原属性
+### <a name="restore-related-properties"></a>与还原相关的属性
 
 还原被引用的包会安装它的所有直接依赖项，以及这些依赖项的全部依赖项。 可以通过指定 `RestorePackagesPath` 和 `RestoreIgnoreFailedSources` 等属性来自定义包还原。 若要详细了解这些属性和其他属性，请参阅[还原目标](/nuget/reference/msbuild-targets#restore-target)。
 
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="hosting-properties-and-items"></a>托管属性和项
+
+- [EnableComHosting](#enablecomhosting)
+- [EnableDynamicLoading](#enabledynamicloading)
+
+### <a name="enablecomhosting"></a>EnableComHosting
+
+`EnableComHosting` 属性表示程序集提供了 COM 服务器。 将 `EnableComHosting` 设置为 `true` 也表明 [EnableDynamicLoading](#enabledynamicloading) 为 `true`。
+
+```xml
+<PropertyGroup>
+  <EnableComHosting>True</EnableComHosting>
+</PropertyGroup>
+```
+
+有关详细信息，请参阅[向 COM 公开 .NET 组件](../native-interop/expose-components-to-com.md)。
+
+### <a name="enabledynamicloading"></a>EnableDynamicLoading
+
+`EnableDynamicLoading` 属性指示程序集是动态加载的组件。 组件可以是 [COM 库](/windows/win32/com/the-component-object-model)，也可以是[在本机主机中使用的](../tutorials/netcore-hosting.md)非 COM 库。 将此属性设置为 `true` 会产生以下结果：
+
+- 生成 runtimeconfig.json 文件。
+- [前滚](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)设置为 `LatestMinor`。
+- 在本地复制 NuGet 引用。
+
+```xml
+<PropertyGroup>
+  <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
 
