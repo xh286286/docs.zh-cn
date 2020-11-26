@@ -2,15 +2,16 @@
 title: 活动库
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: fae2a94b5e5e776625aa7f26700980640b66afd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a0c289315d7181645573098916788f18493abb8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142896"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245688"
 ---
 # <a name="activity-library"></a>活动库
-本节包含演示 Windows 工作流基础 （WF） 中高级自定义活动的示例。  
+
+本部分包含的示例演示了 Windows Workflow Foundation (WF) 中的高级自定义活动。  
   
 ## <a name="in-this-section"></a>本节内容
 
@@ -21,10 +22,10 @@ ms.locfileid: "79142896"
  演示 `ThrottleParallelForEach` 活动与 <xref:System.Activities.Statements.ParallelForEach%601> 活动的相似之处，二者的不同之处在于，前者允许设置一个并发因子来限制要同时执行的分支的数量。
   
  [数据库访问活动](database-access-activities.md)  
- 演示如何创建允许访问数据库以检索或修改信息并使用[ADO.NET](../../data/adonet/index.md)访问数据库的活动。  
+ 演示如何创建活动，以允许访问数据库以检索或修改信息，并使用 [ADO.NET](../../data/adonet/index.md) 来访问数据库。  
   
  [.NET Framework 4.5 中的外部化策略活动](externalized-policy-activity-in-net-framework-4-5.md)  
- 演示外化策略4活动如何允许使用 WF 3.5 中随附的规则引擎直接在 （WF 4.5） 中的 Windows 工作流基础 （WF <xref:System.Workflow.Activities.Rules.RuleSet> 4.5） 中的[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Windows 工作流基础中执行现有的 Windows 工作流基础。
+ 演示 ExternalizedPolicy4 活动如何 <xref:System.Workflow.Activities.Rules.RuleSet> [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 通过使用在 wf 3.5 中随附的规则引擎，在 Windows Workflow Foundation wf 4.5 (中，通过) 中的 wf 直接执行 .NET Framework 3.5 (WF) 3.5 中的现有 Windows Workflow Foundation。
   
  [非泛型 ForEach](non-generic-foreach.md)  
  演示了如何创建非泛型版本的 <xref:System.Activities.Statements.ForEach%601> 活动。  

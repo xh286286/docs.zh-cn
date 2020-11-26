@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420755"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245336"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess 接口
 
@@ -30,8 +30,9 @@ ms.locfileid: "83420755"
 
 ## <a name="methods"></a>方法
 
-| 方法                                                                                                                                               | 说明                                                                                     |
+| 方法                                                                                                                                               | 描述                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [GetRuntimeNameByAddress](ixclrdataprocess-getruntimenamebyaddress-method.md)                     | 获取给定地址的名称。                                                               |
 | [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | `AppDomain`按其唯一 id 在进程中获取。                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | 提供枚举进程的模块的句柄。                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | 枚举此进程的模块。                                                         |
@@ -46,7 +47,7 @@ ms.locfileid: "83420755"
 
 ## <a name="requirements"></a>要求
 
-**平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。
+**平台：** 请参阅 [系统要求](../../get-started/system-requirements.md)。
 **标头：** 内容  
 **库：** 内容  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

@@ -2,17 +2,19 @@
 title: 持久性最佳做法
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: b0276bdfd6dcf2e12357224d9a92484a5da9eac3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 950a5d5c742b7882db93d71f3e7f205009f2a863
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246142"
 ---
 # <a name="persistence-best-practices"></a>持久性最佳做法
+
 本文档介绍了针对与工作流持久性相关的工作流设计和配置的最佳实践。  
   
 ## <a name="design-and-implementation-of-durable-workflows"></a>持久工作流的设计和实现  
+
  通常，工作流会在较短的时段内执行工作，这些时段将与工作流因等待事件而处于空闲状态的时段交错。 此事件可以是消息或过期计时器之类的内容。 若要能在工作流的状态变成空闲时卸载工作流，则服务主机必须保留工作流实例。 仅在工作流实例未位于非持久性区域中时（例如，等待事务完成或等待异步回调）可能出现此情况。 若要允许卸载空闲工作流实例，工作流作者应仅对生存期较短的操作使用事务范围和异步活动。 具体而言，作者应尽可能缩短延迟活动在这些非持久性区域中的保留时间。  
   
  只有在可序列化工作流使用的所有数据类型时，才能保留工作流。 此外，持久化工作流中使用的自定义类型必须可通过 <xref:System.Runtime.Serialization.NetDataContractSerializer> 进行序列化，以便 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 能保留它们。  
@@ -24,6 +26,7 @@ ms.locfileid: "90558246"
  Windows Server App Fabric 大大简化了持久性的配置和使用。 有关详细信息，请参阅 [Windows Server App Fabric 持久性](/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="configuration-of-scalability-parameters"></a>可伸缩性参数的配置  
+
  可伸缩性和性能要求将决定以下参数的设置：  
   
 - <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
@@ -35,6 +38,7 @@ ms.locfileid: "90558246"
  应根据当前方案设置这些参数，如下所示。  
   
 ### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>方案：少量工作流实例需要最佳响应时间  
+
  在此方案中，所有工作流实例应在其状态变成空闲时保持被加载。 将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 设置为较大的值。 使用此设置可阻止工作流实例在计算机间移动。 仅在满足以下一个或多个条件时使用此设置：  
   
 - 工作流实例在其整个生存期内收到一条消息。  
@@ -46,14 +50,17 @@ ms.locfileid: "90558246"
  使用 <xref:System.Activities.Statements.Persist> 活动或将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 设置为 0，可在服务主机或计算机出现故障后恢复工作流实例。  
   
 ### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>方案：工作流实例长时间处于空闲状态  
+
  在此方案中，将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 设置为 0 可尽快释放资源。  
   
 ### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>方案：工作流实例在短时间内收到多条消息  
+
  在此方案中，如果这些消息都通过同一台计算机接收，则将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 设置为 60 秒。 这将阻止对工作流实例进行一系列快速卸载和加载。 同时也不会在内存中将该实例保留过长时间。  
   
  如果这些消息可通过不同的计算机接收，则将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 设置为 0，并将 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> 设置为 BasicRetry 或 AggressiveRetry。 这样做将允许工作流实例由其他计算机加载。  
   
 ### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>方案：工作流在较短时间内使用延迟活动  
+
  在此方案中，<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 将定期轮询因过期的 <xref:System.Activities.Statements.Delay> 活动而应加载的实例的持久性数据库。 如果 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 找到一个将在下一个轮询时间间隔中过期的计时器，则 SQL 工作流实例存储将缩短轮询时间间隔。 之后，下一次轮询将在计时器过期后发生。 这样一来，SQL 工作流实例存储将实现运行时间长于轮询时间间隔（由 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> 设置）的计时器的高精度。 若要启用较短延迟的及时处理，工作流实例必须至少在内存中保留一个轮询时间间隔。  
   
  将 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 设置为 0 可将过期时间写入持久性数据库。  
@@ -63,6 +70,7 @@ ms.locfileid: "90558246"
  建议不要减少 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>，因为这将会增加持久性数据库的负载。 每台使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 的服务主机在每个检测周期轮询数据库一次。 如果服务主机的数目过多，则将 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> 设置为过短的时间间隔可能会导致系统性能下降。  
   
 ## <a name="configuring-the-sql-workflow-instance-store"></a>配置 SQL 工作流实例存储  
+
  SQL 工作流实例存储具有以下配置参数：  
   
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceEncodingOption%2A>  

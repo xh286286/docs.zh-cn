@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 58e86e5566775048e081bfb4ac217a7747b98a35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c253358b68cf18a23bab4d12d4ad760874103bff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579405"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246402"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>如何：从服务终结点导出元数据
+
 本主题介绍如何从服务终结点导出元数据。  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>从服务终结点导出元数据  
@@ -47,12 +48,14 @@ ms.locfileid: "84579405"
 7. 现在可以使用元数据，例如通过调用 <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29> 方法将它写入文件。  
   
 ## <a name="example"></a>示例  
+
  下面列出了此示例的完整代码。  
   
  [!code-csharp[S_UEWsdlExporter#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#0)]
  [!code-vb[S_UEWsdlExporter#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#0)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
+
  编译 Program.cs 时引用 System.ServiceModel.dll。  
   
 ## <a name="see-also"></a>另请参阅

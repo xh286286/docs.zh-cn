@@ -7,22 +7,24 @@ helpviewer_keywords:
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-ms.openlocfilehash: 33c656ed453a1a2df6916c691245e01bbf7c6f33
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bf2aa8d755303acab168f306cead1b496c87eff1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421444"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246064"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 编程
-本部分包含一组旨在成为精通 Windows Workflow Foundation （WF）程序员的入门教程主题。  
+
+本部分包含一组初级主题，你应该了解这些主题，以便成为 (WF) 程序员的精通 Windows Workflow Foundation。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [设计工作流](designing-workflows.md)  
  介绍在工作流开发中使用的流控制范例的主题。  
   
  [使用和创建活动](using-and-creating-activities.md)  
- 介绍 Windows Workflow Foundation （WF）中提供的系统提供的活动的主题。  
+ 描述系统提供的活动 Windows Workflow Foundation (WF) 提供的主题。  
   
  [Windows Workflow Foundation 数据模型](data-model.md)  
  介绍 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的变量、参数和表达式的主题。  
@@ -46,13 +48,13 @@ ms.locfileid: "83421444"
  介绍以自动或手动方式持久保存工作流数据和从内存中卸载工作流的选项的主题。  
   
  [迁移指南](migration-guidance.md)  
- 本主题介绍如何从 Windows Workflow Foundation （WF）的早期版本迁移工作流。  
+ 介绍如何从以前版本的 Windows Workflow Foundation (WF) 迁移工作流的主题。  
   
  [工作流跟踪](workflow-tracking-and-tracing.md)  
  介绍工作流跟踪以及如何将这些功能用于监视工作流应用程序的主题。  
   
  [工作流安全性](workflow-security.md)  
- 介绍如何在使用 SQL 和 Windows Communication Foundation （WCF）时保持工作流的安全。  
+ 讨论在使用 SQL 和 Windows Communication Foundation (WCF) 时，如何保护工作流的安全。  
   
  [Windows Workflow Foundation 4 性能](performance.md)  
  讨论 Windows Workflow Foundation 4 性能，并将其与以前版本的 WF 进行比较。

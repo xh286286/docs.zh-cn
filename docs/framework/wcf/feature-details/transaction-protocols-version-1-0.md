@@ -2,15 +2,16 @@
 title: 事务协议版本 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 9e21da0dfdda514e60b6f53090f5225b57aa1b75
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 7b1cfc21a1361cee3027fd5a61ec61a4a0a998b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720369"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246233"
 ---
 # <a name="transaction-protocols-version-10"></a>事务协议版本 1.0
-Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS 协调协议版本1.0。 有关版本1.1 的详细信息，请参阅 [事务协议](transaction-protocols.md)。  
+
+Windows Communication Foundation (WCF) 版本1实现 WS-Atomic 事务的1.0 版和 WS-Coordination 协议。 有关版本1.1 的详细信息，请参阅 [事务协议](transaction-protocols.md)。  
   
 |规范/文档|链接|  
 |-----------------------------|----------|  
@@ -68,14 +69,17 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
 |xsd|`http://www.w3.org/2001/XMLSchema`|  
   
 ## <a name="transaction-manager-bindings"></a>事务管理器绑定  
+
  R1001：事务管理器必须使用 SOAP 1.1 和 WS-Addressing 2004/08 进行 WS-Atomic Transaction 和 WS-Coordination 消息交换。  
   
  应用程序消息并不限于这些绑定，将在后面进行说明。  
   
 ### <a name="transaction-manager-https-binding"></a>事务管理器 HTTPS 绑定  
+
  事务管理器 HTTPS 绑定仅依赖于传输安全以在事务树中的每个发送方-接收方对之间实现安全性和建立信任。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 传输配置  
+
  X.509 证书用于建立事务管理器标识。 要求对客户端/服务器进行身份验证，客户端/服务器授权作为实现详细信息保留：  
   
 - R1111：通过网络提供的 X.509 证书必须具有与发起方计算机的完全限定域名 (FQDN) 匹配的主题名称。  
@@ -83,20 +87,25 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
 - B1112：DNS 必须在系统中每个发送方-接收方对之间都有效，才能使 X.509 主题名称检查成功。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>激活和注册绑定配置  
+
  WCF 需要通过 HTTPS 相关的请求/答复双工绑定。 （有关关联的更多信息和请求/答复消息交换模式的说明，请参见 WS-Atomic Transaction，第 8 节。）  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 协议绑定配置  
+
  WCF 通过 HTTPS 支持单向 (数据报) 消息。 消息中的关联作为实现详细信息保留。  
   
- B2131：实现必须支持 `wsa:ReferenceParameters` ，如 ws-addressing 中所述，以实现 WCF 的2pc 消息的关联。  
+ B2131：实现必须支持， `wsa:ReferenceParameters` 如 WS-Addressing 中所述，实现 WCF 的2pc 消息的关联。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>事务管理器混合安全绑定  
- 这是一种替代的 (混合模式) 绑定，该模式使用传输安全性与用于标识建立的 WS 协调颁发的令牌模型结合使用。  激活和注册是在两个绑定间存在差异的仅有元素。  
+
+ 这是一种备用 (混合模式) 绑定，该模式使用传输安全性与用于标识建立的 WS-Coordination 颁发的令牌模型结合使用。  激活和注册是在两个绑定间存在差异的仅有元素。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 传输配置  
+
  X.509 证书用于建立事务管理器标识。 要求对客户端/服务器进行身份验证，客户端/服务器授权作为实现详细信息保留。  
   
 #### <a name="activation-message-binding-configuration"></a>激活消息绑定配置  
+
  激活消息通常不参与互操作，因为他们一般出现在应用程序及其本地事务管理器之间。  
   
  B1221： WCF 使用 [消息协议](messaging-protocols.md)) 中介绍的双工 HTTPS 绑定 (。 请求消息和答复消息是使用 WS-Addressing 2004/08 进行关联的。  
@@ -110,6 +119,7 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
  `t:IssuedTokens`应生成新的标头以附加到传出 `wscoor:CreateCoordinationContextResponse` 消息。  
   
 #### <a name="registration-message-binding-configuration"></a>注册消息绑定配置  
+
  B1231： WCF 使用) [消息协议](messaging-protocols.md) 中描述的双工 HTTPS 绑定 (。 请求消息和答复消息是使用 WS-Addressing 2004/08 进行关联的。  
   
  WS-AtomicTransaction 第 8 节更详尽地说明了关联和消息交换模式。  
@@ -119,11 +129,13 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
  `wsse:Timestamp`元素必须使用发出的进行签名 `SecurityContextToken STx` 。 此签名是拥有与特定事务关联的令牌的证明，用于对登记事务的参与者进行身份验证。 RegistrationResponse 消息通过 HTTPS 发回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 协议绑定配置  
+
  WCF 通过 HTTPS 支持单向 (数据报) 消息。 消息中的关联作为实现详细信息保留。  
   
- B2131：实现必须支持 `wsa:ReferenceParameters` ，如 ws-addressing 中所述，以实现 WCF 的2pc 消息的关联。  
+ B2131：实现必须支持， `wsa:ReferenceParameters` 如 WS-Addressing 中所述，实现 WCF 的2pc 消息的关联。  
   
 ## <a name="application-message-exchange"></a>应用程序消息交换  
+
  只要绑定满足下面的安全要求，应用程序就可以对应用程序间消息随意使用任何特定的绑定：  
   
 - R2001：应用程序间消息必须对 `t:IssuedTokens` 标头与消息头中的 `CoordinationContext` 一起进行流处理。  
@@ -137,6 +149,7 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
 ## <a name="message-examples"></a>消息示例  
   
 ### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext 请求/响应消息  
+
  下面的消息遵循请求/响应模式。  
   
 #### <a name="createcoordinationcontext"></a>CreateCoordinationContext  
@@ -248,6 +261,7 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
 ```  
   
 ### <a name="registration-messages"></a>注册消息  
+
  下面的消息是注册消息。  
   
 #### <a name="register"></a>注册  
@@ -348,6 +362,7 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
 ```  
   
 ### <a name="two-phase-commit-protocol-messages"></a>两阶段提交协议消息  
+
  下面的消息与两阶段提交 (2PC) 协议相关。  
   
 #### <a name="commit"></a>Commit  
@@ -374,6 +389,7 @@ Windows Communication Foundation (WCF) 版本1实现了 WS 原子事务和 WS �
 ```  
   
 ### <a name="application-messages"></a>应用程序消息。  
+
  下面的消息是应用程序消息。  
   
 #### <a name="application-message-request"></a>应用程序消息请求  

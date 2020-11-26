@@ -3,20 +3,22 @@ title: 支持多个 IIS 站点绑定
 description: 了解如何在 IIS 中承载 WCF 服务时，提供在同一站点上使用同一协议的多个基址。
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 6af4d885c7fc3d4dcc12ffb4bf6670f1a9b3d78c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7b9118a7a507939aab6276716722be8d6d02628c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246285"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>支持多个 IIS 站点绑定
+
 当宿主 Windows Communication Foundation (WCF) 服务 Internet Information Services (IIS) 7.0 时，可能需要提供在同一站点上使用同一协议的多个基址。 这使得同一服务可以响应多个不同的 URI。 当你想要承载侦听和的服务时，这会很有用 `http://www.contoso.com` `http://contoso.com` 。 在创建对于内部用户和外部用户使用不同基址的服务时，此功能也非常有用。 例如 `http://internal.contoso.com` 和 `http://www.contoso.com`。  
   
 > [!NOTE]
 > 此功能仅在使用 HTTP 协议时可用。  
   
 ## <a name="multiple-base-addresses"></a>多个基址  
+
  此功能仅适用于在 IIS 下承载的 WCF 服务。 默认情况下不启用此功能。 若要启用它，必须将 `multipleSiteBindingsEnabled` 特性添加到 `serviceHostingEnvironment` Web.config 文件中的 <> 元素，并将其设置为 `true` ，如下面的示例中所示。  
   
 ```xml  
