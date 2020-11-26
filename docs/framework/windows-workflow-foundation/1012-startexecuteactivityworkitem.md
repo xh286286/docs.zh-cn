@@ -2,27 +2,30 @@
 title: 1012 - StartExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: 29e9b1c6-c5d7-4b58-b59d-a06a923d3c80
-ms.openlocfilehash: d6b330bc454c39584e5027f757fd9d9d3434d941
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9cfceb12d56f93c0f9726849e34f4333f1399ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924574"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239635"
 ---
 # <a name="1012---startexecuteactivityworkitem"></a>1012 - StartExecuteActivityWorkItem
+
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|Id|1012|  
+|ID|1012|  
 |关键字|WFRuntime|  
-|级别|详细|  
+|级别|“详细”|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
   
 ## <a name="description"></a>描述  
+
  指示 ExecuteActivityWorkItem 正在开始执行。  
   
 ## <a name="message"></a>消息  
+
  开始为 Activity“%1”、DisplayName“%2”、InstanceId“%3”执行 ExecuteActivityWorkItem。  
   
 ## <a name="details"></a>详细信息  

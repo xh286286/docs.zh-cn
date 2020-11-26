@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 677e8a4b00b36c2f11b27eb65d57be8abf75d6d2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 825990c6c1690281af65d53c76dcca0f3e2ffb67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600641"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239037"
 ---
 # <a name="wcf-syndication"></a>WCF 联合
-Windows Communication Foundation （WCF）提供的支持可以轻松地使用 Atom、RSS 或其他自定义格式的联合源，这允许你读取和创建它们，还可以在服务终结点上公开它们。 本节中的主题详细描述用于联合的此种编程模型。  
+
+Windows Communication Foundation (WCF) 提供了在 Atom、RSS 或其他自定义格式中轻松使用联合源的支持，这允许你读取和创建它们，并在服务终结点上公开它们。 本节中的主题详细描述用于联合的此种编程模型。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [WCF 联合概述](wcf-syndication-overview.md)  
  概述 WCF 提供的联合支持。  
   

@@ -2,20 +2,22 @@
 title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 75f271fdbb5db34dc59918da16d014daf32a368f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d699c8dedfec3068bf0fc1504b47d78fde1988dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555557"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240896"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
+
 此示例演示如何实现一个具有安全元数据终结点（该终结点使用一个非元数据交换绑定）的服务，以及如何配置 [ ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md) 或客户端从这类元数据终结点获取元数据的安全元数据终结点。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="service"></a>服务  
+
  本示例中的服务有两个终结点。 应用程序终结点可用于 `ICalculator` 上的 `WSHttpBinding` 协定，其中启用了 `ReliableSession` 并且 `Message` 安全性为使用证书。 元数据终结点还使用具有相同安全设置但没有 `WSHttpBinding` 的 `ReliableSession`。 下面是相关的配置：  
   
 ```xml  
@@ -57,6 +59,7 @@ ms.locfileid: "90555557"
  第二个客户端使用 `MetadataResolver` 动态提取已知协定的元数据，然后在动态生成的客户端上调用操作。  
   
 ## <a name="svcutil-client"></a>Svcutil 客户端  
+
  当使用默认绑定承载您的 `IMetadataExchange` 终结点时，可以使用该终结点的地址运行 Svcutil.exe：  
   
 ```console  
@@ -92,6 +95,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
  前导 ". \\ "确保在此目录中 Svcutil.exe 的副本 (具有相应 Svcutil.exe.config) 运行的副本。  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 客户端  
+
  如果客户端在设计时知道协定和如何与元数据交谈，客户端就可以使用 `MetadataResolver` 动态找到应用程序终结点的绑定和地址。 本示例客户端对此进行了演示，显示如何通过创建和配置 `MetadataResolver` 来配置 `MetadataExchangeClient` 使用的绑定和凭据。  
   
  可以在 `MetadataExchangeClient` 上强制指定 Svcutil.exe.config 中出现的相同绑定和证书信息：  

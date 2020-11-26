@@ -6,22 +6,24 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 644bcba9f8ced965ff962962bd83e1ae170159a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589846"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238998"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 编程模型
-利用 Windows Communication Foundation （WCF） Web HTTP 编程模型，开发人员可以向非 SOAP 终结点公开 WCF 服务操作。 本节中的主题详细研究此功能。  
+
+Windows Communication Foundation (WCF) Web HTTP 编程模型，开发人员可以向非 SOAP 终结点公开 WCF 服务操作。 本节中的主题详细研究此功能。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [WCF Web HTTP 编程模型概述](wcf-web-http-programming-model-overview.md)  
- 提供 Windows Communication Foundation （WCF） Web HTTP 编程模型的概述。  
+ 提供 Windows Communication Foundation (WCF) Web HTTP 编程模型的概述。  
   
  [WCF Web HTTP 编程对象模型](wcf-web-http-programming-object-model.md)  
- 讨论 Windows Communication Foundation （WCF） Web HTTP 编程模型及其工作原理。  
+ 讨论 Windows Communication Foundation (WCF) Web HTTP 编程模型及其工作原理。  
   
  [如何：创建基本 WCF Web HTTP 服务](how-to-create-a-basic-wcf-web-http-service.md)  
  说明如何编写公开非 SOAP 终结点的基本服务。  
