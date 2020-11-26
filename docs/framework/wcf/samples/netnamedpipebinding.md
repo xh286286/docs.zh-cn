@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: b8a852345572e172d7c5400dca535bb8c098ec4f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 46365c8dbfee66d719b114947f6b04069e0f8870
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584189"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235294"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
-本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。 命名管道不能跨计算机工作。 此示例基于[入门](getting-started-sample.md)计算器服务。  
+
+本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。 命名管道不能跨计算机工作。 此示例基于 [入门](getting-started-sample.md) 计算器服务。  
   
  在本示例中，服务是自承载服务。 客户端和服务都是控制台应用程序。  
   
@@ -79,17 +80,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。  
   
-3. 若要在单个计算机配置中运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
+3. 若要在单个计算机配置中运行示例，请按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  

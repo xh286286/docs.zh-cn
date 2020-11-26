@@ -4,17 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 4c59b83448f5a2c448843c12dae99c442441441f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e60f84aafe6c62a657cd3f27c9ccdb6b65186c35
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235904"
 ---
 # <a name="services-and-transactions"></a>服务和事务
-Windows 通信基础 （WCF） 应用程序可以从客户端内部启动事务，并在服务操作中协调事务。 客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。  
+
+Windows Communication Foundation (WCF) 应用程序可以从客户端中启动事务，并在服务操作中协调事务。 客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。  
   
- 通过为需要客户端事务的服务操作指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 并设置其 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性，可以启用服务协定中的事务行为。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 参数指定在没有引发未处理异常的情况下，在其中执行方法的事务是否自动完成。 有关这些属性的详细信息，请参阅[服务模型事务属性](./feature-details/servicemodel-transaction-attributes.md)。  
+ 通过为需要客户端事务的服务操作指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 并设置其 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性，可以启用服务协定中的事务行为。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 参数指定在没有引发未处理异常的情况下，在其中执行方法的事务是否自动完成。 有关这些属性的详细信息，请[参阅。](./feature-details/servicemodel-transaction-attributes.md)  
   
  在服务操作中执行并由资源管理器管理的工作（如记录数据库更新）是客户端事务的一部分。  
   
@@ -59,7 +60,7 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- 您可以通过配置客户端和服务绑定来使用 WS-Atomic交易协议，并将[\<事务流>](../configure-apps/file-schema/wcf/transactionflow.md)元素设置为`true`，从而启用事务和事务流，如以下示例配置所示。  
+ 可以通过将客户端和服务绑定配置为使用 WS-AtomicTransaction 协议，并将元素设置为，来启用事务和事务流 [\<transactionFlow>](../configure-apps/file-schema/wcf/transactionflow.md) `true` ，如下面的示例配置中所示。  
   
 ```xml  
 <client>  

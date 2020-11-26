@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: b1fea1a7357b937bd15517b313948ead6aab894d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 20e936feb5839a7e71f6579583d558abfc2fd9cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557848"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234487"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>如何：获取证书 (WCF)
+
 若要使用 Windows Communication Foundation 的任何 (WCF) 功能，只需获取证书即可。  
   
 ### <a name="to-obtain-an-x509-certificate"></a>获取 X.509 证书  
@@ -27,7 +28,7 @@ ms.locfileid: "90557848"
     > [!NOTE]
     > 无论采取哪种方法，包含 X.509 证书的 SOAP 请求的接收方都必须信任 X.509 证书。 这意味着证书链中的 X.509 证书或颁发者位于“受信任的人”证书存储区中，并且 X.509 证书不在“不受信任的证书”存储区中。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用证书](working-with-certificates.md)
 - [如何：创建开发期间使用的临时证书](how-to-create-temporary-certificates-for-use-during-development.md)

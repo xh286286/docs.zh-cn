@@ -8,15 +8,16 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 4ff835f767852da586a3a35b7f4ce2edf99db283
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 359364228c4ab4d5b247f4f42f3ef3391f774197
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320915"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236593"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>如何：设置 ProtectionLevel 属性
-通过应用相应的属性 (Attribute) 并设置该属性 (Property) 可设置保护级别。 可在服务级设置保护以影响每条消息的所有部分，或者可以从方法到消息部分逐级递增地设置保护。 有关 `ProtectionLevel` 属性的详细信息，请参阅[了解保护级别](understanding-protection-level.md)。  
+
+通过应用相应的属性 (Attribute) 并设置该属性 (Property) 可设置保护级别。 可在服务级设置保护以影响每条消息的所有部分，或者可以从方法到消息部分逐级递增地设置保护。 有关属性的详细信息 `ProtectionLevel` ，请参阅 [了解保护级别](understanding-protection-level.md)。  
   
 > [!NOTE]
 > 只能在代码中，而不是在配置中设置保护级别。  
@@ -42,7 +43,8 @@ ms.locfileid: "72320915"
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>保护错误消息  
- 服务上引发的异常可以作为 SOAP 故障发送到客户端。 有关创建强类型错误的详细信息，请参阅[在协定和服务中指定和处理错误](specifying-and-handling-faults-in-contracts-and-services.md)和[如何：在服务协定中声明错误](how-to-declare-faults-in-service-contracts.md)。  
+
+ 服务上引发的异常可以作为 SOAP 故障发送到客户端。 有关创建强类型错误的详细信息，请参阅 [在协定和服务中指定和处理错误](specifying-and-handling-faults-in-contracts-and-services.md) 和 [如何：在服务协定中声明错误](how-to-declare-faults-in-service-contracts.md)。  
   
 #### <a name="to-protect-a-fault-message"></a>保护错误消息  
   
@@ -61,7 +63,8 @@ ms.locfileid: "72320915"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>保护消息部分  
- 使用消息协定来保护消息的各个部分。 有关消息约定的详细信息，请参阅[使用消息协定](./feature-details/using-message-contracts.md)。  
+
+ 使用消息协定来保护消息的各个部分。 有关消息约定的详细信息，请参阅 [使用消息协定](./feature-details/using-message-contracts.md)。  
   
 #### <a name="to-protect-a-message-body"></a>保护消息正文  
   
@@ -71,24 +74,26 @@ ms.locfileid: "72320915"
   
 3. 将 <xref:System.ServiceModel.MessageHeaderAttribute> 属性 (Attribute) 应用于将表示为消息头的字段，并将 `ProtectionLevel` 属性 (Property) 设置为 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
   
-4. 将 <xref:System.ServiceModel.MessageBodyMemberAttribute> 应用于将表示为消息正文的一部分的任何字段，并将 `ProtectionLevel` 属性设置为 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如下面的示例中所示。  
+4. 将应用于 <xref:System.ServiceModel.MessageBodyMemberAttribute> 将表示为消息正文的一部分的任何字段，并将 `ProtectionLevel` 属性设置为 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> ，如下面的示例中所示。  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
   
 ## <a name="example"></a>示例  
+
  下面的示例设置位于服务中不同位置的多个属性 (Attribute) 类的 `ProtectionLevel` 属性 (Property)。  
   
  [!code-csharp[C_ProtectionLevel#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#6)]
  [!code-vb[C_ProtectionLevel#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#6)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
+
  下面的代码显示编译该示例代码所必需的命名空间。  
   
  [!code-csharp[C_ProtectionLevel#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#0)]
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
