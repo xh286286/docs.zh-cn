@@ -2,27 +2,30 @@
 title: 1101 - WorkflowActivityStart
 ms.date: 03/30/2017
 ms.assetid: 831cd386-b9b5-47a9-9690-aff6292ff348
-ms.openlocfilehash: 1e6db97284b7ca83d532166d96d7a42df0a51091
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e43b0ab1e2d35657bae43e7239a677643154fa9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924145"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238725"
 ---
 # <a name="1101---workflowactivitystart"></a>1101 - WorkflowActivityStart
+
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|Id|1101|  
+|ID|1101|  
 |关键字|WFRuntime|  
-|级别|信息|  
+|Level|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
   
 ## <a name="description"></a>描述  
+
  指示工作流活动已开始。  
   
 ## <a name="message"></a>消息  
+
  WorkflowInstance Id“%1”E2E 活动  
   
 ## <a name="details"></a>详细信息  

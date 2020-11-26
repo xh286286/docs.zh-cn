@@ -2,17 +2,19 @@
 title: 使用自定义活动设计器和模板
 ms.date: 03/30/2017
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
-ms.openlocfilehash: eb00a2927c8521e68bc2c5fc73bc2aab55d7d868
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92e199a8592fd79a454ecee083d55b7642f829d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669584"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238634"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>使用自定义活动设计器和模板
+
 本节包含一些主题，这些主题描述如何创建自定义活动设计器和自定义活动模板。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [如何：创建自定义活动设计器](how-to-create-a-custom-activity-designer.md)  
  描述如何在工作流提供的设计器不适用于设计任务时创建自定义的活动设计器。  
   
@@ -26,6 +28,7 @@ ms.locfileid: "61669584"
  描述如何将 listview 控件绑定到设计器中的活动属性。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.Activities.Presentation.ActivityDesigner>  
   
  <xref:System.Activities.Presentation.View.ExpressionTextBox>  
@@ -37,7 +40,9 @@ ms.locfileid: "61669584"
  <xref:System.Activities.Presentation.Model.ModelTreeManager>  
   
 ## <a name="related-sections"></a>相关章节  
- [重新托管工作流设计器](rehosting-the-workflow-designer.md)  
+
+ [重新承载工作流设计器](rehosting-the-workflow-designer.md)  
   
 ## <a name="external-resources"></a>外部资源  
+
  [自定义活动](./samples/custom-activities.md)

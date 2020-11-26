@@ -2,14 +2,15 @@
 title: MSMQ 传输
 ms.date: 03/30/2017
 ms.assetid: 3f29a2fe-24df-4614-b64c-b0c084fb7003
-ms.openlocfilehash: a2e5384808b82f48bd1d4856bf893130da8c5f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 407512cbb129dd2e5497de92c32b0641dd21080b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959414"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238023"
 ---
 # <a name="msmq-transport"></a>MSMQ 传输
+
 本主题列出由 MSMQ 传输生成的所有异常。  
   
 ## <a name="exception-list"></a>异常列表  
@@ -22,7 +23,7 @@ ms.locfileid: "61959414"
 |MsmqDeserializationError|反序列化 XML 消息时遇到错误。 无法接收该消息，该消息被丢弃。|  
 |MsmqDLQNotWriteable|客户端的绑定验证失败。 客户端无法发送消息。 指定的死信队列不存在或无法写入。 确保该队列存在并具有正确的写入权限。|  
 |MsmqGetPrivateComputerInformationError|版本检查失败，产生指定错误。 无法检测到 MSMQ 的版本。该队列通道上的所有操作都将失败。 确保已安装 MSMQ 且 MSMQ 可用。|  
-|MsmqNoAssurancesForVolatile|服务的绑定验证失败。 无法启动服务终结点或客户端。 ExactlyOnce 属性被设置为 true，而 Durable 属性被设置为 false。 不支持此设置。 若要解决该冲突，请更正这两个属性中的一个。|  
+|MsmqNoAssurancesForVolatile|服务的绑定验证失败。 无法启动服务终结点或客户端。 ExactlyOnce 属性被设置为 true，而 Durable 属性被设置为 false。 这不受支持。 若要解决该冲突，请更正这两个属性中的一个。|  
 |MsmqNonTransactionalQueueNeeded|检测到绑定与 MSMQ 队列配置不匹配。 无法启动服务终结点。 ExactlyOnce 属性被设置为 false，而从中读取消息的队列是事务性队列。 通过将 ExactlyOnce 属性设置为 true 或者创建非事务性绑定可以更正该错误。|  
 |MsmqOpenError|打开指定队列时遇到错误。 无法从队列发送或接收该消息。 确保已安装和运行 MSMQ。 同时确保可以使用所需访问模式和权限打开队列。|  
 |MsmqPathLookupError|将指定队列路径名称转换为格式名称时遇到错误。 该队列通道上的所有操作都已失败。 确保队列地址有效。 安装 MSMQ 时，必须启用 Active Directory 集成并且具有对其的访问权限。|  

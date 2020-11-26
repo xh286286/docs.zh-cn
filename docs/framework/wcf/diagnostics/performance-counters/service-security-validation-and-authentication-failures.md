@@ -2,17 +2,19 @@
 title: 服务：Security Validation and Authentication Failures（安全验证和身份验证失败次数）
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d89419d7d579d29a1c57370d61eefb8b26333a40
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204583"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236853"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>服务：Security Validation and Authentication Failures（安全验证和身份验证失败次数）
+
 计数器名称：Security Validation and Authentication Failures（安全验证和身份验证失败次数）  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>描述  
+
  每当消息由于“Security Calls Not Authorized”（未授权的安全调用次数）计数器中未包括的安全问题而遭到拒绝时，此计数器即会递增。 此类问题包括：  
   
 - 无法从消息中读取客户端令牌。  

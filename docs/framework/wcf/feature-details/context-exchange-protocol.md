@@ -2,21 +2,23 @@
 title: 上下文交换协议
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: 86d2a19b086fbd5d6be6f1a084bfd7aaace0e250
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ba613a2d12843ad00034057f8bbf08d5357d7f04
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597431"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237815"
 ---
 # <a name="context-exchange-protocol"></a>上下文交换协议
-本部分介绍 Windows Communication Foundation （WCF）版本3.5 中引入的上下文交换协议 .NET Framework。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP Cookie 或 SOAP 标头。  
+
+本部分介绍 Windows Communication Foundation (WCF .NET Framework) 版本3.5 中引入的上下文交换协议。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP Cookie 或 SOAP 标头。  
   
  上下文交换协议是在自定义通道层中实现的。 通道使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 属性在应用程序层之间来回传递上下文。 对于终结点之间的传输，上下文的值或者在通道层序列化为 SOAP 标头，或者在表示 HTTP 请求和响应的消息属性之间来回转换。 在后一种情况下，应有一个基础通道层将 HTTP 请求和响应消息属性分别与 HTTP Cookie 来回进行转换。 可通过使用 <xref:System.ServiceModel.Channels.ContextExchangeMechanism> 上的 <xref:System.ServiceModel.Channels.ContextBindingElement> 属性来选择用于交换上下文的机制。 有效值为 `HttpCookie` or `SoapHeader`进行求值的基于 SQL 语言的筛选器表达式。  
   
  在客户端上，通道的实例可以基于通道属性 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 上的设置在两种模式中操作。  
   
 ## <a name="mode-1-channel-context-management"></a>模式 1：通道上下文管理  
+
  这是默认模式，其中将 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 设置为 `true`。 在此模式中，上下文通道将管理上下文，并在上下文的生存期内将其缓存。 通过调用 `IContextManager` 方法，可以通过通道属性 `GetContext` 从通道检索上下文。 在通过对通道属性调用 `SetContext` 方法打开通道之前，还可以使用特定的上下文来预先初始化通道。 在使用上下文初始化通道之后，将不能重置通道。  
   
  以下是此模式中的固定行为的列表：  
@@ -33,6 +35,7 @@ ms.locfileid: "84597431"
 - 传入消息上的 <xref:System.ServiceModel.Channels.ContextMessageProperty> 始终为空。  
   
 ## <a name="mode-2-application-context-management"></a>模式 2：应用程序上下文管理  
+
  在此模式中，<xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 设置为 `false`。 在此模式中，上下文通道并不对上下文进行管理， 而是由应用程序负责通过使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 来检索、管理和应用上下文。 任何尝试调用 `GetContext` 或 `SetContext` 的操作都会导致 <xref:System.InvalidOperationException>。  
   
  无论选择哪种模式，客户端通道工厂都支持 <xref:System.ServiceModel.Channels.IRequestChannel>、<xref:System.ServiceModel.Channels.IRequestSessionChannel> 和 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 消息交换模式。  

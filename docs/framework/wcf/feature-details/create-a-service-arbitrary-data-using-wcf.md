@@ -2,14 +2,15 @@
 title: 如何：使用 WCF REST 编程模型创建接受任意数据的服务
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601330"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237828"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>如何：使用 WCF REST 编程模型创建接受任意数据的服务
+
 有时，开发人员必须完全控制从服务操作返回数据的方式。 如果服务操作必须以不支持的格式返回数据 byWCF，则会出现这种情况。 本主题讨论如何使用 WCF REST 编程模型创建接收任意数据的服务。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
@@ -124,6 +125,7 @@ ms.locfileid: "84601330"
     ```  
   
 ## <a name="example"></a>示例  
+
  下面列出了此示例的完整代码。  
   
 ```csharp  

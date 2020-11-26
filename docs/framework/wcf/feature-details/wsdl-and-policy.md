@@ -2,17 +2,18 @@
 title: WSDL 和策略
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 123a878e90ee9099b009985a5e79155e8b1cd097
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600096"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238335"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 和策略
-本主题介绍 Windows Communication Foundation （WCF） WSDL 1.1、WS 策略和 Ws-policyattachment 实现的详细信息，以及 WCF 引入的附加 WS 策略断言和 WSDL 1.1 扩展。  
+
+本主题介绍 Windows Communication Foundation (WCF) WSDL 1.1、WS-Policy 和 WS-PolicyAttachment 实现详细信息，以及 WCF 引入的其他 WS-Policy 断言和 WSDL 1.1 扩展。  
   
- WCF 通过本文档中所述的约束和说明，实现提交给 W3C 的 WS 策略和 Ws-policyattachment 规范。  
+ WCF 通过本文档中所述的约束和说明，实现提交给 W3C 的 WS-Policy 和 WS-PolicyAttachment 规范。  
   
  本文档使用下表中所示的前缀和命名空间。  
   
@@ -28,6 +29,7 @@ ms.locfileid: "84600096"
 |cdp|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 扩展  
+
  WCF 使用以下 WSDL 1.1 扩展来描述协定会话要求。  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
@@ -40,6 +42,7 @@ ms.locfileid: "84600096"
  xs:boolean，指示此协定要求建立会话。  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP 绑定传输 URI  
+
  WCF 使用以下 Uri 来指示要用于 WSDL 1.1、SOAP 1.1 和 SOAP 1.2 绑定扩展元素的传输。  
   
 |Transport|URI|  
@@ -50,7 +53,8 @@ ms.locfileid: "84600096"
 |命名管道|`http://schemas.microsoft.com/soap/named-pipe`|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>由 WCF 实现的策略断言  
- 除了在 Web Services 规范（WS-*）中引入的策略断言，以及本文档的其他部分所述，WCF 还实现了以下策略断言。  
+
+ 除了在 Web Services 规范中引入的策略断言 (WS-ATOMICTRANSACTION ) 并在本文档的其他部分中提到，WCF 还实现了以下策略断言。  
   
 |策略断言|策略主题|描述|  
 |----------------------|--------------------|-----------------|  
