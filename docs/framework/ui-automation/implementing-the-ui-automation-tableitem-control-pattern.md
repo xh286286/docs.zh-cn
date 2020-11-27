@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: 3d6d31fe0e041fbba147df14d290a775188755f2
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 5e83f68772de3026fe8bcb265a11999e0b85a164
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265669"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>实现 UI 自动化 TableItem 控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -23,11 +24,13 @@ ms.locfileid: "87163520"
  <xref:System.Windows.Automation.TableItemPattern> 控件模式用于支持实现 <xref:System.Windows.Automation.Provider.ITableProvider> 的容器的子控件。 对个别单元格功能的访问是由 <xref:System.Windows.Automation.Provider.IGridItemProvider> 必需的并发实现提供的。 此控件模式类似于 <xref:System.Windows.Automation.Provider.IGridItemProvider>，不同之处在于任何实现 <xref:System.Windows.Automation.Provider.ITableItemProvider> 的控件都必须以编程方式公开各个单元格与其行和列信息之间的关系。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
   
-- 有关相关的网格项功能，请参阅[实现 UI 自动化 GridItem 控件模式](implementing-the-ui-automation-griditem-control-pattern.md)。  
+- 有关相关的网格项功能，请参阅 [实现 UI 自动化 GridItem 控件模式](implementing-the-ui-automation-griditem-control-pattern.md)。  
   
 <a name="Required_Members_for_ITableItemProvider"></a>
+
 ## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider 必需的成员  
   
 |必需的成员|成员类型|说明|  
@@ -38,7 +41,9 @@ ms.locfileid: "87163520"
  没有与此控件模式关联的属性或事件。  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>例外  
+
+## <a name="exceptions"></a>异常  
+
  没有与此控件模式关联的异常。  
   
 ## <a name="see-also"></a>另请参阅

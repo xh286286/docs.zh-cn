@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b4fea39088064751ff559bd236554255d43ba2a2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265656"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>实现 UI 自动化 Value 控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168204"
  <xref:System.Windows.Automation.ValuePattern> 控件模式用于支持具有未跨越范围的内部值的控件，以及可用字符串表示的控件。 此字符串是可编辑的，具体取决于控件及其设置。 有关实现此模式的控件的示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
+
  在实现 Value 控件模式时，请注意以下准则和约定：  
   
 - 如果任何项的值是可编辑的，则诸如 <xref:System.Windows.Automation.ControlType.ListItem> 和 <xref:System.Windows.Automation.ControlType.TreeItem> 等控件必须支持 <xref:System.Windows.Automation.ValuePattern> ，而无论控件的当前编辑模式。 如果子项是可编辑的，则父控件还必须支持 <xref:System.Windows.Automation.ValuePattern> 。  
@@ -37,7 +40,7 @@ ms.locfileid: "87168204"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> 不支持检索格式设置信息或子字符串值。 在这些情况下，请实现 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>必须由控件（如下面所示的 Microsoft Word 中的**颜色选取器**选择控件）实现，该控件支持颜色值（例如 "黄色"）与等效的内部 RGB 结构之间的字符串映射。  
+- <xref:System.Windows.Automation.Provider.IValueProvider> 必须由如下所示的 Microsoft Word (**颜色选取器** 选择控件（如下面的 ") "）来实现，该控件支持颜色值 (的字符串映射，例如 "黄色" ) 和等效的内部 RGB 结构。  
   
  ![突出显示黄色的颜色选取器。](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  
@@ -45,7 +48,9 @@ ms.locfileid: "87168204"
 - 在允许调用 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 之前，控件应将其 `true` 设置为 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> ，并将其 `false` 设置为 <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider 必需的成员  
+
  实现 <xref:System.Windows.Automation.Provider.IValueProvider>需要以下属性和方法。  
   
 |必需的成员|成员类型|说明|  
@@ -55,7 +60,9 @@ ms.locfileid: "87168204"
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|无|  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>例外  
+
+## <a name="exceptions"></a>异常  
+
  提供程序必须引发以下异常。  
   
 |例外类型|条件|  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a4d304a1316fe534e09f02ac1cd2900bf798011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557874"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265526"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>如何：启用消息重放检测
+
 当攻击者复制双方之间的消息流并将该消息流向一方或多方重播时，将发生重播攻击。 除非攻击程度降低，否则受到攻击的计算机会将该流处理为合法消息，从而导致产生大量不良结果，例如某项的冗余排序。  
   
  有关消息重播检测的详细信息，请参阅 [消息重播检测](/previous-versions/msp-n-p/ff649371(v=pandp.10))。  
@@ -75,15 +76,18 @@ ms.locfileid: "90557874"
     ```  
   
 ## <a name="example"></a>示例  
+
  下面的示例使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 方法创建 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>，并设置绑定的重播属性。  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
 ## <a name="scope-of-replay-message-security-only"></a>重播范围：仅限消息安全  
+
  请注意，下面的过程仅适用于“消息安全”模式。 对于“传输”和“使用消息凭据传输”模式，传输机制将检测重播。  
   
 ## <a name="secure-conversation-notes"></a>安全对话说明  
+
  对于启用安全对话的绑定，可以针对应用程序通道和安全对话引导绑定来调整这些设置。 例如，可以对应用程序通道关闭重播，但是对建立安全对话的引导通道启用重播。  
   
  如果不使用安全对话会话，则重播检测不保证在服务器场方案中和回收进程时检测重播。 这适用于系统提供的下列绑定：  
@@ -102,7 +106,7 @@ ms.locfileid: "90557874"
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

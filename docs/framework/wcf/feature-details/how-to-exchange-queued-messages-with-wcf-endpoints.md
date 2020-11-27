@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f69286a2b4d4ec55f18931f9156c20a38da9c34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595370"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265422"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>如何：使用 WCF 终结点交换排队消息
-队列确保客户端和 Windows Communication Foundation （WCF）服务之间可以发生可靠消息传送，即使该服务在通信时不可用。 下面的过程演示如何通过在实现 WCF 服务时使用标准排队绑定来确保客户端和服务之间的持久通信。  
+
+队列确保客户端与 Windows Communication Foundation (WCF) 服务之间可以发生可靠消息传送，即使该服务在通信时不可用。 下面的过程演示如何通过在实现 WCF 服务时使用标准排队绑定来确保客户端和服务之间的持久通信。  
   
  本部分介绍如何将 <xref:System.ServiceModel.NetMsmqBinding> 用于 wcf 客户端和 wcf 服务之间的排队通信。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "84595370"
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5. 在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 有关使用 WCF 配置的详细信息，请参阅[配置 wcf 服务](../configuring-services.md)。  
+5. 在指定服务地址并使用标准 <xref:System.ServiceModel.Description.ServiceEndpoint> 绑定的配置中定义 <xref:System.ServiceModel.NetMsmqBinding>。 有关使用 WCF 配置的详细信息，请参阅 [配置 wcf 服务](../configuring-services.md)。  
 
 6. 使用 `OrderProcessing` 为 <xref:System.ServiceModel.ServiceHost> 服务创建一个主机，该主机从队列读取消息并处理这些消息。 打开服务主机使服务处于可用状态。 显示一条消息，告知用户按任何键以终止服务。 调用 `ReadLine` 等待按键，然后关闭服务。  
   
@@ -64,6 +65,7 @@ ms.locfileid: "84595370"
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
   
 ## <a name="example"></a>示例  
+
  下面的示例演示了服务代码、主机应用程序、App.config 文件以及为此示例包含的客户端代码。  
   
  [!code-csharp[S_Msmq_Transacted#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#9)]

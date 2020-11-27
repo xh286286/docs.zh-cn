@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: fc47170a08ff08f6cd8f67996ef8fbf19c40f819
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168209"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265643"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>实现 UI 自动化 Transform 控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168209"
  <xref:System.Windows.Automation.TransformPattern> 控件模式用于支持可以移动、调整大小或在二维空间中旋转的控件。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
+
  在实现 Transform 控件模式时，请注意以下准则和约定：  
   
 - 对此控件模式的支持并不限于桌面上的对象。 如果子级可以移动、调整大小或在容器的边界内自由地旋转，则此控件模式还必须受到容器对象子级的支持。  
@@ -35,7 +38,9 @@ ms.locfileid: "87168209"
 - 所有参数和属性值都是绝对和独立于区域设置的。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider 必需的成员  
+
  实现 <xref:System.Windows.Automation.Provider.ITransformProvider>需要以下属性和方法。  
   
 |必需的成员|成员类型|说明|  
@@ -50,7 +55,9 @@ ms.locfileid: "87168209"
  没有与此控件模式关联的事件。  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>例外  
+
+## <a name="exceptions"></a>异常  
+
  提供程序必须引发以下异常。  
   
 |异常类型|条件|  

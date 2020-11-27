@@ -2,14 +2,15 @@
 title: 如何：动态更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a12d480163bb579f34d006ae1837ed4392bf47ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184967"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265539"
 ---
 # <a name="how-to-dynamic-update"></a>如何：动态更新
+
 本主题概述了创建和动态更新路由配置所需的基本步骤。 在本示例中，从配置文件中获取初始路由配置，并将所有消息路由至 regularCalc 计算器服务；不过，本示例随后以编程方式更新该路由配置，以便更改 roundingCalc 服务的目标终结点。  
   
 > [!NOTE]
@@ -64,7 +65,7 @@ ms.locfileid: "79184967"
     </filterTables>  
     ```  
   
-3. 若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示了将"筛选器表1"与服务终结点相关联。  
+3. 若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示如何将 "filterTable1" 与服务终结点相关联。  
   
     ```xml  
     <behaviors>  
@@ -78,6 +79,7 @@ ms.locfileid: "79184967"
     ```  
   
 ## <a name="implement-dynamic-configuration"></a>实现动态配置  
+
  只能使用代码动态配置路由服务，方法是：新建 <xref:System.ServiceModel.Routing.RoutingConfiguration>，并用 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 替换当前配置。  在本示例中，路由服务自承载在控制台应用程序中。 启动应用程序之后，您可以在控制台窗口中输入“regular”或“rounding”来修改路由配置，以便配置消息将路由到的目标终结点；如果输入“regular”，则路由到 regularCalc；否则，如果输入“rounding”，则路由到 roundingCalc。  
   
 1. 必须添加以下 using 语句才能支持路由服务。  
@@ -164,7 +166,7 @@ ms.locfileid: "79184967"
   
 ## <a name="example"></a>示例  
 
-以下是本示例中使用的控制台应用程序的完整列表：
+下面是此示例中使用的控制台应用程序的完整列表：
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -243,7 +245,7 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="example"></a>示例  
 
-以下是本示例中使用的配置文件的完整列表：
+下面是此示例中使用的配置文件的完整列表：
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

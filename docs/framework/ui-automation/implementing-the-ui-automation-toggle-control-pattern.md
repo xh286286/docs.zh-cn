@@ -7,14 +7,15 @@ helpviewer_keywords:
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: f9ae850a560101582b5f1a461de19f260ef59798
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 865f225d749c29fb1ec80507daeffda82ae8816e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168029"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265630"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>实现 UI 自动化 Toggle 控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168029"
  <xref:System.Windows.Automation.TogglePattern> 控件模式用于支持可在一组状态间进行循环，并在设置后保持其状态的控件。 有关实现此控件模式的控件示例，请参阅 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
+
  在实现“切换”控件模式时，请注意以下准则和约定：  
   
 - 不保持激活时的状态的控件（如按钮、工具栏按钮和超链接）则必须实现 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。  
@@ -35,7 +38,9 @@ ms.locfileid: "87168029"
 - 单选按钮控件不会实现 <xref:System.Windows.Automation.Provider.IToggleProvider>，因为它不能在其有效状态间进行循环。  
   
 <a name="Required_Members_for_IToggleProvider"></a>
+
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider 必需的成员  
+
  实现 <xref:System.Windows.Automation.Provider.IToggleProvider>需要以下属性和方法。  
   
 |必需的成员|成员类型|说明|  
@@ -46,7 +51,9 @@ ms.locfileid: "87168029"
  没有与此控件模式关联的事件。  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>例外  
+
+## <a name="exceptions"></a>异常  
+
  没有与此控件模式关联的异常。  
   
 ## <a name="see-also"></a>另请参阅
