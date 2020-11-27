@@ -384,6 +384,8 @@ items:
             href: ../core/diagnostics/index.md
           - name: 托管调试器
             href: ../core/diagnostics/managed-debuggers.md
+          - name: 转储
+            href: ../core/diagnostics/dumps.md
           - name: 调试 Linux 转储
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
