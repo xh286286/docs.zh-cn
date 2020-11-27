@@ -11,27 +11,29 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: a95d663c2669186fcb3eb1fb2f0c426ade945f1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e0d80fe2433d894ef1f9e110e9090701dc305d8e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247528"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266748"
 ---
 # <a name="how-to-create-a-custom-token"></a>如何：创建自定义令牌
-本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。 有关完整的代码示例，请参阅[自定义令牌](../samples/custom-token.md)示例。  
+
+本主题介绍如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 类创建自定义安全令牌，以及如何将其与自定义安全令牌提供程序和身份验证器进行集成。 有关完整的代码示例，请参阅 [自定义令牌](../samples/custom-token.md) 示例。  
   
- *安全令牌*实质上是一个 XML 元素，WINDOWS COMMUNICATION FOUNDATION （WCF）安全框架使用它来表示有关 SOAP 消息内的发送方的声明。 WCF 安全为系统提供的身份验证模式提供各种令牌。 包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。  
+ *安全令牌* 实质上是 WINDOWS COMMUNICATION FOUNDATION (WCF) 安全框架用于表示有关 SOAP 消息中发送方的声明的 XML 元素。 WCF 安全为系统提供的身份验证模式提供各种令牌。 包括由 <xref:System.IdentityModel.Tokens.X509SecurityToken> 类表示的 X.509 证书安全令牌，或由 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 类表示的用户名安全令牌。  
   
  有时，所提供的类型不支持某种身份验证模式或凭据。 这种情况下，必须创建自定义安全令牌来提供 SOAP 消息内部自定义凭据的 XML 表示形式。  
   
  下面的过程演示如何创建自定义安全令牌，以及如何将其与 WCF 安全基础结构集成。 本主题创建一个信用卡令牌，用于将客户端的信用卡相关信息传递到服务器。  
   
- 有关自定义凭据和安全令牌管理器的详细信息，请参阅[演练：创建自定义客户端和服务凭据](walkthrough-creating-custom-client-and-service-credentials.md)。  
+ 有关自定义凭据和安全令牌管理器的详细信息，请参阅 [演练：创建自定义客户端和服务凭据](walkthrough-creating-custom-client-and-service-credentials.md)。  
   
  若要了解更多表示安全令牌的类，请参见 <xref:System.IdentityModel.Tokens> 命名空间。  
   
 ## <a name="procedures"></a>过程  
+
  客户端应用程序必须有一种方式来指定安全基础结构的信用卡信息。 应用程序通过自定义客户端凭据类可访问此信息。 第一步是创建一个类，用以表示自定义客户端凭据的信用卡信息。  
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>创建一个表示客户端凭据内信用卡信息的类  
@@ -103,14 +105,14 @@ ms.locfileid: "85247528"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>将自定义安全令牌与安全令牌提供程序进行集成  
   
-1. 安全令牌提供程序可以创建、修改（如果需要）和返回令牌的实例。 若要创建自定义安全令牌的自定义提供程序，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类继承的类。 下面的示例重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以返回 `CreditCardToken` 的实例。 有关自定义安全令牌提供程序的详细信息，请参阅[如何：创建自定义安全令牌提供程序](how-to-create-a-custom-security-token-provider.md)。  
+1. 安全令牌提供程序可以创建、修改（如果需要）和返回令牌的实例。 若要创建自定义安全令牌的自定义提供程序，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 类继承的类。 下面的示例重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以返回 `CreditCardToken` 的实例。 有关自定义安全令牌提供程序的详细信息，请参阅 [如何：创建自定义安全令牌提供程序](how-to-create-a-custom-security-token-provider.md)。  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>将自定义安全令牌与安全令牌身份验证器进行集成  
   
-1. 当安全令牌从消息中提取出来，安全令牌身份验证器即对其内容进行验证。 若要为自定义安全令牌创建自定义身份验证器，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 类继承的类。 下面的示例将会重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 有关自定义安全令牌验证器的详细信息，请参阅[如何：创建自定义安全令牌身份验证](how-to-create-a-custom-security-token-authenticator.md)器。  
+1. 当安全令牌从消息中提取出来，安全令牌身份验证器即对其内容进行验证。 若要为自定义安全令牌创建自定义身份验证器，请创建一个从 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 类继承的类。 下面的示例将会重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 有关自定义安全令牌验证器的详细信息，请参阅 [如何：创建自定义安全令牌身份验证](how-to-create-a-custom-security-token-authenticator.md)器。  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -120,7 +122,7 @@ ms.locfileid: "85247528"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>将自定义安全令牌与安全令牌管理器进行集成  
   
-1. 安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。 若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。 该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。 有关自定义安全令牌管理器的详细信息，请参阅[演练：创建自定义客户端和服务凭据](walkthrough-creating-custom-client-and-service-credentials.md)。  
+1. 安全令牌管理器可以创建相应的令牌提供程序、安全身份验证器和令牌序列化程序实例。 若要创建自定义令牌管理器，请创建一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类继承的类。 该类的主要方法使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 来创建相应的提供程序以及客户端或服务凭据。 有关自定义安全令牌管理器的详细信息，请参阅 [演练：创建自定义客户端和服务凭据](walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -130,7 +132,7 @@ ms.locfileid: "85247528"
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>将自定义安全令牌与自定义客户端和服务凭据进行集成  
   
-1. 必须添加自定义客户端和服务凭据，才能向应用程序提供一个 API，使其能够指定先前创建的自定义安全令牌基础结构所使用的自定义令牌信息，从而提供自定义安全令牌内容并对内容进行身份验证。 下面的示例演示如何执行此操作。 有关自定义客户端和服务凭据的详细信息，请参阅[演练：创建自定义客户端和服务凭据](walkthrough-creating-custom-client-and-service-credentials.md)。  
+1. 必须添加自定义客户端和服务凭据，才能向应用程序提供一个 API，使其能够指定先前创建的自定义安全令牌基础结构所使用的自定义令牌信息，从而提供自定义安全令牌内容并对内容进行身份验证。 下面的示例演示如何执行此操作。 有关自定义客户端和服务凭据的详细信息，请参阅 [演练：创建自定义客户端和服务凭据](walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -147,9 +149,9 @@ ms.locfileid: "85247528"
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- 本主题显示实现和使用自定义令牌所需的各种不同的代码块。 若要查看所有这些代码片段如何结合在一起的完整示例，请参阅[自定义令牌](../samples/custom-token.md)。  
+ 本主题显示实现和使用自定义令牌所需的各种不同的代码块。 若要查看所有这些代码片段如何结合在一起的完整示例，请参阅 [自定义令牌](../samples/custom-token.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.IdentityModel.Tokens.SecurityToken>
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>

@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 20b9f34595f8586eb5162715eb6b0df171f132a1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555245"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266839"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 
@@ -19,6 +19,7 @@ ms.locfileid: "90555245"
 .NET Framework 构建应用的效率极高。 功能强大且安全的语言以及丰富的库集合使应用构建富有成果。 然而，伴随高效率而来的是责任问题。 你应该使用 .NET Framework 的所有功能，但随时准备在需要时调整你的代码性能。
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>为什么新的编译器性能适用于你的应用  
+
  .NET Compiler Platform ("Roslyn") 团队在托管代码中重写了 C# 和 Visual Basic 编译器，以提供新的 API 来建模和分析代码、构建工具，并在 Visual Studio 中实现更丰富、代码识别的体验。 重写编译器和在新编译器上构建 Visual Studio 体验揭示了实用的性能见解，该见解适用于任何大型 .NET Framework 应用或任何用于处理大量数据的应用。 要利用来自 C# 编译器的见解和示例，你并不需要了解编译器本身。
   
  Visual Studio 使用编译器 API 来构建所有用户喜爱的 IntelliSense 功能，例如标识符和关键字着色、语法完成列表、错误的波形曲线、参数提示、代码问题报告以及代码操作。 Visual Studio 可在开发人员键入和更改他们的代码时提供这种帮助，并且 Visual Studio 必须在编译器不断建模开发人员编辑的代码时保持响应。
@@ -28,30 +29,37 @@ ms.locfileid: "90555245"
  有关 Roslyn 编译器的详细信息，请参阅 [.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)。
   
 ## <a name="just-the-facts"></a>事实小结  
+
  在优化性能和创建响应性 .NET Framework 应用时，请考虑以下事实。
   
 ### <a name="fact-1-dont-prematurely-optimize"></a>事实 1：切勿过早优化  
+
  编写比实际需要更为复杂的代码，将产生维护、调试和改进成本。 有经验的程序员对如何解决编码问题并编写出更高效的代码有一个直观的把握。 然而，有时他们过早地优化了代码。 例如，当一个简单的数组就足够的时候，他们却使用哈希表或使用可能泄漏内存的复杂缓存，而不是简单地重新计算值。 即使你是一个有经验的程序员，当你发现问题时，应该测试性能并分析你的代码。
   
 ### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事实 2：若不测量，便只是猜测  
+
  配置文件和度量不会撒谎。 配置文件向你显示 CPU 是否已满或者你是否在磁盘 I/O 上受阻。 配置文件可告知正在分配的内存类型和大小，以及 CPU 是否在[垃圾回收](../../standard/garbage-collection/index.md) (GC) 中花费了大量的时间。
   
  你应该为应用中的关键客户体验或方案设定性能目标，并编写测试来测量性能。 应用科学的方法调查失败的测试：使用配置文件来指导你、假设有可能是什么问题，并用利用试验或代码更改来测试你的假设。 使用定期测试建立一段时间内的基线性能测量，以便你可以隔离导致性能衰退的更改。 通过以严格的方式处理性能工作，你可以避免将时间浪费在不需要的代码更新上。
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事实 3：好的工具将使一切大不相同  
+
  好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。 Microsoft 提供多种性能工具，如 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) 和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。
   
  PerfView 是一个免费且功能极为强大的工具，它可以帮助你专注于深层问题，如磁盘 I/O、GC 事件和内存。 可以捕获与性能相关的 [Windows 事件跟踪](../wcf/samples/etw-tracing.md) (ETW) 事件，并很轻松地查看每个应用、每个进程、每个堆栈和每个线程信息。 PerfView 向你显示应用分配了多少内存以及分配了何种内存，并显示哪些函数或调用堆栈提供了内存分配以及他们提供了多少。 有关详细信息，请参见丰富的帮助主题、演示以及工具随附的视频（如第 9 频道上的 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)）。
   
 ### <a name="fact-4-its-all-about-allocations"></a>事实 4：一切皆与分配有关  
+
  你可能会认为构建一个响应性 .NET Framework 应用只与算法（如使用快速排序，而不是气泡排序）相关，但事实并非如此。 构建一个响应性应用的最关键因素是分配内存，尤其是当你的应用非常大或需要处理大量数据的时候。
   
  几乎所有使用新编译器 API 来构建响应性 IDE 体验的工作，均涉及到避免分配和管理缓存策略。 PerfView 跟踪显示新的 C# 和 Visual Basic 编译器的性能很少受 CPU 约束。 在读取数十万行或数百万行的代码、读取元数据或发出生成的代码时，编译器可能会受 I/O 约束。 所有 UI 线程延迟几乎都是由垃圾回收造成的。 .NET Framework GC 的性能经过高度优化，能够在执行应用代码的同时，并行完成其大部分工作。 但是，单个分配可能会触发昂贵的 [gen2](../../standard/garbage-collection/fundamentals.md) 回收，从而停止所有线程。
   
 ## <a name="common-allocations-and-examples"></a>常见的分配和示例  
+
  本部分中的示例表达式具有看起来较小的隐藏分配。 但是，如果一个大型应用执行表达式足够多次数，表达式可以产生数百个 MB，甚至 GB 的分配。 例如，一分钟的测试以模拟开发人员在编辑器中键入分配的内存（以 GB 为单位），并带领性能团队专注于键入方案。
   
 ### <a name="boxing"></a>装箱  
+
  当通常存在于堆栈或数据结构中的值类型包装在一个对象中时，[装箱](../../csharp/programming-guide/types/boxing-and-unboxing.md)便会发生。 即，你分配一个对象以保存数据，然后将一个指针返回到该对象。 .NET Framework 有时由于方法的签名或存储位置的类型而装箱值。 在一个对象中包装值类型导致内存分配。 许多装箱操作可以向你的应用提供分配（以 MB 或 GB 为单位），这意味着你的应用将产生更多的 GC。 .NET Framework 和语言编译器应尽可能地避免装箱，但有时它会在最不经意的时候发生。
   
  若要查看 PerfView 中的装箱，打开跟踪，并在你的应用的进程名称（请记住，PerfView 报告所有进程）下查看 GC Heap Alloc Stack。 如果你在分配下看到类似于 <xref:System.Int32?displayProperty=nameWithType> 和 <xref:System.Char?displayProperty=nameWithType> 的类型，即表示你正在装箱值类型。 选择这些类型中一个，将显示它们在其中装箱的堆栈和函数。
@@ -132,6 +140,7 @@ public class BoxingExample
  请记住第一个性能事实（即，切勿过早优化），不要以这种方式开始重写你所有的代码。 请留意这些装箱成本，但仅在分析完应用并找到热点后才更改你的代码。
   
 ### <a name="strings"></a>字符串  
+
  字符串操作是产生分配的最主要原因之一，并且它们经常出现在 PerfView 前五大分配之中。 程序将字符串用于序列化、JSON 和 REST API。 当你无法使用枚举类型时，可以将字符串用作编程常量与系统进行互操作。 当你的分析显示字符串极为影响性能时，则查找对 <xref:System.String> 方法的调用，如 <xref:System.String.Format%2A>、<xref:System.String.Concat%2A>、<xref:System.String.Split%2A>、<xref:System.String.Join%2A> 和 <xref:System.String.Substring%2A> 等。 使用 <xref:System.Text.StringBuilder> 来避免创建从多个片段创建字符串的成本能够到帮助作用，但即使是分配 <xref:System.Text.StringBuilder> 对象也可能会变成需要你管理的瓶颈。
   
  **示例 3：字符串操作**  
@@ -278,7 +287,8 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  这个简单的缓存策略符合良好的缓存设计要求，因为它具有大小上限。 然而，现在存在比原来更多的代码，这意味着更多的维护成本。 仅当你发现了性能问题时，并且 PerfView 已显示 <xref:System.Text.StringBuilder> 分配是一个重要的参与者，才应采用该缓存策略。
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 lambda  
- (LINQ) 的语言集成查询与 lambda 表达式结合使用，是一个工作效率功能的示例。 但是，它的使用可能会对性能产生很大的影响，并且可能会发现需要重写代码。
+
+Language-Integrated 查询 (LINQ) 与 lambda 表达式结合使用，就是一个工作效率功能的示例。 但是，它的使用可能会对性能产生很大的影响，并且可能会发现需要重写代码。
   
  **示例5： Lambda、List \<T> 和 IEnumerable\<T>**  
   
@@ -439,6 +449,7 @@ class Compilation { /*...*/
  此代码将 `cachedResult` 的类型更改为 `Task<SyntaxTree>` 并且使用一个 `async` 保存来自 `GetSyntaxTreeAsync()` 原始代码的帮助程序函数。 如果 `GetSyntaxTreeAsync()` 不为 null，它现在使用 [null 合并运算符](../../csharp/language-reference/operators/null-coalescing-operator.md)来返回 `cachedResult`。 如果 `cachedResult` 为 null，则 `GetSyntaxTreeAsync()` 调用 `GetSyntaxTreeUncachedAsync()` 并且缓存结果。 请注意，`GetSyntaxTreeAsync()` 不会像代码通常所做的那样等待对 `GetSyntaxTreeUncachedAsync()` 的调用。 不使用 await 意味着当 `GetSyntaxTreeUncachedAsync()` 返回它的 <xref:System.Threading.Tasks.Task> 对象时，`GetSyntaxTreeAsync()` 立即返回 <xref:System.Threading.Tasks.Task>。 现在，缓存的结果是 <xref:System.Threading.Tasks.Task>，因此不存在用于返回缓存结果的分配。
   
 ### <a name="additional-considerations"></a>其他注意事项  
+
  以下是有关大型应用或处理大量数据的应用中潜在问题的几个要点。
   
  **字典**  
@@ -463,7 +474,7 @@ class Compilation { /*...*/
   
 - 一切皆与分配有关 – 这就是编译器平台团队花大部分时间改进新编译器性能的原因所在。
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [此主题的演示视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)

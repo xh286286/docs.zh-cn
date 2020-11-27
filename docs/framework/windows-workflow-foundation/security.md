@@ -2,14 +2,15 @@
 title: 安全性
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-ms.openlocfilehash: 09614a4528e83898c894506a99c5992c506b7961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e4419a7a73015541e0a75b4f8c615485c5fdac1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267268"
 ---
 # <a name="security"></a>安全性
+
 SQL 工作流实例存储使用以下数据库安全角色确保安全访问持久性数据库中的实例状态信息。  
   
 - **DurableInstancing. system.activities.durableinstancing.instancestoreusers**。 此角色具有对公共视图的读写访问权以及对创建、加载和保存实例所涉及的存储过程的执行权限。  

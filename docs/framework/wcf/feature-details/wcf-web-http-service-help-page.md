@@ -2,14 +2,15 @@
 title: WCF Web HTTP 服务帮助页
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600161"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266930"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页
+
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]提供了 WCF WEB HTTP 服务的自动帮助页。 此帮助页列出了每个操作的说明、请求和响应格式以及架构。 默认情况下关闭此功能。 当用户浏览到 WCF WEB HTTP 服务并在 URL 的末尾追加 "/Help" 时，将显示如下所 `http://localhost:8000/Customers/Help` 示的帮助页。  
   
  ![具有 WCF REST 帮助页打开的浏览器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
@@ -19,6 +20,7 @@ ms.locfileid: "84600161"
  ![具有 WCF REST 帮助页详细信息的浏览器 GetCustomers 方法打开。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 帮助页  
+
  WCF WEB HTTP 帮助页显示了每个操作的简单说明（假设你使用 <xref:System.ComponentModel.DescriptionAttribute> 指定了操作）。 此特性接受一个字符串，该字符串中包含它所应用到的操作的简短说明。 例如，下面的代码演示如何使用 <xref:System.ComponentModel.DescriptionAttribute> 来提供简短说明。  
   
 ```csharp
@@ -59,6 +61,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
  帮助页基于 XHTML，它带有可标识页的不同部分的标记。 这样使客户端能够使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 以编程方式访问帮助页。  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF Web HTTP 服务帮助页中使用的架构  
+
  WCF Web HTTP 服务帮助页中使用了以下架构。  
   
 ```xml  
@@ -240,4 +243,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- 有关数据协定序列化架构的详细信息，请参阅[数据协定架构引用](data-contract-schema-reference.md)。
+ 有关数据协定序列化架构的详细信息，请参阅 [数据协定架构引用](data-contract-schema-reference.md)。

@@ -2,20 +2,21 @@
 title: 如何：指定通道安全凭据
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9236985ef461044e480847003d9d249b7e232783
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596937"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266761"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>如何：指定通道安全凭据
-Windows Communication Foundation （WCF）服务标记允许 COM 应用程序调用 WCF 服务。 大多数 WCF 服务都要求客户端指定凭据以进行身份验证和授权。 从 WCF 客户端调用 WCF 服务时，可以在托管代码或应用程序配置文件中指定这些凭据。 从 COM 应用程序调用 WCF 服务时，可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口来指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
+
+Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序调用 WCF 服务。 大多数 WCF 服务都要求客户端指定凭据以进行身份验证和授权。 从 WCF 客户端调用 WCF 服务时，可以在托管代码或应用程序配置文件中指定这些凭据。 从 COM 应用程序调用 WCF 服务时，可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口来指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
   
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是一种基于 IDispatch 的接口，在 Visual Studio 环境中使用它将无法获取 IntelliSense 功能。  
   
- 本文将使用[消息安全示例](../samples/message-security-sample.md)中定义的 WCF 服务。  
+ 本文将使用 [消息安全示例](../samples/message-security-sample.md)中定义的 WCF 服务。  
   
 ### <a name="to-specify-a-client-certificate"></a>指定客户端证书  
   
@@ -25,9 +26,9 @@ Windows Communication Foundation （WCF）服务标记允许 COM 应用程序调
   
 3. 添加 `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` 到 `ICalculator` 接口定义。  
   
-4. 将添加 `bindingNamespace="http://Microsoft.ServiceModel.Samples"` 到服务的 app.config 中的终结点标记。  
+4. 将添加 `bindingNamespace="http://Microsoft.ServiceModel.Samples"` 到服务的 App.config 中的终结点标记。  
   
-5. 生成消息安全示例并运行 Service.exe。 使用 Internet Explorer 并浏览到服务的 URI （ `http://localhost:8000/ServiceModelSamples/Service` ），以确保服务正常工作。  
+5. 生成消息安全示例并运行 Service.exe。 使用 Internet Explorer 并浏览到服务的 URI (`http://localhost:8000/ServiceModelSamples/Service`) ，以确保服务正在运行。  
   
 6. 打开 Visual Basic 6.0 并创建一个新的 Standard .exe 文件。 在窗体中添加一个按钮并双击该按钮，以将以下代码添加到 Click 处理程序中：  
   
@@ -115,7 +116,7 @@ Windows Communication Foundation （WCF）服务标记允许 COM 应用程序调
   
 ### <a name="to-specify-an-issue-token"></a>指定颁发令牌  
   
-1. 颁发令牌仅用于使用联合安全的应用程序。 有关联合安全的详细信息，请参阅[联合和颁发的令牌](federation-and-issued-tokens.md)和[联合身份验证示例](../samples/federation-sample.md)。  
+1. 颁发令牌仅用于使用联合安全的应用程序。 有关联合安全的详细信息，请参阅 [联合和颁发的令牌](federation-and-issued-tokens.md) 和 [联合身份验证示例](../samples/federation-sample.md)。  
   
      下面的 Visual Basic 代码示例演示如何调用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 方法：  
   

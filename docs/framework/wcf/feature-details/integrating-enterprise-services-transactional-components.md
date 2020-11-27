@@ -2,12 +2,12 @@
 title: 集成企业服务事务性组件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 3fd8876de53be30f18e4fa9d7f4a1cc07ab5e220
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d235806ba94d68cadca91a17361bfd5bab1e1332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554099"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265864"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>集成企业服务事务性组件
 
@@ -16,6 +16,7 @@ Windows Communication Foundation (WCF) 提供了用于与企业服务集成的�
  若要在传入的流式事务和 COM+ 上下文事务之间提供所需级别的互操作性，服务实现必须创建一个 <xref:System.Transactions.TransactionScope> 实例并使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举中的适当值。  
   
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>使企业服务与服务操作相集成  
+
  下面的代码演示对 Allowed 事务流执行的操作，该操作创建一个具有 <xref:System.Transactions.TransactionScope> 选项的 <xref:System.Transactions.EnterpriseServicesInteropOption.Full>。 以下条件适用于这种情况：  
   
 - 如果客户端对事务进行流式处理，则操作（包括调用企业服务组件）将在该事务范围内执行。 使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 可确保事务与 <xref:System.EnterpriseServices> 上下文同步，这意味着 <xref:System.Transactions> 的环境事务和 <xref:System.EnterpriseServices> 相同。  
@@ -63,6 +64,7 @@ public class CustomerService : ICustomerServiceContract
  如果某一操作的当前事务和对事务性企业服务组件的调用之间不需要同步，则在实例化 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 实例时请使用 <xref:System.Transactions.TransactionScope> 选项。  
   
 ## <a name="integrating-enterprise-services-with-a-client"></a>使企业服务与客户端相集成  
+
  下面的代码演示使用 <xref:System.Transactions.TransactionScope> 实例的客户端代码，该实例具有 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 设置。 在这种情况下，对支持事务流的服务操作的调用与对企业服务组件的调用发生在同一个事务范围内。  
   
 ```csharp
@@ -93,7 +95,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [与 COM + 应用程序集成](integrating-with-com-plus-applications.md)
 - [与 COM 应用程序集成](integrating-with-com-applications.md)

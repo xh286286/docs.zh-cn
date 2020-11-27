@@ -2,15 +2,16 @@
 title: 独立诊断源示例
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 0402805b7eb5b0b224db32eb07780743e5f32fb3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b4c3613656e0aec42c0d3f5cd7cde0af6540a69a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600914"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268243"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>独立诊断源示例
-此示例演示如何使用 Windows Communication Foundation （WCF）为联合创建 RSS/Atom 源。 它是一个基本的 "Hello World" 程序，它显示对象模型的基础知识，以及如何在 Windows Communication Foundation （WCF）服务上对其进行设置。  
+
+此示例演示如何使用 Windows Communication Foundation (WCF) 为联合创建 RSS/Atom 源。 它是一个基本的 "Hello World" 程序，它显示对象模型的基础知识，以及如何在 Windows Communication Foundation (WCF) 服务上对其进行设置。  
   
  WCF 将联合源建模为返回特殊数据类型的服务操作 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的实例可以将源序列化为 RSS 2.0 和 Atom 1.0 格式。 下面的示例代码演示所使用的协定。  
   
@@ -51,7 +52,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
   
  由于此服务使用标准 HTTP GET 接收请求，因此可以使用任何识别 RSS 或 ATOM 的客户端来访问此服务。 例如，可以通过在 `http://localhost:8000/diagnostics/feed/?format=atom` `http://localhost:8000/diagnostics/feed/?format=rss` 识别 RSS 的浏览器中导航到或来查看此服务的输出。
   
- 你还可以使用[WCF 联合对象模型如何映射到 Atom 和 RSS](../feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)来读取联合数据并使用命令性代码对其进行处理。  
+ 你还可以使用 [WCF 联合对象模型如何映射到 Atom 和 RSS](../feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) 来读取联合数据并使用命令性代码对其进行处理。  
   
 ```csharp
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
@@ -76,7 +77,7 @@ foreach (SyndicationItem i in feed.Items)
   
 ## <a name="set-up-build-and-run-the-sample"></a>设置、生成和运行示例
   
-1. 请确保对计算机上的 HTTP 和 HTTPS 具有正确的地址注册权限，如在[Windows Communication Foundation 示例的一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)中所述。
+1. 请确保对计算机上的 HTTP 和 HTTPS 具有正确的地址注册权限，如在 [Windows Communication Foundation 示例的一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)中所述。
 
 2. 生成解决方案。
 
@@ -89,7 +90,7 @@ foreach (SyndicationItem i in feed.Items)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
 

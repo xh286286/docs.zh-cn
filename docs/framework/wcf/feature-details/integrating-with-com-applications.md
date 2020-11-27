@@ -9,17 +9,19 @@ helpviewer_keywords:
 - COM [WCF]
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-ms.openlocfilehash: dc3bbe0ee72ca5583b1e52a61c914ad866a22a05
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc58e22b64284d66367302d55b5c9554c9ec0d72
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596805"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268230"
 ---
 # <a name="integrating-with-com-applications"></a>与 COM 应用程序集成
-Windows Communication Foundation （WCF）服务可以通过使用 WCF 服务名字对象直接集成到现有代码中。 服务标记可以在众多基于 COM 的开发环境（如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0）中使用。  
+
+Windows Communication Foundation (WCF) 服务可以使用 WCF 服务名字对象直接集成到现有代码中。 服务标记可以在众多基于 COM 的开发环境（如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0）中使用。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [COM 应用程序集成概述](integrating-with-com-applications-overview.md)  
  对集成过程的主要部分进行概述。  
   
@@ -39,6 +41,7 @@ Windows Communication Foundation （WCF）服务可以通过使用 WCF 服务名
  WCF 服务标记支持 `IChannelCredentials` 接口，该接口允许使用一系列替代方法来指定通道凭据。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>请参阅
