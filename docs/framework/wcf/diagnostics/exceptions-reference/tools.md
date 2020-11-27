@@ -2,24 +2,25 @@
 title: 工具
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-ms.openlocfilehash: 623ba8a3ae3b58381edc80a19bf2d1a4561f3976
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2f7ef8b7f871dada676eb05713d6f624427d5395
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774239"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285689"
 ---
 # <a name="tools"></a>工具
-本主题列出了 Windows Communication Foundation （WCF）工具生成的所有异常。
+
+本主题列出了 Windows Communication Foundation (WCF) 工具生成的所有异常。
 
 ## <a name="exception-list"></a>异常列表
 
 |资源代码|资源字符串|
 |-------------------|---------------------|
-|ParametersTarget|\<enum >|
-|ParametersToolConfig|\<configFile >|
+|ParametersTarget|\<enum>|
+|ParametersToolConfig|\<configFile>|
 |ErrInvalidPath|指定的路径无效。 请检查指定的自变量。|
-|ParametersReference|\<file 路径 >|
+|ParametersReference|\<file path>|
 |WrnCannotLoadConfigFileForValidation|处理从指定位置加载的配置文件时出错。 无法验证此配置文件中定义的服务。|
 |MoreHelp|有关更多帮助，请键入“svcutil”及指定自变量。|
 |HelpMergeConfig|导致生成的配置合并至现有的文件中，而不是覆盖现有的文件。|
@@ -45,7 +46,7 @@ ms.locfileid: "72774239"
 |WrnNoServiceContractTypes|无法为指定程序集生成 XmlSerializer 类型。 未发现服务协定类型。|
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|加载从指定位置加载的程序集中的类型时出错。 程序集中的某些类型无法加载，工具无法使用这些类型。|
 |ErrDirectoryPointsToAFile|向指定选项传递了指定的无效值。 指定的值是文件的路径。|
-|Error|错误：|
+|错误|错误：|
 |ErrDuplicateReferenceValues|使用指定的选项对指定的程序集加载了两次。 程序集只可以引用一次。|
 |WrnNoXmlSerializerOperationBehavior|无法为指定程序集生成 XmlSerializer。 程序集中没有任何服务协定使用具有 XmlSerializerOperationBehavior 的操作。|
 |ErrCannotCreateDirectory|无法创建指定的目录。|
@@ -68,14 +69,14 @@ ms.locfileid: "72774239"
 |HelpCodeGenerationCategory|-= 代码生成 =-|
 |RetreivingMetadataWithMexAndDisco|尝试使用 WS-Metadata Exchange 或 DISCO 从指定位置下载元数据。|
 |ErrGeneralSchemaValidation|验证导出期间生成的 XML 架构时出错。|
-|ParametersDirectory|\<directory >|
+|ParametersDirectory|\<directory>|
 |ErrCannotLoadSpecifiedType|无法为传递给指定选项的指定值加载任何类型。 请确保使用指定选项指定了此类型所属的程序集。|
 |ErrOptionModeConflict|该指定的选项不能与另一个指定的选项一起使用，原因是它们指示了不同的输出类型。|
 |ErrIsNotAnAssembly|无法将指定的文件加载为程序集。 请验证此文件是否是 .NET 程序集。|
 |ErrInputConflictsWithMode|从指定位置读取的输入和其他选项不一致。|
 |ErrDuplicateValuePassedToTypeArg|多次向指定的选项传递了指定的值。 每个类型仅可以指定一次。|
 |ErrInputEPRFileParseError|无法从指定位置读取终结点引用。 请验证 XML 是否格式正确且有效。|
-|ErrCouldNotCreateCodeProvider|无法为传递给/{1} 参数的指定值创建代码提供程序。 请验证是否正确安装并配置了代码提供程序。|
+|ErrCouldNotCreateCodeProvider|无法为传递给/参数的指定值创建代码提供程序 {1} 。 请验证是否正确安装并配置了代码提供程序。|
 |ErrPathTooLongDirOnly|产生的指定路径过长。 请检查指定的自变量。|
 |HelpDataContractSerializer|生成使用 DataContract 序列化程序进行序列化和反序列化的数据类型。|
 |ErrUnableToExportEndpoint|导出在为程序集加载的配置文件中找到的指定服务类型的指定命名空间中的指定终结点名称时出错。|
@@ -87,7 +88,7 @@ ms.locfileid: "72774239"
 |ErrDirectoryNotFound|找不到指定的目录。 请验证目录是否存在以及您是否具有相应的读取权限。|
 |ErrUnableToLoadFile|无法读取指定的文件。|
 |ErrNoFilesFound|指定的输入路径似乎未引用任何现有的文件。|
-|ParametersConfig|\<configFile >|
+|ParametersConfig|\<configFile>|
 |ErrDirectoryInsteadOfFile|指定的输入路径似乎是目录。 输入必须是 URL 或文件路径。|
 |HelpConfig|指示工具生成具有所提供名称的配置文件。 默认文件：output.config。|
 |ErrSingleUseSwitch|不能多次指定所指定的选项。|
@@ -112,9 +113,9 @@ ms.locfileid: "72774239"
 |ErrInvalidTarget|当使用指定的选项指定时，指定的目标无效。 已指定受支持的目标。|
 |ErrPathTooLong|产生的路径过长。 请评审指定的自变量。|
 |HelpCommonOptionsCategory|-= 常用选项 =-|
-|ParametersServiceName|\<serviceConfigName >|
+|ParametersServiceName|\<serviceConfigName>|
 |ErrNoValidInputFilesSpecified|没有指定有效的输入文件。 请指定元数据文档或程序集文件。|
-|ParametersLanguage|\<language >|
+|ParametersLanguage|\<language>|
 |ErrUnableToLoadMetadataDocument|从加载的文档之一读取元数据时出错。 已指定文档标识符。|
 |ErrConflictingInputs|指定的输入参数与指定内容冲突，因为它们指示了不同的工具操作模式。|
 |WrnUnableToLoadContractForValidation|加载协定类型时出错。 已指定类型和详细信息。|
@@ -125,7 +126,7 @@ ms.locfileid: "72774239"
 |GeneratingFiles|正在生成文件...|
 |ErrCannotSpecifyMultipleMappingsForNamespace|向指定选项传递了无效值。 指定的目标命名空间无法像指定的那样映射到多个 CLR 命名空间。|
 |ErrCouldNotLoadReferenceAssemblyAt|无法加载指定的引用程序集。|
-|ParametersOut|\<file >|
+|ParametersOut|\<file>|
 |NoCodeWasGeneratedSuggestDCOnly|若要从架构生成协定，请使用指定选项。|
 |ErrUnableToLoadInputConfig|无法加载指定的配置文件。|
 |ErrUnexpectedDelimiter|无效的参数分隔符（“:”或“=”）无法启动选项。|
@@ -142,7 +143,7 @@ ms.locfileid: "72774239"
 |ErrCodegenError|生成指定语言的代码时出错。<br /><br /> 该语言不支持所有正在生成的代码元素。 应使用另一种语言。|
 |ErrInputWsdlParseError|读取指定的内容时发生 WSDL 分析错误。 请验证 XML 是否格式正确且有效。|
 |ErrCouldNotCreateInstance|无法创建传递给指定参数的指定类型的实例。|
-|ParametersNamespace|\<string，string >|
+|ParametersNamespace|\<string,string>|
 |HelpNostdlib|不引用标准库（默认情况下，引用 mscorlib.dll 和 system.servicemodel.dll）。|
 |WrnCannotLoadConfigFileForExport|处理从指定位置加载的配置文件时出错。 无法加载此配置文件中定义的服务。|
 |WrnUnableToLoadContractForExport|加载协定类型时出错。 无法导出该指定类型。|

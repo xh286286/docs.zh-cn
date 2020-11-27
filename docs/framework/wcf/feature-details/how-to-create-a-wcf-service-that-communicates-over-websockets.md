@@ -2,13 +2,15 @@
 title: 如何：创建通过 WebSocket 进行通信的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051930"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286157"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>如何：创建通过 WebSocket 进行通信的 WCF 服务
+
 WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑定通过 WebSocket 进行通信。  当 <xref:System.ServiceModel.NetHttpBinding> 确定服务协定定义回调协定时，将使用 WebSocket。 本主题描述如何实现使用 <xref:System.ServiceModel.NetHttpBinding> 通过 WebSocket 进行通信的 WCF 服务和客户端。  
   
 ### <a name="define-the-service"></a>定义服务  
@@ -160,6 +162,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
          在客户端配置中无需执行任何特殊内容，只需通过 `NetHttpBinding` 指定客户端终结点。  
   
 ## <a name="example"></a>示例  
+
  下面是本主题中使用的完整代码。  
   
 ```csharp  
@@ -317,7 +320,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [同步和异步操作](../synchronous-and-asynchronous-operations.md)
 - [使用 NetHttpBinding](using-the-nethttpbinding.md)

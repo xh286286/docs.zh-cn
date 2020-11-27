@@ -7,23 +7,26 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: e1d7429f86896947a10b73965caa7d771f54490b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b43884393974e6f2863da6a4a5ca8f305e5a160c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168187"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286092"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>实现 UI 自动化 Window 控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主题介绍实现 <xref:System.Windows.Automation.Provider.IWindowProvider>的准则和约定，包括有关 <xref:System.Windows.Automation.WindowPattern> 属性、方法和事件的信息。 本主题的结尾列出了指向其他参考资料的链接。  
   
- <xref:System.Windows.Automation.WindowPattern>控件模式用于支持在传统图形用户界面（GUI）中提供基于窗口的基本功能的控件。 必须实现此控件模式的控件示例包括顶级应用程序窗口、多文档界面（MDI）子窗口、大小可调的拆分窗格控件、模式对话框和气球状帮助窗口。  
+ <xref:System.Windows.Automation.WindowPattern>控件模式用于支持在传统图形用户界面中提供基于窗口的基本功能 (GUI) 的控件。 必须实现此控件模式的控件示例包括顶级应用程序窗口、多文档界面 (MDI) 子窗口、大小可调的拆分窗格控件、模式对话框和气球状帮助窗口。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
+
  在实现 Window 控件模式时，请注意以下准则和约定：  
   
 - 为了能够使用 UI 自动化同时修改窗口大小和屏幕位置，除了 <xref:System.Windows.Automation.Provider.ITransformProvider> 外，控件还必须实现 <xref:System.Windows.Automation.Provider.IWindowProvider>。  
@@ -37,7 +40,9 @@ ms.locfileid: "87168187"
 - IWindowProvider 不支持全屏模式，因为它是特定于应用程序的功能，而不是典型的窗口行为。  
   
 <a name="Required_Members_for_IWindowProvider"></a>
+
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider 必需的成员  
+
  IWindowProvider 接口需要以下属性、方法和事件。  
   
 |必需的成员|成员类型|说明|  
@@ -56,7 +61,9 @@ ms.locfileid: "87168187"
 |<xref:System.Windows.Automation.WindowInteractionState>|事件|不保证为 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>例外  
+
+## <a name="exceptions"></a>异常  
+
  提供程序必须引发以下异常。  
   
 |例外类型|条件|  

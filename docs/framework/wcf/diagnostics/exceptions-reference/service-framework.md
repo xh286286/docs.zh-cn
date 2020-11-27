@@ -2,14 +2,15 @@
 title: 服务框架
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fb39f2106e027cc5d4125cfb0bc89f3e5983cec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285715"
 ---
 # <a name="service-framework"></a>服务框架
+
 本主题列出由服务框架数据生成的所有异常。  
   
 ## <a name="exception-list"></a>异常列表  
@@ -25,7 +26,7 @@ ms.locfileid: "61780752"
 |BaseAddressCannotHaveUserInfo|基址中不能包含统一资源标识符用户信息节。|  
 |BaseAddressDuplicateScheme|此集合已经包含指定方案的地址。 此集合中的每个方案只能有一个地址。|  
 |BaseAddressMustBeAbsolute|只有绝对统一资源标识符才能用作基址。|  
-|BindingDoesnTSupportAnyChannelTypes1|指定的绑定不支持创建任何通道类型。 自定义绑定中的绑定元素的堆栈不正确或者顺序错误。 堆栈底部需要一个传输协议元素。 绑定元素的建议的顺序是：TransactionFlow、 ReliableSession、 Security、 CompositeDuplex、 OneWay、 StreamSecurity、 MessageEncoding，传输。|  
+|BindingDoesnTSupportAnyChannelTypes1|指定的绑定不支持创建任何通道类型。 自定义绑定中的绑定元素的堆栈不正确或者顺序错误。 堆栈底部需要一个传输协议元素。 建议绑定元素采用以下顺序：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。|  
 |BindingDoesnTSupportDuplexButContractRequires1|协定需要双工， 但是指定的绑定不支持它或者因配置不正确而无法支持它。|  
 |BindingDoesnTSupportOneWayButContractRequires1|协定需要单向， 但是指定的绑定不支持它或者因配置不正确而无法支持它。|  
 |BindingDoesnTSupportRequestReplyButContract1|协定需要请求/答复， 但是指定的绑定不支持它或者因配置不正确而无法支持它。|  
@@ -33,11 +34,11 @@ ms.locfileid: "61780752"
 |BindingDoesnTSupportTwoWayButContractRequires1|协定需要双向（请求-答复或双工）， 但是指定的绑定不支持它或者因配置不正确而无法支持它。|  
 |BindingRequirementsAttributeDisallowsQueuedDelivery1|DeliveryRequirementsAttribute 不允许 QueuedDelivery， 但是具有指定协定的终结点的绑定支持它。|  
 |BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute 需要 QueuedDelivery， 但是具有指定协定的终结点的绑定不支持它或者因为配置不正确而不支持它。|  
-|channelDoesNotHaveADuplexSession0|当前的通道不支持关闭输出会话， 此通道未实现 ISessionChannel\<因为 >。|  
+|channelDoesNotHaveADuplexSession0|当前的通道不支持关闭输出会话， 此通道不实现 ISessionChannel \<IDuplexSession> 。|  
 |ClientRuntimeRequiresFormatter0|指定的 ClientOperation 需要格式化程序，因为 SerializeRequest 和 DeserializeReply 并不都是 False。|  
 |CommunicationObjectAborted1|无法将指定的通信对象用于通信，因为它已经被停止。|  
-|CommunicationObjectAbortedStack2|指定的通信对象不能用于通信，因为它已经被停止： {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|指定的通信对象已重写虚函数{1}，但它未调用基类中定义的版本。|  
+|CommunicationObjectAbortedStack2|无法将指定的通信对象用于通信，因为它已停止： {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|指定的通信对象已重写虚函数， {1} 但它未调用基类中定义的版本。|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|指定的协定包含一个或多个 IsTerminating 或者非 IsInitiating 操作， 但是它未将 SessionMode 属性 (Property) 设置为 SessionMode.Required。 IsInitiating 和 IsTerminating 属性 (Attribute) 只能在会话的上下文中使用。|  
 |CouldnTCreateChannelForChannelType2|请求指定的通道类型，但是指定的绑定不支持它或者因配置不正确而无法支持它。|  
 |DispatchRuntimeRequiresFormatter0|指定的 DispatchOperation 需要格式化程序，因为 DeserializeRequest 和 SerializeReply 并非均为 False。|  
@@ -48,7 +49,7 @@ ms.locfileid: "61780752"
 |MultipleMebesInParameters|在 BindingContext 的 BindingParameters 中找到多个 MessageEncodingBindingElement。 CustomBinding 不能具有多个 MessageEncodingBindingElement。 在这些元素中，移除多余元素，保留一个即可。|  
 |MultipleStreamUpgradeProvidersInParameters|在 BindingContext 的 BindingParameters 中找到多个 IStreamUpgradeProviderElement。 CustomBinding 不能具有多个 IStreamUpgradeProviderElement。 在这些元素中，移除多余元素，保留一个即可。|  
 |NoChannelBuilderAvailable|不能使用该绑定创建通道工厂或通道侦听器，因为它不具有 TransportBindingElement。 每个绑定都必须至少具有一个从 TransportBindingElement 派生的绑定元素。|  
-|NotAllBindingElementsBuilt|生成通道工厂/通道侦听器时，没有使用此绑定中的某些绑定元素。 这可能是因为绑定元素顺序混乱所导致的。 绑定元素的建议的顺序是：TransactionFlow、 ReliableSession、 Security、 CompositeDuplex、 OneWay、 StreamSecurity、 MessageEncoding，传输。  请注意，TransportBindingElement 必须是最后一个。 没有生成指定的绑定元素。|  
+|NotAllBindingElementsBuilt|生成通道工厂/通道侦听器时，没有使用此绑定中的某些绑定元素。 这可能是因为绑定元素顺序混乱所导致的。 建议绑定元素采用以下顺序：TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport。  请注意，TransportBindingElement 必须是最后一个。 没有生成指定的绑定元素。|  
 |RuntimeRequiresInvoker0|调度操作需要调用程序。|  
 |ServiceHasZeroAppEndpoints|指定的服务不具有应用程序（非基础结构）终结点。 这可能是因为未找到应用程序的配置文件，或者在配置文件中未找到与服务名称匹配的服务元素，或者服务元素中未定义终结点。|  
 |SFxActionMismatch|由于操作不匹配，无法创建类型化消息 期望指定的操作，但是遇到其他操作。|  
@@ -100,13 +101,13 @@ ms.locfileid: "61780752"
 |SFXEndpointBehaviorUsedOnWrongSide|指定的 IEndpointBehavior 无法用于服务器； 此行为只能应用于客户端。|  
 |SFxEndpointNoMatchingScheme|找不到与具有指定绑定的终结点的指定方案匹配的基址。 注册的基址方案是指定方案。|  
 |SFxErrorCreatingMtomReader|为消息传输优化机制消息创建读取器时出错。|  
-|SFxErrorDeserializingFault|服务器返回无效的 SOAP 错误。 有关详细信息，请参见 InnerException。|  
+|SFxErrorDeserializingFault|服务器返回无效的 SOAP 错误。 有关详细信息，请参阅 InnerException。|  
 |SFxErrorDeserializingHeader|反序列化指定消息中的标头之一时出错。 有关详细信息，请参见 InnerException。|  
-|SFxErrorReflectingOnMethod3|加载指定类型中指定方法上的指定属性时出错。  有关详细信息，请参见 InnerException。|  
-|SFxErrorReflectingOnParameter4|加载指定类型中指定方法的指定参数上的指定属性时出错。 有关详细信息，请参见 InnerException。|  
-|SFxErrorReflectingOnType2|加载指定类型上的指定属性时出错。  有关详细信息，请参见 InnerException。|  
-|SFxErrorSerializingBody|序列化指定消息的正文时出错。 有关详细信息，请参见 InnerException。|  
-|SFxErrorSerializingHeader|序列化指定消息中的标头之一时出错。 有关详细信息，请参见 InnerException。|  
+|SFxErrorReflectingOnMethod3|加载指定类型中指定方法上的指定属性时出错。  有关详细信息，请参阅 InnerException。|  
+|SFxErrorReflectingOnParameter4|加载指定类型中指定方法的指定参数上的指定属性时出错。 有关详细信息，请参阅 InnerException。|  
+|SFxErrorReflectingOnType2|加载指定类型上的指定属性时出错。  有关详细信息，请参阅 InnerException。|  
+|SFxErrorSerializingBody|序列化指定消息的正文时出错。 有关详细信息，请参阅 InnerException。|  
+|SFxErrorSerializingHeader|序列化指定消息中的标头之一时出错。 有关详细信息，请参阅 InnerException。|  
 |SFxExpectedIMethodCallMessage|内部错误。 该消息必须是有效的 IMethodCallMessage。|  
 |SFxExportMustHaveType|指定操作中的指定部分无法导出，因为它不具有有效的 CLR 类型。|  
 |SFxHeaderNotUnderstood|未处理该消息。 此消息的接收方不能理解来自指定命名空间的指定标头。 该错误通常表明消息发送方启用了接收方无法处理的通信协议。 请确保客户端的绑定配置与服务的绑定一致。|  
@@ -117,12 +118,12 @@ ms.locfileid: "61780752"
 |SFxInvalidMessageBody|OperationFormatter 遇到了无效的消息正文。 预期找到具有指定名称和命名空间的“Element”节点类型。 找到了具有指定名称和命名空间的指定节点类型。|  
 |SFxInvalidMessageBodyEmptyMessage|OperationFormatter 无法对来自消息的任何信息进行反序列化，因为消息为空。|  
 |SFxInvalidMessageBodyErrorDeserializingParameter|尝试反序列化指定的参数时出错。 有关更多信息，请参见 InnerException。|  
-|SFxInvalidMessageBodyErrorSerializingParameter|尝试序列化指定的参数时出错。 指定了 InnerException 消息。  有关详细信息，请参见 InnerException。|  
+|SFxInvalidMessageBodyErrorSerializingParameter|尝试序列化指定的参数时出错。 指定了 InnerException 消息。  有关详细信息，请参阅 InnerException。|  
 |SFxInvalidMessageBodyUnexpectedNode|反序列化参数时遇到来自指定命名空间的指定意外节点。|  
 |SFxInvalidMessageContractSignature|指定的操作具有使用 MessageContractAttribute 标记的参数或返回类型。 在使用消息协定表示请求消息时，该操作必须有一个使用 MessageContractAttribute 标记的参数。 在使用消息协定表示响应消息时，该操作的返回值必须是使用 MessageContractAttribute 标记的类型。 该操作不能有“out”或“ref”参数。|  
 |SFxInvalidReplyAction|该操作的传出答复消息具有指定的 Action，但该操作的协定指定了另外的 ReplyAction。 在消息中指定的 Action 必须与协定中的 ReplyAction 匹配，否则操作协定必须指定 ReplyAction='*'。|  
 |SFxInvalidRequestAction|该操作的传出请求消息具有指定的 Action，但该操作的协定指定了另外的 RequestAction。 在消息中指定的 Action 必须与协定中的 RequestAction 匹配，否则操作协定必须指定 RequestAction='*'。|  
-|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|静态 CreateChannel 方法不能与指定的协定一起使用，因为该协定定义了回调协定。 使用其中一个静态 CreateChannel 重载上 DuplexChannelFactory\<TChannel >。|  
+|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|静态 CreateChannel 方法不能与指定的协定一起使用，因为该协定定义了回调协定。 在 DuplexChannelFactory 上使用静态 CreateChannel 重载之一 \<TChannel> 。|  
 |SFxInvalidStreamInRequest|要使指定操作中的请求成为流，该操作必须具有类型为 Stream 的单个参数。|  
 |SFxInvalidStreamInResponse|要使指定操作中的响应成为流，该操作必须具有类型为 Stream 的单个 out 参数或返回值。|  
 |SFxInvalidStreamInTypedMessage|要将流与 MessageContract 编程模型一起使用，指定的类型必须具有单个类型为 Stream 的 MessageBody 成员。|  
@@ -145,7 +146,7 @@ ms.locfileid: "61780752"
 |SFxSchemaDoesNotContainType|具有指定目标命名空间的架构不包含具有指定名称的类型。|  
 |SfxServiceContractAttributeNotFound|指定的协定类型不具有 ServiceContractAttribute 属性。 若要定义有效的协定，指定的类型必须具有 ServiceContractAttribute 属性。 该类型可以是协定接口或服务类。|  
 |SFxServiceContractGeneratorConfigRequired|若要使用 GenerateServiceEndpoint 方法生成配置信息，必须使用有效的 Configuration 对象初始化 ServiceContractGenerator 实例。|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|在 ServiceHost 处于下列状态之一后，无法添加终结点：<br /><br /> 打开<br />错误方式<br />结尾<br />-关闭|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|在 ServiceHost 处于下列状态之一后，无法添加终结点：<br /><br /> -已打开<br />-出错<br />-已终止<br />-已关闭|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|初始化 Description 属性以前，无法添加终结点。|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|ServiceMetadataBehavior 的 HttpGetEnabled 属性设置为 True，而 HttpGetUrl 属性是相对地址，但没有 HTTP 基址。 请提供 HTTP 基址或将 HttpGetUrl 设置为绝对地址。|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|ServiceMetadataBehavior 的 HttpsGetEnabled 属性设置为 True，而 HttpsGetUrl 属性是相对地址，但没有 HTTP 基址。 请提供 HTTPS 基址或将 HttpsGetUrl 设置为绝对地址。|  

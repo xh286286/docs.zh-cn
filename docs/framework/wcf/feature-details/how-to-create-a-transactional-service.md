@@ -2,14 +2,15 @@
 title: 如何：创建事务性服务
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3d094dbd5822f6025e1cc6c90aab04b61459314
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964021"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286287"
 ---
 # <a name="how-to-create-a-transactional-service"></a>如何：创建事务性服务
+
 本示例演示创建事务性服务和使用客户端启动的事务协调服务操作的各个方面。  
   
 ### <a name="creating-a-transactional-service"></a>创建事务性服务  
@@ -65,7 +66,7 @@ ms.locfileid: "69964021"
     }  
     ```  
   
-3. 在配置文件中配置绑定，指定事务上下文应进行流处理，并指定要使用的协议执行此操作。 有关详细信息, 请参阅配置[配置](servicemodel-transaction-configuration.md)。 具体地说，绑定类型是在终结点元素的 `binding` 属性中指定的。 端点 > 元素包含一个`bindingConfiguration`属性, 该属性引用名为`transactionalOleTransactionsTcpBinding`的绑定配置, 如下面的示例配置中所示。 [ \<](../../configure-apps/file-schema/wcf/endpoint-element.md)  
+3. 在配置文件中配置绑定，指定事务上下文应进行流处理，并指定要使用的协议执行此操作。 有关详细信息，请参阅配置 [配置](servicemodel-transaction-configuration.md)。 具体地说，绑定类型是在终结点元素的 `binding` 属性中指定的。 [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md)元素包含一个 `bindingConfiguration` 属性，该属性引用名为的绑定配置 `transactionalOleTransactionsTcpBinding` ，如下面的示例配置中所示。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -91,7 +92,7 @@ ms.locfileid: "69964021"
   
 ### <a name="supporting-multiple-transaction-protocols"></a>支持多事务协议  
   
-1. 为了获得最佳性能, 应将 OleTransactions 协议用于涉及使用 Windows Communication Foundation (WCF) 编写的客户端和服务的方案。 但是，对于需要与第三方协议堆栈之间具有互操作性的方案，可以使用 WS-AtomicTransaction (WS-AT) 协议。 可以通过提供多个具有相应协议特定绑定的终结点, 将 WCF 服务配置为接受这两个协议, 如下面的示例配置所示。  
+1. 为了获得最佳性能，应将 OleTransactions 协议用于涉及使用 Windows Communication Foundation (WCF) 编写的客户端和服务的方案。 但是，对于需要与第三方协议堆栈之间具有互操作性的方案，可以使用 WS-AtomicTransaction (WS-AT) 协议。 可以通过提供多个具有相应协议特定绑定的终结点，将 WCF 服务配置为接受这两个协议，如下面的示例配置所示。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -126,7 +127,7 @@ ms.locfileid: "69964021"
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>控制事务的完成  
   
-1. 默认情况下, 如果未引发未经处理的异常, WCF 操作会自动完成事务。 使用 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性和 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 方法可以修改此行为。 当需要某一操作与另一操作（例如借贷操作）在同一个事务中发生时，可以通过将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性设置为 `false` 来禁用自动完成行为，如下面的 `Debit` 操作示例所示。 在调用 `Debit` 属性设置为 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 的方法前（如操作 `true` 所示）或调用 `Credit1` 方法以将事务显式标记为完成前（如操作 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 所示），`Credit2` 操作使用的事务不会完成。 请注意，所示的两个贷记操作仅供演示，更常见的情况是只使用一个贷记操作。  
+1. 默认情况下，如果未引发未经处理的异常，WCF 操作会自动完成事务。 使用 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性和 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 方法可以修改此行为。 当需要某一操作与另一操作（例如借贷操作）在同一个事务中发生时，可以通过将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性设置为 `false` 来禁用自动完成行为，如下面的 `Debit` 操作示例所示。 在调用 `Debit` 属性设置为 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 的方法前（如操作 `true` 所示）或调用 `Credit1` 方法以将事务显式标记为完成前（如操作 <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> 所示），`Credit2` 操作使用的事务不会完成。 请注意，所示的两个贷记操作仅供演示，更常见的情况是只使用一个贷记操作。  
   
     ```csharp
     [ServiceBehavior]  
@@ -182,7 +183,7 @@ ms.locfileid: "69964021"
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>控制事务性服务实例的生存期  
   
-1. WCF 使用<xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>属性来指定在事务完成时是否释放基础服务实例。 由于默认情况下`true`默认为, 因此, WCF 展示了有效且可预测的 "实时" 激活行为。 在后续事务上调用服务可确保新服务实例不会保留前一个事务的状态。 虽然此行为通常很有用，但有时你可能希望服务实例在事务完成后仍然保持状态。 例如，所需的状态或资源句柄成本昂贵，难以检索或重建时就属于这种情况。 通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性设置为 `false`，可以实现此目的。 使用该设置时，实例和任何关联状态将可用于后续调用。 使用此设置时，应仔细考虑状态和事务何时清除和完成以及如何清除和完成。 下面的示例演示如何通过对 `runningTotal` 变量保持实例来实现这一目的。  
+1. WCF 使用 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性来指定在事务完成时是否释放基础服务实例。 由于默认情况下默认为，因此， `true` WCF 展示了有效且可预测的 "实时" 激活行为。 在后续事务上调用服务可确保新服务实例不会保留前一个事务的状态。 虽然此行为通常很有用，但有时你可能希望服务实例在事务完成后仍然保持状态。 例如，所需的状态或资源句柄成本昂贵，难以检索或重建时就属于这种情况。 通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性设置为 `false`，可以实现此目的。 使用该设置时，实例和任何关联状态将可用于后续调用。 使用此设置时，应仔细考虑状态和事务何时清除和完成以及如何清除和完成。 下面的示例演示如何通过对 `runningTotal` 变量保持实例来实现这一目的。  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
