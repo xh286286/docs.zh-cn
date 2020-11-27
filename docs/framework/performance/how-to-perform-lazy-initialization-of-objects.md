@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3de0d8ea8266931c2bcda5c59c1fef97602673d5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309724"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278123"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>如何：执行对象的延迟初始化
+
 <xref:System.Lazy%601?displayProperty=nameWithType> 类可简化执行迟缓初始化和对象实例化的工作。 通过以迟缓方式初始化对象，可在不需要对象的情况下避免创建所有对象，或可在首次访问对象之后再进行迟缓初始化。 若要了解详细信息，请参阅[迟缓初始化](lazy-initialization.md)  
   
 ## <a name="example"></a>示例  
+
  以下示例演示如何使用 <xref:System.Lazy%601> 初始化值。 假定可能不需要迟缓变量，这取决于将 `someCondition` 变量设置为 true 或 false 的一些其他代码。  
   
 ```vb  
@@ -70,6 +72,7 @@ End Sub
 ```  
   
 ## <a name="example"></a>示例  
+
  以下示例演示如何使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类初始化仅对当前线程上的当前对象实例可见的类型。  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]

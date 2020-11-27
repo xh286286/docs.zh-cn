@@ -2,12 +2,12 @@
 title: 对 WCF Web HTTP 服务的缓存支持
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 0445f0214f90873dad4241789db270c9b6f4a2f6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6ce3ceccde01879876960e0288cb600a3a20c204
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559410"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279332"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
 
@@ -167,4 +167,5 @@ public Customer GetCustomer(string id)
 ```  
   
 ## <a name="security-considerations"></a>安全注意事项  
+
  对于需要授权的请求，不应缓存其响应，因为从缓存中提供响应时不会执行该授权。  缓存此类响应将会带来严重的安全漏洞。  通常，需要授权的请求会提供用户特定数据，因此服务器端缓存也没有益处。  在这种情况下，客户端缓存或根本不缓存将更合适。

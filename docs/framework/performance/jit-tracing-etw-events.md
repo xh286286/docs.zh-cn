@@ -1,27 +1,29 @@
 ---
 title: JIT 跟踪 ETW 事件
-description: 了解实时（JIT）跟踪 ETW 事件。 这些事件收集与 JIT 内联和 JIT 尾调用成功或失败有关的信息。
+description: 了解实时 (JIT) 跟踪 ETW 事件。 这些事件收集与 JIT 内联和 JIT 尾调用成功或失败有关的信息。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: fd1fae8731ea927ab64d0c0df83b90d29289a0a0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474457"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277963"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 跟踪 ETW 事件
+
 这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。
 
 ## <a name="jit-inlining-events"></a>JIT 内联事件
 
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件
+
  下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
@@ -49,9 +51,10 @@ ms.locfileid: "86474457"
 |ClrInstanceID|win:UnicodeString|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 事件  
+
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
@@ -79,9 +82,10 @@ ms.locfileid: "86474457"
 ## <a name="jit-tail-call-events"></a>JIT 尾调用事件  
   
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 事件  
+
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   
@@ -109,9 +113,10 @@ ms.locfileid: "86474457"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 事件  
+
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|详细级别 (5)|  
   

@@ -2,17 +2,19 @@
 title: System.ServiceModel.Security.SecurityBindingIncomingMessageVerified
 ms.date: 03/30/2017
 ms.assetid: 40fc744e-8d6f-49e0-a5fd-4f9a31cc0ed7
-ms.openlocfilehash: f38402ad3d68f6bb020ffcf9fe0733ca102d94ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0e177fe45e499d90fc24657aa755f7072e61d869
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576690"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276823"
 ---
 # <a name="systemservicemodelsecuritysecuritybindingincomingmessageverified"></a>System.ServiceModel.Security.SecurityBindingIncomingMessageVerified
+
 System.ServiceModel.Security.SecurityBindingIncomingMessageVerified  
   
 ## <a name="description"></a>描述  
+
  安全协议已验证传入的消息。  
   
 ## <a name="see-also"></a>另请参阅
