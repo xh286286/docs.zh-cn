@@ -2,17 +2,18 @@
 title: 操作格式化程序和操作选择器
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 344d3122d03e89a7f20e391db49005d0e085dfa6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a49b466a940b63b70509ba76e62a9b9c5a36ad61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575144"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260014"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>操作格式化程序和操作选择器
-此示例演示如何使用 Windows Communication Foundation （WCF）扩展点来允许不同于 WCF 所需的格式的消息数据。 默认情况下，WCF 格式化程序应在元素下包含方法参数 `soap:body` 。 但是，此示例演示如何实现一个自定义操作格式化程序，用于分析 HTTP GET 查询字符串中的参数数据并使用该数据调用方法。  
+
+此示例演示如何使用 Windows Communication Foundation (WCF) 扩展点来允许不同于 WCF 所需的格式的消息数据。 默认情况下，WCF 格式化程序应在元素下包含方法参数 `soap:body` 。 但是，此示例演示如何实现一个自定义操作格式化程序，用于分析 HTTP GET 查询字符串中的参数数据并使用该数据调用方法。  
   
- 该示例基于实现服务协定的[入门](getting-started-sample.md) `ICalculator` 。 它演示如何更改 Add、Subtract、Multiply 和 Divide 消息，以便对客户端到服务器请求使用 HTTP GET，对服务器到客户端响应使用带有 POX 消息的 HTTP POST。  
+ 该示例基于实现服务协定的 [入门](getting-started-sample.md) `ICalculator` 。 它演示如何更改 Add、Subtract、Multiply 和 Divide 消息，以便对客户端到服务器请求使用 HTTP GET，对服务器到客户端响应使用带有 POX 消息的 HTTP POST。  
   
  为此，此示例提供了以下功能：  
   
@@ -30,7 +31,8 @@ ms.locfileid: "84575144"
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="key-concepts"></a>关键概念  
- `QueryStringFormatter`-操作格式化程序是 WCF 中的组件，该组件负责将消息转换为参数对象数组，并将参数对象数组转换为消息。 这在客户端是使用 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 接口完成的，在服务器上是使用 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 接口完成的。 通过这些接口，用户可以从 `Serialize` 和 `Deserialize` 方法获得请求和响应消息。  
+
+ `QueryStringFormatter` -操作格式化程序是 WCF 中的组件，该组件负责将消息转换为参数对象数组，并将参数对象数组转换为消息。 这在客户端是使用 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 接口完成的，在服务器上是使用 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 接口完成的。 通过这些接口，用户可以从 `Serialize` 和 `Deserialize` 方法获得请求和响应消息。  
   
  在此示例中，`QueryStringFormatter` 同时实现了这两个接口，并且在客户端和服务器上均已实现。  
   
@@ -47,6 +49,7 @@ ms.locfileid: "84575144"
 - 在此示例中，HTTP GET 只用于请求。 该格式化程序将响应的发送委托给本来用于生成 XML 消息的原始格式化程序。 此示例的目的之一是演示如何实现此类委托格式化程序。  
   
 ### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSelector 类  
+
  用户可以通过 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 接口实现自己的逻辑，决定应为哪个操作调度特定的消息。  
   
  在此示例中，必须在服务器上实现 `UriPathSuffixOperationSelector` 以选择合适的操作，因为操作名称包含在 HTTP GET URI 中，而不是包含在消息的操作标头中。 此示例设置为只允许不区分大小写的操作名称。  
@@ -54,6 +57,7 @@ ms.locfileid: "84575144"
  `SelectOperation` 方法采用传入消息，并在其消息属性中查找 `Via` URI。 它从 URI 中提取操作名称后缀，查看内部表以获取应将该消息调度给的操作名称，并返回该操作名称。  
   
 ### <a name="enablehttpgetrequestsbehavior-class"></a>EnableHttpGetRequestsBehavior 类  
+
  `UriPathSuffixOperationSelector` 组件可以通过编程方式或者通过终结点行为进行设置。 此示例实现了 `EnableHttpGetRequestsBehavior` 行为，这是在服务的应用程序配置文件中指定的。  
   
  在服务器上：  
@@ -63,6 +67,7 @@ ms.locfileid: "84575144"
  默认情况下，WCF 使用完全匹配地址筛选器。 传入消息中的 URI 包含一个操作名称后缀，后跟包含参数数据的查询字符串，因此终结点行为还将地址筛选器更改为前缀匹配筛选器。 它使用 WCF <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 实现此目的。  
   
 ### <a name="installing-operation-formatters"></a>安装操作格式化程序  
+
  指定格式化程序的操作行为是唯一的。 默认情况下始终为每个操作实现这样一个行为，以创建必要的操作格式化程序。 但是，这些行为看起来就像另一个操作行为；它们不能通过其他任何属性进行标识。 若要安装替换行为，实现必须查找默认情况下由 WCF 类型加载程序安装的特定格式化程序行为，并将其替换或添加兼容的行为，以便在默认行为之后运行。  
   
  这些操作格式化程序行为可以在调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> 之前通过编程方式进行设置，或者通过指定一个在默认行为之后执行的操作行为来进行设置。 但是，通过终结点行为（并进而通过配置）并不能轻松完成设置，因为行为模式不允许用一个行为替换另一个行为，或者通过其他方式修改说明树。  
@@ -99,6 +104,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 - 这必须在调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前完成。 在此示例中，我们演示如何在调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 之前手动修改格式化程序。 实现同一目标的另一种方式是从 <xref:System.ServiceModel.ServiceHost> 派生一个类，以便在打开之前调用 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`（有关示例，请参见承载文档和示例）。  
   
 ### <a name="user-experience"></a>用户体验  
+
  在服务器上：  
   
 - 服务器 `ICalculator` 实现不需要更改。  
@@ -166,14 +172,14 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
+2. 若要生成解决方案，请按照 [生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  

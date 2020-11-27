@@ -2,14 +2,15 @@
 title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 62e1495927cad669771c560603919e8f6b94d863
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b4ec820cd57e3dfaff035dc8e5ce1ef4b463df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559358"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259988"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
+
 此示例演示如何通过以下方法来控制 Windows Communication Foundation (WCF) 服务的多个安全相关功能：  
   
 - 加密服务配置文件中的敏感信息。  
@@ -28,6 +29,7 @@ ms.locfileid: "90559358"
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>讨论 (Discussion)  
+
  这些功能中的每种功能都可以单独使用，也可以一起使用来控制服务安全的各个方面。 这不是用于保护 WCF 服务的权威指南。  
   
  .NET Framework 配置文件可以包含敏感信息，如用于连接到数据库的连接字符串。 在 Web 承载的共享方案中，可能需要对服务配置文件中的此信息进行加密，以避免他人无意中查看配置文件中包含的数据。 .NET Framework 2.0 和更高版本可以通过使用 Windows 数据保护应用程序编程接口 (DPAPI) 或 RSA 加密提供程序对配置文件的部分进行加密。 使用 DPAPI 或 RSA 的 aspnet_regiis.exe 可以对配置文件的选择部分进行加密。  
@@ -37,6 +39,7 @@ ms.locfileid: "90559358"
  此示例演示如何在跟踪和消息日志中控制已知个人身份信息 (PII) 日志记录，如用户名和密码。 默认情况下禁用已知 PII 的日志记录，但在特定情况下，PII 日志记录可能会对应用程序的调试大有帮助。 此示例基于 [入门](getting-started-sample.md)。 此外，此示例还使用跟踪和消息日志记录。 有关详细信息，请参阅 [跟踪和消息日志记录](tracing-and-message-logging.md) 示例。  
   
 ## <a name="encrypting-configuration-file-elements"></a>对配置文件元素进行加密  
+
  出于安全目的，在以 Web 为宿主的共享环境中，可能需要对包含敏感信息的特定配置元素（如数据库连接字符串）进行加密。 使用 .NET Framework 文件夹中 aspnet_regiis.exe 工具（例如%WINDIR%\Microsoft.NET\Framework\v4.0.20728.）可以对配置元素进行加密。  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>对示例的 Web.config 中的 appSettings 节中的值进行加密  
@@ -50,6 +53,7 @@ ms.locfileid: "90559358"
  有关配置文件的加密节的详细信息，请参阅 ASP.NET configuration 中的操作方法（配置） ([生成安全 ASP.NET 应用程序：身份验证、授权和安全通信](/previous-versions/msp-n-p/ff649248(v=pandp.10))) 和 ASP.NET 配置中的 rsa 中的操作说明 ([如何：使用 rsa) 加密 ASP.NET 2.0 中的配置节](/previous-versions/msp-n-p/ff650304(v=pandp.10)) 。  
   
 ## <a name="locking-configuration-file-elements"></a>锁定配置文件元素  
+
  在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 在这些情况下，通过检查 Machine.config 中的值并依次与父目录中的任何 Web.config 文件合并，然后沿目录树向下移动，最后合并包含该服务的目录中的 Web.config 文件，来计算子目录中服务的配置值。 多数配置元素的默认行为都允许子目录中的配置文件重写父目录中设置的值。 在特定情况下，可能需要阻止子目录中的配置文件重写父目录配置中设置的值。  
   
  .NET Framework 提供了一种锁定配置文件元素的方式，当配置重写锁定的配置元素时会引发运行时异常。  
@@ -74,6 +78,7 @@ ms.locfileid: "90559358"
  可以更具体地锁定配置元素。 可以指定元素的列表作为 `lockElements` 的值以锁定子元素集合中的一组元素。 可以指定属性的列表作为 `lockAttributes` 的值以锁定元素内的一组属性。 通过指定节点上的 `lockAllElementsExcept` 或 `lockAllAttributesExcept` 属性，可以锁定除指定列表外的整个元素集合或属性集合。  
   
 ## <a name="pii-logging-configuration"></a>PII 日志记录配置  
+
  PII 日志记录由两个开关控制：Machine.config 中可以让计算机管理员允许或拒绝 PII 日志记录的计算机范围的设置，和允许应用程序管理员针对 Web.config 或 App.config 文件中的每个源来切换 PII 日志记录的应用程序设置。  
   
  计算机范围的设置通过 `enableLoggingKnownPii` `true` `false` 在 Machine.config 的元素中将设置为或进行控制 `machineSettings` 。例如，以下应用程序允许应用程序启用 PII 日志记录。  
@@ -142,6 +147,6 @@ ms.locfileid: "90559358"
   
 1. 编辑 Machine.config，将 `enableLoggingKnownPii` 属性设置为 `false`。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 监视示例](/previous-versions/appfabric/ff383407(v=azure.10))

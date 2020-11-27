@@ -2,15 +2,16 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 0b2b4d9b22f654fa433c7473160444b41a5adfa4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 261247daf01e975cfc3b5ae449fae6dfbf9d1a80
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575143"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259991"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-OperationContextScope 示例演示如何使用标头在 Windows Communication Foundation （WCF）调用上发送额外的信息。 在此示例中，服务器和客户端都是控制台应用程序。  
+
+OperationContextScope 示例演示如何使用标头 (WCF) 调用发送额外的 Windows Communication Foundation 信息。 在此示例中，服务器和客户端都是控制台应用程序。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -18,6 +19,7 @@ OperationContextScope 示例演示如何使用标头在 Windows Communication Fo
  此示例演示客户端如何使用 <xref:System.ServiceModel.Channels.MessageHeader> 以 <xref:System.ServiceModel.OperationContextScope> 的方式发送额外的信息。 <xref:System.ServiceModel.OperationContextScope> 对象是通过将其范围设置为通道来创建的。 必须转换为远程服务的头可以添加到 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> 集合中。 可以通过访问 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 在服务上检索添加到此集合中的头。 它的调用是在多个通道进行的，添加到客户端的头然后将只应用于用来创建 <xref:System.ServiceModel.OperationContextScope> 的通道。  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
+
  这是从客户端接收消息，并尝试在 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 集合中查找头的示例服务。 客户端传递在头中发送的 GUID，服务则检索自定义头，如果存在自定义头，则将其与客户端作为参数传递的 GUID 进行比较。  
   
 ```csharp
@@ -55,7 +57,8 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- 这是一个客户端实现，它使用由 "工作的[元数据实用工具（svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md) " 生成的代理来与远程服务进行通信。 它首先创建 `MessageHeaderReaderClient` 的两个代理对象。  
+
+ 这是客户端实现，它使用由 "工作的 [元数据实用工具" 工具生成的代理 ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md) 与远程服务进行通信。 它首先创建 `MessageHeaderReaderClient` 的两个代理对象。  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -115,17 +118,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
