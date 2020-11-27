@@ -2,14 +2,15 @@
 title: OperationBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
-ms.openlocfilehash: 79601308c66abe43dd5a7f72bd2a05b9d2346c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76cc619aed4ba2b944a8d11dc454a40368a4068c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963041"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269075"
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
+
 OperationBehaviorAttribute  
   
 ## <a name="syntax"></a>语法  
@@ -26,33 +27,39 @@ class OperationBehaviorAttribute : Behavior
 ```  
   
 ## <a name="methods"></a>方法  
+
  OperationBehaviorAttribute 类不定义任何方法。  
   
 ## <a name="properties"></a>属性  
+
  OperationBehaviorAttribute 类具有下列属性：  
   
 ### <a name="autodisposeparameters"></a>AutoDisposeParameters  
+
  数据类型：Boolean  
   
  访问类型：只读  
   
  参数自动释放功能的状态。  
   
-### <a name="impersonation"></a>Impersonation  
- 数据类型：String  
+### <a name="impersonation"></a>模拟  
+
+ 数据类型：字符串  
   
  访问类型：只读  
   
  指示操作支持的调用方模拟级别。  
   
 ### <a name="releaseinstancemode"></a>ReleaseInstanceMode  
- 数据类型：String  
+
+ 数据类型：字符串  
   
  访问类型：只读  
   
  指示操作调用过程中何时回收对象。  
   
 ### <a name="transactionautocomplete"></a>TransactionAutoComplete  
+
  数据类型：Boolean  
   
  访问类型：只读  
@@ -60,6 +67,7 @@ class OperationBehaviorAttribute : Behavior
  指示在未发生未处理的异常的情况下是否自动提交当前事务。  
   
 ### <a name="transactionscoperequired"></a>TransactionScopeRequired  
+
  数据类型：Boolean  
   
  访问类型：只读  
@@ -72,6 +80,6 @@ class OperationBehaviorAttribute : Behavior
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>

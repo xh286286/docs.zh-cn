@@ -2,14 +2,15 @@
 title: 如何：服务数据分区
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601187"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268919"
 ---
 # <a name="how-to-service-data-partitioning"></a>如何：服务数据分区
+
 本主题概述了在同一目标服务的多个实例之间划分消息时所需采取的基本步骤。 如果需要缩放服务以提供更好的服务质量，或者需要以特定方式处理来自不同客户的请求，此时通常采用服务数据划分。 例如，来自高价值或 "黄金" 客户的消息可能需要比标准客户的消息处理更高的优先级。  
   
  在本示例中，将消息路由到 regularCalc 服务的两个实例之一。 服务的两个实例相同；但是，calculator1 终结点表示的服务负责处理从高价值客户收到的消息，而 calculator 2 终结点负责处理来自其他客户的消息。  
@@ -99,6 +100,7 @@ ms.locfileid: "84601187"
     ```  
   
 ## <a name="example"></a>示例  
+
  下面是配置文件的完整代码清单。  
   
 ```xml  

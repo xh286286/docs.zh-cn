@@ -2,14 +2,15 @@
 title: PeerTransportSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 1df08cbb-68c5-4d36-9f88-a776a8117de8
-ms.openlocfilehash: fd5393a2ebdf5a5fb584edc2c0b1b941fa1481ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b5276eca89d32a45177aa958d4c99d682e30668
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962937"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268945"
 ---
 # <a name="peertransportsecuritysettings"></a>PeerTransportSecuritySettings
+
 PeerTransportSecuritySettings  
   
 ## <a name="syntax"></a>语法  
@@ -22,13 +23,16 @@ class PeerTransportSecuritySettings
 ```  
   
 ## <a name="methods"></a>方法  
+
  PeerTransportSecuritySettings 类不定义任何方法。  
   
 ## <a name="properties"></a>属性  
+
  PeerTransportSecuritySettings 类具有以下属性：  
   
 ### <a name="credentialtype"></a>CredentialType  
- 数据类型：String  
+
+ 数据类型：字符串  
   
  访问类型：只读  
   
@@ -40,6 +44,6 @@ class PeerTransportSecuritySettings
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>

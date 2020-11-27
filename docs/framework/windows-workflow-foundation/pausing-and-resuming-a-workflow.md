@@ -2,17 +2,19 @@
 title: 暂停和继续工作流
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: dc6bdfe7cc10837fb8721ab12490d244d5ec1ca0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142961"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268531"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>暂停和继续工作流
+
 工作流将暂停并恢复以响应书签和阻止活动（如 <xref:System.Activities.Statements.Delay>），但也可使用持久性来显式暂停、卸载和恢复工作流。  
   
 ## <a name="pausing-a-workflow"></a>暂停工作流  
+
  若要暂停工作流，请使用 <xref:System.Activities.WorkflowApplication.Unload%2A>。  此方法请求保留和卸载工作流，并将在工作流未在 30 秒内卸载时引发 <xref:System.TimeoutException>。  
   
 ```csharp  
@@ -28,6 +30,7 @@ catch (TimeoutException e)
 ```  
   
 ## <a name="resuming-a-workflow"></a>恢复工作流  
+
  若要恢复之前已暂停且已卸载的工作流，请使用 <xref:System.Activities.WorkflowApplication.Load%2A>。 此方法会将工作流从持久性存储加载到内存中。  
   
 ```csharp  
@@ -37,6 +40,7 @@ application.Load(id);
 ```  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例演示如何使用持久性来暂停和恢复工作流。  
   
 ```csharp  
