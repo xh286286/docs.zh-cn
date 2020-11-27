@@ -2,17 +2,19 @@
 title: 使用 Discovery 客户端通道
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: a74d0ba77977e158a6c6e469a9b6a88c8d1aac82
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: baf822b5c5acd34913fdd58c346426ad91971cb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289394"
 ---
 # <a name="using-the-discovery-client-channel"></a>使用 Discovery 客户端通道
+
 编写 WCF 客户端应用程序时，需要了解所调用服务的终结点地址。 在许多情况下，事先并不知晓服务的终结点地址，或者服务地址会随时间变化。 Discovery 客户端通道可用于编写 WCF 客户端应用程序，描述您要调用的服务，并且自动发送探测请求。 如果有服务做出响应，Discovery 客户端通道会从探测响应中检索该服务的终结点地址，并使用该地址调用服务。  
   
 ## <a name="using-the-discovery-client-channel"></a>使用 Discovery 客户端通道  
+
  若要使用 Discovery 客户端通道，请将 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 实例添加到客户端通道堆栈。 此外，也可以使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint>。如果尚不存在 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>，则会自动将该绑定元素添加到绑定。  
   
 > [!CAUTION]
@@ -22,9 +24,9 @@ ms.locfileid: "84575974"
   
 1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>，用于描述您要调用的服务。  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>它指定要将发现消息发送到的发现终结点。  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> 它指定要将发现消息发送到的发现终结点。  
   
- <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> 属性可用于指定要搜索的服务协定、任何必需的范围 URI 以及打开通道的最大尝试次数。 协定类型是通过调用构造函数指定的 <xref:System.ServiceModel.Discovery.FindCriteria> 。 可以将范围 URI 添加到 <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> 属性。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 属性可用于指定客户端尝试连接的最大结果数。 客户端收到探测响应时，会尝试使用探测响应提供的终结点地址打开通道。 如果出现异常，客户端会转到下一个探测响应，如有必要，会等待接收更多响应。 客户端将继续执行此操作，直至成功打开通道或者达到最大结果数。 有关这些设置的更多信息，请参见 <xref:System.ServiceModel.Discovery.FindCriteria>。  
+ <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> 属性可用于指定要搜索的服务协定、任何必需的范围 URI 以及打开通道的最大尝试次数。 协定类型是通过调用构造函数指定的  <xref:System.ServiceModel.Discovery.FindCriteria> 。 可以将范围 URI 添加到 <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> 属性。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 属性可用于指定客户端尝试连接的最大结果数。 客户端收到探测响应时，会尝试使用探测响应提供的终结点地址打开通道。 如果出现异常，客户端会转到下一个探测响应，如有必要，会等待接收更多响应。 客户端将继续执行此操作，直至成功打开通道或者达到最大结果数。 有关这些设置的更多信息，请参见 <xref:System.ServiceModel.Discovery.FindCriteria>。  
   
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> 属性可用于指定要使用的搜索终结点。 该终结点通常是 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，但也可能是任何有效的终结点。  
   
@@ -60,4 +62,5 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>安全性和 Discovery 客户端通道  
- 使用 Discovery 客户端通道时，同时指定了两个终结点： 其中一个用于发现消息，通常为 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>；另一个是应用程序终结点。 实现安全服务时，必须谨慎以确保这两个终结点的安全。 有关安全性的详细信息，请参阅[保护服务和客户端](securing-services-and-clients.md)。
+
+ 使用 Discovery 客户端通道时，同时指定了两个终结点： 其中一个用于发现消息，通常为 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>；另一个是应用程序终结点。 实现安全服务时，必须谨慎以确保这两个终结点的安全。 有关安全性的详细信息，请参阅 [保护服务和客户端](securing-services-and-clients.md)。

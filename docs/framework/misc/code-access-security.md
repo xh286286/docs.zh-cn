@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1119965f971e00b1b795378d9af3977074a696f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224346"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288315"
 ---
 # <a name="code-access-security"></a>代码访问安全性
 
@@ -44,7 +44,9 @@ ms.locfileid: "92224346"
  面向公共语言运行时的所有托管代码都受益于代码访问安全性，即使该代码不调用单个代码访问安全性。 有关详细信息，请参阅 [Code Access Security Basics](code-access-security-basics.md)。  
   
 <a name="key_functions"></a>
+
 ## <a name="key-functions-of-code-access-security"></a>代码访问安全性的主要功能  
+
  代码访问安全性帮助限制代码对受保护资源和操作的访问权限。 在 .NET Framework 中，代码访问安全性具有以下功能：  
   
 - 定义权限和权限集，它们表示访问各种系统资源的权限。  
@@ -56,7 +58,9 @@ ms.locfileid: "92224346"
 - 通过将调用堆栈上为每个调用方授予的权限与调用方必须拥有的权限相比较，加强在运行时对代码的限制。  
   
 <a name="walking_the_call_stack"></a>
+
 ## <a name="walking-the-call-stack"></a>审核调用堆栈  
+
  为了确定代码是否有权访问某一资源或执行某一操作，运行时的安全系统将审核调用堆栈，以将每个调用方获得的权限与要求的权限进行比较。 如果调用堆栈中的任何调用方不具备要求的权限，则会引发安全性异常并拒绝访问。 堆栈审核旨在帮助防止引诱攻击，引诱攻击是指不太受信任的代码调用高度受信任的代码，并利用高度受信任的代码来执行未经授权的操作。 在运行时要求所有调用方的权限会影响性能，但是为了帮助防止代码免受不太受信任的代码的引诱攻击，这是很有必要的。 若要优化性能，你的代码可以执行更少的堆栈审核。 但是，在执行此操作时，请确保不要公开安全漏洞。  
   
  下图显示当程序集 A4 中的方法要求其调用方具备 P 权限时堆栈审核产生的结果。  
@@ -64,9 +68,10 @@ ms.locfileid: "92224346"
  ![代码访问安全堆栈审核](media/slide-10a.gif "slide_10a")
   
 <a name="related_topics"></a>
+
 ## <a name="related-articles"></a>相关文章
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[代码访问安全性基础知识](code-access-security-basics.md)|描述代码访问安全性及其最常见的用途。|  
 |[安全透明的代码，级别 2](security-transparent-code-level-2.md)|描述 .NET Framework 4 中的安全透明度模型。|  

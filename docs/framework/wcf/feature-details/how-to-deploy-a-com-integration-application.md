@@ -2,14 +2,15 @@
 title: 如何：部署 COM+ 集成应用程序
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: b4ae7f730296d54debc1cf2971b61e5700503430
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5f2e64ed06b98db50259edf8ef307ce430b8be38
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595422"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289784"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>如何：部署 COM+ 集成应用程序
+
 编写了 COM+ 集成应用程序后，您可能要将它部署在另一台计算机上。 本主题说明如何将 COM+ 集成应用程序从一台计算机移动到另一台计算机。  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>移动 COM+ 承载的集成应用程序  

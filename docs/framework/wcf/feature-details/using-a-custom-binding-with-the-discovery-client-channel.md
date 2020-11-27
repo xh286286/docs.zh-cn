@@ -2,17 +2,19 @@
 title: 通过 Discovery 客户端通道使用自定义绑定
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 49983c3ab303d3839350af72b1aa4821c071fe99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d84739a0021262826c541ab3ff9df663adabf44a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289654"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>通过 Discovery 客户端通道使用自定义绑定
+
 通过 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 使用自定义绑定时，必须定义创建 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 实例的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。  
   
 ## <a name="creating-a-discoveryendpointprovider"></a>创建 DiscoveryEndpointProvider  
+
  <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>负责 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 根据需要创建实例。 若要定义发现终结点提供程序，请从 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 派生类，然后覆盖 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 方法并返回新发现终结点。 下面的示例演示如何创建发现终结点提供程序。  
   
 ```csharp
@@ -43,7 +45,7 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- 有关使用发现客户端通道的详细信息，请参阅[使用发现客户端通道](using-the-discovery-client-channel.md)。
+ 有关使用发现客户端通道的详细信息，请参阅 [使用发现客户端通道](using-the-discovery-client-channel.md)。
   
 ## <a name="see-also"></a>另请参阅
 

@@ -7,24 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 34bde56b78ec0148cf6b924f8edd29343b97faa4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e8a6cf0cae7519c3ffdbad188c6f67d11a4a6fc1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597379"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289797"
 ---
 # <a name="forward-compatible-data-contracts"></a>向前兼容的数据协定
-Windows Communication Foundation （WCF）数据协定系统的一项功能是，协定可以不间断地随着时间推移而发展。 也就是说，具有旧版本数据协定的客户端可以与具有相同数据协定的新版本的服务进行通信，或者具有新版本数据协定的客户端可以与相同数据协定的旧版本进行通信。 有关详细信息，请参阅[最佳做法：数据协定版本控制](../best-practices-data-contract-versioning.md)。  
+
+Windows Communication Foundation (WCF) 数据协定系统的一项功能是，协定可以在不间断的情况随时间发展。 也就是说，具有旧版本数据协定的客户端可以与具有相同数据协定的新版本的服务进行通信，或者具有新版本数据协定的客户端可以与相同数据协定的旧版本进行通信。 有关详细信息，请参阅 [最佳做法：数据协定版本控制](../best-practices-data-contract-versioning.md)。  
   
- 如果创建了现有数据协定的新版本，您可以根据需要来应用大多数版本管理功能。 但是，必须将一个版本控制功能从第一个版本内置到类型*中，才能*正常工作。  
+ 如果创建了现有数据协定的新版本，您可以根据需要来应用大多数版本管理功能。 但是，必须将一个版本控制功能从第一个版本内置到类型 *中，才能* 正常工作。  
   
 ## <a name="round-tripping"></a>往返  
+
  当数据从数据协定的新版本传递到旧版本，然后传递回新版本时，就发生了往返。 往返保证了数据不会丢失。 如果启用往返功能，则可以使类型向前兼容于数据协定版本管理模型所支持的任何未来更改。  
   
  若要对某一特定类型启用往返功能，该类型必须实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 该接口包含一个属性，即 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>（由 <xref:System.Runtime.Serialization.ExtensionDataObject> 类型返回）。 该属性存储数据协定未来版本中对当前版本未知的所有数据。  
   
 ### <a name="example"></a>示例  
+
  下面的数据协定不向前兼容于未来的更改。  
   
  [!code-csharp[C_DataContract#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#7)]

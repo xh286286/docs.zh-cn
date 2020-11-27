@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 883c20483c4d315a45e1f4dab959d42cbb6e3c4b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855707"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288198"
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和远程处理注意事项
 
@@ -23,16 +23,18 @@ ms.locfileid: "87855707"
   
  任何可远程处理的类（从 <xref:System.MarshalByRefObject> 类派生）都需要对安全负责。 要么只将代码用于封闭式安全环境中，在这种环境中可以隐式信任调用代码；要么相应地设计远程处理调用，以免这些调用会让受保护代码受到可能会被恶意使用的外部侵入的影响。  
   
- 通常，不应公开受声明性[LinkDemand](link-demands.md)和安全检查保护的方法、属性或事件 <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> 。 使用远程处理时，不会强制执行这些检查。 其他安全检查（如 <xref:System.Security.Permissions.SecurityAction.Demand> 、[断言](using-the-assert-method.md)等）在进程内的应用程序域之间工作，但不能在跨进程或跨计算机方案中运行。  
+ 通常，不应公开受声明性 [LinkDemand](link-demands.md) 和安全检查保护的方法、属性或事件 <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> 。 使用远程处理时，不会强制执行这些检查。 其他安全检查（如 <xref:System.Security.Permissions.SecurityAction.Demand> 、 [断言](using-the-assert-method.md)等）在进程内的应用程序域之间工作，但不能在跨进程或跨计算机方案中运行。  
   
 ## <a name="protected-objects"></a>受保护的对象  
+
  某些对象自己保持安全状态。 不应将这些对象传递给不受信任的代码，否则这样的代码将会获得超越其自身权限的安全授权。  
   
  一个示例是创建 <xref:System.IO.FileStream> 对象。 在创建时将要求具有 <xref:System.Security.Permissions.FileIOPermission>，如果成功，则会返回该文件对象。 但是，如果将此对象引用传递给没有文件权限的代码，则该对象就可以读写此特定文件。  
   
- 此类对象的最简单防御措施就是要求使用与通过公共 API 元素实现对象引用的任何代码的相同**FileIOPermission** 。  
+ 此类对象的最简单防御措施就是要求使用与通过公共 API 元素实现对象引用的任何代码的相同 **FileIOPermission** 。  
   
 ## <a name="application-domain-crossing-issues"></a>跨应用程序域问题  
+
  若要隔离托管主机环境中的代码，通常使用可以降低各种程序集的权限级别的显式策略来生成多个子应用程序域。 但是，这些程序集的策略在默认的应用程序域中保持不变。 如果其中一个子应用程序域可以强制默认的应用程序域加载一个程序集，则代码隔离就会失去作用，强制加载的程序集中的类型将能够以较高的信任级别运行代码。  
   
  一个应用程序域可以强制另一个应用程序域加载程序集，并通过调用托管在另一个应用程序域中的某个对象的代理来运行该程序集中所包含的代码。 若要获取跨应用程序域的代理，托管该对象的应用程序域必须通过方法调用参数来分发代理，或者是返回值。 或者，如果该应用程序域刚刚创建，则在默认情况下，创建者将具有 <xref:System.AppDomain> 对象的代理。 因此，为了避免破坏代码隔离，在具有较高信任级别的应用程序域中，不应将对引用封送对象的引用分发给信任级别较低的应用程序域，其中引用封送对象指从 <xref:System.MarshalByRefObject> 派生的类的实例。  

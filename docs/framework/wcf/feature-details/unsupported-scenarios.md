@@ -2,12 +2,12 @@
 title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557809"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289641"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 
@@ -16,6 +16,7 @@ ms.locfileid: "90557809"
 ## <a name="impersonation-scenarios"></a>模拟方案
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>当客户端进行异步调用时，模拟标识可能不会流动
+
  当 WCF 客户端通过模拟使用 Windows 身份验证对 WCF 服务进行异步调用时，可能会使用客户端进程的标识进行身份验证，而不是使用模拟的标识进行身份验证。
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>已启用 Windows XP 和安全上下文令牌 cookie
@@ -52,7 +53,7 @@ WCF 和 ASP.NET 都可以启用或禁用模拟。 当 ASP.NET 承载 WCF 应用�
 
 若要将 Kerberos 身份验证协议与委托联合使用，必须实现带有凭据协商的 Kerberos 协议（有时称作多段或多步 Kerberos）。 如果不用凭据协商来实现 Kerberos 协议（有时称作单稳或单路 Kerberos），则会引发异常。 有关如何实现凭据协商的详细信息，请参阅 [调试 Windows 身份验证错误](debugging-windows-authentication-errors.md)。
 
-## <a name="cryptography"></a>加密
+## <a name="cryptography"></a>密码
 
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 仅支持对称密钥用法
 
@@ -72,7 +73,7 @@ WCF 不支持符合 SHA-256 FIPS 的哈希，因此在要求使用符合 FIPS �
 
 ### <a name="cngksp-certificates"></a>CNG/KSP 证书
 
-*加密 API：下一代 (CNG) * 是 CryptoAPI 的长期替换。 此 API 在 Windows Vista、Windows Server 2008 和更高版本的 windows 版本上的非托管代码中提供。
+*加密 API：下一代 (CNG)* 是 CryptoAPI 的长期替换。 此 API 在 Windows Vista、Windows Server 2008 和更高版本的 windows 版本上的非托管代码中提供。
 
  .NET Framework 4.6.1 和更早版本不支持这些证书，因为它们使用旧 CryptoAPI 来处理 CNG/KSP 证书。 将这些证书用于 .NET Framework 4.6.1 和早期版本将导致异常。
 
@@ -122,7 +123,7 @@ WCF 不支持以下设置组合，因为它们可能会阻止客户端身份验�
 
  解决方法是，导入完毕后直接在客户端上修改绑定。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全注意事项](security-considerations-in-wcf.md)
 - [信息泄露](information-disclosure.md)

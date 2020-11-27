@@ -2,18 +2,19 @@
 title: <Application>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128516"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288133"
 ---
 # <a name="application-element-net-native"></a>\<Application>元素 (.NET Native)
+
 作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务，并将运行时反射策略应用到一个应用的所有程序元素。  
   
  \<Directives> 元素  
-\<Application>元素（rd）  
+\<Application> 元素 ( # A0)   
   
 ## <a name="syntax"></a>语法  
   
@@ -31,11 +32,12 @@ ms.locfileid: "73128516"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
+
  下列各节描述了特性、子元素和父元素。 在子元素表格中，策略指向在运行时间针对特定程序元素可用的一类元数据。  
   
 ### <a name="attributes"></a>特性  
   
-|属性|属性类型|说明|  
+|属性|属性类型|描述|  
 |---------------|--------------------|-----------------|  
 |`Activate`|反射|可选特性。 控制运行时对构造函数的访问，以启用实例激活。|  
 |`Browse`|反射|可选特性。 控制对该类型信息的查询或列举该类型，但并不在运行时间启用任何动态访问。|  
@@ -50,13 +52,13 @@ ms.locfileid: "73128516"
   
 ## <a name="all-attributes"></a>所有特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |*策略_设置*|该策略的设置将应用到该应用中的所有类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Assembly>](assembly-element-net-native.md)|将策略应用到特定程序集中的所有类型。|  
 |[\<Namespace>](namespace-element-net-native.md)|将策略应用到特定命名空间中的所有类型。|  
@@ -70,11 +72,12 @@ ms.locfileid: "73128516"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Directives>](directives-element-net-native.md)|运行时指令文件的根元素。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
+
  [\<Directives>](directives-element-net-native.md)元素可以包含零个或一个 `<Application>` 元素。 单独一个反射指令文件中出现的多个 `<Application>` 元素不受支持。  
   
  `<Application>` 元素可通过以下方法之一使用：  
@@ -83,9 +86,9 @@ ms.locfileid: "73128516"
   
 - 作为为反射、序列化和互操作设置应用程序范围的策略的元素。 元素的特性 `<Application>` 定义应用程序范围的策略，该策略可能由或元素定义的子元素重写 `<Application>` [\<Library>](library-element-net-native.md) 。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [\<Library>Element](library-element-net-native.md)
-- [\<Directives>Element](directives-element-net-native.md)
+- [\<Library> 元素](library-element-net-native.md)
+- [\<Directives> 元素](directives-element-net-native.md)
 - [运行时指令元素](runtime-directive-elements.md)
 - [运行时指令 (rd.xml) 配置文件引用](runtime-directives-rd-xml-configuration-file-reference.md)

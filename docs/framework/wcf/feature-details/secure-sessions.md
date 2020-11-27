@@ -2,18 +2,19 @@
 title: 安全会话
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: cb02adc7514e27175088e7664b12e45bc8ca5cd9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd8406af0c37981b2ddc7ab8ddb0c82c63cbc0b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590080"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288537"
 ---
 # <a name="secure-sessions"></a>安全会话
-Windows Communication Foundation （WCF）的一项功能是可靠会话，可保证按消息发送顺序接收消息。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息，请参阅[使用会话](../using-sessions.md)。  
+
+WCF) Windows Communication Foundation (的一项功能是可靠会话，可保证按消息发送顺序接收消息。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 有关可靠会话的详细信息，请参阅 [使用会话](../using-sessions.md)。  
   
 > [!NOTE]
-> 当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](unsupported-scenarios.md)。  
+> 当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅 [不支持的方案](unsupported-scenarios.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -25,11 +26,13 @@ Windows Communication Foundation （WCF）的一项功能是可靠会话，可�
 |[安全会话的安全注意事项](security-considerations-for-secure-sessions.md)|描述安全会话的特殊注意事项。|  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [会话、实例化和并发](sessions-instancing-and-concurrency.md)  
   
  [设计和实现服务](../designing-and-implementing-services.md)  

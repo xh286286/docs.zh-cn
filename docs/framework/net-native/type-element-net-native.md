@@ -2,12 +2,12 @@
 title: <Type>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73091856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287704"
 ---
 # <a name="type-element-net-native"></a>\<Type>元素 (.NET Native)
 
@@ -35,7 +35,7 @@ ms.locfileid: "73091856"
 
 ### <a name="attributes"></a>特性
 
-|属性|属性类型|说明|
+|属性|属性类型|描述|
 |---------------|--------------------|-----------------|
 |`Name`|常规|必需的特性。 指定类型名称。|
 |`Activate`|反射|可选特性。 控制运行时对构造函数的访问，以启用实例激活。|
@@ -51,19 +51,19 @@ ms.locfileid: "73091856"
 
 ## <a name="name-attribute"></a>Name 特性
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
-|*type_name*|类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素或另一个元素的子元素 `<Type>` ， *type_name*可以包括该类型的名称，而无需命名空间。 否则，type_name** 必须包含完全限定的类型名称。|
+|type_name|类型名称。 如果此 `<Type>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素或另一个元素的子元素 `<Type>` ， *type_name* 可以包括该类型的名称，而无需命名空间。 否则，type_name 必须包含完全限定的类型名称。|
 
 ## <a name="all-other-attributes"></a>所有其他特性
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[\<AttributeImplies>](attributeimplies-element-net-native.md)|如果包含类型是一个特性，为该特性所应用到的代码元素定义一个运行时策略。|
 |[\<Event>](event-element-net-native.md)|将反射策略应用到属于这种类型的一个事件。|
@@ -79,7 +79,7 @@ ms.locfileid: "73091856"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[\<Application>](application-element-net-native.md)|作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务。|
 |[\<Assembly>](assembly-element-net-native.md)|将反射策略应用到指定程序集中的所有类型。|
@@ -88,7 +88,7 @@ ms.locfileid: "73091856"
 |`<Type>`|将反射策略应用到一种类型及其所有成员。|
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 反射、序列化和互操作特性都是可选项。 如果这些都不存在，`<Type>` 元素会充当容器，其子类型为独立成员定义策略。
 
@@ -118,6 +118,7 @@ ms.locfileid: "73091856"
 ```
 
 ## <a name="example"></a>示例
+
  以下实例使用了反射来检索一个代表 <xref:System.Reflection.PropertyInfo> 属性的 <xref:System.String.Chars%2A?displayProperty=nameWithType> 对象。 它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法来检索一个字符串中的七个字符的值，并在该字符串中显示所有字符。 `b`示例中的变量是一个 <xref:Windows.UI.Xaml.Controls.TextBlock> 控件。
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]

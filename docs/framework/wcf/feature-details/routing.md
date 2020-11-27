@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 801de9865495aec32114f47075397c3445a88fc9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f4d87d5ea1df85dd383fb6274ba55491c2cd5c34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590379"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288540"
 ---
 # <a name="routing"></a>路由
+
 本节中的主题涵盖路由服务。 路由服务是可配置的普通 SOAP 中介，使用该服务可以配置基于内容的路由、设置协议桥接、处理通信错误以及在运行时动态更新路由逻辑。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [路由服务](routing-service.md)  
  提供路由服务功能的概述。  
   

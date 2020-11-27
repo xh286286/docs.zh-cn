@@ -2,14 +2,15 @@
 title: <ImpliesType>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181005"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287951"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType>元素 (.NET Native)
+
 如果该策略已应用到该包含类型或方法，将该策略应用到一个类型。  
   
 ## <a name="syntax"></a>语法  
@@ -29,11 +30,12 @@ ms.locfileid: "79181005"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
+
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
   
-|属性|属性类型|说明|  
+|属性|属性类型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|常规|必需的特性。 指定类型名称。|  
 |`Activate`|反射|可选特性。 控制运行时对构造函数的访问，以启用实例激活。|  
@@ -49,28 +51,30 @@ ms.locfileid: "79181005"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|*type_name*|类型名称。 如果此 `<ImpliesType>` 元素代表的类型同其包含的 `<Type>` 元素位于相同的命名空间，type_name** 可能会包括类型名称而不包括其命名空间。 否则，type_name** 必须包含完全限定的类型名称。|  
+|type_name|类型名称。 如果此 `<ImpliesType>` 元素代表的类型同其包含的 `<Type>` 元素位于相同的命名空间，type_name 可能会包括类型名称而不包括其命名空间。 否则，type_name 必须包含完全限定的类型名称。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
+
  无。  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
 |[\<Method>](method-element-net-native.md)|将反射策略应用到一个方法。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
+
  该 `<ImpliesType>` 元素主要是供库使用的。 它讨论的是以下情景：  
   
 - 如果一个例程需要反射到一个类型，它必然也要反射到另一种类型。  

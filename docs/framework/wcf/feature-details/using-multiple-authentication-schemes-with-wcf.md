@@ -2,17 +2,19 @@
 title: 对 WCF 使用多个身份验证方案
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3aae9bff4300af97f7b179d9d8115340a26e715a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600213"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289420"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>对 WCF 使用多个身份验证方案
-WCF 现在允许您对单个终结点上指定多个身份验证方案。 此外，Web 承载的服务可以直接从 IIS 继承其身份验证设置。 自承载服务可以指定可使用的身份验证方案。 有关在 IIS 中设置身份验证设置的详细信息，请参阅[Iis 身份验证](https://go.microsoft.com/fwlink/?LinkId=232458)  
+
+WCF 现在允许您对单个终结点上指定多个身份验证方案。 此外，Web 承载的服务可以直接从 IIS 继承其身份验证设置。 自承载服务可以指定可使用的身份验证方案。 有关在 IIS 中设置身份验证设置的详细信息，请参阅 [Iis 身份验证](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>承载于 IIS 中的服务  
+
  对于承载于 IIS 中的服务，设置您希望在 IIS 中使用的身份验证方案。 然后，在你的服务的 web.config 文件中，在绑定配置中将 clientCredential 类型指定为 "InheritedFromHost"，如下面的 XML 代码段中所示：  
   
 ```xml  
@@ -63,6 +65,7 @@ else
  这将确保只有一部分此处列出的身份验证方案将被考虑应用于服务终结点，具体是哪些身份验证方案取决于 IIS 中所选的内容。 这意味着，开发人员可以通过从 serviceAuthenticationManager 列表中省略基本身份验证而从列表中排除它，甚至即使在 IIS 中启用基本身份验证，它也将不会在服务终结点上应用  
   
 ## <a name="self-hosted-services"></a>自承载服务  
+
  自承载服务在配置上稍有不同，因为没有要从其继承设置的 IIS。 在这里，你将使用 \<serviceAuthenticationManager> 元素或 ServiceAuthenticationBehavior 指定将继承的身份验证设置。 在代码中如下所示：  
   
 ```csharp  

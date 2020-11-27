@@ -2,14 +2,15 @@
 title: <Method>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 8db32c660846b4f4071fff2a40c760a3d1ef2489
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1d57457c90e44c70caa301eccc02c5831d283cea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287899"
 ---
 # <a name="method-element-net-native"></a>\<Method>元素 (.NET Native)
+
 将运行时反射策略应用到一个构造函数或方法。  
   
 ## <a name="syntax"></a>语法  
@@ -22,11 +23,12 @@ ms.locfileid: "79180986"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
+
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
   
-|属性|属性类型|说明|  
+|属性|属性类型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|常规|必需的特性。 指定方法名称。|  
 |`Signature`|常规|可选特性。 指定方法签名。 如果存在多个参数，它们之间用逗号分割。 例如，以下 `<Method>` 元素定义了 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29> 方法的策略。<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> 如果该特性不存在，运行时指令将应用到该方法的所有重载。|  
@@ -35,25 +37,25 @@ ms.locfileid: "79180986"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|method_name**|方法名称。 方法的类型由父级 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素定义。|  
+|method_name|方法名称。 方法的类型由父级 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素定义。|  
   
 ## <a name="signature-attribute"></a>签名特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |*method_signature*|形成方法签名的参数类型。 多个参数由逗号分隔，例如，`"System.String,System.Int32,System.Int32)"`。 参数类型名称应是完全限定的。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |*策略_设置*|该设置将应用到这种策略类型。 可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。 有关详细信息，请参阅[运行时指令策略设置](runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Parameter>](parameter-element-net-native.md)|将策略应用到传递到方法的参数类型。|  
 |[\<GenericParameter>](genericparameter-element-net-native.md)|将策略应用到一个泛型类型或方法的参数类型。|  
@@ -62,19 +64,21 @@ ms.locfileid: "79180986"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|将反射策略应用到一种类型及其所有成员。|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|将反射策略应用到一种构造泛型类型及其所有成员。|  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
+
  一个泛型方法的 `<Method>` 元素会将其策略应用到所有不具有自身策略的实例化。  
   
  你可以使用 `Signature` 特性为特定的方法重载指定策略。 如果 `Signature` 特性不存在，运行时指令将应用到该方法的所有重载。  
   
- 你无法通过使用 `<Method>` 元素为一个构造函数定义运行时反射策略。 相反，请使用 `Activate` [\<Assembly>](assembly-element-net-native.md) 、 [\<Namespace>](namespace-element-net-native.md) 、 [\<Type>](type-element-net-native.md) 或元素的特性 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。  
+ 你无法通过使用 `<Method>` 元素为一个构造函数定义运行时反射策略。 相反，请使用 `Activate`  [\<Assembly>](assembly-element-net-native.md) 、 [\<Namespace>](namespace-element-net-native.md) 、 [\<Type>](type-element-net-native.md) 或元素的特性 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。  
   
 ## <a name="example"></a>示例  
+
  以下实例中的 `Stringify` 方法是使用反射将一个对象转化为其字符串表示形式的一个通用格式化方法。 除调用该对象的默认 `ToString` 方法外，该方法可以通过穿过一个对象的 `ToString` 方法格式字符车产生一个格式化的字符串或/和一个 <xref:System.IFormatProvider> 实现。 它也可以调用将一个成员转化为其二进制、十六进制或八进制表示的 <xref:System.Convert.ToString%2A?displayProperty=nameWithType> 重载之一。  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
@@ -148,4 +152,4 @@ ms.locfileid: "79180986"
 - [运行时指令 (rd.xml) 配置文件引用](runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令元素](runtime-directive-elements.md)
 - [运行时指令策略设置](runtime-directive-policy-settings.md)
-- [\<MethodInstantiation>Element](methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation> 元素](methodinstantiation-element-net-native.md)

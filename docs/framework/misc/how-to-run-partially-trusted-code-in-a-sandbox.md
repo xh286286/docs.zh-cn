@@ -9,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: baa04a3c55728590b8aa502648a8ab42bf62f903
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855798"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288276"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：运行沙盒中部分受信任的代码
 
@@ -178,6 +178,7 @@ AppDomain.CreateDomain( string friendlyName,
      完全信任断言用于从 <xref:System.Security.SecurityException> 中获取扩展信息。 没有 <xref:System.Security.PermissionSet.Assert%2A>，则 <xref:System.Security.SecurityException> 的 <xref:System.Security.SecurityException.ToString%2A> 方法将发现堆栈上有部分受信任的代码，并将限制返回的信息。 如果部分信任代码可以读取该信息，可能会导致安全问题，但可以通过不授予 <xref:System.Security.Permissions.UIPermission> 来缓解此风险。 完全信任断言应慎用，且仅在确定不允许部分信任代码提升为完全信任代码时使用。 一般来说，不要调用同一函数中不信任的代码，也不要在调用完全信任断言后调用代码。 始终在完成使用断言后还原断言，这是个好做法。  
   
 ## <a name="example"></a>示例  
+
  下面的示例实现前一部分中的过程。 在此示例中，Visual Studio 解决方案中一个名为 `Sandboxer` 的项目还包含一个名为 `UntrustedCode` 的项目（该项目实现类 `UntrustedClass`）。 此方案假定你已下载库程序集，该程序集包含应该返回 `true` 或 `false` 的方法，以指示你提供的数字是否为斐波纳契数。 相反，该方法会尝试从你的计算机中读取文件。 下面的示例演示不受信任的代码。  
   
 ```csharp
