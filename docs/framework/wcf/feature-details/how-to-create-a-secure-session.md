@@ -7,17 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: 80973a31050cf1ede03d4a3919066c62625ae590
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f6fb73653add7362e8c8452e75be802395ffc3cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593407"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286521"
 ---
 # <a name="how-to-create-a-secure-session"></a>如何：创建安全会话
-除了 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 绑定，当启用消息安全时，Windows Communication Foundation （WCF）中系统提供的绑定会自动使用安全会话。  
+
+除 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 绑定外，系统提供的绑定 Windows Communication Foundation (WCF) 当启用消息安全时，将自动使用安全会话。  
   
- 默认情况下，安全会话不会在已回收的 Web 服务器中存在。 建立安全会话时，客户端和服务将缓存与安全会话关联的密钥。 交换消息时，只交换已缓存密钥的标识符。 如果回收了 Web 服务器，则也会回收缓存，因此 Web 服务器将无法检索该标识符的已缓存密钥。 如果发生这种情况，将会引发异常并返回至客户端。 使用有状态安全上下文令牌 (SCT) 的安全会话可以在回收 Web 服务器后存在。 有关在安全会话中使用有状态 SCT 的详细信息，请参阅[如何：为安全会话创建安全上下文令牌](how-to-create-a-security-context-token-for-a-secure-session.md)。  
+ 默认情况下，安全会话不会在已回收的 Web 服务器中存在。 建立安全会话时，客户端和服务将缓存与安全会话关联的密钥。 交换消息时，只交换已缓存密钥的标识符。 如果回收了 Web 服务器，则也会回收缓存，因此 Web 服务器将无法检索该标识符的已缓存密钥。 如果发生这种情况，将会引发异常并返回至客户端。 使用有状态安全上下文令牌 (SCT) 的安全会话可以在回收 Web 服务器后存在。 有关在安全会话中使用有状态 SCT 的详细信息，请参阅 [如何：为安全会话创建安全上下文令牌](how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>通过使用系统提供的一个绑定指定服务使用安全会话  
   
@@ -31,7 +32,7 @@ ms.locfileid: "84593407"
     |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|是|  
     |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md)|是|  
     |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|是|  
-    |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md)|No|  
+    |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md)|否|  
     |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md)|否|  
   
      下面的代码示例使用配置来指定一个名为 `wsHttpBinding_Calculator` 的绑定，该绑定使用 [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) 、消息安全和安全会话。  
@@ -60,7 +61,7 @@ ms.locfileid: "84593407"
   
 - 创建一个自定义绑定，该绑定指定由安全会话保护 SOAP 消息。  
   
-     有关创建自定义绑定的详细信息，请参阅[如何：自定义系统提供的绑定](../extending/how-to-customize-a-system-provided-binding.md)。  
+     有关创建自定义绑定的详细信息，请参阅 [如何：自定义 System-Provided 绑定](../extending/how-to-customize-a-system-provided-binding.md)。  
   
      下面的代码示例使用配置来指定使用安全会话的消息的自定义绑定。  
   

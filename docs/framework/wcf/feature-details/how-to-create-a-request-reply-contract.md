@@ -2,14 +2,15 @@
 title: 如何：创建请求-答复协定
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 8a09c265c77edc584b591477e64314f1e76e332b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 506ce527348286bb53223c64245c74e4cb21879a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593433"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286547"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>如何：创建请求-答复协定
+
 请求-答复协定指定返回答复的方法。 必须根据此协定的条款发送答复并与请求相关联。 即使该方法不返回任何答复（采用 C# 语言时，返回 `void`，采用 Visual Basic 语言时，返回 `Sub`），基础结构也将创建一条空消息并将其发送给调用方。 若要防止发送空答复消息，请对操作使用单向协定。  
   
 ### <a name="to-create-a-request-reply-contract"></a>创建请求-答复协定  
@@ -23,6 +24,7 @@ ms.locfileid: "84593433"
 4. 可选。 将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性的值设置为 `true`，以防止发送空答复消息。 默认情况下，所有操作均是请求-答复协定。  
   
 ## <a name="example"></a>示例  
+
  下面的示例为提供 `Add` 和 `Subtract` 方法的计算器服务定义一个协定。 `Multiply` 方法不是协定的一部分，因为它没有通过 <xref:System.ServiceModel.OperationContractAttribute> 类进行标记，因此不可以由客户端访问。  
   
 ```csharp

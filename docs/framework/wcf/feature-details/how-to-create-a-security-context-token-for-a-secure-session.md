@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 36cf5ce1aa6e0eef80123ac7008294062d7faf82
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 87156eb4c8d28180b492c7ff445b3334515f4a7f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286495"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>如何：为安全会话创建安全上下文令牌
-通过在安全会话中使用有状态安全上下文令牌 (SCT)，可以使该会话避免因为重新使用服务而受到影响。 例如，如果在安全会话中使用了无状态 SCT 并且 Internet 信息服务 (IIS) 被重置，则与该服务相关联的会话数据将丢失。 这些会话数据包括一个 SCT 令牌缓存。 因此，当客户端下一次向该服务发送无状态 SCT 时，将返回错误，这是因为无法检索到与该 SCT 相关联的密钥。 但是，如果使用有状态 SCT，则与该 SCT 相关联的密钥将包含在该 SCT 中。 由于密钥包含在 SCT 中并因而包含在消息中，因此安全会话不会因为重新使用服务而受到影响。 默认情况下，Windows Communication Foundation （WCF）在安全会话中使用无状态 Sct。 本主题详细介绍如何在安全会话中使用有状态 SCT。  
+
+通过在安全会话中使用有状态安全上下文令牌 (SCT)，可以使该会话避免因为重新使用服务而受到影响。 例如，如果在安全会话中使用了无状态 SCT 并且 Internet 信息服务 (IIS) 被重置，则与该服务相关联的会话数据将丢失。 这些会话数据包括一个 SCT 令牌缓存。 因此，当客户端下一次向该服务发送无状态 SCT 时，将返回错误，这是因为无法检索到与该 SCT 相关联的密钥。 但是，如果使用有状态 SCT，则与该 SCT 相关联的密钥将包含在该 SCT 中。 由于密钥包含在 SCT 中并因而包含在消息中，因此安全会话不会因为重新使用服务而受到影响。 默认情况下，Windows Communication Foundation (WCF) 在安全会话中使用无状态 Sct。 本主题详细介绍如何在安全会话中使用有状态 SCT。  
   
 > [!NOTE]
 > 如果安全会话涉及到派生自 <xref:System.ServiceModel.Channels.IDuplexChannel> 的协定，则无法在该安全会话中使用有状态 SCT。  
@@ -22,7 +23,7 @@ ms.locfileid: "84598900"
 > 对于在安全会话中使用有状态 SCT 的应用程序，服务的线程标识必须是具有关联用户配置文件的用户帐户。 如果服务在不具有用户配置文件的帐户下运行（如 `Local Service`），则可能引发异常。  
   
 > [!NOTE]
-> 当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态 SCT。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](unsupported-scenarios.md)。  
+> 当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态 SCT。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅 [不支持的方案](unsupported-scenarios.md)。  
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>在安全会话中使用有状态 SCT  
   
@@ -90,6 +91,7 @@ ms.locfileid: "84598900"
     ```  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例创建一个自定义绑定，该绑定使用 <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> 身份验证模式启动安全会话。  
   
  [!code-csharp[c_CreateStatefulSCT#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createstatefulsct/cs/secureservice.cs#2)]

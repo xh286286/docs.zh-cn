@@ -10,19 +10,20 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 124083d86c220451c55a9290c2edf996b50d8d28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247476"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286677"
 ---
 # <a name="data-contract-known-types"></a>数据协定已知类型
+
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类允许您预先指定应该在反序列化期间包括在考虑范围内的类型。 有关工作示例，请参阅 [Known Types](../samples/known-types.md) 示例。  
   
  通常，在客户端和服务之间传递参数和返回值时，这两个终结点共享要传输的数据的所有数据协定。 但是，在以下情况下并非如此：  
   
-- 已发送的数据协定派生自预期的数据协定。 有关详细信息，请参阅[数据协定等效](data-contract-equivalence.md)性中有关继承的部分。 在该情况下，传输的数据没有与接收终结点所预期相同的数据协定。  
+- 已发送的数据协定派生自预期的数据协定。 有关详细信息，请参阅 [数据协定等效](data-contract-equivalence.md) 性) 中有关继承的部分。 在该情况下，传输的数据没有与接收终结点所预期相同的数据协定。  
   
 - 要传输的信息的声明类型是接口，而非类、结构或枚举。 因此，无法预先知道实际发送了实现接口的哪个类型，接收终结点就无法预先确定已传输数据的数据协定。  
   
@@ -31,20 +32,24 @@ ms.locfileid: "85247476"
 - 某些类型（包括 .NET Framework 类型）具有上述三种类别之一中的成员。 例如， <xref:System.Collections.Hashtable> 使用 <xref:System.Object> 在哈希表中存储实际对象。 在序列化这些类型时，接收方无法预先确定这些成员的数据协定。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 类  
- 当数据到达接收终结点时，WCF 运行时尝试将数据反序列化到公共语言运行时（CLR）类型的实例中。 通过首先检查传入消息选择为反序列化而实例化的类型，以确定消息内容遵循的数据协定。 然后反序列化引擎尝试查找实现与消息内容兼容的数据协定的 CLR 类型。 反序列化引擎在此过程中允许的侯选类型集称为反序列化程序的“已知类型”集。  
+
+ 当数据到达接收终结点时，WCF 运行时尝试将数据反序列化为公共语言运行时 (CLR) 类型的实例。 通过首先检查传入消息选择为反序列化而实例化的类型，以确定消息内容遵循的数据协定。 然后反序列化引擎尝试查找实现与消息内容兼容的数据协定的 CLR 类型。 反序列化引擎在此过程中允许的侯选类型集称为反序列化程序的“已知类型”集。  
   
- 让反序列化引擎了解某个类型的一种方法是使用 <xref:System.Runtime.Serialization.KnownTypeAttribute>。 不能将属性应用于单个数据成员，只能将它应用于整个数据协定类型。 将属性应用于可能为类或结构的“外部类型” ** 。 在其最基本的用法中，应用属性会将类型指定为“已知类型”。 只要反序列化外部类型的对象或通过其成员引用的任何对象，这就会导致已知类型成为已知类型集的一部分。 可以将多个 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性应用于同一类型。  
+ 让反序列化引擎了解某个类型的一种方法是使用 <xref:System.Runtime.Serialization.KnownTypeAttribute>。 不能将属性应用于单个数据成员，只能将它应用于整个数据协定类型。 将属性应用于可能为类或结构的“外部类型”  。 在其最基本的用法中，应用属性会将类型指定为“已知类型”。 只要反序列化外部类型的对象或通过其成员引用的任何对象，这就会导致已知类型成为已知类型集的一部分。 可以将多个 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性应用于同一类型。  
   
 ## <a name="known-types-and-primitives"></a>已知类型和基元  
+
  基元类型以及被视为基元的某些类型（例如， <xref:System.DateTime> 和 <xref:System.Xml.XmlElement>）始终是“已知”的，且从来不必通过此机制进行添加。 但是，必须显式添加基元类型的数组。 大多数集合被视为等效于数组。 （非泛型集合被视为等效于 <xref:System.Object>的数组）。 有关使用基元、基元数组和基元集合的示例，请参见示例 4。  
   
 > [!NOTE]
 > 与其他基元类型不同， <xref:System.DateTimeOffset> 结构默认情况下不是已知类型，因此必须将它手动添加到已知类型列表。  
   
 ## <a name="examples"></a>示例  
+
  下面的示例说明如何使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类。  
   
 #### <a name="example-1"></a>示例 1  
+
  有三个具有继承关系的类。  
   
  [!code-csharp[C_KnownTypeAttribute#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#1)]
@@ -63,18 +68,21 @@ ms.locfileid: "85247476"
  只要反序列化外部类型 `CompanyLogo2` ，反序列化引擎就会了解有关 `CircleType` 和 `TriangleType` ，因此能够查找“Circle”和“Triangle”数据协定的匹配类型。  
   
 #### <a name="example-2"></a>示例 2  
+
  在下面的示例中，尽管 `CustomerTypeA` 和 `CustomerTypeB` 都具有 `Customer` 数据协定，但是只要反序列化 `CustomerTypeB` 就会创建 `PurchaseOrder` 的实例，因为只有 `CustomerTypeB` 对反序列化引擎是已知的。  
   
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
 #### <a name="example-3"></a>示例 3  
+
  在下面的示例中， <xref:System.Collections.Hashtable> 将其内容在内部存储为 <xref:System.Object>。 若要成功反序列化哈希表，反序列化引擎必须知道那里可能出现的一组可能类型。 在这种情况下，我们预先知道只有 `Book` 和 `Magazine` 对象存储在 `Catalog`中，因此使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性添加它们。  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
  [!code-vb[C_KnownTypeAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#5)]  
   
 #### <a name="example-4"></a>示例 4  
+
  在下面的示例中，数据协定存储一个数字和要对该数字执行的操作。 `Numbers` 数据成员可以是整数、整数数组或包含整数的 <xref:System.Collections.Generic.List%601> 。  
   
 > [!CAUTION]
@@ -89,6 +97,7 @@ ms.locfileid: "85247476"
  [!code-vb[C_KnownTypeAttribute#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#7)]  
   
 ## <a name="known-types-inheritance-and-interfaces"></a>已知类型、继承和接口  
+
  使用 `KnownTypeAttribute` 属性将已知类型与特定类型关联时，已知类型也与该类型的所有派生类型关联。 例如，请参见下面的代码。  
   
  [!code-csharp[C_KnownTypeAttribute#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#8)]
@@ -99,6 +108,7 @@ ms.locfileid: "85247476"
  已知类型只能与类和结构关联，而不能与接口关联。  
   
 ## <a name="known-types-using-open-generic-methods"></a>使用开放式泛型方法的已知类型  
+
  可能需要将泛型类型作为已知类型添加。 但是，不能将开放式泛型类型作为参数传递到 `KnownTypeAttribute` 属性。  
   
  通过使用替代机制可以解决此问题：编写一个返回要添加到已知类型集合的类型列表的方法。 然后将方法名称指定为 `KnownTypeAttribute` 属性的字符串参数（由于某些限制所致）。  
@@ -132,7 +142,8 @@ ms.locfileid: "85247476"
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>添加已知类型的其他方法  
- 此外，可以通过配置文件添加已知类型。 如果不控制需要已知类型才能正确反序列化的类型（例如，将第三方类型库与 Windows Communication Foundation （WCF）结合使用，则此方法很有用。  
+
+ 此外，可以通过配置文件添加已知类型。 如果不控制需要已知类型才能正确反序列化的类型（例如，将第三方类型库与 Windows Communication Foundation (WCF) 结合使用时，这将非常有用。  
   
  下面的配置文件演示如何在配置文件中指定已知类型。  
   
@@ -168,7 +179,7 @@ ms.locfileid: "85247476"
   
  在前面的配置文件中，名为 `MyCompany.Library.Shape` 的数据协定类型被声明具有已知类型 `MyCompany.Library.Circle` 。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.Serialization.KnownTypeAttribute>
 - <xref:System.Collections.Hashtable>
