@@ -2,27 +2,30 @@
 title: 5403 - TokenValidationSuccess
 ms.date: 03/30/2017
 ms.assetid: 322efeb2-8081-4d3c-ab92-31d5b236f4d3
-ms.openlocfilehash: bdb95333483a0e749b1546cacae5cacd649ce6e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1ebc3a8d202ac359a8fcef19b6a88fa6433ebc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955268"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286976"
 ---
-# <a name="5403---tokenvalidationsuccess"></a><span data-ttu-id="4bafb-102">5403 - TokenValidationSuccess</span><span class="sxs-lookup"><span data-stu-id="4bafb-102">5403 - TokenValidationSuccess</span></span>
-## <a name="properties"></a><span data-ttu-id="4bafb-103">属性</span><span class="sxs-lookup"><span data-stu-id="4bafb-103">Properties</span></span>  
+# <a name="5403---tokenvalidationsuccess"></a><span data-ttu-id="63ade-102">5403 - TokenValidationSuccess</span><span class="sxs-lookup"><span data-stu-id="63ade-102">5403 - TokenValidationSuccess</span></span>
+
+## <a name="properties"></a><span data-ttu-id="63ade-103">属性</span><span class="sxs-lookup"><span data-stu-id="63ade-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="4bafb-104">Id</span><span class="sxs-lookup"><span data-stu-id="4bafb-104">ID</span></span>|<span data-ttu-id="4bafb-105">5403</span><span class="sxs-lookup"><span data-stu-id="4bafb-105">5403</span></span>|  
-|<span data-ttu-id="4bafb-106">关键字</span><span class="sxs-lookup"><span data-stu-id="4bafb-106">Keywords</span></span>|<span data-ttu-id="4bafb-107">安全性</span><span class="sxs-lookup"><span data-stu-id="4bafb-107">Security</span></span>|  
-|<span data-ttu-id="4bafb-108">级别</span><span class="sxs-lookup"><span data-stu-id="4bafb-108">Level</span></span>|<span data-ttu-id="4bafb-109">详细</span><span class="sxs-lookup"><span data-stu-id="4bafb-109">Verbose</span></span>|  
-|<span data-ttu-id="4bafb-110">通道</span><span class="sxs-lookup"><span data-stu-id="4bafb-110">Channel</span></span>|<span data-ttu-id="4bafb-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="4bafb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="63ade-104">ID</span><span class="sxs-lookup"><span data-stu-id="63ade-104">ID</span></span>|<span data-ttu-id="63ade-105">5403</span><span class="sxs-lookup"><span data-stu-id="63ade-105">5403</span></span>|  
+|<span data-ttu-id="63ade-106">关键字</span><span class="sxs-lookup"><span data-stu-id="63ade-106">Keywords</span></span>|<span data-ttu-id="63ade-107">安全性</span><span class="sxs-lookup"><span data-stu-id="63ade-107">Security</span></span>|  
+|<span data-ttu-id="63ade-108">级别</span><span class="sxs-lookup"><span data-stu-id="63ade-108">Level</span></span>|<span data-ttu-id="63ade-109">“详细”</span><span class="sxs-lookup"><span data-stu-id="63ade-109">Verbose</span></span>|  
+|<span data-ttu-id="63ade-110">通道</span><span class="sxs-lookup"><span data-stu-id="63ade-110">Channel</span></span>|<span data-ttu-id="63ade-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="63ade-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="4bafb-112">描述</span><span class="sxs-lookup"><span data-stu-id="4bafb-112">Description</span></span>  
- <span data-ttu-id="4bafb-113">当 SecurityToken 验证成功时，将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="4bafb-113">This event is emitted when the SecurityToken validation succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="63ade-112">描述</span><span class="sxs-lookup"><span data-stu-id="63ade-112">Description</span></span>  
+
+ <span data-ttu-id="63ade-113">当 SecurityToken 验证成功时，将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="63ade-113">This event is emitted when the SecurityToken validation succeeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="4bafb-114">消息</span><span class="sxs-lookup"><span data-stu-id="4bafb-114">Message</span></span>  
- <span data-ttu-id="4bafb-115">SecurityToken（类型为“%1”，ID 为“%2”）验证已成功。</span><span class="sxs-lookup"><span data-stu-id="4bafb-115">SecurityToken (type '%1' and id '%2') validation succeeded.</span></span>  
+## <a name="message"></a><span data-ttu-id="63ade-114">消息</span><span class="sxs-lookup"><span data-stu-id="63ade-114">Message</span></span>  
+
+ <span data-ttu-id="63ade-115">SecurityToken（类型为“%1”，ID 为“%2”）验证已成功。</span><span class="sxs-lookup"><span data-stu-id="63ade-115">SecurityToken (type '%1' and id '%2') validation succeeded.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="4bafb-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="4bafb-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="63ade-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="63ade-116">Details</span></span>
