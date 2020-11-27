@@ -2,15 +2,16 @@
 title: 与 ASP.NET Web 服务的互操作性
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: f38209ffe2161e58528a108b29e730665a65da37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cca4e1b3da26d8026d41d0a7107432cdd2960545
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598861"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276628"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>与 ASP.NET Web 服务的互操作性
-可以通过确保使用这两种技术实现的服务符合 WS-I Basic Profile 1.1 规范，来实现 ASP.NET Web 服务与 Windows Communication Foundation （WCF） Web 服务之间的互操作性。 符合 WS-I Basic Profile 1.1 的 ASP.NET Web 服务可通过 WCF 系统提供的绑定与 WCF 客户端进行互操作 <xref:System.ServiceModel.BasicHttpBinding> 。  
+
+通过确保使用这两种技术实现的服务符合 WS-I Basic Profile 1.1 规范，可以实现 ASP.NET Web 服务与 Windows Communication Foundation (WCF) Web 服务之间的互操作性。 符合 WS-I Basic Profile 1.1 的 ASP.NET Web 服务可通过 WCF 系统提供的绑定与 WCF 客户端进行互操作 <xref:System.ServiceModel.BasicHttpBinding> 。  
   
  使用 ASP.NET 2.0 选项将 <xref:System.Web.Services.WebService> 和属性添加 <xref:System.Web.Services.WebMethodAttribute> 到接口而不是类，并编写类来实现接口，如下面的示例代码所示。  
   
@@ -47,6 +48,7 @@ public class Service : IEcho
  避免使用 Internet Information Services (IIS) 提供的身份验证选项。 WCF 客户端不支持它们。 如果服务必须是安全的，请使用 WCF 提供的选项，因为这些选项非常可靠，并且基于标准协议。  
   
 ## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>由加载 ServiceModel HttpModule 而导致的性能影响  
+
  在 .NET Framework 3.0 中，WCF `HttpModule` 安装在根 Web.config 文件中，因此，每个 ASP.NET 应用程序都启用了 WCF。 这可能会影响性能，因此，可以移除 Web.config 文件的 `ServiceModel`，如下面的示例所示。  
   
 ```xml  

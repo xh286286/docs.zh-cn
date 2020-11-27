@@ -9,14 +9,15 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: 277822c9d89046bfbad50df16bce83da7dd45b3b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 34a42355acce0beafbb9658baf6032e4e7e19fcb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164103"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276420"
 ---
 # <a name="get-ui-automation-element-properties"></a>获取 UI 自动化元素的属性
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -35,12 +36,13 @@ ms.locfileid: "87164103"
 2. 调用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> 或检索 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性结构，并从其成员之一获取值。  
   
 ## <a name="example"></a>示例  
+
  下面的示例演示了检索的当前属性的各种方法 <xref:System.Windows.Automation.AutomationElement> 。  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [客户端的 UI 自动化属性](ui-automation-properties-for-clients.md)
 - [在 UI 自动化中使用缓存](use-caching-in-ui-automation.md)

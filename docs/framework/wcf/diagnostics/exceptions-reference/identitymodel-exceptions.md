@@ -2,14 +2,15 @@
 title: IdentityModel 异常
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 08d81f4eb35d0f4bda3997d6ab4dfd0ec10407e1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486670"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275032"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 异常
+
 本主题列出 IdentityModel 生成的所有异常。  
   
 ## <a name="exception-list"></a>异常列表  
@@ -23,7 +24,7 @@ ms.locfileid: "67486670"
 |SAMLAttributeMissingNameAttributeOnRead|缺少所读取的 SamlAttribute 的“Name”或其长度为 0。|  
 |UnknownICryptoType|不支持 ICrypto 实现。|  
 |TraceCodeSecurityTokenProviderClosed|已关闭安全令牌提供程序。|  
-|SAMLUnableToLoadAdvice|未能加载\<saml: advice > 元素。|  
+|SAMLUnableToLoadAdvice|未能加载 \<saml:advice> 元素。|  
 |SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|缺少 SamlAuthenticationStatement 的所读取的“AuthenticationMethod”属性或其长度为 0。|  
 |UnsupportedTransformAlgorithm|不支持的转换或规范化算法。|  
 |SAMLAudienceRestrictionShouldHaveOneAudience|SamlAudienceRestrictionCondition 必须包含至少一个受众 (URI)。|  
@@ -42,7 +43,7 @@ ms.locfileid: "67486670"
 |TraceCodeSecuritySessionClosedFaultReceived|客户端安全会话接收到来自服务器的会话已关闭错误。|  
 |TraceCodeIssuanceTokenProviderRedirectApplied|IssuanceTokenProvider 已应用重定向标头。|  
 |TraceCodeSecuritySessionClosedFaultSendFailure|向客户端发送安全会话已关闭错误时发生故障。|  
-|ValueMustBeZero|此参数的值必须为 0。|  
+|ValueMustBeZero|此参数的值必须为0。|  
 |SAMLUnableToResolveSignatureKey|无法解析在 SamlAssertion 签名中找到的 SecurityKeyIdentifier。 无法验证特定颁发机构的 SamlAssertion 签名。|  
 |X509IsNotInTrustedStore|特定的 X.509 证书不在被信任的人的存储区中。|  
 |SAMLElementNotRecognized|不支持此特定元素。|  
@@ -80,15 +81,15 @@ ms.locfileid: "67486670"
 |SAMLSignatureAlreadyRead|已在 SAML 断言中读取签名。|  
 |AlgorithmAndPrivateKeyMisMatch|指定的算法和私钥不匹配。|  
 |EmptyTransformChainNotSupported|不支持空转换链。|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;offset 不在范围。|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;大小不在范围。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全令牌管理器无法为特定需求创建令牌身份验证器。|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper：： EncryptDecryptHelper&#124; "offset" 超出范围。|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper：： EncryptDecryptHelper&#124; "size" 超出范围。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全令牌管理器无法为特定需求创建令牌身份验证器。|  
 |UnableToCreateKeyedHashAlgorithm|无法从特定签名算法的特定值创建 KeyedHashAlgorithm。|  
-|SAMLUnableToLoadAssertion|\<Saml:assertion > 未能加载元素。|  
+|SAMLUnableToLoadAssertion|\<saml:assertion>未能加载元素。|  
 |X509FindValueMismatchMulti|特定的 X509FindType 要求参数 findValue 的类型为两个值之一。 而自变量 findValue 为另外的类型。|  
 |TraceCodeSecurityIdentityDeterminationSuccess|已确定 EndpointAddress 的身份。|  
 |UndefinedUseOfPrefixAtElement|元素使用的特定前缀未定义命名空间。|  
 |TraceCodeSecuritySessionResponderOperationFailure|服务器上安全会话操作失败。|  
-|CannotFindCert|找不到使用特定的搜索条件的 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue。|  
+|CannotFindCert|无法使用下列特定的搜索标准找到 X.509 证书：StoreName、StoreLocation、FindType、FindValue。|  
 |X509InvalidUsageTime|特定的 X.509 证书使用时间无效。 使用时间不在要求的 NotBefore 时间和 NotAfter 时间之间。|  
 |TraceCodeSecurityIdentityDeterminationFailure|无法确定 EndpointAddress 的身份。|  
 |AsyncObjectAlreadyEnded|已对此异步结果对象调用 End 方法。|  
@@ -100,11 +101,11 @@ ms.locfileid: "67486670"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|缺少所读取的 SamlAssertion 的 MajorVersion 或其长度为 0。|  
 |SamlAttributeClaimRightShouldBePossessProperty|此 SamlAttribute 构造函数需要声明权利具有值 System.IdentityModel.Claims.Rights.PossessProperty。|  
 |AuthorizationPolicyEvaluated|已评估带有特定 ID 的策略。|  
-|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<Saml: conditions > 未能加载元素。|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<saml:conditions>未能加载元素。|  
 |AESKeyLengthNotSupported|不支持特定位密钥。 仅支持 128、192 和 256 位密钥。|  
 |UserNameCannotBeEmpty|用户名不能为空。|  
 |AlgorithmAndPublicKeyMisMatch|指定的算法和公钥不匹配。|  
-|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<Saml: conditions > 未能加载元素。|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<saml:conditions>未能加载元素。|  
 |SamlAssertionMissingSigningCredentials|尚未在 SamlAssertion 上设置 SigningCredentials。 必须签名 SamlAssertion，请在要处理的 SamlAssertion 上设置有效的 SigningCredentials。|  
 |SspiPayloadNotEncrypted|未使用 SSPI 安全上下文加密二进制数据。|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|所读取的 SamlAuthorizationDecisionStatement 不包含任何 SamlAction。|  
@@ -164,7 +165,7 @@ ms.locfileid: "67486670"
 |LengthOfArrayToConvertMustGreaterThanZero|要转换为整数的数组长度必须大于 0。|  
 |InvalidAsyncResult|AsyncResult 无效。|  
 |TraceCodeIssuanceTokenProviderRemovedCachedToken|IssuanceTokenProvider 已删除过期的服务令牌。|  
-|IncorrectUserNameFormat|用户名格式无效。 用户名格式的形式必须为"用户名或域\\\username。|  
+|IncorrectUserNameFormat|用户名格式无效。 用户名格式必须是 "username" 或 "domain \\ \username" 的形式。|  
 |TraceCodeExportSecurityChannelBindingEntry|正在启动安全 ExportChannelBinding。|  
 |UnsupportedInputTypeForTransform|转换不支持指定的输入类型。|  
 |CannotFindDocumentRoot|无法找到文档的根。|  
@@ -227,7 +228,7 @@ ms.locfileid: "67486670"
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|无法从指定的非对称加密创建指定算法的签名反格式化程序。|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|异步回调引发异常。|  
 |LengthMustBeGreaterThanZero|此自变量的长度必须大于 0。|  
-|FoundMultipleCerts|找到使用指定的搜索条件的多个 X.509 证书：StoreName、 StoreLocation、 FindType、 FindValue。 请提供更具体的查找值。|  
+|FoundMultipleCerts|使用指定的下列搜索标准找到多个 X.509 证书：StoreName、StoreLocation、FindType、FindValue。 请提供更具体的查找值。|  
 |AtLeastOneTransformRequired|转换元素必须包含至少一个转换。|  
 |SAMLTokenNotSerialized|SamlAssertion 无法序列化为 XML。 有关详细信息，请参见内部异常。|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|安全协议保证传出消息的安全。|  
@@ -294,5 +295,5 @@ ms.locfileid: "67486670"
 |UnableToCreateKeyedHashAlgorithmFromSymmetricCrypto|无法从指定的对称加密创建指定算法的 keyedHashAlgorithm。|  
 |SAMLAuthenticationStatementMissingAuthenticationMethod|为 SamlAuthenticationStatement 指定的“AuthenticationMethod”不能为 Null 且长度不能为 0。|  
 |TraceCodeSecurityImpersonationFailure|服务器上的安全模拟失败。|  
-|默认|(默认)|  
+|默认|（默认值）|  
 |UnsupportedNodeTypeInReader|不支持具有指定名称的指定节点类型。|

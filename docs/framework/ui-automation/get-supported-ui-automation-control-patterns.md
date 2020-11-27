@@ -10,14 +10,15 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: f2905b81a1af2f86c78b082f0241e2181c384d25
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 68abe272e91c40932aba5bcf99394c4a8f815c53
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164155"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276446"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>获取受支持的 UI 自动化控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -39,6 +40,7 @@ ms.locfileid: "87164155"
 2. 调用 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 以查询特定模式。 这两种方法非常相似，但是，如果没有找到该模式，<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 会引发异常，而 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 会返回 `false`。  
   
 ## <a name="example"></a>示例  
+
  下面的示例检索某个列表项的 <xref:System.Windows.Automation.AutomationElement>，并从该元素获取一个 <xref:System.Windows.Automation.SelectionItemPattern>。  
   
  [!code-csharp[UIAClient_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#103)]

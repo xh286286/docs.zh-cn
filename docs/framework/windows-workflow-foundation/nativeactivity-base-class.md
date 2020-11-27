@@ -2,18 +2,19 @@
 title: NativeActivity 基类
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d875f62dacadb2baf6b5d7e93ddb2933aed9cdb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274954"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基类
 
 <xref:System.Activities.NativeActivity> 是一个带有受保护的构造函数的抽象类。 与 <xref:System.Activities.CodeActivity> 一样，<xref:System.Activities.NativeActivity> 用于通过实现 <xref:System.Activities.NativeActivity.Execute%2A> 方法来编写命令性行为。 与 <xref:System.Activities.CodeActivity> 不同的是，通过传递给 <xref:System.Activities.NativeActivity> 方法的 <xref:System.Activities.NativeActivityContext> 对象，<xref:System.Activities.NativeActivity.Execute%2A> 有权访问工作流运行时的所有公开的功能。
 
 ## <a name="using-nativeactivitycontext"></a>使用 NativeActivityContext
+
  通过使用类型为 <xref:System.Activities.NativeActivity.Execute%2A> 的 `context` 参数的成员，可从 <xref:System.Activities.NativeActivityContext> 方法中访问工作流运行时的功能。 可通过 <xref:System.Activities.NativeActivityContext> 使用的功能如下：
 
 - 获取并设置自变量和变量。
@@ -36,11 +37,11 @@ ms.locfileid: "70989554"
 
 1. OpenVisual Studio 2010。
 
-2. 依次选择 "**文件**"、"**新建**" 和 "**项目**"。 选择 "**项目类型**" 窗口中 "**视觉对象C#**  " 下的 "**工作流 4.0** "，然后选择 " **v2010** " 节点。 在 "**模板**" 窗口中选择 "**活动库**"。 将新项目命名为 HelloActivity。
+2. 依次选择 " **文件**"、" **新建**" 和 " **项目**"。 在 "**项目类型**" 窗口中的 " **Visual c #** " 下选择 " **Workflow 4.0** "，然后选择 " **v2010** " 节点。 在 "**模板**" 窗口中选择 "**活动库**"。 将新项目命名为 HelloActivity。
 
-3. 右键单击击 helloactivity 项目中的 Activity1，然后选择 "**删除**"。
+3. 右键单击击 helloactivity 项目中的 Activity1，然后选择 " **删除**"。
 
-4. 右键单击 "击 helloactivity" 项目，然后依次选择 "**添加**"、"**类**"。 将新类命名为 HelloActivity.cs。
+4. 右键单击 "击 helloactivity" 项目，然后依次选择 " **添加**"、" **类**"。 将新类命名为 HelloActivity.cs。
 
 5. 在 HelloActivity.cs 文件中，添加以下 `using` 指令。
 

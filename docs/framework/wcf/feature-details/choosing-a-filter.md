@@ -2,14 +2,15 @@
 title: 选择筛选器
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559384"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276095"
 ---
 # <a name="choosing-a-filter"></a>选择筛选器
+
 配置路由服务时，选择正确的消息筛选器并将它们配置为允许您针对接收的消息进行完全匹配非常重要。 如果所选筛选器筛选出的匹配项太广或者配置不当，则消息会错误地进行路由。 如果筛选器的筛选范围太窄，则某些消息可能没有任何可用的有效路由。
 
 ## <a name="filter-types"></a>筛选器类型
@@ -84,7 +85,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 
 如果您必须组合多个筛选器中的逻辑来确定应进行匹配的条件，则应使用此筛选器。 例如，如果您有多个目标，而这些目标只能接收发送到特定地址的操作和消息的某些组合，则可以使用 AND 筛选器组合必要的 Action 筛选器和 Address 筛选器。
 
-### <a name="custom"></a>“自定义”
+### <a name="custom"></a>自定义
 
 选择自定义筛选器类型时，必须提供一个 customType 值，该值包含包含要用于此筛选器的 **MessageFilter** 实现的程序集的类型。 此外，filterData 必须包含自定义筛选器在计算消息时可能需要的任何值。 下面的示例定义一个 `FilterElement`，它使用 `CustomAssembly.MyCustomMsgFilter` MessageFilter 实现。
 
@@ -144,7 +145,7 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 
 有关设计 XPath 查询的详细信息，请参阅 [Xpath 语法](/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [消息筛选器](message-filters.md)
 - [如何：使用筛选器](how-to-use-filters.md)

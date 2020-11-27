@@ -6,21 +6,23 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 796098258601ec5fa208fd8a8060b28c3eeeb4d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601031"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276017"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF 中的安全注意事项
-本节中的主题列出了在设计 Windows Communication Foundation （WCF）应用程序时要考虑的各种安全相关项。  
+
+本节中的主题列出了在设计 Windows Communication Foundation (WCF) 应用程序时要考虑的各种安全相关项。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [信息泄露](information-disclosure.md)  
  讨论信息可能泄露或受到攻击的各种方式，以及如何缓解这些问题。  
   
- [特权提升](elevation-of-privilege.md)  
+ [权限提升](elevation-of-privilege.md)  
  讨论给予攻击者的权限超出最初授予的权限范围的后果，以及如何减轻这种后果。  
   
  [拒绝服务](denial-of-service.md)  
@@ -35,10 +37,11 @@ ms.locfileid: "84601031"
  [安全会话的安全注意事项](security-considerations-for-secure-sessions.md)  
  讨论在实现安全会话时影响安全的下列事项。  
   
- [不受支持的方案](unsupported-scenarios.md)  
+ [不支持的方案](unsupported-scenarios.md)  
  列出不支持某个特定安全方面的各种方案，应当避免或谨慎考虑这些方案。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -48,8 +51,9 @@ ms.locfileid: "84601031"
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [安全指导和最佳做法](security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [安全性](security.md)

@@ -2,27 +2,30 @@
 title: 1026 - ScheduleTransactionContextWorkItem
 ms.date: 03/30/2017
 ms.assetid: 0d5f86ba-ec21-4129-a726-5432e425384c
-ms.openlocfilehash: 6d0b43208f86c52e8863d4415a64466b0531832c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ba2ada1fbd5217592b4e4e3cffd813ffbe978ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924626"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275240"
 ---
 # <a name="1026---scheduletransactioncontextworkitem"></a>1026 - ScheduleTransactionContextWorkItem
+
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|Id|1026|  
+|ID|1026|  
 |关键字|WFRuntime|  
-|级别|详细|  
+|级别|“详细”|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
   
 ## <a name="description"></a>描述  
+
  指示已安排 TransactionContextWorkItem。  
   
 ## <a name="message"></a>消息  
+
  已为 Activity“%1”、DisplayName“%2”、InstanceId“%3”安排了 TransactionContextWorkItem。  
   
 ## <a name="details"></a>详细信息  

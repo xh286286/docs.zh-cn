@@ -2,12 +2,12 @@
 title: 如何：用受限预留替换 WCF URL 预留
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 52dc74ea1f8e86d6a92a2894b888b8d150ebf47c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811608"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276056"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>如何：用受限预留替换 WCF URL 预留
 
@@ -36,6 +36,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3. 如果成功删除了预留，将显示以下消息。 **已成功删除 URL 预留**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>创建新的安全组和新的受限 URL 预留  
+
  若要用受限保留项替换 WCF URL 保留项，您必须首先创建一个新的安全组。 可以通过两种方法执行此操作：从命令提示符或从计算机管理控制台。 您只需要执行一次。  
   
 ### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>从命令提示符创建新的安全组  
@@ -58,4 +59,4 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. 在 `netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="<machine name>\<security group name>` 命令提示符下键入。 将替换 **\<machine name>** 为必须在其中创建组的计算机名称，并将替换为 **\<security group name>** 前面创建的安全组的名称。  
   
-3. 如果成功创建了预留，将显示以下消息。 **已成功添加 URL 保留**项。
+3. 如果成功创建了预留，将显示以下消息。 **已成功添加 URL 保留** 项。

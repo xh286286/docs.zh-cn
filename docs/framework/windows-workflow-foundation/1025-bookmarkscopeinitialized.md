@@ -2,27 +2,30 @@
 title: 1025 - BookmarkScopeInitialized
 ms.date: 03/30/2017
 ms.assetid: 63584434-e709-471d-9e96-97d3d99e70d6
-ms.openlocfilehash: ddc9b48120b9d31f71bfc99fff19ef252b08e295
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47b4813c21ef637922117d5adf41b3c907c57f32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924639"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275266"
 ---
 # <a name="1025---bookmarkscopeinitialized"></a>1025 - BookmarkScopeInitialized
+
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|Id|1025|  
+|ID|1025|  
 |关键字|WFRuntime|  
-|级别|详细|  
+|级别|“详细”|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/调试|  
   
 ## <a name="description"></a>描述  
+
  指示已初始化 BookmarkScope。  
   
 ## <a name="message"></a>消息  
+
  TemporaryId 为“%1”的 BookmarkScope 已初始化，ID 为:“%2”。  
   
 ## <a name="details"></a>详细信息  
