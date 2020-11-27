@@ -2,15 +2,16 @@
 title: DataContract 代理项
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 9677e3cf024e6c1e5b2f3360423ab55536748495
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23a83b0a99a17af011bea1193c2ea013a2c3c5a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600031"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253682"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 代理项
-本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案（其中数据在 Windows Communication Foundation （WCF）客户端和服务之间进行序列化和传输）中使用代理项。  
+
+本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案中使用代理项，其中数据在 Windows Communication Foundation (WCF) 客户端和服务之间进行序列化和传输。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -250,21 +251,21 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
  运行示例时，客户端将调用 AddEmployee，然后调用 GetEmployee 以检查第一个调用是否成功。 GetEmployee 操作请求的结果显示在客户端控制台窗口中。 若要查找员工并打印 "找到"，GetEmployee 操作必须成功。  
   
 > [!NOTE]
-> 本示例演示如何插入用于序列化、反序列化和元数据生成的代理项。 示例不演示如何插入用于从元数据中生成代码的代理项。 若要查看如何使用代理项插入客户端代码生成的示例，请参阅[自定义 WSDL 发布](custom-wsdl-publication.md)示例。  
+> 本示例演示如何插入用于序列化、反序列化和元数据生成的代理项。 示例不演示如何插入用于从元数据中生成代码的代理项。 若要查看如何使用代理项插入客户端代码生成的示例，请参阅 [自定义 WSDL 发布](custom-wsdl-publication.md) 示例。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要生成 c # 版本的解决方案，请按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
+2. 若要生成 c # 版本的解决方案，请按照 [生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

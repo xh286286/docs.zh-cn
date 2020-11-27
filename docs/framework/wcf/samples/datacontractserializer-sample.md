@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: c2f62c8926f09e2d4cdea1941909e7d8f59c43a0
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d38dddcaff7316f4933207c4aa0897ad47306352
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244395"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253609"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 示例
+
 DataContractSerializer 示例演示为数据协定类执行常规序列化和反序列化服务的 <xref:System.Runtime.Serialization.DataContractSerializer>。 该示例创建一个 `Record` 对象，将其序列化到内存流，然后将该内存流反序列化回另一个 `Record` 对象，以演示的用法 <xref:System.Runtime.Serialization.DataContractSerializer> 。 然后示例使用二进制编写器序列化 `Record` 对象以演示编写器如何影响序列化。  
   
 > [!NOTE]
@@ -127,7 +128,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。  
   
@@ -138,6 +139,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  

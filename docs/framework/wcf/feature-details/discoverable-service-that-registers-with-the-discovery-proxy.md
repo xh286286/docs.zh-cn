@@ -2,15 +2,16 @@
 title: 如何：实现向发现代理注册的可发现的服务
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e6b57193d25da7e5c9a865525dd5e9ea21110b0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599225"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254254"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可发现的服务
-本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在上一个主题中，[如何：实现发现代理](how-to-implement-a-discovery-proxy.md)，你已实现了发现代理。 在本主题中，你将创建一个 WCF 服务，该服务将公告消息（ `Hello` 和 `Bye` ）发送到发现代理，使其能够向发现代理注册并向其注销。
+
+本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在上一个主题中， [如何：实现发现代理](how-to-implement-a-discovery-proxy.md)，你已实现了发现代理。 在本主题中，你将创建一个 WCF 服务，该服务将公告消息 (`Hello` 和 `Bye`) 发送到发现代理，从而使该服务向发现代理注册并向其注销。
 
 ### <a name="to-define-the-service-contract"></a>定义服务协定
 
@@ -156,9 +157,10 @@ ms.locfileid: "84599225"
     }
     ```
 
-至此您已完成可检测到的服务的实现过程。 继续[操作如何：实现使用发现代理查找服务的客户端应用程序](client-app-discovery-proxy-to-find-a-service.md)。
+至此您已完成可检测到的服务的实现过程。 继续 [操作如何：实现使用发现代理查找服务的客户端应用程序](client-app-discovery-proxy-to-find-a-service.md)。
 
 ## <a name="example"></a>示例
+
  下面是本主题中使用的代码的完整清单。
 
 ```csharp

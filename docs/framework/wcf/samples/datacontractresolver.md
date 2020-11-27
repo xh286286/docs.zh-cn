@@ -2,17 +2,19 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: c2a2afaa450e9abe17b62f6be07a2dc41459ca20
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6c04a055a5ce87ac285d05b086c22b900bc92145
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600018"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253631"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
+
 此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。 此示例演示在序列化和反序列化过程中，如何使用 DataContractResolver 在 CLR 类型与 xsi:type 表示形式之间进行映射。
 
 ## <a name="sample-details"></a>示例详细信息
+
  此示例定义以下 CLR 类型。
 
 ```csharp
@@ -161,7 +163,7 @@ class MyDataContractResolver : DataContractResolver
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   

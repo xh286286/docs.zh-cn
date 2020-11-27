@@ -2,14 +2,15 @@
 title: 通过路由服务进行通信
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 63cfb32a5f5d0cae7635d39d5df594a5bb07e411
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d91634d72481427f04e958f6dc2734829b6158b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554783"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253851"
 ---
 # <a name="hello-world-with-the-routing-service"></a>通过路由服务进行通信
+
 此示例演示了 Windows Communication Foundation (WCF) 路由服务。 路由服务是一个 WCF 组件，使您可以轻松地在应用程序中包含基于内容的路由器。 此示例改编了标准 WCF 计算器示例，以使用路由服务进行通信。 在此示例中，计算器客户端配置为将消息发送到由路由器公开的一个终结点。 路由服务配置为接受发送给它的所有消息，然后将这些消息转发至与计算器服务对应的终结点。 因此，从客户端发送的消息将由路由器接收，并重新路由到实际的计算器服务。 来自计算器服务的消息将发回到路由器，后者又将这些消息传回到计算器客户端。
 
 ### <a name="to-use-this-sample"></a>使用此示例
@@ -27,7 +28,7 @@ ms.locfileid: "90554783"
 
 3. 按 Enter 启动客户端。
 
-     应会看到以下输出：
+     你应该会看到以下输出：
 
     ```console
      Add(100,15.99) = 115.99
@@ -40,12 +41,15 @@ ms.locfileid: "90554783"
     ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>可通过代码或 App.Config 进行配置
+
  所提供的示例配置为使用 App.config 文件来定义路由器行为。 也可将 App.config 文件的名称更改为无法识别的其他名称，并将对 ConfigureRouterViaCode() 的方法调用取消注释。 以上任一方法都可产生相同的路由器行为。
 
-### <a name="scenario"></a>方案
+### <a name="scenario"></a>场景
+
  此示例演示作为基本消息泵的路由器。 路由服务用作透明的代理节点，该节点配置为将消息直接传递到目标终结点的预配置集。
 
 ### <a name="real-world-scenario"></a>实际方案
+
  Contoso 希望提高其服务的命名、寻址、配置和安全方面的灵活性。 为此，他们将基本消息泵放在其服务的前面，作为面向公共的终结点。 这样，他们就可以将附加安全性放在其实际服务的前面，以便以后更轻松地实现扩展的解决方案或服务版本控制。
 
 > [!IMPORTANT]
@@ -57,6 +61,6 @@ ms.locfileid: "90554783"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 承载和持久性示例](/previous-versions/appfabric/ff383418(v=azure.10))

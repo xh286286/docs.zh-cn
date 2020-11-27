@@ -2,35 +2,38 @@
 title: Internet Information Services (IIS) 服务器证书安装说明
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 301a10c615a13a42e1a6e1b89d2724476ca4fbae
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 597af9873b4a5c042aec817ac0d26a86bac9ea82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594655"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253786"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Internet Information Services (IIS) 服务器证书安装说明
+
 若要运行可与 Internet 信息服务 (IIS) 安全通信的示例，您必须创建和安装服务器证书。  
   
 ## <a name="step-1-creating-certificates"></a>步骤 1。 创建证书  
- 若要为你的计算机创建证书，请使用管理员权限打开 Visual Studio 开发人员命令提示，并运行每个使用安全与 IIS 的通信的示例中包含的安装程序。 在运行此批处理文件之前，确保路径包括其中包含 Makecert.exe 的文件夹。 以下命令用于在 Setup.bat 中创建证书。  
+
+ 若要为你的计算机创建证书，请使用管理员权限打开 Visual Studio 开发人员命令提示，并运行每个使用与 IIS 安全通信的示例中包含的 Setup.bat。 在运行此批处理文件之前，确保路径包括其中包含 Makecert.exe 的文件夹。 以下命令用于在 Setup.bat 中创建证书。  
   
 ```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
 ## <a name="step-2-installing-certificates"></a>步骤 2。 安装证书  
+
  安装刚刚创建的证书所需执行的步骤取决于您所使用的 IIS 版本。  
   
 #### <a name="to-install-iis-on-iis-51-windows-xp-and-iis-60-windows-server-2003"></a>在 IIS 5.1 (Windows XP) 和 IIS 6.0 (Windows Server 2003) 上安装 IIS  
   
 1. 打开 Internet 信息服务管理器 MMC 管理单元。  
   
-2. 右键单击 "默认网站"，然后选择 "**属性**"。  
+2. 右键单击 "默认网站"，然后选择 " **属性**"。  
   
-3. 选择 "**目录安全**" 选项卡。  
+3. 选择 " **目录安全** " 选项卡。  
   
-4. 单击 "**服务器证书**" 按钮。 Web 服务器证书向导将启动。  
+4. 单击 " **服务器证书** " 按钮。 Web 服务器证书向导将启动。  
   
 5. 完成向导。 选择用于分配证书的选项。 从显示的证书列表中选择 ServiceModelSamples-HTTPS-Server 证书。  
   
@@ -55,9 +58,9 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>在 IIS 7.0（Windows Vista 和 Windows Server 2008）上安装 IIS  
   
-1. 从 "**开始**" 菜单中，单击 "**运行**"，然后键入**INETMGR**以打开 Internet Information Services （IIS） mmc 管理单元。  
+1. 从 " **开始** " 菜单中，单击 " **运行**"，然后键入 **INETMGR** 以打开 IIS) MMC 管理单元 (的 Internet Information Services。  
   
-2. 右键单击 "**默认**网站"，然后选择 "**编辑绑定 ...** "  
+2. 右键单击 "**默认** 网站"，然后选择 "**编辑绑定 ...** "  
   
 3. 单击 "**网站绑定**" 对话框的 "**添加**" 按钮。  
   

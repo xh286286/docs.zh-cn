@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 0317e7b42f589b31f5c77b89d26cb46815f13054
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 76362684d289ca6aaac852158a05087a0a28f837
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599043"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254046"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>如何：创建基本 Atom 源
-Windows Communication Foundation （WCF）允许您创建公开联合源的服务。 本主题讨论如何创建公开 Atom 联合源的联合服务。  
+
+Windows Communication Foundation (WCF) 允许您创建公开联合源的服务。 本主题讨论如何创建公开 Atom 联合源的联合服务。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   
@@ -23,7 +24,7 @@ Windows Communication Foundation （WCF）允许您创建公开联合源的服�
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > 应用 <xref:System.ServiceModel.Web.WebGetAttribute> 的所有服务操作将映射到 HTTP GET 请求。 若要将操作映射到不同的 HTTP 方法，请改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 有关详细信息，请参阅[如何：创建基本 WCF WEB HTTP 服务](how-to-create-a-basic-wcf-web-http-service.md)。  
+    > 应用 <xref:System.ServiceModel.Web.WebGetAttribute> 的所有服务操作将映射到 HTTP GET 请求。 若要将操作映射到不同的 HTTP 方法，请改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 有关详细信息，请参阅 [如何：创建基本 WCF WEB HTTP 服务](how-to-create-a-basic-wcf-web-http-service.md)。  
   
 2. 实现服务协定。  
   
@@ -64,9 +65,9 @@ Windows Communication Foundation （WCF）允许您创建公开联合源的服�
   
 ### <a name="to-call-getblog-with-an-http-get"></a>使用 HTTP GET 调用 GetBlog()  
   
-1. 打开 Internet Explorer，键入以下 URL，然后按 ENTER：`http://localhost:8000/BlogService/GetBlog`  
+1. 打开 Internet Explorer，键入以下 URL，然后按 ENTER： `http://localhost:8000/BlogService/GetBlog`  
   
-     URL 包含服务的基址（ `http://localhost:8000/BlogService` ）、终结点的相对地址以及要调用的服务操作。  
+     URL 包含服务的基址 (`http://localhost:8000/BlogService`) 、终结点的相对地址以及要调用的服务操作。  
   
 ### <a name="to-call-getblog-from-code"></a>从代码中调用 GetBlog()  
   
@@ -88,12 +89,14 @@ Windows Communication Foundation （WCF）允许您创建公开联合源的服�
      [!code-vb[htAtomBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>示例  
+
  下面列出了此示例的完整代码。  
   
  [!code-csharp[htAtomBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#12)]
  [!code-vb[htAtomBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
+
  编译前面的代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
 ## <a name="see-also"></a>另请参阅

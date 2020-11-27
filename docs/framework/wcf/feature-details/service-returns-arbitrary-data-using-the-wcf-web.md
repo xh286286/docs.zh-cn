@@ -2,14 +2,15 @@
 title: 如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 9753fbc9b333cb7e89ddc8dff030cb1f62ede23b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ed3e5269be5b636b348ff0efe44c49dae5335e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600356"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253890"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
+
 有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须返回 WCF 不支持的格式的数据时，就会出现这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
@@ -108,6 +109,7 @@ ms.locfileid: "84600356"
 2. 打开 Internet Explorer 并键入 `http://localhost:8000/Service/GetImage?width=50&height=40`，您应看到一个黄色矩形，有蓝色对角线穿过其中心。  
   
 ## <a name="example"></a>示例  
+
  下面列出了此主题的完整代码。  
   
 ```csharp  
