@@ -3,12 +3,12 @@ title: 诊断工具概述 - .NET Core
 description: 概述用于 .NET Core 应用程序的工具和技术。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982304"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031912"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中提供哪些诊断工具？
 
@@ -27,6 +27,10 @@ ms.locfileid: "94982304"
 ## <a name="unit-testing"></a>单元测试
 
 [单元测试](../testing/index.md)是持续集成和部署高质量软件的关键组件。 单元测试的目的在于，在用户操作导致系统出现问题时提前向其发出警告。
+
+## <a name="dumps"></a>转储
+
+[转储](./dumps.md)是一个文件，其中包含创建时进程的快照。 它们可用于检查应用程序的状态，以便进行调试。
 
 ## <a name="collect-diagnostics-in-containers"></a>收集容器中的诊断
 
