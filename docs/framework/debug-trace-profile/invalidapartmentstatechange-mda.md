@@ -1,6 +1,6 @@
 ---
 title: invalidApartmentStateChange MDA
-description: 了解 .NET 中的 invalidApartmentStateChange 托管调试助手（MDA），如果 COM 单元状态有问题，则会激活该助手。
+description: 了解 .NET 中的 invalidApartmentStateChange 托管调试助手 (MDA) ，如果 COM 单元状态有问题，则会激活该助手。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -12,13 +12,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: db55e3ac2d6862d008013abef0f09f67213d9faa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051822"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272743"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
+
 `invalidApartmentStateChange` 托管调试助手 (MDS) 通过以下两种问题中的任何一种激活：  
   
 - 尝试将已由 COM 初始化的线程的 COM 单元状态更改为不同的单元状态。  
@@ -38,17 +40,20 @@ ms.locfileid: "86051822"
 - 在线程上调用具有不同并发模型的 `CoUninitialize` 方法（或 `CoInitializeEx` 方法）。  
   
 ## <a name="resolution"></a>解决方法  
+
  在单元状态开始执行前对其进行设置，或将 <xref:System.STAThreadAttribute> 属性或 <xref:System.MTAThreadAttribute> 属性应用到应用程序的主方法。  
   
  对于第二种结果，理想情况下，需要将调用 `CoUninitialize` 方法的代码修改为延迟调用，直到线程即将终止并且该线程停止使用 RCW 及其基础 COM 组件。 但是，如果无法修改调用 `CoUninitialize` 方法的代码，则未采用此方法进行初始化的线程不能使用任何 RCW。  
   
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
+
  此 MDA 对 CLR 无任何影响。  
   
 ## <a name="output"></a>输出  
+
  当前线程的 COM 单元状态和试图应用的代码状态。  
   
-## <a name="configuration"></a>配置  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -59,6 +64,7 @@ ms.locfileid: "86051822"
 ```  
   
 ## <a name="example"></a>示例  
+
  以下代码示例展示了一种可激活该 MDA 的情况。  
   
 ```csharp
@@ -75,7 +81,7 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

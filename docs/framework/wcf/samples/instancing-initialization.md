@@ -2,25 +2,28 @@
 title: 实例化初始化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 06a8dfe571b652ded236df3097b37861c03a858d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9681c091fe2a69024b000c5b93d003ec4d127a7b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596651"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273355"
 ---
 # <a name="instancing-initialization"></a>实例化初始化
-此示例通过定义接口扩展了[池](pooling.md)采样， `IObjectControl` 该接口通过激活和停用来自定义对象的初始化。 客户端调用向池中返回对象以及不向池中返回对象的方法。  
+
+此示例通过定义接口扩展了 [池](pooling.md) 采样， `IObjectControl` 该接口通过激活和停用来自定义对象的初始化。 客户端调用向池中返回对象以及不向池中返回对象的方法。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="extensibility-points"></a>扩展点  
- 创建 Windows Communication Foundation （WCF）扩展的第一步是确定要使用的扩展点。 在 WCF 中，术语 " *EndpointDispatcher* " 指的是一个运行时组件，该组件负责将传入消息转换成用户服务上的方法调用，并将该方法的返回值转换为传出消息。 WCF 服务为每个终结点创建 EndpointDispatcher。  
+
+ 创建 Windows Communication Foundation (WCF) 扩展的第一步是确定要使用的扩展点。 在 WCF 中，术语 " *EndpointDispatcher* " 指的是一个运行时组件，该组件负责将传入消息转换成用户服务上的方法调用，并将该方法的返回值转换为传出消息。 WCF 服务为每个终结点创建 EndpointDispatcher。  
   
  EndpointDispatcher 使用 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 类提供终结点范围（适用于服务收到或发送的所有消息）的扩展。 通过此类可以自定义控制 EndpointDispatcher 行为的各种属性。 本示例重点介绍 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 属性，该属性指向提供服务类实例的对象。  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
+
  在 WCF 中，EndpointDispatcher 通过使用实现接口的实例提供程序来创建服务类的实例 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 。 此接口只有两个方法：  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：当消息到达时，Dispatcher 调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法，以创建服务类的实例来处理该消息。 调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，则创建服务类的一个新实例来处理到达的每个消息，因此每当有消息到达时，都会调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
@@ -28,6 +31,7 @@ ms.locfileid: "84596651"
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>：当服务实例处理完消息后，EndpointDispatcher 将调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> 方法。 与 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法中一样，调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。  
   
 ## <a name="the-object-pool"></a>对象池  
+
  `ObjectPoolInstanceProvider` 类包含对象池的实现。 此类实现 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 接口，以便与服务模型层进行交互。 当 EndpointDispatcher 调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法时，自定义实现将在内存中的池内寻找现有对象，而不是创建新的实例。 如果找到一个对象，则返回该对象。 否则，`ObjectPoolInstanceProvider` 则检查 `ActiveObjectsCount` 属性（从池中返回的对象数）是否已达到最大池大小。 如果没有达到最大池大小，则创建一个新实例并将其返回调用方，而 `ActiveObjectsCount` 则相应地增加。 否则，对象创建请求将排队，等待配置的时间段。 下面的示例代码演示了 `GetObjectFromThePool` 的实现。  
   
 ```csharp
@@ -125,7 +129,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
 }  
 ```  
   
- `ReleaseInstance`方法提供了*清理初始化*功能。 通常，该池为其生存期保持最少数量的对象。 但是，可能有过度使用的时期，此时需要在池中创建更多对象以达到配置中指定的最大限制。 最终，当池变得不是很活跃时，那些多余的对象可能会变成额外的开销。 因此，当 `activeObjectsCount` 达到 0 时，会启动一个空闲计时器，该计时器将触发并执行清除循环。  
+ `ReleaseInstance`方法提供了 *清理初始化* 功能。 通常，该池为其生存期保持最少数量的对象。 但是，可能有过度使用的时期，此时需要在池中创建更多对象以达到配置中指定的最大限制。 最终，当池变得不是很活跃时，那些多余的对象可能会变成额外的开销。 因此，当 `activeObjectsCount` 达到 0 时，会启动一个空闲计时器，该计时器将触发并执行清除循环。  
   
 ```csharp  
 if (activeObjectsCount == 0)  
@@ -201,6 +205,7 @@ public class PoolService : IPoolService
 ```  
   
 ## <a name="hooking-activation-and-deactivation"></a>挂钩激活和停用  
+
  对象池的主要目的是通过代价相对较高的创建和初始化来优化生存期较短的对象。 因此，如果使用得当，它可以显著提高应用程序的性能。 因为对象是从池中返回的，所以只调用构造函数一次。 但是，有些应用程序需要某种级别的控制，以便初始化和清除单一上下文中使用的资源。 例如，用于一组计算的某个对象可以在处理下一个计算之前重置其私有字段。 企业服务通过允许对象开发人员重写 `Activate` 基类中的 `Deactivate` 和 <xref:System.EnterpriseServices.ServicedComponent> 方法，实现了这种上下文特定的初始化。  
   
  对象池就在从池中返回对象之前调用 `Activate` 方法。 当对象重新返回到池中后，将调用 `Deactivate`。 <xref:System.EnterpriseServices.ServicedComponent> 基类还有一个称为 `boolean` 的 `CanBePooled` 属性，它可用于通知池是否可以对对象进一步进行池处理。  
@@ -250,17 +255,17 @@ else if (pool.Count < minPoolSize)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
+2. 若要生成解决方案，请按照 [生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  

@@ -9,31 +9,38 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-ms.openlocfilehash: 5dbfba2baec3263d91746c06379438e97a81f005
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: c8d6c69fc6eb4f5f690b02809fdc492da675c3b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051709"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272548"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
+
 激活 `invalidMemberDeclaration` 托管调试助手 (MDA) 以报告在确定如何封送要从 COM 调用的成员的参数期间发生的错误。  
   
 ## <a name="symptoms"></a>症状  
+
  一个失败 HRESULT 被返回到 COM，且未调用托管方法。  
   
 ## <a name="cause"></a>原因  
+
  这很有可能是因为不兼容其中一个参数上的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性。  
   
 ## <a name="resolution"></a>解决方法  
+
  指定参数上的有效 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性。  
   
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
+
  此 MDA 对 CLR 无任何影响。  
   
 ## <a name="output"></a>输出  
+
  信息性消息包括成员名称、类型名称和错误消息。  
   
-## <a name="configuration"></a>配置  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -43,7 +50,7 @@ ms.locfileid: "86051709"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](diagnosing-errors-with-managed-debugging-assistants.md)

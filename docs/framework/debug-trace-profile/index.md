@@ -1,6 +1,6 @@
 ---
 title: 调试、跟踪和分析
-description: 了解如何在 .NET 中进行调试、跟踪和分析。 请参阅介绍实时（JIT）调试、跟踪和检测应用程序等文章。
+description: 了解如何在 .NET 中进行调试、跟踪和分析。 请参阅文章涵盖实时 (JIT) 调试、跟踪和检测应用程序等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework]
@@ -14,19 +14,21 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 33dd840f4c1421bbff54499af56ab3e147cc694b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272769"
 ---
 # <a name="debugging-tracing-and-profiling"></a>调试、跟踪和分析
+
 若要调试 .NET Framework 应用程序，编译器和运行时环境必须配置为可将调试程序附加到该应用程序，并且如果可能的话，为该应用程序及其相应 Microsoft 中间语言 (MSIL) 同时生成符号和行映射。 在对托管应用程序进行调试后，可对其进行分析以增强性能。 分析计算并描述可生成最常执行的代码的源代码行，以及执行它们所需的时间。  
   
  通过使用 Visual Studio 可轻松地调试.NET framework 应用程序，前者用于处理配置的许多详细信息。 如果未安装 Visual Studio，可以通过使用 .NET Framework <xref:System.Diagnostics> 命名空间中的调试类检查并提升 .NET Framework 应用程序的性能。 此命名空间包括用于跟踪执行流的 <xref:System.Diagnostics.Trace>、<xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.TraceSource> 类，以及用于分析代码的 <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog> 和 <xref:System.Diagnostics.PerformanceCounter> 类。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [启用 JIT 附加调试](enabling-jit-attach-debugging.md)  
  演示如何配置注册表从而将调试引擎以 JIT 方式附加到 .NET Framework 应用程序。  
   
@@ -46,6 +48,7 @@ ms.locfileid: "85415974"
  描述可用来跟踪应用程序性能的计数器。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [在 Visual Studio 中调试 ASP.NET 或 ASP.NET Core 应用](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  提供有关如何在开发期间或部署后调试 ASP.NET 应用程序的先决条件和说明。  
   

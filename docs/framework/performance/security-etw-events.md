@@ -6,21 +6,22 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-ms.openlocfilehash: 2fd2d450223cd16a7791b8f6c67afe6bcb954eb3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 4402bf5690a53ce518077268a3e20a95aeb14e8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474210"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272509"
 ---
 # <a name="security-etw-events"></a>安全 ETW 事件
 
 在强名称验证和验证码验证期间会引发安全事件。  
 
 ## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a>StrongNameVerificationStart_V1 和 StrongNameVerificationStop_V1 事件  
+
  下表显示了关键字和级别。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)。）  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|信息性 (4)|  
   
@@ -41,9 +42,10 @@ ms.locfileid: "86474210"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
 
 ## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>AuthenticodeVerificationStart_V1 and AuthenticodeVerificationStop_V1 事件  
+
  下表显示了关键字和级别。  
   
-|引发事件的关键字|级别|  
+|引发事件的关键字|Level|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|信息性 (4)|  
   

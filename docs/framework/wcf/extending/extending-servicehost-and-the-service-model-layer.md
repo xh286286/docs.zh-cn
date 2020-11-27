@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending service models [WCF]
 ms.assetid: 954c138a-1cd0-45a0-8abe-e4d2b8ff5400
-ms.openlocfilehash: e370316cd121f49953e00e83dfc9d2aec17de1e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 184719f5c3e2e3830d7e1c9c69b73649b66fff34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795735"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273030"
 ---
 # <a name="extending-servicehost-and-the-service-model-layer"></a>扩展 ServiceHost 和服务模块层
+
 服务模型层负责从基础通道提取出传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 服务模型扩展将修改或实现执行或通信行为与功能，包括客户端或调度程序功能、自定义行为、消息和参数截获以及其他扩展功能。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [扩展客户端](extending-clients.md)  
  描述可以截获和修改客户端运行时的接口以及可以向其中插入客户端应用程序中的自定义扩展的类。 例如，您可以执行自定义客户端消息记录，执行自定义消息序列化，等等。  
   
