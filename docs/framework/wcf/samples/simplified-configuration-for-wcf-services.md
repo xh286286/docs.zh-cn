@@ -3,14 +3,15 @@ title: WCF 服务的简化配置
 description: 了解如何使用 WCF 实现和配置典型的服务和客户端。 服务通过使用配置文件中指定的终结点进行通信。
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 087618d603ea1c7df75ab5383f6c95b781dca847
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554262"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290018"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服务的简化配置
+
 此示例演示如何使用 Windows Communication Foundation (WCF) 实现和配置典型的服务和客户端。 此示例是所有其他基本技术示例的基础。  
   
  此服务公开用于与服务进行通信的终结点，并使用 .NET Framework 4 中的简化配置。 在 .NET Framework 4 之前，通常在配置文件中定义终结点 ( # A0) ，如下面的示例配置代码所示。  
@@ -79,7 +80,7 @@ ms.locfileid: "90554262"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 管理示例](/previous-versions/appfabric/ff383405(v=azure.10))
 - [简化配置](../simplified-configuration.md)
