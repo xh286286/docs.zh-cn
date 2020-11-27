@@ -2,20 +2,22 @@
 title: 安全性验证
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: ec7b7f96c1f6489f677970164f74c176b301f55b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1260aaa756e7be33ce2aa1bcce5fc79be553c990
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557380"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262614"
 ---
 # <a name="security-validation"></a>安全验证
+
 此示例演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。 在此示例中，自定义行为通过以下方法验证服务：扫描服务上的每个终结点，并查看这些终结点是否包含安全的绑定元素。 此示例基于 [入门](getting-started-sample.md)。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="endpoint-validation-custom-behavior"></a>终结点验证自定义行为  
+
  通过将用户代码添加到 `Validate` 接口中包含的 <xref:System.ServiceModel.Description.IServiceBehavior> 方法，可以为某个服务或终结点指定自定义行为，以便执行用户定义的操作。 下面的代码用于遍历服务中包含的每个终结点，这将在其绑定集合中搜索安全的绑定。  
   
 ```csharp
@@ -107,6 +109,6 @@ public void Validate(ServiceDescription serviceDescription,
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 监视示例](/previous-versions/appfabric/ff383407(v=azure.10))

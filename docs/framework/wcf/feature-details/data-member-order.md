@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1cb63569c1789b1577588caf63fb0a0259e530ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247359"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262159"
 ---
 # <a name="data-member-order"></a>数据成员顺序
+
 在一些应用程序中，有必要知道各个数据成员中数据的发送顺序或预期接收顺序（比如序列化 XML 中数据的显示顺序）。 有时，必须要更改此顺序。 本主题说明排序规则。  
   
 ## <a name="basic-rules"></a>基本规则  
+
  数据排序的基本规则包括：  
   
 - 如果数据协定类型是继承层次结构的一部分，则其基类型的数据成员始终排在第一位。  
@@ -30,6 +32,7 @@ ms.locfileid: "85247359"
  字母顺序是通过调用 <xref:System.String.CompareOrdinal%2A> 方法确定的。  
   
 ## <a name="examples"></a>示例  
+
  考虑下列代码。  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]
@@ -63,7 +66,7 @@ ms.locfileid: "85247359"
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [数据协定等效性](data-contract-equivalence.md)

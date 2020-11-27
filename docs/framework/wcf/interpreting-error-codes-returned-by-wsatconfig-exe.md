@@ -2,22 +2,23 @@
 title: 解释 wsatConfig.exe 返回的错误代码
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 0a65bea68f595e5e28c05a142ecdd9589f12bed5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5f423f5054a3a80bc0c730444ca9e90c203e288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321036"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262744"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解释 wsatConfig.exe 返回的错误代码
+
 本主题列出了 WS-AtomicTransaction 配置实用工具 (wsatConfig.exe) 生成的所有错误代码，以及建议采取的操作。  
   
 ## <a name="list-of-error-codes"></a>错误代码列表  
   
-|错误代码|描述|建议采取的操作|  
+|错误代码|说明|建议采取的操作|  
 |----------------|-----------------|------------------------------------|  
-|0|操作成功|None|  
-|1|错误|请与 Microsoft 联系|  
+|0|操作成功|无|  
+|1|错误|联系 Microsoft|  
 |2|尝试联系 MSDTC 以检索其安全设置时发生错误。|确保 MSDTC 服务未禁用，并解决返回的异常中列出的所有问题。|  
 |3|运行 WsatConfig.exe 时所使用的帐户没有足够的权限读取网络安全设置。|使用管理员用户帐户执行 WsatConfig.exe。|  
 |4|在尝试启用 WS-AT 支持之前为 MSDTC 启用“网络 DTC 访问”。|为 MSDTC 启用“网络 DTC 访问”，并重新运行实用工具。|  
@@ -44,7 +45,7 @@ ms.locfileid: "72321036"
 |28|`-network` 命令行选项无效。|更正 `-network` 命令行选项以正确地指定“enable”或“disable”。|  
 |29|`-maxTimeout` 命令行选项无效。|请按照指示更正 `-maxTimeout` 命令行选项。|  
 |30|`-timeout` 命令行选项无效。|请按照指示更正 `-timeout` 命令行选项。|  
-|31|`-traceLevel` 命令行选项无效。|更正 `-traceLevel` 命令行选项以指定以下其中一个有效值，<br /><br /> -关闭<br />-错误<br />-   严重<br />-警告<br />-信息<br />-Verbose<br />-所有|  
+|31|`-traceLevel` 命令行选项无效。|更正 `-traceLevel` 命令行选项以指定以下其中一个有效值，<br /><br /> -关闭<br />-   Error<br />-   严重<br />-   Warning<br />-信息<br />-Verbose<br />-所有|  
 |32|`-traceActivity` 命令行选项无效。|通过指定“enable”或“disable”，更正 `-traceActivity` 命令行选项。|  
 |33|`-traceProp` 命令行选项无效。|通过指定“enable”或“disable”，更正 `-traceProp` 命令行选项。|  
 |34|`-tracePII` 命令行选项无效。|通过指定“enable”或“disable”，更正 `-tracePII` 命令行选项。|  
@@ -52,7 +53,7 @@ ms.locfileid: "72321036"
 |38|进程或用户没有足够的权限更改防火墙配置。|使用管理员用户帐户执行 WsatConfig.exe。|  
 |39|WsatConfig.exe 在更新防火墙配置时遇到了错误。|检查错误消息中的可操作项。|  
 |40|WsatConfig.exe 无法授予 MSDTC 对证书私钥文件的读取访问权限|使用管理员用户帐户执行 WsatConfig.exe。|  
-|41|找不到安装 WinFX，或找到的版本与工具可以配置的版本不匹配。|请确保正确安装了 WinFX 并仅使用该版本的 WinFX 附带的 Wsatconfig.exe 工具来配置 WS-AT。|  
+|41|找不到安装 WinFX，或找到的版本与工具可以配置的版本不匹配。|请确保正确安装了 WinFX 并仅使用该版本 WinFX 附带的 WsatConfig.exe 工具来配置 WS-AT。|  
 |42|在命令行上多次指定了某个自变量。|在执行 WsatConfig.exe 时只指定每个自变量一次。|  
 |43|如果未启用 WS-AT，则 WsatConfig.exe 无法更新 WS-AT 设置。|指定 `-network:enable` 作为附加命令行自变量。|  
 |44|缺少必需的修补程序，在安装该修补程序之前将无法配置 WS-AT。|请参阅 WinFX 发行说明，了解有关安装所需修补程序的说明。|  
@@ -67,6 +68,6 @@ ms.locfileid: "72321036"
 |55|尝试启动 ETW 跟踪会话时发生错误。|请与 Microsoft 联系。|  
 |56|尝试启动 ETW 跟踪会话时发生错误。|请与 Microsoft 联系。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

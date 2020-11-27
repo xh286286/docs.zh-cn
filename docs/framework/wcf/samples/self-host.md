@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: 544ae8c0bc88d49c281810714225dbadecfd443b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f421e9e1fb33ca0f8a35025603d279c5629fb7ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558402"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262588"
 ---
 # <a name="self-host"></a>自承载
+
 此示例演示如何在控制台应用程序中实现自承载服务。 此示例基于 [入门](getting-started-sample.md)。 服务配置文件已从 Web.config 重命名为 App.config，并修改为配置一个由主机使用的基址。 服务源代码已修改为实现一个静态 `Main` 函数，该函数创建并打开一个提供已配置的基址的服务主机。 服务实现已修改为将每个操作的输出写入控制台。 客户端未经修改，只是配置了服务的正确终结点地址。  
   
 > [!NOTE]
@@ -75,6 +76,6 @@ public static void Main()
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 承载和持久性示例](/previous-versions/appfabric/ff383418(v=azure.10))

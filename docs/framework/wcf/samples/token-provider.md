@@ -2,14 +2,15 @@
 title: 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 442371d211fe55cab33a87a5cf1b660679d7f94a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e761f32ab26cf620b6ef1dddff2bcba53289af84
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262328"
 ---
 # <a name="token-provider"></a>令牌提供程序
+
 此示例演示如何实现自定义令牌提供程序。 Windows Communication Foundation 中的令牌提供程序 (WCF) 用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认的凭据管理器令牌提供程序。 WCF 还附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：
 
 - 存在不能由这些令牌提供程序操作的凭据存储。
@@ -215,6 +216,7 @@ static void DisplayIdentityInformation()
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
 
 ## <a name="setup-batch-file"></a>设置批处理文件
+
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行：

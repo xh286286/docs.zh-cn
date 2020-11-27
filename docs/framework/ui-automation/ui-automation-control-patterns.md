@@ -8,20 +8,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: eb2bf13a22af1555e68b415eec52bd259baa2df3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 850affa26a821ddd8da62c8fe910768ff061c1c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163838"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261197"
 ---
 # <a name="ui-automation-control-patterns"></a>UI 自动化控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本部分提供有关如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控件模式的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [实现 UI 自动化 Dock 控件模式](implementing-the-ui-automation-dock-control-pattern.md)  
  [实现 UI 自动化 ExpandCollapse 控件模式](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [实现 UI 自动化 Grid 控件模式](implementing-the-ui-automation-grid-control-pattern.md)  

@@ -2,17 +2,19 @@
 title: 方案 2
 ms.date: 03/30/2017
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
-ms.openlocfilehash: e983df89f35037732059ce284b67862da3171fd1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 31d12152530b57f84c55df79c40fdead1ce53924
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602396"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262640"
 ---
-# <a name="scenario"></a>方案
-本节包含演示 Windows Communication Foundation （WCF）方案的示例。  
+# <a name="scenario"></a>场景
+
+本节包含演示 Windows Communication Foundation (WCF) 方案的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [数据绑定方案](data-binding-scenarios.md)  
  说明 WCF 数据绑定方案。  
   
@@ -29,4 +31,4 @@ ms.locfileid: "84602396"
  演示如何使用 WCF 安全基础结构将调用方的标识信息从一个服务流到另一个服务。  
   
  [设计模式：基于列表的发布-订阅](design-patterns-list-based-publish-subscribe.md)  
- 演示作为 Windows Communication Foundation （WCF）程序实现的基于列表的发布-订阅模式。
+ 演示作为 Windows Communication Foundation (WCF) 程序实现的基于列表的 Publish-Subscribe 模式。

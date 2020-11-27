@@ -5,17 +5,19 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: b07937b0a94c24a934b17d6cf21b726ee0d4362e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 490c89f5cfbecd4b2cc0c0e639aa97849132a809
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593478"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261977"
 ---
 # <a name="data-transfer-and-serialization"></a>数据传输和序列化
-在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为服务或客户端的开发人员，你还必须了解 Windows Communication Foundation （WCF）如何处理数据和数据序列化，以便创建高效且易于维护的应用程序。  
+
+在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为服务或客户端的开发人员，你还必须了解 Windows Communication Foundation (WCF) 如何处理数据和数据序列化，以便创建高效且易于维护的应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [在服务协定中指定数据传输](specifying-data-transfer-in-service-contracts.md)  
  描述服务中数据传输的基本概念。  
   
@@ -47,6 +49,7 @@ ms.locfileid: "84593478"
  描述 WCF 中数据传输的总体设计。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -58,6 +61,7 @@ ms.locfileid: "84593478"
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [扩展编码器和序列化程序](../extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>另请参阅

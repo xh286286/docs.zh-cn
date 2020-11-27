@@ -2,20 +2,23 @@
 title: WMI 类引用
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-ms.openlocfilehash: 226e4dedecd152f3a3d4143280529c7823339932
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9830fbf50e8df625e3d3077a66c66e0370204acb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262250"
 ---
 # <a name="wmi-class-reference"></a>WMI 类引用
-本部分列出了 Windows Communication Foundation （WCF） WMI 提供程序公开的所有 WMI 类。  
+
+本部分列出了 Windows Communication Foundation (WCF) WMI 提供程序公开的所有 WMI 类。  
   
 ## <a name="accessing-wmi-instances"></a>访问 WMI 实例  
+
  除 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint 外，不能直接实例化 WMI 对象引用中列出的所有类。 若要访问其他实例，则可以访问上述顶级类的属性。 例如，你可以从终结点实例-> Binding-> Bindingelement 访问 TransportBindingElement 实例。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [ActivityTransfer](activitytransfer.md)  
   
  [AppDomainInfo](appdomaininfo.md)  
@@ -28,7 +31,7 @@ ms.locfileid: "70795871"
   
  [BinaryMessageEncodingBindingElement](binarymessageencodingbindingelement.md)  
   
- [绑定](binding.md)  
+ [Binding](binding.md)  
   
  [BindingElement](bindingelement.md)  
   
@@ -46,7 +49,7 @@ ms.locfileid: "70795871"
   
  [ConnectionOrientedTransportBindingElement](connectionorientedtransportbindingelement.md)  
   
- [协定](contract.md)  
+ [合同期](contract.md)  
   
  [CustomBindingElement](custombindingelement.md)  
   

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: 204e950fca74c4f7bd2c13dc8a8891152954c071
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 851d509e719afb658971ea5f6fc2f8fdd6bd2cf7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166134"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261340"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 自动化控件类型概述
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -22,7 +23,9 @@ ms.locfileid: "87166134"
  具有已知标识符便于辅助技术设备确定 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中可用的控件的类型以及和控件交互的方式。  
   
 <a name="UI_Automation_Control_Type_Requisites"></a>
+
 ## <a name="ui-automation-control-type-requisites"></a>UI 自动化控件类型必备条件  
+
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控件类型提供一组提供程序必须满足的条件。 满足这些条件时，控件可以使用特定的控件类型名称。 每个控件类型对以下内容设有条件：  
   
 - [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控件模式 — 必须支持哪些控件模式、哪个控件模式是可选的以及控件不得支持哪些控件模式。  
@@ -34,7 +37,9 @@ ms.locfileid: "87166134"
  当控件满足特定控件类型的条件时， <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 属性值将指示该控件类型。  
   
 <a name="Current_UI_Automation_Control_Types"></a>
+
 ## <a name="current-ui-automation-control-types"></a>当前的 UI 自动化控件类型  
+
  以下列表包含当前 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控制类型集：  
   
 - [UI 自动化对 Button 控件类型的支持](ui-automation-support-for-the-button-control-type.md)  

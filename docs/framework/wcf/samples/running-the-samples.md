@@ -2,14 +2,15 @@
 title: 运行 Windows Communication Foundation 示例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 57f760fa8bf4a3abf83492ac455dfaed2b327e7e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3a12128541739ba5c380be2efc291b9b419cab12
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262666"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>运行 Windows Communication Foundation 示例
+
 Windows Communication Foundation (WCF) 示例可以在一台计算机或跨计算机配置中运行。 示例在提供时就可用于在单机上运行。 在跨计算机配置中，必须修改示例的配置文件设置。 下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。 请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。 大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
   
  在 Windows Vista 上，不在 IIS 中承载的示例需要提升的权限才能向 Http.sys 注册侦听器。 以服务运行所用的帐户使用 Httpcfg.exe 注册服务侦听地址，或从以管理员特权运行的命令提示符启动服务。  
@@ -79,7 +80,7 @@ Windows Communication Foundation (WCF) 示例可以在一台计算机或跨计�
   
 - 出于安全目的，如果服务承载于 IIS 中，请在示例结束后删除虚拟目录定义和在安装步骤中授予的权限。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成 Windows Communication Foundation 示例](building-the-samples.md)
 - [WCF 示例的疑难解答提示](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

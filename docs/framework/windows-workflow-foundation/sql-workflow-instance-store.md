@@ -2,14 +2,15 @@
 title: SQL 工作流实例存储
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 38cf83ebb8417009c6aa205aa29cd633d1232f0a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e0989e4ed5d9e256d3570b0c3ee2bb35a95b410a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540227"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261743"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 工作流实例存储
+
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 附带的 SQL 工作流实例存储允许工作流在 SQL Server 2005 或 SQL Server 2008 数据库中持久保存有关工作流实例的状态信息。 此功能主要以 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 类的形式实现，该类是从持久性框架的抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类派生的。 SQL 工作流实例存储功能包含一个 SQL 持久性提供程序，该提供程序是持久性 API 的具体实现，宿主将使用此持久性 API 向存储发送持久性命令。  
   
  SQL 工作流实例存储支持自承载工作流或使用 <xref:System.Activities.WorkflowApplication> 或 <xref:System.ServiceModel.WorkflowServiceHost> 的工作流服务以及 WAS 中承载的使用 <xref:System.ServiceModel.WorkflowServiceHost> 的服务。 可以使用 SQL 工作流实例存储功能公开的对象模型以编程方式为自承载服务配置该功能。 可以使用对象模型，也可以使用 XML 配置文件以编程方式为由 <xref:System.ServiceModel.WorkflowServiceHost> 承载的服务配置此功能。  
@@ -36,6 +37,6 @@ ms.locfileid: "90540227"
   
 - [SQL Server 持久性数据库](sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Persistence Samples（持久性示例）](/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100))

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b63ce62cd39ef7961db1c0ac86c8cbd6ca871dbd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556058"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261886"
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
+
 Windows Communication Foundation (WCF) 是一个框架，用于生成面向服务的应用程序。 使用 WCF，可以将数据作为异步消息从一个服务终结点发送到另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：
 
 - 处理企业事务的安全服务。
@@ -65,13 +66,13 @@ WCF 包括以下功能集。 有关详细信息，请参阅 [WCF 功能详细信
 
 - **可靠的排队消息**
 
-     WCF 支持可靠的消息交换，其中使用通过 WS-TRUST 消息和使用 MSMQ 实现的可靠会话。 有关 WCF 中可靠和排队消息支持的详细信息，请参阅 [队列和可靠会话](./feature-details/queues-and-reliable-sessions.md)。
+     WCF 支持使用通过 WS-Reliable 消息传递和使用 MSMQ 实现的可靠会话来实现可靠的消息交换。 有关 WCF 中可靠和排队消息支持的详细信息，请参阅 [队列和可靠会话](./feature-details/queues-and-reliable-sessions.md)。
 
 - **持久性消息**
 
      持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 还可以使用 Windows Workflow Foundation (WF) 创建持久消息。 有关详细信息，请参阅 [工作流服务](./feature-details/workflow-services.md)。
 
-- **中的**
+- **事务**
 
      WCF 还支持使用以下三种事务模型之一的事务： AtomicTransactions、命名空间中的 Api <xref:System.Transactions> 和 Microsoft 分布式事务处理协调器。 有关 WCF 中事务支持的详细信息，请参阅 [事务](./feature-details/transactions-in-wcf.md)。
 
@@ -95,7 +96,7 @@ Microsoft Silverlight 是一个用于创建可互操作的、丰富 Web 应用�
 
 Windows Server AppFabric 应用程序服务器的托管功能专门用于部署和管理使用 WCF 进行通信的应用程序。 托管功能包括丰富的工具和配置选项，专门为启用了 WCF 的应用程序而设计。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel>
 - [Windows Communication Foundation 基础概念](fundamental-concepts.md)

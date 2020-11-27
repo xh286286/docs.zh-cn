@@ -2,14 +2,15 @@
 title: 服务标识示例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: e3365b8e17d847e6e1dc42062dc7fd5c1e4de80d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cc8edcd7bfee73b99225c19f20df8df1e062b7bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558129"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262536"
 ---
 # <a name="service-identity-sample"></a>服务标识示例
+
 此服务标识示例演示如何为服务设置标识。 客户端可以在设计时使用服务的元数据来检索标识，然后在运行时对服务的标识进行身份验证。 服务标识的概念是允许客户端在调用服务的任何操作之前对服务进行身份验证，从而保护客户端，防止进行未经身份验证的调用。 在安全连接中，服务还在允许客户端访问其之前对客户端的凭据进行身份验证，但这不是此示例要介绍的重点。 请参阅 [客户端](client.md) 中显示服务器身份验证的示例。
 
 > [!NOTE]
