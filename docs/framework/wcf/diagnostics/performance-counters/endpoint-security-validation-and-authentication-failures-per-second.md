@@ -2,17 +2,19 @@
 title: 终结点：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
-ms.openlocfilehash: 8573c35f16d03e2f86310c054703c25a3175200c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b2c5022caa5abe6154a3cb4dd4281dd212599b74
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541495"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256477"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>终结点：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）
+
 计数器名称：Security Validation and Authentication Failures Per Second（每秒安全验证和身份验证失败次数）  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>描述  
+
  每当消息由于“Security Calls Not Authorized”（未授权的安全调用次数）计数器中未包括的安全问题而遭到拒绝时，此计数器即会递增。 此类问题包括：  
   
 - 无法从消息中读取客户端令牌。  
