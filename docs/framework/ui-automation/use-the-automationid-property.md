@@ -10,14 +10,15 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 9e6dd3935a1b4d15690e1dfecd73e9b07330ec6c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 91254903b3481861f21d5e2f4e51f1e50726c46b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924521"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258590"
 ---
 # <a name="use-the-automationid-property"></a>使用 AutomationID 属性
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -29,10 +30,11 @@ ms.locfileid: "86924521"
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保证标识在整个树中的唯一性；它通常需要容器和范围信息才有用。 例如，一个应用程序可能包含具有多个顶级菜单项的菜单控件，而这些顶级菜单项又具有多个子菜单项。 这些二级菜单项通过常规架构（如“Item1”、“Item2”，依此类推）进行标识，允许对顶级菜单项中的子菜单项使用重复的标识符。  
   
 ## <a name="scenarios"></a>方案  
+
  已确定有三个主要的 UI 自动化客户端应用程序方案需要使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 才能在搜索元素时获得准确一致的结果。  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>除顶级应用程序窗口、派生自没有 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ID 或 x：Uid 的控件的 ui 自动化元素以及派生自没有控件 ID 的 Win32 控件的 Ui 自动化元素外，控件视图中的所有 Ui 自动化元素都支持。  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 除顶级应用程序窗口、派生自没有 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ID 或 x：Uid 的控件的 ui 自动化元素以及派生自没有控件 ID 的 Win32 控件的 Ui 自动化元素外，控件视图中的所有 Ui 自动化元素都支持。  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>使用唯一且可发现的 AutomationID 在 UI 自动化树中查找特定元素  
   

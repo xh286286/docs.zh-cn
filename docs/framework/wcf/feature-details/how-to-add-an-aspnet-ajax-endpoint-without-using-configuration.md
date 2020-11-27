@@ -2,21 +2,22 @@
 title: 如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: 9aab53d6457aa7848fd4acea6317a30da352cc98
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e33f1fed7dd7bf45966815949ac544250f4d1de8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579626"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257621"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点
-Windows Communication Foundation （WCF）允许您创建一个服务，用于公开可从客户端网站上的 JavaScript 中调用的 ASP.NET 支持 AJAX 的终结点。 若要创建这样的终结点，可以使用配置文件（与使用所有其他 WCF 终结点一样），或使用不要求任何配置元素的方法。 本主题演示第二种方法。  
+
+Windows Communication Foundation (WCF) 允许您创建一个服务，用于公开可从客户端网站上的 JavaScript 中调用的 ASP.NET 支持 AJAX 的终结点。 若要创建这样的终结点，可以使用配置文件（与使用所有其他 WCF 终结点一样），或使用不要求任何配置元素的方法。 本主题演示第二种方法。  
   
  若要在不使用配置的情况下创建具有 ASP.NET AJAX 终结点的服务，则必须由 Internet 信息服务 (IIS) 来承载创建的服务。 若要使用此方法激活 ASP.NET AJAX 终结点，请在 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> .svc 文件中的[ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md)指令中指定作为工厂参数。 此自定义工厂是一个组件，可自动将 ASP.NET AJAX 终结点配置为可以从客户端网站上的 JavaScript 中调用。  
   
- 有关工作示例，请参阅[不带配置的 AJAX 服务](../samples/ajax-service-without-configuration.md)。  
+ 有关工作示例，请参阅 [不带配置的 AJAX 服务](../samples/ajax-service-without-configuration.md)。  
   
- 有关如何使用配置元素配置 ASP.NET AJAX 终结点的概述，请参阅[如何：使用配置添加 ASP.NET AJAX 终结点](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
+ 有关如何使用配置元素配置 ASP.NET AJAX 终结点的概述，请参阅 [如何：使用配置添加 ASP.NET AJAX 终结点](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
   
 ### <a name="to-create-a-basic-wcf-service"></a>创建基本 WCF 服务  
   
@@ -70,11 +71,11 @@ Windows Communication Foundation （WCF）允许您创建一个服务，用于�
     %>  
     ```  
   
-2. 生成服务并从客户端调用该服务。 在调用该服务时，Internet Information Services (IIS) 会将其激活。 有关在 IIS 中承载的详细信息，请参阅[如何：在 iis 中承载 WCF 服务](how-to-host-a-wcf-service-in-iis.md)。  
+2. 生成服务并从客户端调用该服务。 在调用该服务时，Internet Information Services (IIS) 会将其激活。 有关在 IIS 中承载的详细信息，请参阅 [如何：在 iis 中承载 WCF 服务](how-to-host-a-wcf-service-in-iis.md)。  
   
 ### <a name="to-call-the-service"></a>调用服务  
   
-1. 终结点是在相对于 .svc 文件的空地址处配置的，因此该服务现在可用，并可通过将请求发送到服务 .svc/ \<operation> -例如，为该操作发送服务。 `Add` 可以通过在 ASP.NET AJAX 脚本管理器控件的“脚本”集合中输入服务 URL 来使用响应的服务。 有关示例，请参阅[不带配置的 AJAX 服务](../samples/ajax-service-without-configuration.md)。  
+1. 终结点是在相对于 .svc 文件的空地址处配置的，因此该服务现在可用，并可通过将请求发送到服务 .svc/ \<operation> -例如，为该操作发送服务。 `Add` 可以通过在 ASP.NET AJAX 脚本管理器控件的“脚本”集合中输入服务 URL 来使用响应的服务。 有关示例，请参阅 [不带配置的 AJAX 服务](../samples/ajax-service-without-configuration.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -92,9 +93,9 @@ Windows Communication Foundation （WCF）允许您创建一个服务，用于�
   
  `<serviceHostingEnvironment aspNetCompatibilityEnabled="true" /> </system.serviceModel>`  
   
- 有关详细信息，请参阅[WCF 服务和 ASP.NET](wcf-services-and-aspnet.md)主题。  
+ 有关详细信息，请参阅 [WCF 服务和 ASP.NET](wcf-services-and-aspnet.md) 主题。  
   
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 类是 <xref:System.ServiceModel.Activation.ServiceHostFactory> 的派生类。 有关服务主机工厂机制的详细说明，请参阅[使用 ServiceHostFactory 扩展托管](../extending/extending-hosting-using-servicehostfactory.md)主题。  
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 类是 <xref:System.ServiceModel.Activation.ServiceHostFactory> 的派生类。 有关服务主机工厂机制的详细说明，请参阅 [使用 ServiceHostFactory 扩展托管](../extending/extending-hosting-using-servicehostfactory.md) 主题。  
   
 ## <a name="see-also"></a>另请参阅
 

@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 28f2858d68de99839d7fec66b0fe4528d7e42325
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 39b9da1096c38eba648f528f7c2b3ecaa39ab7c2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579522"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257504"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>如何：配置 Windows Communication Foundation 服务以使用端口共享
-在 Windows Communication Foundation （WCF）应用程序中使用 net.tcp：//端口共享的最简单方法是使用公开服务 <xref:System.ServiceModel.NetTcpBinding> 。  
+
+在 Windows Communication Foundation 中使用 net.tcp：//端口共享的最简单方法 (WCF) 应用程序是使用公开服务 <xref:System.ServiceModel.NetTcpBinding> 。  
   
  此绑定提供了一个 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 属性，该属性控制是否为配置了此绑定的服务启用 net.tcp:// 端口共享。  
   

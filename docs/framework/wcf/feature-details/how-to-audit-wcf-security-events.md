@@ -7,15 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 186dd4a7fc2beae848e5cbd167a204352ee6ed4e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 67ab5d4a4592a8b772cfdd70befe32f339062b8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601291"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257556"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
-Windows Communication Foundation （WCF）允许您将安全事件记录到 Windows 事件日志，可以使用 Windows 事件查看器进行查看。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅[审核](auditing-security-events.md)。  
+
+Windows Communication Foundation (WCF) 允许您将安全事件记录到 Windows 事件日志，可以使用 Windows 事件查看器来查看这些事件日志。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅 [审核](auditing-security-events.md)。  
   
 ### <a name="to-audit-security-events-in-code"></a>通过代码审核安全事件  
   
@@ -45,7 +46,7 @@ Windows Communication Foundation （WCF）允许您将安全事件记录到 Wind
   
 ### <a name="to-set-up-auditing-in-configuration"></a>通过配置方式设置审核  
   
-1. 若要在配置中设置审核，请将 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 元素添加到 web.config [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) 文件的节中。 然后添加 [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) 元素并设置各种属性，如下面的示例中所示。  
+1. 若要在配置中设置审核，请将 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 元素添加到 [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) web.config 文件的部分。 然后添加 [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) 元素并设置各种属性，如下面的示例中所示。  
   
     ```xml  
     <behaviors>  
@@ -73,19 +74,21 @@ Windows Communication Foundation （WCF）允许您将安全事件记录到 Wind
     ```  
   
 ## <a name="example"></a>示例  
+
  下面的代码创建 <xref:System.ServiceModel.ServiceHost> 类的一个实例，然后向其行为集合添加一个新的 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。  
   
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，就会隐匿任何生成安全审核失败（如果设置为 `false`，则会引发异常）。 但是，如果启用以下 "Windows**本地安全设置**" 属性，则生成审核事件失败将导致 Windows 立即关闭：  
+
+ 将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，就会隐匿任何生成安全审核失败（如果设置为 `false`，则会引发异常）。 但是，如果启用以下 "Windows **本地安全设置** " 属性，则生成审核事件失败将导致 Windows 立即关闭：  
   
  **审核：如果无法记录安全审核则立即关闭系统**  
   
- 若要设置该属性，请打开 "**本地安全设置**" 对话框。 在 "**安全设置**" 下，单击 "**本地策略**"。 然后单击 "**安全选项**"。  
+ 若要设置该属性，请打开 " **本地安全设置** " 对话框。 在 " **安全设置**" 下，单击 " **本地策略**"。 然后单击 " **安全选项**"。  
   
- 如果将 <xref:System.ServiceModel.AuditLogLocation> 属性设置为 <xref:System.ServiceModel.AuditLogLocation.Security> ，并且未在**本地安全策略**中设置**审核对象访问**，则不会将审核事件写入安全日志。 请注意，虽然不返回任何失败记录，但审核项不会写入安全日志。  
+ 如果将 <xref:System.ServiceModel.AuditLogLocation> 属性设置为 <xref:System.ServiceModel.AuditLogLocation.Security> ，并且未在 **本地安全策略** 中设置 **审核对象访问**，则不会将审核事件写入安全日志。 请注意，虽然不返回任何失败记录，但审核项不会写入安全日志。  
   
 ## <a name="see-also"></a>另请参阅
 

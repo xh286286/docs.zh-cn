@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 67fbbb035a3a6683cefbf24e299f32579b674bbd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6fa390c8ae05035e589392c909ef340fb9c7948a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597249"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257810"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 联合对象模型如何映射到 Atom 和 RSS
-开发 Windows Communication Foundation （WCF）联合服务时，可以使用以下类创建源和项：  
+
+ (WCF) 联合服务开发 Windows Communication Foundation 时，可以使用以下类创建源和项：  
   
 - <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -48,6 +49,7 @@ ms.locfileid: "84597249"
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
 ## <a name="syndicationfeed"></a>SyndicationFeed  
+
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationFeed> 类。  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
@@ -145,6 +147,7 @@ ms.locfileid: "84597249"
 ```  
   
 ## <a name="syndicationitem"></a>SyndicationItem  
+
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationItem> 类。  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
@@ -231,6 +234,7 @@ ms.locfileid: "84597249"
 ```  
   
 ## <a name="syndicationperson"></a>SyndicationPerson  
+
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationPerson> 类。  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
@@ -288,6 +292,7 @@ ms.locfileid: "84597249"
 ```  
   
 ## <a name="syndicationlink"></a>SyndicationLink  
+
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationLink> 类。  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
@@ -302,6 +307,7 @@ ms.locfileid: "84597249"
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
 ## <a name="syndicationcategory"></a>SyndicationCategory  
+
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.SyndicationCategory> 类。  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
@@ -316,6 +322,7 @@ ms.locfileid: "84597249"
  `<category domain="categoryScheme">categoryName</category>`  
   
 ## <a name="textsyndicationcontent"></a>TextSyndicationContent  
+
  下面的代码示例演示使用 HTML 内容创建 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 时，如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 类。  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
@@ -360,6 +367,7 @@ ms.locfileid: "84597249"
  `<description><html> some xhtml </html></description>`  
   
 ## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
+
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 类。  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
@@ -376,6 +384,7 @@ ms.locfileid: "84597249"
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
 ## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
+
  下面的代码示例演示如何按照 Atom 1.0 和 RSS 2.0 序列化 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 类。  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]

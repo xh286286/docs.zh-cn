@@ -2,17 +2,18 @@
 title: 跟踪类型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: e8d222d6f093f5db3bd620194bfde7edd4b998a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674842"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259240"
 ---
 # <a name="trace-type-summary"></a>跟踪类型摘要
-[源级别](xref:System.Diagnostics.SourceLevels)定义各种跟踪级别：严重、错误、警告、信息和详细，并提供`ActivityTracing`标志的说明，该标志可切换跟踪边界和活动传输事件的输出。  
+
+[源级别](xref:System.Diagnostics.SourceLevels) 定义各种跟踪级别：严重、错误、警告、信息和详细信息，并提供标志的说明 `ActivityTracing` ，该标志用于切换跟踪边界和活动传输事件的输出。  
   
- 您还可以查看<xref:System.Diagnostics.TraceEventType>可以从 中释放的跟踪类型<xref:System.Diagnostics>。  
+ 你还可以查看 <xref:System.Diagnostics.TraceEventType> 可从发出的跟踪类型 <xref:System.Diagnostics> 。  
   
  下表列出了最重要的跟踪类型。  
   
@@ -23,9 +24,9 @@ ms.locfileid: "78674842"
 |警告|信息性消息。|  
 |信息|非严重问题。|  
 |“详细”|调试跟踪。|  
-|开始|开始处理逻辑单元。|  
+|启动|开始处理逻辑单元。|  
 |挂起|挂起逻辑单元处理。|  
-|恢复|继续逻辑单元处理。|  
+|继续|继续逻辑单元处理。|  
 |停止|停止处理逻辑单元。|  
 |传输|更改相关标识。|  
   
