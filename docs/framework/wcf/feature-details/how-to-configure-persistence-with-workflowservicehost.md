@@ -2,14 +2,15 @@
 title: 如何：使用 WorkflowServiceHost 配置永久性
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 93397923154d780ed3b714bf0bb95c15bc71bbfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d8b7183b11c138b8da1f04d9084f8b94b7dcaa6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556305"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257335"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>如何：使用 WorkflowServiceHost 配置永久性
+
 本主题介绍如何使用配置文件配置 SQL 工作流实例存储功能，以便对 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载的工作流启用永久性。 使用 SQL 工作流实例存储功能之前，必须创建用于保存工作流实例的 SQL 数据库。 有关详细信息，请参阅 [如何：为工作流和工作流服务启用 SQL 持久性](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>在配置中配置 SQL 工作流实例存储  
@@ -59,7 +60,7 @@ ms.locfileid: "90556305"
   
      有关如何以编程方式配置持久性的示例，请参阅 [如何：为工作流和工作流服务启用持久性](../../windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [工作流服务](workflow-services.md)
 - [工作流持久性](../../windows-workflow-foundation/workflow-persistence.md)
