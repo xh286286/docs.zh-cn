@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545215"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251823"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>利用证书身份验证的传输安全
 
@@ -33,6 +33,7 @@ ms.locfileid: "90545215"
 |绑定|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>配置服务  
+
  由于该方案中的服务承载于 IIS 之下，因此它是使用 web.config 文件配置的。 以下 web.config 揭示了如何配置  <xref:System.ServiceModel.WSHttpBinding> 以使用传输安全性和 X.509 客户端凭据。  
   
 ```xml  
@@ -64,6 +65,7 @@ ms.locfileid: "90545215"
 ```  
   
 ## <a name="configure-the-client"></a>配置客户端  
+
  可以在代码中或在 app.config 文件中配置客户端。 下例揭示了如何在代码中配置客户端。  
   
 ```csharp
@@ -139,7 +141,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全性概述](security-overview.md)
 - [Windows Server App Fabric 的安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

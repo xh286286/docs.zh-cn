@@ -2,14 +2,15 @@
 title: 重新承载设计器
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: b72e3450799db40988c8b99e4db3707de330d8ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce81f41764aa35b3173cca89cdb219ae9b21436d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182820"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251654"
 ---
 # <a name="designer-rehosting"></a>重新承载设计器
+
 设计器重新承载是一个常用方案，它是指在自定义应用程序内部承载工作流设计画布。 Visual Studio 是大多数人所熟知的承载应用程序，然而在很多方案中，应用程序中的工作流设计器可能会很有用：  
   
 - 监视应用程序（允许最终用户直观地查看进程以及有关进程的运行时数据，例如，当前活动状态、聚合执行时间数据或其他关于工作流实例的信息）。  
@@ -23,6 +24,7 @@ ms.locfileid: "79182820"
 - 使用重新承载的工具箱和属性网格。  
   
 ## <a name="rehosting-the-designer"></a>重新承载设计器  
+
  此示例演示如何创建 WPF 布局以包含在以下网格布局中可见的设计器（因空间有限，省略工具箱编码）。 需注意包含设计器和属性网格的边框的命名。  
   
 ```xaml  
@@ -40,7 +42,7 @@ ms.locfileid: "79182820"
 </Grid>  
 ```  
   
- 接下来，此示例创建设计器，并将其主 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 与用户界面中适当的容器相关联。 以下示例中有几行额外的代码需要解释一下。 需要<xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A>调用来关联与 .NET Framework 一起附带的活动的默认活动设计器。 调用 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 传入要编辑的 WF 项。 最后，将 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>（主画布）和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>（属性网格）放置在用户界面的图面上。  
+ 接下来，此示例创建设计器，并将其主 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> 与用户界面中适当的容器相关联。 以下示例中有几行额外的代码需要解释一下。 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A>需要调用来为 .NET Framework 附带的活动关联默认的活动设计器。 调用 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 传入要编辑的 WF 项。 最后，将 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>（主画布）和 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>（属性网格）放置在用户界面的图面上。  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -58,6 +60,7 @@ protected override void OnInitialized(EventArgs e)
 ```  
   
 ## <a name="using-the-rehosted-toolbox"></a>使用重新承载的工具栏  
+
  此示例在 XAML 中以声明方式使用重新承载的工具箱控件。 请注意，在代码中可以将一个类型传递给 <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> 构造函数。  
   
 ```xaml  
@@ -114,7 +117,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>使用示例  
   
-1. 在 Visual Studio 2010 中打开设计器重新托管.sln 解决方案。  
+1. 在 Visual Studio 2010 中打开 DesignerRehosting 解决方案。  
   
 2. 按 F5 编译并运行应用程序。  
   
@@ -125,6 +128,6 @@ protected override void OnInitialized(EventArgs e)
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请转到[Windows 通信基础 （WCF） 和 Windows 工作流基础 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下载[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基础 （WCF） 和示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

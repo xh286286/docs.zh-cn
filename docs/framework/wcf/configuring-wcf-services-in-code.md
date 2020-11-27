@@ -3,17 +3,19 @@ title: 在代码中配置 WCF 服务
 description: 了解如何使用代码而不是配置文件为自承载服务和 web 承载服务来配置 WCF 服务。
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 975eafea5a153287f5ccc71b9aa342c12391004e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ba59856d94168c7f18319c09c9b00f26ecdff5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253305"
 ---
 # <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
+
 Windows Communication Foundation (WCF) 允许开发人员使用配置文件或代码来配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的 WCF (4.0 及更早版本中) 在代码中配置服务是很容易的自承载方案， <xref:System.ServiceModel.ServiceHost> 类允许你在调用 ServiceHost 之前配置终结点和行为。 但是，在 Web 承载方案中，你不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET Framework 4.5 开始，WCF 提供了一种更简单的方法来在代码中配置自承载服务和 web 托管服务。
 
 ## <a name="the-configure-method"></a>Configure 方法
+
  只需在您的服务实现类中使用以下签名定义名为 `Configure` 的公共静态方法：
 
 ```csharp

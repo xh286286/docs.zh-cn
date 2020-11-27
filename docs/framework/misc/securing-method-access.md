@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52ae1eb4b6210403ce9c5aa96479809f885b0eba
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555713"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251212"
 ---
 # <a name="securing-method-access"></a>保护方法访问
 
@@ -40,7 +40,7 @@ ms.locfileid: "90555713"
   
 - 要求重写特定方法的派生类具有指定的标识或权限。  
   
- 下面的示例演示如何通过要求使用特定强名称对调用方进行签名来帮助保护具有有限访问权限的公共类。 此示例使用 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 带有强名称 **需求** 的。 有关如何使用强名称为程序集签名的信息，请参阅 [创建和使用具有强名称的程序集](../../standard/assembly/create-use-strong-named.md)。  
+ 下面的示例演示如何通过要求使用特定强名称对调用方进行签名来帮助保护具有有限访问权限的公共类。 此示例使用 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 带有强名称 **需求** 的。 有关如何使用强名称为程序集签名的信息，请参阅 [创建和使用 Strong-Named 程序集](../../standard/assembly/create-use-strong-named.md)。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -57,6 +57,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>防止不受信任的代码使用类和成员  
+
  使用本节中所示的声明来防止部分受信任的代码使用特定的类、方法以及属性和事件。 通过将这些声明应用于类，可以将保护应用于其所有方法、属性和事件。 但是，字段访问不受声明性安全的影响。 也请注意，链接要求仅帮助不受直接调用方的攻击，可能仍会受到引诱攻击。  
   
 > [!NOTE]
@@ -240,6 +241,6 @@ class Implemented : ICanCastToMe
   
  即使语言编译器阻止这些重写的编译错误，使用其他编译器编写的代码也可能会重写。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全编码准则](../../standard/security/secure-coding-guidelines.md)

@@ -2,17 +2,19 @@
 title: System.ServiceModel 中的事务性支持
 ms.date: 03/30/2017
 ms.assetid: e7e54ed3-d1e5-4aa7-a653-1300c6b304eb
-ms.openlocfilehash: 9e9a16df52901cced67f135538d3724700140073
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a5c7e6fc8c5e116764c6dd9813d7cccf600af8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586034"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251784"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel 中的事务性支持
-本节中的主题介绍 Windows Communication Foundation （WCF）提供的事务性功能。  
+
+本节中的主题介绍 Windows Communication Foundation (WCF) 提供的事务性功能。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [ServiceModel 事务属性](servicemodel-transaction-attributes.md)  
  描述两个标准 <xref:System.ServiceModel> 属性，这些属性使您可以为 WCF 服务配置事务的行为。  
   
