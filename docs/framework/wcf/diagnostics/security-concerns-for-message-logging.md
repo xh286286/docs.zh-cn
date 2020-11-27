@@ -2,19 +2,21 @@
 title: 消息日志记录的安全问题
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550542"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283765"
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
+
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
   
 ## <a name="security-concerns"></a>安全问题  
   
 ### <a name="logging-sensitive-information"></a>记录敏感信息  
+
  Windows Communication Foundation (WCF) 不会修改特定于应用程序的标头和正文中的任何数据。 WCF 还不跟踪特定于应用程序的标头或正文数据中的个人信息。  
   
  启用消息日志记录后，特定于应用程序的标头中的个人信息（例如查询字符串）以及正文信息（例如信用卡号）会在日志中变为可见。 应用程序部署人员负责对配置和日志文件实施访问控制。 如果您不希望此类信息可见，应当禁用日志记录，或者如果您希望共享日志，则筛选出其中的部分数据。  
@@ -94,9 +96,11 @@ ms.locfileid: "90550542"
 > 在格式不正确的消息中不会隐藏 PII。 这样的消息按原样记录，不进行任何修改。 前面提到的属性对此没有影响。  
   
 ### <a name="custom-trace-listener"></a>自定义跟踪侦听器  
+
  在消息日志记录跟踪源上添加定义跟踪侦听器是一种只限于管理员的特权。 这是因为恶意自定义侦听器可以配置为远程发送消息，从而导致敏感信息泄漏。 此外，如果您将自定义侦听器配置为在网络上发送消息（例如发送到远程数据库），您应该对远程计算机上的消息日志施加适当的访问控制。  
   
 ## <a name="events-triggered-by-message-logging"></a>消息日志记录触发的事件  
+
  下面列出了消息日志记录发出的所有事件。  
   
 - 启用消息日志记录：当在配置中或通过 WMI 启用消息日志记录时发出此事件。 此事件的内容是“消息日志记录已打开。 将记录敏感信息，即使已在网络上对其进行加密: 例如，消息正文。”  
@@ -105,11 +109,11 @@ ms.locfileid: "90550542"
   
 - 启用记录已知 PII：当启用记录已知 PII 时发出此事件。 如果 `enableLoggingKnownPii` Machine.config 文件的元素中的属性 `machineSettings` 设置为 `true` ，并且 `logKnownPii` `source` App.config 或 Web.config 文件中元素的属性设置为， `true` 则会发生这种情况。  
   
-- 不允许记录已知 PII：当不允许记录已知 PII 时发出此事件。 如果 `logKnownPii` `source` App.config 或 Web.config 文件中元素的属性设置为 `true` ，但 `enableLoggingKnownPii` Machine.config 文件的元素中的属性 `machineSettings` 设置为， `false` 则会发生这种情况。 不会引发异常。  
+- 不允许记录已知 PII：当不允许记录已知 PII 时发出此事件。 如果 `logKnownPii` `source` App.config 或 Web.config 文件中元素的属性设置为 `true` ，但 `enableLoggingKnownPii` Machine.config 文件的元素中的属性 `machineSettings` 设置为， `false` 则会发生这种情况。 不引发异常。  
   
  可以在 Windows 附带的事件查看器工具中查看这些事件。 有关此内容的详细信息，请参阅 [事件日志记录](./event-logging/index.md)。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [消息日志记录](message-logging.md)
 - [有关跟踪的安全注意事项和有用提示](./tracing/security-concerns-and-useful-tips-for-tracing.md)

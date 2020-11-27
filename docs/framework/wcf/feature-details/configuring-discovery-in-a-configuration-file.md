@@ -2,17 +2,19 @@
 title: 在配置文件中配置发现
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: 59eaecb7e34b9105bc694f444d98c13c036d552f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1ffd5cb2e884b6eeae292326cb0dc1586995ba38
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284181"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>在配置文件中配置发现
+
 发现功能主要采用四组配置设置。 本主题将简要介绍其中的每组设置，并用示例演示如何配置这些设置。 本主题每一部分后面都将提供一个链接，以便于您获取有关各个方面的更详尽的文档。  
   
 ## <a name="behavior-configuration"></a>行为配置  
+
  发现功能采用服务行为和终结点行为。 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 行为能够发现服务的所有终结点，并允许您指定公告终结点。  下面的示例演示如何添加 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 以及指定公告终结点。  
   
 ```xml  
@@ -141,9 +143,10 @@ ms.locfileid: "84597548"
 </behavior>  
 ```  
   
- 有关的详细信息 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ， <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 请参阅[WCF 发现概述](wcf-discovery-overview.md)。  
+ 有关的详细信息 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ， <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 请参阅 [WCF 发现概述](wcf-discovery-overview.md)。  
   
 ## <a name="binding-element-configuration"></a>绑定元素配置  
+
  绑定元素配置在客户端最有意义。 您可以使用配置指定从 WCF 客户端应用程序发现服务时采用的查找条件。  下面的示例使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 通道创建自定义绑定，并指定包含类型和范围的查找条件。 此外，本示例还指定了 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 和 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 属性的值。  
   
 ```xml  
@@ -183,9 +186,10 @@ ms.locfileid: "84597548"
 </client>  
 ```  
   
- 有关查找条件的详细信息，请参阅[发现查找和 s](discovery-find-and-findcriteria.md)。 有关发现和绑定元素的详细信息，请参阅[WCF 发现概述](wcf-discovery-overview.md)  
+ 有关查找条件的详细信息，请参阅 [发现查找和 s](discovery-find-and-findcriteria.md)。 有关发现和绑定元素的详细信息，请参阅 [WCF 发现概述](wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>标准终结点配置  
+
  标准终结点是预定义的终结点，这样的终结点的一个或多个属性（地址、绑定或协定）采用默认值，或者具有一个或多个无法更改的属性值。 .NET 4 随附了 3 个与发现相关的标准终结点：<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>、<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint>。  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 是通过 UDP 多播绑定为发现操作预先配置的标准终结点。 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 是预先配置的通过 UDP 绑定发送公告消息的标准终结点。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是使用发现功能在运行时动态查找已发现服务的终结点地址的标准终结点。  标准绑定是使用一个包含 kind 特性的 <> 元素指定的，该 `endpoint` 元素包含指定要添加的标准终结点的类型。 下面的示例演示如何添加 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>。  
   
 ```xml  
@@ -276,4 +280,4 @@ ms.locfileid: "84597548"
 </system.ServiceModel>  
 ```  
   
- 有关标准终结点的详细信息，请参阅[标准终结点](standard-endpoints.md)。
+ 有关标准终结点的详细信息，请参阅 [标准终结点](standard-endpoints.md)。

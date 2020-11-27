@@ -2,15 +2,16 @@
 title: WebContentTypeMapper 示例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: a51d03fab5c6499a0e9685e01a9bbace1c11f28a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 550e763d30a7fa503f6500dcaa8f9b77ea499bca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283258"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 示例
-此示例演示如何将新内容类型映射到 Windows Communication Foundation （WCF）消息正文格式。  
+
+此示例演示如何将新内容类型映射到 Windows Communication Foundation (WCF) 消息正文格式。  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>元素插入 Web 消息编码器，这允许 WCF 在同一终结点接收 JSON、XML 或原始二进制消息。 编码器通过查看请求的 HTTP 内容类型来确定消息的正文格式。 本示例介绍 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 类，该类允许用户控制内容类型和正文格式之间的映射。  
   
@@ -54,17 +55,17 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中所述生成解决方案 WebContentTypeMapperSample。  
+2. 按照 [生成 Windows Communication Foundation 示例](building-the-samples.md)中所述生成解决方案 WebContentTypeMapperSample。  
   
-3. 导航到 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` （不要在浏览器中从项目目录中打开 JCTMClientPage）。  
+3. 定位到 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (不要在浏览器中从项目目录) 打开 JCTMClientPage.htm。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

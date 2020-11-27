@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8acc792b5217519e2a73c0cdf30c20161373c678
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553813"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283908"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
+
 本部分的主题介绍 Windows (ETW) 事件的事件跟踪。 每个事件都有关联的关键字和级别，详见 [CLR ETW 关键字和级别](clr-etw-keywords-and-levels.md)主题。 CLR 有两个事件提供程序：  
   
 - 运行时提供程序，根据启用的关键字（事件类别）引发事件。 CLR 运行时提供程序 GUID 是 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4。  
@@ -24,6 +25,7 @@ ms.locfileid: "90553813"
  有关提供程序的详细信息，请参阅 [CLR ETW 提供程序](clr-etw-providers.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [运行时信息事件](runtime-information-etw-events.md)  
  捕获有关运行时的信息，包括 SKU、版本号、激活运行时的方式、启动运行时所使用的命令行参数、GUID（如果适用），以及其他相关信息。  
   
@@ -60,7 +62,7 @@ ms.locfileid: "90553813"
  [堆栈事件](stack-etw-event.md)  
  捕获可用于其他事件以在引发事件后生成堆栈跟踪的信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 ETW 改善调试和性能优化](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [控制 .NET Framework 日志记录](controlling-logging.md)

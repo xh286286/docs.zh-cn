@@ -3,14 +3,15 @@ title: 在绑定上配置超时值
 description: 了解如何管理 WCF 绑定的超时设置，以提高服务的性能、可用性和安全性。
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6582568f3579f784d4c91c707dbb35c38533551d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245110"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284038"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>在绑定上配置超时值
+
 WCF 绑定中提供了很多超时设置。 正确设置这些超时设置不仅可以提高您服务的性能，而且对发挥您服务的可用性和安全性起到重要作用。 WCF 绑定中提供了下列超时：  
   
 1. OpenTimeout  
@@ -22,6 +23,7 @@ WCF 绑定中提供了很多超时设置。 正确设置这些超时设置不仅
 4. ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>WCF 绑定超时  
+
  本主题中讨论的每个设置都是在绑定本身上设置的（无论是在代码还是在配置中）。 下面的代码演示如何对自承载服务的上下文中的 WCF 绑定以编程方式设置超时。  
   
 ```csharp  
@@ -76,6 +78,7 @@ public static void Main()
  有关这些设置的更多信息，可以在 <xref:System.ServiceModel.Channels.Binding> 类的参考文档中找到。  
   
 ### <a name="client-side-timeouts"></a>客户端超时  
+
  在客户端：  
   
 1. SendTimeout — 用于初始化 OperationTimeout，此设置控制发送消息的整个过程，包括接收请求/答复服务操作的答复消息。 从回调协定方法发送答复消息时，此超时也适用。  
@@ -87,6 +90,7 @@ public static void Main()
 4. ReceiveTimeout –未使用。  
   
 ### <a name="service-side-timeouts"></a>服务端超时  
+
  在服务端：  
   
 1. SendTimeout、OpenTimeout、CloseTimeout 与客户端上的相同。  

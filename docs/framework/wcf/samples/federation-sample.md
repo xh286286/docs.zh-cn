@@ -2,18 +2,20 @@
 title: 联合示例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 00cb9a13a01687fb41f1d5c09f277d582f706e3b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 22d405620a77285ebe7a68fc151a8e8611df9b4d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594681"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283271"
 ---
 # <a name="federation-sample"></a>联合示例
+
 本示例演示联合安全。  
   
 ## <a name="sample-details"></a>示例详细信息  
- Windows Communication Foundation （WCF）通过部署联合安全体系结构提供支持 `wsFederationHttpBinding` 。 `wsFederationHttpBinding` 提供安全可靠并且可互操作的绑定，该绑定中使用 HTTP 作为请求/回复通信的基础传输机制，并使用文本/XML 作为编码的联网格式。 有关 WCF 中的联合的详细信息，请参阅[联合](../feature-details/federation.md)。  
+
+ Windows Communication Foundation (WCF) 提供对通过部署联合安全体系结构的支持 `wsFederationHttpBinding` 。 `wsFederationHttpBinding` 提供安全可靠并且可互操作的绑定，该绑定中使用 HTTP 作为请求/回复通信的基础传输机制，并使用文本/XML 作为编码的联网格式。 有关 WCF 中的联合的详细信息，请参阅 [联合](../feature-details/federation.md)。  
   
  此方案包括 4 个部分：  
   
@@ -82,7 +84,7 @@ ms.locfileid: "84594681"
  有关如何设置和运行此示例的信息，请参见以下说明。  
   
 > [!NOTE]
-> 若要运行此示例，您必须具有**wwwroot**目录的写入权限。  
+> 若要运行此示例，您必须具有 **wwwroot** 目录的写入权限。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -95,9 +97,9 @@ ms.locfileid: "84594681"
   
 3. 双击 BookStoreClient.exe。 将显示 BookStoreClient 窗口。  
   
-4. 可以通过单击 "**浏览书籍**" 浏览书店中提供的书籍。  
+4. 可以通过单击 " **浏览书籍**" 浏览书店中提供的书籍。  
   
-5. 若要购买特定书籍，请在列表中选择该书籍，然后单击 "**购买书籍**"。 该应用程序将启动，并使用 Windows 身份验证和 HomeRealm 安全令牌服务进行身份验证。  
+5. 若要购买特定书籍，请在列表中选择该书籍，然后单击 " **购买书籍**"。 该应用程序将启动，并使用 Windows 身份验证和 HomeRealm 安全令牌服务进行身份验证。  
   
      此示例配置为允许用户购买价格等于或低于 15 美元的图书。 尝试购买价格超过 15 美元的图书将导致客户端从 BookStore 服务获得“拒绝访问”消息。  
   
@@ -113,6 +115,6 @@ ms.locfileid: "84594681"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

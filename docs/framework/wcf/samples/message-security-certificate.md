@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bdebe0db25d796c2debfb905864fd8bf780c8e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 164a939fa7ee0112e1ceae24755854b09dc72603
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558649"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283986"
 ---
 # <a name="message-security-certificate"></a>消息安全证书
+
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS 安全性和 X.509 v3 证书身份验证，并要求使用服务器的 X.509 v3 证书进行服务器身份验证。 此示例使用默认设置，以便客户端和服务器之间的所有应用程序消息都经过签名和加密。 此示例基于 [WSHttpBinding](wshttpbinding.md) ，由 INTERNET INFORMATION SERVICES (IIS) 中承载的客户端控制台程序和服务库组成。 该服务实现定义“请求-答复”通信模式的协定。  
   
 > [!NOTE]
@@ -309,13 +310,13 @@ Press <ENTER> to terminate client.
   
 4. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5. 在服务器上，使用管理员权限在 Visual Studio 开发人员命令提示中运行 **setup.bat 服务** 。 使用**服务**参数运行**setup.bat**将使用计算机的完全限定域名创建服务证书，并将服务证书导出到名为的文件。  
+5. 在服务器上，使用管理员权限在 Visual Studio 开发人员命令提示中运行 **setup.bat 服务** 。 使用 **服务** 参数运行 **setup.bat** 将使用计算机的完全限定域名创建服务证书，并将服务证书导出到名为的文件。  
   
 6. 编辑 Web.config，以反映) 的属性中 (新的证书名称，该名称与 `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 计算机的完全限定域名相同。  
   
 7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-8. 在客户端上，使用管理员权限在 Visual Studio 的开发人员命令提示中运行 **setup.bat 客户端** 。 使用**客户端**参数运行**setup.bat**会创建一个名为 client.com 的客户端证书，并将客户端证书导出到名为的文件。  
+8. 在客户端上，使用管理员权限在 Visual Studio 的开发人员命令提示中运行 **setup.bat 客户端** 。 使用 **客户端** 参数运行 **setup.bat** 会创建一个名为 client.com 的客户端证书，并将客户端证书导出到名为的文件。  
   
 9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。 通过用服务器的完全限定域名替换 localhost 来执行此操作。  
   

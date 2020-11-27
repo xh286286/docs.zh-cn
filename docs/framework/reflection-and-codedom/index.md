@@ -6,17 +6,19 @@ helpviewer_keywords:
 - .NET Framework, dynamic programming
 - dynamic programming [.NET Framework]
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
-ms.openlocfilehash: dd0a46dc9e0c2228c97ba995d9d1acda206e95f9
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 07b8bb05767ca37982ea86abdb5b3bfadb60e491
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474002"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259923"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework 中的动态编程
+
 本节文档提供有关在 .NET Framework 中动态编程的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [反射](reflection.md)  
  介绍如何使用反射在运行时处理对象。  
   
@@ -30,4 +32,5 @@ ms.locfileid: "86474002"
  介绍如何生成和编译动态源代码。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [开发指南](../development-guide.md)  

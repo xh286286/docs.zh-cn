@@ -6,15 +6,16 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: d6018c8339cb04471bf9ce0f2ee86e091e1d1e95
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597522"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284155"
 ---
 # <a name="configuring-system-provided-bindings"></a>配置系统提供的绑定
-绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定由元素组成，这些元素定义 Windows Communication Foundation （WCF）通道如何分层以提供所需的通信功能。 绑定包含三种类型的元素：  
+
+绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定由元素组成，这些元素定义了如何对 Windows Communication Foundation (WCF) 通道进行分层以提供所需的通信功能。 绑定包含三种类型的元素：  
   
 - 协议通道绑定元素，用于确定要用于发送到终结点的消息的安全性、可靠性、上下文流设置或用户定义的协议。  
   
@@ -22,7 +23,7 @@ ms.locfileid: "84597522"
   
 - 消息编码绑定元素，用于确定要对发送到终结点的消息使用的网络编码，例如，文本/XML、二进制或消息传输优化机制 (MTOM)。  
   
- 本主题介绍系统提供的所有 Windows Communication Foundation （WCF）绑定。 如果这些绑定没有一个完全符合应用程序的需求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../extending/custom-bindings.md)。  
+ 本主题介绍了系统提供的所有 Windows Communication Foundation (WCF) 绑定。 如果这些绑定没有一个完全符合应用程序的需求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../extending/custom-bindings.md)。  
   
 > [!IMPORTANT]
 > 选择启用了安全性的绑定。 默认情况下，除 <xref:System.ServiceModel.BasicHttpBinding> 绑定之外的所有绑定都启用了安全性。 如果不选择安全绑定或禁用了安全性，请确保以某种其他方式保护网络交换，例如在安全的数据中心或独立的网络上进行网络交换。  
@@ -31,6 +32,7 @@ ms.locfileid: "84597522"
 > 不要将双工协定用于不支持安全性或已禁用安全性的绑定，除非通过其他一些方式来确保网络交换的安全。  
   
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
+
  以下绑定随 WCF 一起提供。  
   
 |绑定|配置元素|描述|  
@@ -46,9 +48,10 @@ ms.locfileid: "84597522"
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md)|一个排队绑定，适用于 WCF 应用程序之间的计算机间的通信。|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../../configure-apps/file-schema/wcf/netpeertcpbinding.md)|一个支持多计算机安全通信的绑定。|  
 |<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../configure-apps/file-schema/wcf/webhttpbinding.md)|一个绑定，可用于为通过 HTTP 请求（而不是 SOAP 消息）公开的 WCF Web 服务配置终结点。|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|适用于 WCF 应用程序与现有消息队列（也称为 MSMQ）应用程序之间的跨计算机通信的绑定。|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|适用于 WCF 应用程序与现有消息队列之间的跨计算机通信的绑定 (也称为 MSMQ) 应用程序。|  
   
 ## <a name="binding-features"></a>绑定功能  
+
  下表显示了每个系统提供的绑定所提供的一些主要功能。 第一列中列出了这些绑定，并在表中描述有关功能的信息。 下表提供所用绑定缩写的概要。 若要选择绑定，应确定哪列能满足所需的所有行中的功能。  
   
 |绑定|互操作性|安全模式（默认）|会话<br /><br /> （默认值）|事务|双工|  

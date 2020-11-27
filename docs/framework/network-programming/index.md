@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 50f23e1a343f969ad2cbb3422038921c710b2b1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502400"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241676"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework 中的网络编程
+
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到你的应用程序中。 你的网络应用程序可以基于可插入协议而构建，以便自动利用新的 Internet 协议，或者，它们可以使用 Windows 套接字接口的托管实现在套接字级别上使用网络。  
   
 ## <a name="in-this-section"></a>本节内容  
@@ -87,6 +88,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  可下载网络编程示例的链接，这些示例使用 <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>、 <xref:System.Net.Sockets> 命名空间中的类。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.Net?displayProperty=nameWithType>  
  为当前网络采用的多种协议提供简单的编程接口。 此命名空间中的 <xref:System.Net.WebRequest?displayProperty=nameWithType> 和 <xref:System.Net.WebResponse?displayProperty=nameWithType> 类是可插入协议的基础。  
   
