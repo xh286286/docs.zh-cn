@@ -2,18 +2,19 @@
 title: 使用自定义活动
 ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
-ms.openlocfilehash: 6ca67ef7a8c4330d0182e960fc3fdcce656976a4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43addd4e69b7f7ac3ac5cd8e5bcd41397d8f0a67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962227"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293320"
 ---
 # <a name="using-a-custom-activity"></a>使用自定义活动
+
 派生自 <xref:System.Activities.Activity> 或其子类的活动可以组合到更大的工作流中，或以代码直接创建。 此主题说明如何使用工作流中以代码或通过设计器创建的自定义活动。  
   
 > [!NOTE]
-> 自定义活动可以在定义它们的同一个项目中使用, 只要自定义活动和使用该活动的活动都编译 (即, 由生成进程生成的实例化类型加载) (如果已加载引用活动)动态 (例如, 使用 ActivityXAMLServices), 则引用的程序集应放置在不同的项目中, 或者需要手动编辑设计器生成的 XAML 来启用此。  
+> 自定义活动可以在定义它们的同一个项目中使用。只要自定义活动和使用它的活动都进行了编译 (例如，通过生成过程生成的实例化类型进行加载) 如果引用活动是动态加载的 (例如，使用 ActivityXAMLServices) ，则所引用的程序集应放置在不同的项目中，否则需要手动编辑设计器生成的 XAML 来启用此操作。  
   
 #### <a name="using-a-custom-activity-to-a-workflow-project"></a>将自定义活动用于工作流项目  
   

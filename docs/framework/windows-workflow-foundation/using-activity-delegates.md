@@ -2,14 +2,15 @@
 title: 使用活动委托
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 66a03187336475ed377fda032506cfa66d3daf58
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837566"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293294"
 ---
 # <a name="using-activity-delegates"></a>使用活动委托
+
 通过活动委托，活动作者可以公开具有特定签名的回调，活动的用户可为其提供基于活动的处理程序。 可以使用两种类型的活动委托：<xref:System.Activities.ActivityAction%601> 用于定义没有返回值的活动委托，<xref:System.Activities.ActivityFunc%601> 用于定义有返回值的活动委托。
 
 在必须对子活动进行限制，使其包含特定签名的情况下，活动委托非常有用。 例如，<xref:System.Activities.Statements.While> 活动可包含任何类型的无约束子活动，但 <xref:System.Activities.Statements.ForEach%601> 活动的主体是一个 <xref:System.Activities.ActivityAction%601>，并且 <xref:System.Activities.Statements.ForEach%601> 最终执行的子活动必须具有 <xref:System.Activities.InArgument%601> 与 <xref:System.Activities.Statements.ForEach%601> 所枚举的集合成员相同的类型。
@@ -30,9 +31,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-有关对象初始值设定项的详细信息，请参阅[如何：在不调用构造函数C#的情况下初始化对象（编程指南）](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)和[如何：使用对象初始值设定项声明对象（Visual Basic）](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)。
+有关对象初始值设定项的详细信息，请参阅如何：使用对象初始值设定项将对象 [初始化为不调用构造函数 (c # 编程指南) ](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 和 [如何：使用对象初始值设定项 (Visual Basic) 声明对象 ](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)。
 
-在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 <xref:System.Activities.Statements.Catch%601> 活动的活动操作的处理程序是一个 <xref:System.Activities.Statements.WriteLine> 活动，异常详细信息使用 `ex` <xref:System.Activities.DelegateInArgument%601>流动到它。
+在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 <xref:System.Activities.Statements.Catch%601>活动活动操作的处理程序是一种 <xref:System.Activities.Statements.WriteLine> 活动，异常详细信息通过使用传递给它 `ex` <xref:System.Activities.DelegateInArgument%601> 。
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

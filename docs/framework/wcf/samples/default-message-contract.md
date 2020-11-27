@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 404fd9ddc911327bbc09c65d74da22bd88d08e2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a70fb519f3b3e8d9ce109c3b7bef0313e22eb50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602565"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292813"
 ---
 # <a name="default-message-contract"></a>默认消息协定
-默认消息协定示例演示了一个服务，在该服务中，用户定义的自定义消息会在服务操作来回传递。 此示例基于将计算器接口实现为类型化服务的[入门](getting-started-sample.md)。 此示例不是[入门](getting-started-sample.md)中使用的加法、减法、乘法和除法的单个服务操作，而是传递包含操作数和运算符的自定义消息，并返回算术计算的结果。  
+
+默认消息协定示例演示了一个服务，在该服务中，用户定义的自定义消息会在服务操作来回传递。 此示例基于将计算器接口实现为类型化服务的 [入门](getting-started-sample.md) 。 此示例不是 [入门](getting-started-sample.md)中使用的加法、减法、乘法和除法的单个服务操作，而是传递包含操作数和运算符的自定义消息，并返回算术计算的结果。  
   
  客户端是一种控制台程序 (.exe)，服务库 (.dll) 是由 Internet 信息服务 (IIS) 承载的。 客户端活动显示在控制台窗口中。  
   
@@ -131,7 +132,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- 为客户端生成的客户端代码是用的[元数据实用工具（svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)工具创建的。 在必要时，该工具会自动在所生成的客户端代码中创建消息协定类型。 可以指定 `/messageContract` 命令选项来强制生成消息协定。  
+ 为客户端生成的客户端代码是通过 [ ( # A0) ](../servicemodel-metadata-utility-tool-svcutil-exe.md) 工具创建的。 在必要时，该工具会自动在所生成的客户端代码中创建消息协定类型。 可以指定 `/messageContract` 命令选项来强制生成消息协定。  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
@@ -170,17 +171,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

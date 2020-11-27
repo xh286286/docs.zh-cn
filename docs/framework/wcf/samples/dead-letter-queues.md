@@ -2,15 +2,16 @@
 title: 死信队列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 8ea2ea530db8745c3802f9f39793ffd77ddd0008
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cf281ff08d56669d0257d693af93d8a9b5b2e81a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575285"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292819"
 ---
 # <a name="dead-letter-queues"></a>死信队列
-本示例演示如何处理传递失败的消息。 它基于[事务性 MSMQ 绑定](transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
+
+本示例演示如何处理传递失败的消息。 它基于 [事务性 MSMQ 绑定](transacted-msmq-binding.md) 示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。
 
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。
@@ -49,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
- 该示例中的服务代码是[事务性 MSMQ 绑定](transacted-msmq-binding.md)的。
+ 该示例中的服务代码是 [事务性 MSMQ 绑定](transacted-msmq-binding.md)的。
 
  与服务的通信发生在事务范围内。 服务读取队列中的消息，执行操作，然后显示操作的结果。 应用程序还为死信消息创建死信队列。
 
@@ -169,7 +170,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息时，Windows Communication Foundation （WCF）通道层将查找终结点中不匹配项，并且不会调度消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。
+ 死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息时，Windows Communication Foundation (WCF) 通道层查找终结点中不匹配项，并且不会调度消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。
 
  在此示例中，如果失败的原因是消息超时，则死信消息服务将重新发送消息。出于所有其他原因，它会显示传递失败，如下面的示例代码所示：
 
@@ -310,23 +311,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果先运行服务，则它将检查以确保队列存在。 如果队列不存在，则服务将创建一个队列。 可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。 执行下面的步骤来在 Windows 2008 中创建队列。
 
     1. 在 Visual Studio 2012 中打开服务器管理器。
 
-    2. 展开 "**功能**" 选项卡。
+    2. 展开 " **功能** " 选项卡。
 
     3. 右键单击 "**专用消息队列**"，然后选择 "**新建****专用队列**"。
 
-    4. 选中 "**事务性**" 框。
+    4. 选中 " **事务性** " 框。
 
     5. 输入 `ServiceModelSamplesTransacted` 作为新队列的名称。
 
 3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。
 
-4. 若要在单一计算机配置或跨计算机配置中运行示例，请相应地更改队列名称，用计算机的全名替换 localhost，并按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。
+4. 若要在单一计算机配置或跨计算机配置中运行示例，请相应地更改队列名称，用计算机的全名替换 localhost，并按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>在加入到工作组的计算机上运行此示例
 
@@ -350,6 +351,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > 将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。
 
 ## <a name="comments"></a>注释
+
  默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。 默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。 MSMQ 必须是域的成员才可以提供身份验证和签名功能。 如果在不是域成员的计算机上运行此示例，则会接收以下错误：“用户的内部消息队列证书不存在”。
 
 > [!IMPORTANT]
@@ -357,6 +359,6 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

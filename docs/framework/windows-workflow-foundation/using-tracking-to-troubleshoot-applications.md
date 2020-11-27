@@ -2,17 +2,19 @@
 title: 使用跟踪对应用程序进行故障排除
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: fc9427d0c06ed67ea69669cab2aae64f39f7c10c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62f2240831dd33bdaf78655199aad75b7e29c59c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551283"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293567"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用跟踪对应用程序进行故障排除
+
 使用 (WF) ，可以跟踪与工作流相关的信息，以提供有关执行 Windows Workflow Foundation 应用程序或服务的详细信息。 Windows Workflow Foundation Windows Workflow Foundation 主机能够在工作流实例执行期间捕获工作流事件。 如果工作流生成错误或异常，则可以使用 Windows Workflow Foundation 跟踪详细信息对其处理进行故障排除。  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>使用 WF 跟踪对 WF 进行故障诊断  
+
  若要检测 Windows Workflow Foundation 活动的处理中的故障，可以使用跟踪配置文件来启用跟踪，该跟踪配置文件查询 <xref:System.Activities.Tracking.ActivityStateRecord> 状态为 "出错"。 在以下代码中指定了相应的查询。  
   
 ```xml  
@@ -51,7 +53,7 @@ ms.locfileid: "90551283"
   
  如果使用 ETW 跟踪参与者启用跟踪，则会向 ETW 会话发出错误事件。 可以使用事件查看器查看这些事件。 这可以在分析通道中的节点 **事件查看器 >应用程序和服务日志->Microsoft >Windows >应用程序服务器-应用程序** "下找到。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows Server App Fabric 监视](/previous-versions/appfabric/ee677251(v=azure.10))
 - [用 App Fabric 监视应用程序](/previous-versions/appfabric/ee677276(v=azure.10))

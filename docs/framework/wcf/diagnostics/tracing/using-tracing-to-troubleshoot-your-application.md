@@ -2,17 +2,19 @@
 title: 使用跟踪来排除应用程序故障
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 78280a399c3490afb0dd2293c60b58d9d00fc228
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b684bf2dc6b075906921f56c6aa07ee55ca7fd5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587633"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291240"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>使用跟踪来排除应用程序故障
+
 本节包含描述如何使用跟踪来排除应用程序故障的各种主题。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [跟踪和消息日志记录的推荐设置](recommended-settings-for-tracing-and-message-logging.md)  
  描述生产和调试环境的建议设置。  
   
@@ -35,4 +37,4 @@ ms.locfileid: "84587633"
 
 - [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)
 - [跟踪](index.md)
-- [端到端跟踪](end-to-end-tracing.md)
+- [端对端跟踪](end-to-end-tracing.md)

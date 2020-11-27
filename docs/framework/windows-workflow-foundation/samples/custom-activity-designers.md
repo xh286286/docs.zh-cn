@@ -2,24 +2,26 @@
 title: 自定义活动设计器
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
-ms.openlocfilehash: 982aecea27de680468fe6f574f72c459ef76b142
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c6458d6c4c7e722f577b1bad30521d899ac1688
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913843"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293437"
 ---
 # <a name="custom-activity-designers"></a>自定义活动设计器
+
 本节包含使用自定义设计器在工作流设计器中进行显示的活动示例。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [自定义复合设计器 — 工作流项演示器](custom-composite-designers-workflow-item-presenter.md)  
- 此示例演示如何生成活动设计器呈现此类的"放置区。"  
+ 此示例演示如何生成一个表示 "放置区域" 的活动设计器。  
   
  [自定义复合设计器 — 工作流项演示器](custom-composite-designers-workflow-items-presenter.md)  
  此示例演示如何生成一个呈现此类可编辑集合的活动设计器。  
   
- [在自定义活动设计器中使用 ExpressionTextBox](using-the-expressiontextbox-in-a-custom-activity-designer.md)  
+ [在自定义设计器中使用 ExpressionTextBox](using-the-expressiontextbox-in-a-custom-activity-designer.md)  
  此示例演示如何在自定义活动设计器中使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。  
   
  [使用编辑范围](using-editing-scope.md)  

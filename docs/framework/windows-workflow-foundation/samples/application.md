@@ -3,17 +3,19 @@ title: 应用程序
 description: 本文是有关 Windows Workflow Foundation 中的工作流应用程序的详细过程的示例。
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: 90c43c44781c3dca9fb91f68b44ccd40e9777242
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9e3cc0744ef7a2f48356c4b109ff8c448d4d354
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421392"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293479"
 ---
 # <a name="application"></a>应用程序
-本部分包含与 Windows Workflow Foundation （WF）中的工作流应用程序相关的示例。  
+
+本部分包含与 Windows Workflow Foundation (WF) 中的工作流应用程序相关的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [文档审批过程](document-approval-process.md)  
  演示如何在业务线应用程序中使用工作流。  
   

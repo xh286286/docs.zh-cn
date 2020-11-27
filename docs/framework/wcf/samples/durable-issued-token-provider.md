@@ -2,18 +2,20 @@
 title: 持久性已颁发令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7e0025eb4bc4918b977d9d8c4e2b1435b0425973
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291669"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
+
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  
   
-## <a name="discussion"></a>讨论区  
- Windows Communication Foundation （WCF）中的令牌提供程序用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
+## <a name="discussion"></a>讨论 (Discussion)  
+
+ Windows Communication Foundation 中的令牌提供程序 (WCF) 用于向安全基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了一个 CardSpace 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
   
 - 存在不能由内置令牌提供程序操作的凭据存储区。  
   
@@ -110,6 +112,7 @@ ms.locfileid: "84600551"
  安全令牌服务使用标准 wsHttpBinding 来公开一个终结点。 安全令牌服务响应客户端对令牌的请求，使用 Windows 帐户提供客户端身份验证，并颁发包含客户端用户名（作为已颁发令牌中的声明）的令牌。 作为创建令牌的一部分，安全令牌服务使用与 CN=STS 证书关联的私钥对令牌进行签名。 另外，它还创建对称密钥并使用与 CN=localhost 证书关联的公钥对该密钥进行加密。 在向客户端返回令牌的过程中，安全令牌服务还返回对称密钥。 客户端向计算器服务出示颁发的令牌，并通过使用该对称密钥对消息进行签名来证明客户端知道该密钥。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>自定义客户端凭据和令牌提供程序  
+
  以下步骤演示如何开发自定义令牌提供程序，以便缓存已颁发的令牌并将其与 WCF： security 集成。  
   
 ### <a name="to-develop-a-custom-token-provider"></a>开发自定义安全令牌提供程序  
@@ -226,16 +229,18 @@ ms.locfileid: "84600551"
     ```  
   
 ## <a name="running-the-sample"></a>运行示例  
+
  请参见下面的说明来运行该示例。 运行示例时，对安全令牌的请求显示在安全令牌服务控制台窗口中。 操作请求和响应显示在客户端和服务控制台窗口中。 在任何一个控制台窗口中按 Enter 可以关闭应用程序。  
   
 ## <a name="the-setupcmd-batch-file"></a>Setup.cmd 批处理文件  
+
  通过运行此示例随附的 Setup.cmd 批处理文件，可以用相关的证书配置服务器和安全令牌服务以运行自承载的应用程序。 批处理文件在 CurrentUser/TrustedPeople 证书存储区中创建两个证书。 第一个证书的主题名称为 CN=STS，并由安全令牌服务用来对颁发给客户端的安全令牌进行签名。 第二个证书的主题名称为 CN=localhost，并由安全令牌服务用来加密机密，以便服务能够解密该机密。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
 1. 运行 Setup.cmd 文件以创建所需的证书。  
   
-2. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。 确保生成解决方案中的所有项目（Shared、RSTRSTR、Service、SecurityTokenService 和 Client）。  
+2. 若要生成解决方案，请按照 [生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。 确保生成解决方案中的所有项目（Shared、RSTRSTR、Service、SecurityTokenService 和 Client）。  
   
 3. 确保 Service.exe 和 SecurityTokenService.exe 都使用管理员权限运行。  
   
@@ -250,6 +255,6 @@ ms.locfileid: "84600551"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

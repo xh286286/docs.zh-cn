@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: f69314948a0e0a69e49ec148f94572f17d0b8e3c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41761313fae68a1a348a73f104e21dc19e07eb65
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595045"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293502"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>如何：使用未注册的 Windows Communication Foundation 服务名字对象
-若要连接到 Windows Communication Foundation （WCF）服务并与之通信，WCF 客户端应用程序必须具有服务地址、绑定配置和服务协定的详细信息。  
+
+若要连接到 Windows Communication Foundation (WCF) 服务并与之通信，WCF 客户端应用程序必须具有服务地址、绑定配置和服务协定的详细信息。  
   
  WCF 服务标记通常会在先前注册所需的属性类型之前获得所需的协定，但可能会出现这种情况。 不进行注册时，标记可以通过使用 `wsdl` 参数、通过元数据交换或通过使用 `mexAddress` 参数来获取 Web 服务定义语言 (WSDL) 文档形式的协定定义。  
   
@@ -22,6 +23,7 @@ ms.locfileid: "84595045"
 > 必须使用相互身份验证来防止篡改或伪造请求和响应。 具体而言，就是保证要做出响应的元数据交换终结点是预期的可信方，这一点对于客户端相当重要。  
   
 ## <a name="example"></a>示例  
+
  此示例演示具有 MEX 协定的服务标记的用法。 具有以下协定的服务通过 wsHttpBinding 公开。  
   
 ```csharp

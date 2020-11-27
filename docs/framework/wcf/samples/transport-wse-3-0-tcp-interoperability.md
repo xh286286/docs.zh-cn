@@ -2,14 +2,15 @@
 title: 传输：WSE 3.0 TCP 互操作性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: f61d5037af0be6579d5110152ca070bec586fe87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c268043a9d5c3f6a48b7b66dc807e4e30f029f61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558961"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292501"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
+
 WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定义 Windows Communication Foundation (WCF) 传输实现。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 以下步骤演示如何生成此自定义 WCF 传输：  
   
 1. 从 TCP 套接字开始，创建 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的客户端和服务器实现以使用 DIME 组帧来描述消息边界。  
@@ -23,6 +24,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
 5. 添加一个用来向通道堆栈中添加自定义传输的绑定元素。 有关详细信息，请参阅 [添加绑定元素]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>创建 IDuplexSessionChannel  
+
  编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自 <xref:System.ServiceModel.Channels.ChannelBase>。 消息的发送逻辑主要由以下两个部分组成：(1) 将消息编码为字节；(2) 对这些字节进行组帧并通过网络发送它们。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
@@ -50,6 +52,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
 - 会议.CloseOutputSession--关闭出站数据流 (半近接近) 。  
   
 ## <a name="channel-factory"></a>通道工厂  
+
  编写 TCP 传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现。  
   
 - `WseTcpChannelFactory`派生自 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel> 。 它是一个用来重写 `OnCreateChannel` 以生成客户端通道的工厂。  
@@ -77,6 +80,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
 - 包装了所有特定于域的异常（如 `SocketException` 中的 <xref:System.ServiceModel.CommunicationException>），作为通道协定的一部分。  
   
 ## <a name="channel-listener"></a>通道侦听器  
+
  编写 TCP 传输的下一步是创建用来接受服务器通道的 <xref:System.ServiceModel.Channels.IChannelListener> 实现。  
   
 - `WseTcpChannelListener`派生自 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel> 并在 [Begin] 打开和在 [Begin] Close 上用于控制其侦听套接字的生存期。 在 OnOpen 中，需要创建一个用来侦听 IP_ANY 的套接字。 在更高级的实现中，可以再创建一个同时侦听 IPv6 的套接字。 这些高级实现还允许在主机名中指定 IP 地址。  
@@ -92,6 +96,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
  在接受了新套接字之后，将用这个套接字来初始化服务器通道。 所有的输入和输出都已经在该基类中实现，因此该通道负责初始化此套接字。  
   
 ## <a name="adding-a-binding-element"></a>添加绑定元素  
+
  现在已经生成了工厂和通道，必须通过绑定将它们向 ServiceModel 运行库公开。 绑定是指绑定元素的集合，该集合表示与服务地址相关联的通信堆栈。 该堆栈中的每个元素都由一个绑定元素来表示。  
   
  在下面的示例中，绑定元素为 `WseTcpTransportBindingElement`，它派生自 <xref:System.ServiceModel.Channels.TransportBindingElement>。 它支持 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 并重写下列方法以生成与绑定相关联的工厂。  
@@ -115,6 +120,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
  它还包含用于克隆 `BindingElement` 并返回我们自己的方案 (wse.tcp) 的成员。  
   
 ## <a name="the-wse-tcp-test-console"></a>WSE TCP 测试控制台  
+
  TestCode.cs 中提供了用于使用此示例传输的测试代码。 下面的说明演示如何设置 WSE `TcpSyncStockService` 示例。  
   
  该测试代码创建了一个自定义绑定，该绑定将 MTOM 用作编码并将 `WseTcpTransport` 用作传输。 该测试代码还设置了与 WSE 3.0 一致的 AddressingVersion，如下面的代码所示。  
