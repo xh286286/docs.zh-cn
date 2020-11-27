@@ -2,17 +2,19 @@
 title: 扩展性
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 757783536ac25dd30e96748b9d9791e06c08b091
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb939814fe30bd8e28d42cac4e4945a83b1b3158
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600485"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255431"
 ---
 # <a name="extensibility"></a>扩展性
-本节包含处理自定义扩展性和 Windows Communication Foundation （WCF）的其他功能的示例。  
+
+本部分包含的示例可处理 (WCF) Windows Communication Foundation 自定义扩展性和其他功能。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [通道扩展性](channels-extensibility.md)  
  演示自定义通道。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "84600485"
  演示扩展点如何使用自定义消息数据格式。  
   
  [自定义消息筛选器](custom-message-filter.md)  
- 演示如何替换 Windows Communication Foundation （WCF）用于将消息调度到终结点的消息筛选器。  
+ 演示如何替换 Windows Communication Foundation (WCF) 用于将消息调度到终结点的消息筛选器。  
   
  [自定义服务主机](custom-service-host.md)  
  演示如何使用 <xref:System.ServiceModel.ServiceHost> 类的自定义派生来改变服务的运行时行为。  

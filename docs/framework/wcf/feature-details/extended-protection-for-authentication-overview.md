@@ -2,14 +2,15 @@
 title: 身份验证的扩展保护概述
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0537e6147a7b43dabcb4c3612fc58da11dfd4d6d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255541"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>身份验证的扩展保护概述
+
 身份验证的扩展保护有助于抵御中间人 (MITM) 攻击，在此类攻击中，攻击者截获客户端凭据并将它们转发给服务器。  
   
  假设有这么一种情况，有三个参与者：客户端、服务器和攻击者。 服务器的 URL 为 `https://server`，而攻击者的 URL 为 `https://attacker`。 攻击者诱骗客户端访问攻击者，就好像它是服务器。 然后，攻击者向服务器发送一个请求。 如果攻击者尝试访问安全资源，则服务器会使用 WWW-Authenticate 标头答复攻击者。 由于攻击者没有身份验证信息，因此它会将 WWW-Authenticate 标头发送给客户端。 客户端将 Authorization 标头发送给攻击者，然后，攻击者将此标头发送给服务器，并使用客户端凭据获取对安全资源的访问权限。  
@@ -32,6 +33,6 @@ ms.locfileid: "90559260"
   
  有关更多信息，请参见 Win7 CBT/扩展保护示例。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows Server App Fabric 的安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

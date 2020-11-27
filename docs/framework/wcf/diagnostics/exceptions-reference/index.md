@@ -2,15 +2,16 @@
 title: 关于异常的参考信息
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-ms.openlocfilehash: 5e61f395cb107202a7c435648f53ad40fce318b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 233586c3a4fdda4cfbea2c3370d447c7bfa41b94
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797332"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254800"
 ---
 # <a name="exceptions-reference"></a>关于异常的参考信息
-本部分列出了 Windows Communication Foundation （WCF）生成的以下区域中的所有异常：  
+
+本部分列出了 Windows Communication Foundation (WCF) 生成的以下区域中的所有异常：  
   
  [IdentityModel](identitymodel-exceptions.md)  
   
@@ -32,7 +33,7 @@ ms.locfileid: "70797332"
   
  [核心通信：传输框架](core-communications-transport-framework.md)  
   
- [核心通信：公用](core-communications-utilities.md)  
+ [核心通信：工具](core-communications-utilities.md)  
   
  [核心通信：Webhost 支持](core-communications-webhost-support.md)  
   

@@ -6,15 +6,16 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: acc142e8e3108a827b63cf013b818d30b5dcaa52
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 53791cdd7789aedf19792ca628a666c963512821
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245960"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255138"
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 工具
-Microsoft Windows Communication Foundation （WCF）工具旨在使你更轻松地创建、部署和管理 WCF 应用程序。 本节包含有关这些工具的详细信息。 请注意，这些工具不受支持。  
+
+Microsoft Windows Communication Foundation (WCF) 工具旨在使你更轻松地创建、部署和管理 WCF 应用程序。 本节包含有关这些工具的详细信息。 请注意，这些工具不受支持。  
   
  您可以从命令行中运行所有工具。  
   
@@ -31,7 +32,7 @@ Microsoft Windows Communication Foundation （WCF）工具旨在使你更轻松�
 |[WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|使用命令行工具配置基本的 WS-AtomicTransaction 支持设置。|  
 |[WS-AtomicTransaction 配置 MMC 管理单元](ws-atomictransaction-configuration-mmc-snap-in.md)|使用 MMC 管理单元配置基本的 WS-AtomicTransaction 支持设置。|  
 |[工作流服务注册工具 (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md)|注册 Windows 工作流服务。|  
-|[WCF 服务主机 (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)|承载包含在库（* .dll）文件中的 WCF 服务|  
+|[WCF 服务主机 (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)|承载 ( * .dll) 文件的库中包含的 WCF 服务|  
 |[WCF 测试客户端 (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)|一个 GUI 工具，通过使用该工具，可以输入任意类型的参数、将该输入提交给服务并查看服务发回的响应。|  
 |[协定优先工具](contract-first-tool.md)|一个 Visual Studio 任务，该任务从 XSD 数据协定创建代码类。|  
   

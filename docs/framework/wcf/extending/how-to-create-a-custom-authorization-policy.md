@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 5d5268cd2171bdccc3885cd599fdc8c277e61aa4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fef7aa531c946ecacef30bb79f2362bad4d375ed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795714"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256022"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>如何：创建自定义授权策略
-Windows Communication Foundation （WCF）中的标识模型基础结构支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 通过这种方式，应用程序层可以与 WCF 支持的不同令牌类型提供的不同声明的详细信息分开。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  
+
+Windows Communication Foundation (WCF) 中的标识模型基础结构支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 通过这种方式，应用程序层可以与 WCF 支持的不同令牌类型提供的不同声明的详细信息分开。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>实现自定义授权策略  
   
@@ -29,7 +30,7 @@ Windows Communication Foundation （WCF）中的标识模型基础结构支持�
   
 1. 需要向此方法传递两个参数：<xref:System.IdentityModel.Policy.EvaluationContext> 类的一个实例和一个对象引用。  
   
-2. 如果自定义授权策略添加<xref:System.IdentityModel.Claims.ClaimSet>实例，而不考虑的<xref:System.IdentityModel.Policy.EvaluationContext>当前内容，则<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>通过调用<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>方法`ClaimSet`并从方法返回`true`来添加每个实例。 返回 `true` 可向授权基础结构指示授权策略已执行其工作，不需要重新调用。  
+2. 如果自定义授权策略添加 <xref:System.IdentityModel.Claims.ClaimSet> 实例，而不考虑的当前内容 <xref:System.IdentityModel.Policy.EvaluationContext> ，则 `ClaimSet` 通过调用 <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> 方法并从方法返回来添加每个实例 `true` <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 。 返回 `true` 可向授权基础结构指示授权策略已执行其工作，不需要重新调用。  
   
 3. 如果自定义授权策略仅在 `EvaluationContext` 中已经存在特定的声明时才添加声明集，则通过检查由 `ClaimSet` 属性返回的 <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> 实例，查找这些声明。 如果声明已存在，则通过调用 <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> 方法添加新声明集，如果不再需要添加其他声明集，则返回 `true`，向授权基础结构指示授权策略已完成其工作。 如果声明不存在，则返回 `false`，指示如果其他授权策略向 `EvaluationContext` 添加更多声明集，则应该重新调用授权策略。  
   
@@ -70,12 +71,13 @@ Windows Communication Foundation （WCF）中的标识模型基础结构支持�
      [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
   
 ## <a name="example"></a>示例  
+
  下面的示例演示完整的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 实现。  
   
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [如何：比较声明](how-to-compare-claims.md)

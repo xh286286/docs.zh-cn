@@ -2,18 +2,19 @@
 title: 安装问题疑难解答
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: fb687e9975ab9ac763030f10d54c7744dc02c9e0
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 596aae345061796535895a091c59d50a5bffe0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720447"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255112"
 ---
 # <a name="troubleshoot-setup-issues"></a>安装问题疑难解答
 
 本文介绍了如何对 Windows Communication Foundation (WCF) 安装问题进行故障排除。  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>有些 Windows Communication Foundation 注册表项无法通过在 .NET Framework 3.0 上执行 MSI 修复操作来修复  
+
  如果您删除下面的任何注册表项：  
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
@@ -26,11 +27,11 @@ ms.locfileid: "90720447"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- 如果使用从**控制面板**中的 "**添加/删除程序**" 小程序启动的 .NET Framework 3.0 安装程序运行修复，则不会重新创建这些密钥。 若要重新正确创建这些项，用户必须卸载并重新安装 .NET Framework 3.0。  
+ 如果使用从 **控制面板** 中的 "**添加/删除程序**" 小程序启动的 .NET Framework 3.0 安装程序运行修复，则不会重新创建这些密钥。 若要重新正确创建这些项，用户必须卸载并重新安装 .NET Framework 3.0。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-wmi-provider"></a>Wmi 服务损坏阻止安装 WMI 提供程序
 
- 安装 .NET Framework 3.0 包时，WMI 服务损坏可能会阻止安装 Windows Communication Foundation WMI 提供程序。 在安装过程中，Windows Communication Foundation 安装程序无法使用*mofcomp.exe*组件注册该 WCF *。* 下面列出了几个症状：  
+ 安装 .NET Framework 3.0 包时，WMI 服务损坏可能会阻止安装 Windows Communication Foundation WMI 提供程序。 在安装过程中，Windows Communication Foundation 安装程序无法使用 *mofcomp.exe* 组件注册该 WCF *。* 下面列出了几个症状：  
   
 1. .NET Framework 3.0 安装成功完成，但未注册 WCF WMI 提供程序。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "90720447"
   
 1. 运行 WMI Diagnosis Utility 以修复 WMI 服务。 有关使用此工具的详细信息，请参阅 [WMI Diagnosis Utility](/previous-versions/tn-archive/ff404265(v%3dmsdn.10))。  
   
- 使用**控制面板**中的 "**添加/删除程序**" 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
+ 使用 **控制面板** 中的 "**添加/删除程序**" 小程序修复 .NET Framework 3.0 安装，或卸载/重新安装 .NET Framework 3.0。  
   
 ## <a name="repair-net-framework-30-after-net-framework-35-installation"></a>.NET Framework 3.5 安装后修复 .NET Framework 3。0
 
@@ -65,6 +66,7 @@ ms.locfileid: "90720447"
  [工作流服务注册工具 ( # A0) ](workflow-service-registration-tool-wfservicesreg-exe.md) 可在%Windir%\Microsoft.NET\framework\v3.5\ 或%windir%\microsoft.net\framework64\v3.5\ 中找到中找到  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>安装 .NET Framework 3.5 之后，为 WCF/WF Webhost 正确配置 IIS  
+
  如果 .NET Framework 3.5 安装无法配置与 WCF 相关的其他 IIS 配置设置，则会在安装日志中记录错误并继续。 对运行 WorkflowServices 应用程序的任何尝试都将失败，因为缺少必需的配置设置。 例如，加载 xoml 或规则服务会失败。  
   
  若要解决此问题，请使用 [工作流服务注册工具 ( 带有开关的 # A0) ](workflow-service-registration-tool-wfservicesreg-exe.md) `/c` 在计算机上正确配置 IIS 脚本映射。 [工作流服务注册工具 ( # A0) ](workflow-service-registration-tool-wfservicesreg-exe.md) 可在%Windir%\Microsoft.NET\framework\v3.5\ 或%windir%\microsoft.net\framework64\v3.5\ 中找到中找到  
@@ -79,6 +81,6 @@ ms.locfileid: "90720447"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [设置说明](./samples/set-up-instructions.md)

@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9c3d83f0055a1700c675017216a7419fdba674fd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ec29ac03e8930bd30ccd7e90dce3993ca9e7443a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547455"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255411"
 ---
 # <a name="tracing-and-message-logging"></a>跟踪和消息日志记录
+
 本示例演示如何启用跟踪和消息日志记录。 使用 [服务跟踪查看器工具 ](../service-trace-viewer-tool-svctraceviewer-exe.md)查看生成的跟踪和消息日志 ( # A0) 。 此示例基于 [入门](getting-started-sample.md)。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="tracing"></a>跟踪  
+
  Windows Communication Foundation (WCF) 使用在命名空间中定义的跟踪机制 <xref:System.Diagnostics> 。 在此跟踪模型中，由应用程序实现的跟踪源生成跟踪数据。 每个源均由名称进行标识。 跟踪使用程序会创建针对要为其检索信息的跟踪源的侦听器。 若要接收跟踪数据，您必须创建针对该跟踪源的侦听器。 在 WCF 中，可以通过设置服务模型跟踪源，通过将以下代码添加到服务或客户端的配置文件来完成此 `switchValue` 操作：  
   
 ```xml  
@@ -47,6 +49,7 @@ ms.locfileid: "90547455"
  有关跟踪源的详细信息，请参阅 [配置跟踪](../diagnostics/tracing/configuring-tracing.md) 主题中的跟踪源部分。  
   
 ## <a name="activity-tracing-and-propagation"></a>活动跟踪和传播  
+
  如果在 `ActivityTracing` `propagateActivity` `true` 客户端和服务的跟踪源中启用并设置为，则会在 `system.ServiceModel` 处理 () 活动的逻辑单元中，通过活动传输) ，并跨跨多个终结点的活动 (活动 ID 传播 (来关联跟踪。  
   
  这三种机制（活动、传输和传播）可帮助您使用服务跟踪查看器工具更快地找到错误的根本原因。 有关详细信息，请参阅 [使用服务跟踪查看器查看相关跟踪和故障排除](../diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
@@ -62,6 +65,7 @@ ms.locfileid: "90547455"
  有关用户定义的活动跟踪的详细信息，请参阅 [扩展跟踪](extending-tracing.md) 示例。  
   
 ## <a name="message-logging"></a>消息日志记录  
+
  可以在任何 WCF 应用程序的客户端和服务上启用消息日志记录。 若要启动消息日志记录，必须将下面的代码添加到客户端或服务：  
   
 ```xml  
@@ -133,7 +137,7 @@ ms.locfileid: "90547455"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [跟踪](../diagnostics/tracing/index.md)
 - [AppFabric 监视示例](/previous-versions/appfabric/ff383407(v=azure.10))
