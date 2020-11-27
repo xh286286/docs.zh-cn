@@ -2,21 +2,23 @@
 title: 消息协定
 ms.date: 03/30/2017
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
-ms.openlocfilehash: 5467ee9ff807bca79330054c30ad424ea479a6a3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e00720674a384e2b0ac1cdb5aeab84f9b2c91209
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591678"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264694"
 ---
 # <a name="message-contracts"></a>消息协定
-本节包含演示 Windows Communication Foundation （WCF）中的消息协定的示例。  
+
+本部分包含的示例演示了 Windows Communication Foundation (WCF) 中的消息约定。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [默认消息协定](default-message-contract.md)  
  演示一个服务，在该服务中，用户定义的自定义消息会在服务操作来回传递。  
   
- 非类型化请求-答复  
+ 非类型化 Request-Reply  
  演示如何定义使用 Message 类的操作协定。  
   
  [未包装的消息](unwrapped-messages.md)  

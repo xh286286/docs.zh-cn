@@ -2,17 +2,19 @@
 title: 可互操作的对象引用
 ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 0927f217a1666f8f27ca9c3e68f80a96b9c0f2b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf395c187c46e88406bfb81798c7e359b48255e3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184705"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263225"
 ---
 # <a name="interoperable-object-references"></a>可互操作的对象引用
-默认情况下，<xref:System.Runtime.Serialization.DataContractSerializer>按值序列化对象。 可以使用 属性<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>指示数据协定序列化器在序列化对象时保留对象引用。  
+
+默认情况下， <xref:System.Runtime.Serialization.DataContractSerializer> 按值对对象进行序列化。 您可以使用 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 属性指示数据协定序列化程序在序列化对象时保留对象引用。  
   
 ## <a name="generated-xml"></a>生成的 XML  
+
  例如，请考虑下面的对象：  
   
 ```csharp  
@@ -49,10 +51,11 @@ public class SomeClass
 </X>  
 ```  
   
- 但是，<xref:System.Runtime.Serialization.XsdDataContractExporter>即使`preserveObjectReferences`属性设置为`true`，`id`也不会在其架构中描述 和`ref`属性。  
+ 但是， <xref:System.Runtime.Serialization.XsdDataContractExporter> `id` `ref` 即使属性设置为，也不会在架构中描述和特性 `preserveObjectReferences` `true` 。  
   
 ## <a name="using-isreference"></a>使用 IsReference  
- 要根据描述该信息的架构生成有效的对象引用信息，请将<xref:System.Runtime.Serialization.DataContractAttribute>属性应用于类型，并将<xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>标志设置为`true`。 以下示例通过添加`X``IsReference`：  
+
+ 若要生成根据描述的架构有效的对象引用信息，请将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用到类型，并将 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 标志设置为 `true` 。 下面的示例通过添加以下示例修改 `X` 了上一示例中的类 `IsReference` ：  
   
 ```csharp
 [DataContract(IsReference=true)]
@@ -81,7 +84,7 @@ public class SomeClass
 </X>
 ```  
   
- 使用 `IsReference` 可确保消息往返时遵从架构要求。 如果没有它，当从架构生成类型时，该类型的 XML 输出不一定与最初假定的架构兼容。 换言之，虽然 `id` 和 `ref` 属性进行了序列化，但原始架构可能禁止这些属性（或所有属性）在 XML 中出现。 应用于`IsReference`数据成员后，该成员在四舍五入时继续被识别为*可引用*成员。  
+ 使用 `IsReference` 可确保消息往返时遵从架构要求。 如果没有此方法，则在从架构生成类型时，该类型的 XML 输出不一定与最初假设的架构兼容。 换言之，虽然 `id` 和 `ref` 属性进行了序列化，但原始架构可能禁止这些属性（或所有属性）在 XML 中出现。 `IsReference`应用于数据成员后，在往返时，将继续将成员识别为 *可引用*。  
   
 ## <a name="see-also"></a>另请参阅
 

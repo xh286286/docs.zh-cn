@@ -7,20 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: d62bf321e81fccc10c23b6563a58c1ea6af995f0
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 17d5c55f5f98764cca5988a677e34a5ceb4bbf82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168421"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262848"
 ---
 # <a name="ui-automation-fundamentals"></a>UI 自动化基础知识
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本部分包含 API 的高级概述 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [UI 自动化概述](ui-automation-overview.md)  
  [UI 自动化和 Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
  [UI 自动化树概述](ui-automation-tree-overview.md)  
@@ -30,7 +32,8 @@ ms.locfileid: "87168421"
  [UI 自动化安全性概述](ui-automation-security-overview.md)  
  [使用 UI 自动化进行自动化测试](using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
+
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

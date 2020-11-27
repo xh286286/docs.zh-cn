@@ -2,14 +2,15 @@
 title: 自定义 WSDL 发布
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83377e1c72ef5774c909729abd1312cce5364ab0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596690"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262861"
 ---
 # <a name="custom-wsdl-publication"></a>自定义 WSDL 发布
+
 此示例演示了如何执行以下操作：  
   
 - 在自定义 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性 (Attribute) 上实现 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>，以便将该属性 (Attribute) 的属性 (Property) 导出为 WSDL 批注。  
@@ -18,12 +19,13 @@ ms.locfileid: "84596690"
   
 - 分别在自定义协定行为和自定义操作行为上实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，以便在 CodeDom 中将导入的批注作为导入的协定和操作的注释写入。  
   
-- 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 下载 wsdl，使用 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 自定义 wsdl 导入程序导入 wsdl，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> 来生成 Windows Communication Foundation （WCF）客户端代码，并将 wsdl 批注作为///和 c # 中的注释和 Visual Basic。  
+- 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 下载 wsdl，使用 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 自定义 wsdl 导入程序导入 wsdl，并使用 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> 生成 Windows Communication Foundation (WCF) 客户端代码，并将 wsdl 批注作为///和 c # 中的注释和 Visual Basic。  
   
 > [!NOTE]
 > 本主题的最后介绍了此示例的设置过程和生成说明。  
   
 ## <a name="service"></a>服务  
+
  此示例中的服务使用两个自定义属性进行标记。 第一个是 `WsdlDocumentationAttribute`，它在构造函数中接受字符串，可用来通过描述用法的字符串提供协定接口或操作。 第二个是 `WsdlParamOrReturnDocumentationAttribute`，可用来返回值或参数，以说明操作中的那些值。 下面的示例演示使用这些属性描述的服务协定 `ICalculator`。  
   
 ```csharp  
@@ -170,9 +172,11 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Svcutil 客户端  
+
  此示例不使用 Svcutil.exe。 协定是在 generatedClient.cs 文件中提供的，因此在该示例演示自定义 WSDL 导入和代码生成后，可以调用服务。 若要在此示例中使用以下自定义 WSDL 导入程序，可以运行 Svcutil.exe 并指定 `/svcutilConfig` 选项，以给出此示例中使用的客户端配置文件的路径（它引用 `WsdlDocumentation.dll` 库）。 但是，若要加载 `WsdlDocumentationImporter`，Svuctil.exe 必须能够定位并加载 `WsdlDocumentation.dll` 库，这意味着它要么在全局程序集缓存中注册，要么在路径中注册，要么与 Svcutil.exe 位于相同的目录中。 对于类似此示例的基本示例而言，最简单的方式是将 Svcutil.exe 和客户端配置文件复制到 `WsdlDocumentation.dll` 所在的目录中，并从该目录中运行它。  
   
 ## <a name="the-custom-wsdl-importer"></a>自定义 WSDL 导入程序  
+
  自定义 <xref:System.ServiceModel.Description.IWsdlImportExtension> 对象 `WsdlDocumentationImporter` 还实现要添加到导入的 ServiceEndpoints 中的 <xref:System.ServiceModel.Description.IContractBehavior> 和 <xref:System.ServiceModel.Description.IOperationBehavior>，以及要在创建协定或操作代码时为了修改代码而调用的 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension>。  
   
  首先，在 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法中，该示例确定 WSDL 批注是在协定级别还是操作级别，并在相应的范围将其自身添加为一个行为，从而将导入的批注文本传递给其构造函数。  
@@ -219,6 +223,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 ```  
   
 ## <a name="the-client-application"></a>客户端应用程序  
+
  客户端应用程序通过在应用程序配置文件中指定自定义 WSDL 导入程序来加载该导入程序。  
   
 ```xml  
@@ -292,17 +297,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1. 确保已对[Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 确保已对 [Windows Communication Foundation 示例执行了一次性安装过程](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的说明进行操作。  
   
-3. 若要以单机配置或跨计算机配置来运行示例，请按照[运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
+3. 若要以单机配置或跨计算机配置来运行示例，请按照 [运行 Windows Communication Foundation 示例](running-the-samples.md)中的说明进行操作。  
   
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目录不存在，请参阅[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）示例](https://www.microsoft.com/download/details.aspx?id=21459)以下载所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。 此示例位于以下目录：  
+> 如果此目录不存在，请参阅[Windows Communication Foundation (wcf) ，并 Windows Workflow Foundation (的 WF](https://www.microsoft.com/download/details.aspx?id=21459)) .NET Framework Windows Communication Foundation ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 此示例位于以下目录：  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

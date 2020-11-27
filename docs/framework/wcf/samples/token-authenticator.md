@@ -2,14 +2,15 @@
 title: 令牌身份验证器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab3f8486229416465d7eca0b9413475d81318d32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548587"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264629"
 ---
 # <a name="token-authenticator"></a>令牌身份验证器
+
 此示例演示如何实现一个自定义令牌身份验证器。 Windows Communication Foundation 中的令牌身份验证器 (WCF) 用于验证消息所使用的令牌，验证该消息是否为自一致，并对与令牌关联的标识进行身份验证。
 
  自定义令牌身份验证器可用在各种场合，如：
@@ -119,6 +120,7 @@ static void Main()
 ```
 
 ## <a name="custom-token-authenticator"></a>自定义令牌身份验证器
+
  使用下列步骤来创建自定义令牌身份验证器：
 
 1. 编写自定义令牌身份验证器。
@@ -293,6 +295,7 @@ static void DisplayIdentityInformation()
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
 
 ## <a name="setup-batch-file"></a>设置批处理文件
+
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。

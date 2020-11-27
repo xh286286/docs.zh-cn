@@ -2,23 +2,24 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: d64be95f71f840e08ede63e1c1f14ee08e52ce97
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b8496992c7b0694a07ac047ba8537c67fc363c02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592471"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264226"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
+
 ConfigurationCodeGenerator 是一个工具，使用该工具可以向配置系统公开您的自定义通道实现。 这使自定义通道的用户可以通过使用 .config 文件来配置您的通道，就像配置系统提供的绑定（如 `NetTcpBinding`）或使用 `TcpTransportBindingElement` 的自定义绑定一样。  
   
  当您编写自定义通道并使用新的 `BindingElement` 或 `Binding` 将其公开给编程模型时，必须创建一组类，以使 `BindingElement` 或 `Binding` 能够使用 .config 文件进行配置。 您可以使用 ConfigurationCodeGenerator 工具生成这些类，并改善您的客户体验。  
   
 ### <a name="to-build-the-tool"></a>生成工具  
   
-1. 若要生成解决方案，请按照[生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
+1. 若要生成解决方案，请按照 [生成 Windows Communication Foundation 示例](building-the-samples.md)中的说明进行操作。  
   
-2. 生成解决方案将生成一个文件：ConfigurationCodeGenerator.exe。 文件 Samplerun.cmd 提供了一个示例命令行，说明如何使用此工具生成传输的类[： UDP](transport-udp.md)示例。  
+2. 生成解决方案将生成一个文件：ConfigurationCodeGenerator.exe。 文件 Samplerun.cmd 提供了一个示例命令行，说明如何使用此工具生成传输的类 [： UDP](transport-udp.md) 示例。  
   
 ### <a name="to-run-the-tool"></a>运行此工具  
   

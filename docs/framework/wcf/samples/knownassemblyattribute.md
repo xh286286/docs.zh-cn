@@ -2,17 +2,19 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 12f28f44b408dde1ea04d6b84e663206cb4437df
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2faeeaab98a4adeec38ed9c03dc9e01ec2a3aaea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555401"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264941"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
+
 此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。 此示例演示如何在序列化和反序列化过程中动态添加已知类型。  
   
 ## <a name="sample-details"></a>示例详细信息  
+
  此示例由四个项目组成。 其中一个项目对应于定义以下服务协定并由 IIS 承载的服务。  
   
 ```csharp

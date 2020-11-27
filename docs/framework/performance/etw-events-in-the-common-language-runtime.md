@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
-ms.openlocfilehash: e1da57abba559cdb1e54071c103d67b5327c30ac
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab9cb7c53171ebf1dd0d48dec133464fe4042043
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553696"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263624"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>公共语言运行时中的 ETW 事件
+
 公共语言运行时 (CLR) 通过大量的调试和分析事件，提供有用的 Windows 事件跟踪 (ETW) 诊断信息。 CLR ETW 事件利用 Windows ETW 跟踪系统来扩充公共语言运行时所提供的现有分析和调试支持。  
   
  [使用 Etw 改善调试和性能优化](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)一文中提供了有关 etw 的详细信息。 有关 Xperf 的详细信息，请参阅 NTDebugging 博客中的 [Windows Performance Toolkit - Xperf](/archive/blogs/ntdebugging/windows-performance-toolkit-xperf)（Windows 性能工具包 - Xperf）。  
@@ -22,6 +23,7 @@ ms.locfileid: "90553696"
  事件主题中所述的所有事件都需要 .NET Framework 4 或更高版本。 Windows Vista 操作系统是支持的最低客户端，而 Windows Server 2008 是支持的最低服务器。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [控制 .NET Framework 日志记录](controlling-logging.md)  
  介绍用于捕获和查看 ETW 事件的工具和命令。  
   
@@ -34,6 +36,6 @@ ms.locfileid: "90553696"
  [CLR ETW 事件](clr-etw-events.md)  
  提供有关 CLR ETW 事件及其关键字、级别和事件数据的详细信息。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ETW Events in the .NET Framework](etw-events.md)

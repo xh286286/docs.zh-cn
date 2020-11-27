@@ -2,19 +2,21 @@
 title: 管理
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-ms.openlocfilehash: 53c53252e5798ffb01d42b143971a66d1c067851
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0f3d5404787d46f5b00ec54fc155997e40ac7fac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591782"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264733"
 ---
 # <a name="management"></a>管理
-本节包含演示 Windows Communication Foundation （WCF）管理的示例。  
+
+本节包含演示 Windows Communication Foundation (WCF) 管理的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [针对 Windows 的 WCF 服务和事件跟踪](wcf-services-and-event-tracing-for-windows.md)  
- 演示如何使用 WCF 中的分析跟踪在 Windows 事件跟踪（ETW）中发出事件。  
+ 演示如何使用 WCF 中的分析跟踪在 Windows (ETW) 的事件跟踪中发出事件。  
   
  [WCF 分析跟踪](wcf-analytic-tracing.md)  
  演示如何将您自己的跟踪事件添加到 WCF 写入 ETW 的分析跟踪流中 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 。  
@@ -41,4 +43,4 @@ ms.locfileid: "84591782"
  演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。  
   
  [WMI 提供程序](wmi-provider.md)  
- 演示如何使用 WCF 中内置的 Windows Management Instrumentation （WMI）提供程序在运行时从 WCF 服务中收集数据。
+ 演示如何通过 Windows Management Instrumentation 使用内置于 WCF 中 (WMI) 提供程序，在运行时从 WCF 服务中收集数据。

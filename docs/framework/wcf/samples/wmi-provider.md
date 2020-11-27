@@ -2,14 +2,15 @@
 title: WMI 提供程序
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 3fc982bcec563d5e4b90ba3b25989859d7d86281
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d654527c6897e071f914d4015ba9a225974b0f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552872"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263764"
 ---
 # <a name="wmi-provider"></a>WMI 提供程序
+
 此示例演示如何使用内置于 WCF 中的 Windows Management Instrumentation (WMI) 提供程序，在运行时从 Windows Communication Foundation (WCF) 服务收集数据。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 该示例将激活 [入门](getting-started-sample.md) 的 WMI 提供程序，并演示如何 `ICalculator` 在运行时从服务中收集数据。  
   
  WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 有关 WMI SDK 的详细信息，请参阅 [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
@@ -29,6 +30,7 @@ ms.locfileid: "90552872"
  此配置项公开 WMI 接口。 现在，您可以通过此接口连接管理应用程序并访问应用程序的管理规范。  
   
 ## <a name="custom-wmi-object"></a>自定义 WMI 对象  
+
  将 WMI 对象添加到服务，可以显示用户定义的信息以及内置的 WMI 提供程序信息。 这可以通过使用 Installutil.exe 应用程序将服务方案发布到 WMI 来实现。 本主题末尾的安装说明介绍了如何实现上述操作的说明以及更详细的信息。  
   
 ## <a name="accessing-wmi-information"></a>访问 WMI 信息  
@@ -144,6 +146,6 @@ cscript EnumerateCustomObjects.js
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 监视示例](/previous-versions/appfabric/ff383407(v=azure.10))

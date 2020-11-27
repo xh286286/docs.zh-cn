@@ -2,17 +2,19 @@
 title: 工作流服务
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-ms.openlocfilehash: c7a5c6245702497fcd75341b3ff7ba08dc190fa5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ff73055d41531ef8188681d0b95748f62fde8011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600122"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263238"
 ---
 # <a name="workflow-services"></a>工作流服务
+
 使用 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，您可以在 XAML 中以声明方式充分描述基于工作流的服务。 您完全可以在 XAML 中定义实现服务的工作流并描述服务所公开的终结点。 本节中的主题详细描述支持以声明方式编写服务的编程模型。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [工作流服务概述](workflow-services-overview.md)  
  描述创建和承载工作流服务所涉及的组件。  
   
@@ -25,7 +27,7 @@ ms.locfileid: "84600122"
  [如何：从工作流应用程序访问服务](how-to-access-a-service-from-a-workflow-application.md)  
  讨论如何从工作流应用程序调用服务。  
   
- [Correlation](correlation.md)  
+ [相关性](correlation.md)  
  讨论相关性对象如何在彼此之间映射消息以及将消息映射到实例。  
   
  [无序消息处理](out-of-order-message-processing.md)  
