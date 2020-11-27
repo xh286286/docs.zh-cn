@@ -7,14 +7,15 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 769808b190ade33ae52c53e03e1b4f77d4439df1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165902"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269621"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>实现 UI 自动化 Dock 控件模式
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
@@ -26,7 +27,9 @@ ms.locfileid: "87165902"
 Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.Right，“错误列表”窗口为 DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
+
  在实现 Dock 控件模式时，请注意以下准则和约定：  
   
 - <xref:System.Windows.Automation.Provider.IDockProvider> 不公开停靠容器的任何属性，或者停靠在停靠容器内当前控件旁边的控件的任何属性。  
@@ -38,25 +41,29 @@ Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.R
 - 在具有多个监视器的系统上，控件应该停靠在当前监视器的左侧或右侧。 如果这不可能，则控件应该停靠在最左侧监视器的左侧或最右侧监视器的右侧。  
   
 <a name="Required_Members_for_IDockProvider"></a>
+
 ## <a name="required-members-for-idockprovider"></a>IDockProvider 必需的成员  
+
  实现 IDockProvider 接口需要以下属性和方法。  
   
 |必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Property|无|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|属性|无|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|无|  
   
  没有与此控件模式关联的事件。  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>例外  
+
+## <a name="exceptions"></a>异常  
+
  提供程序必须引发以下异常。  
   
 |例外类型|条件|  
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -当控件无法执行请求的停靠样式时。|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UI 自动化控件模式概述](ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](support-control-patterns-in-a-ui-automation-provider.md)

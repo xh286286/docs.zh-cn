@@ -2,14 +2,15 @@
 title: CustomBindingElement
 ms.date: 03/30/2017
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
-ms.openlocfilehash: 4609185857ffbce057c136d2c50a7b47aed341cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c8a46032aff4d5d2b3c4be8e887953ec1d2c11
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963613"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270727"
 ---
 # <a name="custombindingelement"></a>CustomBindingElement
+
 CustomBindingElement  
   
 ## <a name="syntax"></a>语法  
@@ -22,13 +23,16 @@ class CustomBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>方法  
+
  CustomBindingElement 类未定义任何方法。  
   
 ## <a name="properties"></a>属性  
+
  CustomBindingElement 类具有以下属性：  
   
-### <a name="name"></a>名称  
- 数据类型：String  
+### <a name="name"></a>“属性”  
+
+ 数据类型：字符串  
   
  访问类型：只读  
   
@@ -40,6 +44,6 @@ class CustomBindingElement : BindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Channels.CustomBinding>
