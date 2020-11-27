@@ -2,14 +2,15 @@
 title: ServiceTimeoutsBehavior
 ms.date: 03/30/2017
 ms.assetid: 4412525d-a3cc-4eae-b3e8-a50ce766d09d
-ms.openlocfilehash: 58e872f2b15776d65bccdcc47c353ce566cd9d2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867219130fc853f3ba2c1c2f807b1651f6480f13
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956723"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273966"
 ---
 # <a name="servicetimeoutsbehavior"></a>ServiceTimeoutsBehavior
+
 ServiceTimeoutsBehavior  
   
 ## <a name="syntax"></a>语法  
@@ -22,12 +23,15 @@ class ServiceTimeoutsBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>方法  
+
  ServiceTimeoutsBehavior 类未定义任何方法。  
   
 ## <a name="properties"></a>属性  
+
  ServiceTimeoutsBehavior 类具有以下属性：  
   
 ### <a name="transactiontimeout"></a>TransactionTimeout  
+
  数据类型：DateTime  
   
  访问类型：只读  
@@ -40,6 +44,6 @@ class ServiceTimeoutsBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

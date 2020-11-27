@@ -2,14 +2,15 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 04e6abc5941ec99769ff2c15d47881b60e81d2e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c69b73cc05a56a7556630de0f83675590442293
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048390"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274148"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
+
 ConnectionOrientedTransportBindingElement  
   
 ## <a name="syntax"></a>语法  
@@ -29,12 +30,15 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>方法  
+
  ConnectionOrientedTransportBindingElement 类不定义任何方法。  
   
 ## <a name="properties"></a>属性  
+
  ConnectionOrientedTransportBindingElement 类具有以下属性：  
   
 ### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
+
  数据类型：DateTime  
   
  访问类型：只读  
@@ -42,6 +46,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  指定在超时前可用于完成通道初始化的时间间隔。  
   
 ### <a name="connectionbuffersize"></a>ConnectionBufferSize  
+
  数据类型：sint32  
   
  访问类型：只读  
@@ -49,13 +54,15 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  用于从客户端或服务传输网络上的序列化消息块的缓冲区大小。  
   
 ### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
- 数据类型：String  
+
+ 数据类型：字符串  
   
  访问类型：只读  
   
  一个值，指示在对 URI 进行匹配时，是否使用主机名来访问服务。  
   
 ### <a name="maxbuffersize"></a>MaxBufferSize  
+
  数据类型：sint32  
   
  访问类型：只读  
@@ -63,6 +70,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  要使用的缓冲区最大大小。  
   
 ### <a name="maxoutputdelay"></a>MaxOutputDelay  
+
  数据类型：DateTime  
   
  访问类型：只读  
@@ -70,6 +78,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  消息块或完整消息在发出之前可以在内存中保持缓冲的最大时间间隔。  
   
 ### <a name="maxpendingaccepts"></a>MaxPendingAccepts  
+
  数据类型：sint32  
   
  访问类型：只读  
@@ -77,6 +86,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  可用于处理服务上的传入连接的最大挂起异步接受线程数。  
   
 ### <a name="maxpendingconnections"></a>MaxPendingConnections  
+
  数据类型：sint32  
   
  访问类型：只读  
@@ -84,7 +94,8 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  最大挂起连接数。  
   
 ### <a name="transfermode"></a>TransferMode  
- 数据类型：String  
+
+ 数据类型：字符串  
   
  访问类型：只读  
   
@@ -96,6 +107,6 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

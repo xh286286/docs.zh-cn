@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: d2d8556b1ed2ac0a2b030a88d6bfc0ad48ed6f5c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6253a0d76d8b1db938e789f19d2cdd5abba9b700
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557510"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273888"
 ---
 # <a name="workflow-security"></a>工作流安全性
+
 Windows Workflow Foundation (WF) 与几种不同的技术（例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 集成在一起。 如果操作不当，采用这些技术可能会给工作流带来安全问题。
 
 ## <a name="persistence-security-concerns"></a>持久性安全问题
@@ -45,6 +46,7 @@ Windows Workflow Foundation (WF) 与几种不同的技术（例如 Microsoft SQL
 - 也可通过访问 OperationContext 从工作流内提供传入消息的 ServiceSecurityContext。
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
+
  Microsoft WF Security Pack 社区技术预览版 (CTP) 1 是一组活动及其实现，它们基于[.NET Framework 4](/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) 和[Windows IDENTITY Foundation (WIF) ](/previous-versions/dotnet/framework/security/index)中的[Windows Workflow Foundation](index.md) 。 Microsoft WF Security Pack CTP 1 包含活动及其设计器，阐释如何使用工作流轻松地实现各种与安全相关的方案，包括：
 
 1. 在工作流中模拟客户端标识
