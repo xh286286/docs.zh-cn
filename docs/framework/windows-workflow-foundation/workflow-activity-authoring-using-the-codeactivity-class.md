@@ -2,17 +2,19 @@
 title: 使用 CodeActivity 类的工作流活动创作
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: e82122301ef412f9f145ef8b6e2c9e7b9033ced1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 714e0971a006db20d002b0f3a486533b1357fba7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656022"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293814"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>使用 CodeActivity 类的工作流活动创作
+
 从 <xref:System.Activities.CodeActivity> 继承而创建的活动可以通过重写 <xref:System.Activities.CodeActivity.Execute%2A> 方法来实现基本的命令性行为。
 
 ## <a name="using-codeactivitycontext"></a>使用 CodeActivityContext
+
  通过使用类型为 <xref:System.Activities.CodeActivity.Execute%2A> 的 `context` 参数的成员，可从 <xref:System.Activities.CodeActivityContext> 方法中访问工作流运行时的功能。 可通过 <xref:System.Activities.CodeActivityContext> 使用的功能如下：
 
 - 获取并设置变量和自变量的值。
@@ -25,11 +27,11 @@ ms.locfileid: "64656022"
 
 1. 打开 Visual Studio 2010。
 
-2. 选择**文件**，**新**，然后**项目**。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。
+2. 依次选择 " **文件**"、" **新建**" 和 " **项目**"。 在 "**项目类型**" 窗口中的 " **Visual c #** " 下选择 " **Workflow 4.0** "，然后选择 " **v2010** " 节点。 在 "**模板**" 窗口中选择 "**活动库**"。 将新项目命名为 HelloActivity。
 
-3. 右击 HelloActivity 项目中的 Activity1.xaml，然后选择**删除**。
+3. 右键单击击 helloactivity 项目中的 Activity1，然后选择 " **删除**"。
 
-4. 右击 HelloActivity 项目并选择**外**，然后**类**。 将新类命名为 HelloActivity.cs。
+4. 右键单击 "击 helloactivity" 项目，然后依次选择 " **添加** "、" **类**"。 将新类命名为 HelloActivity.cs。
 
 5. 在 HelloActivity.cs 文件中，添加以下 `using` 指令。
 

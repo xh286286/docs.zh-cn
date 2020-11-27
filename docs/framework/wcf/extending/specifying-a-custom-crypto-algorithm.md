@@ -2,14 +2,15 @@
 title: 指定自定义加密算法
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 3b4690071ac148966601a1c0f50edfd5a9fd52fc
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: bdb7d45752be94c4c81e27161f57f765d64bd94a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163228"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293996"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自定义加密算法
+
 WCF 允许指定在加密数据或计算数字签名时使用的自定义加密算法。 为此，请执行下列步骤：  
   
 1. 从 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 中派生一个类  
@@ -19,6 +20,7 @@ WCF 允许指定在加密数据或计算数字签名时使用的自定义加密�
 3. 配置与 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 派生类的绑定。  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>从 SecurityAlgorithmSuite 中派生一个类  
+
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 是一个抽象基类，可用于指定执行各种安全相关操作时使用的算法。 例如，计算数字签名的哈希值或加密消息。 以下代码揭示了如何从 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 中派生类：  
   
 ```csharp  
@@ -87,6 +89,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 ```  
   
 ## <a name="register-the-custom-algorithm"></a>注册自定义算法  
+
  注册可在配置文件或命令性代码中完成。 注册自定义算法时，要在实现加密服务提供程序的类与别名之间创建一个映射。 然后，该别名将映射到在 WCF 服务的绑定中指定算法时使用的 URI。 以下配置代码段揭示了如何在配置文件中注册自定义算法：  
   
 ```xml  
@@ -116,6 +119,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://contoso.c
 ```  
   
 ## <a name="configure-the-binding"></a>配置绑定  
+
  要配置绑定，可在绑定设置中指定自定义  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 派生类，如下面的代码段所示：  
   
 ```csharp  
@@ -130,4 +134,4 @@ WSHttpBinding binding = new WSHttpBinding();
 - [保护服务和客户端的安全](../feature-details/securing-services-and-clients.md)
 - [保证服务的安全](../securing-services.md)
 - [安全性概述](../feature-details/security-overview.md)
-- [安全概念](../feature-details/security-concepts.md)
+- [安全性概念](../feature-details/security-concepts.md)

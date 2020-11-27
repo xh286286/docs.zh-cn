@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9c241c06f153e4f85c70459ff3c50889057103f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295036"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>如何：配置 WCF 服务以与 ASP.NET Web 服务客户端进行互操作
 
@@ -18,7 +18,7 @@ ms.locfileid: "90556637"
   
  你可以根据需要在该绑定上启用对 HTTPS 和传输级客户端身份验证的支持。 ASP.NET Web 服务客户端不支持 MTOM 消息编码，因此 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 属性应保留为其默认值，即 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> 。 ASP.NET Web 服务客户端不支持 WS 安全，因此 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 应将设置为 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> 。  
   
- 若要使 WCF 服务的元数据可用于 ASP.NET Web 服务代理生成工具 (即， [Web 服务描述语言工具 ( # A0) ](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))、 [Web 服务发现工具 ( # A1) ](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))以及 Visual Studio 中的 " **添加 Web 引用** " 功能) ，你应公开 HTTP/GET 元数据终结点。  
+ 若要使 WCF 服务的元数据可用于 ASP.NET Web 服务代理生成工具 (即， [Web 服务描述语言工具 ( # A0)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))、 [Web 服务发现工具 ( # A1)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))以及 Visual Studio 中的 " **添加 Web 引用** " 功能) ，你应公开 HTTP/GET 元数据终结点。  
   
 ## <a name="add-an-endpoint-in-code"></a>在代码中添加终结点  
   
@@ -41,13 +41,14 @@ ms.locfileid: "90556637"
 4. 为服务启用一个 HTTP/GET 元数据终结点。 有关详细信息，请参阅 [如何：使用配置文件发布服务的元数据](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)。  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例演示如何在代码中或在配置文件中添加与 ASP.NET Web 服务客户端兼容的 WCF 终结点。  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：在代码中创建服务终结点](how-to-create-a-service-endpoint-in-code.md)
 - [如何：使用代码发布服务的元数据](how-to-publish-metadata-for-a-service-using-code.md)

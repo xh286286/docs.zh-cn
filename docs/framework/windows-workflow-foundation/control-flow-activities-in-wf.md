@@ -3,15 +3,16 @@ title: WF 中的控制流活动
 description: 本文总结了用于控制工作流中执行流的 .NET Framework 4.6.1 活动。
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-ms.openlocfilehash: 18ff982d3f215e3fd46108eb2411f3d1a5ab9745
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: fbb36ca181513a687eca7b19535bf2eb4fd4f777
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420066"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294165"
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 中的控制流活动
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供用于控制工作流中执行流的多个活动。 其中一些活动（如 `Switch` 和 `If` ）实现与编程环境（如 Visual c #）中的流控制结构，而其他活动（如 `Pick` ）则模型为新编程结构。  
+
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供用于控制工作流中执行流的多个活动。 其中的某些活动 (例如 `Switch` 和 `If`) 实现与编程环境（如 Visual c #）中的流控制结构，而其他活动 (如 `Pick`) 为新编程结构建模。  
   
  请注意，当诸如 `Parallel` 和 `ParallelForEach` 活动之类的活动计划同时执行多个子活动时，一个工作流只能使用单个线程。 这些活动的每个子活动都按顺序执行，并在前面的活动完成或变为空闲之前，不会执行后续活动。 因此，这些活动对于某些应用程序来说最有用，这些应用程序中的多个可能阻止执行的活动必须采用交错的方式执行。 如果这些活动中没有任何子活动变为空闲，则 `Parallel` 活动执行方式就像 `Sequence` 活动一样，并且 `ParallelForEach` 活动执行方式就像 `ForEach` 活动一样。 然而，如果使用异步活动（例如从 <xref:System.Activities.AsyncCodeActivity> 派生的活动）或消息活动，则控件制将传递给下一个分支，同时子活动等待其要接收的消息或其要完成的异步工作。  
   

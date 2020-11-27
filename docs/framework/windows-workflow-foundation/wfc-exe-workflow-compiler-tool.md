@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Workflow, compilation
 - Workflow, XOML files
 - Workflow, wcf
-ms.openlocfilehash: cf89962014584adf098118044b063b38b29160b7
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 01cbfeb72e19f727a3a470059047a2192228c394
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844610"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293853"
 ---
 # <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (工作流命令行编译器工具) 
+
 > [!NOTE]
 > 本材料讨论的类型和命名空间已废弃不用。
 
@@ -94,7 +95,8 @@ wfc.exe 工作流命令行编译器工具适用于文件扩展名为 *xoml* () �
     /nowarn                 Ignore compiler warnings. Short form is '/w'.
 ```
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
+
 > [!NOTE]
 > 本材料讨论的类型和命名空间已废弃不用。
 
@@ -119,6 +121,6 @@ wfc.exe 工作流命令行编译器工具适用于文件扩展名为 *xoml* () �
 > [!WARNING]
 > 当 `Type="System.*"` 类型存在时，可以包括其他不需要的类型（如 `Type="System.Configuration"` ）进行编译。 你应谨慎，并查看每个。 对于应限制的任何类型，请确保将设置 `Authorized` 为 `False` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AuthorizedType 类](xref:System.Workflow.ComponentModel.Compiler.AuthorizedType)

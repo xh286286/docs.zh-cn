@@ -2,17 +2,19 @@
 title: 支持令牌
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: ff46a2f5289bc72244ea586f01ea05504d628f69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d7e2a824060f4be05e0b0e9d1765fcf271eacbd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293658"
 ---
 # <a name="supporting-tokens"></a>支持令牌
+
 支持令牌示例演示如何将其他令牌添加到使用 WS-Security 的消息。 该示例除添加用户名安全令牌外，还添加 X.509 二进制安全令牌。 在 WS-Security 消息头中将令牌从客户端传递到服务，部分消息使用与 X.509 安全令牌关联的私钥进行签名，以证明 X.509 证书相对于接收方的所有权。 这可用于当要求有多个与消息关联的声明时对发送方进行身份验证或授权。 该服务实现定义“请求-答复”通信模式的协定。
 
 ## <a name="demonstrates"></a>演示
+
  本示例演示：
 
 - 客户端如何向服务传递其他安全令牌。
@@ -25,6 +27,7 @@ ms.locfileid: "90555193"
 > 本主题的最后介绍了此示例的设置过程和生成说明。
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>使用用户名令牌进行客户端身份验证并支持 X.509 安全令牌
+
  服务公开一个用于通信的单一终结点，此终结点是使用 `BindingHelper` 和 `EchoServiceHost` 类以编程方式创建的。 终结点由地址、绑定和协定组成。 此绑定使用 `SymmetricSecurityBindingElement` 和 `HttpTransportBindingElement` 按照自定义绑定进行配置。 本示例设置了 `SymmetricSecurityBindingElement` 以便使用服务 X.509 证书在传输过程中保护对称密钥和在 WS-Security 消息头中传递 `UserNameToken` 并支持 `X509SecurityToken`。 对称密钥用于对消息正文和用户名安全令牌进行加密。 支持令牌在 WS-Security 消息头中作为附加二进制安全令牌进行传递。 支持令牌的真实性是使用与支持 X.509 安全令牌关联的私钥通过消息的签名部分证实的。
 
 ```csharp
@@ -282,6 +285,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>显示调用方信息
+
  若要显示调用方信息，可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下面的代码中所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含与当前调用方关联的授权声明。 通过 Windows Communication Foundation 消息中收到的每个令牌 (WCF) ，自动提供这些声明。
 
 ```csharp
@@ -345,14 +349,17 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>运行示例
+
  运行此示例时，客户端首先提示您为用户名令牌提供用户名和密码。 请确保为系统帐户提供正确的值，因为服务上的 WCF 将用户名令牌中提供的值映射到系统提供的标识中。 此后，客户端会显示来自服务的响应。 在客户端窗口中按 Enter 可以关闭客户端。
 
 ## <a name="setup-batch-file"></a>设置批处理文件
+
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行以 Internet 信息服务 (IIS) 为宿主的应用程序，该应用程序要求基于服务器证书的安全性。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。
 
 ### <a name="creating-the-client-certificate"></a>创建客户端证书
+
  Setup.bat 批处理文件中的以下行创建将要使用的客户端证书。 `%CLIENT_NAME%` 变量指定客户端证书的主题。 本示例使用“client.com”作为主题名称。
 
  证书存储在 `CurrentUser` 存储位置下的 My（个人）存储区中。
@@ -365,6 +372,7 @@ makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -p
 ```
 
 ### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>将客户端证书安装到服务器的受信任存储区中
+
  Setup.bat 批处理文件中的以下行将客户端证书复制到服务器的受信任的人的存储区中。 因为服务器系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
 ```console
@@ -375,6 +383,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```
 
 ### <a name="creating-the-server-certificate"></a>创建服务器证书
+
  Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。
 
  证书存储在 LocalMachine 存储位置下的 My（个人）存储区中。 对于 IIS 承载的服务，证书存储在 LocalMachine 存储区中。 对于自承载服务，应该通过用 CurrentUser 替换字符串 LocalMachine 来修改批处理文件，以便将服务器证书存储在 CurrentUser 存储位置中。
@@ -390,6 +399,7 @@ makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -
 ```
 
 ### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>将服务器证书安装到客户端的受信任证书存储区中
+
  Setup.bat 批处理文件中的以下行将服务器证书复制到客户端的受信任的人的存储区中。 因为客户端系统不隐式信任 Makecert.exe 生成的证书，所以需要执行此步骤。 如果您已经拥有一个证书，该证书来源于客户端的受信任根证书（例如由 Microsoft 颁发的证书），则不需要执行使用服务器证书填充客户端证书存储区这一步骤。
 
 ```console
@@ -399,6 +409,7 @@ echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r C
 ```
 
 ### <a name="enabling-access-to-the-certificates-private-key"></a>启用对证书私钥的访问
+
  若要从 IIS 承载的服务启用对证书私钥的访问，必须为 IIS 承载的进程运行时所使用的用户帐户授予对该私钥的适当权限。 这将由 Setup.bat 脚本中的最后步骤来完成。
 
 ```console

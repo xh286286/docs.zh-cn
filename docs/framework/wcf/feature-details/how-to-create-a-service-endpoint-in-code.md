@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 3b2ff2a17975bc381db61edc2c0f85f67edd3325
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6f5e06154ff19129da0bce77dd70736037c2dc92
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247047"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294412"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>如何：在代码中创建服务终结点
+
 在本示例中，将为计算器服务定义一个 `ICalculator` 协定，在 `CalculatorService` 类中实现该服务，然后在代码中定义其终结点（在这段代码中还指定该服务必须使用 <xref:System.ServiceModel.BasicHttpBinding> 类）。  
   
  通常，最佳做法是以声明方式在配置中指定绑定和地址信息，而不是在代码中强制指定。 在代码中定义终结点通常是不可行的，因为已部署服务的绑定和地址通常与在部署服务时所用的绑定和地址不同。 一般说来，通过将绑定和寻址信息放置在代码之外，无需重新编译或重新部署应用程序即可更改这些信息。  
@@ -47,6 +48,6 @@ ms.locfileid: "85247047"
   
      有关默认终结点的详细信息，请参阅[WCF 服务的](../samples/simplified-configuration-for-wcf-services.md)[简化配置](../simplified-configuration.md)和简化配置。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：在代码中指定服务绑定](../how-to-specify-a-service-binding-in-code.md)

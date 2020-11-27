@@ -3,17 +3,19 @@ title: 变量和自变量
 description: 本文介绍变量，这些变量表示数据的存储和自变量，这些变量表示与 Workflow Foundation 中的活动之间的数据流。
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9d593fa5a974524cf976361de9871d3877e58c2d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201946"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293879"
 ---
 # <a name="variables-and-arguments"></a>变量和自变量
-在 Windows Workflow Foundation （WF）中，变量表示数据的存储，参数表示流入和流出活动的数据流。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
+
+在 Windows Workflow Foundation (WF) ，变量表示数据的存储和自变量表示流入和流出活动的数据流。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
   
 ## <a name="variables"></a>变量  
+
  变量是数据的存储位置。 变量被声明为工作流定义的一部分。 变量在运行时获取值，并将这些值存储为工作流实例状态的一部分。 变量定义指定了变量的类型，如果需要，还可指定变量的名称。 以下代码演示如何声明变量，使用 <xref:System.Activities.Statements.Assign%601> 活动为变量赋值，然后使用 <xref:System.Activities.Statements.WriteLine> 活动将其值显示在控制台上。  
   
 ```csharp  
@@ -57,9 +59,11 @@ Variable<string> var = new Variable<string>
 ```  
   
 ## <a name="variable-scoping"></a>变量的作用域  
+
  变量在运行时的生存期与声明该变量的活动的生存期相同。 活动完成后，其变量将被清除，并且无法再引用。  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
+
  活动作者使用参数来定义数据流入流出活动的方式。 每个自变量都有特定的方向：<xref:System.Activities.ArgumentDirection.In>、<xref:System.Activities.ArgumentDirection.Out>、或 <xref:System.Activities.ArgumentDirection.InOut>。  
   
  工作流运行时对数据流入流出活动的时间有以下保证：  
@@ -73,6 +77,7 @@ Variable<string> var = new Variable<string>
  活动作者可以使用强类型机制来公开其参数。 实现方法是声明 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 和 <xref:System.Activities.InOutArgument%601> 类型的属性。 这允许活动作者建立有关流入流出活动的数据的特定协定。  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>定义活动的自变量  
+
  可通过指定 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 和 <xref:System.Activities.InOutArgument%601> 类型的属性来定义活动的自变量。 以下代码演示如何为 `Prompt` 活动定义参数，该活动接收一个字符串以显示给用户，并返回包含用户响应的字符串。  
   
 ```csharp  
@@ -88,6 +93,7 @@ public class Prompt : Activity
 > 返回单个值的活动可从 <xref:System.Activities.Activity%601>、<xref:System.Activities.NativeActivity%601> 或 <xref:System.Activities.CodeActivity%601> 派生。 这些活动拥有定义完善的名为 <xref:System.Activities.OutArgument%601> 的 <xref:System.Activities.Activity%601.Result%2A>，它包含活动的返回值。  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>在工作流中使用变量和自变量  
+
  以下示例演示如何在工作流中使用变量和自变量。 该工作流是一个声明三个变量：`var1`、`var2` 和 `var3` 的序列。 该工作流中的第一个活动是 `Assign` 活动，它将变量 `var1` 的值赋给变量 `var2`。 接下来是 `WriteLine` 活动，该活动打印 `var2` 变量的值。 之后是另一个 `Assign` 活动，该活动将变量 `var2` 的值赋给变量 `var3`。 最后是另一个 `WriteLine` 活动，该活动打印 `var3` 变量的值。 第一个 `Assign` 活动使用 `InArgument<string>` 和 `OutArgument<string>` 对象，显式表示对活动自变量的绑定。 将 `InArgument<string>` 用于 <xref:System.Activities.Statements.Assign.Value%2A> 是因为值通过其 <xref:System.Activities.Statements.Assign%601> 自变量流入 <xref:System.Activities.Statements.Assign.Value%2A> 活动，而将 `OutArgument<string>` 用于 <xref:System.Activities.Statements.Assign.To%2A> 是因为值从 <xref:System.Activities.Statements.Assign.To%2A> 自变量流出而赋给变量。 第二个 `Assign` 活动完成相同的操作，它采用更加紧凑的语法，通过使用隐式强制转换而达到相同目的。 `WriteLine` 活动也使用紧凑语法。  
   
 ```csharp  
@@ -124,6 +130,7 @@ WorkflowInvoker.Invoke(wf);
 ```  
   
 ### <a name="using-variables-and-arguments-in-code-based-activities"></a>在基于代码的活动中使用变量和参数  
+
  先前的示例演示如何在工作流和声明性活动中使用自变量和变量。 自变量和变量也用在基于代码的活动中。 从概念上来说，二者的使用非常相似。 变量表示活动中的数据存储区，而自变量表示流入或流出活动的数据，二者由工作流作者绑定到工作流中表示数据流至或流出位置的其他变量或自变量。 若要获取或设置活动中的变量或参数的值，必须使用表示该活动当前执行环境的活动上下文。 活动上下文由工作流运行时传入活动的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法中。 在本示例中，为自定义 `Add` 活动定义了两个 <xref:System.Activities.ArgumentDirection.In> 参数。 为了访问这些自变量的值，使用了 <xref:System.Activities.Argument.Get%2A> 方法，并使用了由工作流运行时传入的上下文。  
   
 ```csharp  

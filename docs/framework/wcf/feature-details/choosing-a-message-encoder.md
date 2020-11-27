@@ -2,24 +2,25 @@
 title: 选择消息编码器
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: fd5bc2270f2e4095ef6ad2b1d89af3560fb8d312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8b53c17cccc74153e652494ec9753302cda8679b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559366"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295153"
 ---
 # <a name="choose-a-message-encoder"></a>选择消息编码器
 
 本文讨论在 Windows Communication Foundation (WCF) ：二进制、文本和消息传输优化机制 (MTOM) 中所包含的消息编码器之间进行选择的条件。  
   
- 在 WCF 中，可以指定如何通过 *绑定*（由一系列 *绑定元素*组成）在终结点之间通过网络传输数据。 消息编码器由绑定堆栈中的消息编码绑定元素表示。 绑定包括多个可选协议绑定元素（如安全绑定元素或可靠消息绑定元素）、一个必需的消息编码绑定元素以及一个必需的传输绑定元素。  
+ 在 WCF 中，可以指定如何通过 *绑定*（由一系列 *绑定元素* 组成）在终结点之间通过网络传输数据。 消息编码器由绑定堆栈中的消息编码绑定元素表示。 绑定包括多个可选协议绑定元素（如安全绑定元素或可靠消息绑定元素）、一个必需的消息编码绑定元素以及一个必需的传输绑定元素。  
   
  消息编码绑定元素位于可选协议绑定元素之下和必需的传输绑定元素之上。 在传出端，消息编码器序列化传出 <xref:System.ServiceModel.Channels.Message> 并将其传递到传输层。 在传入端，消息编码器从传输层接收已序列化的 <xref:System.ServiceModel.Channels.Message> 并将其传递到更高的协议层（如果存在），如果不存在此协议层，则传递到应用程序。  
   
  当连接到预先存在的客户端或服务器时，因为您需要将消息以另一端预期的方式来解码，所以您不能选择使用特定消息编码。 但是，如果您正在编写 WCF 服务，则可以通过多个终结点公开服务，每个终结点使用不同的消息编码。 这使客户端可以选择最佳的编码以通过最适合的终结点与您的服务通话，还使客户端可以灵活地选择最适合的编码。 使用多个终结点还使你可以将不同消息编码的优点与其他绑定元素结合起来。  
   
 ## <a name="system-provided-encoders"></a>系统提供的编码器  
+
  WCF 包含三种消息编码器，由以下三个类表示：  
   
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>，文本消息编码器，同时支持纯 XML 编码和 SOAP 编码。 文本消息编码器的纯 XML 编码模式称为“纯旧式 XML”(POX)，以便与基于文本的 SOAP 编码进行区分。 若要启用 POX，请将 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> 属性设置为 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。 使用短信编码器与非 WCF 终结点互操作。  
@@ -29,11 +30,12 @@ ms.locfileid: "90559366"
 - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>，绑定元素，指定使用 MTOM 编码的消息的字符编码和消息版本。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器会尝试在效率和互操作性之间建立平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。 就效率而言，WCF 提供的编码器之间的 MTOM 介于文本 (最慢的) 和二进制 (最快的) 。  
   
 ## <a name="how-to-choose-a-message-encoder"></a>如何选择消息编码器  
+
  下表说明了用于选择消息编码器的常用因素。 确定因素对于您的应用程序重要性顺序，然后选择最适用于这些因素的消息编码器。 请确保考虑此表中未列出的其他因素和在您的应用程序中可能需要的任何自定义消息编码器。  
   
 |因子|说明|支持此因素的编码器|  
 |------------|-----------------|---------------------------------------|  
-|支持的字符集|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 仅支持 UTF8 和 UTF16 Unicode (*大字节序*) 编码*little-endian* 。 如果需要其他编码（如 UTF7 或 ASCII），则必须使用自定义编码器。 有关示例自定义编码器，请参阅 [自定义消息编码器](../samples/custom-message-encoder-custom-text-encoder.md)。|文本|  
+|支持的字符集|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 仅支持 UTF8 和 UTF16 Unicode (*大字节序*) 编码 *little-endian* 。 如果需要其他编码（如 UTF7 或 ASCII），则必须使用自定义编码器。 有关示例自定义编码器，请参阅 [自定义消息编码器](../samples/custom-message-encoder-custom-text-encoder.md)。|文本|  
 |检查|检查是在传送期间检查消息的功能。 使用或不使用 SOAP 的文本编码使很多程序不用专用工具就可以检查和分析消息。 使用传输安全时，在消息或传输级别，会影响检查消息的能力。 保密性会保护消息免于检查，完整性会保护消息免于修改。|文本|  
 |可靠性|可靠性是编码器传输错误的复原能力。 也可以在消息层、传输层和应用程序层提供可靠性。 所有标准 WCF 编码器都假定另一层提供可靠性。 编码器几乎没有从传输错误恢复的能力。|无|  
 |简单|简单性表示为编码规范创建编码器和解码器的简便性。 文本编码在简单性方面具有明显的优势，POX 文本编码的另一个优点在于不需要支持处理 SOAP。|文本 (POX)|  
@@ -83,6 +85,6 @@ IgnoreWhitespace 设置被忽略。
 
 客户端和服务都需要同意发送和接收压缩消息，因此必须在客户端和服务上的 binaryMessageEncoding 元素上配置 compressionFormat 属性。 如果未将服务或客户端配置为压缩，而另一端为，则会引发 ProtocolException。 应该仔细考虑如何启用压缩。 如果网络带宽是一个瓶颈，则压缩非常有用。 如果 CPU 是瓶颈，则压缩会减小吞吐量。 必须在模拟环境中进行相应的测试，以确定这对于应用程序是否有好处  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [绑定](bindings.md)

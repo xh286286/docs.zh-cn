@@ -2,14 +2,15 @@
 title: 受信任的外观服务
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 80f139ace43d5f8d2136528681386711bea7a1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544175"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295049"
 ---
 # <a name="trusted-facade-service"></a>受信任的外观服务
+
 本方案示例演示如何使用 Windows Communication Foundation (WCF) 安全基础结构将调用方的标识信息从一个服务流到另一个服务。  
   
  使用外观服务向公共网络公开由服务提供的功能是一种常见设计模式。 外观服务通常驻留在周边网络（也称为 DMZ、外围安全区域和被筛选的子网）中，可与实现业务逻辑的后端服务通信和访问内部数据。 外观服务和后端服务之间的通信通道通过防火墙并通常仅限用于单一目的。  
@@ -28,9 +29,11 @@ ms.locfileid: "90544175"
 > 后端服务委托外观服务对调用方进行身份验证。 因此，后端服务不再对调用方进行身份验证；它使用外观服务在转发的请求中提供的标识信息。 由于此信任关系，后端服务必须对外观服务进行身份验证，以确保转发的消息来自受信任的源（在本例中为外观服务）。  
   
 ## <a name="implementation"></a>实现  
+
  本示例中有两个通信路径： 第一个路径是在客户端和外观服务之间，第二个路径是在外观服务和后端服务之间。  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>客户端和外观服务之间的通信路径  
+
  客户端到外观服务这一通信路径使用具有 `wsHttpBinding` 客户端凭据类型的 `UserName` 。 这意味着客户端使用用户名和密码对外观服务进行身份验证，而外观服务使用 X.509 证书对客户端进行身份验证。 绑定配置如下例所示：  
   
 ```xml  
@@ -93,6 +96,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>外观服务和后端服务之间的通信路径  
+
  外观服务到后端服务这一通信路径使用包含多个绑定元素的 `customBinding` 。 此绑定可实现两个目的。 它对外观服务和后端服务进行身份验证，以确保通信的安全并确保通信来自受信任的源。 另外，它还可在 `Username` 安全令牌中传输初始调用方的标识。 在这种情况下，只将初始调用方的用户名传输到后端服务，密码不包括在消息中。 这是因为在将请求转发给调用方之前，后端服务会委托外观服务对调用方进行身份验证。 由于外观服务会向后端服务对其自身进行身份验证，因此后端服务可以信任所转发请求中包含的信息。  
   
  下面是此通信路径的绑定配置。  
@@ -212,6 +216,7 @@ public string GetCallerIdentity()
  使用 `ServiceSecurityContext.Current.WindowsIdentity` 属性提取外观服务帐户信息。 为访问有关初始调用方的信息，后端服务使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 属性。 该属性查找类型为 `Identity` 的 `Name`声明。 此声明是由 WCF 安全基础结构根据安全令牌中包含的信息自动生成的 `Username` 。  
   
 ## <a name="running-the-sample"></a>运行示例  
+
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。 在外观服务和后端服务控制台窗口中按 Enter 可以关闭服务。  
   
 ```console  

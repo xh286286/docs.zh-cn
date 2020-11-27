@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 13368dfa7ca9d7981ac146b87e83f77077eaf537
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ee0fb5f08446b03485f97de0037e898415016fea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320724"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295270"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 服务模块配置工具 (ComSvcConfig.exe)
+
 利用 COM+ 服务模块配置命令行工具 (ComSvcConfig.exe)，你可以配置要作为 Web 服务公开的 COM+ 接口。  
   
 ## <a name="syntax"></a>语法  
@@ -30,7 +31,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- 有关 Comsvcconfig.exe 的详细信息，请参阅[如何：使用 COM + 服务模型配置工具](./feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+ 有关 ComSvcConfig.exe 的详细信息，请参阅 [如何：使用 COM + 服务模型配置工具](./feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
  下表介绍可用于 ComSvcConfig.exe 的模式。  
   
@@ -42,13 +43,13 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  下表介绍可用于 ComSvcConfig.exe 的标志。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationID* &#124; *ApplicationName* \>|指定要配置的 COM+ 应用程序。<br /><br /> 缩写形式：`/a`。|  
-|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*，*InterfaceID* &#124; *InterfaceName* &#124; 1 2|指定将作为服务协定配置的 COM+ 组件和接口。<br /><br /> 缩写形式：`/c`。<br /><br /> 尽管在指定组件和接口名称时可以使用通配符（\*），但我们建议您不要使用通配符，因为您可能会公开您不打算使用的接口。|  
-|\<*complus* &#124; *`/hosting:` \>*|指定是使用 COM+ 宿主模式还是 Web 宿主模式。<br /><br /> 缩写形式：`/h`。<br /><br /> 如果使用 COM+ 宿主模式，将需要显式激活 COM+ 应用程序。 如果使用 Web 宿主模式，将能够按照需要自动激活 COM+ 应用程序。 如果 COM+ 应用程序是库应用程序，它将在 Internet 信息服务 (IIS) 进程中运行。 如果 COM+ 应用程序是服务器应用程序，它将在 Dllhost.exe 进程中运行。|  
-|`/webSite:` \<*WebsiteName* \>|指定使用 Web 宿主模式时（请参见 `/hosting` 标志）用于宿主的网站。<br /><br /> 缩写形式：`/w`。<br /><br /> 如果未指定网站，则使用默认网站。|  
-|`/webDirectory:` \<*WebDirectoryName* \>|指定在使用 Web 宿主时（请参见 `/hosting` 标志）用于宿主的虚拟目录。<br /><br /> 缩写形式：`/d`。|  
+|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|指定要配置的 COM+ 应用程序。<br /><br /> 缩写形式：`/a`。|  
+|`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|指定将作为服务协定配置的 COM+ 组件和接口。<br /><br /> 缩写形式：`/c`。<br /><br /> 尽管 \* 指定组件和接口名称时可以使用通配符 () ，但建议不要使用它，因为可能会公开您不打算使用的接口。|  
+|`/hosting:` \<*complus*  &#124; *was*\>|指定是使用 COM+ 宿主模式还是 Web 宿主模式。<br /><br /> 缩写形式：`/h`。<br /><br /> 如果使用 COM+ 宿主模式，将需要显式激活 COM+ 应用程序。 如果使用 Web 宿主模式，将能够按照需要自动激活 COM+ 应用程序。 如果 COM+ 应用程序是库应用程序，它将在 Internet 信息服务 (IIS) 进程中运行。 如果 COM+ 应用程序是服务器应用程序，它将在 Dllhost.exe 进程中运行。|  
+|`/webSite:` \<*WebsiteName*\>|指定使用 Web 宿主模式时（请参见 `/hosting` 标志）用于宿主的网站。<br /><br /> 缩写形式：`/w`。<br /><br /> 如果未指定网站，则使用默认网站。|  
+|`/webDirectory:` \<*WebDirectoryName*\>|指定在使用 Web 宿主时（请参见 `/hosting` 标志）用于宿主的虚拟目录。<br /><br /> 缩写形式：`/d`。|  
 |`/mex`|将元数据交换 (MEX) 服务终结点添加到默认服务配置，以支持要从服务中检索协定定义的客户端。<br /><br /> 缩写形式：`/x`。|  
 |`/id`|以 ID 的形式显示应用程序、组件和接口信息。<br /><br /> 缩写形式：`/k`。|  
 |`/nologo`|防止 ComSvcConfig.exe 显示其徽标。<br /><br /> 缩写形式：`/n`。|  
@@ -58,7 +59,8 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 ## <a name="examples"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
+
  下面的示例使用 COM+ 宿主模式将 `IFinances` 组件（来自 OnlineStore COM+ 应用程序）的 `ItemOrders.IFinancial` 接口添加到作为 Web 服务公开的接口集中。 除遇到的任何错误外还将输出所有警告。  
   
 ### <a name="code"></a>代码  
@@ -67,7 +69,8 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
+
  下面的示例使用 Web 宿主模式将 `IStockLevels` 组件（来自 OnlineWarehouse COM+ 应用程序）的 `ItemInventory.Warehouse` 接口添加到作为 Web 服务公开的接口集中。 Web 服务是宿主在 IIS 的 OnlineWarehouse 虚拟目录中的网站。  
   
 ### <a name="code"></a>代码  
@@ -76,7 +79,8 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
+
  下面的示例从作为 Web 服务公开的接口集中移除 `IFinances` 组件（来自 OnlineStore COM+ 应用程序）的 `ItemOrders.Financial` 接口。  
   
 ### <a name="code"></a>代码  
@@ -85,7 +89,8 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
+
  下面的示例为本地计算机上的 OnlineStore COM+ 应用程序列出当前公开的 COM+ 主机接口，以及相应的地址和绑定详细信息。  
   
 ### <a name="code"></a>代码  

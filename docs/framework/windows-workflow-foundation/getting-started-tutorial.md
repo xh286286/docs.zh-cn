@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-ms.openlocfilehash: 148ba77231067bf5f8ff1d8b444b83d951ce8761
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e9856320faa82becf12dda04d02f6f1c08081feb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419845"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293593"
 ---
 # <a name="getting-started-tutorial"></a>入门教程
-本部分包含一组演练主题，其中介绍了如何对 Windows Workflow Foundation （WF）应用程序进行编程。 按照这些主题中的过程操作，将生成一个猜数游戏应用程序。 本教程中的第一个主题将逐步引导您创建工作流所需的自定义活动。 在第二个主题中，将这些活动与内置的工作流活动组合成一个流程图工作流。 在第三个主题中，配置主机应用程序以运行工作流，并在最后的主题中介绍持久性。 此过程的每一步骤都依赖于前面的步骤，因此建议您按顺序完成这些步骤。  
+
+本部分包含一组演练主题，介绍如何对 Windows Workflow Foundation (WF) 应用程序进行编程。 按照这些主题中的过程操作，将生成一个猜数游戏应用程序。 本教程中的第一个主题将逐步引导您创建工作流所需的自定义活动。 在第二个主题中，将这些活动与内置的工作流活动组合成一个流程图工作流。 在第三个主题中，配置主机应用程序以运行工作流，并在最后的主题中介绍持久性。 此过程的每一步骤都依赖于前面的步骤，因此建议您按顺序完成这些步骤。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [如何：创建活动](how-to-create-an-activity.md)  
  介绍如何创建从 <xref:System.Activities.NativeActivity%601> 派生的自定义活动，以及如何使用活动设计器将此活动与内置的活动组合成一个复合活动。  
   

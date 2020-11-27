@@ -2,14 +2,15 @@
 title: SystemWebRouting 集成示例
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 58d720f164c4c35f3de4c282e9aa983d11e4040b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c3093097c5bf11e1d4dd5d3124c9fbae4b3665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293905"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 集成示例
+
 此示例演示 <xref:System.Web.Routing> 命名空间中承载层与类的集成。 通过 <xref:System.Web.Routing> 命名空间中的类，应用程序可以使用不直接与物理资源对应的 URL。 使用 Web 路由，开发人员可以创建 HTTP 的虚拟地址，然后将其映射回实际的 WCF 服务。 如果必须以不使用物理文件或资源的方式承载 WCF 服务，或者必须使用不包含 .html 或 .aspx 这类文件的 URL 访问服务时，这会十分有用。 此示例演示如何利用 <xref:System.Web.Routing.RouteTable> 类创建映射到 global.asax 中定义的运行服务的虚拟 URI。
 
 > [!NOTE]
@@ -83,6 +84,6 @@ ms.locfileid: "90555216"
 > [!NOTE]
 > 如果默认应用程序池版本设置为版本2，则必须将其更新为 .NET Framework 4。  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [AppFabric 承载和持久性示例](/previous-versions/appfabric/ff383418(v=azure.10))

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 7ba64f28d621dad51957438025de22827405dd87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4349b53ca86c0ed8bd7e0527ad1e903543f56631
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558662"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294395"
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
+
 消息安全匿名示例演示如何实现 Windows Communication Foundation (WCF) 应用程序，该应用程序使用不带客户端身份验证的消息级安全性，但需要使用服务器的 x.509 证书进行服务器身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于 [WSHttpBinding](wshttpbinding.md) 示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。
 
 > [!NOTE]

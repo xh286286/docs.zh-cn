@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558883"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295075"
 ---
 # <a name="common-security-scenarios"></a>常用安全方案
+
 本节中的主题对众多可能的客户端和服务安全配置进行分类。 配置会随多种因素而变化。 例如，服务或客户端是否位于 Intranet 上，或者安全性是由 Windows 提供还是由传输（如 HTTPS）提供。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [不安全的 Internet 客户端和服务](internet-unsecured-client-and-service.md)  
  一个公共的、不安全的客户端和服务的示例。  
   
@@ -58,9 +60,11 @@ ms.locfileid: "90558883"
  客户端访问分布在网络上的一个或多个 Web 服务。 Web 服务访问必须加以保护的其他资源（如数据库或其他 Web 服务）。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [授权](authorization-in-wcf.md)  
   
  [安全性概述](security-overview.md)  
@@ -79,7 +83,7 @@ ms.locfileid: "90558883"
   
  [审核](auditing-security-events.md)  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安全指导和最佳做法](security-guidance-and-best-practices.md)
 - [Windows Server App Fabric 的安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,15 +2,16 @@
 title: 如何：实现使用发现代理查找服务的客户端应用程序
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7316b080809f0298ae5f19eaf4160d9bca2b3ad0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587009"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295114"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>如何：实现使用发现代理查找服务的客户端应用程序
-本主题是讨论如何实现发现代理的三个主题中的第三个。 在上一个主题中，[如何：实现向发现代理注册的可发现服务](discoverable-service-that-registers-with-the-discovery-proxy.md)，你实现了向发现代理注册自身的 WCF 服务。 在本主题中，您将创建一个使用发现代理查找 WCF 服务的 WCF 客户端。  
+
+本主题是讨论如何实现发现代理的三个主题中的第三个。 在上一个主题中， [如何：实现向发现代理注册的可发现服务](discoverable-service-that-registers-with-the-discovery-proxy.md)，你实现了向发现代理注册自身的 WCF 服务。 在本主题中，您将创建一个使用发现代理查找 WCF 服务的 WCF 客户端。  
   
 ### <a name="implement-the-client"></a>实现客户端  
   
@@ -101,9 +102,10 @@ ms.locfileid: "84587009"
     }  
     ```  
   
- 您已完成客户端应用程序的实现。 继续执行[如何：测试发现代理](how-to-test-the-discovery-proxy.md)。  
+ 您已完成客户端应用程序的实现。 继续执行 [如何：测试发现代理](how-to-test-the-discovery-proxy.md)。  
   
 ## <a name="example"></a>示例  
+
  下面是此主题的完整代码清单。  
   
 ```csharp  

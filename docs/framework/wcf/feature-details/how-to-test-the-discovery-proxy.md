@@ -2,21 +2,22 @@
 title: 如何：测试发现代理
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 78921d0a26f1116c87c2931b1472a161d6fed145
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b08e8561ceff9f0a427a9ea9acb2309772579853
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592809"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294659"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>如何：测试发现代理
-本主题是演示如何实现发现代理的四个主题中的第四个。 在上一主题中，[如何：实现使用发现代理查找服务的客户端应用](client-app-discovery-proxy-to-find-a-service.md)程序，实现了使用发现代理查找服务然后调用服务的 WCF 客户端应用程序。 本主题说明如何验证发现代理、服务以及客户端应用程序是否按预期方式工作。  
+
+本主题是演示如何实现发现代理的四个主题中的第四个。 在上一主题中， [如何：实现使用发现代理查找服务的客户端应用](client-app-discovery-proxy-to-find-a-service.md)程序，实现了使用发现代理查找服务然后调用服务的 WCF 客户端应用程序。 本主题说明如何验证发现代理、服务以及客户端应用程序是否按预期方式工作。  
   
 ### <a name="run-the-discovery-proxy"></a>运行发现代理  
   
 1. 以管理员身份打开命令提示符。  
   
-2. 您可能会看到显示如下内容的对话框：Windows 防火墙已经阻止此程序的部分功能。 如果看到此消息，请单击 "**解除阻止**" 按钮。  
+2. 您可能会看到显示如下内容的对话框：Windows 防火墙已经阻止此程序的部分功能。 如果看到此消息，请单击 " **解除阻止** " 按钮。  
   
 3. 在命令提示中，运行发现代理 DiscoveryProxy.exe。  
   
@@ -28,11 +29,11 @@ ms.locfileid: "84592809"
   
 2. 在命令提示中，运行 Service.exe 可检测服务。  
   
-3. DiscoveryProxy 应显示以下文本： `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******` 。  
+3. DiscoveryProxy.exe 应显示以下文本： `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******` 。  
   
 ### <a name="run-the-client-application"></a>运行客户端应用程序  
   
-1. 打开命令提示。  
+1. 打开命令提示符。  
   
 2. 在命令提示中，运行 client.exe 应用程序。  
   

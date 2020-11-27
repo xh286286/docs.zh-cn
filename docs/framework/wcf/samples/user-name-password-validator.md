@@ -2,14 +2,15 @@
 title: 用户名密码验证程序
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4ad365061e6a0f3178650699febd6c18cdd14205
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bf20c9baaec44ebdfed351b35c54ab14448c7644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553108"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294919"
 ---
 # <a name="user-name-password-validator"></a>用户名密码验证程序
+
 此示例演示如何实现自定义 UserNamePassword 验证程序。 这在以下情况中非常有用：所有内置 UserNamePassword 验证模式均不符合应用程序的需求；例如，当用户名/密码对存储在某个外部存储区（如数据库）中时。 此示例显示了一个具有自定义验证程序（可检查两个特定用户名/密码对）的服务。 客户端使用此种用户名/密码对来对服务进行身份验证。
 
 > [!IMPORTANT]
@@ -32,7 +33,7 @@ ms.locfileid: "90553108"
 
 - 如何使用服务器的 X.509 证书对服务器进行身份验证。
 
- 服务公开一个终结点，以便与使用配置文件定义的服务进行通信，App.config。终结点由地址、绑定和协定组成。 绑定使用 `wsHttpBinding` 默认为使用 WS 安全性和用户名身份验证的标准配置。 服务行为指定用以验证客户端用户名/密码对的 `Custom` 模式以及验证程序类的类型。 该行为还使用 `serviceCertificate` 元素指定服务器证书。 服务器证书必须包含与中相同的值 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。
+ 服务公开一个终结点，以便与使用配置文件定义的服务进行通信，App.config。终结点由地址、绑定和协定组成。 绑定配置为使用 `wsHttpBinding` 默认为使用 WS-Security 和用户名身份验证的标准。 服务行为指定用以验证客户端用户名/密码对的 `Custom` 模式以及验证程序类的类型。 该行为还使用 `serviceCertificate` 元素指定服务器证书。 服务器证书必须包含与中相同的值 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。
 
 ```xml
 <system.serviceModel>
@@ -251,6 +252,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 客户端应成功地调用所有方法。 在客户端窗口中按 Enter 可以关闭客户端。
 
 ## <a name="setup-batch-file"></a>设置批处理文件
+
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 此批处理文件必须经过修改才能跨计算机或在非自承载情况下工作。
 
  下面提供了批处理文件不同节的简要概述，以便可以修改批处理文件从而在相应的配置中运行。

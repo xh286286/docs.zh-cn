@@ -2,15 +2,16 @@
 title: 工作流托管选项
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 4eaed147f312f3963aa1ca1d4f5dbe010c4189ad
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8ddb83f068eab8480bacc8b80bc5d44b7755fa59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037825"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293775"
 ---
 # <a name="workflow-hosting-options"></a>工作流托管选项
-大多数 Windows Workflow Foundation (WF) 示例使用托管在控制台应用程序中的工作流, 但这不是实际工作流的现实方案。 实际业务应用程序中的工作流将托管在持久的进程中, 无论是开发人员编写的 Windows 服务, 还是 IIS 7.0 或 AppFabric 等服务器应用程序。 这些方法之间的区别如下。
+
+大多数 Windows Workflow Foundation (WF) 示例使用托管在控制台应用程序中的工作流，但这不是实际工作流的现实方案。 实际业务应用程序中的工作流将托管在持久的进程中，无论是开发人员编写的 Windows 服务，还是 IIS 7.0 或 AppFabric 等服务器应用程序。 这些方法之间的区别如下。
 
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>用配有 Windows AppFabric 的 IIS 承载工作流
 
@@ -18,10 +19,10 @@ ms.locfileid: "70037825"
 
 ## <a name="hosting-workflows-in-iis-alone"></a>仅用 IIS 来承载工作流
 
-建议不要使用 IIS 7.0, 因为 AppFabric 提供了一些管理和监视工具, 可帮助维护正在运行的应用程序。 如果在迁移到 AppFabric 时出现基础结构问题, 则仅应在 IIS 7.0 中承载工作流。
+建议不要使用 IIS 7.0，因为 AppFabric 提供了一些管理和监视工具，可帮助维护正在运行的应用程序。 如果在迁移到 AppFabric 时出现基础结构问题，则仅应在 IIS 7.0 中承载工作流。
 
 > [!WARNING]
-> IIS 7.0 会出于各种原因定期回收应用程序池。 当应用程序池被回收时，IIS 即停止接受发给旧应用程序池的消息，并实例化一个新的应用程序池以接受新请求。 如果工作流在发送响应后继续工作, 则 IIS 7.0 将不知道正在执行的工作, 并可能回收宿主应用程序池。 如果发生这种情况, 则工作流将中止, 并且跟踪服务将记录[1004 一个 WorkflowInstanceAborted](1004-workflowinstanceaborted.md)消息, 其中包含空的原因字段。
+> IIS 7.0 会出于各种原因定期回收应用程序池。 当应用程序池被回收时，IIS 即停止接受发给旧应用程序池的消息，并实例化一个新的应用程序池以接受新请求。 如果工作流在发送响应后继续工作，则 IIS 7.0 将不知道正在执行的工作，并可能回收宿主应用程序池。 如果发生这种情况，则工作流将中止，并且跟踪服务将记录 [1004 一个 WorkflowInstanceAborted](1004-workflowinstanceaborted.md) 消息，其中包含空的原因字段。
 >
 > 如果使用了持久化机制，则主机必须显式地从上一个持久化点重启被中止的实例。
 >

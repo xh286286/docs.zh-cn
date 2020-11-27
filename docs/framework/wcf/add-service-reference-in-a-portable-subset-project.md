@@ -2,18 +2,19 @@
 title: 在可移植子集项目中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f81a596c5573405bec9389347c45ff6cb6b30fc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687706"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294854"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>在可移植子集项目中添加服务引用
 
 可移植子集项目使 .NET 程序集编程人员能够维护单个源树和生成系统，同时仍支持 (桌面、Silverlight、Windows Phone 和 Xbox) 的多个 .NET 实现。 可移植子集项目仅引用可在任何 .NET 实现上使用的 .NET 程序集的可移植库。
   
 ## <a name="add-service-reference-details"></a>添加服务引用详细信息  
+
  在可移植子集项目中添加服务引用时，将强制执行以下限制：   
   
 1. 对于 <xref:System.Xml.Serialization.XmlSerializer>，仅允许文本编码。 SOAP 编码在导入过程中生成错误。  
