@@ -2,21 +2,23 @@
 title: System.ServiceModel.PortSharing.RoutingTableRegisterSuccess
 ms.date: 03/30/2017
 ms.assetid: 7f9441ce-5f4a-4080-9be5-c3c08a87bb21
-ms.openlocfilehash: 6e8ad30ded17dfa0589a25082d9b325d21cd359b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 785969aa50f5b49a715c39a0c5a23f0b7a72426d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599450"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276082"
 ---
-# <a name="systemservicemodelportsharingroutingtableregistersuccess"></a><span data-ttu-id="e34bd-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="e34bd-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>
-<span data-ttu-id="e34bd-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="e34bd-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>  
-  
-## <a name="description"></a><span data-ttu-id="e34bd-104">描述</span><span class="sxs-lookup"><span data-stu-id="e34bd-104">Description</span></span>  
- <span data-ttu-id="e34bd-105">成功注册了该命名空间。</span><span class="sxs-lookup"><span data-stu-id="e34bd-105">The namespace was successfully registered.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e34bd-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e34bd-106">See also</span></span>
+# <a name="systemservicemodelportsharingroutingtableregistersuccess"></a><span data-ttu-id="9cf5b-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="9cf5b-102">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>
 
-- [<span data-ttu-id="e34bd-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="e34bd-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="e34bd-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="e34bd-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="e34bd-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="e34bd-109">Administration and Diagnostics</span></span>](../index.md)
+<span data-ttu-id="9cf5b-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span><span class="sxs-lookup"><span data-stu-id="9cf5b-103">System.ServiceModel.PortSharing.RoutingTableRegisterSuccess</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="9cf5b-104">描述</span><span class="sxs-lookup"><span data-stu-id="9cf5b-104">Description</span></span>  
+
+ <span data-ttu-id="9cf5b-105">成功注册了该命名空间。</span><span class="sxs-lookup"><span data-stu-id="9cf5b-105">The namespace was successfully registered.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="9cf5b-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9cf5b-106">See also</span></span>
+
+- [<span data-ttu-id="9cf5b-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="9cf5b-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="9cf5b-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="9cf5b-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="9cf5b-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="9cf5b-109">Administration and Diagnostics</span></span>](../index.md)
