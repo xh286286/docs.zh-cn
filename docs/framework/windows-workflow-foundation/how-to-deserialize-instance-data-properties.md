@@ -2,14 +2,15 @@
 title: 如何：对实例数据属性进行反序列化
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f941e2d2b10e825adcdc13e2a9aed231125fe09
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143078"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280086"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>如何：对实例数据属性进行反序列化
+
 在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供一个有关 Instances 表的视图，公开以下四列：  
   
 - ReadWritePrimitiveDataProperties  
@@ -20,11 +21,11 @@ ms.locfileid: "79143078"
   
 - WriteOnlyComplexDataProperties  
   
- 原始数据属性是指其 .NET 框架类型被视为"常见"（例如 Int32 和 String）的属性，而复杂数据属性引用所有其他类型。 在此代码示例的后面提供了基元类型的完整枚举。  
+ 基元数据属性指的是属性，其 .NET Framework 类型被视为 "common" (例如，Int32 和 String) ，而复杂数据属性指的是其他所有类型。 在此代码示例的后面提供了基元类型的完整枚举。  
   
  Read/write 属性指的是那些在加载实例时返回到工作流运行时的属性。 WriteOnly 属性将写入到数据库，然后再也不会读取。  
   
- 此示例提供使用户能够将基元数据属性反序列化的代码。 给定从 ReadWrite 原始数据属性或 WriteOnly原始数据属性列读取的字节数组，此代码将二进制大对象 （BLOB） 转换为<xref:System.Collections.Generic.Dictionary%602>XName 类型\<的对象，对象>每个键值对表示属性名称及其相应值。  
+ 此示例提供使用户能够将基元数据属性反序列化的代码。 给定从 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 列中读取的字节数组时，此代码将 (BLOB) 的二进制大型对象转换为 <xref:System.Collections.Generic.Dictionary%602> 类型的， \<XName, object> 其中每个键值对表示一个属性名称及其对应的值。  
   
  此示例没有演示如何将复杂数据属性反序列化，因为当前不支持该操作。  
   

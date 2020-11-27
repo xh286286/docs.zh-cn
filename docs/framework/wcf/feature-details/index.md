@@ -7,17 +7,19 @@ helpviewer_keywords:
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 30b8acb3b89b8c28be0b8d0b4ce5a1d1d734b055
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246631"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280424"
 ---
 # <a name="wcf-feature-details"></a>WCF 功能详细信息
-Windows Communication Foundation （WCF）允许对应用程序的消息传递功能进行广泛的控制。 本节中的主题详细介绍了可用的功能。 有关基本编程的详细信息，请参阅[基本 WCF 编程](../basic-wcf-programming.md)。  
+
+Windows Communication Foundation (WCF) 允许对应用程序的消息传递功能进行广泛的控制。 本节中的主题详细介绍了可用的功能。 有关基本编程的详细信息，请参阅 [基本 WCF 编程](../basic-wcf-programming.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [工作流服务](workflow-services.md)  
  介绍如何创建和配置工作流服务。  
   
@@ -36,7 +38,7 @@ Windows Communication Foundation （WCF）允许对应用程序的消息传递�
  [队列和可靠会话](queues-and-reliable-sessions.md)  
  介绍队列，队列代表接收应用程序存储来自发送应用程序的消息，之后将这些消息转发给接收应用程序。  
   
- [中的](transactions-in-wcf.md)  
+ [事务](transactions-in-wcf.md)  
  说明如何创建可以在需要时回滚的事务处理操作。  
   
  [安全性](security.md)  
@@ -45,7 +47,7 @@ Windows Communication Foundation （WCF）允许对应用程序的消息传递�
  [对等网络](peer-to-peer-networking.md)  
  介绍如何创建对等服务和客户端。  
   
- [元数据](metadata.md)  
+ Metadata   
  介绍元数据体系结构和格式。  
   
  [客户端](clients.md)  
@@ -64,7 +66,7 @@ Windows Communication Foundation （WCF）允许对应用程序的消息传递�
  介绍从 WCF 服务轻松公开联合源的支持。  
   
  [AJAX 集成和 JSON 支持](ajax-integration-and-json-support.md)  
- 介绍对 ASP.NET 异步 JavaScript 和 XML （AJAX）和 JavaScript 对象表示法（JSON）数据格式的支持，以允许 WCF 服务向 AJAX 客户端公开操作。  
+ 描述支持 ASP.NET 异步 JavaScript 和 XML (AJAX) 和 JavaScript 对象表示法 (JSON) 数据格式，以允许 WCF 服务向 AJAX 客户端公开操作。  
   
  [WCF Discovery](wcf-discovery.md)  
  介绍对可以使用 WS-Discovery 协议以互操作方式在运行时发现服务的支持。  
@@ -73,6 +75,7 @@ Windows Communication Foundation （WCF）允许对应用程序的消息传递�
  介绍路由服务。  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -82,4 +85,5 @@ Windows Communication Foundation （WCF）允许对应用程序的消息传递�
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>相关章节  
+
  [基本 WCF 编程](../basic-wcf-programming.md)

@@ -2,21 +2,22 @@
 title: 将 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: fa707a4246d5bc9940417072c098b2973140f878
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1471e9913f787a76b474e9d862a22b24d464be92
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598796"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281646"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>将 ASP.NET Web 服务迁移到 WCF
-ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提供用于在 Internet Information Services (IIS) 内承载服务的功能。 Windows Communication Foundation （WCF）提供 .NET Framework 类库、工具和承载功能，使软件实体能够使用任何协议（包括 Web 服务使用的协议）进行通信。  将 ASP.NET Web 服务迁移到 WCF 后，应用程序便可以利用 WCF 独有的新功能和改进功能。  
+
+ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提供用于在 Internet Information Services (IIS) 内承载服务的功能。 Windows Communication Foundation (WCF) 提供 .NET Framework 类库、工具和承载功能，使软件实体能够使用任何协议（包括 Web 服务使用的协议）进行通信。  将 ASP.NET Web 服务迁移到 WCF 后，应用程序便可以利用 WCF 独有的新功能和改进功能。  
   
  与 ASP.NET Web 服务相比，WCF 具有几个重要优势。 尽管 ASP.NET Web 服务工具仅用于构建 Web 服务，但 WCF 提供的工具可在必须进行软件实体相互通信时使用。 这会减少开发人员为适应不同软件通信方案而必需了解的技术的数量，从而降低软件开发资源的成本及完成软件开发项目所需的时间。  
   
  即使对于 Web 服务开发项目，WCF 也支持比 ASP.NET Web 服务支持更多的 Web 服务协议。 这些附加协议提供更完善的解决方案，涉及可靠会话和事务等其他内容。  
   
- WCF 支持更多用于传输消息的协议，而不是 ASP.NET Web 服务。 ASP.NET Web 服务仅支持使用超文本传输协议 (HTTP) 发送消息。 WCF 支持使用 HTTP、传输控制协议（TCP）、命名管道和 Microsoft 消息队列（MSMQ）发送消息。 更重要的是，可以扩展 WCF 以支持其他传输协议。 因此，可以改编使用 WCF 开发的软件，使其与更广泛的其他软件一起工作，从而提高投资的潜在回报。  
+ WCF 支持更多用于传输消息的协议，而不是 ASP.NET Web 服务。 ASP.NET Web 服务仅支持使用超文本传输协议 (HTTP) 发送消息。 WCF 支持使用 HTTP、传输控制协议 (TCP) 、命名管道和 Microsoft 消息队列 (MSMQ) 来发送消息。 更重要的是，可以扩展 WCF 以支持其他传输协议。 因此，可以改编使用 WCF 开发的软件，使其与更广泛的其他软件一起工作，从而提高投资的潜在回报。  
   
  WCF 提供了更丰富的工具来部署和管理应用程序，而不是 ASP.NET Web 服务提供的功能。 除了 ASP.NET 的配置系统外，WCF 还提供了一个配置编辑器、从发件人到接收方的活动跟踪，还提供了多个中介的活动跟踪、跟踪查看器、消息日志记录、大量性能计数器以及对 Windows Management Instrumentation 的支持。  
   

@@ -2,14 +2,15 @@
 title: 如何：使用筛选器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 149c0809820d6a4a9c8dabfb545258b9a3ffb40b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598887"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280840"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
+
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
   
 - 添加  
@@ -71,7 +72,7 @@ ms.locfileid: "84598887"
     </services>  
     ```  
   
-     通过此配置，路由服务公开三个单独的终结点。 客户端应用程序根据运行时选项将消息发送到其中一个地址。 到达某个 "虚拟" 服务终结点（"舍入/计算器" 或 "常规/计算器"）的消息将转发给相应的计算器实现。 如果客户端应用程序未将请求发送到特定终结点，则将消息发送到常规终结点。 不论选择哪个终结点，客户端应用程序还可以选择包括自定义标头，以指示应将消息转发到舍入计算器实现。  
+     通过此配置，路由服务公开三个单独的终结点。 客户端应用程序根据运行时选项将消息发送到其中一个地址。 到达 "虚拟" 服务终结点之一的消息 ( "舍入/计算器" 或 "常规/计算器" ) 被转发到相应的计算器实现。 如果客户端应用程序未将请求发送到特定终结点，则将消息发送到常规终结点。 不论选择哪个终结点，客户端应用程序还可以选择包括自定义标头，以指示应将消息转发到舍入计算器实现。  
   
 2. 下面的示例定义路由服务将消息路由到的客户端（目标）终结点。  
   
@@ -110,7 +111,7 @@ ms.locfileid: "84598887"
     </routing>  
     ```  
   
-     此**MessageFilter**在包含值 "舍入" 的消息中查找 RoundingCalculator 标头。 此标头由客户端设置，用于指示应将消息路由到 roundingCalc 服务。  
+     此 **MessageFilter** 在包含值 "舍入" 的消息中查找 RoundingCalculator 标头。 此标头由客户端设置，用于指示应将消息路由到 roundingCalc 服务。  
   
     > [!NOTE]
     > 默认情况下，在命名空间表中定义 s12 命名空间前缀，表示命名空间 `http://www.w3.org/2003/05/soap-envelope` 。
@@ -132,7 +133,7 @@ ms.locfileid: "84598887"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果在以开头的地址收到消息， `http://localhost/routingservice/router/rounding/` 则此筛选器的计算结果为**true**。 由于此配置使用的基址为，为 `http://localhost/routingservice/router` roundingEndpoint 指定的地址为 "舍入/计算器"，用于与此终结点通信的完整地址为 `http://localhost/routingservice/router/rounding/calculator` ，与此筛选器匹配。  
+     如果在以开头的地址收到消息， `http://localhost/routingservice/router/rounding/` 则此筛选器的计算结果为 **true**。 由于此配置使用的基址为，为 `http://localhost/routingservice/router` roundingEndpoint 指定的地址为 "舍入/计算器"，用于与此终结点通信的完整地址为 `http://localhost/routingservice/router/rounding/calculator` ，与此筛选器匹配。  
   
     > [!NOTE]
     > PrefixEndpointAddress 筛选器在执行匹配时不会计算主机名，因为可以使用多种主机名形式引用单个主机，而所有这些主机名可能都是从客户端应用程序引用主机的有效方式。 例如，下面的所有主机名可能引用同一主机：  
@@ -226,6 +227,7 @@ ms.locfileid: "84598887"
     ```  
   
 ## <a name="example"></a>示例  
+
  下面是配置文件的完整代码清单。  
   
 ```xml  

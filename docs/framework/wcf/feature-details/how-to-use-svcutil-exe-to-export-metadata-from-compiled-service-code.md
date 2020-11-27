@@ -2,14 +2,15 @@
 title: 如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f60d0c9ad3f6fc4e9596d466b5eabdaab0f4822f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280606"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
+
 Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型的元数据，如下所示：  
   
 - 若要使用 Svcutil.exe 为一组程序集导出所有已编译服务协定的元数据，请将这些程序集指定为输入参数。 这是默认行为。  
@@ -76,6 +77,7 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     ```  
   
 ## <a name="example"></a>示例  
+
  下面的示例演示如何为单个服务实现和配置生成元数据。  
   
  导出服务协定的元数据。  

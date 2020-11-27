@@ -9,20 +9,22 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: fa145607c1e3286870c0cc07f2ecb12583900440
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f6a002e531f634d11057e80430745995827e9d7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924800"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281152"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI 自动化文本模式帮助主题
+
 > [!NOTE]
 > 本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本部分包含的主题介绍如何使用 UI 自动化文本模式。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [使用 UI 自动化向文本框添加内容](add-content-to-a-text-box-using-ui-automation.md)  
  [使用 UI 自动化查找和突出显示文本](find-and-highlight-text-using-ui-automation.md)  
  [使用 UI 自动化获取文本特性](obtain-text-attributes-using-ui-automation.md)  

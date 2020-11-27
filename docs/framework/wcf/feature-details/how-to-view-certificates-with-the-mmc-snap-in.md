@@ -5,17 +5,18 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: e63034e48ae836f67f89b454829f7196c94610cd
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246670"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280619"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>如何：通过 MMC 管理单元查看证书
-创建安全客户端或服务时，可以使用[证书](working-with-certificates.md)作为凭据。 例如，通用类型的凭据是使用方法创建的 x.509 证书 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> 。
 
-在 Windows 系统上，可以通过 Microsoft 管理控制台（MMC）查看三种不同类型的证书存储：
+创建安全客户端或服务时，可以使用 [证书](working-with-certificates.md) 作为凭据。 例如，通用类型的凭据是使用方法创建的 x.509 证书 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> 。
+
+有三种不同类型的证书存储，你可以通过 Microsoft 管理控制台 (MMC) 在 Windows 系统上进行检查：
 
 - 本地计算机：存储区是设备的本地存储区，并且是设备上所有用户的全局存储区。
 
@@ -27,34 +28,34 @@ ms.locfileid: "85246670"
 
 下面的过程演示如何检查本地设备上的存储以查找适当的证书：
   
-1. 从 "**开始**" 菜单中选择 "**运行**"，然后输入*mmc*。
+1. 从 "**开始**" 菜单中选择 "**运行**"，然后输入 *mmc*。
 
     随即出现 MMC。
   
-2. 从 "**文件**" 菜单中，选择 "**添加/删除管理单元**"。
+2. 从 " **文件** " 菜单中，选择 " **添加/删除管理单元**"。
 
-    此时将显示 "**添加或删除管理单元**" 窗口。
+    此时将显示 " **添加或删除管理单元** " 窗口。
   
-3. 从 "**可用的管理单元**" 列表中，选择 "**证书**"，然后选择 "**添加**"。  
+3. 从 " **可用的管理单元** " 列表中，选择 " **证书**"，然后选择 " **添加**"。  
 
     ![添加证书管理单元](./media/mmc-add-certificate-snap-in.png)
   
-4. 在 "**证书管理单元**" 窗口中，选择 "**计算机帐户**"，然后选择 "**下一步**"。
+4. 在 " **证书管理单元** " 窗口中，选择 " **计算机帐户**"，然后选择 " **下一步**"。
   
-    还可以选择 "**我的用户帐户**" 作为特定服务的当前用户或**服务帐户**。
+    还可以选择 " **我的用户帐户** " 作为特定服务的当前用户或 **服务帐户** 。
 
     > [!NOTE]
     > 如果你不是设备的管理员，则只能为你的用户帐户管理证书。
   
-5. 在 "**选择计算机**" 窗口中，选择 "**本地计算机**"，然后选择 "**完成**"。  
+5. 在 " **选择计算机** " 窗口中，选择 " **本地计算机** "，然后选择 " **完成**"。  
   
-6. 在 "**添加或删除管理单元**" 窗口中，选择 **"确定"**。  
+6. 在 " **添加或删除管理单元** " 窗口中，选择 **"确定"**。  
   
     ![添加证书管理单元](./media/mmc-certificate-snap-in-selected.png)
 
-7. 可选：在 "**文件**" 菜单中，选择 "**保存**" 或 "**另存为**" 以保存 MMC 控制台文件以供以后使用。  
+7. 可选：在 " **文件** " 菜单中，选择 " **保存** " 或 " **另存为** " 以保存 MMC 控制台文件以供以后使用。  
 
-8. 若要在 MMC 管理单元中查看证书，请在左窗格中选择 "**控制台根目录**"，然后展开 "**证书（本地计算机）**"。
+8. 若要在 MMC 管理单元中查看证书，请在左窗格中选择 " **控制台根** "，然后展开 " **证书 (本地计算机")**。
 
     将显示每种类型的证书的目录列表。 可以从每个证书目录查看、导出、导入和删除其证书。
 
@@ -64,21 +65,21 @@ ms.locfileid: "85246670"
 
 ### <a name="to-view-certificates-for-the-local-device"></a>查看本地设备的证书
 
-1. 从 "**开始**" 菜单中选择 "**运行**"，然后输入*certlm.msc*。
+1. 从 "**开始**" 菜单中选择 "**运行**"，然后输入 *certlm.msc*。
 
-    此时将显示本地设备的 "证书管理器" 工具。
+    此时将显示本地设备的“证书管理器”工具。
   
-2. 若要查看证书，请在左窗格中的 "**证书-本地计算机**" 下，展开要查看的证书类型的目录。
+2. 若要查看证书，请在左窗格中的 " **证书-本地计算机** " 下，展开要查看的证书类型的目录。
 
 ### <a name="to-view-certificates-for-the-current-user"></a>查看当前用户的证书
 
-1. 从“开始”菜单中选择“运行”，然后输入“certmgr.msc”    。
+1. 从“开始”菜单中选择“运行”，然后输入“certmgr.msc”  。
 
     此时会显示当前用户的证书管理器工具。
   
-2. 若要查看证书，请在左窗格中的 "**证书-当前用户**" 下，展开要查看的证书类型的目录。
+2. 若要查看证书，请在左窗格中的 " **证书-当前用户** " 下，展开要查看的证书类型的目录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用证书](working-with-certificates.md)
 - [如何：创建在开发期间使用的临时证书](how-to-create-temporary-certificates-for-use-during-development.md)

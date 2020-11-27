@@ -2,14 +2,15 @@
 title: WF 中的错误处理活动
 ms.date: 03/30/2017
 ms.assetid: 24b68bd3-cef5-4413-ab82-2e2625f209aa
-ms.openlocfilehash: 410c481745cc62a55a2b6e840d82b01fcc7f5766
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 332e16b4c399341151761a4bce2d47198779ad64
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774018"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280307"
 ---
 # <a name="error-handling-activities-in-wf"></a>WF 中的错误处理活动
+
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供多个系统提供的活动，用于实现错误处理和恢复。 有关更多信息，请参见 [异常](exceptions.md)中定义的接口的私有 C++ 特定实现。  
   
 ## <a name="error-handling-activities"></a>错误处理活动  

@@ -2,14 +2,15 @@
 title: 如何：使用 MetadataResolver 动态获取绑定元数据
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: 98fe4977f270b008c51039af19261ca86b8d6642
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fc64e11271c6901a8d4598c0efa563a06a92decf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601122"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280710"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>如何：使用 MetadataResolver 动态获取绑定元数据
+
 本主题演示如何使用 <xref:System.ServiceModel.Description.MetadataResolver> 类来动态获取绑定元数据。  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>动态获取绑定元数据  
@@ -47,4 +48,4 @@ ms.locfileid: "84601122"
   
 ## <a name="see-also"></a>另请参阅
 
-- [元数据](metadata.md)
+- Metadata 

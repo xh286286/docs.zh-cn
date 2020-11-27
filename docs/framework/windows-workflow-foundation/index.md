@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 9fed65158f830fcdc5342800493029418a71d2f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a7b123c14aa14b64a9ca3a78d127aa55210a08ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724060"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280047"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
+
 本部分介绍 (WF) Windows Workflow Foundation 的编程模型、示例和工具。
 
 ## <a name="in-this-section"></a>本节内容
+
  [Windows 工作流文档指南](guide-to-the-documentation.md) 要阅读的一组建议的主题，具体取决于你熟悉的 (初级) 和要求。
 
  [Windows Workflow Foundation 中的新增功能](whats-new.md) 讨论以前版本中的多个开发模式的更改。
