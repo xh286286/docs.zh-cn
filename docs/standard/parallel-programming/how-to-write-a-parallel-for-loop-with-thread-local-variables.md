@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3adcfa98f4004f283b24bcd31dc243c18c2644c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826653"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729364"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>如何：编写具有线程局部变量的 Parallel.For 循环
+
 此示例演示如何使用线程本地变量来存储和检索由 <xref:System.Threading.Tasks.Parallel.For%2A> 循环创建的每个单独任务中的状态。 通过使用线程本地数据，你可以避免将大量的访问同步为共享状态的开销。 在任务的所有迭代完成之前，你将计算和存储值，而不是写入每个迭代上的共享资源。 然后，你可以将最终结果一次性写入共享资源，或将其传递到另一个方法。  
   
 ## <a name="example"></a>示例  
+
  以下示例调用 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 方法以计算在包含一百万个元素的数组中值的总和。 每个元素的值等于其索引。  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]

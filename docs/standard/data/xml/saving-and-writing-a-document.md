@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823493"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697553"
 ---
 # <a name="saving-and-writing-a-document"></a>保存和写出文档
+
 加载并保存 <xref:System.Xml.XmlDocument> 后，保存的文档在下列方面可能不同于原始文档：  
   
 - 如果在调用 <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> 方法之间将 `true` 属性设置为 <xref:System.Xml.XmlDocument.Save%2A>，文档中的空白在输出中将保留；如果此属性为 `false`，<xref:System.Xml.XmlDocument> 将使输出自动缩进。  
@@ -30,6 +31,7 @@ ms.locfileid: "94823493"
 - 如果要将 <xref:System.Xml.XmlDocument> 写出到文件或流中，则写出的输出与文档内容相同。 也就是说，仅当文档中包含 <xref:System.Xml.XmlDeclaration> 时才写出 ，并且写出文档时所使用的编码与声明节点中给定的编码相同。  
   
 ## <a name="writing-an-xmldeclaration"></a>写出 XmlDeclaration  
+
  <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDeclaration> 和 <xref:System.Xml.XmlNode.OuterXml%2A> 的 <xref:System.Xml.XmlNode.InnerXml%2A> 和 <xref:System.Xml.XmlNode.WriteTo%2A> 成员与 <xref:System.Xml.XmlDocument> 和 <xref:System.Xml.XmlDocument.Save%2A> 的 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 方法共同创建 XML 声明。  
   
  对于 <xref:System.Xml.XmlDocument> 的 <xref:System.Xml.XmlNode.OuterXml%2A> 属性、<xref:System.Xml.XmlDocument.InnerXml%2A> 以及 <xref:System.Xml.XmlDocument.Save%2A>、<xref:System.Xml.XmlDocument.WriteTo%2A> 和 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 方法，在 XML 声明中写出的编码从 <xref:System.Xml.XmlDeclaration> 节点获取。 如果没有 <xref:System.Xml.XmlDeclaration> 节点，则不会写出 <xref:System.Xml.XmlDeclaration>。如果 <xref:System.Xml.XmlDeclaration> 节点中没有编码，则不会在 XML 声明中写出编码。  
@@ -55,6 +57,7 @@ doc.Save(tw);
  对于 <xref:System.Xml.XmlNode.OuterXml%2A>、<xref:System.Xml.XmlDeclaration.WriteTo%2A> 和 <xref:System.Xml.XmlNode.InnerXml%2A> 的 <xref:System.Xml.XmlDeclaration> 成员，如果未设置 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性，则不会写出任何编码。否则，在 XML 声明中写出的编码与 <xref:System.Xml.XmlDeclaration.Encoding%2A> 属性中的编码相同。  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>用 OuterXml 属性写出文档内容  
+
  <xref:System.Xml.XmlNode.OuterXml%2A> 属性是 Microsoft 对万维网联合会 (W3C) XML 文档对象模型 (DOM) 标准的扩展。 <xref:System.Xml.XmlNode.OuterXml%2A> 属性用于获取整个 XML 文档的标记，或者只获取单个节点及其子节点的标记。 <xref:System.Xml.XmlNode.OuterXml%2A> 返回表示给定节点及其所有子节点的标记。  
   
  下面的代码示例显示了如何将整个文档保存为一个字符串。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: ce6afc6438060b88e8740eab24ace960f3b78fa3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e2ba53a285649f8081c4836661ad3d70739aa64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725321"
 ---
 # <a name="types-of-isolation"></a>隔离的类型
 
@@ -54,7 +54,9 @@ ms.locfileid: "94830527"
 > 独立存储不适用于 Windows 8.x 应用商店应用。 请改用 Windows 运行时 API 包含的 `Windows.Storage` 命名空间中的应用程序数据类来存储本地数据和文件。 有关详细信息，请参阅 Windows 开发人员中心的 [应用程序数据](/previous-versions/windows/apps/hh464917(v=win.10)) 。  
   
 <a name="UserAssembly"></a>
+
 ## <a name="isolation-by-user-and-assembly"></a>按用户和程序集隔离  
+
  如果需要从任何应用的域都可以访问程序集使用的数据存储，按用户和程序集隔离更为合适。 在这种情况下，独立存储通常用于存储跨多个应用的数据，而不是与任何特定应用绑定的数据，如用户名或许可证信息。 若要访问按用户和程序集隔离的存储，必须信任代码在应用之间传输信息。 通常情况下，按用户和程序集隔离可用于 Intranet，但不可用于 Internet。 调用静态 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> 方法并传入用户和程序集 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>，即可返回采用这种隔离的存储。  
   
  下面的代码示例检索按用户和程序集隔离的存储。 可通过 `isoFile` 对象访问此存储。  
@@ -72,7 +74,9 @@ ms.locfileid: "94830527"
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
 <a name="UserDomainAssembly"></a>
+
 ## <a name="isolation-by-user-domain-and-assembly"></a>按用户、域和程序集隔离  
+
  如果应用使用需要专用数据存储的第三方程序集，可以使用独立存储来存储专用数据。 按用户、域和程序集隔离可确保，仅当使用程序集的应用在程序集创建存储时正在运行时，且仅当为其创建存储的用户运行应用时，只有给定程序集中的代码才能访问数据。 按用户、域和程序集隔离可防止第三方程序集将数据泄漏给其他应用。 如果确定要使用独立存储，但不确定要使用哪种类型的隔离，此隔离类型应为默认选择。 调用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 的静态 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 方法并传入用户、域和程序集 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>，即可返回采用这种隔离的存储。  
   
  下面的代码示例检索按用户、域和程序集隔离的存储。 可通过 `isoFile` 对象访问此存储。  
@@ -88,7 +92,9 @@ ms.locfileid: "94830527"
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>
+
 ## <a name="isolated-storage-and-roaming"></a>独立存储和漫游  
+
  漫游用户策略文件是一项 Windows 功能，可便于用户在网络上设置标识，并使用此标识登录任何网络计算机，同时应用所有个性化设置。 使用独立存储的程序集可以指定，用户的独立存储应随漫游用户策略文件一起移动。 漫游可以与按用户和程序集隔离或按用户、域和程序集隔离结合使用。 如果未使用漫游范围，即使使用漫游用户策略文件，存储也不会漫游。  
   
  下面的代码示例检索按用户和程序集隔离的漫游存储。 可通过 `isoFile` 对象访问此存储。  

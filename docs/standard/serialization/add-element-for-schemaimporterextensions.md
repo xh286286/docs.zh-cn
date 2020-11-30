@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 38d8ebd6e973632b23865ad60e007d9aa21e7da6
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: b8a0775e9d33d59606b1150aa9a1b3b1026d4b0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282006"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726439"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions> 的 \<add> 元素
 
@@ -29,6 +29,7 @@ ms.locfileid: "93282006"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
+
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
@@ -39,6 +40,7 @@ ms.locfileid: "93282006"
 |**type**|必需。 指定要添加的架构扩展类。 type 特性值必须位于一行上，并且包含完全限定的类型名称。 当程序集放置在全局程序集缓存 (GAC) 中时，该特性值还必须包括已签名程序集的版本、区域性和公钥标记。|  
   
 ### <a name="child-elements"></a>子元素  
+
  无。  
   
 ### <a name="parent-elements"></a>父元素  
@@ -48,6 +50,7 @@ ms.locfileid: "93282006"
 |\<schemaImporterExtensions>|包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 所使用的类型。|  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例添加 XmlSchemaImporter 可以在映射类型时使用的扩展类型。  
   
 ```xml  

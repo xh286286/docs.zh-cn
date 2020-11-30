@@ -14,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0a1b46443d5cd9f8a19f4cfb9f9b07a5e33e719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825294"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714687"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的替换构造
 
@@ -30,6 +30,7 @@ ms.locfileid: "94825294"
 - [基于有效的捕获组的条件匹配](#Conditional_Group)
 
 <a name="Either_Or"></a>
+
 ## <a name="pattern-matching-with-124"></a>利用 &#124; 的模式匹配
 
 可以使用竖线 (`|`) 字符匹配一系列模式中的任何一种模式，其中 `|` 字符用于分隔每个模式。
@@ -62,6 +63,7 @@ ms.locfileid: "94825294"
 |`\b`|在单词边界处结束匹配。|  
   
 <a name="Conditional_Expr"></a>
+
 ## <a name="conditional-matching-with-an-expression"></a>条件匹配的表达式
 
 此语言元素尝试根据是否可以匹配初始模式来匹配两种模式之一。 语法为：  
@@ -93,6 +95,7 @@ ms.locfileid: "94825294"
 |`\b`|与字边界匹配。|  
 
 <a name="Conditional_Group"></a>
+
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>基于有效的捕获组的条件匹配
 
 此语言元素尝试根据是否已经匹配指定的捕获组来匹配两种模式之一。 语法为：

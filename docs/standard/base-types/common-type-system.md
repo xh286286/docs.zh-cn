@@ -15,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0f80be2d1da43341f8e2af6f32580be2e01289dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823181"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723215"
 ---
 # <a name="common-type-system"></a>通用类型系统
 
@@ -170,11 +170,13 @@ ms.locfileid: "94823181"
 - 每个类型的成员的定义。  
   
 ### <a name="attributes"></a>特性  
+
  特性提供附加的用户定义元数据。 它们通常用于在程序集中存储有关类型的附加信息，或在设计时或运行时环境中用于修改类型成员的行为。  
   
  特性本身是从 <xref:System.Attribute?displayProperty=nameWithType> 继承的类。 每种支持使用特性的语言都有自己的语法，用于将特性应用到某个语言元素。 特性可应用到几乎任意语言元素；特性可以应用到的特定元素由应用到该特性类的 <xref:System.AttributeUsageAttribute> 定义。  
   
 ### <a name="type-accessibility"></a>类型可访问性  
+
  所有类型都有一个修饰符，控制从其他类型对它们的可访问性。 下表说明了运行时所支持的类型可访问性。  
   
 |可访问性|描述|  
@@ -197,6 +199,7 @@ ms.locfileid: "94823181"
 - 如果 `M` 的已声明可访问性为 `private`，则 `M` 的可访问域就是 `T` 的程序文本。  
   
 ### <a name="type-names"></a>类型名称  
+
  常规类型系统对名称只有两种限制：  
   
 - 所有的名称都按 Unicode（16 位）字符串进行编码。  
@@ -208,6 +211,7 @@ ms.locfileid: "94823181"
  尽管类型可能引用来自其他模块和程序集的类型，但类型在一个 .NET 模块内必须是完全定义的。 （但是，根据编译器支持的情况，它可以分成多个源代码文件。）类型名称只需要在命名空间内唯一。 要完全标识一个类型，其类型名称必须由包含此类型实现的命名空间加以限定。  
   
 ### <a name="base-types-and-interfaces"></a>基本类型和接口  
+
  一个类型可以从另一个类型继承值和行为。 常规类型系统不允许类型从多个基本类型进行继承。  
   
  一个类型可以实现任何数量的接口。 要实现接口，类型必须实现该接口的所有虚拟成员。 虚方法可以由派生的类型来实现，既可静态调用，也可动态调用。  
@@ -291,12 +295,14 @@ ms.locfileid: "94823181"
 |virtual|方法、属性和事件|此方法可以由派生类型实现，并且既可静态调用，也可动态调用。 如果使用动态调用，在运行时执行调用的实例类型（而不是编译时已知的类型）将确定调用方法的哪一种实现。 若要静态调用虚方法，可能必须将变量强制转换为使用所需方法版本的类型。|  
   
 ### <a name="overloading"></a>重载  
+
  每个类型成员都有一个唯一的签名。 方法签名由方法名称和一个参数列表（方法的参数的顺序和类型）组成。 可以在一种类型内定义具有相同名称的多种方法，只要这些方法的签名不同。 当定义两种或多种具有相同名称的方法时，就称作重载。 例如，在 <xref:System.Char?displayProperty=nameWithType> 中，重载了 <xref:System.Char.IsDigit%2A> 方法。 一个方法采用 <xref:System.Char>。 另一个方法采用 <xref:System.String> 和 <xref:System.Int32>。  
   
 > [!NOTE]
 > 返回类型不被视为方法签名的一部分。 这意味着如果方法只是返回类型不同，就不能重载。  
   
 ### <a name="inherit-override-and-hide-members"></a>继承、重写和隐藏成员  
+
  派生类型继承其基类型的所有成员；也就是说，会在派生类型上定义这些成员，并供派生类型使用。 继承成员的行为和质量可以通过以下两种方式来修改：  
   
 - 派生类型可通过使用相同的签名定义一个新成员，从而隐藏继承的成员。 将先前的公共成员变成私有成员，或者为标记为 `final` 的继承方法定义新行为时，可以采取这种方法。  

@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: f382165ca8e2b972c47a080244a3d0054b5eb604
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2feb14e304c8ba7ecc19b2e79b943204044da05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822732"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722669"
 ---
 # <a name="including-or-importing-xml-schemas"></a>包含或导入 XML 架构
+
 XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。 这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 (SOM) API 中的这些元素。  
   
 ## <a name="including-or-importing-an-xml-schema"></a>包括或导入 XML 架构  
+
  下面的代码示例为[生成 XML 架构](building-xml-schemas.md)主题中创建的客户架构补充了地址架构。 为客户架构补充地址架构后，可以在客户架构中使用地址类型。  
   
  地址架构可以使用 `<xs:include />` 或 `<xs:import />` 元素加入，以原样使用地址架构的组件，也可以使用 `<xs:redefine />` 元素修改其任意组件，以适合客户架构的需要。 因为地址架构的 `targetNamespace` 与客户架构的不同，所以，将使用 `<xs:import />` 元素以及导入语义。  

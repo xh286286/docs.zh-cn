@@ -8,14 +8,15 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 74113979f0ebe77319ae308c2a669e91d8cb4209
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3c99a3be92beb992ff20188b02ff33a92f196baf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84278410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722175"
 ---
 # <a name="selective-serialization"></a>有选择的序列化
+
 类通常包含不应进行序列化的字段。 例如，假定类将线程 ID 存储在成员变量中。 如果反序列化该类，而在对该类进行序列化时，存储了该 ID 的线程可能不再运行。因此，序列化该值毫无意义。 按如下方法使用 [NonSerialized](xref:System.NonSerializedAttribute) 属性标记成员变量，可防止其被序列化。  
   
 ```csharp  

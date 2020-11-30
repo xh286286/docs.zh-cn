@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8c27c1ca61356b36183bb74b8360e41f5324d25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826900"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722435"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>如何：在数据流块中指定任务计划程序
+
 本文档演示在应用程序中使用数据流时如何关联特定任务计划程序。 示例在 Windows 窗体应用程序中使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 类来显示读取器任务处于活动状态的时间和编写器任务处于活动状态的时间。 它还使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法使数据流块能够在用户界面线程上运行。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,6 +31,7 @@ ms.locfileid: "94826900"
 3. 在窗体上添加一个 <xref:System.Windows.Forms.Timer> 控件。 将 <xref:System.Windows.Forms.Timer.Interval%2A> 属性设置为 `2500`。  
   
 ## <a name="adding-dataflow-functionality"></a>添加数据流功能  
+
  本节介绍如何创建参与应用程序的数据流块以及如何将每个数据流块与任务计划程序关联。  
   
 ### <a name="to-add-dataflow-functionality-to-the-application"></a>在应用程序中添加数据流功能  
@@ -73,6 +75,7 @@ ms.locfileid: "94826900"
  对于在同一 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 对象上运行的所有其他数据流块，此示例还使用了 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 类使某些数据流块能够并发操作，而使其他数据流块能够单独执行。 当多个数据流块共享资源，但有些需要对该资源独占访问时，这种技术很有用，因为它不需要手动同步对该资源的访问。 手动同步的消除会使代码更高效。  
   
 ## <a name="example"></a>示例  
+
  下面的示例演示 Form1.cs（对于 Visual Basic 则为 Form1.vb）的完整代码。  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]

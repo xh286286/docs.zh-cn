@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: b28a2d4991e2e4b14027460c0f3c97145862da2a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 935f0b2263fbf909decee354b0109d16d82a06e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720849"
 ---
 # <a name="xpathnavigator-in-transformations"></a>转换中的 XPathNavigator
+
 <xref:System.Xml.XPath.XPathNavigator> 类提供对数据的只读随机访问，旨在用作可扩展样式表语言转换 (XSLT) 的输入。 它在 <xref:System.Xml.XPath.XPathDocument>、<xref:System.Xml.XmlDataDocument> 和 <xref:System.Xml.XmlDocument> 上实现。 <xref:System.Xml.XPath.XPathNavigator> 基于 XML 路径语言 (XPath) 建议第 5 节中所述的万维网联合会 (W3C) 数据模型。  
   
  <xref:System.Xml.XPath.XPathNavigator> 定义一个适用于任何存储区的游标模型，并提供对任何数据存储区的快速、只读 XPath 查询。 <xref:System.Xml.XPath.XPathNavigator> 还是用来循环访问结果树片段的类。  
@@ -107,6 +108,7 @@ public class sample
 ```  
   
 ## <a name="output"></a>Output  
+
  转换结果位于文件 out.xml  中：  
   
 ```xml  

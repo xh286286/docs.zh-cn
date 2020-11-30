@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-ms.openlocfilehash: 0afee2d706b95117971c02b57a5570427e0fbd3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1c7aa1a9d5c02aaac5a78603bd2397f012d4640d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827550"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721928"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XslTransform 的 XmlDocument 输入
+
 <xref:System.Xml.XmlDocument> 类提供对 XML 文档的编辑功能。 如果 XML 在发送到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法之前需要编辑或修改，请将 XML 加载到 <xref:System.Xml.XmlDocument> 中进行编辑，然后发送到 <xref:System.Xml.Xsl.XslTransform>。  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ ms.locfileid: "94827550"
  因为 <xref:System.Xml.XmlDocument> 的编辑功能，对于可扩展样式表语言转换 (XSLT) 转换，使用 <xref:System.Xml.XmlDocument> 类作为转换的输入比使用 <xref:System.Xml.XPath.XPathDocument> 速度要慢，因为 <xref:System.Xml.XPath.XPathDocument> 是内部存储，已针对 XML 路径语言 (XPath) 查询进行优化。  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例显示如何将 <xref:System.Xml.XmlDocument> 提供给 <xref:System.Xml.Xsl.XslTransform>，同时将输出发送到 <xref:System.Xml.XmlReader>。  
   
 ```vb  

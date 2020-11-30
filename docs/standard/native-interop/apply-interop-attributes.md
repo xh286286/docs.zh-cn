@@ -14,19 +14,21 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 38632c5a1f462c3a7b537978fde81424916746da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188674"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706289"
 ---
 # <a name="applying-interop-attributes"></a>应用互操作特性
+
 <xref:System.Runtime.InteropServices> 命名空间提供三类特定于互操作的特性：在设计时由你应用的特性、在转换进程中由 COM 互操作工具和 API 应用的特性以及由你或 COM 互操作应用的特性。  
   
  如果不熟悉将特性应用到托管代码的任务，请参阅[利用特性扩展元数据](../attributes/index.md)。 如其他自定义特性一样，可以将特定于互操作的特性应用于类型、方法、属性、参数、字段和其他成员。  
   
 ## <a name="design-time-attributes"></a>设计时特性  
+
  可以使用设计时特性调整由 COM 互操作工具和 API 执行的转换进程的结果。 下表介绍了可以应用到托管源代码的特性。 有时，COM 互操作工具也可能应用此表中所述的特性。  
   
 |特性|描述|  
@@ -55,6 +57,7 @@ ms.locfileid: "93188674"
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|控制类的字段的物理布局。<br /><br /> COM 互操作工具可以应用此特性。|  
   
 ## <a name="conversion-tool-attributes"></a>转换工具特性  
+
  下表介绍了转换过程期间 COM 互操作工具应用的特性。 不要在设计时应用这些特性。  
   
 |特性|描述|  

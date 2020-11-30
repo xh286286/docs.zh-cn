@@ -2,17 +2,19 @@
 title: 使用 XPathNavigator 访问 XML 数据
 ms.date: 03/30/2017
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: a3911230598a282d66fa50bf1d82c4b4083a30e4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f87e2e12b7ebc740809dc8db902f2ece92e8f127
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821887"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725399"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 访问 XML 数据
+
 <xref:System.Xml.XPath.XPathNavigator> 类提供的方法用于在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中浏览节点，提取 XML 数据，以及访问强类型 XML 数据。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [使用 XPathNavigator 的节点集定位](node-set-navigation-using-xpathnavigator.md)  
  介绍用于在 <xref:System.Xml.XPath.XPathNavigator> 或 <xref:System.Xml.XPath.XPathDocument> 对象中浏览节点的 <xref:System.Xml.XmlDocument> 类的节点集浏览方法。  
   

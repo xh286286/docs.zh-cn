@@ -12,14 +12,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 919e4f4cf467e8fc28c3d007963393dad134ab57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687687"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724047"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：引用具有强名称的程序集
+
 引用强名称程序集中的类型或资源的过程通常是透明的。 可在编译时（早期绑定）或在运行时进行引用。  
   
 向编译器指示要编译的程序集显式引用另一程序集时，会发生编译时引用。 使用编译时引用时，编译器会自动获取目标强名称程序集的公钥，并将其放在正在编译的程序集的程序集引用中。

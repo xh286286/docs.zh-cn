@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: ee36845f19ef4a7c3923b1032ab6eb45d2f60733
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c2ab384b6d84a14d5e8f4cfe66281a26b14421f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726959"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>如何：在 .NET Framework 和 Windows 运行时流之间进行转换（仅限 Windows）
 
@@ -19,6 +19,7 @@ ms.locfileid: "94830813"
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 类包含简化这些转换的方法。 但是，.NET Framework 与 Windows 运行时流之间存在一些基本差异，这将影响使用这些方法所获得的结果，如以下部分中所述：
 
 ## <a name="convert-from-a-windows-runtime-to-a-net-framework-stream"></a>从 Windows 运行时流转换为 .NET Framework 流
+
 若要从 Windows 运行时流转换为 .NET Framework 流，请使用以下 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 方法之一：
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> 将 Windows 运行时中的随机访问流转换为 .NET 中适用于 UWP 应用的托管流。
@@ -32,6 +33,7 @@ Windows 运行时提供支持只读、只写或读写的流类型。 如果将 W
 最佳做法是使用与要转换的 Windows 运行时流的功能匹配的转换方法。 但是，由于 <xref:Windows.Storage.Streams.IRandomAccessStream> 是可读写的（它同时实现了 <xref:Windows.Storage.Streams.IOutputStream> 和 <xref:Windows.Storage.Streams.IInputStream>），因此转换方法将保留原始流的功能。 例如，使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> 转换 <xref:Windows.Storage.Streams.IRandomAccessStream> 不会限制转换的 .NET Framework 流的可读性。 它也是可写的。
 
 ## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>示例：将 Windows 运行时随机访问流转换为 .NET Framework 流
+
 若要从 Windows 运行时随机访问流转换为 .NET Framework 流，请使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> 方法。
 
 下面的代码示例会提示用户选择文件，使用 Windows 运行时 API 将其打开，然后将其转换为 .NET Framework 流。 它可读取流，并将其输出为文本块。 在输出结果之前，通常使用 .NET Framework API 操作流。
@@ -42,6 +44,7 @@ Windows 运行时提供支持只读、只写或读写的流类型。 如果将 W
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage1.xaml.vb)]
 
 ## <a name="convert-from-a-net-framework-to-a-windows-runtime-stream"></a>从 .NET Framework 转换为 Windows 运行时流
+
 若要从.NET Framework 流转换为 Windows 运行时流，请使用下列任一 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 方法：
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> 将 .NET 中适用于为 UWP 应用的托管流转换为 Windows 运行时中的输入流。

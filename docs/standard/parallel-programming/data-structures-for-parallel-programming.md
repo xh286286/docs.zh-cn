@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699009"
 ---
 # <a name="data-structures-for-parallel-programming"></a>用于并行编程的数据结构
 
 .NET 提供了几种对并行编程非常有用的类型，包括一组并发集合类、轻型同步基元和用于迟缓初始化的类型。 可以将这些类型与任何多线程应用代码（包括任务并行库和 PLINQ）结合使用。  
   
 ## <a name="concurrent-collection-classes"></a>并发回收类  
+
  <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的回收类提供线程安全的添加和删除操作，以尽可能地避免锁定，并在需要锁定时使用细粒度锁定。 并发集合类在访问项时不需要用户代码执行任何锁定。 如果多个线程在回收中添加和删除项，并发回收类可以显著提高 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>（具有用户实现的锁定）等类型的性能。  
   
  下表列出了并发集合类：  
@@ -31,6 +32,7 @@ ms.locfileid: "94829526"
  有关详细信息，请参阅[线程安全集合](../collections/thread-safe/index.md)。  
   
 ## <a name="synchronization-primitives"></a>同步基元  
+
  通过消除旧多线程处理代码中高昂的锁定机制，<xref:System.Threading?displayProperty=nameWithType> 命名空间中的同步基元实现了细粒度并发和更快速的性能。
   
  下表列出了同步类型：  
@@ -51,6 +53,7 @@ ms.locfileid: "94829526"
 - [如何：使用屏障同步并发操作](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
   
 ## <a name="lazy-initialization-classes"></a>迟缓初始化类  
+
  通过迟缓初始化，除非需要，否则不分配对象内存。 迟缓初始化可以提升性能，具体是通过在整个程序生存期内均匀分布对象分配。 若要为任何自定义类型启用迟缓初始化，可以包装类型 <xref:System.Lazy%601>。  
   
  下表列出了迟缓初始化类型：  
@@ -64,6 +67,7 @@ ms.locfileid: "94829526"
  若要了解详细信息，请参阅[迟缓初始化](../../framework/performance/lazy-initialization.md)  
   
 ## <a name="aggregate-exceptions"></a>聚合异常  
+
  <xref:System.AggregateException?displayProperty=nameWithType> 类型可用于捕获对各个线程并发抛出的多个异常，并将它们作为一个异常返回给联接线程。 为此，<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 类型以及 PLINQ 大量使用 <xref:System.AggregateException>。 有关详细信息，请参阅[异常处理](exception-handling-task-parallel-library.md)和[如何：处理 PLINQ 查询中的异常](how-to-handle-exceptions-in-a-plinq-query.md)。  
   
 ## <a name="see-also"></a>请参阅

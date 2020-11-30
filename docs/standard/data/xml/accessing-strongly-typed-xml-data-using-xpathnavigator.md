@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7051aeb8cdc25518f99fe093045e7e769ae7f6f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822823"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725412"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 访问强类型 XML 数据
+
 作为 XPath 2.0 数据模型的实例，<xref:System.Xml.XPath.XPathNavigator> 类可以包含映射到公共语言运行库 (CLR) 类型的强类型数据。 根据 XPath 2.0 数据模型，只有元素和属性可以包含强类型数据。 <xref:System.Xml.XPath.XPathNavigator> 类提供将 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的数据作为强类型数据访问的机制，以及将一种数据类型转换为另一种数据类型的机制。  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>通过 XPathNavigator 公开的类型信息  
+
  XML 1.0 数据在技术角度没有类型，除非使用 DTD、XML 架构定义语言 (XSD) 架构或其他机制进行处理。 有许多类别的类型信息可以与 XML 元素或属性关联。  
   
 - 简单 CLR 类型：所有 XML 架构语言都不直接支持公共语言运行时 (CLR) 类型。 因为能够以最适合的 CLR 类型查看简单元素和属性内容非常有用，所以，在缺少架构信息以及任何添加的架构信息（可能会将此内容优化为更适合的类型）时，可以将所有简单内容类型化为 <xref:System.String>。 可以使用 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 属性找到简单元素和属性内容最匹配的 CLR 类型。 若要详细了解如何从架构内置类型映射到 CLR 类型，请参阅 [System.Xml 类中的类型支持](type-support-in-the-system-xml-classes.md)。  
@@ -29,6 +31,7 @@ ms.locfileid: "94822823"
 - 架构语言专用类型反射：在其他情况下，建议获取应用于 XML 文档的架构专用类型的更多详细信息。 例如，在读取 XML 文件时，可能需要为 XML 文档中的每个有效节点提取 `maxOccurs` 属性，以便执行某项自定义计算。 因为此信息仅通过架构验证设置，所以，通过 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 属性访问。 有关更多信息，请参见下面的“后架构验证信息集 (PSVI)”一节。  
   
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator 类型化访问器  
+
  下表显示 <xref:System.Xml.XPath.XPathNavigator> 类中可以用于访问节点的类型信息的各种属性和方法。  
   
 |Property|描述|  
@@ -47,6 +50,7 @@ ms.locfileid: "94822823"
  若要详细了解如何从架构内置类型映射到 CLR 类型，请参阅 [System.Xml 类中的类型支持](type-support-in-the-system-xml-classes.md)。  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>后架构验证信息集 (PSVI)  
+
  XML 架构处理器使用 XML 信息集作为输入，并将其转换为后架构验证信息集 (PSVI)。 PSVI 是原始输入 XML 信息集，包含添加的新信息项以及在现有信息项中添加的新属性。 在 PSVI 的 XML 信息集中添加了三种广义信息类，通过 <xref:System.Xml.XPath.XPathNavigator> 公开。  
   
 1. 验证结果：有关是否已成功验证元素或属性的信息。 此信息通过 <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> 类的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 属性的 <xref:System.Xml.XPath.XPathNavigator> 属性公开。  
@@ -137,6 +141,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 ```  
   
 ## <a name="obtain-typed-values-using-valueas-properties"></a>使用 ValueAs 属性获取类型化值  
+
  节点的类型化值可以通过访问 <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> 的 <xref:System.Xml.XPath.XPathNavigator> 属性进行检索。 在某些情况下，可能需要将节点的类型化值转换为其他类型。 常见的示例是从 XML 节点获取数值。 例如，考虑以下未经过验证和非类型化的 XML 文档。  
   
 ```xml  

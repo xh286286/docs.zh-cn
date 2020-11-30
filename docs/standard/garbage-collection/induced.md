@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 25e94221355569931a31b566a53434cbed9ea93f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714232"
 ---
 # <a name="induced-collections"></a>被动回收
+
 在大多数情况下，垃圾回收器可以确定执行回收的最佳时间，应让其独立运行。 在某些不常见的情况下，强制回收可以提高应用程序的性能。 在这种情况下，可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法强制执行垃圾回收，从而诱导垃圾回收。  
   
  如果应用代码中特定点使用的内存量大量减少，请使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法。 例如，如果应用使用包含多个控件的复杂对话框，那么在对话框关闭时调用 <xref:System.GC.Collect%2A> 可以立即回收对话框占用的内存，从而提升性能。 请确保应用程序不会过于频繁地引发垃圾回收，否则当垃圾回收器无效率地尝试回收对象时，可能会使性能降低。 可以向 <xref:System.GC.Collect%2A> 方法提供 <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> 枚举值，以便仅在回收能够提高效率时才进行回收，如下一部分所述。  
   
 ## <a name="gc-collection-mode"></a>GC 回收模式  
+
  可以使用包含 <xref:System.GCCollectionMode> 值的 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法重载之一，指定强制回收的行为，如下所示。  
   
 |`GCCollectionMode` 值|说明|  
@@ -26,6 +28,7 @@ ms.locfileid: "94827719"
 |<xref:System.GCCollectionMode.Optimized>|使垃圾回收器可以确定当前时间是否是回收对象的最佳时间。<br /><br /> 垃圾回收器可能判定回收效率不够高，因此回收不合理，在这种情况下将返回而不回收对象。|  
   
 ## <a name="background-or-blocking-collections"></a>后台回收或阻塞回收  
+
  可以调用 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType> 方法重载，指定诱导回收是否是阻止式。 执行的回收类型取决于此方法的 `mode` 和 `blocking` 参数组合。 `mode` 是 <xref:System.GCCollectionMode> 枚举的成员，且 `blocking` 值为 <xref:System.Boolean>。 下表汇总了 `mode` 和 `blocking` 参数的交互。  
   
 |`mode`|`blocking` = `true`|`blocking` = `false`|  

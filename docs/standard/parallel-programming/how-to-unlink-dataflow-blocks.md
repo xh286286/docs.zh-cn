@@ -9,19 +9,21 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: a3565bb8f0d00773fc59853d68ca7c54de03ba2b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e981d1b9b3adc638a84de1c119ad849ec533d16e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826796"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722357"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>如何：取消链接数据流块
+
 本文档介绍如何取消目标数据流块与其源的链接。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>示例  
+
  下面的示例创建了三个 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 对象，每个对象调用 `TrySolution` 方法来计算值。 此示例只需使用第一次调用 `TrySolution` 的结果即可完成。  
   
  [!code-csharp[TPLDataflow_ReceiveAny#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_receiveany/cs/dataflowreceiveany.cs#1)]

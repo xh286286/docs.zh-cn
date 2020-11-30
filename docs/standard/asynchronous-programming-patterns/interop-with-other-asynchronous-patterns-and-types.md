@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: b0dd786e1922d75edcb0326cc9e98037c6e4945c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2ae1c514185152dd709fe06018df513fb54b874b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830319"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726712"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>与其他异步模式和类型互操作
 
@@ -28,6 +28,7 @@ ms.locfileid: "94830319"
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>任务和异步编程模型 (APM)
 
 ### <a name="from-apm-to-tap"></a>从 APM 到 TAP  
+
  因为[异步编程模型 (APM)](asynchronous-programming-model-apm.md) 模式的结构合理，而且能够轻松生成包装，将 APM 实现公开为 TAP 实现。 .NET Framework 4 及更高版本包含采用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法重载形式的帮助器例程来实现这种转换。  
   
  请考虑 <xref:System.IO.Stream> 类及其 <xref:System.IO.Stream.BeginRead%2A> 和 <xref:System.IO.Stream.EndRead%2A> 方法，它们代表与同步 <xref:System.IO.Stream.Read%2A> 方法对应的 APM：  
@@ -50,6 +51,7 @@ ms.locfileid: "94830319"
  [!code-vb[Conceptual.AsyncInterop#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap2.vb#5)]  
   
 ### <a name="from-tap-to-apm"></a>从 TAP 到 APM  
+
  如果现有的基础结构需要 APM 模式，则还需要采用 TAP 实现并在需要 APM 实现的地方使用它。  由于任务可以组合，并且 <xref:System.Threading.Tasks.Task> 类实现 <xref:System.IAsyncResult>，您可以使用一个简单的 helper 函数执行此操作。 以下代码使用 <xref:System.Threading.Tasks.Task%601> 类的扩展，但可以对非泛型任务使用几乎相同的函数。  
   
  [!code-csharp[Conceptual.AsyncInterop#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM1.cs#6)]
@@ -73,6 +75,7 @@ ms.locfileid: "94830319"
  [!code-vb[Conceptual.AsyncInterop#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#10)]  
   
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>任务和基于事件的异步模式 (EAP)  
+
  包装 [基于事件的异步模式 (EAP)](event-based-asynchronous-pattern-eap.md) 实现比包装 APM 模式更为复杂，因为与 APM 模式相比，EAP 模式的变体更多，结构更少。  为了演示，以下代码包装了 `DownloadStringAsync` 方法。  `DownloadStringAsync` 接受 URI，在下载时引发 `DownloadProgressChanged` 事件，以报告进度的多个统计信息，并在完成时引发 `DownloadStringCompleted` 事件。  最终在指定 URI 中返回一个字符串，其中包含页面内容。  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
@@ -81,6 +84,7 @@ ms.locfileid: "94830319"
 ## <a name="tasks-and-wait-handles"></a>任务和等待句柄  
   
 ### <a name="from-wait-handles-to-tap"></a>从等待句柄到 TAP  
+
  虽然等待句柄不能实现异步模式，但高级开发人员可以在设置等待句柄时使用 <xref:System.Threading.WaitHandle> 类和 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法实现异步通知。  可以包装 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 方法以在等待句柄中启用针对任何同步等待的基于任务的替代方法：  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
@@ -94,6 +98,7 @@ ms.locfileid: "94830319"
  还可以构建不依赖等待句柄就完全可以处理任务的异步信号量。 若要执行此操作，可以使用 [使用基于任务的异步模式](consuming-the-task-based-asynchronous-pattern.md) 中所述的用于在 <xref:System.Threading.Tasks.Task>。  
   
 ### <a name="from-tap-to-wait-handles"></a>从 TAP 到等待句柄  
+
  正如前面所述， <xref:System.Threading.Tasks.Task> 类实现 <xref:System.IAsyncResult>，且该实现公开 <xref:System.Threading.Tasks.Task.System%23IAsyncResult%23AsyncWaitHandle%2A> 属性，该属性会返回在 <xref:System.Threading.Tasks.Task> 完成时设置的等待句柄。  可以获得 <xref:System.Threading.WaitHandle> 的 <xref:System.Threading.Tasks.Task> ，如下所示：  
   
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]

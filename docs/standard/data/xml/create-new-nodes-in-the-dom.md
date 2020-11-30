@@ -2,14 +2,15 @@
 title: 在 DOM 中创建新节点
 ms.date: 03/30/2017
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: 835d92b972341e67bc163563ec62c24db610a65a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dea7add100fbdbb9e761fe39d0d824d27975757f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822745"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704742"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>在 DOM 中创建新节点
+
 <xref:System.Xml.XmlDocument> 为所有节点类型提供了 create 方法。 为该方法提供名称（需要时）以及那些具有内容的节点（如文本节点）的内容或其他参数，这样便可创建节点。 下面的方法需要填充名称和几个其他参数以创建相应的节点。  
   
 - <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  

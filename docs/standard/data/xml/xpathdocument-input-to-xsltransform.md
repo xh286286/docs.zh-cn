@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-ms.openlocfilehash: d9291ff4010e04bf94a216f099ea80f8a3e2de12
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 29bb345c2654baec8fbd2adce3788a4b4f2d582d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720862"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>XslTransform 的 XPathDocument 输入
+
 <xref:System.Xml.XPath.XPathDocument> 是只读缓存，配合 <xref:System.Xml.Xsl.XslTransform> 处理文档。 它在结构上与 XML 文档对象模型 (DOM) 类似，但是已使用 <xref:System.Xml.XPath.XPathNavigator> 上的 XPath 优化功能，针对可扩展样式表语言转换 (XSLT) 处理和 XML 路径语言 (XPath) 数据模型进行了高度优化。  
   
 > [!NOTE]

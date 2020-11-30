@@ -6,19 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74dbe6b84c8d9400790f763f811da5542c732892
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720875"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查询和命名空间
+
 XPath 查询支持 XML 文档中的命名空间，可以使用命名空间前缀来限定元素和属性的名称。 使用命名空间前缀来限定元素和属性的名称可以限制 XPath 查询只返回属于特定命名空间的节点。  
   
  例如，如果前缀 `books` 映射到命名空间 `http://www.contoso.com/books`，以下 XPath 查询 `/books:books/books:book` 将只选择命名空间 `book` 中的 `http://www.contoso.com/books` 元素。  
   
 ## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
+
  要在 XPath 查询中使用命名空间，构造一个从 <xref:System.Xml.IXmlNamespaceResolver> 接口派生的对象（例如 <xref:System.Xml.XmlNamespaceManager> 类），包含要加入 XPath 查询的命名空间 URI 和前缀。  
   
  <xref:System.Xml.XmlNamespaceManager> 对象可以通过下列任意方式在查询中使用。  
@@ -36,6 +38,7 @@ XPath 查询支持 XML 文档中的命名空间，可以使用命名空间前缀
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>默认命名空间  
+
  在下面的 XML 文档中，具有空前缀的默认命名空间用于声明 `http://www.contoso.com/books` 命名空间。  
   
 ```xml  

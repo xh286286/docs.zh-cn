@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-ms.openlocfilehash: 5cf132c302650a0069c6cc497248d1d0b50c779d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0d327738f818c40d8baa9e0fb8bd0092b94c6e07
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721499"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 提取 XML 数据
+
 可以通过多种不同的方式在 Microsoft .NET Framework 中表示 XML 文档。 包括使用 <xref:System.String>，或通过使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 类。 为了便于在这些不同的 XML 文档表示形式之间切换，<xref:System.Xml.XPath.XPathNavigator> 类提供了许多方法和属性，用于将 XML 作为 <xref:System.String>, <xref:System.Xml.XmlReader> 对象或 <xref:System.Xml.XmlWriter> 对象提取。  
   
 ## <a name="convert-an-xpathnavigator-to-a-string"></a>将 XPathNavigator 转换为字符串  
+
  <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 属性用于获取整个 XML 文档的标记或只获取单个节点及其子节点的标记。  
   
 > [!NOTE]
@@ -48,6 +50,7 @@ string root = navigator.OuterXml;
 ```  
   
 ## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>将 XPathNavigator 转换为 XmlReader  
+
  <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> 方法用于将 XML 文档的全部内容或只是单个节点及其子节点流处理到 <xref:System.Xml.XmlReader> 对象。  
   
  为当前节点及其子节点创建 <xref:System.Xml.XmlReader> 对象时，<xref:System.Xml.XmlReader> 对象的 <xref:System.Xml.XmlReader.ReadState%2A> 属性设置为 <xref:System.Xml.ReadState.Initial>。 当首次调用 <xref:System.Xml.XmlReader> 对象的 <xref:System.Xml.XmlReader.Read%2A> 方法时，<xref:System.Xml.XmlReader> 移动到 <xref:System.Xml.XPath.XPathNavigator> 的当前节点上。 新的 <xref:System.Xml.XmlReader> 对象继续执行读取操作，直到到达 XML 树的结尾为止。 此时，<xref:System.Xml.XmlReader.Read%2A> 方法返回 `false`，<xref:System.Xml.XmlReader> 对象的 <xref:System.Xml.XmlReader.ReadState%2A> 属性设置为 <xref:System.Xml.ReadState.EndOfFile>。  
@@ -115,6 +118,7 @@ book.Close();
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>将 XPathNavigator 转换为 XmlWriter  
+
  <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> 方法用于将 XML 文档的全部内容或只是单个节点及其子节点流处理到 <xref:System.Xml.XmlWriter> 对象。  
   
  创建 <xref:System.Xml.XPath.XPathNavigator> 对象时不会更改 <xref:System.Xml.XmlWriter> 对象的位置。  

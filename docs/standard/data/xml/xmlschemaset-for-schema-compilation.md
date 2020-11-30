@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 5916511187741c703cb39a5c168e542e124ab26b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4501f3dde8d402bd318332dfe9b2209b3febea71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825918"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723358"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用于编译架构的 XmlSchemaSet
+
 介绍 <xref:System.Xml.Schema.XmlSchemaSet>，一个可以存储和验证 XML 架构定义语言 (XSD) 架构的缓存。  
   
 ## <a name="the-xmlschemaset-class"></a>XmlSchemaSet 类  
+
  <xref:System.Xml.Schema.XmlSchemaSet> 是一个可以存储和验证 XML 架构定义语言 (XSD) 架构的缓存。  
   
  在 <xref:System.Xml?displayProperty=nameWithType> 1.0 版中，XML 架构作为架构库加载到 <xref:System.Xml.Schema.XmlSchemaCollection> 类中。 在 <xref:System.Xml?displayProperty=nameWithType> 2.0 版中，<xref:System.Xml.XmlValidatingReader> 和 <xref:System.Xml.Schema.XmlSchemaCollection> 类已过时，分别由 <xref:System.Xml.XmlReader.Create%2A> 方法和 <xref:System.Xml.Schema.XmlSchemaSet> 类所取代。  
@@ -32,6 +34,7 @@ ms.locfileid: "94825918"
 |特定目标命名空间在集合中只能存在一个架构。|只要不存在类型冲突，就可以为同一目标命名空间添加多个架构。|  
   
 ## <a name="migrating-to-the-xmlschemaset"></a>迁移到 XmlSchemaSet  
+
  以下代码示例提供从过时的 <xref:System.Xml.Schema.XmlSchemaSet> 类迁移到新的 <xref:System.Xml.Schema.XmlSchemaCollection> 类的指南。 该代码示例说明两个类之间的下列主要区别。  
   
 - 与 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 类的 <xref:System.Xml.Schema.XmlSchemaCollection> 方法不同，在调用 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法时，不编译架构。 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法在示例代码中显式调用。  
@@ -95,6 +98,7 @@ foreach(XmlSchema schema in schemaSet.Schemas())
 ```  
   
 ## <a name="adding-and-retrieving-schemas"></a>添加和检索架构  
+
  架构是使用 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法添加到 <xref:System.Xml.Schema.XmlSchemaSet> 中的。 架构添加到 <xref:System.Xml.Schema.XmlSchemaSet> 中后，将与目标命名空间 URI 关联。 目标命名空间 URI 可以指定为 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法的参数，如果未指定目标命名空间，<xref:System.Xml.Schema.XmlSchemaSet> 将使用架构中定义的目标命名空间。  
   
  架构是使用 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 属性从 <xref:System.Xml.Schema.XmlSchemaSet> 检索的。 通过 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 属性，可以循环访问 <xref:System.Xml.Schema.XmlSchema> 中包含的 <xref:System.Xml.Schema.XmlSchemaSet> 对象。 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 属性返回 <xref:System.Xml.Schema.XmlSchema> 中包含的所有 <xref:System.Xml.Schema.XmlSchemaSet> 对象，如果给定了目标命名空间参数，则返回属于该目标命名空间的所有 <xref:System.Xml.Schema.XmlSchema> 对象。 如果 `null` 指定为目标命名空间参数，<xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 属性将返回所有没有命名空间的架构。  
@@ -127,6 +131,7 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  有关在 <xref:System.Xml.Schema.XmlSchemaSet> 对象中添加和检索架构的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 方法和 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 属性的参考文档。  
   
 ## <a name="compiling-schemas"></a>编译架构  
+
  <xref:System.Xml.Schema.XmlSchemaSet> 中的架构通过 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法编译为一个逻辑架构。  
   
 > [!NOTE]
@@ -154,6 +159,7 @@ schemaSet.Compile();
  有关编译 <xref:System.Xml.Schema.XmlSchemaSet> 中的架构的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法参考文档。  
   
 ## <a name="reprocessing-schemas"></a>重新处理架构  
+
  重新处理 <xref:System.Xml.Schema.XmlSchemaSet> 中的架构时，将执行调用 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法时对架构执行的所有预处理步骤。 如果调用 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 方法成功，<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 属性将设置为 `false`。  
   
  如果 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 中的架构在 <xref:System.Xml.Schema.XmlSchemaSet> 执行编译之后已修改，应使用 <xref:System.Xml.Schema.XmlSchemaSet> 方法。  
@@ -189,11 +195,13 @@ schemaSet.Reprocess(schema);
  有关重新处理 <xref:System.Xml.Schema.XmlSchemaSet> 中的架构的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 方法参考文档。  
   
 ## <a name="checking-for-a-schema"></a>检查架构  
+
  可以使用 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法检查架构是否包含在 <xref:System.Xml.Schema.XmlSchemaSet> 中。 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 方法使用目标命名空间或要检查的 <xref:System.Xml.Schema.XmlSchema> 对象。 在任何一种情况下，如果架构包含在 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 中，`true` 方法将返回 <xref:System.Xml.Schema.XmlSchemaSet>；否则，将返回 `false`。  
   
  有关检查架构的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> 方法参考文档。  
   
 ## <a name="removing-schemas"></a>移除架构  
+
  架构使用 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法从 <xref:System.Xml.Schema.XmlSchemaSet> 中移除。 <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> 方法将指定架构从 <xref:System.Xml.Schema.XmlSchemaSet> 中移除，而 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法将指定架构及其导入的所有架构从 <xref:System.Xml.Schema.XmlSchemaSet> 中移除。  
   
  以下示例说明如何将多个架构添加到 <xref:System.Xml.Schema.XmlSchemaSet> 中，然后使用 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法移除其中一个架构及其导入的所有架构。  
@@ -233,6 +241,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  有关移除 <xref:System.Xml.Schema.XmlSchemaSet> 中的架构的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> 方法的参考文档。  
   
 ## <a name="schema-resolution-and-xsimport"></a>架构解析和 xs:import  
+
  下列示例说明 <xref:System.Xml.Schema.XmlSchemaSet> 中存在给定命名空间的多个架构时，用于导入架构的 <xref:System.Xml.Schema.XmlSchemaSet> 行为。  
   
  例如，考虑包含 <xref:System.Xml.Schema.XmlSchemaSet> 命名空间的多个架构的 `http://www.contoso.com`。 具有以下 `xs:import` 指令的架构添加到 <xref:System.Xml.Schema.XmlSchemaSet> 中。  
@@ -244,6 +253,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet> 尝试导入 `http://www.contoso.com` 命名空间的架构，方法是从 `http://www.contoso.com/schema.xsd` URL 加载该架构。 只有架构文档中声明的架构声明和类型可以在导入架构中使用，即使 `http://www.contoso.com` 中存在 <xref:System.Xml.Schema.XmlSchemaSet> 命名空间的其他架构文档。 如果 `schema.xsd` 文件不能位于 `http://www.contoso.com/schema.xsd` URL，则不会有任何 `http://www.contoso.com` 命名空间的架构导入到导入架构中。  
   
 ## <a name="validating-xml-documents"></a>验证 XML 文档  
+
  XML 文档可以针对 <xref:System.Xml.Schema.XmlSchemaSet> 中的架构进行验证。 若要验证 XML 文档，可以将架构添加到 <xref:System.Xml.XmlReaderSettings> 对象的 <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> 属性中，也可以将 <xref:System.Xml.Schema.XmlSchemaSet> 添加到 <xref:System.Xml.XmlReaderSettings> 对象的 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 属性中。 然后，<xref:System.Xml.XmlReaderSettings> 类的 <xref:System.Xml.XmlReader.Create%2A> 方法使用 <xref:System.Xml.XmlReader> 对象创建一个 <xref:System.Xml.XmlReader> 对象并验证该 XML 文档。  
   
  若要详细了解如何使用 <xref:System.Xml.Schema.XmlSchemaSet> 验证 XML 文档，请参阅[使用 XmlSchemaSet 进行 XML 架构 (XSD) 验证](xml-schema-xsd-validation-with-xmlschemaset.md)。  

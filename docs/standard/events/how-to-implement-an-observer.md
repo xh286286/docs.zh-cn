@@ -9,14 +9,15 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73f6d2c25c727717394c79268b71b44ea9ff7800
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828330"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697475"
 ---
 # <a name="how-to-implement-an-observer"></a>如何：实现监视程序
+
 观察程序设计模式要求区分观察程序（注册获取通知）和提供程序（监视数据并将通知发送到一个或多个观察程序）。 本主题介绍了如何创建观察程序。 相关主题[如何：实现提供程序](how-to-implement-a-provider.md)介绍了如何创建提供程序。  
   
 ### <a name="to-create-an-observer"></a>创建观察程序的具体步骤  
@@ -42,6 +43,7 @@ ms.locfileid: "94828330"
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  
   
 ## <a name="example"></a>示例  
+
  下面的示例包含 `TemperatureReporter` 类的完整源代码，提供了温度监视应用的 <xref:System.IObserver%601> 实现。  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]

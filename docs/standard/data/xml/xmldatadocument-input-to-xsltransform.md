@@ -2,14 +2,15 @@
 title: XslTransform 的 XmlDataDocument 输入
 ms.date: 03/30/2017
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
-ms.openlocfilehash: 46abc88f413ae5e0c5f78deba25e939b957a5beb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 96ce5176b83a6dfcb9af29b55f4e5052915dba93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827563"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721941"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform 的 XmlDataDocument 输入
+
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 中已过时。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   

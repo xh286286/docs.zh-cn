@@ -2,14 +2,15 @@
 title: 将现有节点从一个文档复制到另一个文档
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829604"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722201"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>将现有节点从一个文档复制到另一个文档
+
 ImportNode  方法是一种机制，用于将节点或整个节点子树从一个 XmlDocument  复制到另一个 XmlDocument。 该调用返回的节点是源文档节点的副本，其中包括属性值、节点名、节点类型以及所有与命名空间相关的属性，如前缀、本地名称和命名空间统一资源标识符 (URI)。 源文档不更改。 导入该节点后，仍需使用插入节点的方法之一将该节点添加到树中。  
   
  节点附加到新文档后，将归此新文档所有。 原因是每个节点在创建后都具有所属文档，即使节点是在单独的文档片段中创建的。 这是 XML 文档对象模型 (DOM) 要求，由 XmlDocument  类的工厂创建设计强制执行。 例如，CreateElement  是新建节点的唯一方法。  

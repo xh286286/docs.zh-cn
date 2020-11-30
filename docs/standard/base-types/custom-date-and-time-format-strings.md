@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70e68de3ce736bc4935dea80e37cc805068b0bc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824449"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722461"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 
@@ -630,6 +630,7 @@ ms.locfileid: "94824449"
 ## <a name="date-and-time-separator-specifiers"></a>日期和时间分隔符说明符
 
 ### <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a>“:”自定义格式说明符
+
 “:”自定义格式说明符表示时间分隔符，它用于区分小时、分钟和秒。 相应的本地化时间分隔符通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 属性进行检索。
 
 > [!NOTE]

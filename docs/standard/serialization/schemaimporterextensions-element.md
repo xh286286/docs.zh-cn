@@ -7,12 +7,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 35626618a8dd7c63a7008d10bc3568484836a488
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 6b644ed1112b748be4dd301d6fa6f2a6416dc67e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282278"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722136"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> 元素
 
@@ -39,6 +39,7 @@ ms.locfileid: "93282278"
 |[\<system.xml.serialization> 元素](system-xml-serialization-element.md)|用于控制 XML 序列化的顶级元素。|  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例演示如何添加将 XSD 类型映射到 .NET 类型时 <xref:System.Xml.Serialization.XmlSchemaImporter> 所用的类型。  
   
 ```xml  

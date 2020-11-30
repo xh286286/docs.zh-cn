@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-ms.openlocfilehash: e851c6d72a5fd932c065368b893b907d7820c918
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc7536aad46e2edcc5c20400ed872ee4e0ad836d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827095"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713152"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>如何：合并并行和顺序 LINQ 查询
 
@@ -22,12 +22,14 @@ ms.locfileid: "94827095"
 > 本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。 若要详细了解加速，请参阅[了解 PLINQ 中的加速](understanding-speedup-in-plinq.md)。  
   
 ## <a name="example"></a>示例  
+
  下面的示例展示了一种需要 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 的情况，即暂留在旧查询子句中建立的顺序。  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
+
  若要编译并运行此代码，请将它粘贴到 [PLINQ 数据样本](plinq-data-sample.md)项目中，添加用于从 `Main` 调用方法的代码行，再按 F5  。  
   
 ## <a name="see-also"></a>请参阅

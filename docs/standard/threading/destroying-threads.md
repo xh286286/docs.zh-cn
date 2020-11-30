@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: be31b0232889227fa5d4990c9481305eea343f11
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bdba09f5709cf99bc0d076e3875a914cc7c5a11e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723761"
 ---
 # <a name="destroying-threads"></a>销毁线程
 
@@ -30,6 +30,7 @@ ms.locfileid: "94826477"
  正在等待调用 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法的线程可能会被调用 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 的其他线程中断。  
   
 ## <a name="handling-threadabortexception"></a>处理 ThreadAbortException  
+
  如果应中止线程，无论是由于在自己的代码中调用 <xref:System.Threading.Thread.Abort%2A> 所致，还是由于卸载正在运行线程的应用域（<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 终止线程）所致，线程都必须处理 <xref:System.Threading.ThreadAbortException>，并在 `finally` 子句中执行任何最终处理，如下面的代码所示。  
   
 ```vb  

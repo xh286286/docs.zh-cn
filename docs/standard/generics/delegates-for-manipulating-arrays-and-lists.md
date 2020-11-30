@@ -9,17 +9,19 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827277"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728506"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>用于操作数组和列表的泛型委托
+
 此主题概述了用于转换的泛型委托、搜索谓词以及对数组或集合中的元素所采取的操作。  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>用于操作数组和列表的泛型委托  
+
  <xref:System.Action%601> 泛型委托表示对指定类型的元素执行某些操作的方法。 你可以创建一种对元素执行所需操作的方法，创建 <xref:System.Action%601> 委托的实例来表示该方法，然后将该数组和委托传递给 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 静态泛型方法。 数组的每个元素都可以调用该方法。  
   
  <xref:System.Collections.Generic.List%601> 泛型类还提供了 <xref:System.Collections.Generic.List%601.ForEach%2A> 方法，该方法使用 <xref:System.Action%601> 委托。 此方法不属泛型方法。  
@@ -36,6 +38,7 @@ ms.locfileid: "94827277"
  <xref:System.Converter%602>泛型委托让你能定义两个类型之间的转换，将一个类型的数组转换到另一个类型的数组，或者将一个类型的列表转换到另一个类型的列表。 创建将现有列表元素转换为新类型的方法，创建一个委托实例来表示该方法，并使用 <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> 泛型静态方法，从原始数组生成新类型数组；或使用 <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> 泛型实例方法，从原始列表生成新类型列表。  
   
 ### <a name="chaining-delegates"></a>链接委托  
+
  使用这些委托的许多方法返回数组或列表，然后传递到另一种方法。 例如，如果你想要选择某些数组元素，将这些元素转换为新类型，并将其保存在新的数组中，则可以将 <xref:System.Array.FindAll%2A> 泛型方法返回的数组传递到 <xref:System.Array.ConvertAll%2A> 泛型方法。 如果新的元素类型缺少自然排序顺序，你可以将 <xref:System.Array.ConvertAll%2A> 泛型方法返回的数组传递到 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> 泛型方法。  
   
 ## <a name="see-also"></a>另请参阅

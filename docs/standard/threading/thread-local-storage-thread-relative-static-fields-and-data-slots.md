@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819625"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727518"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储区：线程相关的静态字段和数据槽
 
@@ -27,6 +27,7 @@ ms.locfileid: "94819625"
 可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类来创建在首次使用对象时迟缓初始化的线程本地对象。 若要了解详细信息，请参阅[迟缓初始化](../../framework/performance/lazy-initialization.md)  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>托管 TLS 中数据的唯一性  
+
  无论使用线程相对静态字段，还是使用数据槽，托管 TLS 中的数据都是对线程和应用域唯一的数据。  
   
 - 在应用域内，一个线程无法修改另一个线程的数据，即使两个线程使用相同的字段或槽，也不例外。  
@@ -38,6 +39,7 @@ ms.locfileid: "94819625"
  同样，如果线程在两个不同的应用域中有同名数据槽，第一个应用域中的数据不受第二个应用域中数据的影响。  
   
 ## <a name="thread-relative-static-fields"></a>线程相对静态字段  
+
  如果确定一条数据始终对线程和应用域是唯一的，请向静态字段应用 <xref:System.ThreadStaticAttribute> 属性。 此字段的使用方法与其他任何静态字段一样。 此字段中的数据对使用它的每个线程都是唯一的。  
   
  线程相对静态字段的性能优于数据槽，并支持编译时类型检查。  

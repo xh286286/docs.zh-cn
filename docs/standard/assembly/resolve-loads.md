@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: edd101e57793668d71d44db08f191ae412c6d998
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720901"
 ---
 # <a name="resolve-assembly-loads"></a>解析程序集加载
 
@@ -28,6 +28,7 @@ ms.locfileid: "92687274"
 > 若要在仅限反射的上下文中解决程序集加载问题，请改用 <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> 事件。  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve 事件的工作原理  
+
  注册 <xref:System.AppDomain.AssemblyResolve> 事件的处理程序后，每当运行时无法按名称绑定到程序集时，此处理程序都将被调用。 例如，从用户代码中调用以下方法可能导致引发 <xref:System.AppDomain.AssemblyResolve> 事件：  
   
 - <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法重载或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载，其第一个参数是表示要加载的程序集的显示名称的字符串（即，<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 属性返回的字符串）。  
@@ -39,6 +40,7 @@ ms.locfileid: "92687274"
 - <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 方法重载，实例化另一个应用程序域中的对象。  
   
 ### <a name="what-the-event-handler-does"></a>事件处理程序的功能  
+
  <xref:System.AppDomain.AssemblyResolve> 事件的处理程序接收要加载的程序集的显示名称（在 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 属性中）。 如果处理程序无法识别程序集名称，则返回 `null` (C#)、`Nothing` (Visual Basic) 或 `nullptr` (Visual C++)。  
   
  如果处理程序识别了程序集名称，它可以加载并返回满足此请求的程序集。 下面的列表介绍了一些示例方案。  
@@ -69,6 +71,7 @@ ms.locfileid: "92687274"
  可将同一程序集的多个版本加载到同一应用程序域中。 不推荐此做法，因为可能导致类型分配问题。 请参阅[适用于程序集加载的最佳做法](../../framework/deployment/best-practices-for-assembly-loading.md)。  
   
 ### <a name="what-the-event-handler-should-not-do"></a>事件处理程序的禁忌操作  
+
 处理 <xref:System.AppDomain.AssemblyResolve> 事件的主要规则是不应试图返回无法识别的程序集。 编写处理程序时应了解哪些程序集可能会导致引发该事件。 处理程序集应对其他程序集返回 null。  
 
 > [!IMPORTANT]

@@ -4,12 +4,12 @@ description: 了解可在其上安装 .NET 的 macOS 版本。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 983c5d2c04b87759b898f449bc092161b03c8ace
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715129"
 ---
 # <a name="install-net-on-macos"></a>在 macOS 上安装 .NET
 
@@ -181,7 +181,7 @@ Visual Studio Code 是一个功能强大的轻量级源代码编辑器，可在�
 
 [dotnet-install 脚本](../tools/dotnet-install-script.md)用于运行时的自动化和非管理员安装。 可从 [dotnet-install 脚本引用页](../tools/dotnet-install-script.md)下载该脚本。
 
-此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET 3.1。 可通过指定 `current` 开关以选择特定版本。 包括 `runtime` 开关以安装运行时。 否则，该脚本安装 [SDK](./windows.md)。
+此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET Core 3.1。 可通过指定 `current` 开关以选择特定版本。 包括 `runtime` 开关以安装运行时。 否则，该脚本安装 [SDK](./windows.md)。
 
 ```bash
 ./dotnet-install.sh --channel 5.0 --runtime aspnetcore

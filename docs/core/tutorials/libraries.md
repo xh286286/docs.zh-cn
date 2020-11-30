@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core CLI 创建 .NET Core 库。 将创建�
 author: cartermp
 ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8a0b1c5645f41a256bfb9d0e5dac74f8706d84e6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725074"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 开发库
 
@@ -185,7 +185,7 @@ namespace MultitargetLib
             return $"Dotnet Foundation mentions .NET {dotNetCount} times!";
         }
 #else
-        // .NET 4.5+ can use async/await!
+        // .NET Framework 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
             string url = "https://www.dotnetfoundation.org/";
@@ -319,13 +319,13 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 
 ### <a name="project-to-project-referencing"></a>项目到项目的引用
 
-引用项目的最佳方式是使用 .NET Core CLI 添加项目引用。 在 AwesomeLibrary.CSharp  和 AwesomeLibrary.FSharp  项目目录中，可运行下列命令：
+引用项目的最佳方式是使用 .NET Core CLI 添加项目引用。 在 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 项目目录中，可运行下列命令：
 
 ```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
-AwesomeLibrary.CSharp  和 AwesomeLibrary.FSharp  的项目文件现在需要将 AwesomeLibrary.Core  作为 `ProjectReference` 目标引用。  可通过检查项目文件和查看其中的下列内容来进行验证：
+AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 的项目文件现在需要将 AwesomeLibrary.Core 作为 `ProjectReference` 目标引用。  可通过检查项目文件和查看其中的下列内容来进行验证：
 
 ```xml
 <ItemGroup>

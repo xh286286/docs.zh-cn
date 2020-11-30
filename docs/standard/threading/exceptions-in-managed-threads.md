@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 740cd1b78b96c2fcaecf39a725973d738037f403
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826464"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723748"
 ---
 # <a name="exceptions-in-managed-threads"></a>托管线程中的异常
 
@@ -35,6 +35,7 @@ ms.locfileid: "94826464"
 > 运行时有可能在任何托管代码有机会安装异常处理程序之前，引发一个未经处理的异常。 即使托管代码没有机会处理此类异常，仍允许异常正常继续。  
   
 ## <a name="exposing-threading-problems-during-development"></a>在开发过程中暴露线程处理问题  
+
  如果允许线程不给出任何提示就失败（不终止应用程序），则可能无法检测出重大的编程问题。 对于长时间运行的服务和其他应用程序，此问题尤为严重。 当线程失败时，程序状态会逐渐损坏。 应用程序性能可能会降低，应用程序也可能无响应。  
   
  如果允许线程中未经处理的异常正常继续，直到操作系统终止程序为止，将会在开发和测试过程中暴露此类问题。 程序终止的错误报告支持调试。  

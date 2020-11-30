@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-ms.openlocfilehash: ae7a2e0269c0c12c4dabe5e561e9bef53100aac1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a527fb7f0f9e3c78b3161fdfed0f1d9f3d52798b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819859"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723722"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：通过轮询侦听取消请求
+
 下面的示例展示了一种方便用户代码定期轮询取消令牌，以确定是否已通过调用线程发出取消请求的方式。 此示例使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类型，但相同的模式适用于 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 类型或 <xref:System.Threading.Thread?displayProperty=nameWithType> 类型直接创建的异步操作。  
   
 ## <a name="example"></a>示例  
+
  若要轮询，必须有某种循环或递归代码，可用于定期读取布尔 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性的值。 如果使用的是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类型，且正在等待任务在调用线程上完成，可以使用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法来检查属性并抛出异常。 通过使用此方法，可确保抛出正确的异常来响应请求。 如果使用的是 <xref:System.Threading.Tasks.Task>，那么调用此方法优于手动抛出 <xref:System.OperationCanceledException>。 如果无需抛出异常，可以直接检查属性，并通过方法返回结果（如果属性是 `true` 的话）。  
   
  [!code-csharp[Cancellation#11](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#11)]

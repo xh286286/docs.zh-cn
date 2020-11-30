@@ -10,14 +10,15 @@ ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 848f3e6e1a421a8edfcd9a5506988bc132d721fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d99c09c4ac087152407fa8dc12894c216f9f43dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830475"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716169"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>通过结束异步操作来阻止应用程序执行
+
 如果应用无法在等待异步操作结果期间继续执行其他工作，必须阻止应用一直到操作完成。 请使用下列方法之一，在应用等待异步操作完成期间阻止应用的主线程：  
   
 - 调用异步操作的 EndOperationName 方法   。 本主题介绍的就是这种方法。  
@@ -27,6 +28,7 @@ ms.locfileid: "94830475"
  在异步操作完成前使用 End _OperationName 方法阻止的应用程序，通常会调用 Begin _OperationName 方法，执行任何不需要等待操作结果也可以执行的工作，然后调用 End _OperationName___。  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例展示了如何使用 <xref:System.Net.Dns> 类中的异步方法，检索用户指定计算机的域名系统信息。 请注意，对 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 和 `stateObject` 参数传递的是 `null`（Visual Basic 中的 `Nothing`），因为使用这种方法时这些是可选参数。  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]

@@ -2,14 +2,15 @@
 title: DOM 中的命名空间支持
 ms.date: 03/30/2017
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: b71817bf8a1b2eb585ccb3b21fb361c651c2bfe9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b3214d77b069b672e8772ec78db51c9d8ee1bf50
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830150"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714401"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM 中的命名空间支持
+
 XML 文档对象模型 (DOM) 完全识别命名空间。 只支持识别命名空间的 XML 文档。 万维网联合会 (W3C) 指定实现级别 1 的 DOM 应用程序可以不识别命名空间，而 DOM 级别 2 功能识别命名空间。 然而，XML DOM 中的所有功能都识别命名空间，不论该方法来自级别 1 还是级别 2 DOM 建议。  
   
  例如，在不识别命名空间的设置中，调用 DOM 级别 1 建议中指定的 `setAttribute("A:b", "123")` 不会生成前缀为 `A`、本地名称为 `b` 的属性。 将产生值为 `A:b` 的属性。  

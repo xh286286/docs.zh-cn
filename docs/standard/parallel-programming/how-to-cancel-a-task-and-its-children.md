@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 578544a910127f41dfdfd577316b23d6d5a60bc4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 82a71faf3a2390f5bb36dd896cf865f773f54bd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817258"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713218"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>如何：取消任务及其子级
+
 这些示例展示了如何执行下列任务：  
   
 1. 创建并启动可取消任务。  
@@ -29,6 +30,7 @@ ms.locfileid: "94817258"
  调用线程不会强制结束任务，只会提示取消请求已发出。 如果任务已在运行，至于怎样才能注意请求并适当响应，取决于用户委托的选择。 如果取消请求在任务运行前发出，用户委托绝不会执行，任务对象的状态会转换为“已取消”。  
   
 ## <a name="example"></a>示例  
+
  此示例展示了如何终止 <xref:System.Threading.Tasks.Task> 及其子级，以响应取消请求。 还会演示，当用户委托通过引发 <xref:System.Threading.Tasks.TaskCanceledException> 终止时，调用线程可以选择使用 <xref:System.Threading.Tasks.Task.Wait%2A> 方法或 <xref:System.Threading.Tasks.Task.WaitAll%2A> 方法来等待任务完成。 在这种情况下，必须使用 `try/catch` 块来处理调用线程上的异常。  
   
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]

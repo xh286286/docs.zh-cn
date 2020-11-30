@@ -12,14 +12,15 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 81520f603041693ba97e4ad74764a64627ee7147
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3f933121d3c878dd8eee4812fa6669a915c22356
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696487"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>执行不区分区域性的字符串比较
+
 默认情况下，<xref:System.String.Compare%2A?displayProperty=nameWithType> 方法执行区分区域性和区分大小写的比较。 此方法还包括多个重载，这些重载提供了一个 `culture` 参数和一个 `comparisonType` 参数，前者允许你指定要使用的区域性，后者允许你指定要使用的比较规则。 调用这些方法（而非调用默认重载）将消除与特定方法调用中使用的规则相关的任何歧义，并阐明某个特定比较是区分区域性的还是不区分区域性的。  
   
 > [!NOTE]

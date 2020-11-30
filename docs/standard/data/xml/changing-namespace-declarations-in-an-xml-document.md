@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-ms.openlocfilehash: f4f081e1db2ccacf4714ad3009eefdfc290b2ed4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 95f9c6301f656ad4da5edcfb66521589b9195114
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821822"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725360"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>更改 XML 文档中的命名空间声明
+
 XmlDocument  将命名空间声明和 xmlns  属性公开为文档对象模型的一部分。 这些声明和属性存储在 XmlDocument  中，因此在可以保存文档时暂留这些属性的位置。 更改这些属性对树中现有其他节点的 Name  、NamespaceURI  和 Prefix  属性没有影响。 例如，如果加载以下文档，则 `test` 元素包含 NamespaceURI  `123.`  
   
 ```xml  

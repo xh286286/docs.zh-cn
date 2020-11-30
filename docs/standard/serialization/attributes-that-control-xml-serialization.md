@@ -10,14 +10,15 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 55c36ea6313bfd3000b1d8502d4eda7c552e08cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281981"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717924"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>用来控制 XML 序列化的属性
+
 通过将下表中的特性应用于类和类成员，可以控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化该类的实例的方式。 若要了解这些属性如何控制 XML 序列化，请参阅[使用属性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。  
   
  这些属性还可用于控制 XML Web services 生成的文本样式的 SOAP 消息。 有关将这些属性应用于 XML Web service 方法的更多信息，请参阅 [使用 XML Web service 进行 XML 序列化](xml-serialization-with-xml-web-services.md)。  

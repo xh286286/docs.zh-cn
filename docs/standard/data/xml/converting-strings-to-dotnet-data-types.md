@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830956"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701466"
 ---
 # <a name="convert-strings-to-net-data-types"></a>将字符串转换为 .NET 数据类型
 
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  不过，如果将字符串转换为 Boolean、Single 或 Double，返回的 .NET 类型与使用 System.Convert 类返回的类型不同   。  
   
 ## <a name="string-to-boolean"></a>将字符串转换为 Boolean  
+
  下表列出了使用 ToBoolean  方法将字符串转换为 Boolean  时，针对给定输入字符串生成的类型。  
   
 |有效的字符串输入参数|.NET 输出类型|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>将字符串转换为 Single  
+
  下表列出了使用 ToSingle  方法将字符串转换为 Single  时，针对给定输入字符串生成的类型。  
   
 |有效的字符串输入参数|.NET 输出类型|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |“-INF”|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>将字符串转换为 Double  
+
  下表列出了使用 ToDouble  方法将字符串转换为 Single  时，针对给定输入字符串生成的类型。  
   
 |有效的字符串输入参数|.NET 输出类型|  

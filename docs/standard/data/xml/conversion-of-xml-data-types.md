@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 108cfbf1ee8ff3d6fbe088d6dd14d0354750cb0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830969"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701492"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML 数据类型的转换
+
 XmlConvert 类中的大多数方法都可用于在字符串和强类型格式之间转换数据。 这些方法与区域设置无关。 这意味着它们在执行转换时不考虑任何区域设置。  
   
 ## <a name="reading-string-as-types"></a>将字符串作为类型读取  
+
  下面的示例读取字符串，并将它转换为 DateTime 类型。  
   
  给定以下 XML 输入：  
@@ -41,6 +43,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>将字符串作为类型写入  
+
  下面的示例读取 Int32，并将它转换为字符串。  
   
  给定以下 XML 输入：  

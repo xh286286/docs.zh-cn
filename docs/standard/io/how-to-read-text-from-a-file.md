@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48b862ff77bf4ace48a5481fe9bedcf354b5654b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725334"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：从文件中读取文本
 
@@ -27,6 +27,7 @@ ms.locfileid: "94823363"
 > 这些代码示例不适用于通用 Windows (UWP) 应用，因为 Windows 运行时提供了对文件进行读写操作的不同流类型。 有关演示如何在 UWP 应用中读取文本的示例，请参阅[快速入门：对文件执行读取和写入操作](/previous-versions/windows/apps/hh758325(v=win.10))。 有关演示如何在 .NET Framework 流和 Windows 运行时流之间进行转换的示例，请参阅[如何：在 .NET Framework 流和 Windows 运行时流之间进行转换](how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>示例：控制台应用中的同步读取  
+
 以下示例演示控制台应用中的同步读取操作。 此示例使用流读取器打开文本文件，将内容复制到字符串并将字符串输出到控制台。  
   
 > [!IMPORTANT]
@@ -36,6 +37,7 @@ ms.locfileid: "94823363"
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
   
 ## <a name="example-asynchronous-read-in-a-wpf-app"></a>示例：WPF 应用中的异步读取
+
  以下示例演示 Windows Presentation Foundation (WPF) 应用中的异步读取操作。  
   
 > [!IMPORTANT]

@@ -4,12 +4,12 @@ description: 了解可在其上安装 .NET 的 Windows 版本。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594529"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715116"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安装 .NET
 
@@ -204,7 +204,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 
 [dotnet-install 脚本](../tools/dotnet-install-script.md)用于运行时的 CI 自动化和非管理员安装。 可从 [dotnet-install 脚本引用页](../tools/dotnet-install-script.md)下载该脚本。
 
-此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET 3.1。 可通过指定 `Channel` 开关以选择特定版本。 包括 `Runtime` 开关以安装运行时。 否则，该脚本安装 SDK。
+此脚本默认安装最新的[长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET Core 3.1。 可通过指定 `Channel` 开关以选择特定版本。 包括 `Runtime` 开关以安装运行时。 否则，该脚本安装 SDK。
 
 ```powershell
 dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore

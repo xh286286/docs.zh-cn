@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825853"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713348"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>如何：取消数据流块
+
 本文档介绍如何在应用程序中启用取消。 此示例使用 Windows 窗体显示数据流管道中工作项的活动位置以及取消的效果。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,6 +35,7 @@ ms.locfileid: "94825853"
 5. 向 <xref:System.Windows.Forms.ToolStrip> 控件添加四个 <xref:System.Windows.Forms.ToolStripProgressBar> 对象。  
   
 ## <a name="creating-the-dataflow-pipeline"></a>创建数据流管道  
+
  本部分介绍如何创建数据流管道，用以处理工作项以及更新进度条。  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>创建数据流管道  
@@ -65,6 +67,7 @@ ms.locfileid: "94825853"
  此示例在构造管道成员时设置 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 属性。 由于 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 属性永久取消数据流块执行，因此如果用户在取消操作后又想再将更多工作项添加到管道中，必须重新创建整个管道。 有关演示使用另一种方法取消数据流块以便在取消操作后可以执行其他工作的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>将数据流管道连接到用户界面  
+
  本节介绍如何将数据流管道连接到用户界面。 创建管道以及将工作项添加到管道中都由“添加工作项”  按钮的事件处理程序控制。 通过“取消”  按钮启动取消操作。 用户单击以上任一按钮时，都会以异步方式启动相应操作。  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>将数据流管道连接到用户界面  
@@ -84,6 +87,7 @@ ms.locfileid: "94825853"
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>示例  
+
  下面的示例演示 Form1.cs（对于 Visual Basic 则为 Form1.vb）的完整代码。  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]

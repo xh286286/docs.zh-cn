@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88cbf266d15a10ff7c56e07a30161e0a800989d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708044"
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
 
@@ -25,9 +25,11 @@ ms.locfileid: "94826308"
 > 自 .NET Framework 4 起，任务并行库和 PLINQ 提供了 API，可降低多线程编程的一些复杂性和风险。 有关详细信息，请参阅 [.NET 中的并行编程](../parallel-programming/index.md)。  
   
 ## <a name="deadlocks-and-race-conditions"></a>死锁和争用条件  
+
  多线程处理解决了吞吐量和响应性问题，但引入此功能会带来新的问题：死锁和争用条件。  
   
 ### <a name="deadlocks"></a>死锁  
+
  两个线程中的每一个线程都尝试锁定另外一个线程已锁定的资源时，就会发生死锁。 两个线程都不能继续执行。  
   
  托管线程处理类的许多方法都提供了超时设定，有助于检测死锁。 例如，下面的代码尝试在 `lockObject` 对象上获取锁。 如果在 300 毫秒内没有获取锁，<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> 返回 `false`。  
@@ -59,6 +61,7 @@ else {
 ```  
   
 ### <a name="race-conditions"></a>争用条件  
+
  争用条件是程序的结果取决于两个或更多个线程中的哪一个先到达某一特定代码块时出现的一种 bug。 多次运行程序会产生不同的结果，并且无法预测任何给定运行的结果。  
   
  争用条件的一个简单例子是递增一个字段。 假定某个类有一个私有 **static** 字段（在 Visual Basic 中为 **Shared**），每创建该类的一个实例时它都递增一次，使用的代码是 `objCt++;` (C#) 或 `objCt += 1` (Visual Basic)。 此操作要求将 `objCt` 的值加载到寄存器中，使该值递增，然后将其存储到 `objCt` 中。  
@@ -70,6 +73,7 @@ else {
  争用条件也可能会在同步多个线程的活动时发生。 编写每一行代码时，都必须考虑出现以下情况时会发生什么情况：一个线程在执行该行代码（或构成该行的任何机器指令）前，其他线程抢先执行了该代码。  
   
 ## <a name="static-members-and-static-constructors"></a>静态成员和静态构造函数  
+
  在类的类构造函数（C# 中为 `static` 构造函数、Visual Basic 中为 `Shared Sub New`）完成运行之前，该类不会初始化。 为防止对未初始化的类型执行代码，在类构造函数完成运行之前，公共语言运行时会禁止从其他线程到类的 `static` 成员（在 Visual Basic 中为 `Shared` 成员）的所有调用。  
   
  例如，如果某个类构造函数启动了一个新线程，并且该线程过程调用了该类的 `static` 成员，则在该类构造函数完成之前，会一直禁止新线程。  
@@ -83,6 +87,7 @@ else {
 使用 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 属性来确定在运行时可用的处理器数量。
   
 ## <a name="general-recommendations"></a>一般性建议  
+
  使用多线程时需考虑以下准则：  
   
 - 请勿使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 终止其他线程。 对另一个线程调用 **Abort** 无异于引发该线程的异常，也不知道该线程已处理到哪个位置。  
@@ -163,6 +168,7 @@ else {
     > <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> 方法重载为引用类型提供类型安全的替代项。
   
 ## <a name="recommendations-for-class-libraries"></a>类库相关建议  
+
  为多线程处理设计类库时，请考虑以下准则：  
   
 - 如果可能，请避免同步需求。 对于大量使用的代码更应如此。 例如，可以将一个算法调整为容忍争用情况，而不是完全消除争用情况。 不必要的同步会降低性能，并且可能导致出现死锁和争用情况。  

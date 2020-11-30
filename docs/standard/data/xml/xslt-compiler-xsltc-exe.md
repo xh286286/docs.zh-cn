@@ -2,14 +2,15 @@
 title: XSLT 编译器 (xsltc.exe)
 ms.date: 03/30/2017
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: cfeebc3ac0c0259c975439dc93c3c5f003b60c40
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89e2291cb4eafe9ca9e5001061b960f348fe4719
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720823"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
+
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  
   
  xsltc.exe 工具包含在 Visual Studio 中。 有关详细信息，请参阅 [Visual Studio 下载](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。  
@@ -41,6 +42,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`?`|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
+
  XSLT 解决方案可由多个样式表模块组成。 xsltc.exe 工具从样式表生成程序集。 然后可以将程序集传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 这有助于在一些 XSLT 部署方案中降低性能成本。  
   
 > [!NOTE]
@@ -49,6 +51,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  xsltc.exe 工具不验证类（`/class:` 名称）或程序集（`/out:`assemblyName）名称   。 如果名称无效，公共语言运行库将引发错误。  
   
 ## <a name="examples"></a>示例  
+
  下面的命令编译样式表并创建一个名为 booksort.dll 的程序集。  
   
 ```console  

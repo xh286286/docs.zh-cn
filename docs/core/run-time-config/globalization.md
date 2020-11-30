@@ -3,12 +3,12 @@ title: 全球化配置设置
 description: 了解对 .NET Core 应用的全球化方面进行配置的运行时设置。例如，如何分析日语日期。
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721903"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>用于全球化的运行时配置选项
 
@@ -87,7 +87,7 @@ runtimeconfig.json 文件：
 
 - 确定 .NET 是否使用适用于 Windows 应用的 Unicode (ICU) 全球化 API 的区域语言支持 (NLS) 或国际组件。 默认情况下，.NET 5.0 和更高版本在 Windows 10 2019 年 5 月更新和更高版本上使用 ICU 全球化 API。
 - 如果省略此设置，则默认情况下，.NET 使用 ICU 全球化 API。 它等效于将值设置为 `false`。
-- 有关详细信息，请参阅[全球化 API 在 Windows 上使用 ICU 库](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)。
+- 有关详细信息，请参阅[全球化 API 在 Windows 上使用 ICU 库](../compatibility/globalization/5.0/icu-globalization-api.md)。
 
 | | 设置名 | 值 | 已引入 |
 | - | - | - | - |

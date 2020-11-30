@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d5d5b27fb77500aa5f6deff3fcb1c739ba8b094
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827407"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722656"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 
@@ -71,6 +71,7 @@ ms.locfileid: "94827407"
 - 从 C# 9 开始，支持协变返回类型。 重写方法可以声明比它重写的方法派生程度更高的返回类型，而重写的只读属性可以声明派生程度更高的类型。
 
 <a name="InterfaceCovariantTypeParameters"></a>
+
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>具有协变类型参数的泛型接口
 
 某些泛型接口具有协变类型参数；例如：<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Linq.IQueryable%601> 和 <xref:System.Linq.IGrouping%602>。 由于这些接口的所有类型参数都是协变类型参数，因此这些类型参数只用于成员的返回类型。  

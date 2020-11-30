@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e1b90bdc5657c1fd22c6e77e31890ff63c3cc3ea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819638"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727453"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 
@@ -38,12 +38,15 @@ ms.locfileid: "94819638"
 |手动同步|手动|手动|手动|手动|手动|手动|  
   
 ## <a name="no-synchronization"></a>无同步  
+
  这是对象的默认情况。 任何线程都可以随时访问任何方法或字段。 一次只能有一个线程访问这些对象。  
   
 ## <a name="manual-synchronization"></a>手动同步  
+
  .NET 类库提供大量用于同步线程的类。 请参阅[同步基元概述](overview-of-synchronization-primitives.md)。  
   
 ## <a name="synchronized-code-regions"></a>同步代码区域  
+
  可以使用 <xref:System.Threading.Monitor> 类或编译器关键字，同步代码块、实例方法和静态方法。 不支持同步静态字段。  
   
  Visual Basic 和 C# 都支持使用特定语言关键字标记代码块，在 C# 中使用的是 `lock` 语句，在 Visual Basic 中使用的是 `SyncLock` 语句。 由线程执行代码时，会尝试获取锁。 如果该锁已由其他线程获取，则在锁变为可用状态之前，该线程一直处于阻止状态。 线程退出同步代码块时，锁会被释放，与线程的退出方式无关。  
@@ -59,6 +62,7 @@ ms.locfileid: "94819638"
 > 为保护 `static` 方法（Visual Basic 中的 `Shared` 方法），请不要锁定类型，即：C# 中的 `typeof(MyType)`、Visual Basic 中的 `GetType(MyType)` 或 C++ 中的 `MyType::typeid`。 请改用私有静态对象。 同样，不要使用 C# 中的 `this`（Visual Basic 中的 `Me`）锁定实例方法。 请改用私有对象。 类或实例可由不是你自己的代码锁定，这可能会引起死锁或性能问题。  
   
 ### <a name="compiler-support"></a>编译器支持  
+
  Visual Basic 和 C# 均支持使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 锁定对象的语言关键字。 Visual Basic 支持 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 语句；C# 支持 [lock](../../csharp/language-reference/keywords/lock-statement.md) 语句。  
   
  在这两种情况下，如果代码块中引发异常，则 **lock** 或 **SyncLock** 获取的锁将自动释放。 C# 和 Visual Basic 编译器在发出 **try**/**finally** 块时，在 try 的起始处使用 **Monitor.Enter**，在 **finally** 块中使用 **Monitor.Exit**。 如果 **lock** 或 **SyncLock** 块内部引发了异常，则会运行 **finally** 处理程序，从而允许执行任何清除工作。  

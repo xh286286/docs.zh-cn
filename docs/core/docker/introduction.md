@@ -3,12 +3,12 @@ title: Docker 简介
 description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6303c16e914c86f3a431a9e5367e6feb8ff88c9e
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654817"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "95724737"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -34,19 +34,19 @@ ms.locfileid: "91654817"
 
 容器注册表是映像存储库的集合。 映像可以基于注册表映像。 可以直接从注册表中的映像创建容器。 [Docker 容器、映像和注册表之间的关系](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)是[构建和生成容器化应用程序或微服务](../../architecture/microservices/architect-microservice-container-applications/index.md)时的一个重要概念。 此方法大大缩短了开发和部署之间的时间。
 
-Docker 具有一个托管在 [Docker 中心](https://hub.docker.com/)的公共注册表，可供用户使用。 [.NET Core 相关映像](https://hub.docker.com/_/microsoft-dotnet-core/)均在 Docker 中心列出。
+Docker 具有一个托管在 [Docker 中心](https://hub.docker.com/)的公共注册表，可供用户使用。 [.NET Core 相关映像](https://hub.docker.com/_/microsoft-dotnet/)均在 Docker 中心列出。
 
-[Microsoft 容器注册表 (MCR)](/azure/container-registry) 是 Microsoft 提供的容器映像的官方来源。 MCR 构建在 Azure CDN 之上，可提供用于全局复制的映像。 但是，MCR 没有面向公众的网站，了解有关 Microsoft 提供的容器映像的主要方法是通过 [Microsoft Docker 中心页面](https://hub.docker.com/_/microsoft-dotnet-core/)。
+[Microsoft 容器注册表 (MCR)](/azure/container-registry) 是 Microsoft 提供的容器映像的官方来源。 MCR 构建在 Azure CDN 之上，可提供用于全局复制的映像。 但是，MCR 没有面向公众的网站，了解有关 Microsoft 提供的容器映像的主要方法是通过 [Microsoft Docker 中心页面](https://hub.docker.com/_/microsoft-dotnet/)。
 
 ### <a name="dockerfile"></a>Dockerfile
 
-Dockerfile**** 是定义可创建映像的一组指令的文件。 Dockerfile**** 中的每个指令创建映像中的一个层。 大多数情况下，在重新生成映像时，只会重新生成已发生更改的层。 可以将 Dockerfile**** 分发给其他人，便于他们采用你创建映像的方式重新创建一个新映像。 尽管可以分发有关如何创建映像的指令**，但分发映像的主要方式是将其发布到注册表。
+Dockerfile 是定义可创建映像的一组指令的文件。 Dockerfile 中的每个指令创建映像中的一个层。 大多数情况下，在重新生成映像时，只会重新生成已发生更改的层。 可以将 Dockerfile 分发给其他人，便于他们采用你创建映像的方式重新创建一个新映像。 尽管可以分发有关如何创建映像的指令，但分发映像的主要方式是将其发布到注册表。
 
 ## <a name="net-core-images"></a>.NET Core 映像
 
-官方 .NET Core Docker 映像发布到 Microsoft 容器注册表 (MCR)，用户可以在 [Microsoft.NET Core Docker 中心存储库](https://hub.docker.com/_/microsoft-dotnet-core/)中找到这些映像。 每个存储库包含 .NET（SDK 或运行时）和可以使用的操作系统的不同组合的映像。
+官方 .NET Core Docker 映像发布到 Microsoft 容器注册表 (MCR)，用户可以在 [Microsoft.NET Core Docker 中心存储库](https://hub.docker.com/_/microsoft-dotnet/)中找到这些映像。 每个存储库包含 .NET（SDK 或运行时）和可以使用的操作系统的不同组合的映像。
 
-Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)提供针对在生产环境中运行 ASP.NET Core 应用生成的映像。
+Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库](https://hub.docker.com/_/microsoft-dotnet-aspnet/)提供针对在生产环境中运行 ASP.NET Core 应用生成的映像。
 
 ## <a name="azure-services"></a>Azure 服务
 

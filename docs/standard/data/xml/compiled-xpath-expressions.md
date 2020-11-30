@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 99f06db3c6f1e634e9c4a677c01d1b0849afe43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831008"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701505"
 ---
 # <a name="compiled-xpath-expressions"></a>已编译的 XPath 表达式
+
 <xref:System.Xml.XPath.XPathExpression> 对象表示从 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 类的静态 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法返回的已编译 XPath 查询。  
   
 ## <a name="the-xpathexpression-class"></a>XPathExpression 类  
+
  如果多次使用相同的 XPath 查询，通过 <xref:System.Xml.XPath.XPathExpression> 对象表示的已编译 XPath 查询非常有用。  
   
  例如，如果多次调用 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法，而不是每次使用表示 XPath 查询的字符串，请使用 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 类的 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 方法来编译并缓存 <xref:System.Xml.XPath.XPathExpression> 对象中的 XPath 查询，以便重复使用并提高性能。  
@@ -45,6 +47,7 @@ ms.locfileid: "94831008"
 > <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法允许将 XPath 表达式作为其参数。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 方法返回 <xref:System.Xml.XPath.XPathNavigator> 对象，而不是一种 W3C XPath 返回类型。  
   
 ### <a name="the-returntype-property"></a>ReturnType 属性  
+
  在 XPath 查询编译为 <xref:System.Xml.XPath.XPathExpression> 对象之后，可以使用 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 对象的 <xref:System.Xml.XPath.XPathExpression> 属性来确定 XPath 查询返回的内容。  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 属性返回表示 W3C XPath 返回类型的下列 <xref:System.Xml.XPath.XPathResultType> 枚举值之一。  
@@ -110,6 +113,7 @@ Console.WriteLine(nodes.Current.Value);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>性能更强的 XPath 表达式  
+
  为了获得更好的性能，请尽可能在查询中使用最具体的 XPath 表达式。 例如，如果 `book` 节点是 `bookstore` 节点的子节点，并且 `bookstore` 节点是 XML 文档的顶级元素，使用 XPath 表达式 `/bookstore/book` 比使用 `//book` 速度更快。 `//book` XPath 表达式将扫描 XML 树中的每个节点来标识匹配的节点。  
   
  此外，如果选择条件很简单，使用 <xref:System.Xml.XPath.XPathNavigator> 类提供的节点集浏览方法的性能可能会强于 <xref:System.Xml.XPath.XPathNavigator> 类提供的选择方法。 例如，如果需要选择当前节点的第一个子级，使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> 方法比使用 `child::*[1]` XPath 表达式和 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法速度更快。  

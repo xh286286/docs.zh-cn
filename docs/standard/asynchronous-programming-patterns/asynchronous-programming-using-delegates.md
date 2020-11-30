@@ -11,12 +11,12 @@ helpviewer_keywords:
 - delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: da468d3b16ee504317c7de2e216a9be2073d1cf3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 01cdf5acf8f64472c218f35a0b8095aebf8f4571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830501"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716260"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>使用委托进行异步编程
 
@@ -26,10 +26,12 @@ ms.locfileid: "94830501"
 > 编译器应使用由用户指定的委托签名，发出具有 `Invoke`、`BeginInvoke` 和 `EndInvoke` 方法的委托类。 `BeginInvoke` 和 `EndInvoke` 方法应标记为本机方法。 由于这些方法被标记为本机方法，CLR 将在类加载时自动提供实现。 加载程序可确保其不会被替代。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [使用异步方式调用同步方法](calling-synchronous-methods-asynchronously.md)  
  讨论如何使用委托对普通方法进行异步调用，并提供简单的代码示例演示等待异步调用返回的四种方法。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [基于事件的异步模式 (EAP)](event-based-asynchronous-pattern-eap.md)  
  介绍 .NET 中的异步编程。  
   

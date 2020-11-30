@@ -6,20 +6,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: bb011a8b81d9808c7517ebc2517529af7c4b975a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725373"
 ---
 # <a name="building-xml-schemas"></a>生成 XML 架构
+
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的类映射到万维网联合会 (W3C) XML 架构建议中定义的结构，可以用于在内存中生成 XML 架构。  
   
 ## <a name="building-an-xml-schema"></a>生成 XML 架构  
+
  在下面的代码示例中，SOM API 用于在内存中生成客户 XML 架构。  
   
 ### <a name="creating-element-and-attributes"></a>创建元素和属性  
+
  代码示例从下至上生成客户架构，先创建子元素、属性及其相应的类型，然后创建顶级元素。  
   
  在下面的代码示例中，客户架构的 `FirstName` 和 `LastName` 元素以及 `CustomerId` 属性使用 SOM 的 <xref:System.Xml.Schema.XmlSchemaElement> 和 <xref:System.Xml.Schema.XmlSchemaAttribute> 类创建。 除了 <xref:System.Xml.Schema.XmlSchemaElement.Name%2A> 和 <xref:System.Xml.Schema.XmlSchemaElement> 类的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性（对应于 XML 架构中 `<xs:element />` 和 `<xs:attribute />` 元素的“name”属性）之外，架构所允许的所有其他属性（`defaultValue`、`fixedValue`、`form` 等）在 <xref:System.Xml.Schema.XmlSchemaElement> 和 <xref:System.Xml.Schema.XmlSchemaAttribute> 类中均有对应的属性。  
@@ -29,6 +32,7 @@ ms.locfileid: "94819366"
  [!code-vb[XmlSchemaCreateExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#2)]  
   
 ### <a name="creating-schema-types"></a>创建架构类型  
+
  元素和属性的内容通过其类型定义。 要创建类型属于一种内置架构类型的元素和属性，<xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 或 <xref:System.Xml.Schema.XmlSchemaElement> 类的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性应使用 <xref:System.Xml.XmlQualifiedName> 类设置该内置类型相应的限定名。 要为元素和属性创建用户定义类型，应使用 <xref:System.Xml.Schema.XmlSchemaSimpleType> 或 <xref:System.Xml.Schema.XmlSchemaComplexType> 类创建新的简单类型或复杂类型。  
   
 > [!NOTE]
@@ -46,6 +50,7 @@ ms.locfileid: "94819366"
  [!code-vb[XmlSchemaCreateExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#3)]  
   
 ### <a name="creating-and-compiling-schemas"></a>创建和编译架构  
+
  现在，已使用 SOM API 在内存中创建了子元素和属性及其相应的类型以及顶级 `Customer` 元素。 在下面的代码示例中，架构元素使用 <xref:System.Xml.Schema.XmlSchema> 类创建，顶级元素和类型使用 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 属性添加到该元素，完整的架构使用 <xref:System.Xml.Schema.XmlSchemaSet> 类进行编译并写入控制台。  
   
  [!code-cpp[XmlSchemaCreateExample#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#4)]

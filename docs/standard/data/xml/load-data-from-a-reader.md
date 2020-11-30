@@ -2,14 +2,15 @@
 title: 从读取器中加载数据
 ms.date: 03/30/2017
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 345b6e35c84fe531e131d27bd09fbd8a87b4521a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822667"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720134"
 ---
 # <a name="load-data-from-a-reader"></a>从读取器中加载数据
+
 如果使用 <xref:System.Xml.XmlDocument.Load%2A> 方法和 <xref:System.Xml.XmlReader> 的参数加载 XML 文档，与从其他格式加载数据的行为相比，发生的行为有所不同。 如果读取器处于初始状态，<xref:System.Xml.XmlDocument.Load%2A> 将使用读取器中的全部内容，并通过读取器中的所有数据生成 XML 文档对象模型 (DOM)。  
   
  如果读取器已位于文档中某个位置的节点上，并且将读取器传递给 <xref:System.Xml.XmlDocument.Load%2A> 方法，<xref:System.Xml.XmlDocument.Load%2A> 会尝试将当前节点及其所有同级节点（直到关闭当前深度的结束标记）读入内存。 尝试的 <xref:System.Xml.XmlDocument.Load%2A> 是否成功取决于在尝试加载时读取器所处的节点，因为 <xref:System.Xml.XmlDocument.Load%2A> 会验证读取器中的 XML 的格式是否正确。 如果 XML 的格式不正确，<xref:System.Xml.XmlDocument.Load%2A> 将引发异常。 例如，以下节点集包含两个根级别的元素，XML 的格式不正确，<xref:System.Xml.XmlDocument.Load%2A> 将引发异常。  

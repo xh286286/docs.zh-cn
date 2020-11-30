@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 668ac7552289a9d1015b62ed9e68f53415dd6211
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8d12ab2904b336f38e56387c8aaf2a851a46007e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830436"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722721"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>使用异步方式调用同步方法
 
@@ -55,6 +55,7 @@ ms.locfileid: "94830436"
 > 无论使用何种方法，都要调用 `EndInvoke` 来完成异步调用。
 
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>定义测试方法和异步委托
+
  下面的代码示例演示了异步调用同一个长时间运行的方法 `TestMethod`的各种方式。 `TestMethod` 方法会显示一条控制台消息，说明该方法已开始处理，休眠了几秒钟，然后结束。 `TestMethod` 有一个 `out` 参数，该参数用于演示将此类参数添加到 `BeginInvoke` 和 `EndInvoke`的签名中的方式。 您可以按同样的方式处理 `ref` 参数。
 
  下面的代码示例显示了 `TestMethod` 的定义和可用于异步调用 `AsyncMethodCaller` 的名称为 `TestMethod` 的委托。 要编译此代码示例，必须包括 `TestMethod` 和 `AsyncMethodCaller` 委托的定义。
@@ -64,6 +65,7 @@ ms.locfileid: "94830436"
  [!code-vb[AsyncDelegateExamples#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-endinvoke"></a>使用 EndInvoke 等待异步调用
+
  异步执行方法的最简单方式是通过调用委托的 `BeginInvoke` 方法开始执行此方法，在主线程上执行一些操作，然后调用委托的 `EndInvoke` 方法。 `EndInvoke` 可能会阻止调用线程，因为该方法直到异步调用完成后才返回。 这种方式非常适合执行文件或网络操作。
 
 > [!IMPORTANT]
@@ -74,6 +76,7 @@ ms.locfileid: "94830436"
  [!code-vb[AsyncDelegateExamples#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/EndInvoke.vb#2)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-waithandle"></a>使用 WaitHandle 等待异步调用
+
  可以使用由 <xref:System.Threading.WaitHandle> 返回的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 的 <xref:System.IAsyncResult> 属性来获取 `BeginInvoke`。 当异步调用完成时 <xref:System.Threading.WaitHandle> 会收到信号，而你可以通过调用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法来等待它。
 
  如果你使用 <xref:System.Threading.WaitHandle>，则在异步调用完成前后你可以执行其他处理，但必须在调用 `EndInvoke` 检索结果之前。
@@ -86,6 +89,7 @@ ms.locfileid: "94830436"
  [!code-vb[AsyncDelegateExamples#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/WaitHandle.vb#3)]
 
 ## <a name="polling-for-asynchronous-call-completion"></a>对异步调用的完成情况进行轮询
+
  可以使用由 <xref:System.IAsyncResult.IsCompleted%2A> 返回的 <xref:System.IAsyncResult> 的 `BeginInvoke` 属性来发现异步调用何时完成。 从服务于用户界面的线程执行异步调用时需要执行此操作。 对完成情况进行轮询允许在 <xref:System.Threading.ThreadPool> 线程中执行异步调用时继续执行调用线程。
 
  [!code-cpp[AsyncDelegateExamples#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/polling.cpp#4)]
@@ -93,6 +97,7 @@ ms.locfileid: "94830436"
  [!code-vb[AsyncDelegateExamples#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/polling.vb#4)]
 
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>异步调用完成时执行回调方法
+
  如果启动异步调用的线程可以不是处理结果的线程，那么在调用完成时可以执行回调方法。 将在 <xref:System.Threading.ThreadPool> 线程上执行回调方法。
 
  要使用回调方法，必须向 `BeginInvoke` 传递代表此回调方法的 <xref:System.AsyncCallback> 委托。 你还可以传递包含此回调方法要使用的信息的对象。 在回调方法中，可以将此回调方法的唯一参数 <xref:System.IAsyncResult>转换为 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 对象。 然后使用 <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> 属性获取用于启动调用的委托，以便可以调用 `EndInvoke`。
