@@ -9,15 +9,15 @@ helpviewer_keywords:
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
 ms.openlocfilehash: 707a37c6946cfcaf429552f0aeece6b87f3ad71d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125002"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap（C# 编译器选项）
 
-****-pathmap 编译器选项指定如何将物理路径映射到编译器输出的源路径名称。
+-pathmap 编译器选项指定如何将物理路径映射到编译器输出的源路径名称。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +33,7 @@ ms.locfileid: "89125002"
 
 要指定多个映射的源路径，请用逗号分隔每个路径。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 编译器将源路径写入其输出，原因如下：
 
@@ -45,7 +45,7 @@ ms.locfileid: "89125002"
 
 ## <a name="example"></a>示例
 
-在目录 C:\\work\\tests**** 中编译 `t.cs` 并将该目录映射到输出中的 \publish****：
+在目录 C:\\work\\tests 中编译 `t.cs` 并将该目录映射到输出中的 \publish：
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs

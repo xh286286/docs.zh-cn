@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: 75afb19a551174b9386259ebff871d4a54b68f01
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1f6e8e1a048fcf7f8fd278eaac4988fa0e35791d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830800"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684988"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>如何：在独立存储中创建文件和目录
 
@@ -33,6 +33,7 @@ ms.locfileid: "94830800"
  如果路径包含的目录不存在，则创建独立存储文件会引发 <xref:System.IO.IsolatedStorage.IsolatedStorageException>。
   
 ## <a name="example"></a>示例  
+
  下面的代码示例展示了如何在独立存储中创建文件和目录。  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]

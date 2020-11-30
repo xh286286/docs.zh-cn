@@ -10,10 +10,10 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: 474b22f5a9d8f12c8a4365159817f878761b563c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89140784"
 ---
 # <a name="from-clause-c-reference"></a>from 子句（C# 参考）
@@ -22,7 +22,7 @@ ms.locfileid: "89140784"
 
 - 将在其上运行查询或子查询的数据源。
 
-- 表示源序列中每个元素的本地范围变量**。
+- 表示源序列中每个元素的本地范围变量。
 
 范围变量和数据源已强类型化。 `from` 子句中引用的数据源必须具有 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601> 类型之一，或 <xref:System.Linq.IQueryable%601> 等派生类型。
 

@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML 序列化程序生成器为特定程序集中的类型创建 XML 序列化程序集，从而提高 XmlSerializer 的启动性能。
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281748"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676603"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -50,6 +50,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |/p\[arameters\]:file.xml|从指定的 .xml 文件读取各种操作模式的选项。 缩写形式为 `/p:`。 有关详细信息，请参阅[备注](#remarks)部分。|
 
 ## <a name="xsd-file-options"></a>XSD 文件选项
+
  必须为 xsd 文件仅指定下列选项中的一个。
 
 |选项|描述|
@@ -205,6 +206,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |帮助|显示该工具的命令语法和选项。 设置为 `true` 或 `false`。|
 
 ## <a name="examples"></a>示例
+
  下面的命令从 `myFile.xdr` 生成一个 XML 架构并将它保存到当前目录中。
 
 ```console

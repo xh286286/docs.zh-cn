@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 4ca78c71f464a914c07583825d4a7027ebb11bf6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281796"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679034"
 ---
 # <a name="custom-serialization"></a>自定义序列化
 
@@ -51,6 +51,7 @@ ms.locfileid: "93281796"
  另外，向现有的可序列化类型中添加新字段时，可将 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 特性应用于该字段。 处理缺少新字段的流时，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 可以忽略不存在该字段的情况。  
   
 ## <a name="implementing-the-iserializable-interface"></a>实现 ISerializable 接口  
+
  控制序列化的另一种方法是对某个对象实现 <xref:System.Runtime.Serialization.ISerializable> 接口。 但请注意，上一节采用的方法会取代这种方法对序列化进行控制。  
   
  除此之外，如果使用 [Serializable](xref:System.SerializableAttribute) 属性对某个类进行标记，且该类在类级别或对其构造函数具有声明性或命令性安全，则不应对该类执行默认的序列化。 相反，这样的类应该始终实现 <xref:System.Runtime.Serialization.ISerializable> 接口。  

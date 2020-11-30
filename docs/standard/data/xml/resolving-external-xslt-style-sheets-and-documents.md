@@ -2,14 +2,15 @@
 title: 解析外部 XSLT 样式表和文档
 ms.date: 03/30/2017
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1fbf950f7d67d46937652987516e5faf9857b85
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823584"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686561"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部 XSLT 样式表和文档
+
 转换过程中会有几个场合需要解析外部资源。  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ ms.locfileid: "94823584"
 - 在 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 期间解析任何 `document()` 函数时。  
   
 ## <a name="using-the-xmlresolver-class"></a>使用 XmlResolver 类  
+
  如果访问网络资源需要身份验证，则使用有 <xref:System.Xml.Xsl.XslTransform.Load%2A> 参数的 <xref:System.Xml.XmlResolver> 方法，以便传递包含必要的凭据属性集的 <xref:System.Xml.XmlResolver> 对象。  
   
  如果要使用一个自定义 <xref:System.Xml.XmlResolver>，或者如果需要指定其他凭据，下表根据需要解析外部资源的不同情况列出了需要执行的任务。  

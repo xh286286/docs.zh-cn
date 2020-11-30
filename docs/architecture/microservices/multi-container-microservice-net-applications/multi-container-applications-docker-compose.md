@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定义多容器应用程序
 description: 如何使用 docker-compose.yml 指定多容器应用程序的微服务组合。
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539302"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682661"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序
 
@@ -143,7 +143,7 @@ services:
 
 开发应用程序时，能够在独立开发环境中运行应用程序非常重要。 开发人员可使用 docker-compose CLI 命令来创建该环境，或使用在后台使用 docker-compose 的 Visual Studio。
 
-docker-compose.yml 文件可配置和记录所有应用程序的服务依赖项（其他服务、缓存、数据库、队列等）。 使用 docker-compose CLI 命令，可通过单个命令 (docker-compose up) 为每个依赖项创建并启动一个或多个容器。
+docker-compose.yml 文件可配置和记录所有应用程序的服务依赖项（其他服务、缓存、数据库、队列等）。 通过 docker-compose CLI 命令，可使用单个命令 (docker-compose up) 为每个依赖项创建并启动一个或多个容器。
 
 docker-compose.yml 文件是由 Docker 引擎解释的配置文件，但也可作为有关多容器应用程序组成的方便文档文件。
 
@@ -187,7 +187,7 @@ docker-compose -f docker-compose.yml -f docker-compose-test.override.yml down
 - *docker-compose.yml* - 用于撰写微服务
 - *docker-compose.override.yml* - 用于配置微服务环境
 
-可使用任何编辑器（如 Visual Studio Code 或 Sublime）编辑 docker-compose 文件，并使用 docker-compose up 命令运行该应用程序。
+用户可使用任何编辑器（如 Visual Studio Code 或 Sublime）编辑 docker-compose 文件，并使用 docker-compose up 命令运行该应用程序。
 
 按照约定，docker-compose.yml 文件包含基本配置和其他静态设置。 这意味着服务配置不应该根据所针对的部署环境而改变。
 
@@ -388,7 +388,7 @@ services:
 
 在此示例中，开发替代配置向主机公开一些端口，使用重定向 URL 定义环境变量，并为开发环境指定连接字符串。 这些设置都只针对开发环境。
 
-运行 `docker-compose up`（或从 Visual Studio 启动它时）时，该命令会自动读取替代内容，就像它已合并这两个文件。
+运行 `docker-compose up`（或从 Visual Studio 启动它时）时，该命令会自动读取替代内容，就像它已合并这两个文件。
 
 假设需要为生产环境使用具有不同配置值、端口或连接字符串的另一个 Compose 文件。 可创建另一个重写文件，如具有不同设置和环境变量的名为 `docker-compose.prod.yml` 的文件。 该文件可能存储在不同 Git 存储库中，或由其他团队管理和保护。
 
@@ -437,7 +437,7 @@ Docker-compose 要求 .env 文件中的每行都是 \<variable\>=\<value\> 格�
 如果查看 Internet 上源代码的 Docker 和 .NET Core ，则会发现 Dockerfiles 会将源代码源复制到容器，展现生成 Docker 映像的简单性。 这些示例表明，使用简单配置，即可拥有 Docker 映像，同时应用程序还会带有环境。 以下示例显示在此情况下的简单 Dockerfile。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -458,12 +458,12 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **生产**：重点是实现快速部署和容器启动，所以这些映像仅限于二进制文件和运行应用程序所需的内容。
 
-.NET 团队在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)（位于 Docker Hub）中提供了四个基本变体：
+.NET 团队在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/)（位于 Docker Hub）中提供了四个基本变体：
 
 1. **sdk**：用于开发和生成方案
 1. **aspnet**：用于 ASP.NET 生产方案
 1. **runtime**：用于 .NET 生产方案
-1. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#publish-self-contained)的生产方案
+1. **runtime-deps**：用于 [自包含应用程序](../../../core/deploying/index.md#publish-self-contained)的生产方案
 
 为了更快启动，运行时映像还会自动将 aspnetcore\_url 设置为端口 80，并使用 Ngen 创建程序集的本机映像缓存。
 

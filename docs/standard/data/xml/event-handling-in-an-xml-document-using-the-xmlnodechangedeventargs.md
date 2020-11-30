@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 582220f14b5b3800c6e04e2e01795686caace83c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 78984c74b6e7eedf4214506dec36509ece7ae48d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829552"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676681"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 mlNodeChangedEventArgs 的 XML 文档中的事件处理
+
 XmlNodeChangedEventArgs  封装传递给事件处理程序的参数，这些处理程序在 XmlDocument  对象上注册为用于处理事件。 下表提供了事件以及关于何时引发事件的说明。  
   
 |事件|引发|  

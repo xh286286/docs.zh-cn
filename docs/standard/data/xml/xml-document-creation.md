@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-ms.openlocfilehash: fb92a1fe984014aef9973b821227fbd1c1176a6c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 18c391e33e0c43f2407ccbc87c12b6c25a12509d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819261"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686522"
 ---
 # <a name="xml-document-creation"></a>创建 XML 文档
+
 有两种创建 XML 文档的方法。 一种方法是，创建不含参数的 XmlDocument  。 另一种方法是，创建 XmlDocument  ，并向它传递 XmlNameTable 参数。 下面的示例展示了如何不使用任何参数新建空 XmlDocument  。  
   
 ```vb  

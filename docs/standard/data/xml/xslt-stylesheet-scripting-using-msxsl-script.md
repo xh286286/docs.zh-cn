@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 61538656580878da775d4a42dac40165c7941eee
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 206a659656f1019af1540b9b2476ae7fe9ba93eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685105"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 编写 XSLT 样式表脚本
+
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
   
 > [!NOTE]
@@ -98,6 +99,7 @@ ms.locfileid: "94818266"
  由于“&amp;”符没有转义，因此将引发异常。 文档以 XML 形式加载，并且不对 `msxsl:script` 元素标记之间的文本应用任何特殊处理。  
   
 ## <a name="example"></a>示例  
+
  已知圆的半径，下面的示例使用嵌入脚本计算圆的周长。  
   
 ```vb  
@@ -165,6 +167,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>输入  
+
  number.xml  
   
 ```xml  

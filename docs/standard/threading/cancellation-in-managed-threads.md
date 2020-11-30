@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e73be220f3f04ec6bd05b1193d4188825f1b8e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819950"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676499"
 ---
 # <a name="cancellation-in-managed-threads"></a>托管线程中的取消
 
@@ -51,6 +51,7 @@ ms.locfileid: "94819950"
 - 侦听器可通过轮询、回调注册或等待等待句柄来接收到取消请求的通知。  
   
 ## <a name="cancellation-types"></a>取消类型  
+
  取消框架作为相关类型集实现，如下表所列。  
   
 |类型名称|描述|  
@@ -62,6 +63,7 @@ ms.locfileid: "94819950"
  取消模型以多种类型集成到 .NET 中。 最重要的类型包括 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>。 建议将此协作式取消模型用于所有新的库和应用程序代码。  
   
 ## <a name="code-example"></a>代码示例  
+
  在以下示例中，请求对象创建 <xref:System.Threading.CancellationTokenSource> 对象，然后传递其 <xref:System.Threading.CancellationTokenSource.Token%2A> 属性到可取消操作中。 接收请求的操作通过轮询监视标记的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性的值。 值变为 `true` 后，侦听器可以适当方式终止操作。 在此示例中，方法只需退出，很多情况下都只需执行此操作。  
   
 > [!NOTE]
@@ -71,6 +73,7 @@ ms.locfileid: "94819950"
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>操作取消与对象取消  
+
  在协作式取消框架中，取消将引用操作，而不是对象。 取消请求意味着应在执行任何所需的清理后尽快停止操作。 一个取消标记应代指一个“可取消操作”，但可在程序中实现此操作。 在标记的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性设置为 `true` 后，不能重置为 `false`。 因此，取消后不能重用取消标记。  
   
  如果需要对象取消机制，可以通过调用 <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType> 方法将其基于操作取消机制，如以下示例所示。  
@@ -81,6 +84,7 @@ ms.locfileid: "94819950"
  如果对象支持多个并发可取消操作，则将单独的标记作为输入传递给每个非重复的可取消操作。 这样，无需影响其他操作即可取消某项操作。  
   
 ## <a name="listening-and-responding-to-cancellation-requests"></a>侦听和响应取消请求  
+
  在用户委托中，可取消操作的实施者确定如何以响应取消请求来终止操作。 在很多情况下，用户委托只需执行全部所需清理，然后立即返回。  
   
  但是，在更复杂的情况下，用户委托可能需要通知库代码已发生取消。 在这种情况下，终止操作的正确方式是委托调用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法，这将引发 <xref:System.OperationCanceledException>。 库代码可以在用户委托线程上捕获此异常，并检查异常的标记以确定异常是否表示协作取消或一些其他的异常情况。  
@@ -88,6 +92,7 @@ ms.locfileid: "94819950"
  <xref:System.Threading.Tasks.Task> 类以此方式处理 <xref:System.OperationCanceledException>。 有关详细信息，请参阅[任务取消](../parallel-programming/task-cancellation.md)。  
   
 ### <a name="listening-by-polling"></a>通过轮询进行侦听  
+
  对于循环或递归的长时间运行的计算，可以通过定期轮询 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> 属性的值来侦听取消请求。 如果其值为 `true`，则此方法应尽快清理并终止。 最佳的轮询频率取决于应用程序的类型。 由开发人员决定任一给定程序的最佳轮询频率。 轮询本身不会显著影响性能。 以下示例演示了一种轮询方法。  
   
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
@@ -96,6 +101,7 @@ ms.locfileid: "94819950"
  有关更完整的示例，请参见[如何：通过轮询侦听取消请求](how-to-listen-for-cancellation-requests-by-polling.md)。  
   
 ### <a name="listening-by-registering-a-callback"></a>通过注册回调进行侦听  
+
  某些操作可能被阻止，导致其无法及时检查取消标记的值。 对于这些情况，可以注册在接收取消请求时取消阻止此方法的回调方法。  
   
  <xref:System.Threading.CancellationToken.Register%2A> 方法返回专用于此目的的 <xref:System.Threading.CancellationTokenRegistration> 对象。 以下示例演示了如何使用 <xref:System.Threading.CancellationToken.Register%2A> 方法取消异步 Web 请求。  
@@ -116,6 +122,7 @@ ms.locfileid: "94819950"
  有关更完整的示例，请参见[如何：注册取消请求的回叫](how-to-register-callbacks-for-cancellation-requests.md)。  
   
 ### <a name="listening-by-using-a-wait-handle"></a>通过使用等待句柄进行侦听  
+
  当可取消的操作可在等待同步基元（例如 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 或 <xref:System.Threading.Semaphore?displayProperty=nameWithType>）的同时进行阻止时），可使用 <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> 属性启用操作同时等待事件请求和取消请求。 取消标记的等待句柄将接收到响应取消请求的信号，并且此方法可使用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法的返回值来确定它是否为发出信号的取消标记。 然后此操作可根据需要直接退出，或者引发 <xref:System.OperationCanceledException>。  
   
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
@@ -129,6 +136,7 @@ ms.locfileid: "94819950"
  有关更完整的示例，请参见[如何：侦听具有等待句柄的取消请求](how-to-listen-for-cancellation-requests-that-have-wait-handles.md)。  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>同时侦听多个标记  
+
  在某些情况下，侦听器可能需要同时侦听多个取消标记。 例如，除了在外部作为自变量传递到方法参数的标记以外，可取消操纵可能还必须监视内部取消标记。 为此，需创建可将两个或多个标记联接成一个标记的链接标记源，如以下示例所示。  
   
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
@@ -137,6 +145,7 @@ ms.locfileid: "94819950"
  请注意，完成后必须在链接标记源上调用 `Dispose`。 有关更完整的示例，请参见[如何：侦听多个取消请求](how-to-listen-for-multiple-cancellation-requests.md)。  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>库代码和用户代码之间的合作  
+
  借助统一的取消框架，库代码可取消用户代码，而使用户代码可以协作的方式取消库代码。 合作是否顺利取决于两者是否遵循以下准则：  
   
 - 如果库代码提供了可取消操作，它还应提供接受外部取消标记的公共方法，以便用户代码可以请求取消。  

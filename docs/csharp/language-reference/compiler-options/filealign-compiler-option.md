@@ -18,15 +18,15 @@ helpviewer_keywords:
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 ms.openlocfilehash: 4b61217a3d6812ea3ab036f82d49bba05c20629e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173238"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign（C# 编译器选项）
 
--filealign 选项用于指定输出文件中各节的大小****。  
+-filealign 选项用于指定输出文件中各节的大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "91173238"
   
 ## <a name="remarks"></a>备注  
 
- 每一节都在是 -filealign 值的倍数的边界上对齐****。 没有固定的默认值。 如果未指定 -filealign，则公共语言运行时在编译时会选取一个默认值****。  
+ 每一节都在是 -filealign 值的倍数的边界上对齐。 没有固定的默认值。 如果未指定 -filealign，则公共语言运行时在编译时会选取一个默认值。  
   
  通过指定节的大小，可以影响输出文件的大小。 修改节的大小可能对将在较小设备上运行的程序有用。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "91173238"
   
 1. 打开项目的“属性”页。  
   
-2. 单击“生成”**** 属性页。  
+2. 单击“生成”属性页。  
   
 3. 单击“高级”按钮。  
   
-4. 修改“文件对齐”**** 属性。  
+4. 修改“文件对齐”属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
   

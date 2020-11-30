@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 ms.openlocfilehash: 9131db17d767c76fe6a57f5d5353474153e0c269
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91194084"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname（C# 编译器选项）
@@ -31,9 +31,9 @@ ms.locfileid: "91194084"
  `assembly_name`  
  .netmodule 可以访问其非公共类型的程序集的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 
- 生成 .netmodule 时，应使用 -moduleassemblyname 并满足以下条件****：  
+ 生成 .netmodule 时，应使用 -moduleassemblyname 并满足以下条件：  
   
 - .netmodule 需要具有访问现有程序集中非公共类型的权限。  
   
@@ -72,7 +72,7 @@ class An_Internal_Class
   
 ## <a name="example"></a>示例  
 
- 该例生成一个可访问程序集 moduleassemblyname_1.dll 中非公共类型的 .netmodule。 通过了解此 .netmodule 在生成后所在的程序集（名为 csman_an_assembly），可以指定 -moduleassemblyname，以便 .netmodule 在已经获得 csman_an_assembly 的友元程序集访问权限的程序集中访问非公共类型****。  
+ 该例生成一个可访问程序集 moduleassemblyname_1.dll 中非公共类型的 .netmodule。 通过了解此 .netmodule 在生成后所在的程序集（名为 csman_an_assembly），可以指定 -moduleassemblyname，以便 .netmodule 在已经获得 csman_an_assembly 的友元程序集访问权限的程序集中访问非公共类型。  
   
 ```csharp  
 // moduleassemblyname_2.cs  
@@ -100,7 +100,7 @@ class A {
 }  
 ```  
   
-已调用 An_Internal_Class.Test****
+已调用 An_Internal_Class.Test
 
 ## <a name="see-also"></a>另请参阅
 

@@ -7,17 +7,19 @@ helpviewer_keywords:
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-ms.openlocfilehash: 7ac888ed877adf3652f5de243a046f3c5117dc61
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3cdb5c2ecd23635d8faf0eb4bc93d201869039b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817492"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682674"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET 中的并行处理、并发和异步编程
+
 借助 .NET，可以通过多种方式来编写异步代码，以提高应用程序的用户响应速度；并能编写并行代码，以使用多个执行线程来最大限度地提升用户计算机的性能。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [异步编程](async.md)  
  介绍了 .NET 提供的异步编程机制。  
   

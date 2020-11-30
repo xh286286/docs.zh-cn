@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-ms.openlocfilehash: 67c25015f1127a62c480a8fc09c5945682097124
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5d50711eda266cecdb817c778f04aa845fa4c342
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823675"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686639"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>在 XSLT 处理期间解析外部资源
+
 XSLT 转换过程中会有几个场合需要解析外部资源。  
   
 ## <a name="using-the-xmlresolver-class"></a>使用 XmlResolver 类  
+
  <xref:System.Xml.XmlResolver> 类用于解析外部资源。 下表说明在 XSLT 处理期间 <xref:System.Xml.XmlResolver> 参与的时间。  
   
 |XSLT 任务|XmlResolver 的用途|  
@@ -36,6 +38,7 @@ XSLT 转换过程中会有几个场合需要解析外部资源。
 - 如果要确保不访问任何外部资源，可以为 `null` 自变量指定 <xref:System.Xml.XmlResolver>。  
   
 ## <a name="example"></a>示例  
+
  以下示例编译存储在网络资源上的样式表。 <xref:System.Xml.XmlUrlResolver> 对象指定访问该样式表所需的凭据。  
   
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]

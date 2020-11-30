@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 ms.openlocfilehash: c92ad61b2f482631230e0e6aeb0af5716a4fcb61
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91196827"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked（C# 编译器选项）
@@ -30,9 +30,9 @@ ms.locfileid: "91196827"
 
  `checked` 或 `unchecked` 关键字范围内的整数算法语句不受 -checked 选项的影响。  
   
- 如果不在 `checked` 或 `unchecked` 关键字范围内的整数算法语句产生的值超出数据类型范围，并且编译中使用了 -checked+（或 -checked），则该语句将在运行时导致异常********。 如果编译中使用的是 -checked-，则该语句在运行时不会导致异常。  
+ 如果不在 `checked` 或 `unchecked` 关键字范围内的整数算法语句产生的值超出数据类型范围，并且编译中使用了 -checked+（或 -checked），则该语句将在运行时导致异常。 如果编译中使用的是 -checked-，则该语句在运行时不会导致异常。  
   
- 此选项的默认值为“-checked-”****；溢出检查已禁用。
+ 此选项的默认值为“-checked-”；溢出检查已禁用。
 
  有时，用于生成大型应用程序的自动化工具将 -checked 设置为 +。 使用 -checked- 的一种方案：通过指定 -checked- 来替代工具的全局默认值。
 
@@ -40,7 +40,7 @@ ms.locfileid: "91196827"
   
 1. 打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2. 单击“生成”**** 属性页。  
+2. 单击“生成”属性页。  
   
 3. 单击“高级”按钮。  
   

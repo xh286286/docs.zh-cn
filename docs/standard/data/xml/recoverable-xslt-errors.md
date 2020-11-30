@@ -2,17 +2,19 @@
 title: 可恢复的 XSLT 错误
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827576"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686769"
 ---
 # <a name="recoverable-xslt-errors"></a>可恢复的 XSLT 错误
+
 W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方面确定如何处理某种情况。 这些方面被认为是任意行为。 例如，在第 7.3 节“Creating Processing Instructions”中，XSLT 1.0 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，XSLT 1.0 建议指示在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。  
   
 ## <a name="discretionary-behaviors"></a>任意行为  
+
  下表列出 XSLT 1.0 建议允许的每项任意行为以及这些行为如何通过 <xref:System.Xml.Xsl.XslCompiledTransform> 类进行处理。  
   
 - 恢复指示 <xref:System.Xml.Xsl.XslCompiledTransform> 类将从此错误中恢复。 <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 事件可以用于从 XSLT 处理器报告任意事件。  

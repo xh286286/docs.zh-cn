@@ -11,15 +11,15 @@ helpviewer_keywords:
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 ms.openlocfilehash: 442c788595a01db9c0a1196d9e13b2a98963a38c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91204341"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res（C# 编译器选项）
 
--win32res 选项会在输出文件中插入 Win32 资源****。  
+-win32res 选项会在输出文件中插入 Win32 资源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ ms.locfileid: "91204341"
   
 2. 单击“应用程序”属性页。  
   
-3. 单击“资源文件”按钮，然后使用组合框选择一个文件****。  
+3. 单击“资源文件”按钮，然后使用组合框选择一个文件。  
   
 ## <a name="example"></a>示例  
 

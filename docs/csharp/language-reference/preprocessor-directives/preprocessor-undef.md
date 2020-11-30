@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
 ms.openlocfilehash: 7db79be7ea9d8462e09b6ae874bf0ae7d265afe2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91150552"
 ---
 # <a name="undef-c-reference"></a>#undef（C# 参考）
@@ -40,7 +40,7 @@ class MyClass
 }  
 ```
 
-未定义 DEBUG****
+未定义 DEBUG
 
 ## <a name="see-also"></a>请参阅
 

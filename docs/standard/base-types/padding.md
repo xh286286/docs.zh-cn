@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 9931db1e76e3737ab3803400928169b30c3ecbda
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8dbea862acb87c1db2d23b11bac597eaa27d6b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822940"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683779"
 ---
 # <a name="padding-strings-in-net"></a>填充 .NET 中的字符串
 
@@ -30,6 +30,7 @@ ms.locfileid: "94822940"
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|使用尾随字符将字符串填充到指定总长度。|  
   
 ## <a name="padleft"></a>PadLeft  
+
  <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 方法将足够多的前导填充字符连接到原始字符串，以达到指定总长度，从而新建字符串。 <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> 方法使用空格作为填充字符，<xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> 方法支持指定自己的填充字符。  
   
  下面的代码示例使用 <xref:System.String.PadLeft%2A> 方法新建长度为 20 个字符的字符串。 该示例向控制台显示“`--------Hello World!`”。  
@@ -39,6 +40,7 @@ ms.locfileid: "94822940"
  [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
   
 ## <a name="padright"></a>PadRight  
+
  <xref:System.String.PadRight%2A?displayProperty=nameWithType> 方法将足够多的尾随填充字符连接到原始字符串，以达到指定总长度，从而新建字符串。 <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> 方法使用空格作为填充字符，<xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> 方法支持指定自己的填充字符。  
   
  下面的代码示例使用 <xref:System.String.PadRight%2A> 方法新建长度为 20 个字符的字符串。 该示例向控制台显示“`Hello World!--------`”。  

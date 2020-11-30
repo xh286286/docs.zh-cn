@@ -2,19 +2,21 @@
 title: 推断简单类型的规则
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823545"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686535"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推断简单类型的规则
+
 描述 <xref:System.Xml.Schema.XmlSchemaInference> 类如何推断属性和元素的数据类型。  
   
  <xref:System.Xml.Schema.XmlSchemaInference> 类将属性和元素的数据类型推断为简单类型。 本节描述可能的推断类型、如何将多个不同的值协调为单个类型以及如何处理架构定义 `xsi` 属性。  
   
 ## <a name="inferred-types"></a>推断类型  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 类将元素和属性值推断为简单类型，并在生成的架构中包含类型属性。 所有推断类型都是简单类型。 生成的架构中不包括任何基类型或方面。  
   
  在 XML 文档中遇到的值会分别进行检查。 在检查时会推断值的类型。 如果已推断了某个属性或元素的类型，在遇到该属性或元素的值与当前的推断类型不匹配时，<xref:System.Xml.Schema.XmlSchemaInference> 类将提升规则集中每个规则的类型。 这些规则在本主题后面的“类型提升”一节中讨论。  
@@ -44,6 +46,7 @@ ms.locfileid: "94823545"
 |string|一个或多个 Unicode 字符。|  
   
 ## <a name="type-promotion"></a>类型提升  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 类一次检查一个属性和元素的值。 在遇到值时，将推断限制性最强的无符号类型。 如果已推断了某个属性或元素的类型，在遇到与当前推断类型不匹配的新值时，推断类型将提升为新类型，以便适用于当前推断类型和新值。 <xref:System.Xml.Schema.XmlSchemaInference> 类在提升推断类型时会考虑以前的值。  
   
  例如，考虑两个 XML 文档中的以下 XML 片断：  

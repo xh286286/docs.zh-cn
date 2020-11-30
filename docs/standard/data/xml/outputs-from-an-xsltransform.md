@@ -2,14 +2,15 @@
 title: XslTransform 的输出
 ms.date: 03/30/2017
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 765f6f9a91cc44a55ab0d66ed71f19f60ef81a56
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ebe276a9627a36f1248f0043af6c82e76fe7fd78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830059"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691365"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform 的输出
+
 样式表可以结合使用 `<xsl:output>` 语句和 `method` 属性来确定输出格式，下表说明了使用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法写入输出并将输出格式声明为 <xref:System.IO.Stream> 或 <xref:System.IO.TextWriter> 时的输出格式。  
   
 > [!NOTE]
@@ -52,6 +53,7 @@ ms.locfileid: "94830059"
 - media-type：媒体类型  
   
 ## <a name="escaping-special-characters"></a>转义特殊字符  
+
  `<xsl:text disable-output-escaping>` 标记用于指示特殊字符是需要转义为 XML 形式（例如使用 `<&lt>` 替代 `"<"` 符号）还是保持现在的状态。 如果转换为 `disable-output-escaping` 或 <xref:System.Xml.XmlReader> 对象，将忽略 <xref:System.Xml.XmlWriter> 属性，对特殊字符没有影响。  
   
 ## <a name="see-also"></a>请参阅

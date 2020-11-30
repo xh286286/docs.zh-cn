@@ -9,17 +9,19 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: c9abccd6c93bad89cc737822fce3990c77b1b96e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821939"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683792"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正则表达式中的其他构造
+
 .NET 中的正则表达式包括三个其他语言构造。 其中一个使你可以在正则表达式模式中间启用或禁用特定匹配选项。 其余两个使你可以在正则表达式中包含注释。  
   
 ## <a name="inline-options"></a>内联选项  
+
  可以使用语法为正则表达式的一部分设置或禁用特定模式匹配选项  
   
 `(?imnsx-imnsx)`  
@@ -56,6 +58,7 @@ ms.locfileid: "94821939"
 |`\b`|与字边界匹配。|  
   
 ## <a name="inline-comment"></a>内联注释  
+
  `(?#` comment`)` 构造可用于在正则表达式中添加内联注释  。 正则表达式引擎在模式匹配中不使用注释的任何部分，尽管注释仍包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法返回的字符串中。 该注释在第一个右括号处终止。  
   
  下面的示例重复了上一部分的示例中的第一个正则表达式模式。 它将两个内联注释添加到该正则表达式，以指示比较是否区分大小写。 正则表达式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 按以下方式定义。  
@@ -75,6 +78,7 @@ ms.locfileid: "94821939"
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>行尾注释  
+
  数字符号 (`#`) 标记 x 模式注释，即从正则表达式模式末尾的未转义 # 字符开始一直延续到行末。 若要使用此构造，必须启用 `x` 选项（通过内联选项），或在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态 <xref:System.Text.RegularExpressions.Regex> 方法时向 `option` 参数提供 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 值。  
   
  下面的示例说明行尾注释构造。 它确定字符串是否为包含至少一个格式项的复合格式字符串。 下表描述了正则表达式模式中的构造：  

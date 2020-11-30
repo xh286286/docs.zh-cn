@@ -13,10 +13,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193772"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource（C# 编译器选项）
@@ -48,7 +48,7 @@ ms.locfileid: "91193772"
   
  例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET 资源文件，则可使用 <xref:System.Resources> 命名空间中的成员来访问它。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 对于所有其他资源，请使用 <xref:System.Reflection.Assembly> 类中的 `GetManifestResource` 方法在运行时访问资源。  
   
- /res 是 /resource 的缩写形式********。  
+ /res 是 /resource 的缩写形式。  
   
  输出文件中资源的顺序由命令行所指定的顺序决定。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "91193772"
   
 1. 向项目添加资源文件。  
   
-2. 选择要嵌入解决方案资源管理器的文件****。  
+2. 选择要嵌入解决方案资源管理器的文件。  
   
-3. 在“属性”窗口中为文件选择“生成操作”********。  
+3. 在“属性”窗口中为文件选择“生成操作”。  
   
-4. 将“生成操作”设置为“嵌入的资源”********。  
+4. 将“生成操作”设置为“嵌入的资源”。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   

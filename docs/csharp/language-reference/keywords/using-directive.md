@@ -6,10 +6,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89141941"
 ---
 # <a name="using-directive-c-reference"></a>using 指令（C# 参考）
@@ -36,7 +36,7 @@ ms.locfileid: "89141941"
     using Project = PC.MyCompany.Project;
     ```
 
-`using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理 <xref:System.IDisposable> 对象（如文件和字体）**。 有关详细信息，请参阅 [using 语句](using-statement.md)。
+`using` 关键字还用于创建 using 语句，此类语句有助于确保正确处理 <xref:System.IDisposable> 对象（如文件和字体）。 有关详细信息，请参阅 [using 语句](using-statement.md)。
 
 ## <a name="using-static-type"></a>Using 静态类型
 
@@ -54,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `using` 指令的范围限于显示它的文件。
 

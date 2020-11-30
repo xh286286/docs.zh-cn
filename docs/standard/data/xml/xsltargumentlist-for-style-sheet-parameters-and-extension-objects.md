@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818201"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685040"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>样式表参数和扩展对象的 XsltArgumentList
+
 <xref:System.Xml.Xsl.XsltArgumentList> 类包含可扩展样式表语言转换 (XSLT) 参数和 XSLT 扩展对象。 传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
   
 > [!NOTE]
@@ -31,6 +32,7 @@ ms.locfileid: "94818201"
 - 支持使用 <xref:System.Xml.XPath.XPathNodeIterator> 将结果树片段传递到样式表。  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 样式表参数  
+
  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 参数添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 此时，限定名和命名空间统一资源标识符 (URI) 与参数对象关联。  
   
  参数对象应对应于某个万维网联合会 (W3C) 类型。 下表显示了相应的 W3C 类型、等效的 .NET Framework 类（类型），以及 W3C 类型是 XML 路径语言 (XPath) 类型还是 XSLT 类型。  
@@ -54,6 +56,7 @@ ms.locfileid: "94818201"
 3. 将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>示例  
+
  下面的示例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法创建一个参数来保存计算的折扣日期。 折扣日期计算为从订单日期算起的 20 天时间。  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>输入  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>XSLT 扩展对象  
+
  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>。 此时，限定名和命名空间 URI 与扩展对象关联。  
   
  添加对象时，<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 的调用方在安全策略中必须是完全受信任的。 如果调用方不是完全受信任的，则添加操作将失败。  
@@ -195,6 +200,7 @@ public class Sample
 3. 将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>示例  
+
  已知圆的半径，下面的示例计算圆的周长。  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>输入  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>Output  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

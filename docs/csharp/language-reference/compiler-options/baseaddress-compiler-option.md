@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 ms.openlocfilehash: 76da496f7045f12778bba273947b913be1b94e3e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91196840"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress（C# 编译器选项）
@@ -43,11 +43,11 @@ ms.locfileid: "91196840"
   
 1. 打开项目的“属性”页。  
   
-2. 单击“生成”**** 属性页。  
+2. 单击“生成”属性页。  
   
 3. 单击“高级”按钮。  
   
-4. 修改“DLL 基址”**** 属性。  
+4. 修改“DLL 基址”属性。  
   
      若要以编程方式设置此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。  
   

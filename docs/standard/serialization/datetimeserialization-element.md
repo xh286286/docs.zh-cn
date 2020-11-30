@@ -7,14 +7,15 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1623517e66955c14b7e738c860ec16086fe30429
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281772"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678969"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 元素
+
 确定 <xref:System.DateTime> 对象的序列化模式。  
   
  \<configuration>  
@@ -29,6 +30,7 @@ ms.locfileid: "93281772"
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
+
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
@@ -38,6 +40,7 @@ ms.locfileid: "93281772"
 |`mode`|可选。 指定序列化模式。 设置为 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 值之一。 默认值为 RoundTrip。|  
   
 ### <a name="child-elements"></a>子元素  
+
  无。  
   
 ### <a name="parent-elements"></a>父元素  

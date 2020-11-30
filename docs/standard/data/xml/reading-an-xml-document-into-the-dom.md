@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-ms.openlocfilehash: 40efccba86f1bca8af838961dccdc7f98f8c93c2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 61275e9232b3d9e516636869d7153f33133cbd03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820392"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686860"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>将 XML 文档读入 DOM
+
 XML 信息从不同的格式读入内存。 读取源包括字符串、流、URL、文本读取器或 <xref:System.Xml.XmlReader> 的派生类。  
   
  <xref:System.Xml.XmlDocument.Load%2A> 方法将文档置入内存中并包含可用于从每个不同的格式中获取数据的重载方法。 还存在 <xref:System.Xml.XmlDocument.LoadXml%2A> 方法，该方法从字符串中读取 XML。  

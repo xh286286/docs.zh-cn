@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ee8bab4fe7659b1fe5b7edeabc81187d0a13e5bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379144"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678995"
 ---
 # <a name="how-to-chunk-serialized-data"></a>如何：对序列化数据进行分块
 
@@ -46,6 +46,7 @@ ms.locfileid: "83379144"
 2. 通过实现 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，可以读取分块数据流，并将字节写入磁盘。 此实现还会引发可供图形控件（如进度栏）使用的进度事件。  
   
 ## <a name="example"></a>示例  
+
 下面的代码示例演示客户端上用于禁用 ASP.NET 缓冲的 Web 方法。 它还演示了如何在客户端实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，该实现可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]

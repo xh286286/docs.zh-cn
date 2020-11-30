@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 77aa9bf0fc0911f441d00403d773ee5ae03ae99b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173290"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug（C# 编译器选项）
@@ -52,11 +52,11 @@ ms.locfileid: "91173290"
   
 1. 打开项目的“属性”页。  
   
-2. 单击“生成”**** 属性页。  
+2. 单击“生成”属性页。  
   
 3. 单击“高级”按钮。  
   
-4. 修改“调试信息”**** 属性。  
+4. 修改“调试信息”属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
   

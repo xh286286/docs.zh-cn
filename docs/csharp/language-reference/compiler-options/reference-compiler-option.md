@@ -15,10 +15,10 @@ helpviewer_keywords:
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 ms.openlocfilehash: cd7346ae4094a84a398306394f771e040dd7b72f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193785"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference（C# 编译器选项）
@@ -65,7 +65,7 @@ ms.locfileid: "91193785"
  默认情况下使用 csc 响应 (.rsp) 文件，该文件引用常用的 .NET Framework 程序集。 如果希望编译器不要使用 csc.rsp，请使用 [-noconfig](./noconfig-compiler-option.md)。  
   
 > [!NOTE]
-> 在 Visual Studio 中，请使用“添加引用”**** 对话框。 有关详细信息，请参阅 [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 若要确保通过使用 `-reference` 添加引用与通过使用“添加引用”**** 对话框添加引用之间的行为等效，请将要添加的程序集的“嵌入互操作类型”**** 属性设置为“False”****。 “True”**** 是该属性的默认值。  
+> 在 Visual Studio 中，请使用“添加引用”对话框。 有关详细信息，请参阅 [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 若要确保通过使用 `-reference` 添加引用与通过使用“添加引用”对话框添加引用之间的行为等效，请将要添加的程序集的“嵌入互操作类型”属性设置为“False”。 “True”是该属性的默认值。  
   
 ## <a name="example"></a>示例  
 

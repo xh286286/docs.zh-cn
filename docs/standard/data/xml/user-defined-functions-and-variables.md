@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c1f519dd539a266d61945ad221bccceaa1361779
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675615"
 ---
 # <a name="user-defined-functions-and-variables"></a>用户定义的函数和变量
+
 <xref:System.Xml.XPath.XPathNavigator> 类提供了一组方法，用于与 <xref:System.Xml.XPath.XPathDocument> 数据进行交互。 可以通过实现由 XPath 查询表达式使用的扩展函数和变量，对标准 XPath 函数进行补充。 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 方法可以接受从 <xref:System.Xml.Xsl.XsltContext> 派生的用户定义的上下文。 用户定义的函数由自定义上下文解析。  
   
  扩展函数和变量有助于防范 XML 注入式攻击。 在这些情况下，用户输入可分配给自定义变量，并由扩展函数进行处理，而不像通过处理指令串联的原始输入一样。 扩展函数和变量包含用户输入，因此它仅仅按照设计者的意图对 XML 数据进行操作。  

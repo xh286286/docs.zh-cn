@@ -2,17 +2,19 @@
 title: 解析外部资源
 ms.date: 03/30/2017
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 460fee3464c7de9a6ad0ca97bf5341fe5078fb47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dffaef1b27d5814591c935c0ca795ba4ea3eba84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686600"
 ---
 # <a name="resolving-external-resources"></a>解析外部资源
+
 XmlDocument  类使用 XmlDocument  的 XmlResolver  属性，定位没有在 XML 数据中内联的资源，如外部文档类型定义 (DTD)、实体和架构。 这些项可以位于网络或本地驱动器上，并通过统一资源标识符 (URI) 进行标识。 这样一来，XmlDocument  可以解析文档中的 EntityReference  节点，并根据外部 DTD 或架构验证文档。  
   
 ## <a name="fully-trusted-xmldocument"></a>完全受信任的 XmlDocument  
+
  XmlResolver  属性影响 XmlDocument.Load  方法的功能。 下表展示了 XmlDocument.XmlResolver  属性在 XmlDocument  对象完全受信任时的工作原理。 下表展示了 Load 输入是 TextReader  、String  、Stream  或 URI  时的 XmlDocument.Load  方法。 如果 XmlDocument  是从 XmlReader  中加载，此表不适用于 Load  方法。  
   
 |XmlResolver 属性|函数|说明|  
@@ -28,6 +30,7 @@ XmlDocument  类使用 XmlDocument  的 XmlResolver  属性，定位没有在 XM
 |XmlDocument  使用的 XmlResolver  类与 XmlReader  使用的类相同。|XmlDocument  使用分配给 XmlReader  的 XmlResolver  。<br /><br /> 无论 XmlDocument  信任级别如何，都无法设置 XmlDocument.Resolver  属性，因为它是从 XmlReader  获取 XmlResolver  。 不能试图通过设置 XmlDocument  的 XmlResolver  属性来重写 XmlReaders  的 XmlResolver  设置。|XmlReader  可以是 XmlTextReader  、XmlValidatingReader  或自定义编写的读取器。 如果使用的读取器支持实体解析，则解析外部实体。 如果传递的读取器不支持实体引用，那么就不解析实体引用。|  
   
 ## <a name="semi-trusted-xmldocument"></a>不完全受信任的 XmlDocument  
+
  下表展示了 XmlDocument.XmlResolver  属性在对象不完全受信任时的工作原理。 如果 Load 输入是 TextReader  、String  、Stream  或 URI  时，此表适用于 XmlDocument.Load  方法。 如果 XmlDocument  是从 XmlReader  中加载，此表不适用于 Load  方法。  
   
 |XmlResolver 属性|函数|说明|  

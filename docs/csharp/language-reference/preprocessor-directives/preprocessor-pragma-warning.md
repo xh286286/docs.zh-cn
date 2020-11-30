@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
 ms.openlocfilehash: 5b67d384e37a5e509ce8ebcc5ddeb16a4437ea2b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91168525"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning（C# 参考）
@@ -33,7 +33,7 @@ ms.locfileid: "91168525"
  未指定警告编号时，`disable` 会禁用所有警告，`restore` 会启用所有警告。  
   
 > [!NOTE]
-> 若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”**** 窗口中查找警告编号。  
+> 若要在 Visual Studio 中查找警告编号，请生成项目，然后在“输出”窗口中查找警告编号。  
   
 ## <a name="example"></a>示例  
   

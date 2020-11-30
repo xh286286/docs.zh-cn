@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91152437"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib（C# 编译器选项）
@@ -58,7 +58,7 @@ ms.locfileid: "91152437"
   
 1. 打开项目的“属性页”  对话框。  
   
-2. 单击“引用路径”**** 属性页。  
+2. 单击“引用路径”属性页。  
   
 3. 修改列表框的内容。  
   

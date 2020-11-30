@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89134583"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface":::（C#参考）
@@ -33,7 +33,7 @@ ms.locfileid: "89134583"
 - [索引器](../../programming-guide/indexers/using-indexers.md)
 - [事件](event.md)
 
-上述成员声明通常不包含主体。 从 C# 8.0 开始，接口成员可以声明主体。 这称为“默认实现”**。 具有主体的成员允许接口为不提供重写实现的类和结构提供“默认”实现。 此外，从 C# 8.0 开始，接口可以包括：
+上述成员声明通常不包含主体。 从 C# 8.0 开始，接口成员可以声明主体。 这称为“默认实现”。 具有主体的成员允许接口为不提供重写实现的类和结构提供“默认”实现。 此外，从 C# 8.0 开始，接口可以包括：
 
 - [常量](const.md)
 - [运算符](../operators/operator-overloading.md)

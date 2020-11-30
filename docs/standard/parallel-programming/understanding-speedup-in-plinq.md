@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64eb346ba57e9af9f5be0cc1b42398c4f539d4d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829968"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689896"
 ---
 # <a name="understanding-speedup-in-plinq"></a>了解 PLINQ 中的加速
+
 PLINQ 的主要用途是，在多核计算机上并行执行查询委托，以加速执行 LINQ to Objects 查询。 如果单独处理源集合中的每个元素，且各个代理之间不涉及共享状态，PLINQ 的性能最佳。 此类操作在 LINQ to Objects 和 PLINQ 中很常见，通常称为“适合并行”，因为它们可以轻松适应计划多个线程的工作。 不过，并非所有查询完全都由适合并行操作组成；在大多数情况下，查询涉及一些无法并行执行或减慢并行执行的运算符。 即使查询完全都由适合并行组成，PLINQ 仍必须对数据源进行分区，并计划线程工作，通常还需要在查询完成时合并结果。 所有这些操作都增加了并行执行的计算成本；增加并行执行而产生的这些成本称为“开销”。 为了实现 PLINQ 查询的最佳性能，目标是最大限度地增加适合并行执行的部分，并尽量减少需要开销的部分。 本文有助于确保编写的 PLINQ 查询尽可能高效，且仍能产生正确结果。  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>PLINQ 查询性能的影响因素  
+
  下面各部分列出了并行查询性能的一些最重要的影响因素。 这些都是一般性说明，本身并不足以用于在所有情况下预测查询性能。 和以往一样，请务必在具有一系列代表性配置和负载的计算机上度量特定查询的实际性能。  
   
 1. 整体工作的计算成本。  
@@ -65,6 +67,7 @@ PLINQ 的主要用途是，在多核计算机上并行执行查询委托，以�
      在某些情况下，对可索引源集合执行 PLINQ 查询可能会导致工作负载不平衡。 如果发生这种情况，可以创建自定义分区程序，从而提升查询性能。 有关详细信息，请参阅 [PLINQ 和 TPL 的自定义分区程序](custom-partitioners-for-plinq-and-tpl.md)。  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>如果 PLINQ 选择顺序模式  
+
  PLINQ 始终都会尝试至少像顺序运行查询一样快地执行查询。 虽然 PLINQ 没有考虑用户委托的计算成本或输入源大小，但它确实会查找特定查询“形状”。 具体来说，它会查找通常会减慢查询在并行模式下的执行速度的查询运算符或运算符组合。 如果找到此类形状，PLINQ 默认会回退到顺序模式。  
   
  不过，在度量特定查询的性能后，可以确定它在并行模式下的实际运行速度更快。 在这种情况下，可以通过 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法使用 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> 标志来指示 PLINQ 并行执行查询。 有关详细信息，请参阅[如何：在 PLINQ 中指定执行模式](how-to-specify-the-execution-mode-in-plinq.md)。  

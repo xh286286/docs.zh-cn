@@ -4,10 +4,10 @@ title: -target:winmdobj（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 ms.openlocfilehash: a13e2da02698209a514e716d65c1df3508cf1508
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171398"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj（C# 编译器选项）
@@ -34,11 +34,11 @@ ms.locfileid: "91171398"
   
 1. 在“解决方案资源管理器”  中，打开项目的快捷菜单，然后选择“属性”  。  
   
-2. 选择“应用程序”**** 选项卡。  
+2. 选择“应用程序”选项卡。  
   
-3. 在“输出类型”**** 列表中，选择“WinMD 文件”****。  
+3. 在“输出类型”列表中，选择“WinMD 文件”。  
   
-     此“WinMD 文件”选项仅可用于 Windows 8.x 应用商店应用模板****。  
+     此“WinMD 文件”选项仅可用于 Windows 8.x 应用商店应用模板。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   

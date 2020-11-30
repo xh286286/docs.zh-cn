@@ -13,15 +13,15 @@ helpviewer_keywords:
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173264"
 ---
 # <a name="-define-c-compiler-options"></a>-define（C# 编译器选项）
 
--define 选项将 `name` 定义为程序中所有源代码文件的符号****。  
+-define 选项将 `name` 定义为程序中所有源代码文件的符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,15 +34,15 @@ ms.locfileid: "91173264"
  `name`, `name2`  
  一个或多个要定义的符号的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 
- -define 选项具有与使用 [#define](../preprocessor-directives/preprocessor-define.md) 预处理器指令相同的效果，但编译器选项对项目中的所有文件都有效****。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指令删除该定义。 使用 -define 选项时，一个文件中的 `#undef` 指令不影响项目中其他的源代码文件。  
+ -define 选项具有与使用 [#define](../preprocessor-directives/preprocessor-define.md) 预处理器指令相同的效果，但编译器选项对项目中的所有文件都有效。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指令删除该定义。 使用 -define 选项时，一个文件中的 `#undef` 指令不影响项目中其他的源代码文件。  
   
  可以将由此选项创建的符号同 [#if](../preprocessor-directives/preprocessor-if.md)、[#else](../preprocessor-directives/preprocessor-else.md)、[#elif](../preprocessor-directives/preprocessor-elif.md) 和 [#endif](../preprocessor-directives/preprocessor-endif.md) 一起使用，对源文件进行条件编译。  
   
- -d 是 -define 的缩写形式********。  
+ -d 是 -define 的缩写形式。  
   
- 通过使用分号或逗号分隔符号名称，可用 -define 定义多个符号****。 例如：  
+ 通过使用分号或逗号分隔符号名称，可用 -define 定义多个符号。 例如：  
   
 ```console  
 -define:DEBUG;TUESDAY  
@@ -57,7 +57,7 @@ ms.locfileid: "91173264"
   
 1. 打开项目的“属性”页。  
   
-2. 在“生成”选项卡上，键入要在“条件编译符号”框中定义的符号********。 例如，如果使用以下代码示例，只需在文本框中键入 `xx`。  
+2. 在“生成”选项卡上，键入要在“条件编译符号”框中定义的符号。 例如，如果使用以下代码示例，只需在文本框中键入 `xx`。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。  
   

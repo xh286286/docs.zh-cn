@@ -2,12 +2,12 @@
 title: Docker 应用的内部循环开发工作流
 description: 了解 Docker 应用程序的“内部循环”开发工作流。
 ms.date: 08/06/2020
-ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676525"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
@@ -107,7 +107,7 @@ VS Code 的 Docker 扩展提供以下功能：
 
 图 4-24  。 使用“将 Docker 文件添加到工作区”命令添加 Docker 文件
 
-添加 DockerFile 时，可以指定要使用的 Docker 映像（如使用 `FROM mcr.microsoft.com/dotnet/core/aspnet`）。 通常会在 [Docker Hub 存储库](https://hub.docker.com/)中的任何官方存储库（如 [.NET Core 的映像](https://hub.docker.com/_/microsoft-dotnet-core/)或 [Node.js](https://hub.docker.com/_/node/) 的映像）中获得的基础映像上构建自定义映像。
+添加 DockerFile 时，可以指定要使用的 Docker 映像（如使用 `FROM mcr.microsoft.com/dotnet/aspnet`）。 通常会在 [Docker Hub 存储库](https://hub.docker.com/)中的任何官方存储库（如 [.NET Core 的映像](https://hub.docker.com/_/microsoft-dotnet/)或 [Node.js](https://hub.docker.com/_/node/) 的映像）中获得的基础映像上构建自定义映像。
 
 > [!TIP]
 > 你必须对应用程序中的每个项目重复此过程。 但是，扩展名将要求在第一次之后覆盖生成的 docker-compose 文件。 你应该回答不覆盖该文件，因此扩展名会创建单独的 docker-compose 文件，然后你可以在运行 docker-compose 之前手动合并这些文件。
@@ -119,12 +119,12 @@ VS Code 的 Docker 扩展提供以下功能：
 以下示例显示 .NET Core 容器的示例 DockerFile：
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,7 +141,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-在本例中，该映像以官方 ASP.NET Core Docker 映像的版本 3.1（适用于 Linux 和 Windows 的多体系结构）为基础，依据此行 `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1`。 （有关此主题的详细信息，请参阅 [ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)页和 [.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)页。）
+在本例中，该映像以官方 ASP.NET Core Docker 映像的版本 3.1（适用于 Linux 和 Windows 的多体系结构）为基础，依据此行 `FROM mcr.microsoft.com/dotnet/aspnet:3.1`。 （有关此主题的详细信息，请参阅 [ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-aspnet/)页和 [.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet/)页。）
 
 在 DockerFile 中，还可以指示 Docker 侦听将在运行时使用的 TCP 端口（如端口 80 或 443）。
 
@@ -154,9 +154,9 @@ ENTRYPOINT ["dotnet", "WebApi.dll"]
 
 使用多体系结构映像存储库 
 
-存储库中的单个映像名称可包含平台变量，如 Linux 映像和 Windows 映像。 借助此功能，Microsoft（基础映像创建者）等供应商可创建涵盖多个平台（即 Linux 和 Windows）的单个存储库。 例如，Docker Hub 注册表中提供的 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 存储库使用相同的映像名称为 Linux 和 Windows Nano Server 提供支持。
+存储库中的单个映像名称可包含平台变量，如 Linux 映像和 Windows 映像。 借助此功能，Microsoft（基础映像创建者）等供应商可创建涵盖多个平台（即 Linux 和 Windows）的单个存储库。 例如，Docker Hub 注册表中提供的 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 存储库使用相同的映像名称为 Linux 和 Windows Nano Server 提供支持。
 
-从 Windows 主机拉取 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 映像时，也会拉取 Windows 变体，并且从 Linux 主机拉取同一映像名称时，也会拉取 Linux 变体。
+从 Windows 主机拉取 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 映像时，也会拉取 Windows 变体，并且从 Linux 主机拉取同一映像名称时，也会拉取 Linux 变体。
 
 **_从头开始创建基础映像_**
 

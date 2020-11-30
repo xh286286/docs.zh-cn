@@ -5,10 +5,10 @@ ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
 ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90738861"
 ---
 # <a name="indices-and-ranges"></a>索引和范围
@@ -89,7 +89,7 @@ string[] words = new string[]
 >
 > 除了时间复杂度外，这还会产生额外的分配和副本，从而影响性能。 在性能敏感的代码中，考虑使用 `Span<T>` 或 `Memory<T>` 作为序列类型，因为不会为其分配范围运算符。
 
-若类型包含名称为 `Length` 或 `Count` 的属性，属性有可访问的 Getter 并且其返回类型为 `int`，则此类型为可计数类型。**** 不显式支持索引或范围的可计数类型可能为它们提供隐式支持。 有关详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隐式索引支持](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隐式范围支持](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)部分。 使用隐式范围支持的范围将返回与源序列相同的序列类型。
+若类型包含名称为 `Length` 或 `Count` 的属性，属性有可访问的 Getter 并且其返回类型为 `int`，则此类型为可计数类型。 不显式支持索引或范围的可计数类型可能为它们提供隐式支持。 有关详细信息，请参阅[功能建议说明](~/_csharplang/proposals/csharp-8.0/ranges.md)的[隐式索引支持](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)和[隐式范围支持](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)部分。 使用隐式范围支持的范围将返回与源序列相同的序列类型。
 
 例如，以下 .NET 类型同时支持索引和范围：<xref:System.String>、<xref:System.Span%601> 和 <xref:System.ReadOnlySpan%601>。 <xref:System.Collections.Generic.List%601> 支持索引，但不支持范围。
 

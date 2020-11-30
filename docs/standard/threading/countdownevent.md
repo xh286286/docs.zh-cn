@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-ms.openlocfilehash: 82fe4844728702e91190b55a833848c1c9ece40c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 15ff3ee8f4ea18b243f5c3070f1c59df4646a1a4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826568"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676473"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 
@@ -32,12 +32,14 @@ ms.locfileid: "94826568"
 - 实例公开 <xref:System.Threading.WaitHandle>，以与其他 .NET 同步 API（如 <xref:System.Threading.WaitHandle.WaitAll%2A>）集成。  
   
 ## <a name="basic-usage"></a>基本用法  
+
  下面的示例展示了如何将 <xref:System.Threading.CountdownEvent> 与 <xref:System.Threading.ThreadPool> 工作项结合使用。  
   
  [!code-csharp[CDS_CountdownEvent#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#01)]
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>结合使用 CountdownEvent 和取消令牌  
+
  下面的示例展示了如何使用取消令牌对 <xref:System.Threading.CountdownEvent> 取消等待操作。 基本模式遵循 .NET Framework 4 中引入的统一取消模型。 有关详细信息，请参阅[托管线程中的取消](cancellation-in-managed-threads.md)。  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]

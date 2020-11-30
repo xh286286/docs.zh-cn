@@ -2,14 +2,15 @@
 title: 对 msxsl:node-set() 函数的支持
 ms.date: 03/30/2017
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 26ae3014af93377dc106b5638ba194bd38e3dc9e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6c84e3789916e8d842e51e8417cb27505cb5cba6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673392"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>对 msxsl:node-set() 函数的支持
+
 `msxsl:node-set` 函数使你能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ ms.locfileid: "94818539"
  `msxsl:node-set` 函数使你能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
   
 ## <a name="example"></a>示例  
+
  在下面的示例中，`$books` 是一个变量，是样式表中的一个节点树。 for-each 语句与 `node-set` 函数组合使用，允许用户将此节点树作为节点集循环访问。  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
@@ -43,6 +45,7 @@ ms.locfileid: "94818539"
 ```  
   
 ## <a name="output"></a>Output  
+
  转换的输出为  
   
 ```xml  

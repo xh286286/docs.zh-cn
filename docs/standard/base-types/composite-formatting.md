@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 588efff637359586630554decf57072597365d32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683948"
 ---
 # <a name="composite-formatting"></a>复合格式设置
 
@@ -43,6 +43,7 @@ ms.locfileid: "94823090"
 - <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，它将信息性方法写入跟踪侦听器中。  
   
 ## <a name="composite-format-string"></a>复合格式字符串  
+
  复合格式字符串和对象列表将用作支持复合格式设置功能的方法的参数。 复合格式字符串由零个或多个固定文本段与一个或多个格式项混和组成。 固定文本是所选择的任何字符串，并且每个格式项对应于列表中的一个对象或装箱的结构。 复合格式设置功能返回新的结果字符串，其中每个格式项都被列表中相应对象的字符串表示形式取代。  
   
  可考虑使用以下 <xref:System.String.Format%2A> 代码段。  
@@ -53,6 +54,7 @@ ms.locfileid: "94823090"
  固定文本为“`Name =`”和“`, hours =`”。 格式项为“`{0}`”和“`{1:hh}`”，前者的索引为 0，对应于对象 `name`，后者的索引为 1，对应于对象 `DateTime.Now`。  
   
 ## <a name="format-item-syntax"></a>格式项语法  
+
  每个格式项都采用下面的形式并包含以下组件：  
   
  `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
@@ -60,6 +62,7 @@ ms.locfileid: "94823090"
  必须使用成对的大括号（“{”和“}”）。  
   
 ### <a name="index-component"></a>索引组件  
+
  必需的 *索引* 组件（也叫参数说明符）是一个从 0 开始的数字，可标识对象列表中对应的项。 也就是说，参数说明符为 0 的格式项列表中的第一个对象，参数说明符为 1 的格式项列表中的第二个对象，依次类推。 下面的示例包括四个参数说明符，编号为 0 到 3，用于表示小于 10 的质数：  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
@@ -73,6 +76,7 @@ ms.locfileid: "94823090"
  每个格式项都可以引用列表中的任一对象。 例如，如果有三个对象，可以指定“{1} {0} {2}”等复合格式字符串，以设置第二个、第一个和第三个对象的格式。 格式项未引用的对象会被忽略。 如果参数说明符指定了超出对象列表范围的项，将引发运行时 <xref:System.FormatException>。  
   
 ### <a name="alignment-component"></a>对齐组件  
+
  可选的 *对齐* 组件是一个带符号的整数，指示首选的设置了格式的字段宽度。 如果 *alignment* 值小于设置了格式的字符串的长度，*alignment* 将被忽略，并使用设置了格式的字符串的长度作为字段宽度。 如果 *alignment* 为正数，字段中设置了格式的数据为右对齐；如果 *alignment* 为负数，字段中的设置了格式的数据为左对齐。 如果需要填充，则使用空白。 如果指定 *alignment*，则需要使用逗号。  
   
  下面的示例定义两个数组，一个包含雇员的姓名，另一个则包含雇员在两周内的工作小时数。 复合格式字符串使 20 字符字段中的姓名左对齐，使 5 字符字段中的工作小时数右对齐。 请注意“N1”标准格式字符串还用于设置带有小数位的小时数格式。  
@@ -81,6 +85,7 @@ ms.locfileid: "94823090"
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>格式字符串组件  
+
  可选的 *格式字符串* 组件是适合正在设置格式的对象类型的格式字符串。 如果相应对象是数值，指定标准或自定义数字格式字符串；如果相应对象是 <xref:System.DateTime> 对象，指定标准或自定义日期和时间格式字符串；或者，如果相应对象是枚举值，指定[枚举格式字符串](enumeration-format-strings.md)。 如果不指定 *formatString*，则对数字、日期和时间或者枚举类型使用常规（“G”）格式说明符。 如果指定 *formatString*，则需要使用冒号。  
   
  下表列出了 .NET 类库中支持预定义的格式字符串集的类型或类型的类别，并提供指向列出了支持的格式字符串的主题的链接。 请注意，字符串格式化是一个可扩展的机制，可使用该机制定义所有现有类型的新的格式字符串，并定义受应用程序定义的类型支持的格式字符串集。 有关详细信息，请参阅 <xref:System.IFormattable> 和 <xref:System.ICustomFormatter> 接口主题。  
@@ -94,6 +99,7 @@ ms.locfileid: "94823090"
 |<xref:System.TimeSpan>|[标准 TimeSpan 格式字符串](standard-timespan-format-strings.md)<br /><br /> [自定义 TimeSpan 格式字符串](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>转义大括号  
+
  左大括号和右大括号被解释为格式项的开始和结束。 因此，必须使用转义序列显示文本左大括号或右大括号。 在固定文本中指定两个左大括号 ("{{") 以显示一个左大括号 ("{")，或指定两个右大括号 ("}}") 以显示一个右大括号 ("}")。 按照在格式项中遇到大括号的顺序依次解释它们。 不支持解释嵌套的大括号。  
   
  解释转义大括号的方式会导致意外的结果。 例如，假设格式项为“{{{0:D}}}”，旨在显示左大括号、采用十进制数格式的数值和右大括号。 但是，实际是按照以下方式解释该格式项：  
@@ -114,6 +120,7 @@ ms.locfileid: "94823090"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>处理顺序  
+
  如果对复合格式设置方法的调用包括其值不为 `null`的<xref:System.IFormatProvider>参数，则运行时会调用其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法来请求 <xref:System.ICustomFormatter> 实现。 如果此方法能够返回 <xref:System.ICustomFormatter> 实现，那么它将在复合格式方法调用期间缓存。
   
  如下所示，将参数列表中与格式项对应的每个值转换为字符串：  
@@ -135,6 +142,7 @@ ms.locfileid: "94823090"
  前面的步骤执行完毕之后应用对齐。  
   
 ## <a name="code-examples"></a>代码示例  
+
  下面的示例显示使用复合格式设置创建的一个字符串和使用对象的 `ToString` 方法创建的另一个字符串。 两种格式设置类型产生相同的结果。  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]

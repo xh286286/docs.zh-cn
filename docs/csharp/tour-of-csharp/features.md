@@ -3,10 +3,10 @@ title: C# 教程 - 主要语言区域
 description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
 ms.date: 08/06/2020
 ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93400743"
 ---
 # <a name="major-language-areas"></a>主要语言区域

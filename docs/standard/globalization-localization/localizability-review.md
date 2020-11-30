@@ -15,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686014"
 ---
 # <a name="localizability-review"></a>本地化评审
 
@@ -35,11 +35,13 @@ ms.locfileid: "94829838"
 - [是否已使用国际数据测试应用？](#test)
 
 <a name="global"></a>
+
 ## <a name="implement-globalization-recommendations"></a>实现全球化建议
 
 如果在设计和开发应用时考虑了本地化因素，并且遵循了[全球化](globalization.md)一文中给出的建议，那么可本地化评审在很大程度上就会成为质量保证关口。 否则，请在此阶段评审并实现[全球化](globalization.md)建议，修复源代码中妨碍本地化的错误。
 
 <a name="culture"></a>
+
 ## <a name="handle-culture-sensitive-features"></a>处理区分区域性的功能
 
 .NET 在许多方面都不提供编程支持，而且各区域性之间差别很大。 大多数情况下，你必须编写自定义代码来处理诸如以下方面的功能特性：
@@ -58,6 +60,7 @@ ms.locfileid: "94829838"
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
+
 ## <a name="test-your-application"></a>测试应用程序
 
 在本地化应用程序之前，应当使用国际数据在操作系统的国际版本上对其进行测试。 虽然此时不会对大部分用户界面进行本地化，但可以检测到如下问题：

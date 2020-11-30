@@ -17,14 +17,15 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 94bd79bab1e7982ea39b5aa5872a6674033f9ccf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 36fe8015187833e03c4cc3fc1609ec647daf7278
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677994"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>如何：使用支持基于事件的异步模式的组件
+
 许多组件都支持异步执行工作。 例如，通过 <xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 组件，可以“在后台”加载音频和图像，同时主线程继续运行而不中断。  
   
  对支持 [基于事件的异步模式概述](event-based-asynchronous-pattern-overview.md)的类使用异步方法，这与将事件处理程序附加到组件的 _MethodName_**Completed** 事件一样简单，就像处理其他任何事件一样。 调用 _MethodName_**Async** 方法后，应用程序会继续运行而不中断，除非 _MethodName_**Completed** 事件抛出。 在事件处理程序中，可以检查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 参数，以确定异步操作是已成功完成，还是已取消。  

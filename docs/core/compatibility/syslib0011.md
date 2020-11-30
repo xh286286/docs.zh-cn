@@ -3,12 +3,12 @@ title: SYSLIB0011 警告
 description: 了解有关生成编译时警告 SYSLIB0011 的过时信息。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1b4f4c24c64148319f659b78573a4d80fd5b98a7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 99cdd9f5335f71eb9325039891db17972fb48532
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685001"
 ---
 # <a name="syslib0011-binaryformatter-serialization-is-obsolete"></a>SYSLIB0011：BinaryFormatter 序列化已过时
 
@@ -32,4 +32,4 @@ ms.locfileid: "94440010"
 ## <a name="see-also"></a>另请参阅
 
 - [修复 BinaryFormatter 过时和禁用错误](https://aka.ms/binaryformatter)
-- [BinaryFormatter 序列化方法已过时，并且已在 ASP.NET 应用中禁用](corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
+- [BinaryFormatter 序列化方法已过时，并且已在 ASP.NET 应用中禁用](core-libraries/5.0/binaryformatter-serialization-obsolete.md)

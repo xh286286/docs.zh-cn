@@ -10,10 +10,10 @@ helpviewer_keywords:
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 ms.openlocfilehash: 9c3b307668968865b401aedc04c79f95d4f32513
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171333"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror（C# 编译器选项）
@@ -30,7 +30,7 @@ ms.locfileid: "91171333"
 
  通常报告为警告的消息被报告为错误，生成过程暂停（不生成任何输出文件）。  
   
- 默认情况下，-warnaserror- 将生效，导致警告不会阻止生成输出文件****。 -warnaserror 与 -warnaserror+ 相同，会导致将警告视为错误********。  
+ 默认情况下，-warnaserror- 将生效，导致警告不会阻止生成输出文件。 -warnaserror 与 -warnaserror+ 相同，会导致将警告视为错误。  
   
  （可选）如果希望仅将一些特定警告视为错误，则可以指定视为错误的警告编号的逗号分隔列表。 可以使用可为 null 的简写形式指定所有为 Null 性警告的集合。
   
@@ -40,9 +40,9 @@ ms.locfileid: "91171333"
   
 1. 打开项目的“属性”页。  
   
-2. 单击“生成”**** 属性页。  
+2. 单击“生成”属性页。  
   
-3. 修改“将警告视为错误”**** 属性。  
+3. 修改“将警告视为错误”属性。  
   
  若要以编程方式设置此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>。  
   

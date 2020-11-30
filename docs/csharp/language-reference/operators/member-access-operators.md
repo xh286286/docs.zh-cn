@@ -1,7 +1,7 @@
 ---
 title: 成员访问运算符和表达式 - C# 参考
 description: 了解可用于访问类型成员的 C# 运算符。
-ms.date: 04/17/2020
+ms.date: 11/13/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 688a1fcff84a6e8f2fa31533a2bc459bf8c8717a
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916784"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691235"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>成员访问运算符和表达式（C# 参考）
 
@@ -137,9 +137,6 @@ A?.B?[C];
 在前面的示例中，如果不使用 `??` 运算符，则在 `numbers` 为 `null` 时，`numbers?.Length < 2` 的计算结果为 `false`。
 
 Null 条件成员访问运算符 `?.` 也称为 Elvis 运算符。
-
-> [!NOTE]
-> 在 C# 8 中，[null 包容运算符](null-forgiving.md)终止前面的 null 条件运算符的列表。 例如，表达式 `x?.y!.z` 分析为 `(x?.y)!.z`。 由于这种解释，即使 `x` 为 `null`，也会计算 `z`，这可能会导致 <xref:System.NullReferenceException>。
 
 ### <a name="thread-safe-delegate-invocation"></a>线程安全的委托调用
 

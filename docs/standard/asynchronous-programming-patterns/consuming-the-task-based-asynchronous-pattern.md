@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 2a24c06e55a5f07f4831b32cf52ea2b5b389d5cc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 312a86f38335f1c16a4286795f04b9a80a9ea03f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830540"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678124"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
 
@@ -33,6 +33,7 @@ ms.locfileid: "94830540"
  此行为有几种重要特殊情况。  出于性能原因，如果任务在等待时已完成，则不会生成控件，并且该函数将继续执行。  返回到原始上下文并不总是所需的行为，可对其进行更改；将在下一节中更详细地描述此内容。
 
 ### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>使用 Yield 和 ConfigureAwait 配置挂起和恢复
+
  有多种方法可更好地控制异步方法的执行。 例如，可以使用 <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> 方法，将暂停点引入异步方法：
 
 ```csharp
@@ -110,6 +111,7 @@ var cts = new CancellationTokenSource();
 - 使用 API 的代码可以选择性地确定将对其传播取消请求的异步调用。
 
 ## <a name="monitoring-progress"></a>监视进度
+
  某些异步方法通过传入异步方法的进度接口来公开进度。  例如，设想某个函数以异步方式下载文本字符串，并在该过程中引发包括到目前为止下载完成百分比的进度更新。  此类方法可在 Windows Presentation Foundation (WPF) 应用程序中使用，如下所示：
 
 ```csharp
@@ -126,10 +128,13 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
 ```
 
 <a name="combinators"></a>
+
 ## <a name="using-the-built-in-task-based-combinators"></a>使用内置的基于任务的连结符
+
  <xref:System.Threading.Tasks> 命名空间包含多个方法，可用于撰写和处理任务。
 
 ### <a name="taskrun"></a>Task.Run
+
  <xref:System.Threading.Tasks.Task> 类包含多个 <xref:System.Threading.Tasks.Task.Run%2A> 方法，以便于将工作作为 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 轻松卸载到线程池，例如：
 
 ```csharp
@@ -160,6 +165,7 @@ public async void button1_Click(object sender, EventArgs e)
  此类重载在逻辑上相当于结合使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法和任务并行库中的 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法。
 
 ### <a name="taskfromresult"></a>Task.FromResult
+
  <xref:System.Threading.Tasks.Task.FromResult%2A> 方法的适用情景为，数据可能已存在，且只需通过提升到 <xref:System.Threading.Tasks.Task%601> 的任务返回方法返回：
 
 ```csharp
@@ -178,6 +184,7 @@ private async Task<int> GetValueAsyncInternal(string key)
 ```
 
 ### <a name="taskwhenall"></a>Task.WhenAll
+
  <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法可用于异步等待多个表示为任务的异步操作。  该方法所具有的多个重载支持一组非泛型任务或一组不统一的常规任务（如异步等待多个返回 void 的操作，或异步等待多个返回值的方法，其中每个值可能具有不同类型），并支持一组统一的常规任务（如异步等待多个 `TResult` 返回方法）。
 
  假设你想要向多个客户发送电子邮件。 你可以重叠发送邮件，因此发送邮件时无需等待上一封邮件完成发送。 还可以查看发送操作完成的时间，以及是否发生了错误：
@@ -245,6 +252,7 @@ catch(Exception exc)
 ```
 
 ### <a name="taskwhenany"></a>Task.WhenAny
+
  <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法可用于异步等待多个表示为要完成的任务的异步操作之一。  此方法适用于四个主要用例：
 
 - 冗余：多次执行一个操作并选择最先完成的一次（例如，联系将生成一个结果的多个股市行情 Web 服务并选择最快完成的一个）。
@@ -256,6 +264,7 @@ catch(Exception exc)
 - 早期释放：例如，用任务 t1 表示的操作可以与任务 t2 组成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务，并且可以等待 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务。 任务 t2 可以表示超时、取消或其他一些导致 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务先于 t1 完成的信号。
 
 #### <a name="redundancy"></a>冗余
+
  假设你想要决定是否购买股票。  你信任一些股票建议 Web 服务，但每个服务最终会在不同的时间段变得很慢，具体取决于每日负载。  <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法可用于在任何操作完成时接收通知：
 
 ```csharp
@@ -342,6 +351,7 @@ if (await recommendation) BuyStock(symbol);
 ```
 
 #### <a name="interleaving"></a>交错
+
  假设你要从 Web 下载图像，并且处理每个图像（例如，将图像添加到 UI 控件）。 可以在 UI 线程上按顺序处理图像，但建议尽可能同时下载图像。 此外，建议不要直到所有图像都下载完成才将图像添加到 UI。 建议在完成下载时添加它们。
 
 ```csharp
@@ -382,6 +392,7 @@ while(imageTasks.Count > 0)
 ```
 
 #### <a name="throttling"></a>遏制
+
  请考虑交错示例，因用户大量下载图像而导致下载必须受到遏制除外；例如，你希望仅能同时下载特定数目的内容。 为此，可以启动异步操作的子集。  操作完成后，你可以启动其他操作对其进行替代：
 
 ```csharp
@@ -416,6 +427,7 @@ while(imageTasks.Count > 0)
 ```
 
 #### <a name="early-bailout"></a>早期释放
+
  假设正在异步等待某个操作完成的同时，对用户的取消请求（例如，用户单击取消按钮）进行响应。 以下代码阐释了此方案：
 
 ```csharp
@@ -479,6 +491,7 @@ public async void btnRun_Click(object sender, EventArgs e)
  另一个早期释放示例涉及结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法和 <xref:System.Threading.Tasks.Task.Delay%2A> 方法，下一部分将对此进行介绍。
 
 ### <a name="taskdelay"></a>Task.Delay
+
  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法可用于将暂停引入异步方法的执行中。  这对于许多功能都非常有用，包括构建轮询循环和延迟预定时间段的用户输入处理。  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法还可以与 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 结合使用，以对 await 实现超时。
 
  如果某任务属于较大型异步操作（如 ASP.NET Web 服务）中的一部分，由于花费时间过长而不能完成，则整体操作可能会受到影响（尤其是此任务一直不能完成的情况下）。  因此，等待异步操作时可以超时非常重要。  虽然同步 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> 方法接受超时值，但相应的 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 和前述 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法不接受。  相反，可以将 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 与 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>结合使用，以实现超时。
@@ -536,9 +549,11 @@ public async void btnDownload_Click(object sender, RoutedEventArgs e)
 ```
 
 ## <a name="building-task-based-combinators"></a>构建基于任务的连结符
+
  因为任务可以完全代表异步操作、提供同步和异步功能来加入操作、检索其结果等，所以可以构建组成任务的连结符的库以构建更大的模式。 如前一部分所述，.NET 包括一些内置连结符，但是，你也可以构建自己的连结符。 以下各节提供了一些潜在的连结符方法和类型的示例。
 
 ### <a name="retryonfault"></a>RetryOnFault
+
  在许多情况下，如果上次尝试失败，你可能想要重试操作。  对于同步代码，你可能会构建一个帮助器方法来实现此目的，如下例中的 `RetryOnFault`：
 
 ```csharp
@@ -603,6 +618,7 @@ string pageContents = await RetryOnFault(
 ```
 
 ### <a name="needonlyone"></a>NeedOnlyOne
+
  有时，你可以利用冗余改进操作延迟和提高成功的可能性。  假设有多个 Web 服务提供股票报价，但在一天中的不同时间，每个服务可能提供不同级别的质量和响应时间。  为了应对这些波动，你可能会向所有 Web 服务发出请求，并且只要从其中一个获得响应，立刻取消剩余的请求。  你可以通过 helper 函数更轻松地实现此启动多个操作的通用模式：等待任何操作，然后取消其余部分。 以下示例中的 `NeedOnlyOne` 函数阐释了这种方案：
 
 ```csharp
@@ -633,6 +649,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>交错操作
+
  处理大型任务集时，如果使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法支持交错方案，可能存在潜在性能问题。 每次调用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 都会向每个任务注册延续。 对于 N 个任务，这将导致在交错操作的操作期间创建 O(N<sup>2</sup>) 次延续。 如果处理大型任务集，则可以使用连结符（以下示例中的 `Interleaved`）来解决性能问题：
 
 ```csharp
@@ -674,6 +691,7 @@ foreach(var task in Interleaved(tasks))
 ```
 
 ### <a name="whenallorfirstexception"></a>WhenAllOrFirstException
+
  在特定的分散/集中情况下，你可能想要等待集中的所有任务，除非某个任务发生错误。在这种情况下，你希望在异常发生时停止等待。  你可以通过使用连结符方法（如 `WhenAllOrFirstException`）实现该目的，如下所示：
 
 ```csharp
@@ -697,9 +715,11 @@ public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
 ```
 
 ## <a name="building-task-based-data-structures"></a>构建基于任务的数据结构
+
  除了能够生成基于任务的自定义组合器，在 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601>（表示异步操作结果和联接所必需的同步操作结果）中包含数据结构，还可以使其成为功能非常强大的类型，基于该类型可生成在异步方案中使用的自定义数据结构。
 
 ### <a name="asynccache"></a>AsyncCache
+
  任务的重要方面之一是，它可能会分发到多个使用者，所有使用者都可以等待任务、向任务注册延续、获取任务结果或异常（如果是 <xref:System.Threading.Tasks.Task%601> 的话）等。  这样一来，<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 就非常适用于异步缓存基础结构。  下面的示例演示了基于 <xref:System.Threading.Tasks.Task%601> 生成的功能非常强大的小型异步缓存：
 
 ```csharp
@@ -751,6 +771,7 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
 ```
 
 ### <a name="asyncproducerconsumercollection"></a>AsyncProducerConsumerCollection
+
  你还可以使用任务来构建协调异步活动的数据结构。  请考虑经典的并行设计模式之一：制造者/使用者。  在此模式下，制造者生成数据，使用者使用数据，制造者和使用者可能会并行运行。 例如，使用者处理之前由制造者生成的第 1 项，而制造者现在正在制造第 2 项。  对于制造者/使用者模式，总是需要某种数据结构来存储制造者创建的工作，以便使用者可以收到新数据的通知并及时发现新数据。
 
  以下是基于任务构建的简单数据结构，可以将异步方法用作生成方和使用方：

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
 ms.openlocfilehash: 0f6d94dd25a020d96430746c4b5e7aefd0f679da
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89140836"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe（C# 编译器选项）
@@ -33,9 +33,9 @@ ms.locfileid: "89140836"
   
 1. 打开项目的“属性”页。  
   
-2. 单击“生成”**** 属性页。  
+2. 单击“生成”属性页。  
   
-3. 选中“允许不安全代码”复选框****。  
+3. 选中“允许不安全代码”复选框。  
   
 ### <a name="to-add-this-option-in-a-csproj-file"></a>向 csproj 文件添加此选项
 

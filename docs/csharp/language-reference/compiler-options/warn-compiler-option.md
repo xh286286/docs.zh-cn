@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: d59274423e6f9844d3ab22f3ac513ba1a05d7f07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171346"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn（C# 编译器选项）
 
--warn 选项指定编译器显示的警告等级****。  
+-warn 选项指定编译器显示的警告等级。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,15 +52,15 @@ ms.locfileid: "91171346"
   
  使用 [-warnaserror](./warnaserror-compiler-option.md) 将所有警告视为错误。 使用 [-nowarn](./nowarn-compiler-option.md) 禁用某些警告。  
   
- -w 是 -warn 的缩写形式********。  
+ -w 是 -warn 的缩写形式。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
 1. 打开项目的“属性”页。  
   
-2. 单击“生成”**** 属性页。  
+2. 单击“生成”属性页。  
   
-3. 修改警告等级**** 属性。  
+3. 修改警告等级属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
   

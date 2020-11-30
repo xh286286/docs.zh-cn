@@ -9,15 +9,15 @@ helpviewer_keywords:
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
 ms.openlocfilehash: f9a92462203bedff93a4a711ca8742465b7a561c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89124742"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly（C# 编译器选项）
 
--refonly 选项表示应输出引用程序集（而不是实现程序集）作为主输出****。 `-refonly` 参数以无提示方式禁用输出 PDB，因为无法执行引用程序集。 此选项对应于 MSBuild 的 [ProduceOnlyReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) 项目属性。
+-refonly 选项表示应输出引用程序集（而不是实现程序集）作为主输出。 `-refonly` 参数以无提示方式禁用输出 PDB，因为无法执行引用程序集。 此选项对应于 MSBuild 的 [ProduceOnlyReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) 项目属性。
 
 ## <a name="syntax"></a>语法
 
