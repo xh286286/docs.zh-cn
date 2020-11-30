@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90556084"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
@@ -98,7 +98,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
 
     - [如何：在 Visual Studio 中创建 Web 部署包](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [如何：在 Visual Studio 中使用一键式发布来部署 Web 项目](/previous-versions/aspnet/dd465337(v=vs.110))
+    - [如何：使用在 Visual Studio 中发布 One-Click 部署 Web 项目](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **ASP.NET 网站的部署技术**
 
@@ -125,7 +125,7 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 可以使
 
 - 由于 WCF 数据服务包含基本 WCF 实现，因此你可以使用 Windows Server AppFabric 来监视部署到在 Windows Server 上运行的 IIS 的数据服务。 有关使用 Windows Server AppFabric 监视数据服务的详细信息，请参阅 [使用 Windows Server appfabric 进行跟踪后 WCF 数据服务](/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [承载数据服务](hosting-the-data-service-wcf-data-services.md)
 - [WCF 数据服务的安全](securing-wcf-data-services.md)

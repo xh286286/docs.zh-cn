@@ -4,10 +4,10 @@ description: 了解开发和部署在 IIS 中承载的 WCF 服务所需的任务
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90557562"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
@@ -28,7 +28,7 @@ ms.locfileid: "90557562"
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>确保已正确安装和注册 IIS、ASP.NET 和 WCF
 
-为了使 IIS 承载的 WCF 服务正常工作，必须安装 WCF、IIS 和 ASP.NET。 将 WCF (作为 .NET Framework) 、ASP.NET 和 IIS 的一部分进行安装的过程因操作系统而异。 有关安装 WCF 和 .NET Framework 的详细信息，请参阅 [为开发人员安装 .NET Framework](../../install/guide-for-developers.md)。 若要在 Windows 10 上安装 IIS，请在 **"控制面板"** 中打开 "**程序和功能**"，然后选择 **"打开或关闭 Windows 功能**"。 在 **Windows 功能**中，选择 " **Internet Information Services** "，然后选择 **"确定"**。
+为了使 IIS 承载的 WCF 服务正常工作，必须安装 WCF、IIS 和 ASP.NET。 将 WCF (作为 .NET Framework) 、ASP.NET 和 IIS 的一部分进行安装的过程因操作系统而异。 有关安装 WCF 和 .NET Framework 的详细信息，请参阅 [为开发人员安装 .NET Framework](../../install/guide-for-developers.md)。 若要在 Windows 10 上安装 IIS，请在 **"控制面板"** 中打开 "**程序和功能**"，然后选择 **"打开或关闭 Windows 功能**"。 在 **Windows 功能** 中，选择 " **Internet Information Services** "，然后选择 **"确定"**。
 
 ![突出显示了 IIS 的 Windows 功能](./media/windows-features-iis.png)
 
@@ -36,7 +36,7 @@ ms.locfileid: "90557562"
 
 如果计算机上已存在 IIS，则 .NET Framework 的安装过程会自动将 WCF 注册到 IIS。 如果在 .NET Framework 后安装 IIS，则需要执行其他步骤以将 WCF 注册到 IIS 和 ASP.NET。 根据您的操作系统，可以按如下所述执行此操作：
 
-- Windows 7 和 Windows Server 2003：使用 [System.servicemodel 注册工具 ( # A0) ](../servicemodelreg-exe.md) 工具向 IIS 注册 WCF。 若要使用此工具，请在[Visual Studio 的开发人员命令提示](../../tools/developer-command-prompt-for-vs.md)中键入**ServiceModelReg.exe/i/x** 。
+- Windows 7 和 Windows Server 2003：使用 [System.servicemodel 注册工具 ( # A0) ](../servicemodelreg-exe.md) 工具向 IIS 注册 WCF。 若要使用此工具，请在 [Visual Studio 的开发人员命令提示](../../tools/developer-command-prompt-for-vs.md)中键入 **ServiceModelReg.exe/i/x** 。
 
 - Windows 7：最后，必须验证是否已将 ASP.NET 配置为使用 .NET Framework 版本4或更高版本。 可以通过使用选项运行 ASPNET_Regiis 工具来执行此操作 `–i` 。 有关详细信息，请参阅 [ASP.NET IIS 注册工具](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))。
 
@@ -110,7 +110,7 @@ IIS 承载的 WCF 服务可以利用 HTTP 传输安全 (例如，HTTPS 和 HTTP 
 
 例如，配置为使用 HTTP 摘要式身份验证的 WCF 终结点必须驻留在也配置为允许 HTTP 摘要式身份验证的 IIS 虚拟目录中。 IIS 设置和 WCF 终结点设置的不匹配组合会导致服务激活期间出错。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Internet 信息服务中承载](hosting-in-internet-information-services.md)
 - [Internet 信息服务承载最佳实践](internet-information-services-hosting-best-practices.md)
