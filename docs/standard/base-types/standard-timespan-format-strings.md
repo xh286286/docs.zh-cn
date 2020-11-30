@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831307"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734239"
 ---
 # <a name="standard-timespan-format-strings"></a>标准 TimeSpan 格式字符串
 
@@ -47,6 +47,7 @@ ms.locfileid: "94831307"
 |“G”|常规长格式|此说明符始终输出天数和七个小数位。 它区分区域性并采用 `[-]d':'hh':'mm':'ss.fffffff` 形式。<br /><br /> 更多信息：[常规长（“G”）格式说明符](#the-general-long-g-format-specifier)。|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>常量（“c”）格式说明符。  
+
  “c”格式说明符返回的 <xref:System.TimeSpan> 值的字符串表示形式具有以下形式：  
   
  [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
@@ -73,6 +74,7 @@ ms.locfileid: "94831307"
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>常规短（“g”）格式说明符  
+
  “g”<xref:System.TimeSpan> 格式说明符通过只包含所需元素来返回简洁形式的 <xref:System.TimeSpan> 值的字符串表示形式。 它具有以下形式：  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
@@ -97,6 +99,7 @@ ms.locfileid: "94831307"
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
 
 ## <a name="the-general-long-g-format-specifier"></a>常规长（“G”）格式说明符  
+
  （“G”）<xref:System.TimeSpan> 格式说明符用始终包含日期和秒的小数部分的长格式返回 <xref:System.TimeSpan> 值的字符串表示形式。 “G”标准格式说明符生成的字符串具有以下形式：  
   
  [-]*d*:*hh*:*mm*:*ss*.*fffffff*  

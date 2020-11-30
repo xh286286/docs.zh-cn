@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 997bb80b6e30d4769613c4a1df647e6cd475a8ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820769"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730599"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的顺序保留
+
 在 PLINQ 中，目标是在保持正确性的同时，最大限度地提升性能。 虽然查询应尽可能快地运行，但仍应生成正确结果。 在某些情况下，为了满足正确性要求，必须暂留源序列的顺序；不过，顺序暂留的计算成本可能非常高。 因此，默认情况下，PLINQ 不暂留源序列的顺序。 在这方面，PLINQ 类似于 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但与确实暂留顺序的 LINQ to Objects 不同。  
   
  若要替代默认行为，可以对源序列使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 运算符，启用顺序暂留。 稍后，可以使用 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 方法，在查询中禁用顺序暂留。 使用这两种方法时，查询的处理依据为，确定是并行执行还是顺序执行查询的启发。 有关详细信息，请参阅[了解 PLINQ 中的加速](understanding-speedup-in-plinq.md)。  
@@ -39,6 +40,7 @@ ms.locfileid: "94820769"
  请注意，PLINQ 暂留查询其余部分的顺序强制施加运算符生成的序列顺序。 也就是说，<xref:System.Linq.ParallelEnumerable.OrderBy%2A> 和 <xref:System.Linq.ParallelEnumerable.ThenBy%2A> 等运算符被视为后跟 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 调用。  
   
 ## <a name="query-operators-and-ordering"></a>查询运算符和顺序  
+
  下面的查询运算符将顺序暂留引入查询中的所有后续操作，或一直运行到 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 获得调用：  
   
 - <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  

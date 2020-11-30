@@ -11,17 +11,19 @@ helpviewer_keywords:
 - tables [.NET], type conversions
 - data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: c84b1eae8a36a8d4e844cb7b1eb110c32c35993f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc98a326155273805e3157d99755de2e97f83a46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823012"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730209"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET 中的类型转换表
+
 当一种类型的值转换为大小相等或更大的另一类型时，将发生扩大转换。 当一种类型的值转换为较小的另一种类型时，将发生收缩转换。 本主题中的表格解释了这两种转换类型的行为。  
   
 ## <a name="widening-conversions"></a>扩大转换  
+
  下表列出了执行不会导致信息丢失的扩大转换。  
   
 |类型|可在不丢失数据的情况下转换为|  
@@ -48,6 +50,7 @@ ms.locfileid: "94823012"
 |<xref:System.Decimal>|<xref:System.Single>， <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>收缩转换  
+
  目标为 <xref:System.Single> 或 <xref:System.Double> 的收缩转换可能会导致信息丢失。 如果目标类型无法正确表达源类型的大小，则结果类型将设置为常数 `PositiveInfinity` 或 `NegativeInfinity`。 `PositiveInfinity` 是正数除以 0 的结果，也在 <xref:System.Single> 或 <xref:System.Double> 的值大于 `MaxValue` 字段的值时返回。 `NegativeInfinity` 是负数除以 0 的结果，也在 <xref:System.Single> 或 <xref:System.Double> 的值小于 `MinValue` 字段的值时返回。 从 <xref:System.Double> 转换到 <xref:System.Single> 可能会导致 `PositiveInfinity` 或 `NegativeInfinity`。  
   
  收缩转换还可能导致其他数据类型的信息丢失。 不过，如果要转换的类型值不在目标类型的 `MaxValue` 和 `MinValue` 字段指定的范围内，就会抛出 <xref:System.OverflowException>，并且运行时会检查转换，以确保目标类型的值不超出它的 `MaxValue` 或 `MinValue`。 始终以这种方式检查使用 <xref:System.Convert?displayProperty=nameWithType> 类执行的转换。  

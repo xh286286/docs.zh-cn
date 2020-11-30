@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687579"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731444"
 ---
 # <a name="assembly-names"></a>程序集名称
 
@@ -48,6 +48,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > 绑定到程序集时，运行时不区分程序集名称的大小写，但会保留程序集名称中使用的大小写。 Windows SDK 中的几个工具会区分程序集名称的大小写。 为获得最佳效果，管理程序集名称时请按区分大小写的方式来处理。
 
 ## <a name="name-application-components"></a>命名应用程序组件
+
  运行时在确定程序集的标识时不考虑文件名。 程序集标识（由程序集名称、版本、区域性和强名称组成）对运行时必须清楚明了。
 
  例如，如果一个名为 myAssembly.exe 的程序集引用一个名为 myAssembly.dll 的程序集，则在执行 myAssembly.exe 时会正确进行绑定  。 但是，如果另一个应用程序使用 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 方法执行 myAssembly.exe，则当 myAssembly.exe 请求绑定到 `myAssembly` 时，运行时会确定 `myAssembly` 已经加载 。 在这种情况下，不会加载 myAssembly.dll。 由于 myAssembly.exe 不包含请求的类型，因此会发生 <xref:System.TypeLoadException>。

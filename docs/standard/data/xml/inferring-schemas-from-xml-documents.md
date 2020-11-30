@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 1f7b8c8b3cf51aa707a17b3a9e58c6a8c0d3d833
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4540e1706cbd3dad9490f100d7e8fa58e80a9206
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830228"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733433"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>从 XML 文档推断架构
+
 此主题描述如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XML 架构定义语言 (XSD) 架构。  
   
 ## <a name="the-schema-inference-process"></a>架构推断过程  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 命名空间的 <xref:System.Xml.Schema?displayProperty=nameWithType> 类用于从 XML 文档的结构生成一个或多个 XML 架构定义语言 (XSD) 架构。 生成的架构可以用于验证原始 XML 文档。  
   
  XML 文档由 <xref:System.Xml.Schema.XmlSchemaInference> 类处理时，<xref:System.Xml.Schema.XmlSchemaInference> 类假定架构组件描述了 XML 文档中的元素和属性。 <xref:System.Xml.Schema.XmlSchemaInference> 类还通过为特定元素或属性推断限制性最强的类型，以约束的方式推断架构组件。 随着收集到的 XML 文档信息越来越多，将推断限制性较弱的类型，从而放松这些约束。 可以推断的限制性最弱的类型为 `xs:string`。  
@@ -34,6 +36,7 @@ ms.locfileid: "94830228"
  在上述示例中，当 `attribute1` 过程遇到值为 `6` 的 <xref:System.Xml.Schema.XmlSchemaInference> 属性时，假定类型为 `xs:unsignedByte`。 当 `parent` 过程遇到第二个 <xref:System.Xml.Schema.XmlSchemaInference> 元素时，类型将修改为 `xs:string`，从而放松约束，因为现在 `attribute1` 属性的值为 `A`。 同样，在架构中推断的所有 `minOccurs` 元素的 `child` 属性均放松为 `minOccurs="0"`，因为第二个父元素没有子元素。  
   
 ## <a name="inferring-schemas-from-xml-documents"></a>从 XML 文档推断架构  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 类使用两个重载 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法从 XML 文档推断架构。  
   
  第一种 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> 方法用于基于 XML 文档创建架构。 第二种 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> 方法用于推断描述多个 XML 文档的架构。 例如，可以将多个 XML 文档传入 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> 方法，一次传入一个，以生成描述整个 XML 文档集的架构。  
@@ -65,6 +68,7 @@ ms.locfileid: "94830228"
  [!code-xml[XmlSchemaInferenceExamples#16](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema2.xml#16)]  
   
 ## <a name="inline-schemas"></a>内联架构  
+
  如果在 <xref:System.Xml.Schema.XmlSchemaInference> 过程中遇到内联 XML 架构定义语言 (XSD) 架构，将引发 <xref:System.Xml.Schema.XmlSchemaInferenceException>。 例如，以下内联架构将引发 <xref:System.Xml.Schema.XmlSchemaInferenceException>。  
   
 ```xml  
@@ -77,6 +81,7 @@ ms.locfileid: "94830228"
 ```  
   
 ## <a name="schemas-that-cannot-be-refined"></a>无法精选的架构  
+
  如果给定要精选的类型，有些 W3C XML 架构构造是 XML 架构定义语言 (XSD) 架构的 <xref:System.Xml.Schema.XmlSchemaInference> 过程无法处理的，并会引发异常。 例如顶级复合器不是序列的复杂类型。 在架构对象模型 (SOM) 中，这相对于 <xref:System.Xml.Schema.XmlSchemaComplexType>，它的 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 属性不是 <xref:System.Xml.Schema.XmlSchemaSequence> 的实例。  
   
 ## <a name="see-also"></a>请参阅

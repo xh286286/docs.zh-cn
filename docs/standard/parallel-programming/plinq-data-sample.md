@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: cdbecc0c7483ec189c7c19f19d75ababeb20989f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830566"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730547"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
+
 此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  
   
  数据表示 Northwind 数据库中的一部分。 其中包含五十 (50) 个客户记录，但并不包含所有字段。 此外，还包含“订单”中的一部分行和每个客户的相应 Order_Detail 数据。 所有产品都包含在内。  

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1b992837bcb32537f24643ef4781b6d170a058d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831242"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733550"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合类型
+
 集合类型是数据集合（如哈希表、队列、堆栈、包、字典和列表）的常见变体。  
   
  集合基于 <xref:System.Collections.ICollection> 接口、 <xref:System.Collections.IList> 接口、<xref:System.Collections.IDictionary> 接口或它们对应的泛型集合。 <xref:System.Collections.IList> 接口和 <xref:System.Collections.IDictionary> 接口都派生自 <xref:System.Collections.ICollection> 接口：因此，所有集合都直接或间接基于 <xref:System.Collections.ICollection> 接口。 在基于 <xref:System.Collections.IList> 接口（如 <xref:System.Array>、<xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>）或直接基于 <xref:System.Collections.ICollection> 接口（如 <xref:System.Collections.Queue>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、<xref:System.Collections.Stack>、<xref:System.Collections.Concurrent.ConcurrentStack%601> 或 <xref:System.Collections.Generic.LinkedList%601>）的集合里，每个元素都只有一个值。 在基于 <xref:System.Collections.IDictionary> 接口（比如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 类，<xref:System.Collections.Generic.Dictionary%602> 和<xref:System.Collections.Generic.SortedList%602> 泛型类）或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 类的集合中，每个元素都有一个键和一个值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 类是唯一的，因为它是值中嵌键的值的列表，因此，它的行为类似列表和字典。  
@@ -40,6 +41,7 @@ ms.locfileid: "94831242"
 |[泛型](../generics/index.md)|描述泛型功能，包括 .NET 提供的泛型集合、委托和接口。 为 C#、Visual Basic 和 Visual C++ 提供功能文档链接和支持技术（如反射）链接。|  
   
 ## <a name="reference"></a>参考  
+
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

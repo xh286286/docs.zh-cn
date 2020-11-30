@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 08eeb8440f89e488685e474bed607002f8ab6386
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bd6bb440a00b3e485f4e6794e538f761267236b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824579"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733004"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 进行 XML 架构 (XSD) 验证
+
 可以使用 <xref:System.Xml.Schema.XmlSchemaCollection> 根据 XML 架构定义语言 (XSD) 架构对 XML 文档进行验证。 <xref:System.Xml.Schema.XmlSchemaCollection> 在集合中存储架构，因此每当验证发生时不必将该架构加载到内存中，从而提高了性能。 如果架构存在于架构集合中，则将使用 `schemaLocation` 属性在集合中查找该架构。  
   
 > [!IMPORTANT]

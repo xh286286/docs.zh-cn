@@ -10,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829760"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732211"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>执行不区分区域性的字符串操作
 
@@ -24,6 +24,7 @@ ms.locfileid: "94829760"
  本节提供以下文章，用以说明如何使用默认区分区域性的 .NET 方法执行不区分区域性的字符串操作。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [执行不区分区域性的字符串比较](performing-culture-insensitive-string-comparisons.md)  
  介绍了如何使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 和 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法执行非区域性敏感型字符串比较。  
   
@@ -37,6 +38,7 @@ ms.locfileid: "94829760"
  介绍了如何使用 <xref:System.Array.Sort%2A?displayProperty=nameWithType> 和 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法在数组中执行非区域性敏感型操作。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [不区分区域性的字符串操作](culture-insensitive-string-operations.md)  
  介绍对字符串执行操作时应了解区域性的原因，并为何时执行区分区域性的操作、何时执行不区分区域性的操作提供了指南。
 

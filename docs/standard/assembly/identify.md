@@ -6,12 +6,12 @@ ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b78acaad31996f8fc2b965f51f541e99aeceb111
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380149"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731496"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly"></a>如何：确定文件是否为程序集
 
@@ -32,6 +32,7 @@ ms.locfileid: "83380149"
 2. 如果引发 <xref:System.BadImageFormatException> 异常，则该文件不是程序集。  
   
 ## <a name="example"></a>示例  
+
 此示例测试 DLL 以查看其是否为程序集。  
 
 ```csharp

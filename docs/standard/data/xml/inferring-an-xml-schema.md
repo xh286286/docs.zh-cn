@@ -2,19 +2,21 @@
 title: 推断 XML 架构
 ms.date: 03/30/2017
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-ms.openlocfilehash: d9bf14087a32ad04d9e3510c8543a3270f135653
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d3c3bd15637dbd875db5736aa01f3f4dd00f605
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830917"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733446"
 ---
 # <a name="inferring-an-xml-schema"></a>推断 XML 架构
+
 描述如何使用架构对象模型 (SOM) <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XML 架构定义语言 (XSD) 架构。  
   
  使用 <xref:System.Xml.Schema.XmlSchemaInference> 命名空间中的架构对象模型 (SOM) <xref:System.Xml.Schema?displayProperty=nameWithType> 类可以从 XML 文档的结构推断 XML 架构定义语言 (XSD) 架构。 <xref:System.Xml.Schema.XmlSchemaInference> 类输出的 XML 架构可以验证 XML 文档。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [从 XML 文档推断架构](inferring-schemas-from-xml-documents.md)  
  描述如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断架构。  
   

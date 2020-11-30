@@ -3,12 +3,12 @@ title: .NET 可移植性分析器 - .NET
 description: 了解如何使用 .NET 可移植性分析器工具，评估代码在各种 .NET 实现（包括 .NET Core、.NET Standard、UWP 和 Xamarin）间的可移植性。
 ms.date: 09/13/2019
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 048ff916d309f4159fe78177e093a58d731c2e11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819703"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734278"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
@@ -47,6 +47,7 @@ ApiPort.exe analyze -r DGML -f [directory or file]
 ![DGML 分析的屏幕截图。](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>分析可移植性
+
 若要在 Visual Studio 中分析整个项目，请在“解决方案资源管理器”中右键单击该项目，然后选择“分析程序集可移植性” 。 也可以转到“分析”菜单，选择“分析程序集可移植性”。  在该位置选择项目的可执行文件或 DLL。
 
 ![解决方案资源管理器中的可移植性分析器的屏幕截图。](./media/portability-analyzer/portability-solution-explorer.png)

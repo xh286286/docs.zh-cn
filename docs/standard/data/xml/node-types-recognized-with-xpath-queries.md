@@ -2,17 +2,19 @@
 title: XPath 查询识别的节点类型
 ms.date: 03/30/2017
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-ms.openlocfilehash: 87f4ed0c8182e250f6926d6c3d82893e6f8b985c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bfc94958dbe54f05773a3adfcdfa9bf1c7ee8037
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830098"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734078"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>XPath 查询识别的节点类型
+
 XPath 查询识别的节点类型与文档对象模型 (DOM) 中的节点类型不同。  
   
 ## <a name="w3c-xpath-node-types"></a>W3C XPath 节点类型  
+
  XPath 查询识别的节点类型与文档对象模型 (DOM) 中的节点类型不同。 以下是通过 <xref:System.Xml.XPath.XPathNodeType> 枚举表示的 XPath 节点类型。  
   
 - <xref:System.Xml.XPath.XPathNodeType.All>  

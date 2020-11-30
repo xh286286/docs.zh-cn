@@ -6,14 +6,15 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4c441501ae0f939f69ac863a990d6e392bd35fc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734265"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>如何：创建已签名的友元程序集
+
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>创建已签名的程序集和友元程序集  
@@ -125,6 +126,7 @@ ms.locfileid: "83378546"
    程序将输出字符串“Class1.Test”。  
   
 ## <a name="net-security"></a>.NET 安全性  
+
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。 主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `internal` (C#) 和 `Friend` (Visual Basic) 类型和成员的可见性。  
   
 ## <a name="see-also"></a>请参阅

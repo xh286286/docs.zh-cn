@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6690a600b7b00272471362bc087633d52a98f25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824839"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730612"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合并选项
+
 如果并行执行查询，PLINQ 对源序列进行分区，以便多个线程能够并发处理不同部分，通常是在不同的线程中。 如果要在一个线程（例如，`foreach`（Visual Basic 中的 `For Each`）循环）中使用结果，必须将每个线程的结果合并回一个序列中。 PLINQ 执行的合并类型具体视查询中的运算符而定。 例如，对结果强制施加新顺序的运算符必须缓冲所有线程中的全部元素。 从使用线程（以及应用用户）的角度来看，完全缓冲查询可能会运行很长时间，才能生成第一个结果。 默认情况下，其他运算符进行部分缓冲，并分批生成结果。 默认不缓冲的一个运算符是 <xref:System.Linq.ParallelEnumerable.ForAll%2A>。 它会立即生成所有线程中的所有元素。  
   
  使用 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 方法（如下面的示例所示），可以向 PLINQ 提供提示，指明要执行的合并类型。  
@@ -27,6 +28,7 @@ ms.locfileid: "94824839"
  如果特定查询无法支持请求执行的选项，将会直接忽略此选项。 大多数情况下，无需为 PLINQ 查询指定合并选项。 不过，在某些情况下，通过测试和度量，可以发现查询在非默认模式下执行效果最佳。 这种做法的常见用途是，强制区块合并运算符流式传输结果，以提升用户界面的响应速度。  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+
  <xref:System.Linq.ParallelMergeOptions> 枚举包括以下选项，用于针对受支持的查询形状，指定在一个线程上使用结果时如何生成查询的最终输出：  
   
 - `Not Buffered`  
@@ -42,6 +44,7 @@ ms.locfileid: "94824839"
      使用 <xref:System.Linq.ParallelMergeOptions.FullyBuffered> 选项，可以先缓冲整个查询的输出，再生成任何元素。 使用此选项时，虽然在使用线程中生成第一个元素的耗时更长，但完整结果的生成时间可能仍短于使用其他选项的用时。  
   
 ## <a name="query-operators-that-support-merge-options"></a>支持合并选项的查询运算符  
+
  下表列出了支持所有合并选项模式的运算符（受指定的限制约束）。  
   
 |运算符|限制|  

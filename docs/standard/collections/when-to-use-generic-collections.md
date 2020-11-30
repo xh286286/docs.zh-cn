@@ -5,12 +5,12 @@ helpviewer_keywords:
 - collections [.NET], generic
 - generic collections [.NET]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: eeee207d7fe70cc736ca962ef99f3dac2295902b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b8b7b458a1667a1d3239ef378c729929678e8aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822888"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733069"
 ---
 # <a name="when-to-use-generic-collections"></a>何时使用泛型集合
 
@@ -62,6 +62,7 @@ ms.locfileid: "94822888"
 你可以通过 LINQ to Objects 功能使用 LINQ 查询来访问内存中的对象，但条件是该对象类型要实现 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 接口。 LINQ 查询提供了一种通用的数据访问模式；与标准 `foreach` 循环相比，它通常更加简洁；可读性更高，并且可提供筛选、排序和分组功能。 LINQ 查询还可提高性能。 有关详细信息，请参阅 “[LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)”、“[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)” 和 “[并行 LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)”。
 
 ## <a name="additional-functionality"></a>其他功能
+
 一些泛型类型具有非泛型集合类型中找不到的功能。 比如与非泛型 <xref:System.Collections.Generic.List%601> 类相对的 <xref:System.Collections.ArrayList> 类有大量接受泛型委托的方法，例如允许你指定搜索列表的方法的 <xref:System.Predicate%601> 委托、代表对列表中每个元素发挥作用的 <xref:System.Action%601> 委托和在类型间定义对话的 <xref:System.Converter%602> 委托。
 
 <xref:System.Collections.Generic.List%601> 类使你可以指定你自己的用于排序和搜索列表的 <xref:System.Collections.Generic.IComparer%601> 泛型接口实现。 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 类也有这个功能。 另外，这些类使你可以在创建集合时指定比较器。 同样地，<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.ObjectModel.KeyedCollection%602> 类让你指定自己的相等比较器。

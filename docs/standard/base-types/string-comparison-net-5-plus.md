@@ -2,20 +2,20 @@
 title: 在 .NET 5 及更高版本中比较字符串时的行为更改
 description: 了解在 Windows 上的 .NET 5 及更高版本中比较字符串时的行为更改。
 ms.date: 11/04/2020
-ms.openlocfilehash: 49be2169bb165b8fe0205800415542bea7bf9787
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403469"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734226"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>在 .NET 5 及更高版本中比较字符串时的行为更改
 
-.NET 5.0 引入了一项运行时行为更改，其中，全球化 API 目前在所有支持的平台上[默认使用 ICU](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)。 这明显有别于较早的 .NET Core 和 .NET Framework 版本，在 Windows 上运行这些版本时，它们利用操作系统的区域语言支持 (NLS) 功能。 有关这些更改的详细信息，包括还原该行为更改的兼容性开关，请参阅 [.NET 全球化和 ICU](../globalization-localization/globalization-icu.md)。
+.NET 5.0 引入了一项运行时行为更改，其中，全球化 API 目前在所有支持的平台上[默认使用 ICU](../../core/compatibility/globalization/5.0/icu-globalization-api.md)。 这明显有别于较早的 .NET Core 和 .NET Framework 版本，在 Windows 上运行这些版本时，它们利用操作系统的区域语言支持 (NLS) 功能。 有关这些更改的详细信息，包括还原该行为更改的兼容性开关，请参阅 [.NET 全球化和 ICU](../globalization-localization/globalization-icu.md)。
 
 ## <a name="reason-for-change"></a>更改原因
 
-引入此更改是为了统一所有支持的操作系统上的 .NET 的全球化行为。 它还能让应用程序捆绑自己的全球化库，而不是依赖于操作系统的内置库。 有关详细信息，请参阅[中断性变更](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)。
+引入此更改是为了统一所有支持的操作系统上的 .NET 的全球化行为。 它还能让应用程序捆绑自己的全球化库，而不是依赖于操作系统的内置库。 有关详细信息，请参阅[中断性变更](../../core/compatibility/globalization/5.0/icu-globalization-api.md)。
 
 ## <a name="behavioral-differences"></a>行为差异
 

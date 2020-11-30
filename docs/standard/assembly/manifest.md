@@ -9,12 +9,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 365c21c6ea35683d7d3fad777cab3527103903c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687587"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731509"
 ---
 # <a name="assembly-manifest"></a>程序集清单
 
@@ -39,6 +39,7 @@ ms.locfileid: "92687587"
 - 呈现程序集自述。  
   
 ## <a name="assembly-manifest-contents"></a>程序集清单内容  
+
  下表显示了在程序集清单中包含的信息。 前四项：程序集名称、版本号、区域性和强名称信息共同构成了程序集的标识。  
   
 |信息|描述|  

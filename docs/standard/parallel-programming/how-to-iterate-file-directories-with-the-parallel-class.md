@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75097485c78e9ded67f41d9632f5399c081b3a16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825697"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734460"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>如何：使用并行类循环访问文件目录
+
 在许多情况下，文件迭代是可以轻松并行执行的操作。 主题[如何：使用 PLINQ 循环访问文件目录](how-to-iterate-file-directories-with-plinq.md)介绍了如何在许多情况下以最简单的方式执行此任务。 不过，如果代码必须处理访问文件系统时可能会出现的多种异常，可能会带来麻烦。 下面的示例展示了一种解决此问题的方法。 它使用基于堆栈的迭代遍历指定目录下的所有文件和文件夹，并让代码能够捕获和处理各种异常。 当然，如何处理异常还是取决于自己的选择。  
   
 ## <a name="example"></a>示例  
+
  下面的示例按顺序循环访问目录，但会并行处理文件。 这可能是文件与目录比很大时的最佳方法。 也可以并行执行目录迭代，并顺序访问每个文件。 并行执行两个循环的效率可能并不高，除非专门定目标到有大量处理器的计算机。 不过，与所有情况一样，应彻底测试应用，以确定最佳方法。  
   
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]

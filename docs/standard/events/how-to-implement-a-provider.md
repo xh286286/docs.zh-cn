@@ -9,14 +9,15 @@ helpviewer_keywords:
 - providers [.NET], in observer design pattern
 - observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: c58d4b79c9f722889352587c2cb1313fc1595319
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b63666a581959f7a6c6a30ca8763f9c22067f32a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828343"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734330"
 ---
 # <a name="how-to-implement-a-provider"></a>如何：实现提供程序
+
 观察程序设计模式要求区分提供程序（监视数据并发送通知）和一个或多个观察程序（通过提供程序接收通知（回调））。 本主题介绍了如何创建提供程序。 相关主题[如何：实现观察程序](how-to-implement-an-observer.md)介绍了如何创建观察程序。  
   
 ### <a name="to-create-a-provider"></a>创建提供程序的具体步骤  
@@ -52,6 +53,7 @@ ms.locfileid: "94828343"
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
 ## <a name="example"></a>示例  
+
  下面的示例包含完整的源代码，用于定义温度监视应用的 <xref:System.IObservable%601> 实现。 它包括 `Temperature` 结构（即发送给观察程序的数据）和 `TemperatureMonitor` 类（即 <xref:System.IObservable%601> 实现）。  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]

@@ -14,14 +14,15 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823259"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734382"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
+
 正则表达式中的反斜杠 (\\) 指示以下值之一：  
   
 - 后接字符为特殊字符，如下节表中所示。 例如，`\b` 是定位标记，用于指示正则表达式的匹配应从单词边界开始，`\t` 表示制表符，而 `\x020` 表示空格。  
@@ -32,6 +33,7 @@ ms.locfileid: "94823259"
 > 字符转义可在正则表达式模式中识别，但无法在替换模式中识别。  
   
 ## <a name="character-escapes-in-net"></a>.NET 中的字符转义  
+
  下表列出了 .NET 中正则表达式支持的字符转义。  
   
 |字符或序列|描述|  
@@ -52,6 +54,7 @@ ms.locfileid: "94823259"
 |`\`|后接字符未识别为转义字符时，将匹配此字符。 例如，`\*` 匹配星号 (*) 并等同于 `\x2A`。|  
   
 ## <a name="an-example"></a>示例  
+
  以下示例说明了如何使用正则表达式中的字符转义。 分析了包含 2009 年世界上最大城市的名称及其人口的字符串。 使用制表符 (`\t`) 或垂直条（&#124; 或 `\u007c`）将每个城市名与其人口数量分开。 使用回车符和换行符分隔各个城市及其人口。  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]

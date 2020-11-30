@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5f9bc3034ec2ae77578db985240e586dd22bd69f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823389"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732198"
 ---
 # <a name="common-io-tasks"></a>通用 I/O 任务
+
 <xref:System.IO> 命名空间提供若干个类，通过这些类可以对文件、目录和流执行各种操作（如读取和写入）。 有关详细信息，请参阅[文件和流 I/O](index.md)。  
   
 ## <a name="common-file-tasks"></a>通用文件任务  

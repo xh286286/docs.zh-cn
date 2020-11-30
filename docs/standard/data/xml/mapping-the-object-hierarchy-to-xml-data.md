@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 97cc7558f51b7bcbdb5201ef0f0c463da8f2c070
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9c4fbba63428e04b7b29a803061f288ca6ee5031
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822602"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734135"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>将对象层次结构映射到 XML 数据
+
 当 XML 文档在内存中时，概念上的表示形式是树。 编程时可使用对象层次结构访问树节点。 下面的示例显示 XML 内容如何成为节点。  
   
  当将 XML 读入 XML 文档对象模型 (DOM) 中时，各片段被转换为节点，这些节点保留有关自身的附加元数据，如它们的节点类型和值。 节点类型是节点的对象，确定可执行的操作以及可设置或检索的属性。  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 985f6e5057a06ac9dcadc0e2c1e4d7743d96f035
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535854"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730222"
 ---
 # <a name="runtime-callable-wrapper"></a>运行时可调用包装
+
 公共语言运行时通过名为运行时可调用包装 (RCW) 的代理公开 COM 对象。 尽管 RCW 似乎是 .NET 客户端的普通对象，但它的主要功能是封送处理 .NET 客户端和 COM 对象之间的调用。  
   
  无论 COM 对象上有多少引用数目，运行时都只为每个 COM 对象创建一个 RCW。 运行时针对每个对象的每个进程维护一个 RCW。  如果在某个应用程序域或单元创建一个 RCW，然后传递一个其他应用程序域或单元的引用，则将使用第一个对象的代理。  如下图所示，任意数量的托管客户端都可拥有一个对公开 INew 和 INewer 接口的 COM 对象的引用。  
@@ -32,6 +33,7 @@ ms.locfileid: "90535854"
  标准包装强制执行内置的封送处理规则。 例如，当 .NET 客户端将 String 类型作为自变量的一部分传递到非托管对象时，包装会将字符串转换为 BSTR 类型。 如果 COM 对象向它托管的调用方返回 BSTR，则调用方会收到 String。 客户端和服务器都会发送和接收所熟悉的数据。 其他类型不需要转换。 例如，标准包装始终无需转换类型即可在托管代码和非托管代码间传递 4 字节整数。  
   
 ## <a name="marshaling-selected-interfaces"></a>封送处理所选接口  
+
  [运行时可调用包装器](runtime-callable-wrapper.md) (RCW) 的主要目的是隐藏托管和非托管编程模型之间的差异。 若要创建无缝转换，RCW 需使用选定的 COM 接口且不将其公开到 .NET 客户端，如下图所示。
 
  下图显示了 COM 接口和运行时可调用包装器：

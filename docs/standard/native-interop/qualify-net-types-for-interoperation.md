@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 3fa9f0d5d8dd4d532fc510a1d946eddf32016748
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f5fe0f168e0e520ce1985faf5a8228c1bfbdf20
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734304"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>为 COM 互操作限定 .NET 类型
+
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
   
 - 类应显式实现接口。  
