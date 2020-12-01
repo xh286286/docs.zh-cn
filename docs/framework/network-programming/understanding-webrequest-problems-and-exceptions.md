@@ -3,17 +3,19 @@ title: 了解 WebRequest 问题和异常
 description: WebRequest 和派生类会抛出异常，以指示异常情况。 使用这些可能的解决方案来解决 .NET Framework 中的这些情况。
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: aa9ab989bad7940e82cc4fd8fd22ca3915f7b800
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27fde2a3cf3e6a3469a47bdd9efe70d31620777d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502075"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236320"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>了解 WebRequest 问题和异常
+
 <xref:System.Net.WebRequest> 及其派生类（<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest> 和 <xref:System.Net.FileWebRequest>）引发异常以指示异常状态。 有时这些问题的解决方法并不明显。  
   
 ## <a name="solutions"></a>解决方案  
+
  检查 <xref:System.Net.WebException> 的 <xref:System.Net.WebException.Status%2A> 属性以确定问题。 下表展示了几种状态值和某些可能的解决方法。  
   
 |状态|详细信息|解决方案|  

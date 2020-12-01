@@ -3,17 +3,19 @@ title: 启用和禁用 IPv6
 description: 按照这些配置步骤使用 IPv6 协议，包括修改计算机的配置文件或应用程序的配置文件。
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 7729647b09df20a98d5d639a641cb0a31f557330
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 00a59e25731d276d81ba74af086b3e19e68d5fad
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502608"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250536"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>启用和禁用 IPv6
+
 若要使用 IPv6 协议，请确保当前运行的操作系统版本支持 IPv6，并确保正确配置了操作系统和网络类。  
   
 ## <a name="configuration-steps"></a>配置步骤  
+
  下表列出了各种配置  
   
 |支持 IPv6 的操作系统？|支持 IPv6 的网络类？|描述|  

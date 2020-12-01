@@ -3,14 +3,15 @@ title: 对等名称解析协议
 description: 了解对等名称解析协议 (PNRP)，一种安全、可缩放的动态名称注册和名称解析协议。
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 72eb63c2c90f398c515d77cd2b2d693237e533a5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d50514569d066d04391ce65522df789ed421dbed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502218"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239388"
 ---
 # <a name="peer-name-resolution-protocol"></a>对等名称解析协议
+
 在对等环境中，对等机使用特定的名称解析系统从名称或其他类型的标识符解析彼此的网络位置（地址、协议和端口）。 过去，由于本质上的短暂性连接以及域名系统 (DNS) 内的其他缺陷，造成对等名称解析十分复杂。  
   
  Microsoft® Windows® 对等网络平台使用对等名称解析协议 (PNRP) 解决了这个问题，该协议是一个安全、可缩放的动态名称注册和名称解析协议，最早开发用于 Windows XP，然后在 Windows Vista™ 中得到升级。 PNRP 与传统的名称解析系统相比有很大不同，为应用程序开发者带来了振奋人心的全新可能。  

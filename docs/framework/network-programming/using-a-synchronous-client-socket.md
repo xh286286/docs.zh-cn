@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: ef682af33c10cf06ffc398c22e4a7dc1adf8290e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f198f283f2acfdcfbafed25baecb02a64e9d1e26
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502062"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236307"
 ---
 # <a name="using-a-synchronous-client-socket"></a>使用同步客户端套接字
+
 网络操作完成过程中，同步客户端套接字会挂起应用程序。 同步套接字不适用于在操作中大量使用网络的应用程序，但它们可以为其他应用程序启用对网络服务的简单访问。  
   
  若要发送数据，请将字节数组传递到 <xref:System.Net.Sockets.Socket> 类的数据发送方法之一（<xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.SendTo%2A>）。 下面的示例使用 <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> 属性将字符串编码到字节数组缓冲区，然后使用 Send 方法将该缓冲区传输到网络设备。 Send 方法返回发送到网络设备的字节数。  

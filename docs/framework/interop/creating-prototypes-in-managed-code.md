@@ -18,14 +18,15 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4260bc8b3f9a2550faa28dd4d35842327b4e5935
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555583"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244101"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在托管代码中创建原型
+
 本主题介绍了如何访问非托管函数，并介绍了在托管代码中批注方法定义的若干属性字段。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
   
  在从托管代码访问非托管 DLL 函数之前，需要知道函数的名称以及将其导出的 DLL 的名称。 使用此信息，可开始为 DLL 中实现的非托管函数编写托管定义。 此外，可调整平台调用创建函数以及将数据封送到函数和从中封送数据的方法。  
@@ -34,6 +35,7 @@ ms.locfileid: "90555583"
 > 借助分配字符串的 Windows API 函数，可以使用 `LocalFree` 等方法释放字符串。 平台调用以不同方式处理此类参数。 为了调用平台调用，将参数设为 `IntPtr` 类型，而不是 `String` 类型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 类提供的方法手动将类型转换为字符串，并将其手动释放。  
   
 ## <a name="declaration-basics"></a>声明基本知识  
+
  如以下示例所示，非托管函数的托管定义依赖于语言。 有关更完整的代码示例，请参阅[平台调用示例](platform-invoke-examples.md)。  
   
 ```vb
@@ -84,6 +86,7 @@ extern "C" int MessageBox(
 ```
   
 ## <a name="adjusting-the-definition"></a>调整定义  
+
  无论是否设置为显式，属性字段都将定义托管代码的行为。 平台调用根据程序集中作为元数据存在的各个字段上设置的默认值进行操作。 可通过调整一个或多个字段的值来更改此默认行为。 在很多情况下，使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 设置值。  
   
  下表列出了与平台调用相关的完整的属性字段集。 对于每个字段，此表包括了默认值以及有关如何使用这些字段来定义非托管 DLL 函数的信息的链接。  
@@ -102,9 +105,11 @@ extern "C" int MessageBox(
  详细的引用信息，请参阅 <xref:System.Runtime.InteropServices.DllImportAttribute>。  
   
 ## <a name="platform-invoke-security-considerations"></a>平台调用安全注意事项  
+
  <xref:System.Security.Permissions.SecurityAction> 枚举的 `Assert`、`Deny` 和 `PermitOnly` 成员被称为堆栈审核修饰符。 如果将这些成员用作平台调用声明和 COM 接口定义语言 (IDL) 语句上的声明性属性，则会被忽略。  
   
 ### <a name="platform-invoke-examples"></a>平台调用示例  
+
  本节中的平台调用示例阐明了如何将 `RegistryPermission` 属性和堆栈审核修饰符一起使用。  
   
  在下面的示例中，<xref:System.Security.Permissions.SecurityAction>`Assert`、`Deny` 和 `PermitOnly` 修饰符被忽略。  
@@ -184,6 +189,7 @@ class PInvokeScenario
 ```  
   
 #### <a name="com-interop-examples"></a>COM 互操作示例  
+
  本节中的 COM 互操作示例阐明了如何将 `RegistryPermission` 属性和堆栈审核修饰符一起使用。  
   
  与上节中的平台调用示例相似，以下 COM 互操作接口声明也会忽略 `Assert`、`Deny` 和 `PermitOnly` 修饰符。  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167338"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247338"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe（Windows 窗体 ActiveX 控件导入程序）
+
 ActiveX 控件导入程序将 ActiveX 控件的 COM 类型库中的类型定义转换为 Windows 窗体控件。  
   
  Windows 窗体只能承载 Windows 窗体控件，即从 <xref:System.Windows.Forms.Control> 派生的类。 Aximp.exe 生成可承载于 Windows 窗体上的 ActiveX 控件的包装器类。 这使你得以使用适用于其他 Windows 窗体控件的同一设计时支持和编程方法。  
@@ -72,6 +73,7 @@ aximp [options]{file.dll | file.ocx}
  通过对 shdocvw.dll 使用 Aximp.exe 来创建用于应用程序开发的 .NET 程序集也会导致问题。 在这种情况下，应用程序将同时加载 shdocvw.dll 的系统版本和生成版本，并可能为系统版本赋予更高的优先级。 此时，如果尝试在 WebBrowser ActiveX 控件内加载网页，用户可能会收到打开/保存对话框提示。 用户单击“打开”后，将在 Internet Explorer 中打开该网页。 此情况只出现在运行 Internet Explorer 版本 6 或更早版本的计算机上。 若要防止出现此问题，请使用托管的 <xref:System.Windows.Forms.WebBrowser> 控件或使用 Visual Studio 生成托管的 shdocvw.dll，如[如何：添加对类型库的引用](../interop/how-to-add-references-to-type-libraries.md)中所述。  
   
 ## <a name="example"></a>示例  
+
  下面的命令为媒体播放器控件 `msdxm.ocx` 生成 MediaPlayer.dll 和 AxMediaPlayer.dll。  
   
 ```console

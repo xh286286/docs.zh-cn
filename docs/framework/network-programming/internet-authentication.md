@@ -16,14 +16,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 085ca27dd0cfedc90211b21c10cc8bc5cf1ecd21
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241585"
 ---
 # <a name="internet-authentication"></a>Internet 身份验证
+
 <xref:System.Net> 类支持多种客户端身份验证机制，包括标准 Internet 身份验证方法、基本、摘要式、协商、NTLM 和 Kerberos 身份验证，以及可以创建的自定义方法。  
   
  身份验证凭据存储在实现 <xref:System.Net.ICredentials> 接口的 <xref:System.Net.NetworkCredential> 和 <xref:System.Net.CredentialCache> 类中。 在查询其中一个类以获取凭据时，它会返回 NetworkCredential 类的实例。 身份验证过程由 <xref:System.Net.AuthenticationManager> 类管理，而实际的身份验证过程由实现 <xref:System.Net.IAuthenticationModule> 接口的身份验证模块类执行。 必须首先向 AuthenticationManager 注册自定义身份验证模块才能使用此模块；基本、摘要式、协商、NTLM 和 Kerberos 身份验证方法的模块是默认注册的。  

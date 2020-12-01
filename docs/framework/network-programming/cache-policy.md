@@ -11,14 +11,15 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: d63d2b6bf8426968d2120647c8ecea2b7602825a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5492fd9f7b27f7546b951710e4b3e099a1d6664d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502660"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250588"
 ---
 # <a name="cache-policy"></a>缓存策略
+
 缓存策略定义规则，这些规则用于确定使用已请求资源的缓存副本是否可以满足请求。 尽管应用程序为新鲜度指定客户端缓存要求，但有效的缓存策略是由客户端缓存要求、服务器的内容有效期限要求以及服务器的重新验证要求确定的。 客户端缓存策略和服务器要求的交互始终会造成最保守的缓存策略，有助于确保将最新鲜的内容返回给客户端应用程序。  
   
  缓存策略是基于位置或基于时间的。 基于位置的缓存策略根据可从中获取已请求资源的位置定义缓存条目的新鲜度。 基于时间的缓存策略使用检索资源的时间、随资源返回的标头和当前时间来定义缓存条目的新鲜度。 大多数应用程序可以使用基于默认时间的缓存策略，这可在 [Internet 工程任务组 (IETF)](https://www.ietf.org/) 网站上实现 RFC 2616 中指定的缓存策略。  

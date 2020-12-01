@@ -3,17 +3,19 @@ title: 缓解：路径规范化
 description: 了解 .NET Framework 中的路径规范化自面向 .NET Framework 4.6.2 的应用起有何变化。
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 89dcc46d9f266ffd3635dc0cc02b634720356eda
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6f7e07690ab06fc7ef03344556c045405a63c374
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475211"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253591"
 ---
 # <a name="mitigation-path-normalization"></a>缓解：路径规范化
+
 自面向 .NET Framework 4.6.2 的应用起，.NET Framework 中的路径规范化已更改。  
   
 ## <a name="what-is-path-normalization"></a>什么是路径规范化？  
+
  路径规范化涉及修改用于标识路径或文件的字符串，使其与目标操作系统上的有效路径一致。 路径规范化通常涉及以下操作：  
   
 - 规范化处理组件和目录分隔符。  
@@ -25,6 +27,7 @@ ms.locfileid: "86475211"
 - 删减指定字符。  
   
 ## <a name="the-changes"></a>更改  
+
  自面向 .NET Framework 4.6.2 的应用起，路径规范化在以下几个方面进行了更改：  
   
 - 运行时在规范化处理路径时以操作系统的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 函数为准。  
@@ -44,6 +47,7 @@ ms.locfileid: "86475211"
 定目标到 .NET Framework 4.6.1 及更低版本、但在 .NET Framework 4.6.2 或更高版本控制下运行的应用不受此更改影响。  
   
 ## <a name="mitigation"></a>缓解  
+
  对于面向 .NET Framework 4.6.2 或更高版本的应用，可通过将以下内容添加到应用程序配置文件的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 部分，选择弃用此更改而使用旧版规范化：  
   
 ```xml  

@@ -6,16 +6,19 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-ms.openlocfilehash: 9e9fef2af56ca278b0e326c15546ca9f849a3253
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b42646b60fab91fe761a8fdef59d67be6ffa884b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622765"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242040"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
+
 本部分 .NET Framework 文档所提供的信息适用于安装应用程序的同时想一并安装 .NET Framework 的开发人员，以及想在网络中部署 .NET Framework 的管理员。 本文还讨论与部署相关的激活和重启问题，并介绍如何监视 .NET Framework 安装的进度。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [面向开发人员的部署指南](deployment-guide-for-developers.md)  
  说明开发人员如何在其计算机的应用程序中安装 .NET Framework。  
   

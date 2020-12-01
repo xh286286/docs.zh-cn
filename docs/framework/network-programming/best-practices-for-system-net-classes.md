@@ -11,14 +11,15 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 583fa5e57c7c4d60252dddfd425596e7acad7c0d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 170e8cfe0a7d7c911122dafe18b8a5081ceb3d2d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502673"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250770"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 类的最佳实践
+
 以下建议有助于你充分利用 <xref:System.Net> 中包含的类：  
   
 - 对于传输层安全性 (TLS) 最佳做法，请参阅 [.NET Framework 中的传输层安全性 (TLS) 最佳做法](tls.md)。

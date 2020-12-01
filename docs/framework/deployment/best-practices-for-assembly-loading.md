@@ -13,14 +13,15 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 11ac4277081392b1e7ac79147f621ff67d699fe5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9e09c9e43a4bd8b13712d5fbbf85830394ac0b58
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555297"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236437"
 ---
 # <a name="best-practices-for-assembly-loading"></a>适用于程序集加载的最佳做法
+
 本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。 本文讨论以下建议：  
   
 - [了解加载上下文的优点和缺点](#load_contexts)  
@@ -36,7 +37,9 @@ ms.locfileid: "90555297"
  第一个建议（即[了解加载上下文的优点和缺点](#load_contexts)）为其他建议提供了背景信息，因为这些建议都依赖于对加载上下文的了解。  
   
 <a name="load_contexts"></a>
+
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>了解加载上下文的优点和缺点  
+
  在应用程序域中，可以将程序集加载到以下三个上下文之一中，也可以在没有上下文的情况下加载它们：  
   
 - 默认加载上下文包含通过探测全局程序集缓存找到的程序集、（如果托管了运行时）主机程序集存储区（例如在 SQL Server 中）以及应用程序域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>。 <xref:System.Reflection.Assembly.Load%2A> 方法的大多数重载都将程序集加载到此上下文中。  
@@ -50,6 +53,7 @@ ms.locfileid: "90555297"
  以下各节将讨论执行上下文的优点和缺点。  
   
 ### <a name="default-load-context"></a>默认加载上下文  
+
  将程序集加载到默认加载上下文中时，会自动加载其依赖项。 将自动为默认加载上下文或加载位置上下文中的程序集查找加载到默认加载上下文中的依赖项。 按程序集标识进行加载可确保不使用未知版本的程序集，从而提高应用程序的稳定性（请参阅[避免对部分程序集名称进行绑定](#avoid_partial_names)一节）。  
   
  使用默认加载上下文具有以下缺点：  
@@ -59,6 +63,7 @@ ms.locfileid: "90555297"
 - 不能将位于探测路径外部位置的程序集加载到默认加载上下文中。  
   
 ### <a name="load-from-context"></a>加载位置上下文  
+
  利用加载位置上下文，可从不在应用程序路径下（因此不包含在探测路径中）的某个路径加载程序集。 加载位置上下文允许从该路径查找和加载依赖项，因为路径信息由上下文维护。 另外，此上下文中的程序集可以使用加载到默认加载上下文中的依赖项。  
   
  使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法或其他按路径加载的方法之一加载程序集具有以下缺点：  
@@ -78,6 +83,7 @@ ms.locfileid: "90555297"
 - 该策略不适用于 1.0 和 1.1 版本的 .NET Framework。  
   
 ### <a name="no-context"></a>无上下文  
+
  使用反射发出生成的瞬态程序集只能选择在没有下文的情况下进行加载。 在没有上下文的情况下进行加载是将具有同一标识的多个程序集加载到一个应用程序域中的唯一方式。 这将省去探测成本。  
   
  从字节数组加载的程序集都是在没有上下文的情况下加载的，除非程序集的标识（在应用策略后建立）与全局程序集缓存中的程序集标识匹配；在此情况下，将会从全局程序集缓存加载程序集。  
@@ -97,7 +103,9 @@ ms.locfileid: "90555297"
 - 该策略不适用于 1.0 和 1.1 版本的 .NET Framework。  
   
 <a name="avoid_partial_names"></a>
+
 ## <a name="avoid-binding-on-partial-assembly-names"></a>避免对部分程序集名称进行绑定  
+
  加载程序集时，如果仅指定程序集显示名称的一部分 (<xref:System.Reflection.Assembly.FullName%2A>)，则会发生部分名称绑定。 例如，可能会在调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法时仅使用程序集的简单名称，而忽略版本、区域性和公钥标记。 也可能会调用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法，该方法首先调用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，再搜索全局程序集缓存（如果未能找到程序集）并加载程序集的最新可用版本。  
   
  部分名称绑定会导致出现许多问题，其中包括：  
@@ -117,7 +125,9 @@ ms.locfileid: "90555297"
  如果希望使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法（因为此方法使程序集加载变得很轻松），请考虑在应用程序失败时提供用于标识缺失的程序集的错误消息，与自动使用程序集的未知版本（可能会导致不可预知的行为和安全漏洞）相比，这样做可能能够提供更好的用户体验。  
   
 <a name="avoid_loading_into_multiple_contexts"></a>
+
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>避免将一个程序集加载到多个上下文中  
+
  将一个程序集加载到多个上下文中会导致出现类型标识问题。 将同一个程序集中的相同类型加载到两个不同的上下文中，就像是加载具有相同名称的两个不同的类型一样。 如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。  
   
  例如，假设在一个名为 `Utility` 的程序集中声明 `ICommunicate` 接口，该接口由程序及其加载的其他程序集引用。 这些其他程序集包含实现 `ICommunicate` 接口的类型，并允许程序使用它们。  
@@ -133,7 +143,9 @@ ms.locfileid: "90555297"
  [考虑切换到默认加载上下文](#switch_to_default)一节讨论了针对使用文件路径加载（例如 <xref:System.Reflection.Assembly.LoadFile%2A> 和 <xref:System.Reflection.Assembly.LoadFrom%2A>）的替代方法。  
   
 <a name="avoid_loading_multiple_versions"></a>
+
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>避免将一个程序集的多个版本加载到同一上下文中  
+
  将一个程序集的多个版本加载到一个加载上下文中会导致出现类型标识问题。 从同一个程序集的两个版本加载同一个类型，就像是加载了具有相同名称的两个不同类型一样。 如果尝试将一个类型强制转换为另一个类型，则将引发 <xref:System.InvalidCastException>，并显示一条令人混淆的消息，指示不能将类型 `MyType` 强制转换为类型 `MyType`。  
   
  例如，程序可能会直接加载 `Utility` 程序集的一个版本，稍后它可能会加载另一个程序集，而该程序集将加载 `Utility` 程序集的一个不同的版本。 或者，编码错误可能会导致应用程序中两个不同的代码路径加载一个程序集的不同版本。  
@@ -147,18 +159,23 @@ ms.locfileid: "90555297"
  请认真检查代码，确保仅加载程序集的一个版本。 可以使用 <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> 方法确定在任何给定时间加载的程序集。  
   
 <a name="switch_to_default"></a>
+
 ## <a name="consider-switching-to-the-default-load-context"></a>考虑切换到默认加载上下文  
+
  检查应用程序的程序集加载和部署模式。 是否能够消除从字节数组加载的程序集？ 是否能够将程序集移动到探测路径中？ 如果程序集位于全局程序集缓存中或应用程序域的探测路径（即 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>）中，则可以按照程序集的标识来加载程序集。  
   
  如果无法将所有程序集放入探测路径中，请考虑替代方式，例如使用 .NET Framework 外接程序模型，将程序集放置到全局程序集缓存中或创建应用程序域。  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>考虑使用 .NET Framework 外接程序模型  
+
  如果使用加载位置上下文来实现外接程序（它们通常未安装在应用程序基中），请使用 .NET Framework 外接程序模型。 此模型提供应用程序域或进程级别的隔离，无需自行管理应用程序域。 有关外接程序模型的信息，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v=vs.100))。  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>考虑使用全局程序集缓存  
+
  将程序集置于全局程序集缓存中，不但可以获得位于应用程序基外部的共享程序集路径的好处，而且不会丧失默认加载上下文的优点，也不会承袭其他上下文的缺点。  
   
 ### <a name="consider-using-application-domains"></a>考虑使用应用程序域  
+
  如果确定无法在应用程序的探测路径中部署某些程序集，请考虑为这些程序集创建新的应用程序域。 使用 <xref:System.AppDomainSetup> 可创建新的应用程序域，而使用 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 属性可指定包含要加载的程序集的路径。 如果要探测多个目录，则可以将 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置为根目录，并使用 <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=nameWithType> 属性标识要探测的子目录。 或者，可以创建多个应用程序域，并将每个应用程序域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 设置为其程序集的相应路径。  
   
  请注意，可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法加载这些程序集。 由于这些程序集此时位于探测路径中，因此会将它们加载到默认加载上下文（而非加载位置上下文）中。 不过，建议切换到 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法并提供完整的程序集显示名称，从而确保始终使用正确的版本。  

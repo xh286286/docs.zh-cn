@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: bb264e406c6604c3606e564d99018eda0f9e8d89
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721346"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032035"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>报告版本的 API 现报告的是产品版本而不是文件版本
 

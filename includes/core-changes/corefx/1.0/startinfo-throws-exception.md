@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 92c03328414410d56a2ff5f445639757367b42c7
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420418"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031969"
 ---
 ### <a name="processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start"></a>Process.StartInfo 对未启动的进程引发 InvalidOperationException
 

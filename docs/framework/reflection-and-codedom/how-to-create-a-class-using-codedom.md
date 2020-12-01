@@ -12,14 +12,15 @@ helpviewer_keywords:
 - CodeDOM, creating classes
 - CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
-ms.openlocfilehash: 3d7151d384402dba6fbb5da8fe54621346251f7b
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7c2cda2bb7cbdb93c27aef91c08f7c7227da7eed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865302"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235696"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 创建类
+
 以下过程说明如何创建和编译 CodeDOM 图，此图会生成包含以下各项的类：两个字段、三个属性、一个方法、一个构造函数和一个入口点。  
   
 1. 创建将使用 CodeDOM 代码生成类的源代码的控制台应用程序。  
@@ -94,6 +95,7 @@ ms.locfileid: "86865302"
 2. 编译并执行生成类。  
   
 ## <a name="example"></a>示例  
+
  以下代码示例显示了上述步骤中的代码。  
   
  [!code-csharp[CodeDOM Class Sample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#1)]

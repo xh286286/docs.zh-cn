@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8c8e87c885c99d28aa9a7a5d5a2b48c80d40d7db
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721580"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032042"
 ---
 ### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>ZipArchiveEntry 不再处理具有不一致条目大小的存档
 

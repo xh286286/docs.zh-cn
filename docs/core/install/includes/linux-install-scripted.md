@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 07dd58c314c826c426193b829ea1f64669fb888b
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 540eebd957ce8ce0928db2bd8317cb220cba30bb
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594563"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031746"
 ---
 
 [dotnet-install 脚本](../../tools/dotnet-install-script.md)用于 **SDK** 和 **运行时** 的自动化和非管理员安装。 可通过 <https://dot.net/v1/dotnet-install.sh> 下载脚本。
 
-此脚本默认安装最新的 SDK [长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET 3.1。 若要安装当前版本（可能不是 (LTS) 版本），请使用 `-c Current` 参数。
+此脚本默认安装最新的 SDK [长期支持 (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，即 .NET Core 3.1。 若要安装当前版本（可能不是 (LTS) 版本），请使用 `-c Current` 参数。
 
 ```bash
 ./dotnet-install.sh -c Current

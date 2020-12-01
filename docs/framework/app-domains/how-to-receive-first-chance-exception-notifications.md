@@ -9,14 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 0b3150a52a68e078d1052a9894bb652ad35027d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104739"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242560"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一机会异常通知
+
 通过 <xref:System.AppDomain> 类的 <xref:System.AppDomain.FirstChanceException> 事件，可在公共语言运行时开始搜索异常处理程序之前，收到已引发异常的通知。
 
  该事件在应用程序域级别引发。 由于执行线程可能经过多个应用程序域，因此可在一个应用程序域中处理另一个应用程序域中未处理的异常。 已添加该事件的处理程序的每个应用程序域中均会出现通知，直到某个应用程序域处理该异常。
@@ -26,6 +27,7 @@ ms.locfileid: "85104739"
  有关跨多个应用程序域的更复杂示例，请参阅 <xref:System.AppDomain.FirstChanceException> 事件的示例。
 
 ## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>在默认应用程序域中接收最可能发生的异常通知
+
  在以下过程中，应用程序的入口点（`Main()` 方法）在默认应用程序域中运行。
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>在默认应用程序域中演示最可能发生的异常通知
@@ -51,6 +53,7 @@ ms.locfileid: "85104739"
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]
 
 ## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>在另一个应用程序域中接收最可能发生的异常通知
+
  如果程序包含多个应用程序域，则可选择用于接收通知的应用程序域。
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>在创建的应用程序域中接收最可能发生的异常通知
@@ -85,6 +88,7 @@ ms.locfileid: "85104739"
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>示例
+
  下例创建一个名为 `AD1` 的应用程序域，并向该应用程序域的 <xref:System.AppDomain.FirstChanceException> 事件添加一个事件处理程序。 此示例还会在应用程序域中创建 `Worker` 类的一个实例，并调用名为 `Thrower` 的方法，该方法将引发 <xref:System.ArgumentException>。 该方法可能会捕获异常，也可能无法处理异常，具体取决于其参数的值。
 
  每当 `Thrower` 方法在 `AD1` 中引发异常时，`AD1` 中就会引发 <xref:System.AppDomain.FirstChanceException> 事件，并且事件处理程序会显示一条消息。 然后，运行时将查找异常处理程序。 在第一种情况下，可在 `AD1` 中找到异常处理程序。 在第二种情况下，不会在 `AD1` 中处理异常，而是在默认应用程序域中捕获异常。

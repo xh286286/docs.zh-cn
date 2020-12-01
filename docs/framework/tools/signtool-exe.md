@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: ff330691483b56740ee72e280c1471af4282c638
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282245"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238465"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
+
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
@@ -55,7 +56,9 @@ signtool [command] [options] [file_name | ...]
 |**/debug**|显示调试信息。|  
   
 <a name="catdb"></a>
+
 ## <a name="catdb-command-options"></a>catdb 命令选项  
+
  下表列出了可与 `catdb` 命令一起使用的选项。  
   
 |Catdb 选项|描述|  
@@ -66,7 +69,9 @@ signtool [command] [options] [file_name | ...]
 |`/u`|指定自动为添加的目录文件生成唯一名称。 如有必要，重命名目录文件以阻止与现有目录文件发生名称冲突。 如果未指定该选项，签名工具将覆盖与所添加的目录同名的任何现有目录。|  
   
 <a name="sign"></a>
+
 ## <a name="sign-command-options"></a>sign 命令选项  
+
  下表列出了可与 `sign` 命令一起使用的选项。  
   
 |Sign 命令选项|描述|  
@@ -103,7 +108,9 @@ signtool [command] [options] [file_name | ...]
  有关用法示例，请参阅 [Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)（使用 SignTool 为文件签名）。  
   
 <a name="TimeStamp"></a>
+
 ## <a name="timestamp-command-options"></a>TimeStamp 命令选项  
+
  下表列出了可与 `TimeStamp` 命令一起使用的选项。  
   
 |TimeStamp 选项|描述|  
@@ -117,6 +124,7 @@ signtool [command] [options] [file_name | ...]
  有关使用示例，请参阅 [Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)（向之前已签名的文件添加时间戳）。  
   
 <a name="Verify"></a>
+
 ## <a name="verify-command-options"></a>Verify 命令选项  
   
 |Verify 选项|描述|  
@@ -143,6 +151,7 @@ signtool [command] [options] [file_name | ...]
  有关用法示例，请参阅 [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)（使用 SignTool 验证文件签名）。  
   
 ## <a name="return-value"></a>返回值  
+
  当其终止时，签名工具将返回下列退出代码之一。  
   
 |退出代码|说明|  
@@ -152,6 +161,7 @@ signtool [command] [options] [file_name | ...]
 |2|执行完成，但出现警告。|  
 
 ## <a name="examples"></a>示例  
+
  以下命令将目录文件 MyCatalogFileName.cat 添加到系统组件和驱动程序数据库中。 如有必要阻止替换名为 `/u` 的现有目录文件，`MyCatalogFileName.cat` 选项会生成唯一名称。  
   
 ```console  

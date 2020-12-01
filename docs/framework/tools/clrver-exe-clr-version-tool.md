@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: e914034819418df00438c454e209e6c86779ba3c
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3a7a585d990051553aa8fdc0e99b2dc206273cf4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247221"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe（CLR 版本工具）
+
 CLR 版本工具 (Clrver.exe) 报告计算机上的公共语言运行时 (CLR) 的所有已安装版本。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
@@ -35,6 +36,7 @@ clrver [option]
 |`-?`|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
+
  如果你未使用任何选项调用 Clrver.exe，则它将显示所有已安装的 CLR 版本。 如果你指定了另一个用户的 PID，则你必须具有管理权限才能获取版本信息。  
   
 > [!NOTE]
@@ -43,6 +45,7 @@ clrver [option]
  尝试确定 SYSTEM、LOCAL SERVICE 和 NETWORK SERVICE 过程的 CLR 版本会导致出现一条消息，指示该 PID 不存在。  
   
 ## <a name="examples"></a>示例  
+
  以下命令显示在计算机上安装的 CLR 的所有版本。  
   
  `clrver`  

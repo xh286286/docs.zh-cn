@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 0c88d40e34d2d6458bb463a09d716dea42b711fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901991"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032260"
 ---
 ### <a name="authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters"></a>授权：从 AuthorizationFilterContext.Filters 中删除 IAllowAnonymous
 

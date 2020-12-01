@@ -15,17 +15,19 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-ms.openlocfilehash: eff020ebb1de40f83582bbf872339c7652d1d4b1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3a8b783cf2cce93cb26b11823d9f565961376ca3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830696"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734590"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>如何：在独立存储中读取和写入文件
+
 若要读取或写入独立存储区的文件，请使用包含流读取器（<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 对象）或流编写器（<xref:System.IO.StreamReader> 对象）的 <xref:System.IO.StreamWriter> 对象。  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例获取独立存储区，并检查存储区中是否存在 TestStore.txt 文件。 如果不存在，则创建该文件并将“Hello Isolated Storage”写入该文件。 如果 TestStore.txt 已存在，则示例代码会读取该文件。  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]

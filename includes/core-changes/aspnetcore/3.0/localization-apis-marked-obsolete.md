@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d70a8d2a3031a5b3d47ab3fb7f40193dce6e311e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728341"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032288"
 ---
 ### <a name="localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete"></a>本地化：ResourceManagerWithCultureStringLocalizer 和 WithCulture 被标记为过时
 

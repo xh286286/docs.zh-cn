@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: 478c04a45c7f9d3ad568a6bc4a12a89fe786583a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: c859aa4e2e3ae95c5c72aed930a9bc4a05add296
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325624"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238582"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 
@@ -55,6 +55,7 @@ peverify filename [options]
 |**/?**|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
+
  公共语言运行时依赖应用程序代码的类型安全执行，以帮助强制实施安全性和隔离机制。 通常情况下，虽然可以设置安全策略以允许执行受信任但不可验证的代码，但无法运行不是[可验证类型安全](../../standard/security/key-security-concepts.md#type-safety-and-security)的代码。  
   
  如果既未指定 /md 选项也未指定 /il 选项，则 Peverify.exe 将执行两种类型的检查 。 Peverify.exe 首先执行 /md 检查。 如果没有错误，则执行 /il 检查。 如果同时指定了 /md 和 /il，则即使元数据中存在错误，也执行 /il 检查  。 因此，如果没有元数据错误，则 peverify filename 等效于 peverify filename /md /il 。  
@@ -64,6 +65,7 @@ peverify filename [options]
 .NET Framework 2.0 版或更高版本支持使用如下 MSIL 指令指定的可验证 `byref` 返回值：`dup`、`ldsflda`、`ldflda`、`ldelema`、`call` 和 `unbox`。  
   
 ## <a name="examples"></a>示例  
+
  下面的命令为在 `myAssembly.exe` 程序集中实现的方法执行元数据验证检查和 MSIL 类型安全验证检查。  
   
 ```console  

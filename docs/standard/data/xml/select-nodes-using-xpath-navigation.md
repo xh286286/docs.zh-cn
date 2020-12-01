@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b6b68d9351431acc6d9ef20276f51ac4d667d325
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829240"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734681"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>使用 XPath 导航选择节点
+
 XML 文档对象模型 (DOM) 包含的方法使您可以使用 XML 路径语言 (XPath) 浏览功能查询 DOM 中的信息。 可以使用 XPath 查找单个特定节点，或查找与某个条件匹配的所有节点。  
   
 ## <a name="xpath-select-methods"></a>XPath 选择方法  
+
  DOM 类提供两种 XPath 选择方法：<xref:System.Xml.XmlNode.SelectSingleNode%2A> 方法和 <xref:System.Xml.XmlNode.SelectNodes%2A> 方法。 <xref:System.Xml.XmlNode.SelectSingleNode%2A> 方法返回符合选择条件的第一个节点。 <xref:System.Xml.XmlNode.SelectNodes%2A> 方法返回包含匹配节点的 <xref:System.Xml.XmlNodeList>。  
   
  下面的示例使用 <xref:System.Xml.XmlNode.SelectSingleNode%2A> 方法来选择其作者姓氏符合指定条件的第一个 `book` 节点。 bookstore.xml 文件（在本主题末尾提供）用作输入文件。  
@@ -122,12 +124,14 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > 修改基础文档时，最好重新运行此 Select 语句。 如果修改的节点可能导致该节点被添加到节点列表（当先前没有添加它时），或者现在会导致它从节点列表中被移除，则无法保证节点列表现在是精确的。  
   
 ## <a name="namespaces-in-xpath-expressions"></a>XPath 表达式中的命名空间  
+
  XPath 表达式可以包含命名空间。 使用 <xref:System.Xml.XmlNamespaceManager> 支持命名空间解析。 如果 XPath 表达式包含前缀，前缀和命名空间 URI 对必须添加到 <xref:System.Xml.XmlNamespaceManager>，并且 <xref:System.Xml.XmlNamespaceManager> 传递给 <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> 或 <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> 方法。 请注意，上面的代码示例使用 <xref:System.Xml.XmlNamespaceManager> 来解析 bookstore.xml 文档的命名空间。  
   
 > [!NOTE]
 > 如果 XPath 表达式不包含前缀，则假定命名空间统一资源标识符 (URI) 是空的命名空间。 如果 XML 包含默认命名空间，仍必须将前缀和命名空间 URI 添加到 <xref:System.Xml.XmlNamespaceManager>；否则，不会选择任何节点。  
   
 #### <a name="input-file"></a>输入文件  
+
  下面的 bookstore.xml 文件在本主题的示例中用作输入文件。  
   
 ```xml  

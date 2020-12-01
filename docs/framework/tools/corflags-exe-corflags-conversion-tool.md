@@ -7,14 +7,15 @@ helpviewer_keywords:
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-ms.openlocfilehash: da5efadd63cc03f6f6e4eecf3115865ca3643b39
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3f9f2a71a7a33de13264ce60fa7ff6ea5832aace
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247182"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe（CorFlags 转换工具）
+
 利用 CorFlags 转换工具，你配置可移植可执行映像标头的 CorFlags 部分。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
@@ -49,6 +50,7 @@ CorFlags.exe assembly [options]
 |`-UpgradeCLRHeader`|将 CLR 标头版本升级到 2.5。 **注意：** 程序集必须具有 2.5 版或更高版本的 CLR 标头才能在本机运行。|  
   
 ## <a name="remarks"></a>备注  
+
  如果未指定任何选项，则 CorFlags 转换工具将显示指定程序集的标志。  
   
 ## <a name="see-also"></a>请参阅

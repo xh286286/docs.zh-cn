@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70343851ba73af9041014e8654f5df82d8389c39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831177"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734772"
 ---
 # <a name="garbage-collection-notifications"></a>垃圾回收通知
+
 在有些情况下，公共语言运行时执行的完整垃圾回收（即第 2 代回收）可能会对性能产生负面影响。 特别是，处理大量请求的服务器可能会出现此问题；在这种情况下，长时间垃圾回收会导致请求超时。为了防止在关键时期发生完全回收，可以接收即将执行完全垃圾回收的通知，再采取措施将工作负载重定向到另一个服务器实例。 也可以自行诱导回收，前提是当前服务器实例不需要处理请求。  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法注册为，在运行时检测到即将执行完全垃圾回收时发出通知。 此通知分为两个部分：完全垃圾回收何时即将执行，以及完全垃圾回收何时完成。  
@@ -32,6 +33,7 @@ ms.locfileid: "94831177"
  <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法要配合使用。 使用一个方法，而不使用另一个方法，可能会生成不确定的结果。  
   
 ## <a name="full-garbage-collection"></a>完全垃圾回收  
+
  如果发生下列任一情况，运行时就会执行完全垃圾回收：  
   
 - 足够多的内存已提升到第 2 代，导致执行下一个第 2 代回收。  
@@ -49,6 +51,7 @@ ms.locfileid: "94831177"
  第三种情况也加剧了通知接收时间的不确定性。 可以在此期间重定向请求，或在可以更好适应时自行诱导回收，从而减轻不合时宜的完全垃圾回收造成的影响。尽管并不保证有效，但确实证明这是非常实用的方法。  
   
 ## <a name="notification-threshold-parameters"></a>通知阈值参数  
+
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法包含两个参数，用于指定第 2 代对象和大型对象堆的阈值。 如果达到这些值，就应发出垃圾回收通知。 下表介绍了这些参数。  
   
 |参数|描述|  
@@ -63,6 +66,7 @@ ms.locfileid: "94831177"
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
+
  在下面的示例中，一组服务器处理传入的 Web 请求。 为了模拟处理请求的工作负载，将字节数组添加到 <xref:System.Collections.Generic.List%601> 集合中。 每个服务器都会注册获取垃圾回收通知，再对 `WaitForFullGCProc` 用户方法启动线程，以持续监视 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法返回的 <xref:System.GCNotificationStatus> 枚举。  
   
  在通知发出时，<xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法调用它们各自的事件处理用户方法：  

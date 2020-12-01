@@ -16,14 +16,15 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 0b6de67772bae397373e307ec02ce69a71b0542e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4249948579384ec0159ba61072126944596c8f56
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502309"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242209"
 ---
 # <a name="listening-with-sockets"></a>使用套接字侦听
+
 侦听器或服务器套接字打开网络上的端口，然后等待客户端连接到该端口。 虽然存在其他网络地址系列和协议，但本示例演示如何创建 TCP/IP 网络的远程服务。  
   
  通过将主机的 IP 地址与服务的端口号组合来定义 TCP/IP 服务的唯一地址，以创建该服务的终结点。 <xref:System.Net.Dns> 类提供了返回有关本地网络设备支持的网络地址信息的方法。 如果本地网络设备有多个网络地址或本地系统支持多个网络设备，该 Dns 类将返回所有网络地址信息，并且应用程序必须为此服务选择正确的地址。 Internet 编号分配机构 (IANA) 定义公共服务的端口号；有关详细信息，请参阅 [服务名称和传输协议端口号注册表](https://www.iana.org/assignments/port-numbers)。 其他服务可具有 1,024 到 65,535 范围内的注册端口号。  

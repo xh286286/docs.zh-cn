@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: dc0da9842df7b0a827293c42d80ccdd418a043b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4a179bff7ec7988c5b7410fa99eab346d4add1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734824"
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
 
@@ -31,6 +31,7 @@ ms.locfileid: "94819196"
      非持久化文件是不与磁盘上的文件相关联的内存映射文件。 当最后一个进程处理完文件时，数据会丢失，且文件被垃圾回收器回收。 此类文件适合创建共享内存，以进行进程内通信 (IPC)。  
   
 ## <a name="processes-views-and-managing-memory"></a>进程、视图和管理内存  
+
  可以跨多个进程共享内存映射文件。 进程可以映射到相同的内存映射文件，只需使用文件创建进程分配的通用名称即可。  
   
  必须创建整个或部分内存映射文件的视图，才能使用内存映射文件。 还可以为内存映射文件的同一部分创建多个视图，从而创建并发内存。 若要让两个视图一直处于并发状态，必须通过同一个内存映射文件创建它们。  
@@ -48,6 +49,7 @@ ms.locfileid: "94819196"
  ![显示内存映射文件的视图的屏幕截图。](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>使用内存映射文件编程  
+
  下表列出了与使用内存映射文件对象及其成员相关的指南。  
   
 |任务|要使用的方法或属性|  
@@ -61,6 +63,7 @@ ms.locfileid: "94819196"
 |将内存分配一直延迟到视图创建完成（仅限非持久化文件）。<br /><br /> （若要确定当前系统页面大小，请使用 <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> 属性。）|值为 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> 的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 方法。<br /><br /> - 或 -<br /><br /> 将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> 枚举用作参数的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法。|  
   
 ### <a name="security"></a>安全性  
+
  可以在创建内存映射文件时应用访问权限，具体操作是运行以下需要将 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 枚举用作参数的方法：  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -78,6 +81,7 @@ ms.locfileid: "94819196"
 ## <a name="examples"></a>示例  
   
 ### <a name="persisted-memory-mapped-files"></a>持久化内存映射文件  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> 方法通过磁盘上的现有文件创建内存映射文件。  
   
  下面的示例为极大文件的一部分创建内存映射视图，并控制其中一部分。  
@@ -93,6 +97,7 @@ ms.locfileid: "94819196"
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>非持久化内存映射文件  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 和 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法创建未映射到磁盘上现有文件的内存映射文件。  
   
  下面的示例包含三个独立进程（控制台应用），以将布尔值写入内存映射文件。 各操作按下面的顺序发生：  

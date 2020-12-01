@@ -11,14 +11,15 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f61ad954215aecfc9380a47de788d36f327ab0b3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281597"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239531"
 ---
 # <a name="registration-free-com-interop"></a>免注册 COM 互操作
+
 免注册 COM 互操作在不使用 Windows 注册表来存储程序集信息的情况下激活组件。 不是在部署过程中在计算机上注册组件，而是在设计时创建包含有关绑定和激活信息的 Win32 样式清单文件。 正是这些清单文件（而不是注册表项）指导对象的激活。  
   
  不在部署期间注册程序集而使用免注册激活具有两大优势：  

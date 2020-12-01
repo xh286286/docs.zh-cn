@@ -11,14 +11,15 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 8f10dab9b395640e46cb9bf3ca468b8f6bb2bc1b
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517186"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238439"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
+
 强名称工具 (Sn.exe) 有助于使用[强名称](../../standard/assembly/strong-named.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
   
 > [!WARNING]
@@ -79,6 +80,7 @@ sn [-quiet][option [parameter(s)]]
 > 所有 Sn.exe 选项都区分大小写，必须完全按所示的形式键入才能被该工具识别。  
   
 ## <a name="remarks"></a>备注  
+
  -R 和 -Rc 选项对延迟签名的程序集很有用 。 在这种情况下，编译时只设置公钥，并在以后执行签名（当私钥已知时）。  
   
 > [!NOTE]
@@ -87,6 +89,7 @@ sn [-quiet][option [parameter(s)]]
 强名称工具假定使用 `AT_SIGNATURE` 算法标识符生成公钥/私钥对。 使用 `AT_KEYEXCHANGE` 算法生成的公钥/私钥对会生成错误。
 
 ## <a name="examples"></a>示例  
+
  下面的命令创建一个新的随机密钥对，并将其存储在 `keyPair.snk` 中。  
   
 ```console  

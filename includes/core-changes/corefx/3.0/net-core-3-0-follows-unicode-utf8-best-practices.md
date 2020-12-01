@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 298cb441bf9fe7daddb30c85f9d7366dc972628c
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721232"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031980"
 ---
 ### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a>替换格式错误的 UTF-8 字节序列将遵循 Unicode 准则
 

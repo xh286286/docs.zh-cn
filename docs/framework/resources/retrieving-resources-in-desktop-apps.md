@@ -19,19 +19,21 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: cefdfef32928783b23ac0d51be596e48c27bde9a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 26e4367d28193ce731198ee0ba3d3b35d83cf19c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535503"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254540"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>检索桌面应用程序中的资源
 
 使用 .NET Framework 桌面应用中的本地化资源时，最好用主程序集打包默认或非特定区域性的资源，并为应用支持的每种语言或区域性单独创建附属程序集。 可以使用下一节中介绍的 <xref:System.Resources.ResourceManager> 类访问已命名的资源。 如果选择不在主程序集和附属程序集中嵌入资源，也可以按本文后面的 [从 .resources 文件中检索资源](#from_file) 一节中所述直接访问二进制 .resources 文件。  若要检索 Windows 8.x 应用商店应用中的资源，请参阅[在 Windows 应用商店应用中创建和检索资源](/previous-versions/windows/apps/hh694557(v=vs.140))。  
   
 <a name="from_assembly"></a>
+
 ## <a name="retrieving-resources-from-assemblies"></a>从程序集中检索资源  
+
  <xref:System.Resources.ResourceManager> 类提供对运行时资源的访问权限。 使用 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> 方法检索字符串资源和 <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> 或使用 <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> 方法检索非字符串资源。 每个方法都有两种重载：  
   
 - 单一参数是包含资源名称的字符串的重载。 该方法尝试为当前线程区域性检索资源。 有关详细信息，请参阅 <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法。  
@@ -41,6 +43,7 @@ ms.locfileid: "90535503"
  资源管理器使用资源回退进程控制应用检索区域性特定资源的方式。 有关详细信息，请参阅 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)中的“资源回退进程”一节。 有关实例化 <xref:System.Resources.ResourceManager> 对象的详细信息，请参阅 <xref:System.Resources.ResourceManager> 类主题中的“实例化 ResourceManager 对象”一节。  
   
 ### <a name="retrieving-string-data-an-example"></a>检索字符串数据：示例  
+
  下面的示例调用 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法检索当前 UI 区域性的字符串资源。 它包括英语（美国）区域性的非特定字符串资源和法语（法国）和俄语（俄罗斯）区域性的本地化资源。 下面的英语（美国）资源位于名为 Strings.txt 的文件中：  
   
 ```text
@@ -82,6 +85,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  当前 UI 区域性为西班牙语（西班牙）时，请注意该示例会显示英语语言资源，因为西班牙语语言资源不可用，而英语是该示例的默认区域性。  
   
 ### <a name="retrieving-object-data-two-examples"></a>检索对象数据：2 个示例  
+
  可以使用 <xref:System.Resources.ResourceManager.GetObject%2A> 和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法检索对象数据。 这包括基元数据类型、可序列化对象和以二进制格式存储的对象（如图像）。  
   
  下面的示例使用 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法检索应用启动初始窗口中使用的位图。 以下源代码位于名为 CreateResources.cs 的文件中（C# 版本）或位于名为 CreateResources.vb 的文件中（Visual Basic 版本），它能生成包含序列化图像的 .resx 文件。 在这种情况下，图片从一个名为 SplashScreen.jpg 的文件中加载；可以修改文件名以替换你自己的图像。  
@@ -134,6 +138,7 @@ GetObject.exe
 ```  
   
 ## <a name="versioning-support-for-satellite-assemblies"></a>附属程序集的版本控制支持  
+
  默认情况下， <xref:System.Resources.ResourceManager> 对象检索请求的资源时，会寻找版本号与主程序集版本号相匹配的附属程序集。 部署应用后，建议更新主程序集或特定资源附属程序集。 .NET Framework 提供对主程序集和附属程序集的版本控制支持。  
   
  <xref:System.Resources.SatelliteContractVersionAttribute> 属性提供对主程序集的版本控制支持。 在应用的主程序集上指定此属性，无需更新主程序集的附属程序集即可更新和重新部署主程序集。 更新主程序集后，递增主程序集的版本号，但附属协定版本号保持不变。 资源管理器检索请求的资源时，会加载此属性指定的附属程序集版本。  
@@ -145,10 +150,13 @@ GetObject.exe
  有关程序集版本控制的详细信息，请参阅 [程序集版本控制](../../standard/assembly/versioning.md) 和 [运行时如何定位程序集](../deployment/how-the-runtime-locates-assemblies.md)。  
   
 <a name="from_file"></a>
+
 ## <a name="retrieving-resources-from-resources-files"></a>从 .resources 文件中检索资源  
+
  如果选择不在附属程序集中部署资源，你仍可以使用 <xref:System.Resources.ResourceManager> 对象直接访问 .resources 文件中的资源。 要执行此操作，必须正确部署.resources 文件。 然后使用 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> 方法实例化 <xref:System.Resources.ResourceManager> 对象，并指定包含独立 .resources 文件的目录。  
   
 ### <a name="deploying-resources-files"></a>部署 .resources 文件  
+
  将 .resources 文件嵌入应用程序程序集和附属程序集后，每个附属程序集都具有相同的文件名，但被放在反射附属程序集区域性的子目录中。 与此相反，从 .resources 文件直接访问资源时，可以将所有 .resources 文件放在单一目录（通常为应用程序目录的子目录）中。 应用的默认 .resources 文件名称仅包含一个根名称，不带有其区域性的指示（例如 strings.resources）。 每个本地化的区域性资源存储在名称包含根名称，后带有区域性标记所组成的文件中（例如 strings.ja.resources 或 strings.de-DE.resources）。
 
  下图显示资源文件应被放置在目录结构中的何处。 它还提供了.resource 文件的命名约定。  
@@ -156,6 +164,7 @@ GetObject.exe
  ![显示应用程序主目录的插图。](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>使用资源管理器  
+
  创建资源并将其放置在相应的目录中后，通过调用 <xref:System.Resources.ResourceManager> 方法创建 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> 对象以使用资源。 第一个参数指定应用的默认 .resources 文件的根名称（在上一节的示例中为 "strings"）。 第二个参数指定的资源的位置（上一个示例中为 "Resources"）。 第三个参数指定要使用的 <xref:System.Resources.ResourceSet> 实现。 如果第三个参数为 `null`，则使用默认运行时 <xref:System.Resources.ResourceSet> 。  
   
 > [!NOTE]
@@ -164,6 +173,7 @@ GetObject.exe
  实例化 <xref:System.Resources.ResourceManager> 对象后，使用前文所述的 <xref:System.Resources.ResourceManager.GetString%2A>、 <xref:System.Resources.ResourceManager.GetObject%2A>和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法检索资源。 但是，直接从 .resources 文件中检索资源与从程序集中检索嵌入的资源有所不同。 从 .resources 文件中检索资源时， <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法总是忽略当前区域性检索默认区域性的资源。 若要检索应用的当前区域性资源或指定区域性的资源，必须调用 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法并指定要检索资源的区域性。 若要检索当前区域性的资源，请将 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 属性的值指定为 `culture` 参数。 如果资源管理器无法检索 `culture`的资源，则使用标准资源回退规则检索相应的资源。  
   
 ### <a name="an-example"></a>示例  
+
  下面的示例说明资源管理器如何直接从 .resources 文件中检索资源。 此示例由三个基于文本的资源文件组成，区域性分别为英语（美国）、法语（法国）和俄语（俄罗斯）。 英语（美国）为示例的默认区域性。 其资源存储在以下名为 Strings.txt 的文件中：  
   
 ```text

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b3cc04d5675ea63a0a6b967e293da8a1bd79830d
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595672"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031971"
 ---
 ### <a name="uribuilder-properties-no-longer-prepend-leading-characters"></a>UriBuilder 属性不再预置前导字符
 

@@ -2,14 +2,15 @@
 title: 带有扩展保护的集成 Windows 身份验证
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: d69471f4be0f102381dee4fc5037e8f8b0c625c3
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 74f421131da0e5b11fd676ff23229f5ff6ec7eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144846"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241617"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>带有扩展保护的集成 Windows 身份验证
+
 进行了可影响以下类处理集成式 Windows 身份验证的方式的改进：<xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 以及 <xref:System.Net> 和相关命名空间中的相关类。 添加了对扩展保护的支持以增强安全性。  
   
  这些更改会影响使用这些类来发出 Web 请求和接收响应的应用程序，这些应用程序使用集成式 Windows 身份验证。 此更改也会影响配置为使用集成式 Windows 身份验证的 Web 服务器和客户端应用程序。  
@@ -19,6 +20,7 @@ ms.locfileid: "84144846"
  支持扩展保护的更改仅适用于 Windows 7 和 Windows Server 2008 R2 上的应用程序。 扩展保护功能不可用于 Windows 的早期版本。  
   
 ## <a name="overview"></a>概述  
+
  集成式 Windows 身份验证的设计能使某些凭据质询响应变得通用，这意味着可以重新使用或转发这些响应。 质询响应至少应与目标特定的信息一起构造，最好还包含一些通道特定的信息。 然后，服务可提供扩展保护，确保凭据质询响应包含服务主体名称 (SPN) 等服务特定的信息。 凭据交换中含有此信息时，服务就能更好防范恶意使用那些可能已被不当使用的凭据质询响应。  
   
  扩展保护设计是对身份验证协议的增强，旨在减轻身份验证中继攻击。 它围绕通道和服务绑定信息的概念展开。  
@@ -64,6 +66,7 @@ ms.locfileid: "84144846"
  当前 Windows 7 支持扩展保护。 提供了一种机制，所以应用程序可以确定操作系统是否支持扩展保护。  
   
 ## <a name="changes-to-support-extended-protection"></a>对支持扩展保护的更改  
+
  身份验证与集成式 Windows 身份验证一起使用时，其过程通常包括由目标计算机发出质询并将质询发送回客户端计算机，具体取决于使用的身份验证协议。 扩展保护将新功能添加到此身份验证进程  
   
  <xref:System.Security.Authentication.ExtendedProtection> 命名空间对采用应用程序扩展保护的身份验证提供支持。 此命名空间中的 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> 类表示通道绑定。 此命名空间中的 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 类表示服务器用来验证传入客户端连接的扩展保护策略。 其他类成员用于扩展保护。  
@@ -107,6 +110,7 @@ ms.locfileid: "84144846"
  添加了 <xref:System.Net.Configuration.SmtpNetworkElement> 属性以支持在 <xref:System.Net.Security> 命名空间中为 SMTP 客户端配置扩展保护。  
   
 ## <a name="extended-protection-for-client-applications"></a>客户端应用程序的扩展保护  
+
  大多数客户端应用程序的扩展保护支持会自动发生。 只要 Windows 的基础版本支持扩展保护，<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.Mail.SmtpClient> 类就支持扩展保护。 <xref:System.Net.HttpWebRequest> 实例发送从 <xref:System.Uri> 构造的 SPN。 默认情况下，<xref:System.Net.Mail.SmtpClient> 实例发送从 SMTP 邮件服务器的主机名构造的 SPN。  
   
  对于自定义身份验证，客户端应用程序可以使用 <xref:System.Net.HttpWebRequest> 类中的 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> 或 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> 方法，允许使用 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法来检索 <xref:System.Net.TransportContext> 和 CBT。  
@@ -116,6 +120,7 @@ ms.locfileid: "84144846"
  <xref:System.Net.Mail.SmtpClient.TargetName%2A> 属性可用来设置用于 SMTP 连接的集成式 Windows 身份验证的自定义 SPN。  
   
 ## <a name="extended-protection-for-server-applications"></a>服务器应用程序的扩展保护  
+
  <xref:System.Net.HttpListener> 自动提供执行 HTTP 身份验证时验证服务绑定的机制。  
   
  最安全的方案是为 `HTTPS://` 前缀启用扩展保护。 在这种情况下，将 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> 设置为 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>（其中 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 设置为 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 或 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>），并且将 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 设置为 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>。<xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 的值使 <xref:System.Net.HttpListener> 处于部分强化模式，而 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 对应完全强化模式。  

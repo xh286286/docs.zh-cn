@@ -2,17 +2,19 @@
 title: 使用 XPathNavigator 选择、计算和匹配 XML 数据
 ms.date: 03/30/2017
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-ms.openlocfilehash: 249b99a627f3bbcc1723f104a80cb61552404877
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3096582055dc17d5724cebd79e74d2aa24154bcb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822459"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734668"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 选择、计算和匹配 XML 数据
+
 <xref:System.Xml.XPath.XPathNavigator> 类提供的方法可以使用 XPath 查询在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中选择节点，计算和检查 XPath 表达式的结果，并确定 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的节点是否与给定的 XPath 表达式匹配。 这些和其他一些与在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中选择、计算和匹配节点有关的概念在下面的主题中介绍。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [使用 XPathNavigator 选择 XML 数据](select-xml-data-using-xpathnavigator.md)  
  介绍用于使用 XPath 表达式在 <xref:System.Xml.XPath.XPathNavigator> 或 <xref:System.Xml.XPath.XPathDocument> 对象中选择节点集的 <xref:System.Xml.XmlDocument> 类方法集。  
   

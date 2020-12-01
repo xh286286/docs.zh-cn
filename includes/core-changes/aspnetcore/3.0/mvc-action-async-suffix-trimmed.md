@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75902014"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032292"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC：从控制器操作名称中剪裁的异步后缀
 

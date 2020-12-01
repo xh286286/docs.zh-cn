@@ -3,11 +3,11 @@ title: 协调安排微服务和多容器应用程序，实现高可伸缩性和�
 description: 了解如何使用 Azure Kubernetes 服务部署应用。
 ms.date: 08/06/2020
 ms.openlocfilehash: ba9887c0a4837c16a60ebeb006416c0fa8c105e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163591"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032198"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>部署到 Azure Kubernetes 服务 (AKS)
 
@@ -70,7 +70,7 @@ kubectl get nodes
 
 ![来自上述命令的控制台输出：包括状态、时限（运行时间）和版本的节点列表](media/deploy-azure-kubernetes-service/kubectl-get-nodes-command-result.png)
 
-图 4-20****。 `kubectl get nodes` 命令结果。
+图 4-20。 `kubectl get nodes` 命令结果。
 
 > [!div class="step-by-step"]
 > [上一页](orchestrate-high-scalability-availability.md)

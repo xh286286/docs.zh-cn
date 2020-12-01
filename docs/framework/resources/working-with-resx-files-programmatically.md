@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 519ca099b65710b6eb4251e1a9419e965ee69f93
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: c6b1ef6c7dd8be3dbc98b2298ab0e649ff74008e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166156"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254501"
 ---
 # <a name="work-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 
@@ -51,6 +51,7 @@ ms.locfileid: "87166156"
 你无法将 .resx 文件嵌入运行时可执行文件中或将其编译到附属程序集。 必须使用 [资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)将 .resx 文件转换为二进制资源 (.resources) 文件 。 然后可以将生成的 .resources 文件嵌入应用程序集或附属程序集。 有关详细信息，请参阅 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)。
 
 ## <a name="enumerate-resources"></a>枚举资源
+
  在某些情况下，你可能想要从 .resx 文件中检索所有资源，而不是某个特定资源。 若要执行此操作，可以使用 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类，该类为 .resx 文件中的所有资源提供枚举器。 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类将实现 <xref:System.Collections.IDictionaryEnumerator>，并返回 <xref:System.Collections.DictionaryEntry> 对象，该对象代表用于循环的每个迭代的特定资源。 此对象的 <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> 属性返回资源的键， <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> 属性返回资源的值。
 
  下面的示例为前面的示例中创建的 CarResources.resx 文件创建 <xref:System.Resources.ResXResourceReader> 对象，并在整个资源文件中进行迭代。 该示例将资源文件中定义的两个 `Automobile` 对象添加到 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，以及将六个字符串中的五个添加到 <xref:System.Collections.SortedList> 对象。 <xref:System.Collections.SortedList> 对象中的值将转换为一个参数数组，该参数数组用于向控制台显示列标题。 还将向控制台显示 `Automobile` 属性值。
@@ -59,6 +60,7 @@ ms.locfileid: "87166156"
  [!code-vb[Conceptual.Resources.ResX#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/enumerate1.vb#2)]
 
 ## <a name="retrieve-a-specific-resource"></a>检索特定的资源
+
  除了枚举 .resx 文件中的项，你可以使用 <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> 类按名称检索特定资源。 <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType> 方法用于检索命名字符串资源的值。 <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType> 方法用于检索命名对象或二进制数据的值。 该方法返回的对象之后必须转换为（C# 中的 cast 或 Visual Basic 中的 convert）相应类型的对象。
 
  以下示例按资源名称检索窗体的标题字符串和图标， 还检索之前示例中使用的应用程序定义的 `Automobile` 对象，并在 <xref:System.Windows.Forms.DataGridView> 控件中显示这些对象。
@@ -67,6 +69,7 @@ ms.locfileid: "87166156"
  [!code-vb[Conceptual.Resources.ResX#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/retrieve1.vb#3)]
 
 ## <a name="convert-resx-files-to-binary-resources-files"></a>将 .resx 文件转换为二进制 .resources 文件
+
  将 .resx 文件转换为嵌入式二进制资源 (.resources) 文件可以带来明显的好处。 虽然 .resx 文件容易阅读，并且在应用程序开发期间易于维护，但是完成的应用程序很少包含这些文件。 如果这些文件随应用程序分发，那么它们将作为单独文件存在，与应用程序可执行文件和随附的库分开存放。 与此相反，.resources 文件则嵌入应用程序可执行文件或其随附的程序集中。 另外，对于在运行时依赖 .resx 文件的本地化应用程序，开发人员负责处理资源回退。 与此相反，如果创建了一组包含嵌入式 .resources 文件的附属程序集，则公共语言运行时将处理资源回退进程。
 
  要将 .resx 文件转换为 .resources 文件，请使用 [资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，它具有以下基本语法：

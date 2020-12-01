@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74282525"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032272"
 ---
 ### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP：某些 cookie SameSite 默认值更改为“None”
 
