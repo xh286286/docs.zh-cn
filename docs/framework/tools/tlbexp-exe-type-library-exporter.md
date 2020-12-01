@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a9e984e1b81adda572076cb118a25f5f3a045ea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543382"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283752"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
+
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
@@ -56,6 +57,7 @@ tlbexp assemblyName [options]
 > Tlbexp.exe 的命令行选项不区分大小写，并可以按任何顺序提供。 只需指定足够的选项来唯一标识它。 例如，/n 等效于 /nologo，/o: outfile.tlb 等效于 /out: outfile.tlb  。  
   
 ## <a name="remarks"></a>备注  
+
  Tlbexp.exe 生成一个类型库，该类型库包含程序集中定义的类型的定义。 应用程序（如 Visual Basic 6.0）可以使用生成的类型库来绑定到程序集中定义的 .NET 类型。  
   
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
  Microsoft Windows 2000 和更高版本支持类型库导出程序。  
   
 ## <a name="examples"></a>示例  
+
  下面的命令生成一个与 `myTest.dll` 中找到的程序集同名的类型库。  
   
 ```console  

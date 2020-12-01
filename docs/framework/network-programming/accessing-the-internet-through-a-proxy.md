@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 77f46cdcedbeb9b1809621d64f239a6681e82590
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 45d371f80aecf1bed7ecb123a4d478bfcfb99ba7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502738"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287652"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>通过代理访问 Internet
+
 如果网站使用代理提供对 Internet 的访问，则必须配置代理实例，以使应用程序能够与 Web 代理通信。  
   
  本节包括下列主题：  

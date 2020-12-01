@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: c2b23705ae309436344513e54d6258e206d69da4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f5b74674ba4144f75d125267f2458394bb74fab1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551460"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283947"
 ---
 # <a name="internet-protocol-version-6"></a>Internet 协议版本 6
+
 Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件。 IPv6 旨在解决当前版本的 Internet 协议套件（称作 IPv4）存在的许多问题，包括地址消耗、安全性、自动配置和扩展性等问题。 IPv6 扩展了 Internet 的功能以启用新型应用程序，包括对等和移动应用程序。 以下是当前 IPv4 协议的主要问题：  
   
 - 地址空间快速消耗。  
@@ -46,6 +47,7 @@ Internet 协议版本 6 (IPv6) 是 Internet 的网络层的标准协议新套件
  有关详细信息，请参阅 [IPv6 寻址](ipv6-addressing.md)、[IPv6 路由](ipv6-routing.md)、[IPv6 自动配置](ipv6-auto-configuration.md)、[启用和禁用 IPv6](enabling-and-disabling-ipv6.md) 以及[如何：修改计算机配置文件以启用 IPv6 支持](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
 ## <a name="references"></a>reference  
+
  以下是可以在 [Internet 工程任务组 (IETF)](https://www.ietf.org/) 找到的精选 RFC 文档：  
   
 - RFC 1287，面向未来的 Internet 体系结构。  

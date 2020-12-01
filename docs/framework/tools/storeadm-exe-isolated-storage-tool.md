@@ -9,14 +9,15 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 153fc2b4b5a955fd5ed768d1492f053595363e6e
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 974f3c464ff686a486657d08e77c97299cc94732
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517004"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283830"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe（独立存储工具）
+
 独立存储工具列出或移除当前用户的所有现有存储。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
@@ -42,6 +43,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 |**/?**|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
+
  如果从命令行运行 Storeadm.exe 但不指定任何选项，则将显示此工具的语法和选项。  
   
  /list 和 /remove 选项通常一次使用一个；但如果指定了两个或两个以上的选项，则它们将按照在命令行上出现的顺序执行 。  

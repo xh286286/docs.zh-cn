@@ -6,14 +6,15 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81f0eaa33b185c6bfbc8758e73a68a6bfc248872
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048875"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287561"
 ---
 # <a name="cache-management-for-network-applications"></a>网络应用程序的缓存管理
+
 本主题及其相关的副主题描述针对使用 <xref:System.Net.WebClient>、<xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 类获取的资源的缓存。  
   
  缓存为已由应用程序请求的资源提供临时存储。 如果应用程序多次请求同一资源，则可以从此缓存中返回此资源，避免了重复向服务器发出请求的开销。 缓存可以通过减少获取请求的资源所需的时间，以提高应用程序性能。 缓存还可以通过减少对服务器的访问次数，以减少网络流量。 虽然缓存提高了性能，但会增加返回到应用程序的资源已过时的风险，这意味着如果未使用缓存，返回到应用程序的资源则与由服务器发送的资源不同。  
@@ -23,6 +24,7 @@ ms.locfileid: "71048875"
  出于安全考虑，不建议将缓存用于中间层方案  。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [缓存策略](cache-policy.md)  
  说明什么是缓存策略以及如何定义一个缓存策略。  
   
@@ -36,5 +38,6 @@ ms.locfileid: "71048875"
  描述如何以编程方式创建缓存策略以及使用缓存的请求。  
   
 ## <a name="reference"></a>引用  
+
  <xref:System.Net.Cache>  
  定义类型和枚举，这些类型和枚举用于为使用 <xref:System.Net.WebRequest><xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 类获取的资源定义缓存策略。

@@ -18,17 +18,19 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9746b814188a4dc92463399542a6044501d0da12
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502543"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287392"
 ---
 # <a name="how-to-create-a-socket"></a>如何：创建套接字
+
 必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。 <xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。  
   
 ## <a name="example"></a>示例  
+
  下例创建的套接字可用于与基于 TCP/IP 的网络（例如 Internet）进行通信。  
   
 ```csharp  
