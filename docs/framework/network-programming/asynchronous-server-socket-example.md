@@ -10,15 +10,16 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: e30b9694a07d1551163f5d80e7874fe5c7d29050
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 2afcd0cbfc26146c09326057037347cc9f3d7ce7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359047"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287626"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="79af1-104">异步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="79af1-104">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="79af1-105">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="79af1-105">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="79af1-106">该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。</span><span class="sxs-lookup"><span data-stu-id="79af1-106">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="79af1-107">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="79af1-107">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="79af1-108">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="79af1-108">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="fcb63-104">异步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="fcb63-104">Asynchronous Server Socket Example</span></span>
+
+<span data-ttu-id="fcb63-105">以下示例程序创建从客户端接收连接请求的服务器。</span><span class="sxs-lookup"><span data-stu-id="fcb63-105">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="fcb63-106">该服务器是使用异步套接字构建的，因此在等待客户端的连接时，不会挂起服务器应用程序的执行。</span><span class="sxs-lookup"><span data-stu-id="fcb63-106">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="fcb63-107">应用程序从客户端接收字符串，在控制台上显示此字符串，然后将此字符串回显给客户端。</span><span class="sxs-lookup"><span data-stu-id="fcb63-107">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="fcb63-108">来自客户端的字符串必须包含字符串“\<EOF>”以在消息结束时发出信号。</span><span class="sxs-lookup"><span data-stu-id="fcb63-108">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -305,8 +306,8 @@ public class AsynchronousSocketListener
 }
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="79af1-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="79af1-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcb63-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="fcb63-109">See also</span></span>
 
-- [<span data-ttu-id="79af1-110">异步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="79af1-110">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
-- [<span data-ttu-id="79af1-111">使用异步服务器套接字</span><span class="sxs-lookup"><span data-stu-id="79af1-111">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
-- [<span data-ttu-id="79af1-112">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="79af1-112">Socket Code Examples</span></span>](socket-code-examples.md)
+- [<span data-ttu-id="fcb63-110">异步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="fcb63-110">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
+- [<span data-ttu-id="fcb63-111">使用异步服务器套接字</span><span class="sxs-lookup"><span data-stu-id="fcb63-111">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
+- [<span data-ttu-id="fcb63-112">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="fcb63-112">Socket Code Examples</span></span>](socket-code-examples.md)

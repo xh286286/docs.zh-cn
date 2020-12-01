@@ -4,17 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-ms.openlocfilehash: 9e265a97d339da59bb9d0af6ab6757e16af00e06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f5eef7b6ba41f1ac4050fbc9168fafea31b103f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70894957"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287307"
 ---
-# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="f7ceb-102">如何：检测网络可用性和地址更改</span><span class="sxs-lookup"><span data-stu-id="f7ceb-102">How to: Detect Network Availability and Address Changes</span></span>
-<span data-ttu-id="f7ceb-103">此示例演示如何检测接口网络地址中的更改。</span><span class="sxs-lookup"><span data-stu-id="f7ceb-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
+# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="cc3e0-102">如何：检测网络可用性和地址更改</span><span class="sxs-lookup"><span data-stu-id="cc3e0-102">How to: Detect Network Availability and Address Changes</span></span>
+
+<span data-ttu-id="cc3e0-103">此示例演示如何检测接口网络地址中的更改。</span><span class="sxs-lookup"><span data-stu-id="cc3e0-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7ceb-104">示例</span><span class="sxs-lookup"><span data-stu-id="f7ceb-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cc3e0-104">示例</span><span class="sxs-lookup"><span data-stu-id="cc3e0-104">Example</span></span>  
   
 ```csharp
 using System;  
@@ -45,7 +46,8 @@ namespace Examples.Net.AddressChanges
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f7ceb-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="f7ceb-105">Compiling the Code</span></span>  
- <span data-ttu-id="f7ceb-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="f7ceb-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="cc3e0-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="cc3e0-105">Compiling the Code</span></span>  
+
+ <span data-ttu-id="cc3e0-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="cc3e0-106">This example requires:</span></span>  
   
-- <span data-ttu-id="f7ceb-107">引用 System.Net 命名空间  。</span><span class="sxs-lookup"><span data-stu-id="f7ceb-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="cc3e0-107">引用 System.Net 命名空间  。</span><span class="sxs-lookup"><span data-stu-id="cc3e0-107">References to the **System.Net** namespace.</span></span>
