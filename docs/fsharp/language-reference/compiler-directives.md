@@ -4,12 +4,12 @@ description: '了解 F # 语言预处理器指令、条件编译指令、行指�
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ff106339478c3413dc6458b12f12e1d3f9cd1fe5
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557315"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438175"
 ---
 # <a name="compiler-directives"></a>编译器指令
 
@@ -78,7 +78,7 @@ let str = "Debugging!"
 |---------|-----------|
 |`#light` ["on" &#124; "off"]|启用或禁用轻量语法，以便与其他版本的 ML 兼容。 默认情况下，轻量语法处于启用状态。 详细语法始终处于启用状态。 因此，可以同时使用轻量语法和详细语法。 指令 `#light` 本身等效于 `#light "on"`。 如果指定 `#light "off"`，则必须对所有语言构造使用详细语法。 F# 文档中展示的语法基于使用轻量语法这一假设。 有关详细信息，请参阅 [详细语法](verbose-syntax.md)。|
 
-对于解释器 ( # A0) 指令，请参阅 [与 F # 交互编程](../tutorials/fsharp-interactive/index.md)。
+对于解释器 ( # A0) 指令，请参阅 [与 F # 交互编程](../tools/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>另请参阅
 

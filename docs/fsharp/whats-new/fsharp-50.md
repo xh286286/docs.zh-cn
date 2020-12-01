@@ -2,12 +2,12 @@
 title: 'F # 5.0 中的新增功能-F # 指南'
 description: '获取 F # 5.0 中提供的新功能的概述。'
 ms.date: 11/06/2020
-ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098692"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438003"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0 中的新增功能
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-此功能实现 [F # 工具 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)。 有关包引用的详细信息，请参阅 [F# 交互窗口](../tutorials/fsharp-interactive/index.md) 教程。
+此功能实现 [F # 工具 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)。 有关包引用的详细信息，请参阅 [F# 交互窗口](../tools/fsharp-interactive/index.md) 教程。
 
 ## <a name="string-interpolation"></a>字符串内插
 
@@ -272,7 +272,7 @@ m.[*, 0, 1]
 
 ## <a name="f-quotations-improvements"></a>F # 报价改进
 
-F # [代码引用](../language-reference/code-quotations.md) 现在能够保留类型约束信息。 请考虑以下示例：
+F # [代码引用](../language-reference/code-quotations.md) 现在能够保留类型约束信息。 请看下面的示例：
 
 ```fsharp
 open FSharp.Linq.RuntimeHelpers
