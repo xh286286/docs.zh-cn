@@ -18,14 +18,15 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 124dff1b104e323b929d13f73cf17d740e747c32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 00db05c99cf232a31b10bbd0356e6d43d3bc3e28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502283"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282855"
 ---
 # <a name="managing-connections"></a>管理连接
+
 使用 HTTP 连接到数据资源的应用程序可使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 类管理与 Internet 的连接并有助于实现最优规模和最佳性能。  
   
  ServicePoint 类给应用程序提供了终结点，应用程序连接到终结点即可访问 Internet 资源。 每个 ServicePoint 都包含信息，该信息有助于通过共享连接之间的优化信息改进性能，优化与 Internet 服务器的连接。  

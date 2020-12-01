@@ -10,18 +10,21 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: bc95197813f5e4b0f4c7db6a8f0c24e8b27e4c3e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ed8568116d189573a1903678726cb348fa062376
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620867"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282881"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM 互操作示例：.NET 客户端和 COM 服务器
+
 本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。  
   
  在本示例中，客户端将创建并调用 Loan 组件类的一个实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。 本示例中出现的代码片段将贯穿本节。  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
+
 ## <a name="net-client"></a>.NET 客户端  
   
 ```vb  
@@ -152,6 +155,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
+
 ## <a name="com-server"></a>COM 服务器  
   
 ```cpp  

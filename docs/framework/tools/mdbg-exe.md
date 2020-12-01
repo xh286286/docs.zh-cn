@@ -6,14 +6,15 @@ helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-ms.openlocfilehash: 1c663474e5084afa1824f0f6b0740ae03a344e92
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 8953db973e231014284ec6585012edc7f3ea11f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279163"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe（.NET Framework 命令行调试程序）
+
 .NET Framework 命令行调试器可以帮助工具供应商和应用程序开发人员查找并修复面向 .NET Framework 公共语言运行时的程序中的 Bug。 此工具使用运行时调试 API 提供调试服务。 可以使用 MDbg.exe 来仅调试托管代码；不支持调试非托管代码。  
   
 通过 NuGet 可以使用此工具。 有关安装信息，请参阅 [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0)。 若要运行该工具，请使用程序包管理器控制台。 有关如何使用程序包管理器控制台的详细信息，请参阅[程序包管理器控制台](/nuget/tools/package-manager-console)一文。
@@ -27,6 +28,7 @@ MDbg [ProgramName[arguments]] [options]
 ```  
   
 ## <a name="commands"></a>命令  
+
  在调试器中（由 **mdbg>** 提示指示），键入下一节中所述的命令之一：  
   
  **command** [*arguments*]  
@@ -85,6 +87,7 @@ MDbg [ProgramName[arguments]] [options]
 |x [`-c`numSymbols] [module[`!`pattern]]  |显示匹配模块的 `pattern` 的函数。<br /><br /> 如果指定了 numSymbols，则输出将限制为指定数目。 如果未针对 pattern 指定 `!`（指示正则表达式），则会显示所有函数。 如果未提供 module，则显示加载的所有模块。 符号 (~#) 可用于通过 break 命令设置断点。|  
   
 ## <a name="remarks"></a>备注  
+
  使用编译器特定的标志编译要调试的应用程序会使你的编译器生成调试符号。 有关这些标志的详细信息，请参阅编译器的文档。 可以调试优化的应用程序，但某些调试信息将缺失。 例如，许多局部变量将无法看到，并且源代码行也会变得不准确。  
   
  在编译应用程序之后，在命令提示符下键入 mdbg 以启动调试会话，如以下示例所示。  

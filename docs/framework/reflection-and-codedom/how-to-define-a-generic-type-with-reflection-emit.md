@@ -11,14 +11,15 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: bf308b07bf4b2a863b9825e7c8d9f412bdb6d1b8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75076eb9ce1b9bfc6b3c8b5a48e200ca5e63cdff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263459"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反射发出定义泛型类型
+
 此主题说明如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。  
   
 > [!IMPORTANT]
@@ -110,6 +111,7 @@ ms.locfileid: "90559208"
      [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
 ## <a name="example"></a>示例  
+
  以下代码示例定义一个名为 `Sample` 的类，还定义一个基类和两个接口。 该程序可为 `Sample` 定义两个泛型类型参数，使其成为泛型类型。 只有类型参数能使一个类型成为泛型类型。 该程序通过显示定义类型参数前后的测试消息来对此进行演示。  
   
  类型参数 `TSecond` 用于通过基类和接口来演示类和接口约束，类型参数 `TFirst` 用于演示特殊约束。  

@@ -10,11 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1b2ee58ccbd4bdfceb6300c20d5255718982f2e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622622"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272522"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 
@@ -134,11 +135,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 共享组件已更新且使用此组件的所有应用程序都应选取共享组件的新版本时，使用发行者策略文件。 发布服务器策略文件中的设置会重写应用程序配置文件中的设置，除非应用程序配置文件强制实施了安全模式。
 
 #### <a name="safe-mode"></a>安全模式
+
 发布服务器策略文件通常作为服务包或程序更新的一部分显式安装。 如果升级后的共享组件有任何问题，可使用安全模式忽略发布服务器策略文件中的重写。 安全模式由仅位于应用程序配置文件中的 \<publisherPolicy apply="yes**&#124;**no"/> 元素确定。 它指定是否应从绑定进程删除发布服务器策略配置信息。
 
 可针对整个应用程序或所选程序集设置安全模式。 即，可关闭构成应用程序的所有程序集的策略，也可仅打开部分程序集的策略。 若要将发布服务器策略有选择地应用于构成应用程序的程序集，请设置 \<publisherPolicy apply\=no/> 并使用 \<**dependentAssembly**> 元素指定要影响的程序集。 若要将发布服务器策略应用于构成应用程序的所有程序集，请设置 \<publisherPolicy apply\=no/>，且不包含从属程序集元素。 有关配置的详细信息，请参阅 [使用配置文件配置应用](../configure-apps/index.md)。
 
 ### <a name="machine-configuration-file"></a>计算机配置文件
+
 最后，运行时检查计算机配置文件。 此文件名为 Machine.config，驻留在本地计算机上安装有运行时的根目录的配置子目录中。 管理员可使用此文件来指定此计算机本地的程序集绑定限制。 计算机配置文件中的设置优先于所有其他配置设置 ；但是，这并不意味着所有配置设置都应置于此文件中。 管理员策略文件确定的版本为最终版本，且不能重写。 Machine.config 文件中指定的重写可影响所有应用程序。 有关配置文件的详细信息，请参阅 [使用配置文件配置应用](../configure-apps/index.md)。
 
 <a name="step2"></a>

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: a1a43d7ce3fbc678cc9aa047c5110ac8615ea27e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea5d920ccfa8a91c9fdc9d95c6165c8dfb52c6ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554138"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267034"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>如何：映射 HRESULT 和异常
+
 COM 方法通过返回 HRESULT 来报告错误；NET 方法通过引发异常来报告错误。 运行时处理这两者之间的转换。 NET Framework 中的每个异常类都将映射到 HRESULT。  
   
  用户定义的异常类可指定任何适用的 HRESULT。 这些异常类可动态更改通过设置异常对象上的 HResult 字段生成异常时返回的 HRESULT。 异常的其他信息通过 IErrorInfo 接口提供给客户端，这是在非管理进程中的 NET 对象上实现的。  

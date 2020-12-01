@@ -2,14 +2,15 @@
 title: PNRP 云
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60b6fb44116fe2d8af50fb0b310615b3b962977b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263199"
 ---
 # <a name="pnrp-clouds"></a>PNRP 云
+
 PNRP“云”表示通过网络相互通信的一组节点。 术语“云”与“对等网格”和“对等图”同义。  
   
  节点之间的通信绝不能从一个云跨越至另一个云。 <xref:System.Net.PeerToPeer.Cloud> 实例由其名称（区分大小写）唯一标识。 单个对等机或节点可以连接到多个云。  
@@ -25,6 +26,7 @@ PNRP“云”表示通过网络相互通信的一组节点。 术语“云”与
  第三种云是站点特定的云，对应于站点 IPv6 地址范围和站点-本地地址。 这类云已被弃用，尽管它仍受 PNRP 支持。  
   
 ## <a name="clouds"></a>云  
+
  PNRP 云由 <xref:System.Net.PeerToPeer.Cloud> 类的实例表示。 对等机使用的多组云由可枚举的 <xref:System.Net.PeerToPeer.CloudCollection> 类的实例表示。 通过调用静态 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> 方法，可以获取当前对等机已知的 PNRP 云的集合。  
   
  各个云具有唯一的名称，表示为 256 个字符的 Unicode 字符串。 这些名称以及上面提到的范围共同用于构造 Cloud 类的唯一实例。 可以将这些实例进行序列化和重新构造，以便永久使用。  

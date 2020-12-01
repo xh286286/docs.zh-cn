@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-ms.openlocfilehash: 2657d83f39b60be84846fb784a06e71f6dd46179
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4d8ac0316e47925d253e7220597ab9953252521e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609728"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270623"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：调试 Windows 服务应用程序
+
 必须从服务控制管理器的上下文中而不是 Visual Studio 中运行服务。 因此，调试服务不像调试其他 Visual Studio 应用程序类型一样简单。 要调试服务，必须启动该服务，然后将调试器附加到该服务正在其中运行的进程中。 然后你可以使用所有 Visual Studio 的标准调试功能来调试你的应用程序。  
   
 > [!CAUTION]
@@ -69,6 +70,7 @@ ms.locfileid: "91609728"
 11. 访问服务控制管理器并操作你的服务，发送停止、暂停和继续命令以命中你的断点。 有关运行服务控制管理器的详细信息，请参阅[如何：启动服务](how-to-start-services.md)。 请参见[疑难解答：调试 Windows 服务](troubleshooting-debugging-windows-services.md)。  
   
 ## <a name="debugging-tips-for-windows-services"></a>Windows 服务的调试提示  
+
  附加到服务的进程使你可调试该服务的大多数代码，但不是全部。 例如，由于服务已经启动，你无法调试服务的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中的代码或 `Main` 方法中用于在此处加载服务的代码。 避免这种限制的一种方法是在你的仅用于辅助调试的服务应用程序中创建一个临时辅助服务。 你可以安装两个服务，然后启动该虚拟服务来加载服务进程。 临时服务启动进程后，可以使用 Visual Studio 中的  “调试”菜单来附加到服务进程。  
   
  尝试添加对 <xref:System.Threading.Thread.Sleep%2A> 方法的调用延迟操作，直到你能够附加到该进程。  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 371f56c3a57b8e320c9b329c539075a40cd7a19f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258408"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反射
 
@@ -62,6 +62,7 @@ ms.locfileid: "86865276"
 反射还有其它用途。 JScript 等语言的编译器使用反射来构造符号表。 <xref:System.Runtime.Serialization> 命名空间中的类使用反射来访问数据并确定要保存哪些字段。 <xref:System.Runtime.Remoting> 命名空间中的类通过序列化间接使用反射。  
   
 ## <a name="runtime-types-in-reflection"></a>反射中的运行时类型  
+
 反射提供类（如 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo>），用于表示类型、成员、参数和其它代码实体。 但使用反射时，你并不直接使用这些类，其中大部分类均是抽象的（Visual Basic 中为 `MustInherit`）。 相反，你使用由公共语言运行时 (CLR) 提供的类型。  
   
 例如，使用 C# `typeof` 运算符（Visual Basic 中为 `GetType`）获取 <xref:System.Type> 对象时，该对象实际上是 `RuntimeType`。 `RuntimeType` 派生自 <xref:System.Type>，并提供所有抽象方法的实现。  

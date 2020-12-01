@@ -10,14 +10,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 4edf11315892ed8267bee17d69a70033348eca5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517043"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272561"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
+
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 .NET Framework 组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
   
 - 从数据库生成源代码和映射特性或映射文件。  
@@ -40,6 +41,7 @@ sqlmetal [options] [<input file>]
 ```  
   
 ## <a name="options"></a>选项  
+
  要查看最新的选项列表，请在安装位置的命令提示符处键入 `sqlmetal /?` 。  
   
  **连接选项**  
@@ -50,7 +52,7 @@ sqlmetal [options] [<input file>]
 |**/database:** *\<name>*|指定服务器上的数据库目录。|  
 |**/user:** *\<name>*|指定登录用户 ID。默认值：使用 Windows 身份验证。|  
 |**/password:** *\<password>*|指定登录密码。 默认值：使用 Windows 身份验证。|  
-|**/conn:** *\<connection string>*|指定数据库连接字符串。 不能与 **/server**、 **/database**、 **/user**或 **/password** 选项一起使用。<br /><br /> 不要在连接字符串中包含文件名， 而应将文件名作为输入文件添加到命令行中。 例如，下一行命令将“c:\northwnd.mdf”指定为输入文件： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** 。|  
+|**/conn:** *\<connection string>*|指定数据库连接字符串。 不能与 **/server**、 **/database**、 **/user** 或 **/password** 选项一起使用。<br /><br /> 不要在连接字符串中包含文件名， 而应将文件名作为输入文件添加到命令行中。 例如，下一行命令将“c:\northwnd.mdf”指定为输入文件： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** 。|  
 |**/timeout:** *\<seconds>*|指定 SqlMetal 访问数据库时的超时值。 默认值：0（即没有时间限制）。|  
   
  **提取选项**  
@@ -87,6 +89,7 @@ sqlmetal [options] [<input file>]
 |**\<input file>**|指定 SQL Server Express .mdf 文件、SQL Server Compact 3.5 .sdf 文件或 .dbml intermediate 文件。|  
   
 ## <a name="remarks"></a>备注  
+
  SqlMetal 功能实际涉及两个步骤：  
   
 - 将数据库的元数据提取到一个 .dbml 文件中。  
@@ -110,6 +113,7 @@ sqlmetal [options] [<input file>]
  若要指定一个输入文件名，请将该名称作为输入文件添加到命令行。 不支持在连接字符串中包含文件名（使用 **/conn** 选项）。  
   
 ## <a name="examples"></a>示例  
+
  生成一个包含提取的 SQL 元数据的 .dbml 文件：  
   
  **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  

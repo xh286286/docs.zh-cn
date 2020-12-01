@@ -14,13 +14,15 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-ms.openlocfilehash: 880cbd4701ae4aee35038f6402b3beb70e60290c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ea4008db59e580fc9d68135618f292496e96fce9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622180"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282933"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用非托管 DLL 函数
+
 平台调用是一项服务，使托管代码能够调用动态链接库 (DLL) 中实现的非托管函数，例如 Windows API 中的非托管函数。 此服务定位并调用导出的函数，并根据需要跨交互操作边界封送其自变量（整数、字符串、数组、结构等）。  
   
  本部分介绍了与使用非托管 DLL 函数相关的任务，并提供有关平台调用的详细信息。 除了以下任务，还提供了一般注意事项以及包含其他信息和示例的链接。  
@@ -50,6 +52,7 @@ ms.locfileid: "85622180"
  有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>平台调用详解  
+
  平台调用依赖元数据定位导出的函数并在运行时封送处理它的自变量。 下图显示了此过程。  
   
  ![显示平台调用的图表。](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  

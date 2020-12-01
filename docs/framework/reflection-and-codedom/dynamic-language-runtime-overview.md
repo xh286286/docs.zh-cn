@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: 2272bc60af35e3cdec3e1a71bbc6516565b4ec6e
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: a36d6704b36b5006f19e21932797f21af849e55a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475146"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266826"
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 
@@ -55,24 +55,31 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
 - IronRuby。 在 [IronRuby](http://ironruby.net/) 网站上作为开源软件提供。
 
 ## <a name="primary-dlr-advantages"></a>DLR 的主要优点
+
  DLR 具有以下优点。
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>简化了将动态语言移植到 .NET Framework 的操作
+
  DLR 让语言实现者无需创建词法分析器、解析器、语义分析器、代码生成器等过去需要自己创建的工具。 若要使用 DLR，语言需要生成以树形结构表示语言级代码的表达式树、运行时帮助程序例程以及用于实现 <xref:System.Dynamic.IDynamicMetaObjectProvider> 接口的可选动态对象  。 DLR 和 .NET Framework 自动执行大量代码分析和代码生成任务。 这样语言实现者可以集中处理独特的语言功能。
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>在静态类型语言中实现动态功能
+
  现有的 .NET Framework 语言（如 C# 和 Visual Basic）可以创建动态对象，并将动态对象与静态类型对象结合使用。 例如，C# 和 Visual Basic 可将动态对象用于 HTML、文档对象模型 (DOM) 和 .NET 反射。
 
 ### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>可以获得 DLR 和 .NET Framework 的后续改进
+
  使用 DLR 实现的语言可受益于 DLR 和 .NET Framework 的后续改进。 例如，如果 .NET Framework 发布的新版本改进了垃圾回收器或降低了程序集的加载时间，则使用 DLR 实现的语言可以立即受益于这些改进。 如果 DLR 添加了优化（例如更好的编译），那么使用 DLR 实现的所有语言的性能也会得到改善。
 
 ### <a name="enables-sharing-of-libraries-and-objects"></a>可以共享库和对象
+
  使用一种语言实现的对象和库可以用于其他语言。 DLR 还支持静态类型语言和动态语言之间的互操作。 例如，如果动态对象使用的库以动态语言编写，C# 也可以声明该对象。 同时，动态语言可以使用 .NET Framework 中的库。
 
 ### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>可以快速动态调度和调用
+
  DLR 支持高级多态缓存，因此可以快速执行动态操作。 DLR 创建适用于绑定操作的规则，这些操作将对象用于必要的运行时实现，然后缓存这些规则，以避免在对相同类型的对象连续执行相同代码时进行大量消耗资源的绑定计算。
 
 ## <a name="dlr-architecture"></a>DLR 体系结构
+
  下图显示了动态语言运行时的体系结构。
 
  ![动态语言运行时体系结构概述](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 体系结构
@@ -88,6 +95,7 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
 DLR 在调用站点中使用联编程序不仅与 .NET Framework 进行通信，还与 Silverlight 和 COM 等其他基础结构和服务进行通信。 联编程序封装语言的语义，并指定如何使用表达式树在调用站点中执行操作。 这样使用 DLR 的动态和静态类型语言便可共享库，并访问 DLR 支持的所有技术。
 
 ## <a name="dlr-documentation"></a>DLR 文档
+
  如需深入了解如何使用 DLR 开源版本向语言添加动态行为，以及如何在 .NET Framework 中使用动态语言，请参阅 GitHub 上 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 存储库上的文档。
 
 ## <a name="see-also"></a>请参阅

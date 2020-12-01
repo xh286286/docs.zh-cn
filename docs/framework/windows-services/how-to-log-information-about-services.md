@@ -13,14 +13,15 @@ helpviewer_keywords:
 - application event logs, service applications
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
-ms.openlocfilehash: 0d6c245e3defb7d518093cca904572d3db00fcf8
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e5f1fd8ebbbb218e8d6eba9b2d30d05e7c0e62c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270571"
 ---
 # <a name="how-to-log-information-about-services"></a>如何：记录关于服务的信息
+
 默认情况下，所有 Windows 服务项目都具有与应用程序事件日志进行交互并向其中写入信息和异常的功能。 使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性可指示是否希望应用程序具有此功能。 默认情况下，用 Windows 服务项目模板创建的所有服务的记录都是打开的。 可以使用静态形式的 <xref:System.Diagnostics.EventLog> 类将服务信息写入日志，而无需创建 <xref:System.Diagnostics.EventLog> 组件的实例或手动注册源。  
   
  当记录打开时，服务的安装程序自动在安装了服务的计算机上的应用程序日志中，将项目中的每项服务注册为一个有效的事件源。 该服务在服务每次启动、停止、暂停、继续、安装和卸载时记录信息。 它还记录发生的所有失败。 当使用默认行为时，不需编写任何代码以便将项写入日志；服务自动为你处理此任务。  

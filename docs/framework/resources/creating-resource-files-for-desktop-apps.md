@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: d10af40420c1ab9ab177514c0babeaf5cea96922
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957432"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259071"
 ---
 # <a name="create-resource-files-for-net-apps"></a>为 .NET 应用创建资源文件
 
@@ -33,6 +33,7 @@ ms.locfileid: "88957432"
 - 使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 创建一个资源文件并将其包含在项目中。 Visual Studio 提供一个资源编辑器，借助该编辑器，可添加、删除和修改资源。 编译时，资源文件会自动转换成二进制 .resources 文件，并嵌入应用程序程序集或附属程序集中。 有关详细信息，请参阅 [Visual Studio 中的资源文件](creating-resource-files-for-desktop-apps.md#VSResFiles)部分。
 
 <a name="TextFiles"></a>
+
 ## <a name="resources-in-text-files"></a>文本文件中的资源
 
 文本（.txt 或 .restext）文件只能用于存储字符串资源。 对于非字符串资源，使用 .resx 文件或以编程方式创建它们。 包含字符串资源的文本文件使用以下格式：
@@ -135,7 +136,9 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 <a name="ResxFiles"></a>
+
 ## <a name="resources-in-resx-files"></a>.resx 文件中的资源
+
  与只能存储字符串资源的文本文件不同，XML 资源 (.resx) 文件可以存储字符串、二进制数据（图像、图标和音频剪辑等）以及编程对象。 .resx 文件包含一个标准标头，用以描述资源条目的格式，并指定用于解析数据的 XML 的版本信息。 资源文件数据跟在 XML 标头之后。 每个数据项由包含在 `data` 标记中的一个名称/值对构成。 其 `name` 属性定义资源名称，而嵌套的 `value` 标记包含资源值。 对于字符串数据，`value` 标记包含字符串。
 
  例如，以下 `data` 标记定义了一个名为 `prompt` 且值为“Enter your name”的字符串资源。
@@ -174,6 +177,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > 由于 .resx 文件必须由采用预定义格式的格式标准的 XML 构成，不建议手动使用 .resx 文件，尤其是当 .resx 文件包含非字符串资源时。 相反，[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 提供一个用于创建和操作 .resx 文件的透明接口。 有关详细信息，请参阅 [Visual Studio 中的资源文件](creating-resource-files-for-desktop-apps.md#VSResFiles)部分。 还可以通过编程方式创建和操作 .resx 文件。 有关详细信息，请参阅[以编程方式使用 .resx 文件](working-with-resx-files-programmatically.md)。
 
 <a name="ResourcesFiles"></a>
+
 ## <a name="resources-in-resources-files"></a>.resources 文件中的资源
 
 可以使用 <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> 类以编程方式从代码中直接创建二进制资源 (.resources) 文件。 还可以使用[资源文件生成器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 从文本文件或 .resx 文件创建 .resources 文件。 .resources 文件除了可以包含字符串数据之外，还可以包含二进制数据（字节数组）和对象数据。 以编程方式创建 .resources 文件需要执行下列步骤：
@@ -195,6 +199,7 @@ csc greeting.cs -resource:GreetingResources.resources
  创建 .resources 文件后，可以通过含入语言编译器的 `/resource` 开关将其嵌入运行时可执行文件或库中，或者通过使用[程序集链接器 (Al.exe)](../tools/al-exe-assembly-linker.md) 将其嵌入附属程序集。
 
 <a name="VSResFiles"></a>
+
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio 中的资源文件
 
 将资源文件添加到 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 项目时，Visual Studio 会在项目目录中创建一个 .resx 文件。 Visual Studio 会提供资源编辑器，可用于添加字符串、图像和二进制对象。 编辑器只能用于处理静态数据，因此不能用于储存编程对象；必须以编程方式将对象数据写入 .resx 文件或 .resources 文件。 有关详细信息，请参阅[以编程方式使用 .resx 文件](working-with-resx-files-programmatically.md)和 [.resources 文件中的资源](creating-resource-files-for-desktop-apps.md#ResourcesFiles)部分。

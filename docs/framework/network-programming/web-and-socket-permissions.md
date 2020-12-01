@@ -16,14 +16,15 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: 08ae360e8097f7281631da2a3f9846994dfbf5b6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b940e6deb98686051847728da6fa5e20debc0f11
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276602"
 ---
 # <a name="web-and-socket-permissions"></a>Web 和套接字权限
+
 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 类为使用 <xref:System.Net> 命名空间的应用程序提供网络安全性。 WebPermission 类控制应用程序从 URI 请求数据或向 Internet 提供 URI 的权限。 SocketPermission 类控制应用程序使用 <xref:System.Net.Sockets.Socket> 在本地端口接受数据或使用传输协议连接其他地址的远程设备的权限（基于主机、端口号和套接字的传输协议）。  
   
  权限类的选择取决于应用程序的类型。 使用 <xref:System.Net.WebRequest> 的应用程序及其子代应使用 WebPermission 类来管理权限。 使用套接字级别访问权限的应用程序及其子代应使用 SocketPermission 类来管理权限。  

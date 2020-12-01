@@ -10,14 +10,15 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 771917bb2ae5cae56c775ae23119d5eda9701df1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865315"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266319"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>如何：使用反射获取类型和成员信息
+
 <xref:System.Reflection> 命名空间包含许多获取关于类型及其成员的信息的方法。 本文介绍其中一种方法：<xref:System.Type.GetMembers%2A?displayProperty=nameWithType>。 有关其他信息，请参阅[反射概述](reflection.md)。
   
 ## <a name="example"></a>示例

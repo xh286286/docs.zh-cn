@@ -11,14 +11,15 @@ helpviewer_keywords:
 - ServiceInstaller class, adding installers to services
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
-ms.openlocfilehash: 9a6954c75595f5297a31dcaf37e744e655733df4
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 451f0db21e80dfc3dc40052179ac4ec60c2aabdc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608681"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270662"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：将安装程序添加到服务应用程序
+
 Visual Studio 提供可安装与服务应用程序关联资源的安装组件。 安装组件在安装它的系统上注册单个服务，并让服务控制管理器知道存在该服务。 当使用服务应用程序时，你可以在“属性”窗口中选择一个链接，以将相应的安装程序自动添加到项目中。  
   
 > [!NOTE]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: e27fdd7def2d234e1e8eb7557e869bf478d68210
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105155"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279306"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用程序集和全局程序集缓存
 
@@ -46,6 +46,7 @@ ms.locfileid: "85105155"
  请注意，在有些情况下，很明显不需要将程序集安装到全局程序集缓存中。 如果将组成应用程序的某个程序集置于全局程序集缓存中，就无法再通过使用 XCOPY 复制应用程序目录来复制或安装应用程序。 在这种情况下，还必须将程序集移到全局程序集缓存中。  
   
 ## <a name="in-this-section"></a>本节内容  
+
 [如何：将程序集安装到全局程序集缓存](install-assembly-into-gac.md)  
 描述将程序集安装到全局程序集缓存的方法。  
   

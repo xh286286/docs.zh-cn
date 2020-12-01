@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 59f2d3dbf09beacb62042b8195bba23f345fba02
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 28a84814d1df96935f7533fa00f0bb50cf84def8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557432"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279176"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 
@@ -25,6 +25,7 @@ ms.locfileid: "90557432"
 > 使用 MageUI.exe 保存已用证书签名的应用程序清单时，MageUI.exe 不支持 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 元素。 这种情况下必须使用 [Mage.exe](mage-exe-manifest-generation-and-editing-tool.md)。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
+
  下表列出了可用的菜单项和工具栏项。  
   
 |命令|菜单|快捷键|描述|  
@@ -46,6 +47,7 @@ ms.locfileid: "90557432"
 |**关于**|**帮助**||显示有关 MageUI.exe 的版本和版权信息。|  
   
 ## <a name="preferences-dialog-box"></a>“首选项”对话框  
+
  “首选项”对话框包含下列元素。  
   
 |UI 元素|描述|  
@@ -55,6 +57,7 @@ ms.locfileid: "90557432"
 |摘要算法|指定用来生成依赖项摘要的算法。 值必须为“sha256RSA”或“sha1RSA”。 使用 SHA1 作为默认值。 在应用程序和部署清单中使用。 如果用户在保存清单时提供证书，则使用证书中的算法生成依赖项摘要。|  
   
 ## <a name="signing-options-dialog-box"></a>“签名选项”对话框  
+
  首次保存清单或信任许可证，或者更改清单或信任许可证时，会显示“签名选项”对话框。 仅当选择了“首选项”对话框中的“保存时签名”选项时，才会显示该对话框。 在对指定“时间戳 URI”文本框中的值的清单进行签名时，必须连接到 Internet。  
   
  该对话框包含下列元素。  
@@ -71,9 +74,11 @@ ms.locfileid: "90557432"
 |**不签名**|允许你保存清单，而无需添加数字证书签名。|  
   
 ## <a name="tab-and-panel-descriptions"></a>选项卡和面板的说明  
+
  使用 MageUI.exe 打开某个文档时，该文档将显示在自己的选项卡页中。 每个选项卡都包含一组属性面板。 这些面板包含经过分组的文档数据子集。  
   
 ### <a name="application-manifest-tab"></a>应用程序清单选项卡  
+
  “应用程序清单”选项卡显示应用程序清单的内容。 应用程序清单描述了部署中包含的所有文件，以及要在客户端上运行应用程序所需的权限。  
   
  “应用程序清单”选项卡包含以下选项卡。  
@@ -87,6 +92,7 @@ ms.locfileid: "90557432"
 |**所需权限**|指定在客户端上运行应用程序所需的最小权限集。|  
   
 ### <a name="name-tab"></a>名称选项卡  
+
  首次创建或打开应用程序清单时，会显示“名称”选项卡。 它唯一地标识部署，并选择性地指定有效目标平台。  
   
 |UI 元素|说明|  
@@ -98,6 +104,7 @@ ms.locfileid: "90557432"
 |**公钥标记**|可选。 已用于对此应用程序清单进行签名的公钥。 如果这是新清单或未签名的清单，则此字段显示为 `Unsigned`。|  
   
 ### <a name="description-tab"></a>说明选项卡  
+
  通常在部署清单中提供此信息。 只有在“应用程序选项”选项卡上选中了“使用应用程序清单信任信息”复选框时，才能修改这些字段。  
   
 |UI 元素|描述|  
@@ -125,6 +132,7 @@ ms.locfileid: "90557432"
 |**组**|一组可选的文件的标签。 可以将组标签应用于一组文件，并使用按需 API 下载一批文件（只进行一次 API 调用）。|  
   
 ### <a name="permissions-required-tab"></a>所需权限选项卡  
+
  如果需要向应用程序授予比默认授予更多的本地计算机访问权限，请使用“所需权限”选项卡。 有关详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。  
   
 |UI 元素|描述|  
@@ -133,6 +141,7 @@ ms.locfileid: "90557432"
 |**详细信息**|为应用程序清单创建用于表示权限集的 XML。 除非充分理解应用程序清单 XML 格式，否则不应手动编辑此 XML。 有关详细信息，请参阅 [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)。|  
   
 ### <a name="deployment-manifest-tab"></a>部署清单选项卡  
+
  “部署清单”选项卡包含以下选项卡。  
   
 |UI 元素|说明|  
@@ -144,6 +153,7 @@ ms.locfileid: "90557432"
 |**应用程序引用**|指定此部署的应用程序清单。|  
   
 ### <a name="name-tab"></a>名称选项卡  
+
  首次创建或打开部署清单时，会显示“名称”选项卡。 它唯一地标识部署，并选择性地指定有效目标平台。  
   
 |UI 元素|说明|  
@@ -174,6 +184,7 @@ ms.locfileid: "90557432"
 |**使用 .deploy 文件扩展名**|必需。 选中后，应用程序清单中的所有文件都必须具有 .deploy 扩展名。 默认情况下，不选中此复选框。|  
   
 ### <a name="update-options-tab"></a>更新选项选项卡  
+
  仅当“名称”选项卡上的“应用程序类型”选择框设置为“本地安装”时，“更新选项”选项卡才包含此处提及的选项。  
   
 |UI 元素|描述|  
@@ -185,6 +196,7 @@ ms.locfileid: "90557432"
 |**Version**|如果已选中“指定所需的此应用程序的最低版本”复选框，则为必需。 提供的版本号的格式必须为 *N.N.N.N*。 只有第一个主要内部版本号是必需的。 例如，对于应用程序的 1.0 版，有效值包括 `1`、`1.0`、`1.0.0` 和 `1.0.0.0`。|  
   
 ### <a name="application-reference-tab"></a>应用程序引用选项卡  
+
  “应用程序引用”选项卡包含与本主题前面所述的“名称”选项卡相同的字段。 唯一的例外是下面的字段。  
   
 |UI 元素|描述|  

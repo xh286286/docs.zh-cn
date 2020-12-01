@@ -11,14 +11,15 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 57d18c01bd6261e8207d8ad3849a3a7da9a24b6c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104912"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264603"
 ---
 # <a name="global-assembly-cache"></a>全局程序集缓存
+
 安装了公共语言运行时的每台计算机均具有计算机范围的代码缓存，称为全局程序集缓存。 全局程序集缓存中存储专门指定给由计算机中若干应用程序共享的程序集。  
   
  只能在需要时才通过将程序集安装到全局程序集缓存中来共享程序集。 一般原则是：程序集依赖项保持专用，并将程序集放在应用程序目录中，除非明确要求共享该程序集。 另外，无需为了使 COM 互操作或非托管代码可以访问程序集而将程序集安装到全局程序集缓存。  

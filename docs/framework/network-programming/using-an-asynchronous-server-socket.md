@@ -18,14 +18,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 8b85afb3ffdf69973eff37ccbb067b470ed44e3a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6800a1973d9eb65bbb7520f9db7a8f431656c685
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502023"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265201"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用异步服务器套接字
+
 异步服务器套接字使用 .NET Framework 异步编程模型处理网络服务请求。 <xref:System.Net.Sockets.Socket> 类遵循标准 .NET Framework 异步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
   
  异步服务器套接字需要一个开始接受网络连接请求的方法、一个处理连接请求并开始接收网络数据的回调方法，以及一个结束接收数据的回调方法。 本部分将进一步讨论所有这些方法。  

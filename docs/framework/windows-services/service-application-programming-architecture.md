@@ -15,14 +15,15 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c2344dd0a7d35781aea52b24694f2cfee70a6d41
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270453"
 ---
 # <a name="service-application-programming-architecture"></a>服务应用程序编程体系结构
+
 Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 类继承的类。 可以替代此类中的方法并为其定义功能，以确定服务的行为方式。  
   
  服务创建中涉及的主要类包括：  
@@ -34,6 +35,7 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
  另外，可以使用名为 <xref:System.ServiceProcess.ServiceController> 的类来操纵服务本身。 该类不参与创建服务，但可用于启动和停止服务、将命令传递给它并返回一系列枚举。  
   
 ## <a name="defining-your-services-behavior"></a>定义服务的行为  
+
  在服务类中，替代基类函数，这些函数可确定服务状态在服务控制管理器中更改时会发生什么情况。 <xref:System.ServiceProcess.ServiceBase> 类公开以下方法，可替代这些方法以添加自定义行为。  
   
 |方法|替代为|  

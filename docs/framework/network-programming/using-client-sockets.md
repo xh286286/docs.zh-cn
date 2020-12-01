@@ -17,14 +17,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6982d09c20cd0d7e9d27fc63880b39e0982c86ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501997"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265188"
 ---
 # <a name="using-client-sockets"></a>使用客户端套接字
+
 在通过 <xref:System.Net.Sockets.Socket> 发起对话之前，必须在应用程序和远程设备之间创建数据管道。 尽管存在其他网络地址系列和协议，但本示例说明如何创建与远程服务的 TCP/IP 连接。  
   
  TCP/IP 使用一个网络地址和一个服务端口号来对唯一标识设备。 网络地址标识网络上的特定设备；端口号标识该设备要连接到的特定服务。 网络地址和服务端口的组合称为终结点，它在 .NET Framework 中由 <xref:System.Net.EndPoint> 类表示。 会为每个受支持的地址系列定义 EndPoint 的后代；对于 IP 地址系列，类为 <xref:System.Net.IPEndPoint>。  

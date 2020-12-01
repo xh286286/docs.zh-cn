@@ -12,14 +12,15 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 859c564e107fd3a9b219d71dc6ac5ccdf6e9d690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259273"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反射发出中的安全问题
+
 .NET Framework 提供了三种发出 Microsoft 中间语言 (MSIL) 的方式，每种方式都有其自身的安全问题：  
   
 - [动态程序集](#Dynamic_Assemblies)  
@@ -34,7 +35,9 @@ ms.locfileid: "90558792"
 > 反射和发出代码所需的权限已在 .NET Framework 的后续版本中更改。 请参阅本主题后面的[版本信息](#Version_Information)。  
   
 <a name="Dynamic_Assemblies"></a>
+
 ## <a name="dynamic-assemblies"></a>动态程序集  
+
  动态程序集是使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的重载创建的。 此方法的大多数重载在 .NET Framework 4 中已弃用，原因是取消了计算机范围的安全策略。 （请参阅[安全更改](/previous-versions/dotnet/framework/security/security-changes)。）其余的重载可由任意代码执行，而无论其信任级别如何。 这些重载分为两组：一组重载指定在创建动态程序集时要对该程序集应用的特性的列表，另一组重载则不会进行相应的指定。 如果没有通过在创建程序集时应用 <xref:System.Security.SecurityRulesAttribute> 属性来指定程序集的透明度模型，则从发出程序集继承透明度模型。  
   
 > [!NOTE]
@@ -48,6 +51,7 @@ ms.locfileid: "90558792"
  瞬态动态程序集在内存中创建，从不保存到磁盘中，因此它们并不需要文件访问权限。 将动态程序集保存到磁盘需要带有相应标志的 <xref:System.Security.Permissions.FileIOPermission>。  
   
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>从部分受信任的代码生成动态程序集  
+
  请考虑具有 Internet 权限的程序集可以生成瞬态动态程序集并执行其代码的条件：  
   
 - 动态程序集仅使用其他程序集的公共类型和成员。  
@@ -59,7 +63,9 @@ ms.locfileid: "90558792"
 - 不生成调试符号。 （`Internet` 和 `LocalIntranet` 权限集未包括必要的权限。）  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>
+
 ## <a name="anonymously-hosted-dynamic-methods"></a>匿名托管的动态方法  
+
  通过使用未指定关联类型或模块的两个 <xref:System.Reflection.Emit.DynamicMethod> 构造函数（即 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> 和 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>）来创建匿名托管的动态方法。 这些构造函数将动态方法放到系统提供的完全信任的安全透明的程序集中。 使用这些构造函数或发出动态方法的代码不需要任何权限。  
   
  相反，创建一个匿名托管的动态方法后，即捕获调用堆栈。 构造该方法时，将根据捕获的调用堆栈执行安全请求。  
@@ -82,6 +88,7 @@ ms.locfileid: "90558792"
  有关更多信息，请参见 <xref:System.Reflection.Emit.DynamicMethod> 类。  
   
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>从部分受信任的代码中生成匿名托管的动态方法  
+
  请考虑具有 Internet 权限的程序集可以生成匿名托管的动态方法并执行该方法的条件：  
   
 - 动态方法仅使用公共类型和成员。 如果动态方法的授予集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>，则动态方法可以使用任何其授予集等于发出程序集的授予集（或等于发出程序集的授予集的子集）的程序集的非公共类型和成员。  
@@ -92,7 +99,9 @@ ms.locfileid: "90558792"
 > 动态方法不支持调试符号。  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
+
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>与现有程序集关联的动态方法  
+
  若要将动态方法与现有程序集中的某一类型或模块关联，请使用指定关联类型或模块的任一 <xref:System.Reflection.Emit.DynamicMethod> 构造函数。 调用这些构造函数所需的权限各不相同，这是因为将动态方法与现有类型或模块关联会授予该动态方法访问非公共类型和成员的权限：  
   
 - 与某一类型关联的动态方法具有对该类型的所有成员（甚至私有成员）以及包含此关联类型的程序集中的所有内部类型和成员的访问权限。  
@@ -137,7 +146,9 @@ ms.locfileid: "90558792"
 > 动态方法不支持调试符号。  
   
 <a name="Version_Information"></a>
+
 ## <a name="version-information"></a>版本信息  
+
  从 .NET Framework 4 开始，已取消计算机范围的安全策略，并且安全透明度已成为默认的强制机制。 请参阅[安全更改](/previous-versions/dotnet/framework/security/security-changes)。  
   
  从 .NET Framework 2.0 Service Pack 1 开始，在发出动态程序集和动态方法时不再需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 所有早期版本的 .NET Framework 都需要此标志。  
@@ -150,6 +161,7 @@ ms.locfileid: "90558792"
  最后，.NET Framework 2.0 SP1 引入了匿名托管的方法。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>获取有关类型和成员的信息  
+
  从 .NET Framework 2.0 开始，获取有关非公共类型和成员信息不再需要任何权限。 使用反射可获取发出动态方法所需的信息。 例如，使用 <xref:System.Reflection.MethodInfo> 对象发出方法调用。 .NET Framework 的早期版本需要使用带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 有关详细信息，请参阅[反射的安全注意事项](security-considerations-for-reflection.md)。  
   
 ## <a name="see-also"></a>请参阅

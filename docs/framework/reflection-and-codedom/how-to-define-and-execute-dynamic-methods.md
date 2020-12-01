@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: d1ccf3d3ac966e35e1708f0639785a2760eb8287
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1ea15149ea72c3c422251abefb5a1008cc496f2c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559182"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263446"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定义和执行动态方法
+
 以下过程介绍如何定义和执行简单的动态方法和绑定到类实例的动态方法。 有关动态方法的更多信息，请参阅 <xref:System.Reflection.Emit.DynamicMethod> 类和[反射发出动态方法应用场景](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>定义和执行动态方法  
@@ -101,6 +102,7 @@ ms.locfileid: "90559182"
      [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
 ## <a name="example"></a>示例  
+
  以下代码示例演示一个简单的动态方法和一个绑定到类实例的动态方法。  
   
  简单动态方法具有一个 32 位整数参数，返回该整数的 64 位平方。 使用泛型委托来调用该方法。  

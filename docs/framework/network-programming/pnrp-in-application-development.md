@@ -2,17 +2,19 @@
 title: 应用程序开发中的 PNRP
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: f9a408fbd7fbbb77c0fd5208926f4b06fcf23b38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c59b2be8384c8f8cc6bbdc4546a678cfe1c538d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74428210"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263186"
 ---
 # <a name="pnrp-in-application-development"></a>应用程序开发中的 PNRP
+
 Windows Vista 中，网络应用程序可以通过简化的 PNRP 应用程序编程接口 (API) 访问名称发布和解析函数。  
   
 ## <a name="implementing-the-peer-name-resolution-protocol"></a>执行对等名称解析协议  
+
  借助简化的 PNRP API，无需显式指定云注册名称和地址，PNRP 组件自动决定要加入的合适的云以及要在云中发布的地址。  
   
  对于 Windows Vista 中高度简化的 PNRP 名称解析, PNRP 名称现已集成到 getaddrinfo() Windows 套接字函数。 若要使用 PNRP 将名称解析为 IPv6 地址，应用程序可以使用 getaddrinfo() 函数解析完全限定的域名 (FQDN) name.prnp.net，其中名称是正在解析的对等名称。 pnrp.net 域是 Windows Vista 中保留用于 PNRP 名称解析的域。  

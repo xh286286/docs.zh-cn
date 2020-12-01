@@ -6,13 +6,15 @@ helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3ac7c514a69ae05b00e7a486aadcbf41e5d1cbd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622635"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262510"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>并行执行的组件的创建指南
+
 创建适用于并行执行的托管应用程序或组件时，请遵循下列一般性准则：  
   
 - 将类型标识绑定到文件的特定版本。  
@@ -28,6 +30,7 @@ ms.locfileid: "85622635"
      隔离运行的应用程序或组件必须管理资源，以避免该应用程序或组件的两个实例在同时运行时发生冲突。 应用程序或组件还必须使用版本特定的文件结构。  
   
 ## <a name="application-and-component-isolation"></a>应用程序和组件的隔离  
+
  对于并行执行的应用程序或组件，设计成功的关键是隔离。 应用程序或组件必须以隔离方式管理所有的资源，尤其是文件 I/O。 请遵循以下准则，确保你的应用程序或组件以隔离方式运行：  
   
 - 按照版本特定的方式，写入注册表。 将指示版本的值存储在配置单元或项中，同时，不要在组件的不同版本间共享信息或状态。 这就防止了同时运行的两个应用程序或组件覆盖信息。  
@@ -39,6 +42,7 @@ ms.locfileid: "85622635"
 - 按照版本特定的方式，创建用户帐户和组。 应用程序创建的用户帐户和组应该由版本识别。 不要在应用程序的不同版本间共享用户帐户和组。  
   
 ## <a name="installing-and-uninstalling-versions"></a>安装或卸载版本  
+
  在设计并行执行的应用程序时，请遵循以下关于安装和卸载版本的准则：  
   
 - 请不要从注册表中删除在 .NET Framework 的其他版本下运行的其他应用程序可能需要的信息。  
@@ -54,6 +58,7 @@ ms.locfileid: "85622635"
 - 请不要向注册表中添加任何包含未版本化路径的内容。  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>文件版本号和程序集版本号  
+
  文件版本是运行时不使用的 Win32 版本资源。 通常情况下，即使是对于就地更新，也应更新文件版本。 两个相同的文件可以有不同的文件版本信息，而两个不同的文件也可以有相同的文件版本信息。  
   
  运行时使用程序集版本进行程序集绑定。 若两个相同的程序集版本号不同，则运行时将它们视为两个不同的程序集。  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 34efca4a26b0ab3739d19b793237532ec9f4f15e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865094"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263433"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反射检查和实例化泛型类型
+
 获取泛型类型信息的方式与获取其他类型信息的方式相同：检查表示泛型类型的 <xref:System.Type> 对象。 主要的差异在于，泛型类型具有表示其泛型类型参数的 <xref:System.Type> 对象列表。 本部分的第一个过程是检查泛型类型。  
   
  通过将类型实参绑定到泛型类型定义的类型形参，可以创建表示构造类型的 <xref:System.Type> 对象。 第二个过程对此进行了演示。  
@@ -73,6 +74,7 @@ ms.locfileid: "86865094"
      [!code-vb[HowToGeneric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#9)]  
   
 ## <a name="constructing-an-instance-of-a-generic-type"></a>构造泛型类型的实例  
+
  泛型类型和模板类似。 除非指定其泛型类型参数的实际类型，否则不能创建泛型类型的实例。 若要在运行时执行此操作，则需要使用 <xref:System.Type.MakeGenericType%2A> 方法。  
   
 #### <a name="to-construct-an-instance-of-a-generic-type"></a>构造泛型类型的实例  
@@ -102,6 +104,7 @@ ms.locfileid: "86865094"
      [!code-vb[HowToGeneric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#13)]  
   
 ## <a name="example"></a>示例  
+
  下面的代码示例定义 `DisplayGenericType` 方法来检查代码中使用的泛型类型定义和构造类型，并显示它们的信息。 `DisplayGenericType` 方法演示如何使用 <xref:System.Type.IsGenericType%2A>、<xref:System.Type.IsGenericParameter%2A> 和 <xref:System.Type.GenericParameterPosition%2A> 属性以及 <xref:System.Type.GetGenericArguments%2A> 方法。  
   
  该示例还定义 `DisplayGenericParameter` 方法来检查泛型类型参数，并显示其约束。  

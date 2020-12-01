@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2819fb3857fa6d40a2b2e42eeaec2d9c6e50eef0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74100700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96299348"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授权：AddAuthorization 重载已移动到不同的程序集
 
@@ -15,6 +15,7 @@ ms.locfileid: "74100700"
 3.0
 
 #### <a name="old-behavior"></a>旧行为
+
 `Microsoft.AspNetCore.Authorization` 中已存在 `AddAuthorization` 方法。
 
 #### <a name="new-behavior"></a>新行为

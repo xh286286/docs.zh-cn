@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c59e4aa2edad7b28203cfce5f568f8ccb8558dbb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263108"
 ---
 # <a name="using-streams-on-the-network"></a>在网络上使用流
+
 网络资源在 .NET Framework 中表示为流。 通过对流进行一般处理，.NET Framework 提供下列功能：  
   
 - 发送和接收 Web 数据的通用方法。 无论文件的实际内容是什么（HTML、XML 或任何其他内容），应用程序都将使用 <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> 和 <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> 发送和接收数据。  

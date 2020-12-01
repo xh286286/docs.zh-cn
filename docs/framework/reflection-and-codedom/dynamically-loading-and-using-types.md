@@ -13,14 +13,15 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: be9991a4df866f65aabe063be3cc2b374f4d124d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475081"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266787"
 ---
 # <a name="dynamically-loading-and-using-types"></a>动态加载和使用类型
+
 反射提供语言编译器为实现隐式后期绑定而使用的基础结构。 声明与唯一指定的类型相对应，绑定是查找声明（即实现）的过程。 运行时（而非编译时）发生此进程就称为后期绑定。 Visual Basic 允许在代码中使用隐式后期绑定；Visual Basic 编译器会调用使用反射来获取对象类型的帮助程序方法。 传递给帮助程序方法的参数会导致在运行时调用相应方法。 这些参数是在其上调用方法的实例（对象）、被调用方法的名称（字符串）和传递给被调用方法的参数（对象数组）。  
   
  在以下示例中，Visual Basic 编译器以隐式方式使用反射对某个对象调用一种方法，该对象的类型在编译时未知。 HelloWorld 类具有 PrintHello 方法，该方法可以打印输出“Hello World”，且该文本与传递给 PrintHello 方法的一些文本相关联    。 本示例中调用的 PrintHello 方法实际上是 <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>；如果在编译时（早期绑定）而不是在运行时（后期绑定）知道对象的类型 (helloObj)，则 Visual Basic 代码允许调用 PrintHello 方法   。  
@@ -40,6 +41,7 @@ End Module
 ```  
   
 ## <a name="custom-binding"></a>自定义绑定  
+
  除了被编译器隐式用于后期绑定之外，反射还可在代码中显式用于完成后期绑定。  
   
  [公共语言运行时](../../standard/clr.md)支持多种编程语言，而且这些语言的绑定规则各不相同。 在早期绑定的情况下，代码生成器可以完全控制此绑定。 但是在通过反射实现的后期绑定中，必须由自定义绑定来控制该绑定。 <xref:System.Reflection.Binder> 类提供对成员选择和调用的自定义控制。  
@@ -53,6 +55,7 @@ End Module
  [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember 和 CreateInstance  
+
  使用 <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> 调用类型的成员。 InvokeMember 可以创建指定类型的新实例，而各种类的 CreateInstance 方法（例如 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>）是 InvokeMember 的专用形式   。 Binder 类可在这些方法中用于重载解析和参数强制转换  。  
   
  下面的示例演示了参数强制转换（类型转换）和成员选择的三种可能的组合方式。 在第 1 个例子中，无需进行参数强制转换或成员选择。 在第 2 个例子中，只需进行成员选择。 在第 3 种情况下，只需进行参数强制转换。  

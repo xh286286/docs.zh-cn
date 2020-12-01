@@ -11,13 +11,15 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-ms.openlocfilehash: b8aa0361ee5213cb947a102f903d1a7a35331f17
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c255efe4579635389ac62956cac9d1405bfb184c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622167"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271429"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>创建用于容纳 DLL 函数的类
+
 将常用的 DLL 函数包装在托管类中，这是封装平台功能的一种有效方式。 虽然不必在每种情形下都这样做，但由于定义 DLL 函数相当麻烦且容易出错，所以提供类包装器非常简便。 如果使用 Visual Basic 或 C# 进行编程，必须在一个类或 Visual Basic 模块中声明 DLL 函数。  
   
  在一个类中，为每个要调用的 DLL 函数定义静态方法。 定义中可以包括附加信息，例如传递方法参数使用的字符集或调用约定；如果省略这些信息，则选择默认设置。 有关声明选项及其默认设置的完整列表，请参阅[在托管代码中创建原型](creating-prototypes-in-managed-code.md)。  

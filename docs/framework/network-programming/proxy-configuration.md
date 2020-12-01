@@ -12,17 +12,19 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 5094a066fe6689a1c0cda227b284accaac49ad54
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141600"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263160"
 ---
 # <a name="proxy-configuration"></a>代理配置
+
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  
   
 ## <a name="adaptive-proxies"></a>自适应代理  
+
  在 .NET Framework 中，有两种代理：自适应和静态。 自适应代理会在网络配置更改时调整它们的设置。 例如，如果便携式计算机用户启动拨号网络连接,自适应代理会识别此更改,发现并运行其新配置脚本，然后相应调整其设置。  
   
  自适应代理是通过配置脚本配置的（请参阅[自动代理检测](automatic-proxy-detection.md)）。 脚本针对每个协议生成一组应用程序协议和一个代理。  
@@ -42,6 +44,7 @@ ms.locfileid: "85141600"
 ```  
   
 ## <a name="static-proxies"></a>静态代理  
+
  静态代理通常由应用程序显示配置，或者当配置文件被应用程序或系统调用时配置。 静态代理在拓扑结构更改不频繁的网络中很有用，比如连接到企业网络的台式计算机。  
   
  多个选项控制静态代理的运行方式。 可以指定以下各项：  

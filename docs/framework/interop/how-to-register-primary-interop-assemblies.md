@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: 09b283712a66805669154c720dff5c2c5f910bf4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4961b4bc57d25f9fa83cf40f82b153aa93592b55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547175"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267008"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>如何：注册主互操作程序集
 
@@ -42,6 +42,7 @@ ms.locfileid: "90547175"
      在此命令中，assemblyname 是已注册的程序集的文件名。 Regasm.exe 会在与原始类型库相同的注册表项下为主互操作程序集添加一个条目。
 
 ## <a name="example"></a>示例
+
  下列示例注册 `CompanyA.UtilLib.dll` 主互操作程序集。
 
 ```console

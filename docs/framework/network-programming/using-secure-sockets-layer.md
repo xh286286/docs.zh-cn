@@ -16,14 +16,15 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 67330962382e768849cbf67d5f412ea80f65569d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1309e9dc594869cec7bce81ef666d9f5e06f13b9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501984"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265175"
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全套接字层
+
 <xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。  
   
  对于 HTTP 连接，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类使用 SSL 与支持 SSL 的 Web 主机进行通信。 根据为其给定的 URI，<xref:System.Net.WebRequest> 类决定是否使用 SSL。 如果 URI 以“https:”开头，则使用 SSL；如果 URI 以“http:”开头，则使用未加密的连接。  
@@ -59,6 +60,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
+
  此示例需要：  
   
 - 引用 System.Net 命名空间。  

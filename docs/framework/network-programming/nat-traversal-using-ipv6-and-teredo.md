@@ -2,14 +2,15 @@
 title: 使用 IPv6 和 Teredo 的 NAT 遍历
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6448ddf117e1f454338869820751ae5d9e0070e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642166"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258616"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 遍历
+
 增强了功能：为网络地址转换 (NAT) 遍历提供支持。 这些更改旨在用于 IPv6 和 Teredo，但也同样适用于其他 IP 隧道技术。 这些增强功能会影响 <xref:System.Net> 和相关命名空间中的类。  
   
  这些更改会影响客户端和计划使用 IP 隧道技术的服务器应用程序。  
@@ -17,6 +18,7 @@ ms.locfileid: "61642166"
  支持 NAT 遍历的更改仅可用于使用 .NET Framework 版本 4 的应用程序。 这些功能不可用于 .NET Framework 的早期版本。  
   
 ## <a name="overview"></a>概述  
+
  Internet 协议版本 4 (IPv4) 将 IPv4 地址的长度定义为 32 位。 因此，IPv4 支持大约 40 亿个唯一 IP 地址（2^32）。 20 世纪 90 年代，随着 Internet 上计算机和网络设备数量的增加，IPv4 地址空间的限制变得明显起来。  
   
  有几种技术可延长 IPv4 的生存期，其中一种是通过部署 NAT，使单个唯一公共 IP 地址可以表示大量专用 IP 地址（专用 Intranet）。 NAT 设备后的多个专用 IP 地址共享一个公共 IPv4 地址。 NAT 设备可能是一个专用的硬件设备（例如，成本较低的无线接入点和路由器），或者是运行设备以便提供 NAT 的计算机。 这种公共 IP 地址的设备或服务转换公共 Internet 和专用 Intranet 之间的 IP 网络数据包。  
@@ -30,6 +32,7 @@ ms.locfileid: "61642166"
  Teredo 是 IPv6 转换技术之一，使 IPv6 连接到 IPv4 网络。 Internet 工程任务组发布的 RFC 4380 中记录了这一技术。 Windows XP SP2 及更高版本为能够在 2001:0::/32 范围内提供公共 IPv6 地址的虚拟 Teredo 适配器提供支持。 此 IPv6 地址可用于侦听从 Internet 传入的连接，并且可以提供给支持 IPv6、需要连接到侦听服务的客户端。 应用程序可以只使用计算机的 IPv6 Teredo 地址连接计算机，因此，无需再担心应用程序如何为 NAT 设备下的计算机寻址。  
   
 ## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>支持 NAT 遍历和 Teredo 的增强功能  
+
  向 <xref:System.Net>、<xref:System.Net.NetworkInformation>和 <xref:System.Net.Sockets> 命名空间添加了增强功能，这些增强功能支持使用 IPv6 和 Teredo 进行 NAT 遍历。  
   
  向 <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> 类添加了几种方法，用于获取主机上的单播 IP 地址列表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> 方法发起一个异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> 方法结束挂起的异步请求，该请求用于检索本地计算机上稳定的单播 IP 地址表。 <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> 方法是一来检索本地计算机上稳定的单播 IP 地址的异步请求，它根据需要等待，直到地址表稳定。  

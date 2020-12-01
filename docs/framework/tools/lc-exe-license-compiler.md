@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d1644ff4d69c857e36e87f7e83f668908b7ba021
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164251"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275757"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe（许可证编译器）
+
 许可证编译器读取包含授权信息的文本文件，并产生一个可作为资源嵌入到公共语言运行时可执行文件中的二进制文件。  
   
  每当将一个授权控件添加到窗体中时，Windows 窗体设计器就会自动生成或更新 .licx 文本文件。 作为编译的一部分，项目系统将 .licx 文本文件转换为 .licenses 二进制资源，此资源提供对 .NET 控件授权的支持。 然后该二进制资源将被嵌入到项目输出中。  
@@ -78,6 +79,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 ```  
   
 ## <a name="response-file-example"></a>响应文件示例  
+
  下面的列表显示响应文件 `response.rsp` 的示例。 有关响应文件的详细信息，请参阅[响应文件](/visualstudio/msbuild/msbuild-response-files)。  
   
 ```text  

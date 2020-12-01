@@ -18,17 +18,19 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 87ad0144f57bdca0e0235aea30c4ab450cc890f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502179"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279293"
 ---
 # <a name="requesting-data"></a>正在请求数据...
+
 开发在如今 Internet 的分布式操作环境中运行的应用程序需要使用高效易用的方法从所有类型的资源中检索数据。 可以通过可插入协议开发使用单一接口从多个 Internet 协议检索数据的应用程序。  
   
 ## <a name="uploading-and-downloading-data-from-an-internet-server"></a>从 Internet 服务器上传和下载数据  
+
  对于简单的请求和响应事务，<xref:System.Net.WebClient> 类提供最简单的方法来将数据上传到 Internet 服务器或从 Internet 服务器下载数据。 WebClient 提供用于上传和下载文件、发送和接收数据流和将数据缓冲区发送到服务器并接收响应的方法。 WebClient 使用 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类来实现与 Internet 资源的实际连接，因此可以使用任何已注册的可插入协议。  
   
  需要执行更复杂事务的客户端应用程序使用 WebRequest 类及其后代从服务器请求数据。 WebRequest 封装连接到服务器、发送请求和接收响应的详细信息。 WebRequest 是一个抽象类，它定义一组使用可插入协议的所有应用程序均可使用的属性和方法。 WebRequest 的后代（如 <xref:System.Net.HttpWebRequest>）通过与基础协议一致的方法实现由 WebRequest 定义的属性和方法 。  

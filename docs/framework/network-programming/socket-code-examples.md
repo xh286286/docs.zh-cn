@@ -15,17 +15,19 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-ms.openlocfilehash: 0a0911a779ed3d4938ad7ff57f048c176cf677fb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a1e6ae5cc6e192c3f041ce763e1a2f51a97988be
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502153"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263147"
 ---
 # <a name="socket-code-examples"></a>Socket 代码示例
+
 以下代码示例演示如何使用 <xref:System.Net.Sockets.Socket> 类作为客户端连接到远程网络服务，以及如何将它用作服务器以侦听来自远程客户端的连接。  
   
 ## <a name="in-this-section"></a>本节内容  
+
  [同步客户端套接字示例](synchronous-client-socket-example.md)  
  演示如何实现连接到服务器的同步 <xref:System.Net.Sockets.Socket> 客户端，并显示从服务器返回的数据。  
   
@@ -39,6 +41,7 @@ ms.locfileid: "84502153"
  演示如何实现接受客户端连接的同步 <xref:System.Net.Sockets.Socket> 服务器，并回传从客户端收到的数据。  
   
 ## <a name="related-sections"></a>相关章节  
+
  [套接字](sockets.md)  
  提供有关 <xref:System.Net.Sockets> 命名空间和 <xref:System.Net.Sockets.Socket> 类的基本信息。  
   

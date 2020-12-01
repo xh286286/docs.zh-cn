@@ -10,14 +10,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 7455307441045360bc62cee50f13d106df4d005e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2595f3a6cb5e1ced17697def33e35ce8912ea90
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502114"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279241"
 ---
 # <a name="synchronous-client-socket-example"></a>同步客户端套接字示例
+
 以下示例程序创建连接到服务器的客户端。 客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  
   
 ```vb  

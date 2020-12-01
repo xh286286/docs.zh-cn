@@ -6,16 +6,19 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 85d0ec90a8877384517e9de3b56258d294e0c612
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622596"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283479"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
+
 从 .NET Framework 4 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
   
 ## <a name="background"></a>背景  
+
  .NET Framework 现在始终为托管代码应用程序提供并行承载，但在 .NET Framework 4 之前，它并不为托管 COM 组件提供此功能。 过去，加载到进程中的托管 COM 组件使用已加载的运行时版本运行或使用已安装的 .NET Framework 最新版本运行。 如果此版本不与 COM 组件兼容，则该组件会出现故障。  
   
  .NET Framework 4 提供了一种并行承载的新方法来确保以下内容：  
@@ -46,6 +49,7 @@ ms.locfileid: "85622596"
 > .NET Framework 版本 3.0 和 3.5 是以版本 2.0 为基础逐步生成的，不需要并行运行。 这些版本本来就是同一版本。  
   
 <a name="scenarios"></a>
+
 ## <a name="common-side-by-side-hosting-scenarios"></a>常见的并行承载方案  
   
 - **方案 1：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序。  
@@ -84,6 +88,7 @@ ms.locfileid: "85622596"
     ```  
   
 ## <a name="example"></a>示例  
+
  下例演示通过使用编译的组件要使用的 .NET Framework 版本运行托管 COM 组件的非托管 COM 主机。  
   
  若要运行以下示例，请使用 .NET Framework 3.5 编译和注册以下托管 COM 组件。 若要注册该组件，请在“项目”菜单上，依次单击“属性”、“生成”选项卡，然后选中“注册 COM 互操作”复选框   。  

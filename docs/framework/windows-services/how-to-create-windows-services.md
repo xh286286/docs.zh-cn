@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-ms.openlocfilehash: 35d78acd4fae7bf98a2b3f4ce6ac8a32393c35d4
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 9b171fa54cf65a482625c276c26185b12075c753
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608590"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270701"
 ---
 # <a name="how-to-create-windows-services"></a>如何：创建 Windows 服务
+
 创建服务时，可使用名为“Windows 服务”  的 Visual Studio 项目模板。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
   
 > [!WARNING]

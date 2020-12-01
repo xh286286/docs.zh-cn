@@ -10,14 +10,15 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-ms.openlocfilehash: c91c70625b79002e9297755dfdfac8aa6e283208
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: cc37b5b5c64a65655d06418d08a66231577a5bad
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104760"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271481"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：将程序集加载到应用程序域中
+
 可通过多种方法将程序集加载到应用程序域中。 推荐方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 类的 `static`（在 Visual Basic 中为 `Shared`）<xref:System.Reflection.Assembly.Load%2A> 方法。 加载程序集的其他方法包括：  
   
 - <xref:System.Reflection.Assembly> 类的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法加载已给定其文件位置的程序集。 通过此方法加载程序集将使用不同的加载上下文。  
@@ -39,6 +40,7 @@ ms.locfileid: "85104760"
  可指定在应用程序域间共享已加载程序集的实时 (JIT) 编译代码的方式。 有关详细信息，请参阅[应用程序域和程序集](application-domains.md#application-domains-and-assemblies)。  
   
 ## <a name="example"></a>示例  
+
  以下代码将名为“example.exe”或“example.dll”的程序集加载到当前应用程序域中，从该程序集获取名为 `Example` 的类型，为该类型获取名为 `MethodA` 的参数方法，然后执行该方法。 有关从已加载程序集中获取信息的完整讨论，请参阅[动态加载和使用类型](../reflection-and-codedom/dynamically-loading-and-using-types.md)。  
   
  [!code-cpp[System.AppDomain.Load#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source2.cpp#2)]

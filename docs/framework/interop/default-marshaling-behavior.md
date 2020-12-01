@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e18bb5c4caa43a8e951eed3fc6992ec1b2d2afb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555271"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256647"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
+
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
   
  本部分确定互操作封送处理服务的默认行为特征。 它提供有关封送处理数组、布尔值类型、char 类型、委托、类、对象、字符串和结构的详细信息。  
@@ -26,6 +27,7 @@ ms.locfileid: "90555271"
 > 不支持泛型类型的封送处理。 有关详细信息，请参阅[使用泛型类型进行交互操作](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>使用互操作封送拆收器进行内存管理  
+
  互操作封送拆收器始终尝试释放由非托管代码分配的内存。 此行为符合 COM 内存管理规则，但不同于用于管理本机 C++ 的规则。  
   
  使用为指针自动释放内存的平台调用时，如果你预期有本机 C++ 行为（无内存释放），则可能产生混淆。 例如，从 C++ DLL 调用以下非托管方法不会自动释放任何内存。  
@@ -43,12 +45,15 @@ BSTR MethodOne (BSTR b) {
  运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>类的默认封送处理  
+
  类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用所选接口替代类接口的信息，请参阅[类接口简介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>向 COM 传递类  
+
  当托管类传递给 COM 时，互操作封送拆收器自动使用 COM 代理包装类，并将由代理所生成的类接口传递到 COM 方法调用。 然后，代理委托对类接口的所有调用返回托管对象。 代理还公开其他不由类显式实现的接口。 代理代表类自动实现接口，如 IUnknown 和 IDispatch 。  
   
 ### <a name="passing-classes-to-net-code"></a>向 .NET 代码传递类  
+
  组件类通常不用作 COM 中的方法参数。 而是通常以默认界接口代替组件类进行传递。  
   
  当接口传递到托管代码中时，互操作封送拆收器负责用适当的包装来包装接口，并将该包装传递给托管方法。 确定要使用的包装可能会很困难。 COM 对象的每个实例都具有一个唯一的包装，无论该对象实现多少个接口。 例如，实现五个不同接口的单个 COM 对象只有一个包装。 同一个包装公开所有五个接口。 如果创建了两个 COM 对象的实例，则创建两个包装的实例。  
@@ -70,6 +75,7 @@ BSTR MethodOne (BSTR b) {
 3. 如果封送拆收器仍不能识别类，则使用名为 System.__ComObject 的泛型包装类包装接口。  
   
 ## <a name="default-marshaling-for-delegates"></a>委托的默认封送处理  
+
  托管委托基于后述调用机制封送为 COM 接口或函数指针：  
   
 - 对于平台调用，默认情况下，委托作为非托管函数指针进行封送。  
@@ -161,6 +167,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>值类型的默认封送处理  
+
  大多数值类型（如整数和浮点数）是 [blittable](blittable-and-non-blittable-types.md)类型，不需要封送处理。 其他[非 blittable](blittable-and-non-blittable-types.md) 类型在托管和非托管内存中具有不同的表示形式，且需要封送处理。 其他类型仍需要跨互操作边界的显式格式设置。  
   
  本部分提供有关以下格式化值类型的信息：  
@@ -186,6 +193,7 @@ internal class DelegateTest {
      指示根据随每个字段提供的 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 对成员进行布局。  
   
 ### <a name="value-types-used-in-platform-invoke"></a>在平台调用中使用的值类型  
+
  在以下示例中，`Point` 和 `Rect` 类型使用 StructLayoutAttribute 提供成员布局信息。  
   
 ```vb  
@@ -330,6 +338,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>在 COM 互操作中使用的值类型  
+
  格式化的类型也可传递给 COM 互操作方法调用。 实际上，当导出到类型库时，值类型就自动转换为结构。 如下面的示例所示，`Point` 值类型变为类型定义 (typedef)，名称为 `Point`。 在类型库中其他位置对 `Point` 值类型的所有引用都替换为 `Point` typedef。  
   
  **类型库表示形式**  
@@ -353,6 +362,7 @@ interface _Graphics {
 > 将 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值设置为显式的结构无法用于 COM 互操作，因为导出的类型库不能表达显式布局。  
   
 ### <a name="system-value-types"></a>系统值类型  
+
  <xref:System> 命名空间具有多个表示运行时原始类型装箱形式的值类型。 例如，值类型 <xref:System.Int32?displayProperty=nameWithType> 结构表示 ELEMENT_TYPE_I4 的装箱形式。 不像其他格式化类型将这些类型作为结构进行封送处理，而是以它们装箱的原始类型的相同方式将它们封送处理。 因此，System.Int32 作为 ELEMENT_TYPE_I4 封送处理，而不是作为包含长类型的单个成员的结构封送处理  。 下表包含系统命名空间中的值类型列表，这些值类型是基元类型的装箱表示形式。  
   
 |系统值类型|元素类型|  

@@ -7,17 +7,19 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 228c286f6c5620dc838df5002edc60863a0fe4e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475224"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256594"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>缓解：新的 64 位 JIT 编译器
+
 自 .NET Framework 4.6 起，运行时包括新版 64 位 JIT 编译器，可用于执行实时编译。 此更改不会影响 32 位 JIT 编译器的编译。  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>意外行为或异常  
+
  在某些情况下，使用新版 64 位 JIT 编译器进行编译会导致运行时异常抛出，或导致执行旧版 64 位 JIT 编译器编译的代码时无法观察到的行为发生。 已知差异如下：  
   
 > [!IMPORTANT]
@@ -38,7 +40,9 @@ ms.locfileid: "86475224"
 - 在某些情况下，如果 `if` 语句用于在进入 `try` 块之前和从 `try` 块中退出之前测试条件，且在 `catch` 或 `finally` 块中计算的条件相同，那么新版 64 位 JIT 编译器会在优化代码时从 `catch` 或 `finally` 块中删除 `if` 条件。 因此，`catch` 或 `finally` 块中的 `if` 语句代码会无条件地执行。  
   
 <a name="General"></a>
+
 ## <a name="mitigation-of-known-issues"></a>已知问题的缓解措施  
+
  如果遇到上面列出的问题，可以通过执行下列任一操作来解决：  
   
 - 升级到 .NET Framework 4.6.2。 .NET Framework 4.6.2 随附的新版 64 位编译器解决了上面列出的所有已知问题。  
@@ -48,7 +52,9 @@ ms.locfileid: "86475224"
 - 使用旧版 64 位 JIT 编译器进行编译。 请参阅[其他问题的缓解措施](#Other)部分，详细了解如何执行此操作。  
   
 <a name="Other"></a>
+
 ## <a name="mitigation-of-other-issues"></a>其他问题的缓解措施  
+
  如果遇到的是旧版和新版 64 位 JIT 编译器编译的代码的其他任何行为差异，或是使用新版 64 位 JIT 编译器编译的应用程序的调试和发布版本的其他任何行为差异，可以使用旧版 64 位 JIT 编译器编译应用程序，具体操作如下：  
   
 - 对于每个应用程序，可将 [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) 元素添加到应用程序配置文件中。 下面的代码禁用新版 64 位 JIT 编译器，改用旧版 64 位 JIT 编译器进行编译。  

@@ -6,13 +6,15 @@ helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-ms.openlocfilehash: e28756b5ed935aff83363b38d6f33982e87718b2
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 659f384f7bfc3a2326a40a9536c977d7c41ab076
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621712"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283154"
 ---
 # <a name="callback-functions"></a>回调函数
+
 回调函数是托管应用程序中的代码，可帮助非托管 DLL 函数完成一项任务。 对回调函数的调用间接从托管应用程序中进行传递、经过 DLL 函数，再回到托管实现。 一些通过平台调用的 DLL 函数需要托管代码中的回调函数才能正常运行。  
   
  若要从托管代码中调用大部分 DLL 函数，则可以创建函数的托管定义，然后再调用它。 此过程相当简单。  

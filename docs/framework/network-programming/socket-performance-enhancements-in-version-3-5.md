@@ -3,17 +3,19 @@ title: 版本 3.5 中的套接字性能增强
 description: 了解 .NET Framework 版本 3.5 中的 System.Net.Sockets.Socket 类的性能改进。
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5bd7c97d6a6edd5f914d6fe3118b6d81b64544e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502140"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263134"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>版本 3.5 中的套接字性能增强
+
 版本 3.5 中增强了 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 类，以供使用异步网络 I/O 实现最高性能的应用程序使用。 已添加了一系列新类，作为 <xref:System.Net.Sockets.Socket> 类的一组增强功能的一部分，这些增强功能提供了一种可供专用高性能套接字应用程序使用的替代异步模式。 这些增强功能专为需要高性能的网络服务器应用程序而设计。 应用程序可以独占方式使用增强型异步模式，或仅在其应用程序的目标热区域（例如，接收大量数据时）使用。  
   
 ## <a name="class-enhancements"></a>类增强功能  
+
  这些增强功能的主要功能是避免在大容量异步套接字 I/O 期间重复分配和同步对象。 当前由异步套接字 I/O 的 <xref:System.Net.Sockets.Socket> 类实现的 Begin/End 设计模式需要为每个异步套接字操作分配一个 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象。  
   
  在新的 <xref:System.Net.Sockets.Socket> 类增强功能中，异步套接字操作由应用程序分配和维护的可重用 <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> 类对象描述。 高性能套接字应用程序非常清楚必须维持的重叠套接字操作的数量。 该应用程序可创建所需的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 对象数量。 例如，如果服务器应用程序始终需要 15 个套接字接受操作，以支持传入的客户端连接速率，则可以预先为此分配 15 个可重用的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 对象。  

@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: 0d696adbe1ee224e78f79a049ed2e41d50be1faa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0321e98e6237e54397db7e583546fd69803ab7e1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554164"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275952"
 ---
 # <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装器
+
 如果决定在托管源代码中手动声明 COM 类型，则最佳的着手点是现有的接口定义语言 (IDL) 文件或类型库。 不具备 IDL 文件或无法生成类型库文件时，可以通过创建托管的声明并将生成的程序集导出到类型库来模拟 COM 类型。  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>从托管源模拟 COM 类型  
@@ -34,6 +35,7 @@ ms.locfileid: "90554164"
 4. 与使用 Tlbimp.exe 导入的类型相同，某些类型需要其他信息，你可以将其直接添加到自己的代码中。 有关详细信息，请参阅[如何：编辑互操作程序集](/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))。  
   
 ## <a name="example"></a>示例  
+
  以下代码演示了 IDL 中的 `ISATest` 接口和 `SATest` 类以及 C# 源代码中相应类型的示例。  
   
  **IDL 或类型库文件**  

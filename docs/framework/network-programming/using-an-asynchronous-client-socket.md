@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 9cf46e9519bcecf4d7a20ff99b86fa5f66af2087
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af5379533e51e7488d673359dc24268c6329c082
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502036"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265214"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用异步客户端套接字
+
 异步客户端套接字在等待网络操作完成时不会挂起应用程序。 相反，它使用标准 .NET Framework 异步编程模型在一个线程上处理网络连接，而应用程序继续在原始线程上运行。 异步套接字适用于大量使用网络或不宜等待网络操作完成（才可继续运作）的应用程序。  
   
  <xref:System.Net.Sockets.Socket> 类遵循异步方法的 .NET Framework 命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Receive%2A> 方法对应于异步 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 和 <xref:System.Net.Sockets.Socket.EndReceive%2A> 方法。  

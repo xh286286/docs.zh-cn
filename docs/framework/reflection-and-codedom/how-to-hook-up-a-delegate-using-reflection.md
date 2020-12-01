@@ -11,14 +11,15 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: b5d93efd278a53a4e6382f2321918e58ead55899
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9a92afd1c2aeadeb0cf7bc1e626b5bd1fb3cecea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865081"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263420"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反射将委托挂钩
+
 使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](../../visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  
   
 > [!NOTE]
@@ -69,6 +70,7 @@ ms.locfileid: "86865081"
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 <a name="procedureSection1"></a>
+
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>使用动态方法在运行时生成事件处理程序  
   
 1. 使用轻量动态方法和反射发出可在运行时生成事件处理程序方法。 若要构造事件处理程序，需要委托的返回类型和参数类型。 可通过检查委托的 `Invoke` 方法来获取这些类型。 以下代码使用 `GetDelegateReturnType` 和 `GetDelegateParameterTypes` 方法获取此信息。 本主题后面的“示例”部分提供了这些方法的代码。  
@@ -98,6 +100,7 @@ ms.locfileid: "86865081"
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 ## <a name="example"></a>示例  
+
  以下代码示例介绍如何使用反射将现有方法挂钩到事件，以及如何使用 <xref:System.Reflection.Emit.DynamicMethod> 类在运行时发出方法并将其挂钩到事件。  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]

@@ -27,17 +27,19 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: 3aad7b2ff047a2d9ad12c23d16773e482a395c10
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aec7d6b44e63558ae70bc0eb41f94e55c8a6c325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551192"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266332"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>在 CodeDOM 图中生成和编译源代码
+
 <xref:System.CodeDom.Compiler> 命名空间提供了从 CodeDOM 对象图生成源代码和用受支持的编译器管理编译的接口。 代码提供程序可根据 CodeDOM 图，用某种编程语言生成源代码。 从 <xref:System.CodeDom.Compiler.CodeDomProvider> 派生的类通常可以提供一些方法，用于生成和编译提供程序支持的语言代码。  
   
 ## <a name="using-a-codedom-code-provider-to-generate-source-code"></a>使用 CodeDOM 代码提供程序生成源代码  
+
  若要用某种语言生成源代码，需要一个表示要生成的源代码的结构的 CodeDOM 图。  
   
  下面的示例演示如何创建 <xref:Microsoft.CSharp.CSharpCodeProvider> 的实例:  
@@ -53,6 +55,7 @@ ms.locfileid: "90551192"
  [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
 ## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>使用 CodeDOM 代码提供程序编译程序集  
+
  **调用编译**  
   
  若要使用 CodeDom 提供程序编译程序集，则要编译的源代码的语言必须适用于编辑器，或者具有能够生成要编译的源代码的 CodeDOM 图。  
@@ -90,6 +93,7 @@ ms.locfileid: "90551192"
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>获得初始支持的语言  
+
  .NET framework 提供下列语言的代码编译器和代码生成器：C#、Visual Basic、C++ 和 JScript。 通过实现特定语言的代码生成器和代码编译器，CodeDOM 支持可以扩展到其他语言。  
   
 ## <a name="see-also"></a>请参阅

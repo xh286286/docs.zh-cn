@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 1dea4b0b94053919169abb639ff48ecd3abbd66c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517290"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279150"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe（管理强类型类生成器）
+
 利用管理强类型类生成器工具，你可以为指定的 Windows Management Instrumentation (WMI) 类快速生成早期绑定的托管类。 生成的类简化了访问 WMI 类的实例所必须编写的代码。  
   
 ## <a name="syntax"></a>语法  
@@ -45,6 +46,7 @@ WMIClass [options]
 |**/?**|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
+
  Mgmtclassgen.exe 使用 <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> 方法。 因此，你可使用任何自定义代码提供程序用 C#、Visual Basic 和 JScript 以外的托管语言生成代码。  
   
  请注意，生成的类会绑定到为其生成类的架构。 在基础架构发生更改的情况下，如果你希望类反映架构的更改，则必须重新生成类。  
@@ -93,6 +95,7 @@ WMIClass [options]
  有关 WMI 的详细信息，请参阅平台 SDK 文档中的 Windows Management Instrumentation 主题。  
   
 ## <a name="examples"></a>示例  
+
  以下命令在 C# 代码中为 Root\cimv2 命名空间中的 Win32_LogicalDisk WMI 类生成托管类。 该工具将 ROOT.CIMV2.Win32 命名空间中的托管类写入位于 c:\disk.cs 的源文件中。  
   
 ```console  

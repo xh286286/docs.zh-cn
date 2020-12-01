@@ -12,14 +12,15 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3baacbeca7f5cc50fbb720849aec273f996f86e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259136"
 ---
 # <a name="viewing-type-information"></a>查看类型信息
+
 <xref:System.Type?displayProperty=nameWithType> 类是反射的中心。 当反射提出请求时，公共语言运行时为已加载的类型创建 Type  。 可使用 Type  对象的方法、字段、属性和嵌套类来查找该类型的任何信息。  
   
  使用 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 从尚未加载的程序集中获取 Type  对象，传入所需类型的名称。 使用 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 从已加载的程序集中获取 Type 对象  。 使用 <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> 获取模块 Type 对象  。  
@@ -46,6 +47,7 @@ ms.locfileid: "86865198"
  如果有 Type，可使用 <xref:System.Type.Module%2A?displayProperty=nameWithType> 属性获取一个封装含该类型的模块的对象  。 使用 <xref:System.Reflection.Module.Assembly%2A?displayProperty=nameWithType> 属性查找一个封装含该模块的程序集的对象。 可以获取直接使用 <xref:System.Type.Assembly%2A?displayProperty=nameWithType> 属性封装类型的程序集。  
   
 ## <a name="systemtype-and-constructorinfo"></a>System.Type 和 ConstructorInfo  
+
  下列示例演示如何列出类的构造函数，在本例中即指 <xref:System.String> 类。  
   
  [!code-cpp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source1.cpp#1)]
@@ -53,6 +55,7 @@ ms.locfileid: "86865198"
  [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]  
   
 ## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a>MemberInfo、MethodInfo、FieldInfo 和 PropertyInfo  
+
  使用 <xref:System.Reflection.MemberInfo>、<xref:System.Reflection.MethodInfo>、<xref:System.Reflection.FieldInfo> 或 <xref:System.Reflection.PropertyInfo> 对象获取类型的方法、属性、事件和字段的相关信息。  
   
  下列示例使用 MemberInfo 列出 System.IO.File 类中成员的数量，并使用 <xref:System.Type.IsPublic%2A> 属性确定类的可见性   。  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 0adae4db393c4c01620ea896c4451c3279272fca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 525e3724aec82a74f5b0339296808b41f30d0ddc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266371"
 ---
 # <a name="registering-assemblies-with-com"></a>向 COM 注册程序集
+
 可运行名为[程序集注册工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 的命令行工具注册或取消注册与 COM 一起使用的程序集。 Regasm.exe 将关于类的信息添加到系统注册表，因此 COM 客户端可以透明地使用 .NET Framework 类。 <xref:System.Runtime.InteropServices.RegistrationServices> 类提供等效功能。  
   
  托管组件从 COM 客户端激活前必须在 Windows 注册表中注册。 下表显示 Regasm.exe 通常添加到 Windows 注册表的项。 （000000 表示实际的 GUID 值。）  
@@ -38,6 +39,7 @@ ms.locfileid: "90559273"
  Regasm.exe 也会在 HKCR\CLSID\\{0000…0000} 项下创建 InProcServer32 项。 项的默认值设置为初始化公共语言运行时 (Mscoree.dll) 的 DLL 的名称。  
   
 ## <a name="examining-registry-entries"></a>检查注册表项  
+
  COM 互操作提供标准的类工厂实现以创建任意 .NET Framework 类的实例。 客户端可以调用托管 DLL 上的“DllGetClassObject”以获取类工厂并创建对象，与使用任何其他 COM 组件相同。  
   
  关于 `InprocServer32` 子项, 出现在传统 COM 类型库中的对 Mscoree.dll 的引用表示公共语言运行时创建托管对象。  
