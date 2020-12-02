@@ -3,13 +3,13 @@ title: 应用启动
 description: 了解如何定义应用的启动逻辑。
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158183"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509697"
 ---
 # <a name="app-startup"></a>应用启动
 
@@ -28,7 +28,7 @@ ms.locfileid: "91158183"
 
 ## <a name="blazor-server-startup-structure"></a>Blazor 服务器启动结构
 
-Blazor 服务器应用程序位于 ASP.NET Core 3.0 或更高版本的应用程序的顶层。  ASP.NET Core web 应用程序通过 `Startup.cs` 应用程序根文件夹的类中的一对方法进行配置。  Startup 类的默认内容如下所示
+Blazor 服务器应用程序位于 ASP.NET Core 3.0 或更高版本的顶层。  ASP.NET Core web 应用程序通过 `Startup.cs` 应用程序根文件夹的类中的一对方法进行配置。  Startup 类的默认内容如下所示
 
 ```csharp
 public class Startup
@@ -89,7 +89,7 @@ public class Startup
 
 下一行是从 web 窗体复制其中一个配置选项的第一个 `UseRouting` 。  此方法将 ASP.NET Core 路由器添加到管道，可将其配置为此处或在可考虑路由到的单个文件中。  有关路由配置的详细信息，请参阅 [路由部分](pages-routing-layouts.md)。
 
-此方法中的最后一个语句定义 ASP.NET Core 所侦听的终结点。  这些是可在 web 服务器上访问的 web 可访问位置，并接收一些由 .NET 处理并返回给你的内容。  第一项 `MapBlazorHub` 配置 SignalR 集线器，以便在为服务器提供实时和持久连接的情况下处理 Blazor 组件的状态和呈现。  `MapFallbackToPage`方法调用指示启动 Blazor 应用程序的页面的 web 可访问位置，还会将应用程序配置为处理来自客户端的深层链接请求。  如果打开浏览器并直接导航到应用程序中的 Blazor 已处理路由（例如， `/counter` 在默认项目模板中），则会看到此功能在工作。 该请求由 *_Host* 的 "Blazor" 回退页面进行处理，后者随后运行 "路由器" 并呈现计数器页。
+此方法中的最后一个语句定义 ASP.NET Core 所侦听的终结点。  这些路由是可在 web 服务器上访问的 web 可访问位置，可接收某些由 .NET 处理并返回给你的内容。  第一项 `MapBlazorHub` 配置 SignalR 集线器，以便在为服务器提供实时和持久连接的情况下处理 Blazor 组件的状态和呈现。  `MapFallbackToPage`方法调用指示启动 Blazor 应用程序的页面的 web 可访问位置，还会将应用程序配置为处理来自客户端的深层链接请求。  如果打开浏览器并直接导航到应用程序中的 Blazor 已处理路由（例如， `/counter` 在默认项目模板中），则会看到此功能在工作。 该请求由 *_Host* 的 "Blazor" 回退页面进行处理，后者随后运行 "路由器" 并呈现计数器页。
 
 ## <a name="upgrading-the-bundleconfig-process"></a>升级 BundleConfig 进程
 

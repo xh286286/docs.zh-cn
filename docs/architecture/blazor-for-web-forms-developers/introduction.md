@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: a5aae6cf02ccec84ac8642b6ce8d9c919755e868
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: f1967dac0f46ba7cfefab62c5528dd1db8029514
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267563"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509710"
 ---
 # <a name="an-introduction-to-no-locblazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web 窗体开发人员简介
 
@@ -33,7 +33,7 @@ ASP.NET Web 窗体框架已成为 .NET Web 开发的装订，因为 .NET Framewo
 
 大多数新式 web 框架现在也是开源，这有很多好处。 用户不会 beheld 单个项目所有者来修复 bug 和添加功能。 开源项目为开发进度和即将发生的更改提供了改进的透明度。 开源项目充分利用了整个社区的贡献，并培养了一种可获得的开源生态系统。 尽管开源的风险，许多使用者和参与者都找到了合适的缓解措施，使他们能够以一种安全合理的方式享受开源生态系统的优势。 此类缓解的示例包括参与者许可协议、友好许可证、pedigree 扫描和支持基础。
 
-.NET 社区同时采用跨平台支持和开源。 .NET Core 是 .NET 的开源和跨平台实现，它在很多的平台上运行，包括 Windows、macOS 和各种 Linux 发行版。 Xamarin 提供 .NET 的开源版本。 Mono 适用于 Android、iOS 和各种其他形式因素，包括监视和智能电视。 Microsoft 宣布， [.net 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/) 将 .net Core 和 Mono 协调为 "单个 .net 运行时和框架，可以在任何地方使用并且具有统一的运行时行为和开发人员体验。"
+.NET 社区同时采用跨平台支持和开源。 .NET Core 是 .NET 的开源和跨平台实现，它在很多的平台上运行，包括 Windows、macOS 和各种 Linux 发行版。 Xamarin 提供 .NET 的开源版本。 Mono 适用于 Android、iOS 和各种其他形式因素，包括监视和智能电视。 Microsoft 发布了 [.net 5](https://devblogs.microsoft.com/dotnet/announcing-net-5-0/) ，将 .net Core 和 Mono 协调为 "单个 .net 运行时和框架，可以在任何地方使用并且具有统一的运行时行为和开发人员体验。"
 
 ASP.NET Web Forms 是否受益于转向开源和跨平台支持？ 答案为 "否"，或者至少与平台的其余部分不相同。 最近，.NET 团队已 [明确](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) 指出，ASP.NET Web 窗体不会移植到 .net Core 或 .net 5。 为什么会这样？
 
@@ -45,7 +45,7 @@ ASP.NET Web Forms 是否受益于转向开源和跨平台支持？ 答案为 "�
 
 ## <a name="client-side-web-development"></a>客户端 web 开发
 
-所有。基于网络的 web 框架（包括 ASP.NET Web 窗体）一直以来都有一个共同点：它们是 *服务器呈现*的。 在服务器呈现的 web 应用中，浏览器向服务器发出请求，该请求在 ASP.NET apps) 中执行一些代码 ( .NET 代码，以生成响应。 该响应将发送回浏览器以处理。 在此模型中，浏览器用作瘦渲染引擎。 生成 UI、运行业务逻辑和管理状态的工作在服务器上发生。
+所有。基于网络的 web 框架（包括 ASP.NET Web 窗体）一直以来都有一个共同点：它们是 *服务器呈现* 的。 在服务器呈现的 web 应用中，浏览器向服务器发出请求，该请求在 ASP.NET apps) 中执行一些代码 ( .NET 代码，以生成响应。 该响应将发送回浏览器以处理。 在此模型中，浏览器用作瘦渲染引擎。 生成 UI、运行业务逻辑和管理状态的工作在服务器上发生。
 
 但是，浏览器已成为多样的平台。 它们实现了数量不断增长的开放 web 标准，这些标准向用户计算机的功能授予访问权限。 为什么不利用计算能力、存储、内存和客户端设备的其他资源？ 尤其是在至少部分或完全完全的客户端处理时，UI 交互特别能从更丰富且更具交互性的外观中获益。 仍可以在服务器端处理在服务器上处理的逻辑和数据。 可以使用 Web API 调用，甚至可以使用类似于 Websocket 的实时协议。 如果 web 开发人员愿意编写 JavaScript，则可免费使用这些权益。 客户端 UI 框架，如角度、反应和 Vue，简化了客户端 web 开发，并在普及中得到了发展。 ASP.NET Web 窗体开发人员还可以利用客户端，甚至可以通过集成的 JavaScript 框架（如 ASP.NET AJAX）提供现成的支持。
 
@@ -55,11 +55,11 @@ ASP.NET Web Forms 是否受益于转向开源和跨平台支持？ 答案为 "�
 
 在2015中，主要的浏览器供应商加入了一个 W3C 社区组，以创建名为的新开放 web 标准 WebAssembly 。 WebAssembly 是 Web 的字节代码。 如果你可以将代码编译为 WebAssembly ，则它可以在任何平台上的任何浏览器上以近乎本机的速度运行。 初始工作重点介绍 C/c + +。 结果就是在不使用插件的情况下直接在浏览器中运行本机3D 图形引擎的生动演示。 WebAssembly 已由所有主要浏览器标准化并实现。
 
-上运行的 .NET 的工作 WebAssembly 已于2017晚公布，预计会在2020（包括从 .net 5 提供支持的情况下）随附。 直接在浏览器中运行 .NET 代码的功能可实现通过 .NET 进行的全堆栈 web 开发。
+上运行 .NET 的工作 WebAssembly 已于2017年发布，并在2020发布，其中包括 .net 5 支持。 直接在浏览器中运行 .NET 代码的功能可实现通过 .NET 进行的全堆栈 web 开发。
 
 ## <a name="no-locblazor-full-stack-web-development-with-net"></a>Blazor：通过 .NET 进行全堆栈 web 开发
 
-它本身就是在浏览器中运行 .NET 代码的功能，不提供创建客户端 web 应用程序的端到端体验。 接下来就是这样 Blazor 。 Blazor 是基于 C# 而不是 JavaScript 的客户端 Web UI 框架。 Blazor 可以通过在浏览器中直接运行 WebAssembly 。 不需要浏览器插件。 或者， Blazor 应用可在 .Net Core 上运行服务器端，并通过与浏览器进行实时连接来处理所有用户交互。
+它本身就是在浏览器中运行 .NET 代码的功能，不提供创建客户端 web 应用程序的端到端体验。 接下来就是这样 Blazor 。 Blazor 是基于 C# 而不是 JavaScript 的客户端 Web UI 框架。 Blazor 可以通过在浏览器中直接运行 WebAssembly 。 不需要浏览器插件。 或者， Blazor 应用可在 .net 上运行服务器端，并通过与浏览器进行实时连接来处理所有用户交互。
 
 Blazor 在 Visual Studio 和 Visual Studio Code 中具有很好的工具支持。 该框架还包括一个完整的 UI 组件模型，并且具有用于的内置功能：
 
@@ -76,12 +76,12 @@ Blazor 与 ASP.NET Web 窗体有很多共同之处。 这两个框架都提供�
 
 - 如何生成 Blazor 应用程序。
 - Blazor工作原理。
-- Blazor与 .Net Core 的关联方式。
+- 如何 Blazor 与 .net 相关。
 - 将现有 ASP.NET Web 窗体应用迁移到适当位置的合理策略 Blazor 。
 
 ## <a name="get-started-with-no-locblazor"></a>Blazor 入门
 
-的入门 Blazor 非常简单。 访问 <https://blazor.net> 并按照链接安装适当的 .NET Core SDK 和 Blazor 项目模板。 你还将找到有关 Blazor 在 Visual Studio 中设置工具或 Visual Studio Code 的说明。
+的入门 Blazor 非常简单。 请访问 <https://blazor.net> 并按照链接安装相应的 .NET SDK 和 Blazor 项目模板。 你还将找到有关 Blazor 在 Visual Studio 中设置工具或 Visual Studio Code 的说明。
 
 >[!div class="step-by-step"]
 >[上一页](index.md)

@@ -5,30 +5,30 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/01/2020
-ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267498"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509788"
 ---
 # <a name="app-configuration"></a>应用配置
 
-在 Web 窗体中加载应用程序配置的主要方法是在服务器上使用 *web.config* 文件中的条目， &mdash; 或者 *web.config*引用相关的配置文件。您可以使用静态 `ConfigurationManager` 对象与应用程序设置、数据存储库连接字符串以及添加到应用中的其他扩展配置提供程序进行交互。 通常，查看与应用配置的交互，如以下代码所示：
+在 Web 窗体中加载应用程序配置的主要方法是在服务器上使用 *web.config* 文件中的条目， &mdash; 或者 *web.config* 引用相关的配置文件。您可以使用静态 `ConfigurationManager` 对象与应用程序设置、数据存储库连接字符串以及添加到应用中的其他扩展配置提供程序进行交互。 通常，查看与应用配置的交互，如以下代码所示：
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
 var connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionName"].ConnectionString;
 ```
 
-Blazor如果你的应用程序托管在 WINDOWS IIS 服务器上，则使用 ASP.NET Core 和服务器端时，可能会出现*web.config*文件。 但是， `ConfigurationManager` 与此配置并无交互，你可以从其他来源接收更多结构化应用配置。 让我们看看如何收集配置，以及你仍可以如何从 *web.config* 文件访问配置信息。
+Blazor如果你的应用程序托管在 WINDOWS IIS 服务器上，则使用 ASP.NET Core 和服务器端时，可能会出现 *web.config* 文件。 但是， `ConfigurationManager` 与此配置并无交互，你可以从其他来源接收更多结构化应用配置。 让我们看看如何收集配置，以及你仍可以如何从 *web.config* 文件访问配置信息。
 
 ## <a name="configuration-sources"></a>配置源
 
 ASP.NET Core 认识到你的应用可能需要使用很多配置源。 默认情况下，框架将尝试为您提供这些功能的最佳功能。 ASP.NET Core 从这些不同的源读取和聚合配置。 对于同一配置密钥，稍后加载的值优先于先前值。
 
-ASP.NET Core 被设计为能够识别云，并使运营商和开发人员更容易地配置应用程序。 ASP.NET Core 是环境感知的，知道它是在您的 `Production` 还是环境中运行 `Development` 。 环境指示器是在 `ASPNETCORE_ENVIRONMENT` 系统环境变量中设置的。 如果未配置任何值，应用程序默认为在环境中运行 `Production` 。
+ASP.NET Core 被设计为能够识别云，并使操作员和开发人员可以更轻松地配置应用程序。 ASP.NET Core 是环境感知的，知道它是在您的 `Production` 还是环境中运行 `Development` 。 环境指示器是在 `ASPNETCORE_ENVIRONMENT` 系统环境变量中设置的。 如果未配置任何值，应用程序默认为在环境中运行 `Production` 。
 
 应用可根据环境名称从多个源触发并添加配置。 默认情况下，按列出的顺序从以下资源加载配置：
 
@@ -40,7 +40,7 @@ ASP.NET Core 被设计为能够识别云，并使运营商和开发人员更容�
 
 ## <a name="appsettingsjson-format-and-access"></a>格式和访问 appsettings.js
 
-文件 * 上的appsettings.js* 可以通过结构化的值进行分层，如以下 JSON：
+文件 *上的appsettings.js* 可以通过结构化的值进行分层，如以下 JSON：
 
 ```json
 {
@@ -64,7 +64,7 @@ ASP.NET Core 被设计为能够识别云，并使运营商和开发人员更容�
 * 存储在开发人员工作站上的 JSON 文件中的配置值位于应用开发文件夹之外。
 * 仅在环境中运行时加载 `Development` 。
 * 与特定应用相关联。
-* 通过 .NET Core CLI 的命令进行管理 `user-secrets` 。
+* 通过 .NET CLI 的命令进行管理 `user-secrets` 。
 
 通过执行以下命令为机密存储配置应用 `user-secrets` ：
 

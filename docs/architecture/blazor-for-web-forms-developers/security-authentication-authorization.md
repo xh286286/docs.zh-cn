@@ -5,33 +5,33 @@ author: ardalis
 ms.author: daroth
 no-loc:
 - Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 0344960237a5d9da61eb0d85987c44e136f1be48
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161290"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509840"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>安全性：ASP.NET Web Forms 和 Blazor  中的身份验证和授权
 
-从 ASP.NET Web 窗体应用程序迁移到 Blazor 几乎肯定需要更新身份验证和授权的执行方式，假设应用程序已配置身份验证。 本章介绍如何从 ASP.NET Web 窗体通用提供程序模型（ () 成员资格、角色和用户配置文件）迁移，以及如何使用应用 ASP.NET Core 标识 Blazor 。 尽管本章将介绍高级步骤和注意事项，但在引用的文档中可以找到详细步骤和脚本。
+从 ASP.NET Web 窗体应用程序迁移到 Blazor 几乎肯定需要更新身份验证和授权的执行方式，假设应用程序已配置身份验证。 本章介绍如何从 ASP.NET Web 窗体通用提供程序模型（ () 成员资格、角色和用户配置文件）迁移，以及如何使用应用 ASP.NET Core 标识 Blazor 。 虽然本章将介绍高级步骤和注意事项，但在引用的文档中可以找到详细步骤和脚本。
 
 ## <a name="aspnet-universal-providers"></a>ASP.NET 通用提供程序
 
-自 ASP.NET 2.0 起，ASP.NET Web 窗体平台支持多种功能（包括成员身份）的提供程序模型。 通用成员资格提供程序与可选角色提供程序一起，通常与 ASP.NET Web 窗体应用程序一起部署。 它提供一种强大且安全的方式来管理身份验证和授权。 这些通用 [提供程序的](https://www.nuget.org/packages/Microsoft.AspNet.Providers)最新产品/服务可作为 NuGet 包、
+自 ASP.NET 2.0 起，ASP.NET Web 窗体平台支持多种功能（包括成员身份）的提供程序模型。 通用成员资格提供程序与可选的角色提供程序一起经常与 ASP.NET Web 窗体应用程序一起部署。 它提供一种强大且安全的方式来管理身份验证和授权。 这些通用 [提供程序的](https://www.nuget.org/packages/Microsoft.AspNet.Providers)最新产品/服务可作为 NuGet 包、
 
-通用提供程序使用包括、、和之类的表的 SQL 数据库 `aspnet_Applications` 架构 `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 。 通过运行 [aspnet_regsql.exe 命令](/previous-versions/ms229862(v=vs.140))进行配置时，提供程序将安装表和存储过程，这些表和存储过程提供了处理基础数据所需的所有必要查询和命令。 数据库架构和这些存储过程与较新 ASP.NET Identity 和 ASP.NET Core 标识系统不兼容，因此必须将现有数据迁移到新系统。 图1显示了为通用提供程序配置的示例表架构。
+通用提供程序使用包括、、和之类的表的 SQL 数据库 `aspnet_Applications` 架构 `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 。 当通过运行 [aspnet_regsql.exe 命令](/previous-versions/ms229862(v=vs.140))进行配置时，提供程序将安装表和存储过程，这些表和存储过程提供了使用基础数据所需的所有查询和命令。 数据库架构和这些存储过程与较新 ASP.NET Identity 和 ASP.NET Core 标识系统不兼容，因此必须将现有数据迁移到新系统。 图1显示了为通用提供程序配置的示例表架构。
 
 ![通用提供程序架构](./media/security/membership-tables.png)
 
-通用提供程序负责处理用户、成员资格、角色和配置文件。 向用户分配全局唯一标识符和非常基本的信息 (userId，用户名) 存储在 `aspnet_Users` 表中。 身份验证信息（如密码、密码格式、密码 salt、锁定计数器和详细信息等）存储在表中 `aspnet_Membership` 。 角色只包含名称和唯一标识符，这些标识符通过关联表分配给用户 `aspnet_UsersInRoles` ，提供多对多的关系。
+通用提供程序负责处理用户、成员资格、角色和配置文件。 将为用户分配全局唯一标识符，并在表中存储用户 Id、用户名等基本信息。 `aspnet_Users` 身份验证信息（如密码、密码格式、密码 salt、锁定计数器和详细信息等）存储在表中 `aspnet_Membership` 。 角色只包含名称和唯一标识符，这些标识符通过关联表分配给用户 `aspnet_UsersInRoles` ，提供多对多的关系。
 
 如果现有系统除了使用成员身份外，还会使用角色，则需要将用户帐户、关联的密码、角色和角色成员身份迁移到 ASP.NET Core 标识。 你还可能需要使用 if 语句来更新你当前正在执行角色检查的代码，而不是使用声明性筛选器、特性和/或标记帮助程序。 我们将在本章末尾更详细地查看迁移注意事项。
 
 ### <a name="authorization-configuration-in-web-forms"></a>Web 窗体中的授权配置
 
-若要在 ASP.NET Web 窗体应用程序中配置对某些页面的授权访问，通常指定匿名用户无法访问某些页面或文件夹。 这是在 web.config 文件中完成的：
+若要在 ASP.NET Web 窗体应用程序中配置对某些页面的授权访问，通常指定匿名用户无法访问某些页面或文件夹。 此配置在 web.config 文件中完成：
 
 ```xml
 <?xml version="1.0"?>
@@ -49,7 +49,7 @@ ms.locfileid: "91161290"
 </configuration>
 ```
 
-" `authentication` 配置" 部分设置应用程序的窗体身份验证。 此 `authorization` 部分用于禁止对整个应用程序的匿名用户使用。 不过，你可以基于每个位置提供更精细的授权规则，还可以应用基于角色的授权检查。
+" `authentication` 配置" 部分设置应用程序的窗体身份验证。 此 `authorization` 部分用于禁止对整个应用程序的匿名用户使用。 不过，你可以基于每个位置提供更精细的授权规则，并应用基于角色的授权检查。
 
 ```xml
 <location path="login.aspx">
@@ -74,7 +74,7 @@ ms.locfileid: "91161290"
 </location>
 ```
 
-以上配置在与其他配置结合使用时， `/admin` 会将文件夹及其内的所有资源限制为 "Administrators" 角色的成员。 这还可以通过在 `web.config` 文件夹根目录中放置单独的文件来应用 `/admin` 。
+以上配置在与其他配置结合使用时， `/admin` 会将文件夹及其内的所有资源限制为 "Administrators" 角色的成员。 还可以通过在 `web.config` 文件夹根目录中放置单独的文件来应用此限制 `/admin` 。
 
 ### <a name="authorization-code-in-web-forms"></a>Web 窗体中的授权代码
 
@@ -107,7 +107,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 在上面的代码中，基于角色的访问控制 (RBAC) 用于根据当前用户的角色确定页面的某些元素（如 `SecretPanel` ）是否可见。
 
-通常，ASP.NET Web 窗体应用程序配置文件中的安全性 `web.config` ，然后在页面中需要的位置 `.aspx` 和相关的代码隐藏文件中添加其他检查 `.aspx.cs` 。 大多数应用程序都使用通用成员资格提供程序，通常使用其他角色提供程序。
+通常情况下，ASP.NET Web 窗体应用程序配置文件中的安全性 `web.config` ，然后在页面中需要的位置 `.aspx` 和相关的代码隐藏文件中添加其他检查 `.aspx.cs` 。 大多数应用程序都使用通用成员资格提供程序，通常使用其他角色提供程序。
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core 标识
 
@@ -119,9 +119,9 @@ protected void Page_Load(object sender, EventArgs e)
 
 除了角色外，ASP.NET Core 标识还支持声明和策略的概念。 虽然角色应专门对应于该角色中的用户应能够访问的一组资源，但声明只是用户标识的一部分。 声明是表示使用者的名称值对，而不是主题可执行的操作。
 
-可以直接检查用户的声明，并根据其确定是否应向用户授予对资源的访问权限。 但是，此类检查通常是重复性的，并分散在整个系统中。 更好的方法是定义 *策略*。
+可以直接检查用户的声明，并根据这些值确定是否应向用户授予对资源的访问权限。 但是，此类检查通常是重复性的，并分散在整个系统中。 更好的方法是定义 *策略*。
 
-授权策略包括一个或多个要求。 在的方法中，将策略注册为授权服务配置的一部分 `ConfigureServices` `Startup.cs` 。 例如，以下代码片段将配置名为 "CanadiansOnly" 的策略，该策略要求用户具有值为 "加拿大" 的国家/地区声明。
+授权策略包括一个或多个要求。 在的方法中，将策略注册为授权服务配置的一部分 `ConfigureServices` `Startup.cs` 。 例如，以下代码段将配置名为 "CanadiansOnly" 的策略，该策略要求用户具有值为 "加拿大" 的国家/地区声明。
 
 ```csharp
 services.AddAuthorization(options =>
@@ -146,7 +146,7 @@ services.AddAuthorization(options =>
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-如果需要在代码中访问用户的身份验证状态、角色或声明，可以通过两种主要方式实现此目的。 第一种方式是接收身份验证状态作为级联参数。 第二种是使用注入的来访问状态 `AuthenticationStateProvider` 。 [ Blazor 安全文档](/aspnet/core/blazor/security/)中介绍了上述每种方法的详细信息。
+如果需要在代码中访问用户的身份验证状态、角色或声明，可以通过两种主要方式实现此功能。 第一种方式是接收身份验证状态作为级联参数。 第二种是使用注入的来访问状态 `AuthenticationStateProvider` 。 [ Blazor 安全文档](/aspnet/core/blazor/security/)中介绍了上述每种方法的详细信息。
 
 下面的代码演示如何将 `AuthenticationState` 作为级联参数接收：
 
@@ -221,7 +221,7 @@ private async Task AddCountryClaim()
 
 1. 在目标数据库中创建 ASP.NET Core 标识数据库架构
 2. 将数据从通用提供程序架构迁移到 ASP.NET Core 标识架构
-3. 将 web.config 中的配置迁移到中间件和服务，通常为 `Startup.cs`
+3. 将配置从迁移 `web.config` 到中间件和服务，通常为 `Startup.cs`
 4. 使用控件和条件更新单个页面，使用标记帮助程序和新的标识 Api。
 
 以下部分详细介绍了这些步骤。
@@ -252,11 +252,11 @@ dotnet ef database update
 dotnet ef migrations script -o auth.sql
 ```
 
-这会在输出文件中生成一个 SQL 脚本， `auth.sql` 然后可以对所需的任何数据库运行该脚本。 如果运行命令时遇到任何问题 `dotnet ef` ，请 [确保系统上已安装 EF Core 工具](/ef/core/miscellaneous/cli/dotnet)。
+上述命令将在输出文件中生成一个 SQL 脚本 `auth.sql` ，然后，可以针对所需的任何数据库运行该脚本。 如果运行命令时遇到任何问题 `dotnet ef` ，请 [确保系统上已安装 EF Core 工具](/ef/core/miscellaneous/cli/dotnet)。
 
 如果源表上有其他列，则需要在新架构中确定这些列的最佳位置。 通常， `aspnet_Membership` 应将表中的列映射到 `AspNetUsers` 表。 上的列 `aspnet_Roles` 应映射到 `AspNetRoles` 。 表中的任何其他列 `aspnet_UsersInRoles` 都将添加到 `AspNetUserRoles` 表中。
 
-还需要考虑将任何其他列放在单独的表中，以便将来的迁移不需要考虑默认标识架构的自定义。
+还需要考虑在单独的表中放置任何其他列。 这样，以后的迁移就不需要考虑默认标识架构的自定义。
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>将数据从通用提供程序迁移到 ASP.NET Core 标识
 
@@ -268,7 +268,7 @@ dotnet ef migrations script -o auth.sql
 
 ### <a name="migrating-security-settings-from-webconfig-to-startupcs"></a>将 web.config 的安全设置迁移到 Startup.cs
 
-如上所述，ASP.NET 成员身份和角色提供程序在应用程序的 web.config 文件中配置。 由于 ASP.NET Core 应用未绑定到 IIS 并使用单独的系统进行配置，因此，必须在其他位置配置这些设置。 大多数情况下，在文件中配置 ASP.NET Core 标识 `Startup.cs` 。 打开之前创建的 web 项目 (生成标识表架构) 并查看其 `Startup.cs` 文件。
+如上所述，ASP.NET 成员身份和角色提供程序在应用程序的文件中进行配置 `web.config` 。 由于 ASP.NET Core 应用未绑定到 IIS 并使用单独的系统进行配置，因此，必须在其他位置配置这些设置。 大多数情况下，在文件中配置 ASP.NET Core 标识 `Startup.cs` 。 打开之前创建的 web 项目 (生成标识表架构) 并查看其 `Startup.cs` 文件。
 
 默认的 ConfigureServices 方法添加对 EF Core 和标识的支持：
 
@@ -327,19 +327,19 @@ ASP.NET Identity 不会从匿名或基于角色的访问中配置位置 `Startup
 
 ### <a name="updating-individual-pages-to-use-aspnet-core-identity-abstractions"></a>更新单个页面以使用 ASP.NET Core 标识抽象化
 
-在 ASP.NET Web 窗体应用程序中，如果你有 web.config 设置拒绝匿名用户访问某些页面或文件夹，则只需将 `[Authorize]` 属性添加到此类页即可迁移这些内容：
+在 ASP.NET Web 窗体应用程序中，如果您有 `web.config` 一些设置拒绝匿名用户访问某些页面或文件夹，则可以通过将 `[Authorize]` 属性添加到此类页面来迁移这些更改：
 
 ```razor
 @attribute [Authorize]
 ```
 
-如果你进一步拒绝了对属于特定角色的用户的访问，则你也可以通过添加指定角色的属性来迁移此操作：
+如果你进一步拒绝了对属于特定角色的用户的访问，则你也可以通过添加指定角色的属性来迁移此行为：
 
 ```razor
 @attribute [Authorize(Roles ="administrators")]
 ```
 
-请注意， `[Authorize]` 属性仅适用于 `@page` 通过路由器访问的组件 Blazor 。 特性不适用于子组件，而子组件应改用 `AuthorizeView` 。
+此 `[Authorize]` 属性仅适用于 `@page` 通过路由器访问的组件 Blazor 。 特性不适用于子组件，而子组件应改用 `AuthorizeView` 。
 
 如果在页标记中有用于确定是否向特定用户显示某些代码的逻辑，则可以将其替换为 `AuthorizeView` 组件。 [AuthorizeView 组件](/aspnet/core/blazor/security#authorizeview-component)根据用户是否有权查看它来有选择地显示 UI。 它还公开了 `context` 可用于访问用户信息的变量。
 
@@ -356,7 +356,7 @@ ASP.NET Identity 不会从匿名或基于角色的访问中配置位置 `Startup
 </AuthorizeView>
 ```
 
-可以通过从配置为属性的中访问用户，来访问过程逻辑中的身份验证状态 `Task<AuthenticationState` `[CascadingParameter]` 。 这会使你可以访问用户，这可以让你确定他们是否经过身份验证，以及他们是否属于特定角色。 如果需要评估策略过程，可以注入实例， `IAuthorizationService` 并对 `AuthorizeAsync` 其调用方法。 下面的示例代码演示如何获取用户信息，并允许授权用户执行策略限制的任务 `content-editor` 。
+可以通过从配置为属性的中访问用户，来访问过程逻辑中的身份验证状态 `Task<AuthenticationState` `[CascadingParameter]` 。 此配置将使你可以访问用户，这可以让你确定他们是否经过身份验证以及是否属于特定角色。 如果需要评估策略过程，可以注入实例， `IAuthorizationService` 并对 `AuthorizeAsync` 其调用方法。 下面的示例代码演示如何获取用户信息，并允许授权用户执行策略限制的任务 `content-editor` 。
 
 ```razor
 @using Microsoft.AspNetCore.Authorization
@@ -392,7 +392,7 @@ ASP.NET Identity 不会从匿名或基于角色的访问中配置位置 `Startup
 }
 ```
 
-`AuthenticationState`首先需要将设置为级联值，然后才能将其绑定到此类级联参数。 通常使用组件完成此操作 `CascadingAuthenticationState` 。 这通常在中完成 `App.razor` ：
+`AuthenticationState`首先需要将其设置为级联值，然后才能将其绑定到此类级联参数。 通常使用组件完成此操作 `CascadingAuthenticationState` 。 此配置通常在中完成 `App.razor` ：
 
 ```razor
 <CascadingAuthenticationState>
@@ -412,7 +412,7 @@ ASP.NET Identity 不会从匿名或基于角色的访问中配置位置 `Startup
 
 ## <a name="summary"></a>总结
 
-Blazor 使用与 ASP.NET Core 相同的安全模型，ASP.NET Core 标识。 从通用提供程序迁移到 ASP.NET Core 标识相对简单，假设不太太多自定义应用到了原始数据架构。 数据迁移完成后，在应用中使用身份验证和授权 Blazor ，可配置，同时提供对大多数安全要求的编程支持。
+Blazor 使用与 ASP.NET Core 相同的安全模型，ASP.NET Core 标识。 从通用提供程序迁移到 ASP.NET Core 标识相对简单，假设不太太多自定义应用到了原始数据架构。 数据迁移完成后，在应用中使用身份验证和授权 Blazor ，可配置并提供对大多数安全要求的编程支持。
 
 ## <a name="references"></a>参考
 

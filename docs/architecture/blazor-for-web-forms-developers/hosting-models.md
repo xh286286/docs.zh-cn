@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 2ebb021d2fce46a91a006227ccf9ba0cbcc5eea5
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 5d80b28642ee1e975d334f89504a1748d13dea8f
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267602"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509775"
 ---
 # <a name="no-locblazor-app-hosting-models"></a>Blazor 应用托管模型
 
@@ -66,8 +66,8 @@ Blazor WebAssembly 宿主模型具有以下优势：
 相反， Blazor 服务器托管模型具有以下优势：
 
 - 下载大小要比客户端应用小得多，并且应用的加载速度要快得多。
-- 应用充分利用服务器功能，包括使用任何与 .NET Core 兼容的 Api。
-- 服务器上的 .NET Core 用于运行应用，因此调试等现有 .NET 工具可按预期正常工作。
+- 应用充分利用了服务器功能，包括使用任何 .NET 兼容的 Api。
+- 服务器上的 .NET 用于运行应用程序，因此现有的 .NET 工具（如调试）可按预期方式工作。
 - 支持瘦客户端。 例如，服务器端应用程序适用于 WebAssembly 在资源受限的设备上不支持和的浏览器。
 - 应用的 .NET/C# 代码库（其中包括应用的组件代码）不适用于客户端。
 
@@ -78,7 +78,7 @@ Blazor服务器托管模型的缺点是：
 - 如果具有多名用户，则应用扩缩性存在挑战。 服务器必须管理多个客户端连接并处理客户端状态。
 - 需要 ASP.NET Core 服务器为应用提供服务。 无法进行无服务器部署方案。 例如，你不能从 CDN 服务应用。
 
-前面的权衡列表可能是造成威胁，但你的托管模型可在以后更改。 无论选择哪种 Blazor 托管模型，组件模型都是 *相同*的。 原则上，同一组件可用于任一宿主模型。 你的应用程序代码不会更改;不过，最好的做法是引入抽象，使组件保持与模型无关。 抽象使你的应用能够更轻松地采用不同的承载模型。
+前面的权衡列表可能是造成威胁，但你的托管模型可在以后更改。 无论选择哪种 Blazor 托管模型，组件模型都是 *相同* 的。 原则上，同一组件可用于任一宿主模型。 你的应用程序代码不会更改;不过，最好的做法是引入抽象，使组件保持与模型无关。 抽象使你的应用能够更轻松地采用不同的承载模型。
 
 ## <a name="deploy-your-app"></a>部署你的应用
 

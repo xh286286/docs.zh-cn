@@ -5,13 +5,13 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 09/08/2020
-ms.openlocfilehash: 84e12f9890351fa46cd7ed0ee31db449f3c55e59
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.date: 11/20/2020
+ms.openlocfilehash: 66e6001cbcac612cb556e90fb86fd694ca7d1459
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515847"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509749"
 ---
 # <a name="work-with-data"></a>处理数据
 
@@ -29,7 +29,7 @@ ADO.NET 是与数据库交互的低级别方法。 您的应用程序可以使�
 
 ## <a name="entity-framework"></a>Entity Framework
 
-实体框架 (EF) 是由 .NET Foundation 维护的开源对象关系映射框架。 最初通过 .NET Framework 发布，EF 允许为数据库连接、存储架构和交互生成代码。 通过此抽象，你可以专注于应用的业务规则，并允许受信任的数据库管理员管理数据库。 在 .NET Core 中，可以使用名为 EF Core 的 EF 的更新版本。 EF Core 有助于使用可供你使用命令行工具的一系列命令，生成和维护你的代码和数据库之间的交互 `dotnet ef` 。 让我们看几个示例来帮助你使用数据库。
+实体框架 (EF) 是由 .NET Foundation 维护的开源对象关系映射框架。 最初通过 .NET Framework 发布，EF 允许为数据库连接、存储架构和交互生成代码。 通过此抽象，你可以专注于应用的业务规则，并允许受信任的数据库管理员管理数据库。 在 .NET 中，可以使用名为 EF Core 的 EF 的更新版本。 EF Core 有助于使用可供你使用命令行工具的一系列命令，生成和维护你的代码和数据库之间的交互 `dotnet ef` 。 让我们看几个示例来帮助你使用数据库。
 
 ### <a name="ef-code-first"></a>EF Code First
 

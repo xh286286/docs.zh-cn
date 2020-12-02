@@ -5,13 +5,13 @@ author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 9a8e78338aff53002647a10ed9007296e4682b5a
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: afb5d4025b81c2ddef782c462c94d32edc872a21
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267706"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509723"
 ---
 # <a name="architecture-comparison-of-aspnet-web-forms-and-no-locblazor"></a>ASP.NET Web 窗体和的体系结构比较 Blazor
 
@@ -38,7 +38,7 @@ ASP.NET Web 窗体框架基于以页面为中心的体系结构。 应用中某�
 
 ## Blazor
 
-Blazor 是一个客户端 web UI 框架，本质上类似于 JavaScript 或反应等 JavaScript 前端框架。 Blazor 处理用户交互，并呈现必要的 UI 更新。 Blazor*不*基于请求-答复模式。 用户交互作为不在任何特定 HTTP 请求上下文中的事件进行处理。
+Blazor 是一个客户端 web UI 框架，本质上类似于 JavaScript 或反应等 JavaScript 前端框架。 Blazor 处理用户交互，并呈现必要的 UI 更新。 Blazor*不* 基于请求-答复模式。 用户交互作为不在任何特定 HTTP 请求上下文中的事件进行处理。
 
 Blazor 应用程序由一个或多个在 HTML 页上呈现的根组件组成。
 

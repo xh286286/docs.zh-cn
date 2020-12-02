@@ -6,13 +6,13 @@ ms.author: tasou
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/19/2019
-ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 893b6f851681ec540629fe160749b2622b6d5440
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161199"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509827"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>从 ASP.NET Web 窗体迁移到 Blazor
 
@@ -33,7 +33,7 @@ ms.locfileid: "91161199"
 
 如 " [托管模型](hosting-models.md) " 一章中所述， Blazor 可通过两种不同的方式承载应用：服务器端和客户端。 服务器端模型使用 ASP.NET Core SignalR 连接来管理 DOM 更新，同时在服务器上运行任何实际代码。 客户端模型 WebAssembly 在浏览器中运行，并且不需要服务器连接。 有很多差异可能会影响最适合特定应用的应用：
 
-- 运行方式 WebAssembly 仍处于开发阶段，可能不支持所有功能 (如当前时间线程) 
+- 运行方式 WebAssembly 不支持所有功能 (如当前时间线程) 
 - 客户端和服务器之间的对话通信可能会导致服务器端模式发生延迟问题
 - 对数据库和内部或受保护的服务的访问需要单独的服务和客户端托管
 
@@ -41,13 +41,13 @@ ms.locfileid: "91161199"
 
 ## <a name="create-a-new-project"></a>创建新项目
 
-此初始迁移步骤是创建一个新项目。 此项目类型基于 .NET Core 的 SDK 样式项目，并简化了以前的项目格式中使用的很多样板。 有关更多详细信息，请参阅 " [项目结构](project-structure.md)" 一章。
+此初始迁移步骤是创建一个新项目。 此项目类型基于 .NET 的 SDK 样式项目，并简化了以前项目格式中使用的很多样板。 有关更多详细信息，请参阅 " [项目结构](project-structure.md)" 一章。
 
 创建该项目后，安装上一个项目中使用的库。 在较旧的 Web 窗体项目中，可能已使用 *packages.config* 文件列出了所需的 NuGet 包。 在新的 SDK 样式项目中， *packages.config* 已替换为 `<PackageReference>` 项目文件中的元素。 此方法的优点是所有依赖项都以可传递的方式安装。 你只列出你关注的顶级依赖关系。
 
-你使用的许多依赖项都适用于 .NET Core，包括实体框架6和 log4net。 如果没有可用的 .NET Core 或 .NET Standard 版本，则通常可以使用 .NET Framework 版本。 你的里程可能会有所不同。 任何在 .NET Core 中不可用的 API 都会导致运行时错误。 Visual Studio 会通知你此类包。 **解决方案资源管理器**中项目的 "**引用**" 节点上将显示一个黄色图标。
+你使用的许多依赖项都适用于 .NET，包括实体框架6和 log4net。 如果没有可用的 .NET 或 .NET Standard 版本，则通常可以使用 .NET Framework 版本。 你的里程可能会有所不同。 使用的任何无法在 .NET 中使用的 API 都会导致运行时错误。 Visual Studio 会通知你此类包。 **解决方案资源管理器** 中项目的 "**引用**" 节点上将显示一个黄色图标。
 
-在 Blazor 基于的 eShop 项目中，可以看到已安装的包。 以前， *packages.config* 文件列出了项目中使用的每个包，导致文件的长度几乎为50行。 *packages.config*的代码段如下：
+在 Blazor 基于的 eShop 项目中，可以看到已安装的包。 以前， *packages.config* 文件列出了项目中使用的每个包，导致文件的长度几乎为50行。 *packages.config* 的代码段如下：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -80,18 +80,19 @@ Blazor项目在项目文件的元素中列出所需的依赖项 `<ItemGroup>` �
 ```xml
 <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.3" />
-    <PackageReference Include="EntityFramework" Version="6.3.0-preview9-19423-04" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.12" />
 </ItemGroup>
 ```
 
-一个 NuGet 包可简化 Web 窗体开发人员的生活，这是 [Windows 兼容性包](../../core/porting/windows-compat-pack.md)。 尽管 .NET Core 是跨平台的，但某些功能只能在 Windows 上使用。 Windows 特定功能通过安装兼容包提供。 此类功能的示例包括注册表、WMI 和目录服务。 该包增加了 20000 Api，并激活了许多你可能已经熟悉的服务。 EShop 项目不需要兼容包;但是，如果你的项目使用特定于 Windows 的功能，则包会使迁移工作更加轻松。
+一个 NuGet 包可简化 Web 窗体开发人员的生活，这是 [Windows 兼容性包](../../core/porting/windows-compat-pack.md)。 尽管 .NET 是跨平台的，但某些功能只能在 Windows 上使用。 Windows 特定功能通过安装兼容包提供。 此类功能的示例包括注册表、WMI 和目录服务。 该包增加了 20000 Api，并激活了许多你可能已经熟悉的服务。 EShop 项目不需要兼容包;但是，如果你的项目使用特定于 Windows 的功能，则包会使迁移工作更加轻松。
 
 ## <a name="enable-startup-process"></a>启用启动过程
 
 对于 Blazor 其他 ASP.NET Core 服务，的启动过程已从 Web 窗体更改并遵循类似的设置。 托管服务器端时， Blazor 组件作为正常 ASP.NET Core 应用的一部分运行。 当使用在浏览器中承载时 WebAssembly ， Blazor 组件将使用类似的承载模型。 不同之处在于，组件是作为独立的服务从任何后端进程运行的。 无论采用哪种方式，启动都是类似的。
 
-*Global.asax.cs*文件是 Web 窗体项目的默认启动页。 在 eShop 项目中，此文件 (IoC) 容器配置控制反转，并处理应用或请求的各种生命周期事件。 其中一些事件通过中间件 (（如) ）进行处理 `Application_BeginRequest` 。 其他事件需要通过依赖关系注入 (DI) 来覆盖特定服务。
+*Global.asax.cs* 文件是 Web 窗体项目的默认启动页。 在 eShop 项目中，此文件 (IoC) 容器配置控制反转，并处理应用或请求的各种生命周期事件。 其中一些事件通过中间件 (（如) ）进行处理 `Application_BeginRequest` 。 其他事件需要通过依赖关系注入 (DI) 来覆盖特定服务。
 
 例如，eShop 的 *Global.asax.cs* 文件包含以下代码：
 
@@ -245,15 +246,15 @@ public class Startup
 }
 ```
 
-你可能会注意到，Web 窗体中的一项重大更改是 DI 的突出。 DI 是 ASP.NET Core 设计中的一个指导原则。 它支持 ASP.NET Core 框架的几乎所有方面的自定义。 甚至可以在许多方案中使用内置服务提供程序。 如果需要进行更多的自定义，则很多社区项目都可能支持此功能。 例如，你可以继续执行第三方 DI 库投资。
+你可能会注意到，Web 窗体中的一项重大更改是 DI 的突出。 DI 是 ASP.NET Core 设计中的一个指导原则。 它支持 ASP.NET Core 框架的几乎所有方面的自定义。 甚至可以在许多方案中使用内置服务提供程序。 如果需要进行更多的自定义，则很多社区项目都支持此功能。 例如，你可以继续执行第三方 DI 库投资。
 
-在原始 eShop 应用程序中，有一些配置用于会话管理。 由于服务器端 Blazor 使用 ASP.NET Core SignalR 进行通信，因此不支持会话状态，因为连接可能独立于 HTTP 上下文。 使用会话状态的应用需要先重新架构，然后才能作为 Blazor 应用运行。
+在原始 eShop 应用程序中，有一些配置用于会话管理。 由于服务器端 Blazor 使用 ASP.NET Core SignalR 进行通信，因此不支持会话状态，因为连接可能独立于 HTTP 上下文。 使用会话状态的应用需要重新架构，才能作为 Blazor 应用运行。
 
 有关应用程序启动的详细信息，请参阅 [应用程序启动](app-startup.md)。
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>将 HTTP 模块和处理程序迁移到中间件
 
-HTTP 模块和处理程序是 Web 窗体中的常见模式，用来控制 HTTP 请求管道。 实现 `IHttpModule` 或 `IHttpHandler` 可以注册并处理传入请求的类。 Web 窗体在 *web.config* 文件中配置模块和处理程序。 Web 窗体在很大程度上取决于应用生命周期事件处理。 ASP.NET Core 改为使用中间件。 中间件是在类的方法中注册的 `Configure` `Startup` 。 中间件执行顺序由注册顺序决定。
+HTTP 模块和处理程序是 Web 窗体中的常见模式，用来控制 HTTP 请求管道。 实现 `IHttpModule` 或 `IHttpHandler` 可以注册并处理传入请求的类。 Web 窗体配置 *web.config* 文件中的模块和处理程序。 Web 窗体在很大程度上取决于应用生命周期事件处理。 ASP.NET Core 改为使用中间件。 中间件是在类的方法中注册的 `Configure` `Startup` 。 中间件执行顺序由注册顺序决定。
 
 在 " [启用启动过程](#enable-startup-process) " 部分，Web 窗体将引发生命周期事件作为 `Application_BeginRequest` 方法。 此事件在 ASP.NET Core 中不可用。 实现此行为的一种方法是实现中间件，如 *Startup.cs* 文件示例中所示。 此中间件执行相同的逻辑，然后将控制转移到中间件管道中的下一个处理程序。
 
@@ -284,9 +285,9 @@ EShop 项目可实现基本的静态文件访问。 有很多自定义可用于�
 
 ## <a name="migrate-aspx-pages"></a>迁移 ASPX 页
 
-Web 窗体应用中的页面是扩展名为 *.aspx* 的文件。 Web 窗体页通常可以映射到中的组件 Blazor 。 Blazor组件是在扩展名为*razor*的文件中创作的。 对于 eShop 项目，五个页面会转换为 Razor 页面。
+Web 窗体应用中的页面是扩展名为 *.aspx* 的文件。 Web 窗体页通常可以映射到中的组件 Blazor 。 Blazor组件是在扩展名为 *razor* 的文件中创作的。 对于 eShop 项目，五个页面会转换为 Razor 页面。
 
-例如，详细信息视图包含 Web 窗体项目中的三个文件： " *详细信息*"、" *Details.aspx.cs*" 和 " *Details.aspx.designer.cs*"。 转换为时 Blazor ，代码隐藏和标记将合并为*详细信息。* Razor 编译 (等效于 *designer.cs* 文件中) 存储在 *obj* 目录中，默认情况下，在 **解决方案资源管理器**中可查看。 Web 窗体页由以下标记组成：
+例如，详细信息视图包含 Web 窗体项目中的三个文件： " *详细信息*"、" *Details.aspx.cs*" 和 " *Details.aspx.designer.cs*"。 转换为时 Blazor ，代码隐藏和标记将合并为 *详细信息。* Razor 编译 (等效于 *designer.cs* 文件中) 存储在 *obj* 目录中，默认情况下，在 **解决方案资源管理器** 中可查看。 Web 窗体页由以下标记组成：
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -558,7 +559,7 @@ namespace eShopLegacyWebForms.Catalog
 </EditForm>
 ```
 
-`EditForm`上下文包括验证支持，可在输入前后环绕。 数据批注是添加验证的常用方法。 可以通过组件添加此类验证支持 `DataAnnotationsValidator` 。 有关此机制的详细信息，请参阅 [ASP.NET Core Blazor 窗体和验证](/aspnet/core/blazor/forms-validation)。
+`EditForm`上下文包括验证支持，可在输入周围环绕。 数据批注是添加验证的常用方法。 可以通过组件添加此类验证支持 `DataAnnotationsValidator` 。 有关此机制的详细信息，请参阅 [ASP.NET Core Blazor 窗体和验证](/aspnet/core/blazor/forms-validation)。
 
 ## <a name="migrate-configuration"></a>迁移配置
 
@@ -583,7 +584,7 @@ ASP.NET Core 引入了一个灵活的配置系统，该系统允许你定义应�
 </configuration>
 ```
 
-机密（如数据库连接字符串）通常存储在 *web.config*中。机密不可避免地保存在不安全的位置，如源代码管理。 对于 Blazor ASP.NET Core 上的，上面的基于 XML 的配置将替换为以下 JSON：
+机密（如数据库连接字符串）通常存储在 *web.config* 中。机密不可避免地保存在不安全的位置，如源代码管理。 对于 Blazor ASP.NET Core 上的，上面的基于 XML 的配置将替换为以下 JSON：
 
 ```json
 {
@@ -616,7 +617,7 @@ public class Startup
 
 ## <a name="migrate-data-access"></a>迁移数据访问
 
-数据访问是任何应用程序的一个重要方面。 EShop 项目在数据库中存储目录信息，并使用实体框架 (EF) 6 检索数据。 由于 .NET Core 3.0 支持 EF 6，因此项目可以继续使用它。
+数据访问是任何应用程序的一个重要方面。 EShop 项目在数据库中存储目录信息，并使用实体框架 (EF) 6 检索数据。 由于 .NET 5.0 支持 EF 6，因此项目可以继续使用它。
 
 EShop 需要以下与 EF 相关的更改：
 
