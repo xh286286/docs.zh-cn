@@ -1,6 +1,6 @@
 ---
 title: 如何：获取 .NET Framework 4.5 安装程序的进度
-description: 了解如何获取 .NET 4.5 安装程序的进度。 如果要针对此 .NET 版本开发应用，则可以在应用的安装程序中包含（链接）.NET 4.5 安装程序。
+description: 了解如何获取 .NET Framework 4.5 安装程序的进度。 如果要针对此 .NET 版本开发应用，可以在应用的安装程序中包含（链接）.NET Framework 4.5 安装程序。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 7e21a376c5a7551ecadeaa70c0a70968dc5752fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904255"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729117"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 

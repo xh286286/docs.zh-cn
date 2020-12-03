@@ -138,7 +138,7 @@ items:
           - name: 新增功能
             href: ../core/dotnet-five.md
           - name: 重大更改
-            href: ../core/compatibility/5.0.md
+            href: ../core/compatibility/5.0.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
       - name: .NET Core 3.1
         items:
           - name: 新增功能
@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: .NET 卸载工具
             href: ../core/additional-tools/uninstall-tool.md
+          - name: 生成自签名证书
+            href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: WCF Web 服务引用提供程序
             href: ../core/additional-tools/wcf-web-service-reference-guide.md
           - name: WCF 服务实用工具
@@ -385,9 +387,12 @@ items:
           - name: 托管调试器
             href: ../core/diagnostics/managed-debuggers.md
           - name: 转储
-            href: ../core/diagnostics/dumps.md
-          - name: 调试 Linux 转储
-            href: ../core/diagnostics/debug-linux-dumps.md
+            items:
+              - name: 概述
+                displayName: dumps
+                href: ../core/diagnostics/dumps.md
+              - name: Linux 转储
+                href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
           - name: EventPipe
@@ -1603,10 +1608,36 @@ items:
                 displayName: json serialization
               - name: 如何对 JSON 进行序列化和反序列化
                 href: ../standard/serialization/system-text-json-how-to.md
-              - name: 如何编写自定义转换器
-                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: 控制序列化行为
+                items:
+                  - name: 实例化 JsonSerializerOptions
+                    href: ../standard/serialization/system-text-json-configure-options.md
+                  - name: 启用不区分大小写的匹配
+                    href: ../standard/serialization/system-text-json-character-casing.md
+                  - name: 自定义属性名称和值
+                    href: ../standard/serialization/system-text-json-customize-properties.md
+                  - name: 忽略属性
+                    href: ../standard/serialization/system-text-json-ignore-properties.md
+                  - name: 允许无效的 JSON
+                    href: ../standard/serialization/system-text-json-invalid-json.md
+                  - name: 处理溢出 JSON
+                    href: ../standard/serialization/system-text-json-handle-overflow.md
+                  - name: 保留引用
+                    href: ../standard/serialization/system-text-json-preserve-references.md
+                  - name: 不可变类型和非公共访问器
+                    href: ../standard/serialization/system-text-json-immutability.md
+                  - name: 多态序列化
+                    href: ../standard/serialization/system-text-json-polymorphism.md
               - name: 如何从 Newtonsoft.Json 迁移
                 href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+              - name: 高级
+                items:
+                  - name: 自定义字符编码
+                    href: ../standard/serialization/system-text-json-character-encoding.md
+                  - name: 自定义序列化程序和反序列化程序
+                    href: ../standard/serialization/write-custom-serializer-deserializer.md
+                  - name: 自定义转换器
+                    href: ../standard/serialization/system-text-json-converters-how-to.md
           - name: 二进制序列化
             items:
               - name: 概述
@@ -2249,7 +2280,7 @@ items:
           - name: 使用 Windows 兼容包
             href: ../core/porting/windows-compat-pack.md
           - name: 移植 Windows 窗体项目
-            href: ../core/porting/winforms.md
+            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
           - name: 移植 WPF 项目
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: 端口 C++/CLI 项目

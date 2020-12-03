@@ -4,12 +4,12 @@ description: 演示在 Fedora 上安装 .NET SDK 和 .NET 运行时的各种方�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 9e96773e30fb8ee395e37dca7a4794cd42359bb2
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: f7422941af7e39d69d286a0f79920b025c1bf9c0
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594603"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031899"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>在 Fedora 上安装 .NET SDK 或 .NET 运行时
 
@@ -42,6 +42,10 @@ Fedora 支持 .NET。 本文介绍如何在 Fedora 上安装 .NET。 如果 Fedo
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>删除预览版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
@@ -152,7 +156,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>Snap
+## <a name="snap"></a>对齐
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 

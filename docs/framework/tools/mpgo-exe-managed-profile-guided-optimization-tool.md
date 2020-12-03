@@ -9,40 +9,41 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 714715968388325713a12027fb0ab89415e1d60c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 328c085035927b3f271a39a0ea3992dde29f5119
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544279"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279098"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 
-托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 Visual Studio 2013 开始，还可以使用 Mpgo.exe 优化 Windows 8.x 应用商店应用。  
-  
-通过收集培训方案的数据并使用它来优化本机映像布局，按配置优化改进了应用程序启动时间、内存利用率（工作集大小）和吞吐量。  
-  
-当你遇到与中间语言 (IL) 程序集的启动时间和工作集大小相关的性能问题时，建议你先使用 Ngen.exe 消除实时 (JIT) 编译成本和推动代码共享。 如果你需要更多改进，则可使用 Mpgo.exe 进一步优化应用程序。 你可以使用未优化的本机映像程序集的性能数据作为计算性能提升的基准。 使用 Mpgo.exe 可以获得更短的冷启动时间和更小的工作集大小。 Mpgo.exe 将信息到添加 Ngen.exe 用于创建优化的本机映像程序集的 IL 程序集中。 有关详细信息，请参阅 .NET 博客中的 [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）。  
-  
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示），并在命令提示符处键入以下命令。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
-  
-对于桌面应用程序：  
-  
-```console  
-mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]  
-```  
-  
-对于 Windows 8.x 应用商店应用：  
-  
-## <a name="syntax"></a>语法  
-  
-```console  
-mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
-```  
-  
-## <a name="parameters"></a>parameters  
- Mpgo.exe 的所有自变量都区分大小写。 命令前加上短划线。  
-  
+托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 Visual Studio 2013 开始，还可以使用 Mpgo.exe 优化 Windows 8.x 应用商店应用。
+
+通过收集培训方案的数据并使用它来优化本机映像布局，按配置优化改进了应用程序启动时间、内存利用率（工作集大小）和吞吐量。
+
+当你遇到与中间语言 (IL) 程序集的启动时间和工作集大小相关的性能问题时，建议你先使用 Ngen.exe 消除实时 (JIT) 编译成本和推动代码共享。 如果你需要更多改进，则可使用 Mpgo.exe 进一步优化应用程序。 你可以使用未优化的本机映像程序集的性能数据作为计算性能提升的基准。 使用 Mpgo.exe 可以获得更短的冷启动时间和更小的工作集大小。 Mpgo.exe 将信息到添加 Ngen.exe 用于创建优化的本机映像程序集的 IL 程序集中。 有关详细信息，请参阅 .NET 博客中的 [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）。
+
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请通过管理员凭据使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示），并在命令提示符处键入以下命令。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。
+
+对于桌面应用程序：
+
+```console
+mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]
+```
+
+对于 Windows 8.x 应用商店应用：
+
+## <a name="syntax"></a>语法
+
+```console
+mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
+```
+
+## <a name="parameters"></a>parameters
+
+ Mpgo.exe 的所有自变量都区分大小写。 命令前加上短划线。
+
 > [!NOTE]
 > 你可以使用 `–Scenario` 或 `–Import` 作为必需命令，但不能两个都用。 如果指定 `–Reset` 选项，则不使用任何所需参数。
 
@@ -65,6 +66,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-RemoveNativeImages`|通过指定了 `–LeaveNativeImages` 的运行进行清理。 如果指定 `-RemoveNativeImages`，则 Mpgo.exe 将忽略除 `-64bit` 和 `–AssemblyList` 之外的所有参数，然后在删除检测到的所有本机映像后退出。|
 
 ## <a name="remarks"></a>备注
+
  你可以在同一命令行上多次使用 `–AssemblyList` 和 `- AssemblyListFile`。
 
  如果在指定程序集时未指定完整路径名称，则 Mpgo.exe 将在当前目录中查找。 如果指定了不正确的路径，则 Mpgo.exe 将显示错误消息，但将继续为其他程序集生成数据。 如果指定了在培训方案期间未加载的程序集，则将不会为该程序集生成任何培训数据。
@@ -74,60 +76,63 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  仅建议大型托管应用程序使用 Ngen.exe 和 Mpgo.exe，因为预编译的本机映像的好处一般只能在它消除了大量运行时 JIT 编译工作的情况下才会显现出来。 在没有大量工作集的“Hello World”样式应用程序上运行 Mpgo.exe 将不会带来任何好处，并且 Mpgo.exe 甚至可能无法收集配置文件数据。
 
 > [!NOTE]
-> 对于 ASP.NET 应用程序和 Windows Communication Foundation (WCF) 服务，不推荐 Ngen.exe 和 Mpgo.exe。  
-  
-## <a name="to-use-mpgoexe"></a>使用 Mpgo.exe  
-  
-1. 使用安装了 Visual Studio Ultimate 2012 和你的应用程序的计算机。  
-  
-2. 以管理员身份用必需的参数运行 Mpgo.exe。  有关示例命令，请参见下一节。  
-  
-     优化的中间语言 (IL) 程序集是在由 `–OutDir` 参数指定的文件夹（在此示例中，这是 `C:\Optimized` 文件夹）中创建的。  
-  
-3. 将用于 Ngen.exe 的 IL 程序集替换为包含 `–OutDir` 指定的目录中的配置文件信息的新 IL 程序集。  
-  
-4. 应用程序安装程序（使用 Mpgo.exe 提供的映像）将安装优化的本机映像。  
-  
-## <a name="suggested-workflow"></a>建议的工作流  
-  
-1. 通过将 Mpgo.exe 与 `–Scenario` 参数结合使用来创建一组优化的 IL 程序集。  
-  
-2. 将优化的 IL 程序集签入到源代码管理中。  
-  
-3. 在生成过程中，使用 `–Import` 参数调用 Mpgo.exe 作为一个后期生成步骤来生成优化的 IL 映像以传递到 Ngen.exe。  
-  
- 此过程确保所有程序集具有优化数据。 如果更频繁地签入更新的优化程序集（步骤 1 和 2），则性能数字在整个产品开发中将更一致。  
-  
-## <a name="using-mpgoexe-from-visual-studio"></a>从 Visual Studio 使用 Mpgo.exe  
- 可以从 Visual Studio 运行 Mpgo.exe（请参见文章[如何：指定生成事件 (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)），其具有下列限制：  
-  
-- 你不能使用具有尾部反斜杠标记的引用路径，因为在默认情况下，Visual Studio 宏也使用尾部反斜杠标记。 （例如，`–OutDir "C:\Output Folder\"` 无效。）若要解决此限制，你可以转义尾部斜杠。 （例如，请改用 `-OutDir "$(OutDir)\"`。）  
-  
-- 默认情况下，Mpgo.exe 不在 Visual Studio 生成路径中。 你必须添加 Visual Studio 的路径，或在 Mpgo 命令行上指定完整路径。 你可在 Visual Studio 中的后期生成事件中使用 `–Scenario` 或 `–Import` 参数。 但是，一般的处理方式是从 Visual Studio 开发人员命令提示符处使用一次 `–Scenario`，然后在每次生成后使用 `–Import` 更新优化的程序集，例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
-  
+> 对于 ASP.NET 应用程序和 Windows Communication Foundation (WCF) 服务，不推荐 Ngen.exe 和 Mpgo.exe。
+
+## <a name="to-use-mpgoexe"></a>使用 Mpgo.exe
+
+1. 使用安装了 Visual Studio Ultimate 2012 和你的应用程序的计算机。
+
+2. 以管理员身份用必需的参数运行 Mpgo.exe。  有关示例命令，请参见下一节。
+
+     优化的中间语言 (IL) 程序集是在由 `–OutDir` 参数指定的文件夹（在此示例中，这是 `C:\Optimized` 文件夹）中创建的。
+
+3. 将用于 Ngen.exe 的 IL 程序集替换为包含 `–OutDir` 指定的目录中的配置文件信息的新 IL 程序集。
+
+4. 应用程序安装程序（使用 Mpgo.exe 提供的映像）将安装优化的本机映像。
+
+## <a name="suggested-workflow"></a>建议的工作流
+
+1. 通过将 Mpgo.exe 与 `–Scenario` 参数结合使用来创建一组优化的 IL 程序集。
+
+2. 将优化的 IL 程序集签入到源代码管理中。
+
+3. 在生成过程中，使用 `–Import` 参数调用 Mpgo.exe 作为一个后期生成步骤来生成优化的 IL 映像以传递到 Ngen.exe。
+
+ 此过程确保所有程序集具有优化数据。 如果更频繁地签入更新的优化程序集（步骤 1 和 2），则性能数字在整个产品开发中将更一致。
+
+## <a name="using-mpgoexe-from-visual-studio"></a>从 Visual Studio 使用 Mpgo.exe
+
+ 可以从 Visual Studio 运行 Mpgo.exe（请参见文章[如何：指定生成事件 (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)），其具有下列限制：
+
+- 你不能使用具有尾部反斜杠标记的引用路径，因为在默认情况下，Visual Studio 宏也使用尾部反斜杠标记。 （例如，`–OutDir "C:\Output Folder\"` 无效。）若要解决此限制，你可以转义尾部斜杠。 （例如，请改用 `-OutDir "$(OutDir)\"`。）
+
+- 默认情况下，Mpgo.exe 不在 Visual Studio 生成路径中。 你必须添加 Visual Studio 的路径，或在 Mpgo 命令行上指定完整路径。 你可在 Visual Studio 中的后期生成事件中使用 `–Scenario` 或 `–Import` 参数。 但是，一般的处理方式是从 Visual Studio 开发人员命令提示符处使用一次 `–Scenario`，然后在每次生成后使用 `–Import` 更新优化的程序集，例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。
+
 <a name="samples"></a>
-## <a name="examples"></a>示例  
- 以下来自 Visual Studio 开发人员命令提示处的 Mpgo.exe 命令将优化一个税务应用程序：  
-  
-```console  
-mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  
-```  
-  
- 以下 Mpgo.exe 命令将优化一个声音应用程序：  
-  
-```console  
-mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" –AssemblyList transcode.dll –OutDir C:\Optimized –TimeOut 15  
-```  
-  
- 以下 Mpgo.exe 命令将使用以前优化的程序集中的数据优化新版本的程序集：  
-  
-```console  
-mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
-```  
-  
+
+## <a name="examples"></a>示例
+
+ 以下来自 Visual Studio 开发人员命令提示处的 Mpgo.exe 命令将优化一个税务应用程序：
+
+```console
+mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15
+```
+
+ 以下 Mpgo.exe 命令将优化一个声音应用程序：
+
+```console
+mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" –AssemblyList transcode.dll –OutDir C:\Optimized –TimeOut 15
+```
+
+ 以下 Mpgo.exe 命令将使用以前优化的程序集中的数据优化新版本的程序集：
+
+```console
+mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized
+```
+
 ## <a name="see-also"></a>请参阅
 
 - [Ngen.exe（本机映像生成器）](ngen-exe-native-image-generator.md)
 - [命令提示](developer-command-prompt-for-vs.md)
 - [Improving Launch Performance for your Desktop Applications](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)（提高桌面应用程序的启动性能）
-- [.NET 4.5 中的性能改进概述](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)
+- [.NET Framework 4.5 中的性能改进概述](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

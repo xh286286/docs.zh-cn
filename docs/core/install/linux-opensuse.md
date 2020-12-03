@@ -4,12 +4,12 @@ description: 演示在 openSUSE 上安装 .NET SDK 和 .NET 运行时的各种�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506893"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031860"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>在 openSUSE 上安装 .NET SDK 或 .NET Runtime
 
@@ -36,6 +36,10 @@ openSUSE 支持 .NET。 本文介绍如何在 openSUSE 上安装 .NET。
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>删除预览版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
@@ -67,7 +71,7 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>Snap
+## <a name="snap"></a>对齐
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 

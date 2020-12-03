@@ -2,12 +2,12 @@
 title: dotnet tool restore 命令
 description: dotnet tool restore 命令在计算机上安装当前目录范围内的 .NET 本地工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3425bc6b78fd53f578c209013f83b006305dbb81
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242924"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -15,7 +15,7 @@ ms.locfileid: "94634267"
 
 ## <a name="name"></a>“属性”
 
-`dotnet tool restore` - 在计算机上安装当前目录范围内的 .NET 本地工具。
+`dotnet tool restore` - 安装当前目录范围内的 .NET 本地工具。
 
 ## <a name="synopsis"></a>摘要
 

@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET 项目创建 NuGet 包。
 ms.date: 04/28/2020
-ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634228"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674796"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -118,7 +118,7 @@ dotnet pack -h|--help
 
 - **`-s|--serviceable`**
 
-  设置包中可用的标志。 有关详细信息，请参阅 [.NET 博客：.NET 4.5.1 支持 .NET NuGet 库的 Microsoft 安全更新](https://aka.ms/nupkgservicing)。
+  设置包中可用的标志。 有关详细信息，请参阅 [.NET 博客：.NET Framework 4.5.1 支持 .NET NuGet 库的 Microsoft 安全更新](https://aka.ms/nupkgservicing)。
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -185,7 +185,7 @@ dotnet pack -h|--help
   ```
 
   要了解如何使用 `NuspecFile`、`NuspecBasePath` 和 `NuspecProperties`，请参阅以下资源：
-  
+
   - [使用 .nuspec 打包](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [用于创建自定义包的高级扩展点](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
   - [全局属性](/visualstudio/msbuild/msbuild-properties#global-properties)

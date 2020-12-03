@@ -4,12 +4,12 @@ description: 演示在 CentOS 上安装 .NET SDK 和 .NET 运行时的各种方�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b2ed62d024c6f0d78a4ec64693f1dafeabd8f47b
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594627"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031925"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>在 CentOS 上安装 .NET SDK 或 .NET 运行时
 
@@ -39,6 +39,10 @@ CentOS 支持 .NET。 本文介绍如何在 CentOS 上安装 .NET。
 - 2.0
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+
+## <a name="remove-preview-versions"></a>删除预览版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
@@ -79,7 +83,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>Snap
+## <a name="snap"></a>对齐
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 

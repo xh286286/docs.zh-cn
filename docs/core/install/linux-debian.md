@@ -4,12 +4,12 @@ description: 演示在 Debian 上安装 .NET SDK 和 .NET 运行时的各种方�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 683d0a9c47edf3cf9c47426d659e778eeb6f84df
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506950"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031886"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>在 Debian 上安装 .NET SDK 或 .NET 运行时
 
@@ -38,6 +38,10 @@ ms.locfileid: "94506950"
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>删除预览版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
@@ -125,7 +129,7 @@ sudo apt-get update; \
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a>Snap
+## <a name="snap"></a>对齐
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 

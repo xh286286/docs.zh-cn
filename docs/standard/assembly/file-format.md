@@ -4,12 +4,12 @@ description: 了解 .NET 程序集文件格式，使用它描述和包含 .NET �
 author: richlander
 ms.date: 08/20/2019
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b1de3f46f04f24dd4bbb2f695de8741feb29f226
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822186"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731535"
 ---
 # <a name="net-assembly-file-format"></a>.NET 程序集文件格式
 
@@ -17,7 +17,7 @@ ms.locfileid: "94822186"
 
 > 每个 CLI 组件都带有特定于该组件、用于声明、实现和引用的元数据。 因此，特定于组件的元数据被称为组件元数据，并且自 ECMA 335 I.9.1 生成的组件被认为是自描述组件和程序集。
 
-该格式完全被指定并标准化为 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。 所有 .NET 编译器和运行时都使用此格式。 已编入文档、偶尔更新的二进制格式的出现对于互操作性而言是一个主要优势（也可以说是要求）。 该格式上一次进行实质更新是在 2005 年 (.NET 2.0)，目的是为了容纳泛型和处理器体系结构。
+该格式完全被指定并标准化为 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。 所有 .NET 编译器和运行时都使用此格式。 已编入文档、偶尔更新的二进制格式的出现对于互操作性而言是一个主要优势（也可以说是要求）。 该格式上一次进行实质更新是在 2005 年 (.NET Framework 2.0)，目的是为了容纳泛型和处理器体系结构。
 
 格式为 CPU 和 OS 不可知。 它被用作针对许多芯片和 CPU 的 .NET 实现的一部分。 虽然格式本身继承了 Windows，但它可用于所有操作系统。 对于 OS 互操作性，这可以说是一项最重大的选择，因为大部分值存储在 Little-endian 格式中。 它与计算机的指针大小没有特定关联（例如，32 位、64 位）。
 

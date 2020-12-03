@@ -2,12 +2,12 @@
 title: Docker 术语
 description: 了解使用 Docker 时常用的一些基本术语。
 ms.date: 08/06/2020
-ms.openlocfilehash: b47639a2995c3a0a30ea7111c16bbea21f1048ba
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: a323075bdd73a117769913ac59426b5bec5df614
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915191"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686446"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -35,7 +35,7 @@ docker build
 
 **注册表**：提供存储库访问权限的服务。 大多数公共映像的默认注册表是 [Docker 中心](https://hub.docker.com/)（归作为组织的 Docker 所有）。 注册表通常包含来自多个团队的存储库。 公司通常使用私有注册表来存储和管理其创建的映像。 另一个示例是 Azure 容器注册表。
 
-**多体系结构映像**：对于多体系结构，此功能可根据运行 Docker 的平台简化选择适当映像的过程。 例如，当 Dockerfile 从注册表中请求基础映像 FROM mcr.microsoft.com/dotnet/core/sdk:3.1  时，它实际上获取 3.1-sdk-nanoserver-1909  、3.1-sdk-nanoserver-1809  或 3.1-sdk-buster-slim  ，具体取决于运行 Docker 的操作系统和版本。
+**多体系结构映像**：对于多体系结构，此功能可根据运行 Docker 的平台简化选择适当映像的过程。 例如，当 Dockerfile 从注册表中请求基础映像 FROM mcr.microsoft.com/dotnet/sdk:3.1 时，它实际上获取 3.1-sdk-nanoserver-1909、3.1-sdk-nanoserver-1809 或 3.1-sdk-buster-slim，具体取决于运行 Docker 的操作系统和版本   。
 
 **Docker 中心**：上传并使用映像的公共注册表。 Docker 中心提供 Docker 映像托管、公共或私有注册表，生成触发器和 Web 挂钩，以及与 GitHub 和 Bitbucket 集成。
 

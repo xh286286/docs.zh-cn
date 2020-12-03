@@ -1,18 +1,18 @@
 ---
 title: 过时成员 - .NET Framework
-description: 请参阅 .NET 4.5 和更高版本中已过时的类型成员的列表。 类型成员由程序集分组。 此处排除过时类型的成员。
+description: 请参阅.NET Framework 4.5 和更高版本中已过时的类型成员列表。 类型成员由程序集分组。 此处排除过时类型的成员。
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35dc67e80a47ba3e61db3d27f44f6c6ee45464ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558519"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726452"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework 中的已过时成员
 
@@ -134,7 +134,7 @@ ms.locfileid: "90558519"
 > |<xref:System.Security.HostSecurityManagerOptions?displayProperty=nameWithType>|<xref:System.Security.HostSecurityManagerOptions.HostPolicyLevel>|AppDomain 策略级别已过时，并将从 .NET Framework 的未来版本中移除。|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.ConvertPermissionSet%2A>|此方法已过时，不应再使用。|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.Deny%2A>|<xref:System.Security.PermissionSet.Deny%2A> 已过时，并将从 .NET Framework 的未来版本中移除。|
-> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> 仅用于实现 .NET 2.0 透明度兼容性。|
+> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> 仅用于实现 .NET Framework 2.0 透明度兼容性。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.CheckExecutionRights%2A>|由于执行权限检查再也无法关闭，因此 <xref:System.Security.SecurityManager.CheckExecutionRights%2A> 属性将不再起作用。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.IsGranted%2A>|<xref:System.Security.SecurityManager.IsGranted%2A> 已过时，并将从 .NET Framework 的未来版本中移除。 请改用 <xref:System.AppDomain.PermissionSet%2A?displayProperty=nameWithType> 属性或 <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType> 属性。|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A>|此方法已过时，并将从 .NET Framework 的未来版本中移除。|

@@ -4,12 +4,12 @@ description: .NET SDK 可以理解的 MSBuild 属性和项的引用。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 14603ba98f00d46d0f167652500979f94de0ec9a
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687466"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031684"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 项目的 MSBuild 引用
 
@@ -81,10 +81,24 @@ ms.locfileid: "94687466"
 
 ## <a name="publish-properties-and-items"></a>发布属性和项
 
+- [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
+
+对于依赖于其他库的插件项目，`CopyLocalLockFileAssemblies` 属性非常有用。 如果将此属性设置为 `true`，系统会将所有 NuGet 包依赖项复制到输出目录。 这意味着，可以使用 `dotnet build` 的输出在任何计算机上运行插件。
+
+```xml
+<PropertyGroup>
+  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+</PropertyGroup>
+```
+
+> [!TIP]
+> 或者，可以使用 `dotnet publish` 发布类库。 有关详细信息，请查看 [dotnet publish](../tools/dotnet-publish.md)。
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 

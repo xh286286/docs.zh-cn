@@ -4,12 +4,12 @@ description: 演示在 RHEL 上安装 .NET SDK 和 .NET 运行时的各种方式
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: cb03f84cf84557d467f0a067b8d5629a843ec7e3
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 931cad51ff8e35ff16b67ff9b795feb36010a66b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594564"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031749"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>在 RHEL 上安装 .NET SDK 或 .NET 运行时
 
@@ -39,6 +39,10 @@ RHEL 支持 .NET。 本文介绍如何在 RHEL 上安装 .NET。
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>删除预览版本
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>如何安装其他版本
 
