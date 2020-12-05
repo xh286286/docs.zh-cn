@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: eda6d8980d256c8063f2bfe1e051b0cb90b587ad
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 7cf25f181997ed66639842727be57e7824ef5466
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96591090"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739982"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="read-values-from-an-analog-to-digital-converter"></a>从模拟到数字转换器读取值
@@ -104,7 +104,7 @@ MCP3008 使用串行外围设备接口 (SPI) 进行通信。 下面是从 MCP300
 
 ## <a name="get-the-source-code"></a>获取源代码
 
-[GitHub 上提供](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial)了本教程的源。 <span class="docon docon-navigate-external x-hidden-focus"></span>
+[GitHub 上提供](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial)了本教程的源 <span class="docon docon-navigate-external x-hidden-focus"></span> 。
 
 ## <a name="next-steps"></a>后续步骤
 

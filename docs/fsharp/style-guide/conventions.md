@@ -2,12 +2,12 @@
 title: F# 编码约定
 description: '编写 F # 代码时，了解一般准则和惯例。'
 ms.date: 01/15/2020
-ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554021"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739897"
 ---
 # <a name="f-coding-conventions"></a>F# 编码约定
 
@@ -161,7 +161,7 @@ type MyParametricApi(dep1, dep2, dep3) =
     member _.Function2 arg2 = doStuffWith dep1 dep2 dep3 arg2
 ```
 
-这会启用以下功能：
+这样可以实现以下方案：
 
 1. 将任何依赖状态推送到 API 自身之外。
 2. 现在可以在 API 外完成配置。
@@ -190,9 +190,9 @@ type MoneyWithdrawalResult =
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f" am
-    | InsufficientFunds balance -> printfn "Failed: balance is %f" balance
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O" expiredDate
+    | Success am -> printfn "Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -301,7 +301,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 此函数现在会正确地处理找不到文件的情况，并将这种含义赋给返回，而不是作为全部捕获。 此返回值可以映射到该错误情况，同时不会丢弃任何上下文信息或强制调用方处理可能在代码中不相关的情况。
 
-诸如等类型 `Result<'Success, 'Error>` 适用于不在其中嵌套的基本操作，而 F # 可选类型最适合用于表示何时可以返回 *某些* 内容或不返回 *任何*内容。 尽管它们不是异常的替代项，但不应在尝试替换异常时使用。 相反，它们应该谨慎地按目标方式处理异常和错误管理策略的特定方面。
+诸如等类型 `Result<'Success, 'Error>` 适用于不在其中嵌套的基本操作，而 F # 可选类型最适合用于表示何时可以返回 *某些* 内容或不返回 *任何* 内容。 尽管它们不是异常的替代项，但不应在尝试替换异常时使用。 相反，它们应该谨慎地按目标方式处理异常和错误管理策略的特定方面。
 
 ## <a name="partial-application-and-point-free-programming"></a>部分应用和无点编程
 
@@ -309,7 +309,7 @@ F # 支持部分应用程序，因此，可以使用各种方法来编程无点�
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>不要在公共 Api 中使用部分应用程序和 currying
 
-几乎不例外，在公共 Api 中使用部分应用程序可能会给使用者造成混淆。 通常， `let` F # 代码中的绑定值是 **值**而不是 **函数值**。 混合值和函数值可能会导致在 exchange 中保存少量的代码行，以实现很多认知开销，尤其是在与运算符（如）结合使用 `>>` 以编写函数时。
+几乎不例外，在公共 Api 中使用部分应用程序可能会给使用者造成混淆。 通常， `let` F # 代码中的绑定值是 **值** 而不是 **函数值**。 混合值和函数值可能会导致在 exchange 中保存少量的代码行，以实现很多认知开销，尤其是在与运算符（如）结合使用 `>>` 以编写函数时。
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>考虑无点编程的工具含义
 
@@ -317,7 +317,7 @@ F # 支持部分应用程序，因此，可以使用各种方法来编程无点�
 
 ```fsharp
 let func name age =
-    printfn "My name is %s and I am %d years old!" name age
+    printfn "My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -508,7 +508,7 @@ let rec processStructPoint (p: SPoint) offset times =
 
 #### <a name="consider-struct-discriminated-unions-when-the-data-type-is-small-with-high-allocation-rates"></a>当数据类型为较小的分配速率时，请考虑结构可区分联合
 
-前面对结构元组和记录的性能的观测值还保存 [F # 可区分联合](../language-reference/discriminated-unions.md)。 考虑下列代码：
+前面对结构元组和记录的性能的观测值还保存 [F # 可区分联合](../language-reference/discriminated-unions.md)。 请考虑以下代码：
 
 ```fsharp
     type Name = Name of string

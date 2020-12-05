@@ -2,12 +2,12 @@
 title: 结果
 description: '了解如何使用 F # "Result" 类型来帮助你编写容错代码。'
 ms.date: 08/13/2020
-ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 53b1db0c9224ae032d58c06cd3c58e3dbed03f7b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656913"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740219"
 ---
 # <a name="results"></a>结果
 
@@ -68,15 +68,15 @@ let test() =
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
     match res1 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
-    | Error e -> printfn "Error: %s" e
+    | Ok req -> printfn $"My request was valid! Name: {req.Name} Email {req.Email}"  
+    | Error e -> printfn $"Error: {e}"
     // Prints: "My request was valid!  Name: Phillip Email: phillip@consoto.biz"
 
     let req2 = { Name = "Phillip"; Email = "phillip@bananas.com" }
     let res2 = validateRequest (Ok req2)
     match res2 with
-    | Ok req -> printfn "My request was valid! Name: %s Email %s" req.Name req.Email
-    | Error e -> printfn "Error: %s" e
+    | Ok req -> printfn $"My request was valid! Name: {req.Name} Email {req.Email}"  
+    | Error e -> printfn $"Error: {e}"
     // Prints: "Error: No email from bananas.com is allowed."
 
 test()
@@ -84,7 +84,7 @@ test()
 
 正如您所看到的，如果强制所有的验证函数都返回，则可以很容易地将它们链接在一起 `Result` 。  这使你可以将此类功能分解为小部分，它们可根据你的需要进行组合。  这也增加了在一轮验证的末尾 *强制* 使用 [模式匹配](pattern-matching.md) 的值，进而强制实施更高程度的程序正确性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [可区分联合](discriminated-unions.md)
 - [模式匹配](pattern-matching.md)

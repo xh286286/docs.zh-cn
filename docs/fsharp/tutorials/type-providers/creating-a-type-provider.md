@@ -2,12 +2,12 @@
 title: 教程：创建类型提供程序
 description: '了解如何在 F # 3.0 中创建自己的 F # 类型提供程序，具体方法是检查几个简单的类型提供程序来说明基本概念。'
 ms.date: 11/04/2019
-ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810867"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739693"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程：创建类型提供程序
 
@@ -175,7 +175,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-此类型必须是公共的，并且必须使用 [TypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) 属性进行标记，以便编译器在单独的 F # 项目引用包含该类型的程序集时识别该类型提供程序。 *Config*参数是可选的，如果存在，则包含 F # 编译器创建的类型提供程序实例的上下文配置信息。
+此类型必须是公共的，并且必须使用 [TypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) 属性进行标记，以便编译器在单独的 F # 项目引用包含该类型的程序集时识别该类型提供程序。 *Config* 参数是可选的，如果存在，则包含 F # 编译器创建的类型提供程序实例的上下文配置信息。
 
 接下来，实现 [ITypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-itypeprovider.html) 接口。 在这种情况下，将 `TypeProviderForNamespaces` API 中的类型用作 `ProvidedTypes` 基类型。 此帮助器类型可以提供积极提供的命名空间的有限集合，其中每个命名空间都直接包含有限数量的固定、积极提供的类型。 在此上下文中，提供程序 *积极* 将生成类型，即使它们不需要或不使用也是如此。
 
@@ -243,7 +243,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 接下来，将 XML 文档添加到该类型。 此文档被延迟，即，如果主机编译器需要，则按需计算。
 
 ```fsharp
-t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
+t.AddXmlDocDelayed (fun () -> $"""This provided type {"Type" + string n}""")
 ```
 
 接下来，将提供的静态属性添加到类型中：
@@ -352,9 +352,9 @@ t.AddMembersDelayed(fun () ->
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
               p.AddXmlDocDelayed(fun () ->
-                  sprintf "This is StaticProperty%d on NestedType" i)
+                  $"This is StaticProperty{i} on NestedType")
 
-              p
+              p
       ]
 
     staticPropsInNestedType)
@@ -581,7 +581,7 @@ for group in r.GetGroupNames() do
         propertyName = group,
         propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+        prop.AddXmlDoc($"""Gets the ""{group}"" group from this match""")
     matchTy.AddMember prop
 ```
 
@@ -764,7 +764,7 @@ do ()
 let info = new MiniCsv<"info.csv">()
 for row in info.Data do
 let time = row.Time
-printfn "%f" (float time)
+printfn $"{float time}"
 ```
 
 在这种情况下，编译器应将这些调用转换为类似于以下示例的内容：
@@ -773,7 +773,7 @@ printfn "%f" (float time)
 let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
-printfn "%f" (float time)
+printfn $"%f{float time}"
 ```
 
 最佳转换需要类型提供程序 `CsvFile` 在类型提供程序的程序集中定义实类型。 类型提供程序经常依赖几个帮助程序类型和方法来包装重要逻辑。 由于度量值会在运行时被清除，因此可以使用 `float[]` 作为行的已擦除类型。 编译器会将不同的列视为具有不同的度量值类型。 例如，我们的示例中的第一列的类型为，第二列的类型为 `float<meter>` `float<second>` 。 但是，清除的表示形式可能会变得非常简单。
@@ -1048,7 +1048,7 @@ ProvidedTypes API 提供了提供度量值注释的帮助器。 例如，若要�
   let nullableDecimal_kgpm2 = typedefof<System.Nullable<_>>.MakeGenericType [|dkgpm2 |]
 ```
 
-### <a name="accessing-project-local-or-script-local-resources"></a>访问项目本地资源或脚本本地资源
+### <a name="accessing-project-local-or-script-local-resources"></a>访问 Project-Local 或 Script-Local 资源
 
 在构造过程中，可以为类型提供程序的每个实例指定一个 `TypeProviderConfig` 值。 此值包含提供程序的 "解析文件夹" (即，编译的项目文件夹或包含脚本) 的目录、所引用程序集的列表和其他信息。
 
@@ -1136,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   您可以使用打印到 stdout 的日志记录。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [类型提供程序](index.md)
 - [类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

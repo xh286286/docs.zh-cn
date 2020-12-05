@@ -1,17 +1,17 @@
 ---
 title: 对象表达式
-description: 了解如何使用F#对象表达式时您想要避免额外的代码和开销所需创建一个新命名类型。
+description: '如果要避免创建新的命名类型所需的额外代码和开销，请了解如何使用 F # 对象表达式。'
 ms.date: 02/08/2019
-ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a3e40b7833b551eefb95ec62b935acd1ba7b1f9
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666282"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740297"
 ---
 # <a name="object-expressions"></a>对象表达式
 
-*对象表达式*是表达式，它创建动态创建的匿名对象类型的新实例可基于现有基类型、 接口或接口集。
+*对象表达式* 是基于现有的基类型、接口或接口集创建动态创建的匿名对象类型的新实例的表达式。
 
 ## <a name="syntax"></a>语法
 
@@ -30,15 +30,15 @@ ms.locfileid: "61666282"
 
 ## <a name="remarks"></a>备注
 
-在上述语法中， *typename*表示现有的类类型或接口类型。 *类型-params*介绍了可选的泛型类型参数。 *自变量*仅用于类类型，需要构造函数参数。 *成员定义*替代基类方法，或从基类或接口的抽象方法的实现。
+在前面的语法中， *typename* 表示现有的类类型或接口类型。 *类型-参数* 描述可选的泛型类型参数。 这些 *参数* 仅用于需要构造函数参数的类类型。 *成员定义* 是基类方法的重写，或基类或接口中抽象方法的实现。
 
-下面的示例演示了多种不同类型的对象表达式。
+下面的示例演示了几种不同类型的对象表达式。
 
 ```fsharp
 // This object expression specifies a System.Object but overrides the
 // ToString method.
 let obj1 = { new System.Object() with member x.ToString() = "F#" }
-printfn "%A" obj1
+printfn $"{obj1}"
 
 // This object expression implements the IFormattable interface.
 let delimiter(delim1: string, delim2: string, value: string) =
@@ -75,8 +75,8 @@ let implementer() =
 
 ## <a name="using-object-expressions"></a>使用对象表达式
 
-当你想要避免额外的代码和创建所需的新命名类型的开销时，您可以使用对象表达式。 如果您使用对象表达式在程序中创建的类型的数量降至最低，可以减少代码的行数，并防止不必要的迅速普及的类型。 而不是创建多个类型只是为了处理特定情况下，可以使用自定义现有类型或为手头的特定情况提供适当的接口实现的对象表达式。
+如果要避免创建新的命名类型所需的额外代码和开销，请使用对象表达式。 如果使用对象表达式来最大程度地减少在程序中创建的类型的数目，则可以减少代码的行数，并防止不必要的类型激增。 您可以使用对象表达式自定义现有类型，也可以为手头的特定事例提供适当的接口实现，而不是仅创建用于处理特定情况的许多类型。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [F# 语言参考](index.md)

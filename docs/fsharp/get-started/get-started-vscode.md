@@ -2,12 +2,12 @@
 title: Visual Studio Code 中的 F# 入门
 description: '了解如何将 F # 与 Visual Studio Code 和 Ionide 入门插件套件一起使用。'
 ms.date: 12/23/2018
-ms.openlocfilehash: 3317d0037d3c14a6b55079385d7b27e499c0c392
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 11fb0d443fb7c2b3f270d45bfeaa91102ba28efd
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050541"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739797"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code 中的 F# 入门
 
@@ -144,7 +144,7 @@ val toPigLatin : word:string -> string
 let main argv =
     for name in argv do
         let newName = PigLatin.toPigLatin name
-        printfn "%s in Pig Latin is: %s" name newName
+        printfn %"{name} in Pig Latin is: {newName}"
 
     0
 ```

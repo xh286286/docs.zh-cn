@@ -4,12 +4,12 @@ description: '了解如何创建方便的语法，以便在 F # 中编写可使�
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a0a71533ea1bc87b75f028ad0d416326f627672a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705301"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739296"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -17,7 +17,7 @@ F # 中的计算表达式提供了一种方便的语法，用于写入可使用�
 
 ## <a name="overview"></a>概述
 
-计算可以采用多种形式。 最常见的计算形式是单线程执行，它易于理解和修改。 但是，并非所有形式的计算都像单线程执行一样简单。 一些示例包括：
+计算可以采用多种形式。 最常见的计算形式是单线程执行，它易于理解和修改。 但是，并非所有形式的计算都像单线程执行一样简单。 示例包括：
 
 - 非确定性计算
 - 异步计算
@@ -111,7 +111,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 在大多数情况下，调用方可以省略它。 若要忽略，最常见的方法 `yield` 是用 `->` 运算符：
@@ -123,7 +123,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 对于更复杂的表达式，可能会产生许多不同的值，并且可能有条件地省略关键字：
@@ -167,7 +167,7 @@ let squaresAndCubes =
         yield! cubes
     }
 
-printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+printfn $"{squaresAndCubes}"  // Prints - 1; 4; 9; 1; 8; 27
 ```
 
 当计算时，由调用的计算表达式 `yield!` 将每次生成一个项，从而平展结果。
@@ -262,7 +262,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 在上面的代码中， `Run` `Delay` 如果未在计算表达式生成器类中定义，则将忽略对和的调用。 下面的表中所述的翻译将计算表达式的主体（此处表示为 `{| cexpr |}` ）转换为涉及生成器类方法的调用。 `{| cexpr |}`根据这些转换以递归方式定义计算表达式，其中 `expr` 是 F # 表达式， `cexpr` 是计算表达式。
 
-|Expression|翻译|
+|表达式|翻译|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -390,7 +390,7 @@ let eventually = new EventuallyBuilder()
 
 let comp = eventually {
     for x in 1..2 do
-        printfn " x = %d" x
+        printfn $" x = %d{x}"
     return 3 + 4 }
 
 // Try the remaining lines in F# interactive to see how this

@@ -2,12 +2,12 @@
 title: 切片
 description: '了解如何使用现有 F # 数据类型的切片，以及如何为其他数据类型定义自己的切片。'
 ms.date: 11/20/2020
-ms.openlocfilehash: 9c072648ed46ae29871f2be5cc64b493f6a9b857
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: b776058df5a174dfe48dbf513bf17281036dd83e
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098952"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740375"
 ---
 # <a name="slices"></a>切片
 
@@ -27,15 +27,15 @@ let fullList = [ 1 .. 100 ]
 
 // Create a slice from indices 1-5 (inclusive)
 let smallSlice = fullList.[1..5]
-printfn "Small slice: %A" smallSlice
+printfn $"Small slice: {smallSlice}"
 
 // Create a slice from the beginning to index 5 (inclusive)
 let unboundedBeginning = fullList.[..5]
-printfn "Unbounded beginning slice: %A" unboundedBeginning
+printfn $"Unbounded beginning slice: {unboundedBeginning}"
 
 // Create a slice from an index to the end of the list
 let unboundedEnd = fullList.[94..]
-printfn "Unbounded end slice: %A" unboundedEnd
+printfn $"Unbounded end slice: {unboundedEnd}"
 ```
 
 切片数组与切片列表类似：
@@ -46,15 +46,15 @@ let fullArray = [| 1 .. 100 |]
 
 // Create a slice from indices 1-5 (inclusive)
 let smallSlice = fullArray.[1..5]
-printfn "Small slice: %A" smallSlice
+printfn $"Small slice: {smallSlice}"
 
 // Create a slice from the beginning to index 5 (inclusive)
 let unboundedBeginning = fullArray.[..5]
-printfn "Unbounded beginning slice: %A" unboundedBeginning
+printfn $"Unbounded beginning slice: {unboundedBeginning}"
 
 // Create a slice from an index to the end of the list
 let unboundedEnd = fullArray.[94..]
-printfn "Unbounded end slice: %A" unboundedEnd
+printfn $"Unbounded end slice: {unboundedEnd}"
 ```
 
 ## <a name="slicing-multidimensional-arrays"></a>切片多维数组
@@ -66,27 +66,27 @@ F # 支持 F # 核心库中的多维数组。 与一维数组一样，多维数�
 ```fsharp
 // Generate a 3x3 2D matrix
 let A = array2D [[1;2;3];[4;5;6];[7;8;9]]
-printfn "Full matrix:\n %A" A
+printfn $"Full matrix:\n {A}"
 
 // Take the first row
 let row0 = A.[0,*]
-printfn "Row 0: %A" row0
+printfn $"{row0}"
 
 // Take the first column
 let col0 = A.[*,0]
-printfn "Column 0: %A" col0
+printfn $"{col0}"
 
 // Take all rows but only two columns
 let subA = A.[*,0..1]
-printfn "%A" subA
+printfn $"{subA}"
 
 // Take two rows and all columns
 let subA' = A.[0..1,*]
-printfn "%A" subA'
+printfn $"{subA}"
 
 // Slice a 2x2 matrix out of the full 3x3 matrix
 let twoByTwo = A.[0..1,0..1]
-printfn "%A" twoByTwo
+printfn $"{twoByTwo}"
 ```
 
 ## <a name="defining-slices-for-other-data-structures"></a>为其他数据结构定义切片
@@ -127,7 +127,7 @@ type Span<'T> with
 
 let printSpan (sp: Span<int>) =
     let arr = sp.ToArray()
-    printfn "%A" arr
+    printfn $"{arr}"
 
 let sp = [| 1; 2; 3; 4; 5 |].AsSpan()
 printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
@@ -144,14 +144,14 @@ F # 中的所有内部切片都是结尾的;也就是说，切片中包括上限
 // Define a new list
 let xs = [1 .. 10]
 
-printfn "%A" xs.[2..5] // Includes the 5th index
+printfn $"{xs.[2..5]}" // Includes the 5th index
 ```
 
 ## <a name="built-in-f-empty-slices"></a>内置 F # 空切片
 
 如果语法可能生成不存在的切片，则 F # 列表、数组、序列、字符串、多维 (2D、3D、4D) 数组将生成一个空切片。
 
-请考虑以下示例：
+请看下面的示例：
 
 ```fsharp
 let l = [ 1..10 ]
@@ -206,6 +206,6 @@ m.[*, 0, 1]
 
 最后一行修复了 `y` `z` 三维数组的和索引，并采用了对应于矩阵的其余 `x` 值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [索引属性](./members/indexed-properties.md)

@@ -8,16 +8,19 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: ca3a9cb914befbc8e0982070b818b27ee3143793
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "96590989"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739969"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 源代码分析概述
 
-.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 从 .NET 5.0 开始，这些分析器包含在 .NET SDK 中。  (之前，已将代码质量分析器安装为 [NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)，并随 Visual Studio 一起安装了代码样式分析器。 ) 
+.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 从 .NET 5.0 开始，这些分析器包含在 .NET SDK 中。 如果不想移到 .NET 5 + SDK，或者想要使用基于 NuGet 包的模型，则可以在 `Microsoft.CodeAnalysis.NetAnalyzers` [nuget 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)中使用该分析器。 对于按需版本更新，你可能更倾向于使用基于包的模型。
+
+> [!NOTE]
+> .NET 分析器与目标平台无关。 也就是说，你的项目不需要面向特定的 .NET 平台。 分析器适用于目标为的项目以及 `net5.0` 更早的 .net 版本，如 `netcoreapp` 、 `netstandard` 和 `net472` 。
 
 - [ ( "CAxxxx" 规则的代码质量分析) ](#code-quality-analysis)
 - [ ( "IDExxxx" 规则的代码样式分析) ](#code-style-analysis)
@@ -149,7 +152,7 @@ Visual Studio 提供了其他方式来禁止显示代码分析规则中的警告
 
 有关规则严重性的详细信息，请参阅 [配置规则严重性](configuration-options.md#severity-level)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码质量分析规则参考](quality-rules/index.md)
 - [代码样式分析规则引用](style-rules/index.md)

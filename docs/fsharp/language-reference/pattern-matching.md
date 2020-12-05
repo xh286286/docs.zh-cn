@@ -2,18 +2,18 @@
 title: 模式匹配
 description: '了解如何在 F # 中使用模式，以便将数据与逻辑结构进行比较，将数据分解为各个构成部分，或从数据中提取信息。'
 ms.date: 11/12/2020
-ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 932f50b7947f6df728149437dd3ceb19c42e5c6a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687800"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740271"
 ---
 # <a name="pattern-matching"></a>模式匹配
 
 模式是用于转换输入数据的规则。 它们在整个 F # 语言中使用，以将数据与一个或多个逻辑结构进行比较，将数据分解为各个构成部分，或以各种方式从数据中提取信息。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 在许多语言构造（如表达式）中使用模式 `match` 。 当您处理 `let` 绑定、lambda 表达式和与表达式关联的异常处理程序中的函数的参数时，将使用这些参数 `try...with` 。 有关详细信息，请参阅 [Match 表达式](match-expressions.md)、 [let 绑定](./functions/let-bindings.md)、 [Lambda 表达式： `fun` 关键字](./functions/lambda-expressions-the-fun-keyword.md)和 [异常： `try...with` 表达式](./exception-handling/the-try-with-expression.md)。
 
@@ -29,7 +29,7 @@ match expression with
 
 下表显示了支持的模式。 在运行时，将按照表中列出的顺序针对以下每个模式对输入进行测试，并以递归方式应用模式：在代码中显示时，从第一个到最后一个，以及从左到右的每行模式。
 
-|名称|说明|示例|
+|“属性”|描述|示例|
 |----|-----------|-------|
 |常量模式|任何数值、字符或字符串文本、枚举常量或定义的文本标识符|`1.0`, `"test"`, `30`, `Color.Red`|
 |标识符模式|可区分联合、异常标签或活动模式用例的 case 值|`Some(x)`<br /><br />`Failure(msg)`|
@@ -88,8 +88,8 @@ type Shape =
 ```fsharp
 let matchShape shape =
     match shape with
-    | Rectangle(height = h) -> printfn "Rectangle with length %f" h
-    | Circle(r) -> printfn "Circle with radius %f" r
+    | Rectangle(height = h) -> printfn $"Rectangle with length %f{h}"
+    | Circle(r) -> printfn $"Circle with radius %f{r}"
 ```
 
 命名字段的使用是可选的，因此在前面的示例中， `Circle(r)` 和 `Circle(radius = r)` 具有相同的效果。
@@ -98,7 +98,7 @@ let matchShape shape =
 
 ```fsharp
 match shape with
-| Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
+| Rectangle(height = h; width = w) -> printfn $"Rectangle with height %f{h} and width %f{w}"
 | _ -> ()
 ```
 
@@ -232,7 +232,7 @@ f "asdf" // does not match
 
 有关 [`nameof`](nameof.md) 可获取名称的信息，请参阅运算符。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Match 表达式](match-expressions.md)
 - [活动模式](active-patterns.md)

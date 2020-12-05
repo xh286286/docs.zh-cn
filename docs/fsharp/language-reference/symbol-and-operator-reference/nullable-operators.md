@@ -2,12 +2,12 @@
 title: 可以为 null 的运算符
 description: '了解 F # 编程语言中可用的可以为 null 的运算符。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 951692ba22781f7f9e759c55bc708fc24f7a5014
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 9ac6afc2c3f4277ee6e93b1ccb3d21f892926b4b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559136"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740362"
 ---
 # <a name="nullable-operators"></a>可以为 null 的运算符
 
@@ -31,7 +31,7 @@ ms.locfileid: "88559136"
 |[?/](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-nullableoperators.html#(%20?/%20))|[/?](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-nullableoperators.html#(%20/?%20))|[?/?](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-nullableoperators.html#(%20?/?%20))|
 |[?%](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-nullableoperators.html#(%20?%%20))|[%?](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-nullableoperators.html#(%20%?%20))|[?%?](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-nullableoperators.html#(%20?%?%20))|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 可以为 null 的运算符包含在命名空间[fsharp.core](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq.html)的[NullableOperators](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-nullableoperators.html)模块中。 可为 null 的数据的类型为 `System.Nullable<'T>` 。
 
@@ -48,7 +48,7 @@ let nullableInt = new System.Nullable<int>(10)
 let nullableFloat = Nullable.float nullableInt
 
 // Use the regular non-nullable float operator to convert to a non-nullable float.
-printfn "%f" (float nullableFloat)
+printfn $"%f{float nullableFloat}"
 ```
 
 输出为 `10.000000`。
@@ -73,17 +73,17 @@ query {
     for row in db.Table2 do
     where (row.TestData1.HasValue && row.TestData1.Value > 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" row.TestData1.Value row.Name)
+} |> Seq.iter (fun row -> printfn $"%d{row.TestData1.Value} %s{row.Name}")
 
 query {
     for row in db.Table2 do
     // Use a nullable operator ?>
     where (row.TestData1 ?> 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" (row.TestData1.GetValueOrDefault()) row.Name)
+} |> Seq.iter (fun row -> printfn "%d{row.TestData1.GetValueOrDefault()} %s{row.Name}")
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [类型提供程序](../../tutorials/type-providers/index.md)
 - [查询表达式](../query-expressions.md)
