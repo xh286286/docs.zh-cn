@@ -4,12 +4,12 @@ description: 了解如何使用 F# 交互窗口 (dotnet fsi) 在控制台以交�
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438042"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549392"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F\# 进行交互式编程
 
@@ -90,6 +90,9 @@ F# 脚本在 [Visual Studio](../../get-started/get-started-visual-studio.md)、[
 
 ## <a name="referencing-packages-in-f-interactive"></a>在 F# 交互窗口中引用包
 
+> [!NOTE]
+> 程序包管理系统是可扩展的；详细了解[其他扩展](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)。
+
 F# 交互窗口支持使用 `#r "nuget:"` 语法和可选版本来引用 NuGet 包：
 
 ```fsharp
@@ -133,6 +136,8 @@ printfn "%A" (f (dsharp.tensor 1.2))
 
 > [!NOTE]
 > 目前对使用框架引用的脚本（例如 `Microsoft.NET.Sdk.Web` 或 `Microsoft.NET.Sdk.WindowsDesktop`）有限制。 Saturn、Giraffe、WinForms 等包不可用。 问题 [#9417](https://github.com/dotnet/fsharp/issues/9417) 中正在跟踪此问题。
+
+详细了解[包管理扩展性和其他扩展](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>使用 F# 交互窗口引用磁盘上的程序集
 
