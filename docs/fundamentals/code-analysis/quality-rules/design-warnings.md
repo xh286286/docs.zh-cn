@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8c7d46b9271e33ab7ce3f989fae95bd57394ccd
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96590535"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851524"
 ---
 # <a name="design-rules"></a>设计规则
 
@@ -75,3 +75,4 @@ ms.locfileid: "96590535"
 | [CA1068:CancellationToken 参数必须最后出现](ca1068.md) | 方法具有一个不是最后一个参数的 CancellationToken 参数。 |
 | [CA1069:枚举不得具有重复值](ca1069.md) | 枚举具有多个显式分配相同常数值的成员。 |
 | [CA1070:不要将事件字段声明为“虚拟”](ca1070.md) | [类似字段的事件](../../../csharp/event-pattern.md#defining-and-raising-field-like-events)被声明为 virtual。 |
+| [CA1071：重写基。当实现 IEquatable 时等于](ca1071.md) | 派生类型实现 <xref:System.IEquatable%601> ，但不重写基类 <xref:System.IEquatable%601.Equals%2A> 方法。 |

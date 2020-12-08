@@ -2,12 +2,12 @@
 title: 应用程序发布
 description: 了解如何发布 .NET Core 应用程序。 .NET Core 可以发布特定于平台或跨平台的应用。 你可以将应用发布为独立应用或依赖于框架的应用。 每个模式都会影响用户运行应用的方式。
 ms.date: 04/01/2020
-ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 03d53c8b5184d7276a69a1058d6b1b2f1e62dc81
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654667"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599572"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 应用程序发布概述
 
@@ -67,7 +67,7 @@ ms.locfileid: "91654667"
 
 可以通过 `dotnet <filename.dll>` 命令运行应用的跨平台二进制文件，并且它可以在任何平台上运行。 如果应用使用具有特定于平台的实现的 NuGet 包，则所有平台的依赖项都将连同应用一起复制到发布文件夹。
 
-可以通过将 `-r <RID> --self-contained false` 参数传递到 [`dotnet publish`](../tools/dotnet-publish.md) 命令，为特定平台创建可执行文件。 省略 `-r` 参数时，将为当前平台创建可执行文件。 具有特定于目标平台的依赖项的任何 NuGet 包都将复制到发布文件夹。
+可以通过将 `-r <RID> --self-contained false` 参数传递到 [`dotnet publish`](../tools/dotnet-publish.md) 命令，为特定平台创建可执行文件。 省略 `-r` 参数时，将为当前平台创建可执行文件。 具有特定于目标平台的依赖项的任何 NuGet 包都将复制到发布文件夹。 如果不需要特定于平台的可执行文件，则可以在项目文件中指定 `<UseAppHost>False</UseAppHost>`。 有关详细信息，请参阅[适用于 .NET SDK 项目的 MSBuild 参考](../project-sdk/msbuild-props.md#useapphost)。
 
 ### <a name="advantages"></a>优点
 

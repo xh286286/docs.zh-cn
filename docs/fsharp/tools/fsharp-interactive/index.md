@@ -4,12 +4,12 @@ description: 了解如何使用 F# 交互窗口 (dotnet fsi) 在控制台以交�
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549392"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739302"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F\# 进行交互式编程
 
@@ -118,7 +118,7 @@ let t2 = dsharp.tensor [ [ 0; 1 ]; [ 2; 2 ] ]
 // Define a scalar-to-scalar function
 let f (x: Tensor) = sin (sqrt x)
 
-printfn "%A" (f (dsharp.tensor 1.2))
+printfn $"{f (dsharp.tensor 1.2)}"
 ```
 
 ### <a name="specifying-a-package-source"></a>指定包源
@@ -137,7 +137,7 @@ printfn "%A" (f (dsharp.tensor 1.2))
 > [!NOTE]
 > 目前对使用框架引用的脚本（例如 `Microsoft.NET.Sdk.Web` 或 `Microsoft.NET.Sdk.WindowsDesktop`）有限制。 Saturn、Giraffe、WinForms 等包不可用。 问题 [#9417](https://github.com/dotnet/fsharp/issues/9417) 中正在跟踪此问题。
 
-详细了解[包管理扩展性和其他扩展](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)。
+有关详细信息，请参阅[包管理扩展性和其他扩展](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)。
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>使用 F# 交互窗口引用磁盘上的程序集
 
@@ -154,7 +154,7 @@ let myFunction x y = x + 2 * y
 ```fsharp
 #r "path/to/MyAssembly.dll"
 
-printfn "%A" (MyAssembly.myFunction 10 40)
+printfn $"{MyAssembly.myFunction 10 40}"
 ```
 
 输出如下所示：
@@ -182,7 +182,7 @@ let square x = x * x
 #load "Script1.fsx"
 open Script1
 
-printfn "%d" (square 12)
+printfn $"%d{square 12}"
 ```
 
 请注意，`open Script1` 声明是必需的。 这是因为 F# 脚本中的构造被编译成顶级模块，此模块是它所在脚本文件的名称。
@@ -206,7 +206,7 @@ F# 脚本有权访问表示 F# 交互窗口会话的自定义 `fsi` 对象。 �
 let args = fsi.CommandLineArgs
 
 for arg in args do
-    printfn "%s" arg
+    printfn $"{arg}"
 ```
 
 计算后，它会打印出所有参数。 第一个参数始终是要计算的脚本的名称：

@@ -4,12 +4,12 @@ description: 概述了可安装的支持和扩展 .NET Core 功能的其他工�
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6aa8b62f02c4325664ffeccc0c0d4a0635a96f2d
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698996"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599214"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 附加工具概述
 
@@ -28,6 +28,10 @@ ms.locfileid: "95698996"
 [dotnet-gcdump](../diagnostics/dotnet-gcdump.md) 提供为活动 .NET 进程收集 GC（垃圾回收器）转储的方式。
 
 [dotnet-trace](../diagnostics/dotnet-trace.md) 会从你的应用收集分析数据，这些数据可帮助你了解应用运行速度缓慢的原因。
+
+## <a name="net-install-tool-for-extension-authors"></a>适用于扩展创建者的 .NET 安装工具
+
+[适用于扩展创建者的 .NET 安装工具](https://github.com/dotnet/vscode-dotnet-runtime)是一种专门供 VS Code 扩展创建者获取 .NET Core 运行时的 Visual Studio Code 扩展。 此工具专门供采用 .NET 编写并且需要 .NET 启动其各个部分的扩展（例如语言服务器）使用。 此扩展并非直接供用户用来安装用于开发的 .NET。
 
 ## <a name="wcf-web-service-reference-tool"></a>WCF Web Service Reference 工具
 
