@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: .NET 卸载工具
             href: ../core/additional-tools/uninstall-tool.md
+          - name: 适用于扩展创建者的 .NET 安装工具
+            href: ../core/additional-tools/vscode-dotnet-runtime.md
           - name: 生成自签名证书
             href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: WCF Web 服务引用提供程序
@@ -1645,6 +1647,8 @@ items:
                 displayName: binary serialization
               - name: BinaryFormatter 安全指南
                 href: ../standard/serialization/binaryformatter-security-guide.md
+              - name: BinaryFormatter 事件源
+                href: ../standard/serialization/binaryformatter-event-source.md
               - name: 序列化概念
                 href: ../standard/serialization/serialization-concepts.md
               - name: 基本序列化
