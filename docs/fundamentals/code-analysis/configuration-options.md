@@ -5,18 +5,20 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: af2ebb74786f0ae884ffee4636765cae43fcb23f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "96590485"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851785"
 ---
 # <a name="configuration-options-for-code-analysis"></a>代码分析的配置选项
 
 代码分析规则具有各种配置选项。 这些选项在 [分析器配置文件](configuration-files.md) 中使用语法指定为键值对 `<option key> = <option value>` 。
 
-您要配置的最常见的选项是规则的严重性。 您可以为所有分析器规则（包括 [代码质量规则](quality-rules/index.md) 和 [代码样式规则](style-rules/index.md)）配置严重级别。
+您要配置的最常见的选项是 [规则的严重性](#severity-level)。 您可以为所有分析器规则（包括 [代码质量规则](quality-rules/index.md) 和 [代码样式规则](style-rules/index.md)）配置严重级别。 例如，若要启用某个规则作为警告，可以将以下键值对添加到 EditorConfig 文件中。
+
+`dotnet_diagnostic.<rule ID>.severity = warning`
 
 你还可以配置其他选项以自定义规则行为：
 

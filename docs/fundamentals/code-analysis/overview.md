@@ -2,48 +2,45 @@
 title: .NET 中的代码分析
 titleSuffix: ''
 description: 了解 .NET SDK 中的源代码分析。
-ms.date: 08/22/2020
+ms.date: 12/04/2020
 ms.topic: overview
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739969"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851811"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 源代码分析概述
 
-.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 从 .NET 5.0 开始，这些分析器包含在 .NET SDK 中。 如果不想移到 .NET 5 + SDK，或者想要使用基于 NuGet 包的模型，则可以在 `Microsoft.CodeAnalysis.NetAnalyzers` [nuget 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)中使用该分析器。 对于按需版本更新，你可能更倾向于使用基于包的模型。
+.NET Compiler Platform (Roslyn) 分析器会检查 C# 或 Visual Basic 代码的代码质量和代码样式问题。 从 .NET 5.0 开始，这些分析器包含在 .NET SDK 中，无需单独安装。 如果项目面向 .NET 5 或更高版本，则默认情况下启用代码分析。 如果你的项目面向不同的 .NET 实现（例如，.NET Core、.NET Standard 或 .NET Framework），则必须通过将 [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 属性设置为来手动启用代码分析 `true` 。
+
+如果不想移到 .NET 5 + SDK，或者想要使用基于 NuGet 包的模型，也可以在 [CodeAnalysis. NetAnalyzers NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)中使用该分析器。 对于按需版本更新，你可能更倾向于使用基于包的模型。
 
 > [!NOTE]
-> .NET 分析器与目标平台无关。 也就是说，你的项目不需要面向特定的 .NET 平台。 分析器适用于目标为的项目以及 `net5.0` 更早的 .net 版本，如 `netcoreapp` 、 `netstandard` 和 `net472` 。
-
-- [ ( "CAxxxx" 规则的代码质量分析) ](#code-quality-analysis)
-- [ ( "IDExxxx" 规则的代码样式分析) ](#code-style-analysis)
+> .NET 分析器是不可知的。 也就是说，你的项目不需要面向特定的 .NET 实现。 分析器适用于目标为的项目以及 `net5.0` 更早的 .net 版本，如 `netcoreapp3.1` 和 `net472` 。
 
 如果分析器发现规则冲突，则会将其报告为建议、警告或错误，具体情况视每个规则的 [配置](configuration-options.md)方式而定。 代码分析冲突以前缀 "CA" 或 "IDE" 显示，以便将它们与编译器错误区分开来。
 
-> [!TIP]
->
-> - 你还可以安装第三方分析器，如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、 [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/)、 [XUnit 分析器](https://www.nuget.org/packages/xunit.analyzers/)和 [sonar.projectname Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)。
-> - 如果你使用的是 Visual Studio，许多分析器规则都有关联的代码修复程序，你可以应用这些 *修补程序* 来纠正此问题。 代码修复显示在灯泡图标菜单中。
-
 ## <a name="code-quality-analysis"></a>代码质量分析
 
-_代码质量分析 ( "CA" ) 规则_ 检查您的 c # 或 Visual Basic 代码以获得安全性、性能、设计和其他问题。 默认情况下，对于面向 .NET 5.0 或更高版本的项目，分析处于启用状态。 通过将 [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 属性设置为，可以对面向早期 .net 版本的项目启用代码分析 `true` 。 你还可以通过将设置为来对你的项目禁用代码分析 `EnableNETAnalyzers` `false` 。
+*代码质量分析* ( "CAxxxx" ) 规则检查 c # 或 Visual Basic 代码以获得安全性、性能、设计和其他问题。 默认情况下，对于面向 .NET 5.0 或更高版本的项目，分析处于启用状态。 通过将 [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 属性设置为，可以对面向早期 .net 版本的项目启用代码分析 `true` 。 你还可以通过将设置为来对你的项目禁用代码分析 `EnableNETAnalyzers` `false` 。
 
 > [!TIP]
-> 在 Visual Studio 中，你可以使用项目属性窗口来启用或禁用代码分析。 若要属性窗口访问项目，请在解决方案资源管理器中右键单击项目，然后选择 " **属性**"。 接下来，选择 " **代码分析** " 选项卡，然后选中或清除相应的复选框以 **启用 .net 分析器**。
+> 如果使用 Visual Studio：
+>
+> - 许多分析器规则都有关联的代码修复程序，您可以应用这些 *修补程序* 来纠正此问题。 代码修复显示在灯泡图标菜单中。
+> - 可以通过在解决方案资源管理器中右键单击项目，然后选择 "**属性**  >  " "**代码分析**" 选项卡 >**启用 .net 分析器** 来启用或禁用代码分析。
 
 ### <a name="enabled-rules"></a>启用规则
 
-默认情况下，在 .NET 5.0 Preview 8 中启用以下规则。
+默认情况下，在 .NET 5.0 中启用以下规则。
 
-| 诊断 ID | 类别 | 严重性 | 说明 |
+| 诊断 ID | Category | 严重性 | 说明 |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | 互操作性 | 警告 | 平台兼容性分析器 |
 | [CA1417](/visualstudio/code-quality/ca1417) | 互操作性 | 警告 | 不要 `OutAttribute` 在 P/invoke 的字符串参数上使用 |
@@ -54,24 +51,22 @@ _代码质量分析 ( "CA" ) 规则_ 检查您的 c # 或 Visual Basic 代码以
 | [CA2200](/visualstudio/code-quality/ca2200) | 使用情况 | 警告 | 再次引发以保留堆栈详细信息
 | [CA2247](/visualstudio/code-quality/ca2247) | 使用情况 | 警告 | 传递给 TaskCompletionSource 构造函数的参数应为 <xref:System.Threading.Tasks.TaskCreationOptions> 枚举，而不是 <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
-你可以更改这些规则的严重性，以禁用这些规则或将它们提升为错误。
+你可以更改这些规则的严重性，以禁用这些规则或将它们提升为错误。 还可以 [启用更多规则](#enable-additional-rules)。
 
-有关可用代码质量规则的完整列表，请参阅 [代码质量规则](quality-rules/index.md)。
+- 有关每个 .NET SDK 版本附带的规则的列表，请参阅 [分析器版本](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)。
+- 有关所有代码质量规则的列表，请参阅 [代码质量规则](quality-rules/index.md)。
 
 ### <a name="enable-additional-rules"></a>启用其他规则
 
-从 .NET 5.0 RC2 开始，.NET SDK 附带了所有[“CA”代码质量规则](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)。 有关每个 .NET SDK 版本附带的规则的完整列表，请参阅 [分析器版本](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)。
+*分析模式* 是指预定义的代码分析配置，其中未启用任何、部分或全部规则。 在默认分析模式下，仅将少量规则 [作为生成警告启用](#enabled-rules)。 可以通过在项目文件中设置 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 属性来更改项目的分析模式。 允许的值为：
 
-#### <a name="default-analysis-mode"></a>默认分析模式
+| 值 | 说明 |
+| - | - |
+| `AllDisabledByDefault` | 这是最保守的模式。 默认情况下，所有规则都处于禁用状态。 可以选择[选择加入](configuration-options.md)各条规则，以启用它们。<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
+| `AllEnabledByDefault` | 这是最严格的模式。 所有规则都作为生成警告启用。 您可以选择性地 [选择退出](configuration-options.md) 个别规则来禁用它们。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
+| `Default` | 默认模式，其中有少量的规则作为警告启用，而其他规则仅作为 Visual Studio IDE 建议和相应的代码修复，而其余部分被完全禁用。 你可以选择性地 [选择加入或退出](configuration-options.md) 单个规则来禁用它们。<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-在默认的分析模式下，某些规则 [默认启用](#enabled-rules) 为生成警告。 某些其他规则默认情况下启用为 Visual Studio IDE 建议和相应的代码修复。 默认情况下，将禁用其余规则。 [规则的完整列表](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)包括每个规则的默认严重性，以及默认情况下是否在默认分析模式下启用规则。
-
-#### <a name="custom-analysis-mode"></a>自定义分析模式
-
-您可以 [配置代码分析规则](configuration-options.md) ，以启用或禁用单个规则或规则类别。 此外，还可以使用 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 属性切换到以下自定义分析模式之一：
-
-- _积极_ 或 _退出_ 模式：默认情况下，所有规则都作为生成警告启用。 可以选择[选择退出](configuration-options.md)各条规则，以禁用它们。
-- _保守_ 或 _选择加入_ 模式：默认情况下禁用所有规则。 可以选择[选择加入](configuration-options.md)各条规则，以启用它们。
+若要查找每个可用规则的默认严重性以及是否在默认分析模式下启用规则，请参阅 [规则的完整列表](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)。
 
 ### <a name="treat-warnings-as-errors"></a>视警告为错误
 
@@ -106,12 +101,14 @@ _代码质量分析 ( "CA" ) 规则_ 检查您的 c # 或 Visual Basic 代码以
 
 ## <a name="code-style-analysis"></a>代码样式分析
 
-[代码样式分析](/visualstudio/ide/editorconfig-code-style-settings-reference) ( "IDExxxx" 规则) 使你可以在基本代码中定义和维护一致的代码样式。 下面是默认设置：
+*代码样式分析* ( "IDExxxx" ) 规则使你可以在基本代码中定义和维护一致的代码样式。 默认启用设置为：
 
 - 命令行生成：默认情况下，对于命令行生成上的所有 .NET 项目，代码样式分析均处于禁用状态。
 - Visual studio：默认情况下，对于 Visual Studio 中的所有 .NET 项目，代码样式分析均为 [代码重构快速操作](/visualstudio/ide/code-generation-in-visual-studio)启用。
 
-启动 .NET 5.0 RC2 后，可以在命令行和 Visual Studio 内部启用生成代码样式分析。 代码样式冲突显示为带有 "IDE" 前缀的警告或错误。 这使您能够在生成时强制执行一致的代码样式。
+启动 .NET 5.0，可以在命令行和 Visual Studio 内部启用生成代码样式分析。 代码样式冲突显示为带有 "IDE" 前缀的警告或错误。 这使您能够在生成时强制执行一致的代码样式。
+
+有关代码样式分析规则的完整列表，请参阅 [代码样式规则](style-rules/index.md)。
 
 > [!NOTE]
 > 代码样式分析功能是实验性的，可能会在 .NET 5 和 .NET 6 版本之间发生更改。
@@ -151,6 +148,10 @@ dotnet_diagnostic.CA1822.severity = none
 Visual Studio 提供了其他方式来禁止显示代码分析规则中的警告。 有关详细信息，请参阅 [取消冲突](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations)。
 
 有关规则严重性的详细信息，请参阅 [配置规则严重性](configuration-options.md#severity-level)。
+
+## <a name="third-party-analyzers"></a>第三方分析器
+
+除了官方 .NET 分析器外，还可以安装第三方分析器，如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、 [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/)、 [XUnit 分析器](https://www.nuget.org/packages/xunit.analyzers/)和 [sonar.projectname Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)。
 
 ## <a name="see-also"></a>请参阅
 
