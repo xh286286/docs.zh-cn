@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 26612c5b0591efa61fcd476733aee2b219d67c62
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282413"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438160"
 ---
 # <a name="version-tolerant-serialization"></a>版本容错序列化
 
@@ -28,7 +28,7 @@ ms.locfileid: "93282413"
 - 要求应用程序的较旧版本反序列化旧类型的新版本时，会引发异常。
 - 应用程序的较新版本反序列化缺少数据的类型的较旧版本时，会引发异常。
 
-版本容错序列化 (VTS) 是一组功能，它使得修改可序列化类型随着时间推移而变得更加容易。 VTS 功能尤其是为应用了 <xref:System.SerializableAttribute> 特性的类（包括泛型类型）而启用的。 VTS 允许向这些类添加新字段，而不破坏与该类型其他版本的兼容性。 有关可用的示例应用程序，请参阅[版本容错序列化技术示例](basic-serialization-technology-sample.md)。
+版本容错序列化 (VTS) 是一组功能，它使得修改可序列化类型随着时间推移而变得更加容易。 VTS 功能尤其是为应用了 <xref:System.SerializableAttribute> 特性的类（包括泛型类型）而启用的。 VTS 允许向这些类添加新字段，而不破坏与该类型其他版本的兼容性。
 
 当使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 时，将启用 VTS 功能。 此外，当使用 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 时，也会启用除外来数据容错以外的其他所有功能。 有关将这些类用于序列化的详细信息，请参见[二进制序列化](binary-serialization.md)。
 

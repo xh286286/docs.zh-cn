@@ -2,12 +2,12 @@
 title: 中断性变更：CA1831:为字符串使用 AsSpan 而不是基于范围的索引器
 description: 了解 .NET 5.0 中启用代码分析规则 CA1831 所致的中断性变更。
 ms.date: 08/21/2020
-ms.openlocfilehash: 74f34af04a56b73478ffb3305d69ed49f3a30072
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 850916b804ae29dba8d2bd05c6e4fb06fe667296
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759067"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437892"
 ---
 # <a name="warning-ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>警告 CA1831：为字符串使用 AsSpan 而不是基于范围的索引器
 
@@ -41,7 +41,7 @@ ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ```
 
-- 如果不想更改代码，则可通过将规则的严重性设置为 `suggestion` 或 `none` 来禁用规则。 有关详细信息，请参阅[配置代码分析规则](../../../../fundamentals/productivity/configure-code-analysis-rules.md)。
+- 如果不想更改代码，则可通过将规则的严重性设置为 `suggestion` 或 `none` 来禁用规则。 有关详细信息，请参阅[配置代码分析规则](../../../../fundamentals/code-analysis/configuration-options.md)。
 
 - 若要完全禁用代码分析，请在项目文件中将 `EnableNETAnalyzers` 设置为 `false`。 有关详细信息，请参阅 [EnableNETAnalyzers](../../../project-sdk/msbuild-props.md#enablenetanalyzers)。
 

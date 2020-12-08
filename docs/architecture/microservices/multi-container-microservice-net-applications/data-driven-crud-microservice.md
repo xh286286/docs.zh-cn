@@ -2,12 +2,12 @@
 title: 创建简单的数据驱动 CRUD 微服务
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解如何在微服务应用程序的上下文中创建简单的 CRUD（数据驱动）微服务。
 ms.date: 08/14/2020
-ms.openlocfilehash: 056ba37965cf831e0fb176eb585042c440530c6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 27c9b331573ff08ea16c756552818df285156282
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172360"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739864"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -233,7 +233,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ```json
 {
-    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word",
+    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]",
     "ExternalCatalogBaseUrl": "http://localhost:5101",
     "Logging": {
         "IncludeScopes": false,
@@ -256,7 +256,7 @@ Settings.json 文件中可为 ConnectionString 属性或任何其他属性设置
 #
 catalog-api:
   environment:
-    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -268,7 +268,7 @@ catalog-api:
 
 但对于生产环境，可能需要寻找其他方法来存储连接字符串等机密。 使用 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) 是管理应用程序机密的绝佳方式。
 
-Azure Key Vault 有助于存储和保护云应用程序和服务使用的加密密钥和机密。 机密是指需严格控制的任何内容（如 API 密钥、连接字符串和密码等），而使用记录、设置过期日期和管理访问*等*均涵盖于严控范围内。
+Azure Key Vault 有助于存储和保护云应用程序和服务使用的加密密钥和机密。 机密是指需严格控制的任何内容（如 API 密钥、连接字符串和密码等），而使用记录、设置过期日期和管理访问 *等* 均涵盖于严控范围内。
 
 Azure Key Vault 允许对应用程序机密的使用情况进行非常详尽地控制，无需让任何人知晓这些内容。 甚至可轮换机密以增强安全性，且不会对开发或操作造成中断。
 

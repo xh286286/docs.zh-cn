@@ -3,12 +3,12 @@ title: SYSLIB0001 警告
 description: 了解有关生成编译时警告 SYSLIB0001 的过时信息。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: d38d915e902d3c37cc461452f805e8349f11deeb
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: d275717e22b260d9ceff4fe94993e9a0e6996cf0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439984"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437845"
 ---
 # <a name="syslib0001-the-utf-7-encoding-is-insecure"></a>SYSLIB0001：UTF-7 编码不安全
 
@@ -51,4 +51,4 @@ UTF-7 编码在应用程序中不再广泛使用，并且许多规范现在在�
 
 ## <a name="see-also"></a>另请参阅
 
-- [UTF-7 代码路径已过时](3.1-5.0.md#utf-7-code-paths-are-obsolete)
+- [UTF-7 代码路径已过时](core-libraries/5.0/utf-7-code-paths-obsolete.md)

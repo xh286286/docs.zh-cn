@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 创建 .NET 类库
 description: 了解如何使用 Visual Studio Code 创建 .NET 类库。
 ms.date: 11/18/2020
-ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 4473163b76060623b364d7dabf7366c3575e3dcd
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916086"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599494"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>教程：使用 Visual Studio Code 创建 .NET 类库
 
@@ -211,6 +211,7 @@ ms.locfileid: "94916086"
 ## <a name="additional-resources"></a>其他资源
 
 * [使用 .NET CLI 开发库](libraries.md)
+* [.NET Standard 版本及其支持的平台](../../standard/net-standard.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -3,12 +3,12 @@ title: SYSLIB0002 错误
 description: 了解有关产生编译时错误 SYSLIB0002 的过时信息。
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 53eb51d5e525c463e5698710bdb6fa0c0907e43c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 36ecde3c52845a6594c4d04e167df48142038654
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440772"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437500"
 ---
 # <a name="syslib0002-principalpermissionattribute-is-obsolete"></a>SYSLIB0002：PrincipalPermissionAttribute 已过时
 
@@ -64,4 +64,4 @@ ms.locfileid: "94440772"
 
 ## <a name="see-also"></a>另请参阅
 
-- [PrincipalPermissionAttribute 已过时，报告为错误](3.1-5.0.md#principalpermissionattribute-is-obsolete-as-error)
+- [PrincipalPermissionAttribute 已过时，报告为错误](core-libraries/5.0/principalpermissionattribute-obsolete.md)

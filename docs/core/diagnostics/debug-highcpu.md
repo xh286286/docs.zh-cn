@@ -3,12 +3,12 @@ title: 调试高 CPU 使用率 - .NET Core
 description: 本教程将演示如何调试 .NETCore 中的高 CPU 使用率。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538704"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437829"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>调试 .NET Core 中的高 CPU 使用率
 
@@ -90,7 +90,7 @@ Press p to pause, r to resume, q to quit.
 现在，重新运行 [dotnet-counters](dotnet-counters.md) 命令。 若要只监视 `cpu-usage`，请在命令中指定 `System.Runtime[cpu-usage]`。
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 你将看到 CPU 使用率已增加，如下所示：

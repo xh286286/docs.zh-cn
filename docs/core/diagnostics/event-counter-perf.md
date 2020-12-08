@@ -3,12 +3,12 @@ title: 使用 .NET Core 中的 EventCounters 衡量性能
 description: 本教程将介绍如何使用 EventCounters 衡量性能。
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538561"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437449"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>教程：使用 .NET Core 中的 EventCounters 衡量性能
 
@@ -97,7 +97,7 @@ dotnet-counters ps
 通过使用 `dotnet-counters ps` 命令的输出中的进程标识符，你可以使用以下 `dotnet-counters monitor` 命令开始监视事件计数器：
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 当 `dotnet-counters monitor` 命令正在运行时，请在浏览器上按住 <kbd>F5</kbd>，以开始向 `https://localhost:5001/api/values` 终结点发出连续请求。 几秒后按 <kbd>q</kbd> 以停止
@@ -118,7 +118,7 @@ Press p to pause, r to resume, q to quit.
 `dotnet-counters monitor` 命令非常适合主动监视。 不过，可以收集这些诊断指标以便进行后续处理和分析。 为此，请使用 `dotnet-counters collect` 命令。 `collect` 开关命令类似于 `monitor` 命令，但接受几个其他参数。 你可以指定所需的输出文件名和格式。 对于名为 diagnostics.json 的 JSON 文件，请使用以下命令：
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 再一次，当命令正在运行时，在浏览器上按住 <kbd>F5</kbd>，以开始向 `https://localhost:5001/api/values` 终结点发出连续请求。 几秒后按 <kbd>q</kbd> 以停止。 写入 diagnostics.json 文件。 写入的 JSON 文件不会缩进；但为了提升可读性，在这里进行了缩进。
