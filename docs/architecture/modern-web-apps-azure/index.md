@@ -3,19 +3,21 @@ title: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 description: 本指南提供了使用 ASP.NET Core 和 Azure 生成单片式 Web 应用的端到端指导。
 author: ardalis
 ms.author: wiwagn
-ms.date: 5/25/2020
-ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 12/07/2020
+ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284450"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851290"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
 ![《架构新式 Web 应用程序》指南的书籍封面图像。](./media/index/web-application-guide-cover-image.png)
 
-**版本 v3.1** - 已更新到 ASP.NET Core v3.1
+**EDITION v5.0** - 已更新到 ASP.NET Core 5.0
+
+请参阅[更改记录](https://aka.ms/aspnet-ebook-changelog)了解书籍更新和社区贡献。
 
 发布者
 
@@ -59,7 +61,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 ## <a name="introduction"></a>介绍
 
-相比传统 .NET 开发，.NET Core 和 ASP.NET Core 具有一系列优势。 如果以下所有方面或一些方面对于你的应用程序成功至关重要，应将 .NET Core 用于服务器应用程序：
+相比传统 .NET 开发，.NET 5 和 ASP.NET Core 具有一系列优势。 如果下列所有或部分方面对于你的应用程序成功至关重要，那么应对服务器应用程序使用 .NET 5：
 
 - 跨平台支持。
 
@@ -71,7 +73,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 - 在同一服务器上通过应用程序对 .NET 版本进行并行版本控制。
 
-传统 .NET 应用程序虽然支持许多以上要求，但是 ASP.NET Core 和 .NET Core 已经过优化，可为以上方案提供完善的支持。
+传统 .NET 应用程序虽然支持上述多项要求，但是 ASP.NET Core 和 .NET 5 已经过优化，可为以上方案提供完善的支持。
 
 越来越多的组织选择使用 Microsoft Azure 等服务，在云中托管 web 应用程序。 如果以下方面对你的应用程序或组织至关重要，应该考虑在云中托管应用程序：
 
@@ -89,13 +91,13 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 ## <a name="version"></a>Version
 
-本指南已经过修订，现涵盖 .NET Core 3.1 版本，还包含与 .NET Core 3.1 同期的同一“批”技术（即 Azure 和其他第三方技术）的诸多其他更新。 这就是书本版本也更新到 3.1 的原因。
+本指南已经过修订，现涵盖 .NET 5.0 版本，还包含与.NET 5.0 同期的同一“批”技术（即 Azure 和其他第三方技术）的诸多其他更新。 这就是书本版本也更新到 5.0 的原因。
 
 ## <a name="purpose"></a>目标
 
 本指南提供了使用 ASP.NET Core 和 Azure 构建单片 Web 应用程序的端到端指导。 在此上下文中，“单片”是指这一事实，即这些应用程序会作为单个单元部署，而不是作为交互服务和应用程序的集合。
 
-本指南是[“ _.NET 微服务 - 容器化 .NET 应用程序体系结构_”](../microservices/index.md)的补充，该文章更侧重于介绍 Docker、微服务和部署容器以托管企业应用程序。
+本指南是 [“ _.NET 微服务 - 容器化 .NET 应用程序体系结构_”](../microservices/index.md)的补充，该文章更侧重于介绍 Docker、微服务和部署容器以托管企业应用程序。
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务。 适用于容器化 .NET 应用程序的体系结构
 
@@ -118,8 +120,8 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 ## <a name="references"></a>reference
 
-- **为服务器应用选择 .NET Core 或 .NET Framework**  
+- **为服务器应用选择 .NET 5 或 .NET Framework**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
->[下一篇](modern-web-applications-characteristics.md)
+>[下一页](modern-web-applications-characteristics.md)
