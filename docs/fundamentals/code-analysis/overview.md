@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851811"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009841"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 源代码分析概述
 
@@ -40,7 +40,7 @@ ms.locfileid: "96851811"
 
 默认情况下，在 .NET 5.0 中启用以下规则。
 
-| 诊断 ID | Category | 严重性 | 说明 |
+| 诊断 ID | 类别 | 严重性 | 说明 |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | 互操作性 | 警告 | 平台兼容性分析器 |
 | [CA1417](/visualstudio/code-quality/ca1417) | 互操作性 | 警告 | 不要 `OutAttribute` 在 P/invoke 的字符串参数上使用 |
@@ -60,7 +60,7 @@ ms.locfileid: "96851811"
 
 *分析模式* 是指预定义的代码分析配置，其中未启用任何、部分或全部规则。 在默认分析模式下，仅将少量规则 [作为生成警告启用](#enabled-rules)。 可以通过在项目文件中设置 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 属性来更改项目的分析模式。 允许的值为：
 
-| 值 | 说明 |
+| 值 | 描述 |
 | - | - |
 | `AllDisabledByDefault` | 这是最保守的模式。 默认情况下，所有规则都处于禁用状态。 可以选择[选择加入](configuration-options.md)各条规则，以启用它们。<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | 这是最严格的模式。 所有规则都作为生成警告启用。 您可以选择性地 [选择退出](configuration-options.md) 个别规则来禁用它们。<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -103,17 +103,16 @@ ms.locfileid: "96851811"
 
 *代码样式分析* ( "IDExxxx" ) 规则使你可以在基本代码中定义和维护一致的代码样式。 默认启用设置为：
 
-- 命令行生成：默认情况下，对于命令行生成上的所有 .NET 项目，代码样式分析均处于禁用状态。
+- 命令行生成：默认情况下，对命令行生成上的所有 .NET 项目禁用代码样式分析。
 - Visual studio：默认情况下，对于 Visual Studio 中的所有 .NET 项目，代码样式分析均为 [代码重构快速操作](/visualstudio/ide/code-generation-in-visual-studio)启用。
 
-启动 .NET 5.0，可以在命令行和 Visual Studio 内部启用生成代码样式分析。 代码样式冲突显示为带有 "IDE" 前缀的警告或错误。 这使您能够在生成时强制执行一致的代码样式。
+从 .NET 5.0 开始，可以在命令行和 Visual Studio 内部启用生成代码样式分析。 代码样式冲突显示为带有 "IDE" 前缀的警告或错误。 这使您能够在生成时强制执行一致的代码样式。
 
 有关代码样式分析规则的完整列表，请参阅 [代码样式规则](style-rules/index.md)。
 
-> [!NOTE]
-> 代码样式分析功能是实验性的，可能会在 .NET 5 和 .NET 6 版本之间发生更改。
+### <a name="enable-on-build"></a>启用生成时启用
 
-对生成启用代码样式分析的步骤：
+执行以下步骤可在生成时启用代码样式分析：
 
 1. 将 MSBuild 属性 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 设置为 `true` 。
 
@@ -137,6 +136,9 @@ ms.locfileid: "96851811"
    dotnet_diagnostic.IDE0040.severity = silent
    ```
 
+> [!NOTE]
+> 代码样式分析功能是实验性的，可能会在 .NET 5 和 .NET 6 版本之间发生更改。
+
 ## <a name="suppress-a-warning"></a>禁止显示警告
 
 若要取消规则冲突，请 `none` 在 EditorConfig 文件中将该规则 ID 的严重性选项设置为。 例如：
@@ -153,7 +155,7 @@ Visual Studio 提供了其他方式来禁止显示代码分析规则中的警告
 
 除了官方 .NET 分析器外，还可以安装第三方分析器，如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、 [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/)、 [XUnit 分析器](https://www.nuget.org/packages/xunit.analyzers/)和 [sonar.projectname Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码质量分析规则参考](quality-rules/index.md)
 - [代码样式分析规则引用](style-rules/index.md)

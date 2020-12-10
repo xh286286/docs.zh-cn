@@ -2,12 +2,12 @@
 title: 可以为 null 的值类型
 description: '了解如何使用可以为 null 的值类型，这种方法表示在 F # 中也可以为 null 的值类型。'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740427"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009633"
 ---
 # <a name="nullable-value-types"></a>可以为 null 的值类型
 
@@ -62,7 +62,7 @@ a <- Nullable()
 
 ## <a name="pass-and-assign-to-members"></a>传递并分配给成员
 
-使用成员与 F # 值之间的主要区别在于可以在使用成员时隐式推断可以为 null 的值类型。 请考虑使用可以为 null 的值类型作为输入的 folling 方法：
+使用成员与 F # 值之间的主要区别在于可以在使用成员时隐式推断可以为 null 的值类型。 请考虑以下方法，该方法采用可以为 null 的值类型作为输入：
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-在上面的示例中，可以将传递 `12` 给方法 `M` 。 你还可以分配 `12` 给 auto 属性 `NVT` 。 如果目标类型与输入相匹配，则 F # 编译器将隐式转换此类调用或赋值（如果输入可构造为 nullabel 值类型）。
+在上面的示例中，可以将传递 `12` 给方法 `M` 。 你还可以分配 `12` 给 auto 属性 `NVT` 。 如果可以将输入构造为可以为 null 的值类型并且它与目标类型匹配，则 F # 编译器将隐式转换此类调用或分配。
 
 ## <a name="examine-a-nullable-value-type-instance"></a>检查可以为 null 的值类型实例
 
@@ -134,7 +134,7 @@ let isBiggerLongForm = nullableFloat.HasValue && nullableFloat.Value > 1.0
 
 `?>`如果左侧是可以为 null 的，则比较检查是否可以为 null，并且仅在其具有值时才会成功。 它与其后的行等效。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [结构](structures.md)
 - [F # 选项](options.md)
