@@ -1,17 +1,17 @@
 ---
-title: 使用 Visual Studio for Mac 创建 .NET Core 控制台应用程序
-description: 了解如何使用 Visual Studio for Mac 创建 .NET Core 控制台应用程序。
-ms.date: 06/02/2020
-ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: 使用 Visual Studio for Mac 创建 .NET 控制台应用程序
+description: 了解如何使用 Visual Studio for Mac 创建 .NET 控制台应用程序。
+ms.date: 11/30/2020
+ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400521"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599481"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>教程：使用 Visual Studio for Mac 创建 .NET Core 控制台应用程序
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>教程：使用 Visual Studio for Mac 创建 .NET 控制台应用程序
 
-本教程演示如何使用 Visual Studio for Mac 创建和运行 .NET Core 控制台应用程序。
+本教程演示如何使用 Visual Studio for Mac 创建和运行 .NET 控制台应用程序。
 
 > [!NOTE]
 > 你的反馈非常有价值。 有两种方法可以向开发团队提供有关 Visual Studio for Mac 的反馈：
@@ -21,15 +21,13 @@ ms.locfileid: "93400521"
 
 ## <a name="prerequisites"></a>先决条件
 
-* [Visual Studio for Mac 版本 8.6 或更高版本](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 选择用于安装 .NET Core 的选项。 安装 Xamarin 对于 .NET Core 开发而言是可选项。 有关更多信息，请参见以下资源：
+* [Visual Studio for Mac 8.8 或更高版本](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 选择用于安装 .NET Core 的选项。 安装 Xamarin 对于 .NET 开发而言是可选项。 有关更多信息，请参见以下资源：
 
   * [教程：安装 Visual Studio for Mac](/visualstudio/mac/installation)。
   * [支持的 macOS 版本](../install/windows.md)。
-  * [Visual Studio for Mac 支持的 .NET Core 版本](/visualstudio/mac/net-core-support)。
+  * [Visual Studio for Mac 支持的 .NET 版本](/visualstudio/mac/net-core-support)。
 
 ## <a name="create-the-app"></a>创建应用
-
-创建一个名为“HelloWorld”的 .NET Core 控制台应用项目。
 
 1. 启动 Visual Studio for Mac。
 
@@ -41,9 +39,7 @@ ms.locfileid: "93400521"
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="新项目模板列表":::
 
-1. 在“配置新的控制台应用程序”对话框的“目标框架”下拉列表中，选择“.NET Core 3.1”，然后选择“下一步”   。
-
-   :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="选择目标框架":::
+1. 在“配置新的控制台应用程序”对话框的“目标框架”下拉列表中，选择“.NET 5.0”，然后选择“下一步”。
 
 1. 键入“HelloWorld”作为“项目名称”，然后选择“创建” 。
 
@@ -102,7 +98,7 @@ namespace HelloWorld
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中，你创建了一个 .NET Core 控制台应用程序。 在下一教程中，你将调试该应用。
+在本教程中，你创建了一个 .NET 控制台应用程序。 在下一教程中，你将调试该应用。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio for Mac 调试 .NET Core 控制台应用程序](debugging-with-visual-studio-mac.md)
+> [使用 Visual Studio for Mac 调试 .NET 控制台应用程序](debugging-with-visual-studio-mac.md)

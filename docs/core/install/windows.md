@@ -4,12 +4,12 @@ description: 了解可在其上安装 .NET 的 Windows 版本。
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715116"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549340"
 ---
 # <a name="install-net-on-windows"></a>在 Windows 上安装 .NET
 
@@ -32,22 +32,26 @@ ms.locfileid: "95715116"
 
 Windows 10 版本终止服务日期按版本分段。 下表中仅考虑家庭版、专业版、专业教育版和专业工作站版。    查看 [Windows 生命周期事实表单](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)，了解具体的详细信息。
 
-- ✔️ 指示 Windows 或 .NET Core 版本仍受支持。
-- ❌ 指示 Windows 或 .NET Core 版本在该 Windows 版本上不受支持。
-- 当 Windows 版本和 .NET Core 版本都有 ✔️ 时，将支持该 OS 和 .NET 组合。
+> [!TIP]
+> `+` 表示最低版本。
 
-| 操作系统                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
-|-----------------------------|---------------|---------------|----------------|
-| ✔️ Windows 10 版本 2004 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10 版本 1909 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10 版本 1903 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10 版本 1809 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 版本 1803 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 版本 1709 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 版本 1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10 版本 1607 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10 版本 1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10 版本 1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| 操作系统            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
+|-----------------------------|---------------|---------------|--------|
+| Windows 10 版本 2004    | ✔️           | ✔️            | ✔️    |
+| Windows 10 版本 1909    | ✔️           | ✔️            | ✔️    |
+| Windows 10 版本 1903    | ✔️           | ✔️            | ✔️    |
+| Windows 10 版本 1809    | ✔️           | ✔️            | ✔️    |
+|  Windows 10 版本 1803    | ✔️           | ✔️            | ✔️    |
+|  Windows 10 版本 1709    | ✔️           | ✔️            | ✔️    |
+| Windows 10 版本 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 8.1                 | ✔️           | ✔️            | ✔️    |
+| Windows 7 SP1 [ESU][esu]    | ✔️           | ✔️            | ✔️    |
+| Windows 10 版本 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 10 版本 1607    | ✔️           | ✔️            | ✔️    |
+| Windows Server 2012 R2      | ✔️           | ✔️            | ✔️    |
+| Windows Server Core 2012 R2 | ✔️           | ✔️            | ✔️    |
+| Nano Server 版本 1809+  | ✔️           | ✔️            | ✔️    |
+| Nano Server 版本 1803   | ✔️           | ✔️            | ❌    |
 
 ## <a name="unsupported-releases"></a>不支持的版本
 
@@ -111,7 +115,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 | (OS)                            | Version                        | 体系结构   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 客户端                | 7 SP1+、8.1                    | x64、x86        |
-| Windows 10 客户端             | 版本 1609+                  | x64、x86        |
+| Windows 10 客户端             | 版本 1607+                  | x64、x86        |
 | Windows Server                | 2012 R2+                       | x64、x86        |
 | Nano Server                   | 版本 1803+                  | x64、ARM32      |
 
@@ -119,7 +123,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
-目前不支持 .NET Core 3.0。有关详细信息，请参阅 [.NET Core 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
+目前不 ❌ 支持 .NET Core 3.0 *。* 有关详细信息，请参阅 [.NET Core 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
 
 .NET Core 3.0 支持下列 Windows 版本：
 
@@ -137,7 +141,7 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
-目前不支持 .NET Core 2.2。有关详细信息，请参阅 [.NET Core 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
+目前不 ❌ 支持 .NET Core 2.2。有关详细信息，请参阅 [.NET Core 支持策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
 
 .NET Core 2.2 支持下列 Windows 版本：
 
@@ -177,11 +181,11 @@ SDK 用于生成和发布 .NET 应用和库。 安装 SDK 会包含三个[运行
 
 如果要在以下 Windows 版本上安装 .NET SDK 或运行时，则需要其他依赖项：
 
-- ❌ Windows 7 SP1
-- ❌ Windows Vista SP 2
-- ✔️ Windows 8.1
-- ✔️ Windows Server 2008 R2
-- ✔️ Windows Server 2012 R2
+- Windows 7 SP1 [ESU][esu]
+- Windows Vista SP 2
+- Windows 8.1
+- Windows Server 2008 R2
+- Windows Server 2012 R2
 
 安装以下组件：
 
@@ -260,15 +264,25 @@ Visual Studio Code 是一个功能强大的轻量级源代码编辑器，可在�
 01. [下载并安装 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)。
 01. [从 Visual Studio Code 市场安装 C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)。
 
+## <a name="windows-installer"></a>Windows Installer
+
+适用于 .NET 的[下载页面](https://dotnet.microsoft.com/download/dotnet-core)提供了 Windows Installer 可执行文件。
+
+使用 MSI 文件安装 .NET< 时，可以通过设置 `DOTNETHOME_X64` 和 `DOTNETHOME_X86` 参数来自定义安装路径：
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
+```
+
 ## <a name="download-and-manually-install"></a>下载并手动安装
 
 除了使用适用于 .NET 的 Windows 安装程序，还可以下载并手动安装 SDK 或运行时。 手动安装通常作为持续集成测试的一部分执行。 对于开发人员或用户，一般使用[安装程序](https://dotnet.microsoft.com/download/dotnet-core)会更好。
 
 在下载 .NET SDK 和 .NET 运行时后，可以手动安装它们。 如果安装 .NET SDK，则无需安装相应的运行时。 首先，从以下站点之一下载 SDK 或运行时的二进制版本：
 
-- ✔️ [.NET 5.0 下载](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3.1 下载](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET 5.0 下载](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET Core 3.1 下载](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 2.1 下载](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [所有 .NET Core 下载项](https://dotnet.microsoft.com/download/dotnet-core)
 
 创建要将 .NET 提取到的目录，例如 `%USERPROFILE%\dotnet`。 然后，将下载的 zip 文件提取到该目录中。
@@ -301,3 +315,5 @@ Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库]
 - [教程：Hello World 教程](../tutorials/with-visual-studio.md)。
 - [教程：使用 Visual Studio Code 创建一个新应用](../tutorials/with-visual-studio-code.md)。
 - [教程：使 .NET Core 应用容器化](../docker/build-container.md)。
+
+[esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq

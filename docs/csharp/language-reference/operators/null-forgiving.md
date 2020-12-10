@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b8c634404cf2f214cc4bee5d754443e9302a723
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699625"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739511"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! （null 包容）运算符（C# 参考）
 
-在 C# 8.0 及更高版本中可用，一元后缀 `!` 运算符是 null 包容运算符。 在已启用的[可为空的注释上下文](../../nullable-references.md#nullable-annotation-context)中，可以使用 null 包容运算符来声明可为空的引用类型的表达式 `x` 不为 `null`：`x!`。 一元前缀 `!` 运算符是[逻辑非运算符](boolean-logical-operators.md#logical-negation-operator-)。
+在 C# 8.0 及更高版本中可用，一元后缀 `!` 运算符是 null 包容运算符或 null 抑制运算符。 在已启用的[可为空的注释上下文](../../nullable-references.md#nullable-annotation-context)中，可以使用 null 包容运算符来声明可为空的引用类型的表达式 `x` 不为 `null`：`x!`。 一元前缀 `!` 运算符是[逻辑非运算符](boolean-logical-operators.md#logical-negation-operator-)。
 
 null 包容运算符在运行时不起作用。 它仅通过更改表达式的 null 状态来影响编译器的静态流分析。 在运行时，表达式 `x!` 的计算结果为基础表达式 `x` 的结果。
 

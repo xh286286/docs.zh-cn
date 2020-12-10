@@ -2,12 +2,12 @@
 title: 中断性变更：已重命名或已删除 OSPlatform 属性
 description: 了解核心 .NET 库中的以下 .NET 5.0 中断性变更：预览版本中引入的 OS 平台属性已被删除或重命名。
 ms.date: 11/01/2020
-ms.openlocfilehash: 7e709b84005a7b807e390e12d9f36d8b4f73a9df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be2ddd4909bef70f531ca48246f091923d6435ec
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759136"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739485"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>已重命名或已删除 OSPlatform 属性
 
@@ -34,7 +34,7 @@ ms.locfileid: "95759136"
 
 ## <a name="reason-for-change"></a>更改原因
 
-.NET 5.0 预览版 8 在 <xref:System.Runtime.Versioning> 中引入了多个属性，用于指定支持 API 的平台。 将特定于平台的 API 用于不支持这些 API 的平台时，[平台兼容性分析器](../../../../core/compatibility/code-analysis.md#ca1416-platform-compatibility)使用这些属性生成生成警告。
+.NET 5.0 预览版 8 在 <xref:System.Runtime.Versioning> 中引入了多个属性，用于指定支持 API 的平台。 将特定于平台的 API 用于不支持这些 API 的平台时，[平台兼容性分析器](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md)使用这些属性生成生成警告。
 
 对于 .NET 5.0 RC1，向平台兼容性分析器添加了一项附加功能，用于排除平台。 此功能允许将 API 标记为在 OS 平台上完全不受支持。 此功能会提示更改属性，包括使用更合适的名称。 由于不再需要 `ObsoletedInOSPlatformAttribute`，已将其删除。
 

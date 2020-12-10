@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471646"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599390"
 ---
 # <a name="value-types-c-reference"></a>值类型（C# 参考）
 
@@ -31,7 +31,7 @@ ms.locfileid: "92471646"
 > [!NOTE]
 > 若要使代码更不易出错、更可靠，请定义并使用不可变的值类型。 本文仅为演示目的使用可变值类型。
 
-## <a name="kinds-of-value-types"></a>值类型的种类
+## <a name="kinds-of-value-types-and-type-constraints"></a>值类型的种类以及类型约束
 
 值类型可以是以下种类之一：
 
@@ -39,6 +39,8 @@ ms.locfileid: "92471646"
 - [枚举类型](enum.md)，由一组命名常数定义，表示一个选择或选择组合
 
 [可为 null 值类型](nullable-value-types.md) `T?` 表示其基础值类型 `T` 的所有值及额外的 [null](../keywords/null.md) 值。 不能将 `null` 分配给值类型的变量，除非它是可为 null 的值类型。
+
+你可使用 [`struct` 约束](../../programming-guide/generics/constraints-on-type-parameters.md)指定类型参数为不可为 null 的值类型。 结构类型和枚举类型都满足 `struct` 约束。 从 C# 7.3 开始，你可以在基类约束中使用 `System.Enum`（称为[枚举约束](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)），以指定类型参数为枚举类型。
 
 ## <a name="built-in-value-types"></a>内置值类型
 

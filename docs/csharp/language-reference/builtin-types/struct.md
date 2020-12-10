@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526595"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599097"
 ---
 # <a name="structure-types-c-reference"></a>结构类型（C# 参考）
 
@@ -129,6 +129,10 @@ ms.locfileid: "92526595"
 [!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 在 .NET 中，`ref` 结构的示例分别是 <xref:System.Span%601?displayProperty=nameWithType> 和 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>。
+
+## <a name="struct-constraint"></a>struct 约束
+
+你还可在 [`struct` 约束](../../programming-guide/generics/constraints-on-type-parameters.md)中使用 `struct` 关键字，来指定类型参数为不可为 null 的值类型。 结构类型和[枚举](enum.md)类型都满足 `struct` 约束。
 
 ## <a name="conversions"></a>转换
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8230dfed11bb4ba21e922827cc1a525ce45ba3e5
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224309"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599110"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
@@ -20,7 +20,7 @@ ms.locfileid: "92224309"
 
 |约束|描述|
 |----------------|-----------------|
-|`where T : struct`|类型参数必须是不可为 null 的值类型。 有关可为 null 的值类型的信息，请参阅[可为 null 的值类型](../../language-reference/builtin-types/nullable-value-types.md)。 由于所有值类型都具有可访问的无参数构造函数，因此 `struct` 约束表示 `new()` 约束，并且不能与 `new()` 约束结合使用。 `struct` 约束也不能与 `unmanaged` 约束结合使用。|
+|`where T : struct`|类型参数必须是不可为 null 的[值类型](../../language-reference/builtin-types/value-types.md)。 有关可为 null 的值类型的信息，请参阅[可为 null 的值类型](../../language-reference/builtin-types/nullable-value-types.md)。 由于所有值类型都具有可访问的无参数构造函数，因此 `struct` 约束表示 `new()` 约束，并且不能与 `new()` 约束结合使用。 `struct` 约束也不能与 `unmanaged` 约束结合使用。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。 在 C#8.0 或更高版本中的可为 null 上下文中，`T` 必须是不可为 null 的引用类型。 |
 |`where T : class?`|类型参数必须是可为 null 或不可为 null 的引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
 |`where T : notnull`|类型参数必须是不可为 null 的类型。 参数可以是 C# 8.0 或更高版本中的不可为 null 的引用类型，也可以是不可为 null 的值类型。 |

@@ -1,7 +1,7 @@
 ---
 title: 如何编写用于 JSON 序列化的自定义转换器 - .NET
 description: 了解如何为 System.Text.Json 命名空间中提供的 JSON 序列化类创建自定义转换器。
-ms.date: 01/10/2020
+ms.date: 11/30/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329802"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438117"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中编写用于 JSON 序列化（封送）的自定义转换器
 
@@ -49,17 +49,17 @@ ms.locfileid: "94329802"
 
 用于创建自定义转换器的模式有两种：基本模式和工厂模式。 工厂模式适用于处理类型 `Enum` 或开放式泛型的转换器。 基本模式适用于非泛型或封闭式泛型类型。  例如，适用于以下类型的转换器需要工厂模式：
 
-* `Dictionary<TKey, TValue>`
-* `Enum`
-* `List<T>`
+* <xref:System.Collections.Generic.Dictionary%602>
+* <xref:System.Enum>
+* <xref:System.Collections.Generic.List%601>
 
 可以通过基本模式处理的类型的一些示例包括：
 
 * `Dictionary<int, string>`
 * `WeekdaysEnum`
 * `List<DateTimeOffset>`
-* `DateTime`
-* `Int32`
+* <xref:System.DateTime>
+* <xref:System.Int32>
 
 基本模式创建的类可以处理一种类型。 工厂模式创建的类在运行时确定所需的特定类型，并动态创建适当的转换器。
 
@@ -67,13 +67,13 @@ ms.locfileid: "94329802"
 
 下面的示例是一个转换器，可重写现有数据类型的默认序列化。 该转换器将 mm/dd/yyyy 格式用于 `DateTimeOffset` 属性。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs":::
 
 ## <a name="sample-factory-pattern-converter"></a>示例工厂模式转换器
 
 下面的代码演示一个处理 `Dictionary<Enum,TValue>` 的自定义转换器。 该代码遵循工厂模式，因为第一个泛型类型参数是 `Enum`，第二个参数是开放参数。 `CanConvert` 方法仅对具有两个泛型参数的 `Dictionary` 返回 `true`，其中第一个参数是 `Enum` 类型。 内部转换器获取现有转换器，以处理在运行时为 `TValue` 提供的任何类型。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs":::
 
 前面的代码与本文后面的[支持包含非字符串键的字典](#support-dictionary-with-non-string-key)中演示的代码相同。
 
@@ -125,11 +125,11 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下面是一个示例，该示例将 <xref:System.ComponentModel.DateTimeOffsetConverter> 设为类型 <xref:System.DateTimeOffset> 的属性的默认值：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Serialize":::
 
 假设序列化以下类型的实例：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
 下面是演示使用自定义转换器的 JSON 输出的示例：
 
@@ -143,35 +143,35 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下面的代码使用的方法与使用自定义 `DateTimeOffset` 转换器进行反序列化相同：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Deserialize":::
 
 ## <a name="registration-sample---jsonconverter-on-a-property"></a>注册示例 - 属性上的 [JsonConverter]
 
 下面的代码为 `Date` 属性选择自定义转换器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithConverterAttribute":::
 
 用于序列化 `WeatherForecastWithConverterAttribute` 的代码不需要使用 `JsonSerializeOptions.Converters`：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs" id="Serialize":::
 
 用于反序列化的代码也不需要使用 `Converters`：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs" id="Deserialize":::
 
 ## <a name="registration-sample---jsonconverter-on-a-type"></a>注册示例 - 类型上的 [JsonConverter]
 
 下面的代码创建一个结构并向它应用 `[JsonConverter]` 属性：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/Temperature.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/Temperature.cs":::
 
 下面是适用于上述结构的自定义转换器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/TemperatureConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/TemperatureConverter.cs":::
 
 结构上的 `[JsonConvert]` 属性将自定义转换器注册为类型 `Temperature` 的属性的默认值。 进行序列化或反序列化时，转换器会自动用于以下类型的 `TemperatureCelsius` 属性：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithTemperatureStruct":::
 
 ## <a name="converter-registration-precedence"></a>转换器注册优先级
 
@@ -219,15 +219,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * 将字符串转换为 `string`
 * 将其他所有内容转换为 `JsonElement`
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs":::
 
 下面的代码注册转换器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs" id="Register":::
 
 下面是一种具有 `object` 属性的示例类型：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithObjectProperties":::
 
 以下要反序列化的 JSON 示例包含将作为 `DateTime`、`long` 和 `string` 进行反序列化的值：
 
@@ -251,15 +251,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下面的代码演示一个处理 `Dictionary<Enum,TValue>` 的自定义转换器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs":::
 
 下面的代码注册转换器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs" id="Register":::
 
 该转换器可以序列化和反序列化使用以下 `Enum` 的以下类的 `TemperatureRanges` 属性：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithEnumDictionary":::
 
 来自序列化的 JSON 输出类似于以下示例：
 
@@ -280,19 +280,19 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ### <a name="support-polymorphic-deserialization"></a>支持多态反序列化
 
-内置功能提供有限范围的[多态序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)，但完全不支持反序列化。 反序列化需要自定义转换器。
+内置功能提供有限范围的[多态序列化](system-text-json-polymorphism.md)，但完全不支持反序列化。 反序列化需要自定义转换器。
 
 例如，假设有一个 `Person` 抽象基类，其中包含 `Employee` 和 `Customer` 派生类。 多态反序列化意味着可以在设计时将 `Person` 指定为反序列化目标，JSON 中的 `Customer` 和 `Employee` 对象会在运行时正确地进行反序列化。 在反序列化过程中，必须查找标识 JSON 中所需类型的线索。 可用的线索类型因各个方案而异。 例如，可以使用鉴别器属性，或者可能必须依赖于特定属性是否存在。 `System.Text.Json` 的当前版本不提供属性来指定如何处理多态反序列化方案，因此需要自定义转换器。
 
 下面的代码演示一个基类、两个派生类和适用于它们的一个自定义转换器。 该转换器使用鉴别器属性执行多态反序列化。 类型鉴别器不在类定义中，而是在序列化过程中创建，在反序列化过程中进行读取。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/Person.cs?name=SnippetPerson)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/Person.cs" id="Person":::
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs":::
 
 下面的代码注册转换器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs" id="Register":::
 
 该转换器可以反序列化通过用于序列化的相同转换器而创建的 JSON，例如：
 
@@ -327,17 +327,17 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下面的代码演示了一个自定义转换器，用于实现与 `Stack<T>` 对象之间的来回转换：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs":::
 
 下面的代码注册转换器：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs" id="Register":::
 
 ## <a name="handle-null-values"></a>处理 NULL 值
 
 默认情况下，序列化程序处理 null 值，如下所示：
 
-* 对于引用类型和 `Nullable<T>` 类型：
+* 对于引用类型和 <xref:System.Nullable%601> 类型：
 
   * 它在序列化时不会将 `null` 传递到自定义转换器。
   * 它在反序列化时不会将 `JsonTokenType.Null` 传递到自定义转换器。
@@ -374,9 +374,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 * [内置转换器的源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
 * [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
-* [System.Text.Json 概述](system-text-json-overview.md)
-* [如何使用 System.Text.Json](system-text-json-how-to.md)
-* [如何从 Newtonsoft.Json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [如何自定义字符编码](system-text-json-character-encoding.md)
+* [如何编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
 * [System.Text.Json API 参考](xref:System.Text.Json)
 * [System.Text.Json.Serialization API 参考](xref:System.Text.Json.Serialization)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

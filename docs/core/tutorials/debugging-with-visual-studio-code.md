@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 调试 .NET 控制台应用程序
 description: 了解如何使用 Visual Studio Code 调试 .NET 控制台应用。
 ms.date: 05/26/2020
-ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 7215ed4a93b31ebac313c04708734667148c4e02
+ms.sourcegitcommit: 30fef5b0ed76e334377d28fa8e80159b29353e10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916224"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556104"
 ---
 # <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>教程：使用 Visual Studio Code 调试 .NET 控制台应用程序
 
@@ -47,15 +47,7 @@ ms.locfileid: "94916224"
 
 1. 打开 .vscode/launch.json。
 
-1. 将 `console` 设置更改为 `integratedTerminal`。
-
-   发件人：
-
-   ```json
-   "console": "internalConsole",
-   ```
-
-   到:
+1. 将 `console` 设置从 `internalConsole` 更改为 `integratedTerminal`：
 
    ```json
    "console": "integratedTerminal",

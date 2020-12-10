@@ -2,12 +2,12 @@
 title: dotnet-trace 诊断工具 - .NET CLI
 description: 了解如何通过使用 .NET EventPipe 来安装和使用 dotnet-trace CLI 工具，以在没有本机探查器的情况下收集运行中的进程的 .NET 跟踪。
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829305"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549327"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 性能分析实用工具
 
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  一组命名的预定义提供程序配置，允许简明地指定常见跟踪方案。
+  一组命名的预定义提供程序配置，允许简明地指定常见跟踪方案。 可用配置文件如下：
+
+ | 配置文件 | 说明 |
+ |---------|-------------|
+ |`cpu-sampling`|可用于跟踪 CPU 使用情况和一般 .NET 运行时信息。 如果未指定配置文件或提供程序，则这是默认选项。|
+ |`gc-verbose`|跟踪 GC 集合并示例对象分配。|
+ |`gc-collect`|仅以极低的开销跟踪 GC 集合。|
 
 - **`--providers <list-of-comma-separated-providers>`**
 

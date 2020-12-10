@@ -2,12 +2,12 @@
 title: .NET Core 中的 EventCounters
 description: 本文将介绍什么是 EventCounters，如何实现它们，以及如何使用它们。
 ms.date: 08/07/2020
-ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687637"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437816"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 中的 EventCounters
 
@@ -61,10 +61,10 @@ dotnet-counters ps
    1400180 sample-counters C:\sample-counters\bin\Debug\netcoreapp3.1\sample-counters.exe
 ```
 
-将 <xref:System.Diagnostics.Tracing.EventSource> 名称传递到 `counter_list` 开关，以开始监视计数器：
+将 <xref:System.Diagnostics.Tracing.EventSource> 名称传递到 `--counters` 选项，以开始监视计数器：
 
 ```console
-dotnet-counters monitor --process-id 1400180 Sample.EventCounter.Minimal
+dotnet-counters monitor --process-id 1400180 --counters Sample.EventCounter.Minimal
 ```
 
 以下示例显示监视器输出：

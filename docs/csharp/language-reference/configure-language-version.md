@@ -3,12 +3,12 @@ title: C# 语言版本控制 - C# 指南
 description: 了解如何根据项目确定 C# 语言版本，以及背后的原因。 了解如何手动重写默认值。
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634491"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598916"
 ---
 # <a name="c-language-versioning"></a>C# 语言版本控制
 
@@ -41,8 +41,8 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 
 如果你的项目是以具有相应预览语言版本的预览框架为目标，那么使用的语言版本是预览语言版本。 你可在任何环境中使用该预览版提供的最新功能，而不会影响面向已发布 .NET Core 版本的项目。
 
-> [!TIP]
-> 若要了解当前使用的语言版本，请在代码中添加 `#error version`（区分大小写）。 这样做可使编译器生成诊断 CS8304，并显示一条消息，其中包含正在使用的编译器版本和当前选择的语言版本。
+> [!IMPORTANT]
+> Visual Studio 2017 向其创建的所有项目文件添加了 `<LangVersion>latest</LangVersion>` 项。 添加此项后，该项表示 C# 7.0。 但是，升级到 Visual Studio 2019 后，无论目标框架是什么，该项均表示最新发布的版本。 这些项目现在会[覆盖默认行为](#override-a-default)。 你应编辑项目文件，并删除该节点。 然后项目将使用建议用于目标框架的编译器版本。
 
 ## <a name="override-a-default"></a>替代默认值
 
@@ -51,6 +51,9 @@ C# 9.0 仅在 .NET 5 及更高版本上受支持。
 - 手动编辑[项目文件](#edit-the-project-file)。
 - 为[子目录中的多个项目](#configure-multiple-projects)设置语言版本。
 - 配置 [`-langversion` 编译器选项](compiler-options/langversion-compiler-option.md)。
+
+> [!TIP]
+> 若要了解当前使用的语言版本，请在代码中添加 `#error version`（区分大小写）。 这样做可使编译器生成诊断 CS8304，并显示一条消息，其中包含正在使用的编译器版本和当前选择的语言版本。
 
 ### <a name="edit-the-project-file"></a>编辑项目文件
 
