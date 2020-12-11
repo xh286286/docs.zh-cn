@@ -1,36 +1,34 @@
 ---
-title: 如何对 .NET Core 运行时和 SDK 进行版本控制
-description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（类似于语义版本控制）。
-ms.date: 06/24/2020
-ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: 如何对 .NET 运行时和 SDK 进行版本控制
+description: 本文介绍如何对 .NET SDK 和运行时进行版本控制（与语义版本控制类似）。
+ms.date: 12/07/2020
+ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726699"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009301"
 ---
-# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
+# <a name="overview-of-how-net-is-versioned"></a>.NET 的版本控制方式概述
 
-.NET Core 是指 .NET Core 运行时和 .NET Core SDK，它包含开发应用程序所需的工具。 .NET Core SDK 可与任何以前版本的 .NET Core 运行时一起使用。 本文介绍运行时和 SDK 版本策略。 有关 .NET Standard 版本号的说明，请参阅介绍 [.NET Standar](../../standard/net-standard.md#net-implementation-support) 的文章。
-
-.NET Core 运行时和 .NET Core SDK 以不同的速率添加新功能，通常情况下，.NET Core SDK 提供更新工具的速度比 .NET Core 运行时更改生产中所用运行时的速度快。
+[.NET 运行时和 .NET SDK](../introduction.md#sdk-and-runtimes) 添加新功能的频率不同。 通常来说，SDK 的更新频率比运行时高。 本文介绍运行时和 SDK 版本号。
 
 ## <a name="versioning-details"></a>版本控制详细信息
 
-“.NET Core 2.1”是指 .NET Core 运行时版本号。 .NET Core 运行时用于版本控制的主要/次要/补丁方法需遵循[语义版本控制](#semantic-versioning)。
+.NET 运行时具有用于版本控制的主要/次要/补丁方法，且该方法遵循[语义版本控制](#semantic-versioning)。
 
-.NET Core SDK 不遵循语义版本控制。 .NET Core SDK 发布速度更快，其版本必须传达相应的运行时和 SDK 自己的次要版本和修补程序版本。 .NET Core SDK 版本的前两个位置被锁定到与之一起发布的 .NET Core 运行时。 每个版本的 SDK 都可以为此版本或任何更低版本的运行时创建应用程序。
+.NET SDK 不遵循语义版本控制。 .NET SDK 发布速度更快，其版本必须显示相应的运行时和 SDK 自己的次要版本及补丁版本。
 
-SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 次要版本乘以 100。 次要版本 1，修补程序版本 2 将表示为 102。 最后两位数代表修补程序号。 例如，.NET Core 2.2 可能会创建如下表所示的版本：
+.NET SDK 版本号的前两个位置被锁定，其中显示与之一起发布的 .NET 运行时。 每个版本的 SDK 都可以为此版本或任何更低版本的运行时创建应用程序。
 
-| 更改                | .NET Core 运行时 | .NET Core SDK (\*) |
+SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 次要版本乘以 100。 次要版本 1，修补程序版本 2 将表示为 102。 最后两位数代表修补程序号。 例如，下面是运行时和 SDK 版本号可能出现的序列：
+
+| 更改                | .NET 运行时      | .NET SDK (\*)     |
 |-----------------------|-------------------|-------------------|
 | 初始版本       | 2.2.0             | 2.2.100           |
 | SDK 修补程序             | 2.2.0             | 2.2.101           |
 | 运行时和 SDK 修补程序 | 2.2.1             | 2.2.102           |
 | SDK 功能更改    | 2.2.1             | 2.2.200           |
-
-(\*) 这个图表以 2.2 .NET Core 运行时为例，因为一个历史项目表明 .NET Core 2.1 的第一个 SDK 是 2.1.300。 有关详细信息，请参阅 [.NET Core 版本选择](selection.md)页。
 
 注意：
 
@@ -41,7 +39,7 @@ SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 
 
 ## <a name="semantic-versioning"></a>语义化版本控制
 
-.NET Core 运行时大致遵循[语义版本控制 (SemVer)](https://semver.org/)，采用 `MAJOR.MINOR.PATCH` 版本控制，通过版本号的各部分来描述更改程度和类型。
+.NET 运行时大致遵循[语义版本控制 (SemVer)](https://semver.org/)，采用 `MAJOR.MINOR.PATCH` 版本控制，通过版本号的各部分来描述更改程度和类型。
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -76,11 +74,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="version-numbers-in-file-names"></a>文件名中的版本号
 
-为 .NET Core 下载的文件带有版本，例如 `dotnet-sdk-2.1.300-win10-x64.exe`。
+为 .NET 下载的文件带有版本，例如 `dotnet-sdk-2.1.300-win10-x64.exe`。
 
 ### <a name="preview-versions"></a>预览版
 
-预览版向版本中追加了 `-preview[number]-([build]|"final")`。 例如 `2.0.0-preview1-final`。
+预览版向版本号追加了 `-preview[number]-([build]|"final")`。 例如 `2.0.0-preview1-final`。
 
 ### <a name="servicing-versions"></a>服务版本
 
@@ -88,29 +86,17 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="relationship-to-net-standard-versions"></a>与 .NET Standard 版本的关系
 
-.NET Standard 由 .NET 引用程序集组成。 每个平台都有多个特定的实现。 引用程序集包含 .NET API 的定义，后者是给定 .NET Standard 版本的一部分。 每个实现均满足特定平台上的 .NET Standard 协定。 可参阅 .NET 指南中有关 [.NET Standard](../../standard/net-standard.md) 的文章，深入了解 .NET Standard。
+.NET Standard 由 .NET 引用程序集组成。 每个平台都有多个特定的实现。 引用程序集包含 .NET API 的定义，后者是给定 .NET Standard 版本的一部分。 每个实现均满足特定平台上的 .NET Standard 协定。
 
 .NET Standard 引用程序集使用 `MAJOR.MINOR` 版本控制方案。 `PATCH` 级别对 .NET Standard 并无用处，因为它只公开 API 规范（没有实现），并且根据定义，对 API 的任何更改都将作为功能集的更改，从进而产生新的 `MINOR` 版本。
 
 每个平台上的实现通常可作为平台版本的一部分更新，因此对于在该平台上使用 .NET Standard 的程序员来说并不明显。
 
-每个版本的 .NET Core 都实现了某一版本的 .NET Standard。 实现某一版本的 .NET Standard 意味着支持以前版本的 .NET Standard。 .NET Standard 和 .NET Core 版本独立。 .NET Core 2.0 实现 .NET Standard 2.0 是巧合。 .NET Core 2.1 也可实现 .NET Standard 2.0。 .NET Standard 的未来版本出现后，.NET Core 将支持这些版本。
-
-| .NET Core | .NET Standard |
-|-----------|---------------|
-| 1.0       | 达 1.6     |
-| 2.0       | 达 2.0     |
-| 2.1       | 达 2.0     |
-| 2.2       | 达 2.0     |
-| 3.0       | 至 2.1     |
-| 3.1       | 至 2.1     |
-
-有关 .NET Standard 版本的交互表以及它们与 .NET 实现的对应关系，请参阅 [.NET Standard 版本](https://dotnet.microsoft.com/platform/dotnet-standard#versions)。
+有关详细信息，请参阅 [.NET Standard](../../standard/net-standard.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [目标框架](../../standard/frameworks.md)
-- [.NET Core 分发打包](../distribution-packaging.md)
-- [.NET Core 支持生命周期简报](https://dotnet.microsoft.com/platform/support/policy)
-- [.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)
-- [.NET Core 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet/)
+- [.NET 分发打包](../distribution-packaging.md)
+- [.NET 支持生命周期简报](https://dotnet.microsoft.com/platform/support/policy)
+- [.NET 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet/)
