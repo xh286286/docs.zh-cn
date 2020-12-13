@@ -2,12 +2,12 @@
 title: C# 教程
 description: 查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: d6eeed2ed5fbf68120c789b7d8203e811fb8608d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110164"
 ---
 # <a name="c-tutorials"></a>C# 教程
 
@@ -47,7 +47,6 @@ ms.locfileid: "89414809"
 
 ## <a name="explore-new-features-in-c"></a>探索 C\# 中的新增功能
 
-* [以交互方式尝试 C# 6 中的新功能](exploration/csharp-6.yml)：在浏览器中以交互方式探索 [C# 6](../whats-new/csharp-6.md) 中新增的功能。
 * [字符串内插](string-interpolation.md)：介绍了如何借助 C# 使用字符串内插创建格式化字符串。
 * [可为空引用类型](nullable-reference-types.md)：演示如何使用可为空引用类型来表示空引用的意图。
 * [将项目更新为使用可以为 null 的引用类型](upgrade-to-nullable-references.md)：展示了将现有项目升级为使用可以为 null 的引用类型的技术。

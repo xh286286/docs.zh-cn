@@ -2,12 +2,12 @@
 title: 异步编程
 description: '了解 F # 如何基于从核心函数编程概念派生的语言级编程模型，为异步提供干净支持。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 8bf8d6987187377cc1f44e77141b5d70d873f849
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739322"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366812"
 ---
 # <a name="async-programming-in-f"></a>F 中的异步编程\#
 
@@ -93,7 +93,7 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Parallel
     |> Async.Ignore
     |> Async.RunSynchronously
@@ -101,14 +101,14 @@ let main argv =
     0
 ```
 
-正如您所看到的，该 `main` 函数有更多调用次数。 从概念上讲，它执行以下操作：
+正如您所看到的，该 `main` 函数有更多元素。 从概念上讲，它执行以下操作：
 
-1. 将命令行参数转换为 `Async<unit>` 具有的计算结果 `Array.map` 。
+1. 使用将命令行参数转换为一系列 `Async<unit>` 计算 `Seq.map` 。
 2. 创建一个 `Async<'T[]>` 计划并 `printTotalFileBytes` 在运行时并行运行计算的。
-3. 创建一个 `Async<unit>` 将运行并行计算并忽略其结果的。
-4. 用显式运行上次计算 `Async.RunSynchronously` ，并在完成之前一直阻止。
+3. 创建一个 `Async<unit>` ，它将运行并行计算并忽略其结果 (这是一个 `unit[]`) 。
+4. 显式运行的整体组合计算 `Async.RunSynchronously` ，在完成之前一直阻止。
 
-运行此程序时，将 `printTotalFileBytes` 并行运行每个命令行参数。 由于异步计算独立于程序流执行，因此它们不会打印其信息并完成执行。 将并行计划计算，但不保证其执行顺序。
+运行此程序时，将 `printTotalFileBytes` 并行运行每个命令行参数。 由于异步计算独立于程序流执行，因此没有定义的顺序，它们将其信息打印并完成执行。 将并行计划计算，但不保证其执行顺序。
 
 ## <a name="sequence-asynchronous-computations"></a>序列异步计算
 
@@ -125,18 +125,18 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Sequential
     |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
 
-这会计划按 `printTotalFileBytes` 元素的顺序执行， `argv` 而不是以并行方式进行调度。 因为在上一次计算执行完成后将不会计划下一项，所以，计算的顺序就是在执行时没有重叠。
+这会计划按 `printTotalFileBytes` 元素的顺序执行， `argv` 而不是以并行方式进行调度。 因为在上一次计算执行完成后才会安排每个后续的操作，因此对计算进行排序以便在执行时不会发生重叠。
 
 ## <a name="important-async-module-functions"></a>重要的异步模块函数
 
-在 F # 中编写异步代码时，通常会与用于处理计算计划的框架交互。 但是，这并不总是如此，因此最好了解用于计划异步工作的各种开始函数。
+在 F # 中编写异步代码时，通常会与用于处理计算计划的框架交互。 但是，这并不总是如此，因此最好了解可用于计划异步工作的各种函数。
 
 由于 F # 异步计算是工作 _规范_ ，而不是已执行的工作表示形式，因此必须使用启动函数显式启动它们。 许多 [异步启动方法](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) 在不同的上下文中很有用。 以下部分介绍了一些更常见的启动函数。
 
@@ -190,7 +190,7 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 使用场合：
 
-- 需要调入需要的 .NET API 来 <xref:System.Threading.Tasks.Task%601> 表示异步计算的结果时。
+- 当你需要调入一个 .NET API，该 API 将生成 <xref:System.Threading.Tasks.Task%601> 以表示异步计算的结果。
 
 需要注意的事项：
 
@@ -198,12 +198,12 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 ### <a name="asyncparallel"></a>Async 并行
 
-计划要并行执行的异步计算序列。 通过指定参数，可以选择性地优化/限制并行度 `maxDegreesOfParallelism` 。
+计划一系列要并行执行的异步计算，按提供的顺序生成结果数组。 通过指定参数，可以选择性地优化/限制并行度 `maxDegreeOfParallelism` 。
 
 签名：
 
 ```fsharp
-computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreeOfParallelism: int -> Async<'T[]>
 ```
 
 何时使用:
@@ -251,7 +251,7 @@ task: Task<'T> -> Async<'T>
 
 需要注意的事项：
 
-- <xref:System.AggregateException>按照任务并行库的约定，包装异常，此行为不同于 F # async 通常曲面异常的方式。
+- <xref:System.AggregateException>按照任务并行库的约定，包装异常; 此行为不同于 F # async 通常曲面异常的方式。
 
 ### <a name="asynccatch"></a>Async Catch
 
@@ -273,7 +273,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async。 Ignore
 
-创建一个异步计算，该异步计算将运行给定的计算并忽略其结果。
+创建一个异步计算，该异步计算将运行给定计算，但会删除其结果。
 
 签名：
 
@@ -283,7 +283,7 @@ computation: Async<'T> -> Async<unit>
 
 使用场合：
 
-- 如果具有不需要其结果的异步计算。 这类似于 `ignore` 非异步代码的代码。
+- 如果具有不需要其结果的异步计算。 这类似于 `ignore` 非异步代码的函数。
 
 需要注意的事项：
 
@@ -291,7 +291,7 @@ computation: Async<'T> -> Async<unit>
 
 ### <a name="asyncrunsynchronously"></a>RunSynchronously
 
-运行异步计算，并在调用线程上等待其结果。 此调用正在阻止。
+运行异步计算，并在调用线程上等待其结果。 在计算产生一个异常时，传播该异常。 此调用正在阻止。
 
 签名：
 
@@ -310,7 +310,7 @@ computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>Async. Start
 
-在线程池中启动返回的异步计算 `unit` 。 不会等待其结果。 启动的嵌套计算 `Async.Start` 独立于调用它们的父计算。 它们的生存期未绑定到任何父计算。 如果取消了父计算，则不会取消任何子计算。
+启动在线程池中返回的异步计算 `unit` 。 不会等待完成，也不会观察到异常结果。 启动的嵌套计算 `Async.Start` 独立于调用它们的父计算，它们的生存期与任何父计算都不关联。 如果取消了父计算，则不会取消任何子计算。
 
 签名：
 
@@ -323,7 +323,7 @@ computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 - 您有一个异步计算，该计算不产生结果和/或需要处理一个结果。
 - 不需要知道异步计算何时完成。
 - 您不关心异步计算在哪个线程上运行。
-- 您无需注意或报告由任务生成的异常。
+- 您无需注意或报告执行导致的异常。
 
 需要注意的事项：
 
