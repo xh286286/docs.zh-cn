@@ -5,12 +5,12 @@ ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 75d29c6bafdce5c9bb104229ddc8d7b847f57e29
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008425"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366796"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>安装额外的 ML.NET 依赖项
 
@@ -24,7 +24,7 @@ dotnet add package Microsoft.ML
 
 ## <a name="microsoftmltimeseries-microsoftmlautoml"></a>Microsoft.ML.TimeSeries, Microsoft.ML.AutoML
 
-这两个包都依赖于 `Microsoft.ML.MKL.Redist`，而后者又依赖于 `libiomp`。
+这两个包都依赖于 `Microsoft.ML.MKL.Redist`，而后者又依赖于 `libomp`。
 
 ### <a name="windows"></a>Windows
 

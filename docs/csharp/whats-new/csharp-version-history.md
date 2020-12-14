@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805084"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110723"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -134,17 +134,17 @@ C# 版本 5.0 随 Visual Studio 2012 一起发布，是该语言有针对性的�
 
 C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 版本 6.0 随 Visual Studio 2015 一起发布，通过该版本，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
 
-- [静态导入](./csharp-6.md#using-static)
-- [异常筛选器](./csharp-6.md#exception-filters)
-- [自动属性初始化表达式](./csharp-6.md#auto-property-initializers)
-- [Expression bodied 成员](./csharp-6.md#expression-bodied-function-members)
-- [Null 传播器](./csharp-6.md#null-conditional-operators)
-- [字符串内插](./csharp-6.md#string-interpolation)
-- [nameof 运算符](./csharp-6.md#the-nameof-expression)
-- [索引初始值设定项](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [静态导入](../language-reference/keywords/using-static.md)
+- [异常筛选器](../language-reference/keywords/when.md)
+- [自动属性初始化表达式](../properties.md)
+- [Expression bodied 成员](../language-reference/operators/lambda-operator.md#expression-body-definition)
+- [Null 传播器](../language-reference/operators/member-access-operators.md#null-conditional-operators--and-)
+- [字符串内插](../language-reference/tokens/interpolated.md)
+- [nameof 运算符](../language-reference/operators/nameof.md)
 
 其他新功能包括：
 
+- 索引初始化表达式
 - Catch/Finally 块中的 Await
 - 仅限 getter 属性的默认值
 
