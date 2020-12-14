@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282397"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009880"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 中的 JSON 序列化和反序列化（封送和拆收）- 概述
 
@@ -37,9 +37,19 @@ ms.locfileid: "93282397"
 ## <a name="additional-resources"></a>其他资源
 
 * [如何使用库](system-text-json-how-to.md)
-* [如何从 Newtonsoft.Json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [如何编写转换器](system-text-json-converters-how-to.md)
-* [System.Text.Json 源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [对 JsonSerializerOptions 实例进行实例化](system-text-json-configure-options.md)
+* [启用不区分大小写的匹配](system-text-json-character-casing.md)
+* [自定义属性名称和值](system-text-json-customize-properties.md)
+* [忽略属性](system-text-json-ignore-properties.md)
+* [允许无效的 JSON](system-text-json-invalid-json.md)
+* [处理溢出 JSON](system-text-json-handle-overflow.md)
+* [保留引用](system-text-json-preserve-references.md)
+* [不可变类型和非公共访问器](system-text-json-immutability.md)
+* [多态序列化](system-text-json-polymorphism.md)
+* [从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自定义字符编码](system-text-json-character-encoding.md)
+* [编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
+* [编写用于 JSON 序列化的自定义转换器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
 * [System.Text.Json API 参考](xref:System.Text.Json)
 * [System.Text.Json.Serialization API 参考](xref:System.Text.Json.Serialization)
-<!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

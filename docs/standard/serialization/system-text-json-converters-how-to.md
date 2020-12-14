@@ -1,7 +1,7 @@
 ---
 title: 如何编写用于 JSON 序列化的自定义转换器 - .NET
 description: 了解如何为 System.Text.Json 命名空间中提供的 JSON 序列化类创建自定义转换器。
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438117"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008859"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中编写用于 JSON 序列化（封送）的自定义转换器
 
@@ -25,7 +25,7 @@ ms.locfileid: "96438117"
 
 转换器是一种将对象或值与 JSON 相互转换的类。 `System.Text.Json` 命名空间为映射到 JavaScript 基元的大多数基元类型提供内置转换器。 可以编写自定义转换器来实现以下目标：
 
-* 重写内置转换器的默认行为。 例如，可能希望用 mm/dd/yyyy 格式而不是默认 ISO 8601-1:2019 格式来表示 `DateTime` 值。
+* 重写内置转换器的默认行为。 例如，你可能希望通过 mm/dd/yyyy 格式来表示 `DateTime` 值。 默认情况下，支持 ISO 8601-1:2019，包括 RFC 3339 配置文件。 有关详细信息，请参阅 [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)。
 * 支持自定义值类型。 例如，`PhoneNumber` 结构。
 
 还可以编写自定义转换器，以使用当前版本中未包含的功能自定义或扩展 `System.Text.Json`。 本文后面部分介绍了以下方案：
@@ -44,6 +44,8 @@ ms.locfileid: "96438117"
 * [支持多态反序列化](#support-polymorphic-deserialization)。
 * [支持堆栈的往返\<T>](#support-round-trip-for-stackt)。
 ::: zone-end
+
+在为自定义转换器编写的代码中，请注意，使用新的 <xref:System.Text.Json.JsonSerializerOptions> 实例会带来重大性能损失。 有关详细信息，请参阅[重用 JsonSerializerOptions 实例](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)。
 
 ## <a name="custom-converter-patterns"></a>自定义转换器模式
 
@@ -103,7 +105,11 @@ ms.locfileid: "96438117"
 
 ## <a name="error-handling"></a>错误处理
 
-如果需要在错误处理代码中引发异常，请考虑在不使用消息的情况下引发 <xref:System.Text.Json.JsonException>。 此异常类型会自动创建消息，其中包括导致错误的 JSON 部分的路径。 例如，语句 `throw new JsonException();` 会生成如以下示例的错误消息：
+序列化程序为 <xref:System.Text.Json.JsonException> 和 <xref:System.NotSupportedException> 异常类型提供特殊处理。
+
+### <a name="jsonexception"></a>JsonException
+
+如果你引发不带消息的 `JsonException`，则序列化程序会创建一条消息，其中包括导致错误的 JSON 部分的路径。 例如，语句 `throw new JsonException()` 会生成如以下示例的错误消息：
 
 ```output
 Unhandled exception. System.Text.Json.JsonException:
@@ -111,7 +117,25 @@ The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-如果提供消息（例如 `throw new JsonException("Error occurred")`），则异常仍会在 <xref:System.Text.Json.JsonException.Path> 属性中提供路径。
+如果你确实提供了消息（例如 `throw new JsonException("Error occurred")`），则序列化程序仍会设置 <xref:System.Text.Json.JsonException.Path>、<xref:System.Text.Json.JsonException.LineNumber> 和 <xref:System.Text.Json.JsonException.BytePositionInLine> 属性。
+
+### <a name="notsupportedexception"></a>NotSupportedException
+
+如果你引发 `NotSupportedException`，则始终会在消息中获取路径信息。 如果你提供了消息，则路径信息将追加到该消息中。 例如，语句 `throw new NotSupportedException("Error occurred.")` 会生成如以下示例的错误消息：
+
+```output
+Error occurred. The unsupported member type is located on type
+'System.Collections.Generic.Dictionary`2[Samples.SummaryWords,System.Int32]'.
+Path: $.TemperatureRanges | LineNumber: 4 | BytePositionInLine: 24
+```
+
+### <a name="when-to-throw-which-exception-type"></a>何时引发哪种异常类型
+
+当 JSON 有效负载包含对于正在进行反序列化的类型无效的令牌时，引发 `JsonException`。
+
+当你要禁止某些类型时，引发 `NotSupportedException`。 对于不支持的类型，序列化程序会自动引发此异常。 例如，出于安全原因，不支持 `System.Type`，因此尝试对其进行反序列化会导致 `NotSupportedException`。
+
+可根据需要引发其他异常，但它们不会自动包括 JSON 路径信息。
 
 ## <a name="register-a-custom-converter"></a>注册自定义转换器
 
@@ -373,8 +397,20 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ## <a name="additional-resources"></a>其他资源
 
 * [内置转换器的源代码](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
-* [如何自定义字符编码](system-text-json-character-encoding.md)
-* [如何编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
+* [System.Text.Json 概述](system-text-json-overview.md)
+* [如何对 JSON 进行序列化和反序列化](system-text-json-how-to.md)
+* [对 JsonSerializerOptions 实例进行实例化](system-text-json-configure-options.md)
+* [启用不区分大小写的匹配](system-text-json-character-casing.md)
+* [自定义属性名称和值](system-text-json-customize-properties.md)
+* [忽略属性](system-text-json-ignore-properties.md)
+* [允许无效的 JSON](system-text-json-invalid-json.md)
+* [处理溢出 JSON](system-text-json-handle-overflow.md)
+* [保留引用](system-text-json-preserve-references.md)
+* [不可变类型和非公共访问器](system-text-json-immutability.md)
+* [多态序列化](system-text-json-polymorphism.md)
+* [从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自定义字符编码](system-text-json-character-encoding.md)
+* [编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
+* [DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
 * [System.Text.Json API 参考](xref:System.Text.Json)
 * [System.Text.Json.Serialization API 参考](xref:System.Text.Json.Serialization)

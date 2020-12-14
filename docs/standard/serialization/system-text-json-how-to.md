@@ -1,7 +1,7 @@
 ---
 title: 如何使用 C# 对 JSON 进行序列化和反序列化 - .NET
 description: 了解如何使用 System.Text.Json 命名空间在 .NET 中向/从 JSON 进行序列化和反序列化。 包含示例代码。
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.custom: contperfq2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9ea9e2fef5ef66f2a5ff816168abfbd7b2e75276
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 1ea4ff71b9e21bd7c5b12598581b33e1e96ebb19
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437674"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008833"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中对 JSON 进行序列化和反序列化（封送和拆收）
 
@@ -249,6 +249,8 @@ using System.Text.Json.Serialization;
 }
 ```
 
+如果你通过相同的选项重复使用 `JsonSerializerOptions`，则请勿在每次使用时都创建新的 `JsonSerializerOptions` 实例。 对每个调用重复使用同一实例。 有关详细信息，请参阅[重用 JsonSerializerOptions 实例](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)。
+
 ## <a name="include-fields"></a>包含字段
 
 ::: zone pivot="dotnet-5-0"
@@ -283,8 +285,19 @@ using System.Text.Json.Serialization;
 ## <a name="see-also"></a>请参阅
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [如何编写自定义转换器](system-text-json-converters-how-to.md)
-* [如何从 Newtonsoft.Json 迁移](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
+* [对 JsonSerializerOptions 实例进行实例化](system-text-json-configure-options.md)
+* [启用不区分大小写的匹配](system-text-json-character-casing.md)
+* [自定义属性名称和值](system-text-json-customize-properties.md)
+* [忽略属性](system-text-json-ignore-properties.md)
+* [允许无效的 JSON](system-text-json-invalid-json.md)
+* [处理溢出 JSON](system-text-json-handle-overflow.md)
+* [保留引用](system-text-json-preserve-references.md)
+* [不可变类型和非公共访问器](system-text-json-immutability.md)
+* [多态序列化](system-text-json-polymorphism.md)
+* [从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自定义字符编码](system-text-json-character-encoding.md)
+* [编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
+* [编写用于 JSON 序列化的自定义转换器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
 * [System.Text.Json API 参考](xref:System.Text.Json)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
+* [System.Text.Json.Serialization API 参考](xref:System.Text.Json.Serialization)

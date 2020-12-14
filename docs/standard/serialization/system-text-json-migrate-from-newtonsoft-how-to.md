@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bc256c5129cd4a7306e632685474b159a43ce76c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438063"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009893"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何从 Newtonsoft.Json 迁移到 System.Text.Json
 
@@ -535,7 +535,7 @@ The JSON value could not be converted to System.String.
 * `DateTimeZoneHandling` 设置可用于将所有 `DateTime` 值序列化为 UTC 日期。
 * `DateFormatString` 设置和 `DateTime` 转换器可用于自定义日期字符串的格式。
 
-在 <xref:System.Text.Json> 中，具有内置支持的唯一格式是 ISO 8601-1:2019，因为它被广泛采用、意义明确并且可精确地进行往返。 若要使用任何其他格式，请创建自定义转换器。 有关详细信息，请参阅 [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)。
+<xref:System.Text.Json> 支持 ISO 8601-1:2019，包括 RFC 3339 配置文件。 此格式被广泛采用，无歧义，并且精确地进行往返。 若要使用任何其他格式，请创建自定义转换器。 有关详细信息，请参阅 [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)。
 
 ### <a name="callbacks"></a>回调
 
@@ -806,10 +806,20 @@ doc.WriteTo(writer);
 
 ## <a name="additional-resources"></a>其他资源
 
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [如何使用 System.Text.Json](system-text-json-how-to.md)
-* [如何编写自定义转换器](system-text-json-converters-how-to.md)
-* [System.Text.Json 中的 DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
+* [如何对 JSON 进行序列化和反序列化](system-text-json-how-to.md)
+* [对 JsonSerializerOptions 实例进行实例化](system-text-json-configure-options.md)
+* [启用不区分大小写的匹配](system-text-json-character-casing.md)
+* [自定义属性名称和值](system-text-json-customize-properties.md)
+* [忽略属性](system-text-json-ignore-properties.md)
+* [允许无效的 JSON](system-text-json-invalid-json.md)
+* [处理溢出 JSON](system-text-json-handle-overflow.md)
+* [保留引用](system-text-json-preserve-references.md)
+* [不可变类型和非公共访问器](system-text-json-immutability.md)
+* [多态序列化](system-text-json-polymorphism.md)
+* [自定义字符编码](system-text-json-character-encoding.md)
+* [编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
+* [编写用于 JSON 序列化的自定义转换器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
 * [System.Text.Json API 参考](xref:System.Text.Json)
 * [System.Text.Json.Serialization API 参考](xref:System.Text.Json.Serialization)

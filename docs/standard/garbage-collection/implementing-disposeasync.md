@@ -3,18 +3,18 @@ title: 实现 DisposeAsync 方法
 description: 了解如何实现 DisposeAsync 和 DisposeAsyncCore 方法来执行异步资源清理。
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/26/2020
+ms.date: 12/09/2020
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 551dbc30f6f5c99c7bfa468d7d708789c06acb7b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f04ac6695864b96cdcb7efeb6eb8e1d9551e1d14
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827797"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009685"
 ---
 # <a name="implement-a-disposeasync-method"></a>实现 DisposeAsync 方法
 
@@ -131,6 +131,8 @@ public async ValueTask DisposeAsync()
 > 避免此模式，因为它可能导致意外行为。
 
 ## <a name="see-also"></a>请参阅
+
+有关 `IDisposable` 和 `IAsyncDisposable` 的双重实现示例，请参阅 [GitHub](https://github.com/dotnet/runtime/blob/035b729d829368c2790d825bd02db14f0c0fd2ea/src/libraries/System.Text.Json/src/System/Text/Json/Writer/Utf8JsonWriter.cs#L297-L345) 上的 <xref:System.Text.Json.Utf8JsonWriter> 源代码。
 
 - <xref:System.IAsyncDisposable>
 - <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>

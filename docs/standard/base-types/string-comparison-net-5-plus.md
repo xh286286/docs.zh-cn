@@ -1,13 +1,13 @@
 ---
 title: 在 .NET 5 及更高版本中比较字符串时的行为更改
 description: 了解在 Windows 上的 .NET 5 及更高版本中比较字符串时的行为更改。
-ms.date: 11/04/2020
-ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/07/2020
+ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734226"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851746"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>在 .NET 5 及更高版本中比较字符串时的行为更改
 
@@ -43,16 +43,29 @@ Console.WriteLine(idx);
 
 ### <a name="enable-code-analyzers"></a>启用代码分析器
 
-[代码分析器](../../fundamentals/code-analysis/overview.md)可以检测可能存在错误的调用站点。 为了帮助防范任何意外行为，我们建议在项目中安装 [__Microsoft.CodeAnalysis.FxCopAnalyzers__ NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/)。 该包包含代码分析规则 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) 和 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)，有助于标记在计划使用序号比较器时可能无意中使用语言比较器的代码。
+[代码分析器](../../fundamentals/code-analysis/overview.md)可以检测可能存在错误的调用站点。 为了帮助防范任何意外行为，建议在项目中启用 .NET Compiler Platform (Roslyn) 分析器。 该分析器有助于标记在计划使用序号比较器时可能无意中使用语言比较器的代码。 以下规则应有助于标记这些问题：
 
-例如：
+- [CA1307:为了清晰起见，请指定 StringComparison](../../fundamentals/code-analysis/quality-rules/ca1307.md)
+- [CA1309:使用按顺序的 StringComparison](../../fundamentals/code-analysis/quality-rules/ca1309.md)
+- [CA1310：为了确保正确，请指定 StringComparison](../../fundamentals/code-analysis/quality-rules/ca1310.md)
+
+默认不启用这些特定规则。 若要启用它们并将任何冲突显示为生成错误，请在项目文件中设置以下属性：
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <WarningsAsErrors>$(WarningsAsErrors);CA1307;CA1309;CA1310</WarningsAsErrors>
+</PropertyGroup>
+```
+
+以下代码片段显示生成相关代码分析器警告或错误的代码示例。
 
 ```cs
 //
 // Potentially incorrect code - answer might vary based on locale.
 //
 string s = GetString();
-// Produces analyzer warning CA1307.
+// Produces analyzer warning CA1310 for string; CA1307 matches on char ','
 int idx = s.IndexOf(",");
 Console.WriteLine(idx);
 
@@ -89,17 +102,12 @@ List<string> list = GetListOfStrings();
 list.Sort(StringComparer.Ordinal);
 ```
 
-有关这些代码分析器规则的详细信息，包括何时适合在自己的代码库中禁止这些规则，请参阅以下文章：
-
-* [CA1307:为了清晰起见，请指定 StringComparison](../../fundamentals/code-analysis/quality-rules/ca1307.md)
-* [CA1309:使用按顺序的 StringComparison](../../fundamentals/code-analysis/quality-rules/ca1309.md)
-
 ### <a name="revert-back-to-nls-behaviors"></a>还原到 NLS 行为
 
 在 Windows 上运行 .NET 5 应用程序时，若要将其还原到早前的 NLS 行为，请按照 [.NET 全球化和 ICU](../globalization-localization/globalization-icu.md) 中的步骤操作。 必须在应用程序级别设置此应用程序范围的兼容性开关。 单个库不能选择加入或选择退出此行为。
 
 > [!TIP]
-> 我们强烈建议启用 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) 和 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) 代码分析规则，以帮助改进代码卫生和发现任何现有的潜在 bug。 有关详细信息，请参阅[启用代码分析器](#enable-code-analyzers)。
+> 强烈建议启用 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md)、[CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) 和 [CA1310](../../fundamentals/code-analysis/quality-rules/ca1310.md) 代码分析规则，以帮助改进代码卫生和发现任何现有的潜在 bug。 有关详细信息，请参阅[启用代码分析器](#enable-code-analyzers)。
 
 ## <a name="affected-apis"></a>受影响的 API
 

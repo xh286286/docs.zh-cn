@@ -1,7 +1,7 @@
 ---
 title: 如何使用 System.Text.Json 保留引用
 description: 了解在 .NET 中序列化为 JSON 和从 JSON 进行反序列化时如何保留引用并处理循环引用。
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,18 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9254ca261c7d748c04c311fa56359014f752ff31
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: d358c953c0979ca097c080fcd750d5ef95b07de0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439758"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008729"
 ---
-# <a name="how-to-handle-circular-references-with-no-locsystemtextjson"></a>如何使用 System.Text.Json 处理循环引用
-
-本文将介绍如何使用 `System.Text.Json` 命名空间处理循环引用。
-
-## <a name="preserve-references-and-handle-circular-references"></a>保留引用并处理循环引用
+# <a name="how-to-preserve-references-and-handle-circular-references-with-no-locsystemtextjson"></a>如何使用 System.Text.Json 保留引用并处理循环引用
 
 ::: zone pivot="dotnet-5-0"
 
@@ -59,7 +55,8 @@ ms.locfileid: "96439758"
 ## <a name="see-also"></a>请参阅
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [实例化 JsonSerializerOptions](system-text-json-configure-options.md)
+* [如何对 JSON 进行序列化和反序列化](system-text-json-how-to.md)
+* [对 JsonSerializerOptions 实例进行实例化](system-text-json-configure-options.md)
 * [启用不区分大小写的匹配](system-text-json-character-casing.md)
 * [自定义属性名称和值](system-text-json-customize-properties.md)
 * [忽略属性](system-text-json-ignore-properties.md)
@@ -67,4 +64,10 @@ ms.locfileid: "96439758"
 * [处理溢出 JSON](system-text-json-handle-overflow.md)
 * [不可变类型和非公共访问器](system-text-json-immutability.md)
 * [多态序列化](system-text-json-polymorphism.md)
+* [从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自定义字符编码](system-text-json-character-encoding.md)
+* [编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
+* [编写用于 JSON 序列化的自定义转换器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
 * [System.Text.Json API 参考](xref:System.Text.Json)
+* [System.Text.Json.Serialization API 参考](xref:System.Text.Json.Serialization)

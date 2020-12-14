@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599071"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009737"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>如何使用 System.Text.Json 启用不区分大小写的属性名称
 
@@ -45,12 +45,19 @@ ms.locfileid: "96599071"
 ## <a name="see-also"></a>请参阅
 
 * [System.Text.Json 概述](system-text-json-overview.md)
-* [实例化 JsonSerializerOptions](system-text-json-configure-options.md)
+* [如何对 JSON 进行序列化和反序列化](system-text-json-how-to.md)
+* [对 JsonSerializerOptions 实例进行实例化](system-text-json-configure-options.md)
 * [自定义属性名称和值](system-text-json-customize-properties.md)
 * [忽略属性](system-text-json-ignore-properties.md)
 * [允许无效的 JSON](system-text-json-invalid-json.md)
 * [处理溢出 JSON](system-text-json-handle-overflow.md)
-* [保留循环引用](system-text-json-preserve-references.md)
+* [保留引用](system-text-json-preserve-references.md)
 * [不可变类型和非公共访问器](system-text-json-immutability.md)
 * [多态序列化](system-text-json-polymorphism.md)
+* [从 Newtonsoft.Json 迁移到 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [自定义字符编码](system-text-json-character-encoding.md)
+* [编写自定义序列化程序和反序列化程序](write-custom-serializer-deserializer.md)
+* [编写用于 JSON 序列化的自定义转换器](system-text-json-converters-how-to.md)
+* [DateTime 和 DateTimeOffset 支持](../datetime/system-text-json-support.md)
 * [System.Text.Json API 参考](xref:System.Text.Json)
+* [System.Text.Json.Serialization API 参考](xref:System.Text.Json.Serialization)

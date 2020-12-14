@@ -2,12 +2,12 @@
 title: F# 中的函数编程简介
 description: 了解 F# 中的函数编程的基础知识。
 ms.date: 10/29/2018
-ms.openlocfilehash: fc2aebe80de16b92942c3557c0e03c198883dde1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 44242a4319a331312a003a555d1483f2a3f1a90d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110580"
 ---
 # <a name="introduction-to-functional-programming-in-f"></a>F\# 中的函数编程简介
 
@@ -54,7 +54,7 @@ val addOne: x:int -> int
 
 ### <a name="expressions"></a>表达式
 
-表达式是计算结果为值的构造。 与执行操作的语句不同，表达式可以被视为执行返回值的操作。 表达式几乎始终取代函数编程中的语句。
+表达式是计算结果为值的构造。 与执行操作的语句不同，表达式可以被视为执行返回值的操作。 表达式几乎始终用在函数编程中而不是语句中。
 
 请考虑上一个函数 `addOne`。 `addOne` 的主体是一个表达式：
 
