@@ -84,7 +84,7 @@ MyClass mc2 = mc;
 
 类声明基类时，会继承基类除构造函数外的所有成员。 有关详细信息，请参阅[继承](inheritance.md)。
   
-与 C++ 不同，C# 中的类只能直接直接继承一个基类。 但是，因为基类本身可能继承自其他类，因此类可能间接继承多个基类。 此外，类可以支持实现一个或多个接口。 有关详细信息，请参阅[接口](../interfaces/index.md)。  
+与 C++ 不同，C# 中的类只能直接继承一个基类。 但是，因为基类本身可能继承自其他类，因此类可能间接继承多个基类。 此外，类可以支持实现一个或多个接口。 有关详细信息，请参阅[接口](../interfaces/index.md)。  
   
 类可以声明为 [abstract](../../language-reference/keywords/abstract.md)（抽象）。 抽象类包含抽象方法，抽象方法包含签名定义但不包含实现。 抽象类不能实例化。 只能通过可实现抽象方法的派生类来使用该类。 与此相反，[sealed](../../language-reference/keywords/sealed.md)（密封）类不允许其他类继承。 有关详细信息，请参阅[抽象类、密封类和类成员](abstract-and-sealed-classes-and-class-members.md)。  
   
